@@ -22,6 +22,24 @@
     "date_precision": "exact",
     "country": "Sweden",
     "country_code": "SE",
+    "state": null,
+    "state_code": null,
+    "title": "Swedish General Election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-09-13",
+    "date_precision": "exact",
+    "country": "Sweden",
+    "country_code": "SE",
     "title": "Riksdag General Election",
     "type": "legislative",
     "level": "federal",
@@ -70,6 +88,60 @@
     "source": "curated"
   },
   {
+    "date": "2026-09-20",
+    "date_precision": "exact",
+    "country": "Russia",
+    "country_code": "RU",
+    "state": null,
+    "state_code": null,
+    "title": "Russian legislative election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "brics"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-10-01",
+    "date_precision": "estimated",
+    "country": "Czech Republic",
+    "country_code": "CZ",
+    "state": null,
+    "state_code": null,
+    "title": "Czech Senate election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-10-03",
+    "date_precision": "exact",
+    "country": "Latvia",
+    "country_code": "LV",
+    "state": null,
+    "state_code": null,
+    "title": "Latvian parliamentary election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
     "date": "2026-10-04",
     "date_precision": "exact",
     "country": "Brazil",
@@ -101,6 +173,24 @@
       "President"
     ],
     "source": "curated"
+  },
+  {
+    "date": "2026-10-27",
+    "date_precision": "exact",
+    "country": "Israel",
+    "country_code": "IL",
+    "state": null,
+    "state_code": null,
+    "title": "Israeli legislative election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
   },
   {
     "date": "2026-10-27",
@@ -956,6 +1046,24 @@
       "Landtag"
     ],
     "source": "curated"
+  },
+  {
+    "date": "2027-05-01",
+    "date_precision": "estimated",
+    "country": "India",
+    "country_code": "IN",
+    "state": null,
+    "state_code": null,
+    "title": "Next Manipur Legislative Assembly election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "brics"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
   },
   {
     "date": "2027-05-30",
