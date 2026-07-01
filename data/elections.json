@@ -1095,24 +1095,6 @@
     "source": "wikidata"
   },
   {
-    "date": "2026-10-01",
-    "date_precision": "estimated",
-    "country": "Czech Republic",
-    "country_code": "CZ",
-    "state": null,
-    "state_code": null,
-    "title": "Czech Senate election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
     "date": "2026-10-03",
     "date_precision": "exact",
     "country": "Latvia",

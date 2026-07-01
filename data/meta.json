@@ -2,9 +2,9 @@
   "generated_at": "2026-07-01",
   "window_start": "2026-07-01",
   "window_end": "2027-07-01",
-  "count": 80,
+  "count": 79,
   "sources": {
-    "wikidata": 30,
+    "wikidata": 28,
     "curated": 108
   }
 }
