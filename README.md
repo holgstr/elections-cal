@@ -1,29 +1,45 @@
-# Elections Cal
+# Election Calendar
 
-A simple static web app listing upcoming global elections relevant for prediction markets — US competitive state primaries (Senate/Governor), the 2026 midterms, and meaningful races in Europe and beyond.
+A mobile-friendly static site that lists upcoming elections over the next 12 months, focused on OECD and BRICS countries. US and German federal and state elections are tracked separately; other countries show presidential elections (where popularly elected) and parliamentary elections.
 
 ## Features
 
-- Chronological timeline grouped by month
-- Filter by region (US primaries, US general, Europe, etc.) and stakes level
-- Search by country, state, office, or keyword
-- Curated notes on market relevance
+- Rolling 12-month window, updated automatically
+- Exact dates when known; estimated dates clearly marked
+- Small country and state flags (US states, German Länder)
+- Mobile-first layout with search and quick filters
+- No build step — plain HTML, CSS, and JavaScript
+
+## Live site
+
+Enable **GitHub Pages** (Settings → Pages → Source: GitHub Actions). The `update-elections` workflow deploys the site and refreshes data weekly.
 
 ## Run locally
 
-Any static file server works. Python:
-
 ```bash
-cd elections-cal
+python3 scripts/build_elections.py
 python3 -m http.server 8080
 ```
 
-Then open [http://localhost:8080](http://localhost:8080).
+Open [http://localhost:8080](http://localhost:8080).
 
-## Data
+Set `SKIP_WIKIDATA=1` for a fast curated-only build when Wikidata is slow.
 
-Election dates live in `data/elections.json`. Edit this file to add or update races. The app automatically hides past elections based on the current date.
+## Data sources
 
-## Stack
+| Source | What it covers |
+|--------|----------------|
+| `data/curated/us_elections.json` | US federal midterms + state gubernatorial elections |
+| `data/curated/de_elections.json` | German Landtag elections |
+| `data/curated/international.json` | Key OECD/BRICS federal elections |
+| Wikidata SPARQL | Additional presidential and parliamentary elections |
 
-Plain HTML, CSS, and JavaScript — no build step required.
+Edit curated files to add or correct dates. The build script merges curated data with Wikidata (US and Germany always come from curated sources).
+
+## Automation
+
+The GitHub Actions workflow runs every Monday at 06:00 UTC:
+
+1. Runs `scripts/build_elections.py`
+2. Commits updated `data/elections.json` and `data/meta.json` if changed
+3. Deploys the static site to GitHub Pages
