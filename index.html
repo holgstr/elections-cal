@@ -2,62 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elections Cal — Upcoming Markets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f1219" />
+  <meta name="description" content="Upcoming elections in OECD and BRICS countries over the next 12 months." />
+  <title>Election Calendar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <div class="page">
     <header class="hero">
-      <div class="hero-inner">
-        <p class="eyebrow">Prediction markets · Global calendar</p>
-        <h1>Elections Cal</h1>
-        <p class="subtitle">Upcoming elections worth watching — US competitive primaries, midterms, and meaningful races worldwide.</p>
-        <div class="stats" id="stats"></div>
-      </div>
+      <p class="eyebrow">OECD · BRICS · US &amp; German states</p>
+      <h1>Election Calendar</h1>
+      <p class="subtitle">Federal and state elections for the next 12 months. Exact dates when known, otherwise estimated.</p>
+      <p class="window-label" id="window-label"></p>
+      <div class="stats" id="stats"></div>
     </header>
 
-    <main class="main">
-      <aside class="filters" aria-label="Filter elections">
-        <div class="filter-group">
-          <label for="search">Search</label>
-          <input type="search" id="search" placeholder="Country, state, office…" autocomplete="off" />
-        </div>
+    <div class="toolbar" aria-label="Filter elections">
+      <label class="search-wrap">
+        <span class="sr-only">Search</span>
+        <input type="search" id="search" placeholder="Search country, state, office…" autocomplete="off" enterkeyhint="search" />
+      </label>
 
-        <div class="filter-group">
-          <span class="filter-label">Region</span>
-          <div class="chip-row" id="region-filters"></div>
-        </div>
+      <div class="chip-row" id="group-filters"></div>
 
-        <div class="filter-group">
-          <span class="filter-label">Stakes</span>
-          <div class="chip-row" id="stakes-filters"></div>
-        </div>
+      <label class="toggle-states">
+        <input type="checkbox" id="toggle-states" checked />
+        <span>Show state elections</span>
+      </label>
+    </div>
 
-        <div class="filter-group">
-          <label for="sort">Sort</label>
-          <select id="sort">
-            <option value="date-asc">Soonest first</option>
-            <option value="date-desc">Latest first</option>
-            <option value="stakes-desc">Highest stakes</option>
-          </select>
-        </div>
-      </aside>
-
+    <main>
       <section class="timeline" id="timeline" aria-live="polite">
         <p class="loading">Loading elections…</p>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Curated for betting relevance — not an exhaustive electoral database. Dates may shift; verify before trading.</p>
-      <p class="footer-meta">Data sources: Green Papers, 270toWin, IFES ElectionGuide, IDEA International</p>
+      <p>Dates refresh automatically from Wikidata and official schedules. Always verify before relying on estimated dates.</p>
+      <p class="footer-meta" id="footer-meta"></p>
     </footer>
   </div>
 
   <script src="js/app.js" type="module"></script>
+  <script>
+    fetch("data/meta.json")
+      .then((r) => r.json())
+      .then((meta) => {
+        const el = document.getElementById("footer-meta");
+        if (el && meta.generated_at) {
+          el.textContent = `Updated ${meta.generated_at} · ${meta.count} elections in window`;
+        }
+      })
+      .catch(() => {});
+  </script>
 </body>
 </html>

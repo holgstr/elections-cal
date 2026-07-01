@@ -1,52 +1,45 @@
-const REGION_LABELS = {
-  us_primary: "US Primary",
-  us_general: "US General",
-  europe: "Europe",
-  americas: "Americas",
-  africa: "Africa",
-  asia_pacific: "Asia-Pacific",
-  middle_east: "Middle East",
+import { flagUrl, flagAlt } from "./flags.js";
+
+const GROUP_LABELS = {
+  all: "All",
+  oecd: "OECD",
+  brics: "BRICS",
+  US: "United States",
+  DE: "Germany",
 };
 
-const STAKES_ORDER = { high: 0, medium: 1, low: 2 };
+const LEVEL_LABELS = {
+  federal: "Federal",
+  state: "State",
+};
 
 let allElections = [];
-let activeRegions = new Set();
-let activeStakes = new Set();
+let meta = null;
+let activeGroup = "all";
 let searchQuery = "";
-let sortMode = "date-asc";
+let hideStates = false;
 
 async function init() {
-  const res = await fetch("data/elections.json");
-  allElections = await res.json();
+  const [electionsRes, metaRes] = await Promise.all([
+    fetch("data/elections.json"),
+    fetch("data/meta.json"),
+  ]);
 
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  allElections = allElections.filter((e) => new Date(e.date + "T12:00:00") >= today);
+  allElections = await electionsRes.json();
+  meta = await metaRes.json();
 
   buildFilters();
-  renderStats();
+  renderHeader();
   render();
   bindEvents();
 }
 
 function buildFilters() {
-  const regions = [...new Set(allElections.map((e) => e.region))].sort();
-  const stakes = ["high", "medium", "low"];
-
-  const regionEl = document.getElementById("region-filters");
-  regionEl.innerHTML = regions
+  const groups = ["all", "oecd", "brics", "US", "DE"];
+  document.getElementById("group-filters").innerHTML = groups
     .map(
-      (r) =>
-        `<button type="button" class="chip" data-region="${r}">${REGION_LABELS[r] || r}</button>`
-    )
-    .join("");
-
-  const stakesEl = document.getElementById("stakes-filters");
-  stakesEl.innerHTML = stakes
-    .map(
-      (s) =>
-        `<button type="button" class="chip" data-stakes="${s}">${s}</button>`
+      (group) =>
+        `<button type="button" class="chip${group === "all" ? " active" : ""}" data-group="${group}">${GROUP_LABELS[group]}</button>`
     )
     .join("");
 }
@@ -57,140 +50,157 @@ function bindEvents() {
     render();
   });
 
-  document.getElementById("sort").addEventListener("change", (e) => {
-    sortMode = e.target.value;
+  document.getElementById("group-filters").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-group]");
+    if (!btn) return;
+    activeGroup = btn.dataset.group;
+    document.querySelectorAll("[data-group]").forEach((chip) => {
+      chip.classList.toggle("active", chip.dataset.group === activeGroup);
+    });
     render();
   });
 
-  document.getElementById("region-filters").addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-region]");
-    if (!btn) return;
-    const region = btn.dataset.region;
-    btn.classList.toggle("active");
-    if (activeRegions.has(region)) activeRegions.delete(region);
-    else activeRegions.add(region);
-    render();
-  });
-
-  document.getElementById("stakes-filters").addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-stakes]");
-    if (!btn) return;
-    const stakes = btn.dataset.stakes;
-    btn.classList.toggle("active");
-    if (activeStakes.has(stakes)) activeStakes.delete(stakes);
-    else activeStakes.add(stakes);
+  document.getElementById("toggle-states").addEventListener("change", (e) => {
+    hideStates = !e.target.checked;
     render();
   });
 }
 
 function filterElections() {
-  return allElections.filter((e) => {
-    if (activeRegions.size && !activeRegions.has(e.region)) return false;
-    if (activeStakes.size && !activeStakes.has(e.stakes)) return false;
+  return allElections.filter((election) => {
+    if (hideStates && election.level === "state") return false;
+
+    if (activeGroup !== "all") {
+      if (activeGroup === "US" || activeGroup === "DE") {
+        if (election.country_code !== activeGroup) return false;
+      } else if (!election.groups?.includes(activeGroup)) {
+        return false;
+      }
+    }
+
     if (searchQuery) {
       const haystack = [
-        e.country,
-        e.state,
-        e.title,
-        e.type,
-        e.notes,
-        ...(e.offices || []),
-        REGION_LABELS[e.region],
+        election.country,
+        election.state,
+        election.title,
+        election.type,
+        election.notes,
+        ...(election.offices || []),
+        LEVEL_LABELS[election.level],
       ]
         .filter(Boolean)
         .join(" ")
         .toLowerCase();
       if (!haystack.includes(searchQuery)) return false;
     }
+
     return true;
   });
 }
 
-function sortElections(elections) {
-  const sorted = [...elections];
-  if (sortMode === "date-desc") {
-    sorted.sort((a, b) => b.date.localeCompare(a.date));
-  } else if (sortMode === "stakes-desc") {
-    sorted.sort((a, b) => {
-      const sd = STAKES_ORDER[a.stakes] - STAKES_ORDER[b.stakes];
-      return sd !== 0 ? sd : a.date.localeCompare(b.date);
-    });
-  } else {
-    sorted.sort((a, b) => a.date.localeCompare(b.date));
-  }
-  return sorted;
-}
-
 function groupByMonth(elections) {
   const groups = new Map();
-  for (const e of elections) {
-    const d = new Date(e.date + "T12:00:00");
+  for (const election of elections) {
+    const d = new Date(election.date + "T12:00:00");
     const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
     const label = d.toLocaleDateString("en-US", { month: "long", year: "numeric" });
     if (!groups.has(key)) groups.set(key, { label, items: [] });
-    groups.get(key).items.push(e);
+    groups.get(key).items.push(election);
   }
+
+  for (const group of groups.values()) {
+    group.items.sort((a, b) => {
+      const levelOrder = { federal: 0, state: 1 };
+      const levelDiff = (levelOrder[a.level] ?? 2) - (levelOrder[b.level] ?? 2);
+      if (levelDiff !== 0) return levelDiff;
+      if (a.date !== b.date) return a.date.localeCompare(b.date);
+      return (a.state || a.country).localeCompare(b.state || b.country);
+    });
+  }
+
   return [...groups.entries()].sort(([a], [b]) => a.localeCompare(b));
 }
 
-function formatCardDate(dateStr) {
-  const d = new Date(dateStr + "T12:00:00");
+function formatCardDate(election) {
+  const d = new Date(election.date + "T12:00:00");
+  const isEstimated = election.date_precision === "estimated";
+
   return {
-    day: d.getDate(),
-    weekday: d.toLocaleDateString("en-US", { weekday: "short" }),
+    day: isEstimated ? "~" : d.getDate(),
+    weekday: d.toLocaleDateString("en-US", { month: "short", year: "numeric" }),
+    full: d.toLocaleDateString("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    }),
+    isEstimated,
   };
 }
 
-function renderCard(e) {
-  const { day, weekday } = formatCardDate(e.date);
-  const location = e.state ? `${e.state}, ${e.country}` : e.country;
-  const offices = (e.offices || [])
-    .map((o) => `<span class="office-tag">${o}</span>`)
+function renderCard(election) {
+  const { day, weekday, full, isEstimated } = formatCardDate(election);
+  const location = election.state
+    ? `${election.state}, ${election.country}`
+    : election.country;
+  const offices = (election.offices || [])
+    .map((office) => `<span class="office-tag">${office}</span>`)
     .join("");
 
   return `
     <article class="card">
+      <img class="card-flag" src="${flagUrl(election)}" alt="${flagAlt(election)}" width="24" height="16" loading="lazy" />
       <div class="card-date">
         <div class="card-day">${day}</div>
         <div class="card-weekday">${weekday}</div>
       </div>
       <div class="card-body">
-        <h3 class="card-title">${e.title}</h3>
+        <div class="card-topline">
+          <h3 class="card-title">${election.title}</h3>
+          ${isEstimated ? '<span class="badge badge-estimated">Est.</span>' : ""}
+        </div>
         <p class="card-location">${location}</p>
-        <div class="card-offices">${offices}</div>
-        <p class="card-notes">${e.notes}</p>
+        <div class="card-meta">
+          <span class="badge badge-level">${LEVEL_LABELS[election.level] || election.level}</span>
+          ${offices}
+        </div>
+        ${election.notes ? `<p class="card-notes">${election.notes}</p>` : ""}
       </div>
-      <div class="card-badges">
-        <span class="badge badge-stakes-${e.stakes}">${e.stakes} stakes</span>
-        <span class="badge badge-region badge-region-${e.region}">${REGION_LABELS[e.region] || e.region}</span>
-      </div>
+      <time class="card-time" datetime="${election.date}">${full}</time>
     </article>
   `;
 }
 
-function renderStats() {
-  const high = allElections.filter((e) => e.stakes === "high").length;
-  const us = allElections.filter((e) => e.region.startsWith("us_")).length;
-  const next = allElections[0];
+function renderHeader() {
+  const filtered = filterElections();
+  const exact = filtered.filter((e) => e.date_precision === "exact").length;
+  const estimated = filtered.length - exact;
+  const next = filtered[0];
+
+  const rangeLabel = meta
+    ? `${new Date(meta.window_start + "T12:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" })} – ${new Date(meta.window_end + "T12:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" })}`
+    : "Next 12 months";
+
+  document.getElementById("window-label").textContent = rangeLabel;
 
   document.getElementById("stats").innerHTML = `
     <div class="stat">
-      <div class="stat-value">${allElections.length}</div>
-      <div class="stat-label">Upcoming</div>
+      <div class="stat-value">${filtered.length}</div>
+      <div class="stat-label">Elections</div>
     </div>
     <div class="stat">
-      <div class="stat-value">${high}</div>
-      <div class="stat-label">High stakes</div>
+      <div class="stat-value">${exact}</div>
+      <div class="stat-label">Exact dates</div>
     </div>
     <div class="stat">
-      <div class="stat-value">${us}</div>
-      <div class="stat-label">US races</div>
+      <div class="stat-value">${estimated}</div>
+      <div class="stat-label">Estimated</div>
     </div>
     ${
       next
-        ? `<div class="stat">
-      <div class="stat-value" style="font-size:1rem">${next.title.replace(/Primary|Election.*/, "").trim()}</div>
-      <div class="stat-label">Next: ${new Date(next.date + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" })}</div>
+        ? `<div class="stat stat-next">
+      <div class="stat-value">${next.state || next.country}</div>
+      <div class="stat-label">Next · ${new Date(next.date + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" })}</div>
     </div>`
         : ""
     }
@@ -198,8 +208,9 @@ function renderStats() {
 }
 
 function render() {
-  const filtered = sortElections(filterElections());
+  const filtered = filterElections();
   const timeline = document.getElementById("timeline");
+  renderHeader();
 
   if (!filtered.length) {
     timeline.innerHTML = `<p class="empty">No elections match your filters.</p>`;
