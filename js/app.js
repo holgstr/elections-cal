@@ -94,7 +94,18 @@ const OFFICE_PRIMARY_LABEL = {
   Senate: "Senate Primary",
 };
 
-const OFFICE_ORDER = ["Governor", "Senate"];
+const EVENT_OFFICE_SHORT = {
+  Governor: "Gov",
+  Senate: "Senate",
+};
+
+const UMBRELLA_TITLES = {
+  midterm: "Midterms",
+  general: "General",
+  state: "State",
+};
+
+const OFFICE_ORDER = ["Senate", "Governor"];
 
 const PARTY_ORDER = ["Democratic", "Republican"];
 
@@ -142,6 +153,39 @@ function compactPrimaryLabels(items) {
   return labels;
 }
 
+function primaryEventTitle(offices = []) {
+  const parts = OFFICE_ORDER.filter((office) => offices.includes(office)).map(
+    (office) => EVENT_OFFICE_SHORT[office] || office
+  );
+  if (!parts.length) return "Primaries";
+  return `${parts.join("/")} primaries`;
+}
+
+function stripElectionFromTitle(title) {
+  const roundMatch = title.match(/^(.+?)\s+Election(\s+—\s+Round\s+\d+)$/i);
+  if (roundMatch) {
+    return `${roundMatch[1]}${roundMatch[2]}`;
+  }
+
+  const stripped = title
+    .replace(/\s+Elections$/i, "")
+    .replace(/\s+Election$/i, "");
+  return UMBRELLA_TITLES[stripped.toLowerCase()] || stripped;
+}
+
+function formatEventTitle(election) {
+  if (election.mergedPrimary) {
+    return primaryEventTitle(election.offices);
+  }
+
+  if (election.country_code === "DE" && election.state && election.level === "state") {
+    const body = (election.offices || [])[0];
+    if (body) return `${election.state} ${body}`;
+  }
+
+  return stripElectionFromTitle(election.title);
+}
+
 function mergeLabels(items) {
   const sorted = [...items].sort((a, b) => a.title.localeCompare(b.title));
   const isPrimaryGroup =
@@ -184,7 +228,6 @@ function mergeElectionGroups(elections) {
 
     return {
       ...base,
-      title: isMergedPrimary ? "Primary Elections" : base.title,
       offices,
       labels,
       mergedPrimary: isMergedPrimary,
@@ -208,7 +251,7 @@ function resolveCardDisplay(election) {
   const showMeta = !hasSections && !hasLabels;
 
   return {
-    title: election.title,
+    title: formatEventTitle(election),
     location,
     labels,
     sections,

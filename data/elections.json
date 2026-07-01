@@ -804,7 +804,7 @@
     "country_code": "DE",
     "state": "Saxony-Anhalt",
     "state_code": "ST",
-    "title": "Landtag Election",
+    "title": "Landtag",
     "type": "legislative",
     "level": "state",
     "groups": [
@@ -972,7 +972,7 @@
     "date_precision": "exact",
     "country": "Sweden",
     "country_code": "SE",
-    "title": "Riksdag Election",
+    "title": "Riksdag",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1028,7 +1028,7 @@
     "country_code": "DE",
     "state": null,
     "state_code": null,
-    "title": "State Elections",
+    "title": "State",
     "type": "combined",
     "level": "state",
     "groups": [
@@ -1065,7 +1065,7 @@
     "country_code": "BR",
     "state": null,
     "state_code": null,
-    "title": "General Elections",
+    "title": "General",
     "type": "combined",
     "level": "federal",
     "groups": [
@@ -1073,14 +1073,14 @@
     ],
     "sections": [
       {
-        "label": "National Congress Election",
+        "label": "National Congress",
         "level": "federal",
         "offices": [
           "National Congress"
         ]
       },
       {
-        "label": "Presidential Election — Round 1",
+        "label": "Presidential — Round 1",
         "level": "federal",
         "offices": [
           "President"
@@ -1094,7 +1094,7 @@
     "date_precision": "exact",
     "country": "Brazil",
     "country_code": "BR",
-    "title": "Presidential Election — Round 2",
+    "title": "Presidential — Round 2",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1110,7 +1110,7 @@
     "date_precision": "estimated",
     "country": "Israel",
     "country_code": "IL",
-    "title": "Knesset Election",
+    "title": "Knesset",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1129,7 +1129,7 @@
     "country_code": "US",
     "state": null,
     "state_code": null,
-    "title": "Midterm Elections",
+    "title": "Midterms",
     "type": "combined",
     "level": "federal",
     "groups": [
@@ -1446,7 +1446,7 @@
     "date_precision": "estimated",
     "country": "New Zealand",
     "country_code": "NZ",
-    "title": "Parliamentary Election",
+    "title": "Parliamentary",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1463,7 +1463,7 @@
     "date_precision": "exact",
     "country": "Estonia",
     "country_code": "EE",
-    "title": "Riigikogu Election",
+    "title": "Riigikogu",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1479,7 +1479,7 @@
     "date_precision": "exact",
     "country": "France",
     "country_code": "FR",
-    "title": "Presidential Election — Round 1",
+    "title": "Presidential — Round 1",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1495,7 +1495,7 @@
     "date_precision": "exact",
     "country": "Finland",
     "country_code": "FI",
-    "title": "Eduskunta Election",
+    "title": "Eduskunta",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1513,7 +1513,7 @@
     "country_code": "DE",
     "state": null,
     "state_code": null,
-    "title": "State Elections",
+    "title": "State",
     "type": "combined",
     "level": "state",
     "groups": [
@@ -1548,7 +1548,7 @@
     "date_precision": "exact",
     "country": "France",
     "country_code": "FR",
-    "title": "Presidential Election — Round 2",
+    "title": "Presidential — Round 2",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1566,7 +1566,7 @@
     "country_code": "DE",
     "state": "North Rhine-Westphalia",
     "state_code": "NW",
-    "title": "Landtag Election",
+    "title": "Landtag",
     "type": "legislative",
     "level": "state",
     "groups": [
@@ -1584,7 +1584,7 @@
     "country_code": "DE",
     "state": "Bremen",
     "state_code": "HB",
-    "title": "Bürgerschaft Election",
+    "title": "Bürgerschaft",
     "type": "legislative",
     "level": "state",
     "groups": [
@@ -1600,7 +1600,7 @@
     "date_precision": "exact",
     "country": "Mexico",
     "country_code": "MX",
-    "title": "Chamber of Deputies Election",
+    "title": "Chamber of Deputies",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1616,7 +1616,7 @@
     "date_precision": "estimated",
     "country": "Greece",
     "country_code": "GR",
-    "title": "Hellenic Parliament Election",
+    "title": "Hellenic Parliament",
     "type": "legislative",
     "level": "federal",
     "groups": [

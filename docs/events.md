@@ -7,7 +7,7 @@ Every election card uses three distinct layers. **Location**, **event title**, a
 | Layer | DOM | Question | Example |
 |-------|-----|----------|---------|
 | **Location** | `.card-location` | Where? | `Kansas, United States` · `Brazil` |
-| **Event title** | `.card-title` | What kind of election day? | `Primary Elections` · `Presidential Election — Round 2` |
+| **Event title** | `.card-title` | What kind of election day? | `Senate/Gov primaries` · `Presidential — Round 2` |
 | **Contest detail** | `.card-labels` or `.card-sections` | Which specific races? | `Governor Primary · Senate Primary` |
 
 ### Location rules
@@ -15,14 +15,16 @@ Every election card uses three distinct layers. **Location**, **event title**, a
 - Always shown on every card.
 - Subnational: `{State}, {Country}` (e.g. `Kansas, United States`, `Berlin, Germany`).
 - National/federal: `{Country}` only.
-- Never appears in the event title.
+- Never appears in the event title (except German state elections, where the title uses `{State} {Body}`).
 
 ### Event title rules
 
-- Names the **election event**, not the geography.
-- Standalone card: use the record's `title` field (e.g. `Riksdag Election`, `Governor Election`).
-- Same-day contests at one location (merged US primaries): `Primary Elections`.
-- Same-day national multi-contest cards (`type: combined`): umbrella name such as `Midterm Elections`, `General Elections`, or `State Elections`.
+- Names the **election event**, not the geography (US primaries are the exception: location carries the state).
+- **Never use "election" or "elections"** in the event title.
+- Standalone card: derive from the record's `title` field, stripping any "Election" suffix (e.g. `Riksdag`, `Governor`).
+- Same-day contests at one location (merged US primaries): `{Office}/{Office} primaries` (e.g. `Senate/Gov primaries`).
+- Same-day national multi-contest cards (`type: combined`): umbrella name such as `Midterms`, `General`, or `State`.
+- German state elections: `{State} {Body}` (e.g. `Berlin Landtag`, `Berlin Abgeordnetenhaus`).
 - Optional round suffix: ` — Round 1`, ` — Round 2`.
 
 ### Contest detail rules
@@ -37,30 +39,31 @@ The `title` field in JSON describes the **contest**, never the location.
 
 | Type | Pattern | Example |
 |------|---------|---------|
-| General | `{Office} Election` | `Governor Election` |
+| General | `{Office}` | `Governor` |
 | Primary | `{Party} {Office} Primary` | `Democratic Senate Primary` |
 | Runoff | `{Party} {Office} Primary Runoff` | `Republican Governor Primary Runoff` |
-| Presidential | `Presidential Election — Round {n}` | `Presidential Election — Round 2` |
-| Legislative | `{Body} Election` | `Riksdag Election` |
-| Combined (aggregated) | Umbrella name | `Midterm Elections`, `General Elections` |
+| Presidential | `Presidential — Round {n}` | `Presidential — Round 2` |
+| Legislative | `{Body}` | `Riksdag` |
+| Combined (aggregated) | Umbrella name | `Midterms`, `General` |
 
 ### Naming conventions
 
 - Use **Governor**, not "Gubernatorial".
 - Use **Senate**, **President**, etc. as office names.
-- Do not embed state or country names in `title`.
+- Do not embed state or country names in `title` (German state cards are formatted at display time).
 - Party name appears in `title` only for single-party primaries and confirmed runoffs; when both major parties vote on the same date the UI compacts to `{Office} Primary` in labels.
 
 ## Merging behaviour
 
 | Scenario | Event title | Location | Detail |
 |----------|-------------|----------|--------|
-| Single federal election | `Riksdag Election` | `Sweden` | office tags |
+| Single federal election | `Riksdag` | `Sweden` | office tags |
 | Single state primary (one contest) | `Democratic Governor Primary` | `Arizona, United States` | office tags |
-| Merged state primaries | `Primary Elections` | `Kansas, United States` | `Governor Primary · Senate Primary` |
-| US midterms (combined) | `Midterm Elections` | `United States` | sections: Federal + State |
-| Brazil election day (combined) | `General Elections` | `Brazil` | sections per contest |
-| Primary runoff (confirmed) | `Primary Elections` | `{State}, United States` | `{Party} {Office} Primary Runoff` |
+| Merged state primaries | `Senate/Gov primaries` | `Kansas, United States` | `Governor Primary · Senate Primary` |
+| US midterms (combined) | `Midterms` | `United States` | sections: Federal + State |
+| Brazil election day (combined) | `General` | `Brazil` | sections per contest |
+| German Landtag | `Berlin Landtag` | `Berlin, Germany` | office tags |
+| Primary runoff (confirmed) | `Senate/Gov primaries` | `{State}, United States` | `{Party} {Office} Primary Runoff` |
 
 ## Flags
 
