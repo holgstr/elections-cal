@@ -206,12 +206,13 @@ function mergeElectionGroups(elections) {
     const offices = [...new Set(items.flatMap((e) => e.offices || []))];
     const labels = mergeLabels(items);
     const notes = [...new Set(items.map((e) => e.notes).filter(Boolean))];
-    const isMergedPrimary =
-      base.type === "primary" && items.every((item) => item.type === "primary");
+    const isMergedPrimary = items.every(
+      (item) => item.type === "primary" || item.type === "runoff"
+    );
 
     return {
       ...base,
-      title: base.state || base.country,
+      title: isMergedPrimary ? "Primary Elections" : base.title,
       offices,
       labels,
       mergedPrimary: isMergedPrimary,
@@ -219,6 +220,29 @@ function mergeElectionGroups(elections) {
       notes: notes.length ? notes.join(" · ") : undefined,
     };
   });
+}
+
+function formatLocation(election) {
+  if (election.state) return `${election.state}, ${election.country}`;
+  return election.country;
+}
+
+function resolveCardDisplay(election) {
+  const location = formatLocation(election);
+  const labels = (election.labels || []).join(" · ");
+  const sections = visibleSections(election);
+  const hasSections = sections.length > 0;
+  const hasLabels = Boolean(labels);
+  const showMeta = !hasSections && !hasLabels;
+
+  return {
+    title: election.title,
+    location,
+    labels,
+    sections,
+    showMeta,
+    offices: election.offices || [],
+  };
 }
 
 function visibleSections(election) {
@@ -312,22 +336,12 @@ function renderSections(election) {
 
 function renderCard(election) {
   const { day, weekday, full, isEstimated } = formatCardDate(election);
-  const isMerged = Boolean(election.labels?.length);
-  const showCountrySuffix = election.state && isMerged;
-  const location =
-    election.state && !isMerged
-      ? `${election.state}, ${election.country}`
-      : !election.state
-        ? election.country
-        : "";
-  const sections = renderSections(election);
-  const showMeta = !sections && !election.mergedPrimary;
-  const offices = showMeta ? renderOfficeTags(election.offices) : "";
-  const labels = (election.labels || []).join(" · ");
-  const titleSuffix = showCountrySuffix ? ` <span class="card-country">${election.country}</span>` : "";
+  const { title, location, labels, sections, showMeta, offices } =
+    resolveCardDisplay(election);
+  const officeTags = showMeta ? renderOfficeTags(offices) : "";
 
   return `
-    <article class="card${sections ? " card-combined" : ""}${election.mergedPrimary ? " card-primary" : ""}">
+    <article class="card${sections.length ? " card-combined" : ""}${election.mergedPrimary ? " card-primary" : ""}">
       <img class="card-flag" src="${flagUrl(election)}" alt="${flagAlt(election)}" width="24" height="16" loading="lazy" />
       <div class="card-date">
         <div class="card-day">${day}</div>
@@ -335,12 +349,12 @@ function renderCard(election) {
       </div>
       <div class="card-body">
         <div class="card-topline">
-          <h3 class="card-title">${election.title}${titleSuffix}</h3>
+          <h3 class="card-title">${title}</h3>
           ${isEstimated ? '<span class="badge badge-estimated">Est.</span>' : ""}
         </div>
-        ${location ? `<p class="card-location">${location}</p>` : ""}
+        <p class="card-location">${location}</p>
         ${labels ? `<p class="card-labels">${labels}</p>` : ""}
-        ${sections || (showMeta ? `<div class="card-meta"><span class="badge badge-level">${LEVEL_LABELS[election.level] || election.level}</span>${offices}</div>` : "")}
+        ${sections.length ? renderSections(election) : showMeta ? `<div class="card-meta"><span class="badge badge-level">${LEVEL_LABELS[election.level] || election.level}</span>${officeTags}</div>` : ""}
         ${election.notes ? `<p class="card-notes">${election.notes}</p>` : ""}
       </div>
       <time class="card-time" datetime="${election.date}">${full}</time>
@@ -353,6 +367,7 @@ function renderHeader() {
   const exact = filtered.filter((e) => e.date_precision === "exact").length;
   const estimated = filtered.length - exact;
   const next = filtered[0];
+  const nextLocation = next ? formatLocation(next) : "";
 
   const rangeLabel = meta
     ? `${new Date(meta.window_start + "T12:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" })} – ${new Date(meta.window_end + "T12:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" })}`
@@ -376,7 +391,7 @@ function renderHeader() {
     ${
       next
         ? `<div class="stat stat-next">
-      <div class="stat-value">${next.state || next.country}</div>
+      <div class="stat-value">${nextLocation}</div>
       <div class="stat-label">Next · ${new Date(next.date + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" })}</div>
     </div>`
         : ""

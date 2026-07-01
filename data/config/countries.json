@@ -8,7 +8,7 @@
       "Population ≥ 50 million",
       "Nominal GDP in the global top 35",
       "European sovereign state (excluding microstates: Andorra, Liechtenstein, Malta, Monaco, San Marino, Vatican City)",
-      "Latin American mainland sovereign state with population ≥ 5 million (excluding Caribbean island nations)"
+      "Latin American mainland sovereign state with population ≥ 3 million (excluding Caribbean island nations)"
     ]
   },
   "AL": { "name": "Albania", "groups": ["europe"], "popular_president": true },
@@ -64,6 +64,7 @@
   "NI": { "name": "Nicaragua", "groups": ["major"], "popular_president": true },
   "NZ": { "name": "New Zealand", "groups": ["oecd"], "popular_president": false },
   "NO": { "name": "Norway", "groups": ["oecd"], "popular_president": false },
+  "PA": { "name": "Panama", "groups": ["major"], "popular_president": true },
   "PK": { "name": "Pakistan", "groups": ["major"], "popular_president": false },
   "PE": { "name": "Peru", "groups": ["major"], "popular_president": true },
   "PH": { "name": "Philippines", "groups": ["major"], "popular_president": true },
@@ -84,6 +85,7 @@
   "TH": { "name": "Thailand", "groups": ["major"], "popular_president": false },
   "TR": { "name": "Turkey", "groups": ["oecd"], "popular_president": true },
   "UA": { "name": "Ukraine", "groups": ["major"], "popular_president": true },
+  "UY": { "name": "Uruguay", "groups": ["major"], "popular_president": true },
   "VE": { "name": "Venezuela", "groups": ["major"], "popular_president": true },
   "AE": { "name": "United Arab Emirates", "groups": ["brics"], "popular_president": false },
   "GB": { "name": "United Kingdom", "groups": ["oecd"], "popular_president": false },
