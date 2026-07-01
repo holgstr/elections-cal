@@ -1,0 +1,471 @@
+[
+  {
+    "date": "2026-07-02",
+    "region": "africa",
+    "country": "Algeria",
+    "title": "National People's Assembly",
+    "type": "legislative",
+    "stakes": "medium",
+    "offices": ["Parliament"],
+    "notes": "Legislative elections under authoritarian conditions; limited betting liquidity."
+  },
+  {
+    "date": "2026-07-04",
+    "region": "europe",
+    "country": "Slovakia",
+    "title": "Constitutional Referendum",
+    "type": "referendum",
+    "stakes": "low",
+    "offices": ["Referendum"],
+    "notes": "Domestic constitutional question; niche markets."
+  },
+  {
+    "date": "2026-07-19",
+    "region": "africa",
+    "country": "São Tomé and Príncipe",
+    "title": "Presidential Election",
+    "type": "presidential",
+    "stakes": "low",
+    "offices": ["President"],
+    "notes": "Small island state; occasional prediction-market interest."
+  },
+  {
+    "date": "2026-07-21",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Arizona",
+    "title": "Arizona Primary",
+    "type": "primary",
+    "stakes": "medium",
+    "offices": ["Congress"],
+    "notes": "No Senate race in 2026; competitive House primaries in swing districts."
+  },
+  {
+    "date": "2026-07-28",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "South Dakota",
+    "title": "South Dakota Gubernatorial Runoff",
+    "type": "primary",
+    "stakes": "medium",
+    "offices": ["Governor"],
+    "notes": "Runoff if no candidate cleared 35% in June primary."
+  },
+  {
+    "date": "2026-08-04",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Michigan",
+    "title": "Michigan Primary",
+    "type": "primary",
+    "stakes": "high",
+    "offices": ["US Senate", "Governor", "Congress"],
+    "notes": "Open Democratic Senate seat (Peters retiring). Top-tier Senate market."
+  },
+  {
+    "date": "2026-08-04",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Kansas",
+    "title": "Kansas Primary",
+    "type": "primary",
+    "stakes": "medium",
+    "offices": ["US Senate", "Governor", "Congress"],
+    "notes": "Senate race on ballot; watch GOP nomination dynamics."
+  },
+  {
+    "date": "2026-08-04",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Missouri",
+    "title": "Missouri Primary",
+    "type": "primary",
+    "stakes": "medium",
+    "offices": ["US Senate", "Governor", "Congress"],
+    "notes": "Safe R state but contested primaries can move markets."
+  },
+  {
+    "date": "2026-08-04",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Washington",
+    "title": "Washington Top-Two Primary",
+    "type": "primary",
+    "stakes": "medium",
+    "offices": ["Congress"],
+    "notes": "No Senate race; top-two primary sets up competitive House generals."
+  },
+  {
+    "date": "2026-08-06",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Tennessee",
+    "title": "Tennessee Primary",
+    "type": "primary",
+    "stakes": "medium",
+    "offices": ["US Senate", "Governor", "Congress"],
+    "notes": "Republican Senate/Gov primaries in deep-red state."
+  },
+  {
+    "date": "2026-08-08",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Hawaii",
+    "title": "Hawaii Primary",
+    "type": "primary",
+    "stakes": "low",
+    "offices": ["Governor", "Congress"],
+    "notes": "No Senate race; Democratic-dominated state."
+  },
+  {
+    "date": "2026-08-11",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Minnesota",
+    "title": "Minnesota Primary",
+    "type": "primary",
+    "stakes": "high",
+    "offices": ["US Senate", "Governor", "Congress"],
+    "notes": "Tina Smith (D) defending Senate seat in competitive general environment."
+  },
+  {
+    "date": "2026-08-11",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Wisconsin",
+    "title": "Wisconsin Primary",
+    "type": "primary",
+    "stakes": "high",
+    "offices": ["US Senate", "Governor", "Congress"],
+    "notes": "Open Republican Senate seat (Johnson retiring). Key battleground primary."
+  },
+  {
+    "date": "2026-08-11",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Connecticut",
+    "title": "Connecticut Primary",
+    "type": "primary",
+    "stakes": "low",
+    "offices": ["Governor", "Congress"],
+    "notes": "No Senate race; safe Democratic state."
+  },
+  {
+    "date": "2026-08-18",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Florida",
+    "title": "Florida Primary",
+    "type": "primary",
+    "stakes": "high",
+    "offices": ["US Senate", "Governor", "Congress"],
+    "notes": "Major Sun Belt battleground. Senate and Governor races both market-relevant."
+  },
+  {
+    "date": "2026-08-18",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Alaska",
+    "title": "Alaska Top-Four Primary",
+    "type": "primary",
+    "stakes": "medium",
+    "offices": ["US Senate", "Congress"],
+    "notes": "Top-four primary + RCV general. Unpredictable nomination dynamics."
+  },
+  {
+    "date": "2026-08-18",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Wyoming",
+    "title": "Wyoming Primary",
+    "type": "primary",
+    "stakes": "low",
+    "offices": ["US Senate", "Governor", "Congress"],
+    "notes": "Republican Senate primary is the main event in deep-red Wyoming."
+  },
+  {
+    "date": "2026-08-25",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Oklahoma",
+    "title": "Oklahoma Runoff Elections",
+    "type": "primary",
+    "stakes": "medium",
+    "offices": ["US Senate (D)", "Governor (R)", "Congress"],
+    "notes": "Runoffs for Democratic Senate and Republican Governor nominations."
+  },
+  {
+    "date": "2026-08-30",
+    "region": "americas",
+    "country": "Haiti",
+    "title": "Presidential & Legislative — Round 1",
+    "type": "general",
+    "stakes": "medium",
+    "offices": ["President", "Senate", "Chamber of Deputies"],
+    "notes": "Long-delayed elections amid security crisis. High uncertainty."
+  },
+  {
+    "date": "2026-09-01",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Massachusetts",
+    "title": "Massachusetts Primary",
+    "type": "primary",
+    "stakes": "medium",
+    "offices": ["Governor", "Congress"],
+    "notes": "No Senate race; Democratic primaries for Governor can draw attention."
+  },
+  {
+    "date": "2026-09-08",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "New Hampshire",
+    "title": "New Hampshire Primary",
+    "type": "primary",
+    "stakes": "high",
+    "offices": ["US Senate", "Governor", "Congress"],
+    "notes": "Open Democratic Senate seat (Shaheen retiring). Classic swing-state race."
+  },
+  {
+    "date": "2026-09-09",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Rhode Island",
+    "title": "Rhode Island Primary",
+    "type": "primary",
+    "stakes": "low",
+    "offices": ["Governor", "Congress"],
+    "notes": "Safe Democratic state; limited market action."
+  },
+  {
+    "date": "2026-09-13",
+    "region": "europe",
+    "country": "Sweden",
+    "title": "Riksdag General Election",
+    "type": "legislative",
+    "stakes": "high",
+    "offices": ["Parliament (349 seats)"],
+    "notes": "Right-populist vs. centre-left bloc competition. Active EU betting markets."
+  },
+  {
+    "date": "2026-09-15",
+    "region": "us_primary",
+    "country": "United States",
+    "state": "Delaware",
+    "title": "Delaware Primary",
+    "type": "primary",
+    "stakes": "medium",
+    "offices": ["US Senate", "Governor", "Congress"],
+    "notes": "Senate race on ballot; small state but open-seat scenarios matter."
+  },
+  {
+    "date": "2026-09-23",
+    "region": "africa",
+    "country": "Morocco",
+    "title": "Chamber of Representatives",
+    "type": "legislative",
+    "stakes": "medium",
+    "offices": ["Parliament"],
+    "notes": "North African legislative election; moderate market interest."
+  },
+  {
+    "date": "2026-10-04",
+    "region": "americas",
+    "country": "Brazil",
+    "title": "General Election — Round 1",
+    "type": "general",
+    "stakes": "high",
+    "offices": ["President", "Congress"],
+    "notes": "Lula re-election bid vs. Bolsonaro-aligned right. Major global market."
+  },
+  {
+    "date": "2026-10-27",
+    "region": "middle_east",
+    "country": "Israel",
+    "title": "Knesset Election",
+    "type": "legislative",
+    "stakes": "high",
+    "offices": ["Knesset (120 seats)"],
+    "notes": "Another snap election in volatile coalition politics. Strong prediction-market volume."
+  },
+  {
+    "date": "2026-11-03",
+    "region": "us_general",
+    "country": "United States",
+    "title": "2026 US Midterm Elections",
+    "type": "general",
+    "stakes": "high",
+    "offices": ["US House (all)", "US Senate (34 seats)", "Governor (36 states)"],
+    "notes": "Flagship US market. Senate control, key Governor races (MI, WI, PA, AZ, NV, GA, etc.)."
+  },
+  {
+    "date": "2026-11-07",
+    "region": "asia_pacific",
+    "country": "New Zealand",
+    "title": "Parliamentary Election",
+    "type": "legislative",
+    "stakes": "medium",
+    "offices": ["Parliament"],
+    "notes": "MMP system; centre-right vs. Labour/Greens. Decent international liquidity."
+  },
+  {
+    "date": "2026-11-15",
+    "region": "africa",
+    "country": "Cape Verde",
+    "title": "Presidential Election",
+    "type": "presidential",
+    "stakes": "low",
+    "offices": ["President"],
+    "notes": "Stable African democracy; niche markets."
+  },
+  {
+    "date": "2026-12-05",
+    "region": "africa",
+    "country": "The Gambia",
+    "title": "Presidential Election",
+    "type": "presidential",
+    "stakes": "medium",
+    "offices": ["President"],
+    "notes": "Incumbent Barrow seeking third term. West African democracy test."
+  },
+  {
+    "date": "2026-12-06",
+    "region": "americas",
+    "country": "Haiti",
+    "title": "Presidential & Legislative — Round 2",
+    "type": "general",
+    "stakes": "medium",
+    "offices": ["President", "Legislature"],
+    "notes": "Runoff round if no first-round majority."
+  },
+  {
+    "date": "2027-01-16",
+    "region": "africa",
+    "country": "Nigeria",
+    "title": "Presidential & National Assembly",
+    "type": "general",
+    "stakes": "high",
+    "offices": ["President", "Senate", "House of Representatives"],
+    "notes": "Africa's largest democracy. High stakes, significant offshore betting interest."
+  },
+  {
+    "date": "2027-01-24",
+    "region": "asia_pacific",
+    "country": "Kyrgyzstan",
+    "title": "Presidential Election",
+    "type": "presidential",
+    "stakes": "medium",
+    "offices": ["President"],
+    "notes": "Central Asian politics; authoritarian consolidation dynamics."
+  },
+  {
+    "date": "2027-02-28",
+    "region": "americas",
+    "country": "El Salvador",
+    "title": "Presidential & Legislative Election",
+    "type": "general",
+    "stakes": "medium",
+    "offices": ["President", "Legislative Assembly"],
+    "notes": "Bukele dominance vs. opposition consolidation. Regional significance."
+  },
+  {
+    "date": "2027-03-01",
+    "region": "europe",
+    "country": "Estonia",
+    "title": "Riigikogu Election",
+    "type": "legislative",
+    "stakes": "medium",
+    "offices": ["Parliament"],
+    "notes": "Baltic NATO frontline state; Russia-policy salience."
+  },
+  {
+    "date": "2027-04-11",
+    "region": "europe",
+    "country": "France",
+    "title": "Presidential Election — Round 1",
+    "type": "presidential",
+    "stakes": "high",
+    "offices": ["President"],
+    "notes": "Premier EU market. Le Pen eligibility, Macron succession, left unity all in play."
+  },
+  {
+    "date": "2027-04-18",
+    "region": "europe",
+    "country": "Finland",
+    "title": "Eduskunta Election",
+    "type": "legislative",
+    "stakes": "medium",
+    "offices": ["Parliament"],
+    "notes": "Nordic coalition politics; NATO/security policy context."
+  },
+  {
+    "date": "2027-04-25",
+    "region": "europe",
+    "country": "France",
+    "title": "Presidential Election — Round 2",
+    "type": "presidential",
+    "stakes": "high",
+    "offices": ["President"],
+    "notes": "Runoff between top two first-round finishers."
+  },
+  {
+    "date": "2027-06-06",
+    "region": "americas",
+    "country": "Mexico",
+    "title": "Chamber of Deputies Election",
+    "type": "legislative",
+    "stakes": "high",
+    "offices": ["Chamber of Deputies"],
+    "notes": "Midterm for Sheinbaum presidency. Morena supermajority dynamics."
+  },
+  {
+    "date": "2027-06-15",
+    "region": "americas",
+    "country": "Guatemala",
+    "title": "Presidential & Congressional Election",
+    "type": "general",
+    "stakes": "medium",
+    "offices": ["President", "Congress"],
+    "notes": "Central American election; anti-corruption vs. establishment themes."
+  },
+  {
+    "date": "2027-07-01",
+    "region": "europe",
+    "country": "Greece",
+    "title": "Hellenic Parliament Election",
+    "type": "legislative",
+    "stakes": "medium",
+    "offices": ["Parliament"],
+    "notes": "Mitsotakis ND vs. SYRIZA/PASOK opposition. EU periphery politics."
+  },
+  {
+    "date": "2027-08-10",
+    "region": "africa",
+    "country": "Kenya",
+    "title": "Presidential & Parliamentary Election",
+    "type": "general",
+    "stakes": "high",
+    "offices": ["President", "National Assembly", "Senate"],
+    "notes": "East Africa's anchor election. Ethnic coalition math drives markets."
+  },
+  {
+    "date": "2027-10-24",
+    "region": "americas",
+    "country": "Argentina",
+    "title": "Presidential & Congressional Election",
+    "type": "general",
+    "stakes": "high",
+    "offices": ["President", "Senate", "Chamber of Deputies"],
+    "notes": "Milei midterm referendum. Peso, IMF, and libertarian agenda on the ballot."
+  },
+  {
+    "date": "2027-10-24",
+    "region": "europe",
+    "country": "Switzerland",
+    "title": "Federal Assembly Election",
+    "type": "legislative",
+    "stakes": "medium",
+    "offices": ["National Council", "Council of States"],
+    "notes": "Consensus system limits drama but SVP strength watched closely."
+  }
+]
