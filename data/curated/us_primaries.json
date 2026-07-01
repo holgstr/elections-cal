@@ -1,0 +1,2450 @@
+[
+  {
+    "date": "2026-03-03",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Arkansas",
+    "state_code": "AR",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-03-03",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Arkansas",
+    "state_code": "AR",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-03-03",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Arkansas",
+    "state_code": "AR",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-03-03",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Arkansas",
+    "state_code": "AR",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-03-03",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-03-03",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-03-03",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Texas",
+    "state_code": "TX",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-03-03",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Texas",
+    "state_code": "TX",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-03-03",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Texas",
+    "state_code": "TX",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-03-03",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Texas",
+    "state_code": "TX",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-03-10",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Mississippi",
+    "state_code": "MS",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-03-10",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Mississippi",
+    "state_code": "MS",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-03-17",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Illinois",
+    "state_code": "IL",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-03-17",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Illinois",
+    "state_code": "IL",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-03-17",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Illinois",
+    "state_code": "IL",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-03-17",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Illinois",
+    "state_code": "IL",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-05",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Ohio",
+    "state_code": "OH",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-05",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Ohio",
+    "state_code": "OH",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-12",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Nebraska",
+    "state_code": "NE",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-12",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Nebraska",
+    "state_code": "NE",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-12",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Nebraska",
+    "state_code": "NE",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-12",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Nebraska",
+    "state_code": "NE",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-12",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "West Virginia",
+    "state_code": "WV",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-12",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "West Virginia",
+    "state_code": "WV",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-16",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Louisiana",
+    "state_code": "LA",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-16",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Louisiana",
+    "state_code": "LA",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Alabama",
+    "state_code": "AL",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Alabama",
+    "state_code": "AL",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Alabama",
+    "state_code": "AL",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Alabama",
+    "state_code": "AL",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Georgia",
+    "state_code": "GA",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Georgia",
+    "state_code": "GA",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Georgia",
+    "state_code": "GA",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Georgia",
+    "state_code": "GA",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Idaho",
+    "state_code": "ID",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Idaho",
+    "state_code": "ID",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Idaho",
+    "state_code": "ID",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Idaho",
+    "state_code": "ID",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Kentucky",
+    "state_code": "KY",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Kentucky",
+    "state_code": "KY",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Oregon",
+    "state_code": "OR",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Oregon",
+    "state_code": "OR",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Oregon",
+    "state_code": "OR",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Oregon",
+    "state_code": "OR",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Pennsylvania",
+    "state_code": "PA",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-05-19",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Pennsylvania",
+    "state_code": "PA",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "California",
+    "state_code": "CA",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "California",
+    "state_code": "CA",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Iowa",
+    "state_code": "IA",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Iowa",
+    "state_code": "IA",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Iowa",
+    "state_code": "IA",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Iowa",
+    "state_code": "IA",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Montana",
+    "state_code": "MT",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Montana",
+    "state_code": "MT",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "New Jersey",
+    "state_code": "NJ",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "New Jersey",
+    "state_code": "NJ",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "New Mexico",
+    "state_code": "NM",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "New Mexico",
+    "state_code": "NM",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "New Mexico",
+    "state_code": "NM",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "New Mexico",
+    "state_code": "NM",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "South Dakota",
+    "state_code": "SD",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "South Dakota",
+    "state_code": "SD",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "South Dakota",
+    "state_code": "SD",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-02",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "South Dakota",
+    "state_code": "SD",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Maine",
+    "state_code": "ME",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Maine",
+    "state_code": "ME",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Maine",
+    "state_code": "ME",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Maine",
+    "state_code": "ME",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Nevada",
+    "state_code": "NV",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Nevada",
+    "state_code": "NV",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "South Carolina",
+    "state_code": "SC",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "South Carolina",
+    "state_code": "SC",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "South Carolina",
+    "state_code": "SC",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "South Carolina",
+    "state_code": "SC",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-16",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Oklahoma",
+    "state_code": "OK",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-16",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Oklahoma",
+    "state_code": "OK",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-16",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Oklahoma",
+    "state_code": "OK",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-16",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Oklahoma",
+    "state_code": "OK",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-23",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "New York",
+    "state_code": "NY",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-23",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "New York",
+    "state_code": "NY",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-30",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Colorado",
+    "state_code": "CO",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-30",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Colorado",
+    "state_code": "CO",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-06-30",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Colorado",
+    "state_code": "CO",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-06-30",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Colorado",
+    "state_code": "CO",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-07-21",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Arizona",
+    "state_code": "AZ",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-07-21",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Arizona",
+    "state_code": "AZ",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Kansas",
+    "state_code": "KS",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Kansas",
+    "state_code": "KS",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Kansas",
+    "state_code": "KS",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Kansas",
+    "state_code": "KS",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Michigan",
+    "state_code": "MI",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Michigan",
+    "state_code": "MI",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Michigan",
+    "state_code": "MI",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Michigan",
+    "state_code": "MI",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Virginia",
+    "state_code": "VA",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Virginia",
+    "state_code": "VA",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-06",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-06",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-06",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-06",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-08",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Hawaii",
+    "state_code": "HI",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-08",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Hawaii",
+    "state_code": "HI",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-11",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Connecticut",
+    "state_code": "CT",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-11",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Connecticut",
+    "state_code": "CT",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-11",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Minnesota",
+    "state_code": "MN",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-11",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Minnesota",
+    "state_code": "MN",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-11",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Minnesota",
+    "state_code": "MN",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-11",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Minnesota",
+    "state_code": "MN",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-11",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Vermont",
+    "state_code": "VT",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-11",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Vermont",
+    "state_code": "VT",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-11",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Wisconsin",
+    "state_code": "WI",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-11",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Wisconsin",
+    "state_code": "WI",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-18",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Alaska",
+    "state_code": "AK",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-18",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Alaska",
+    "state_code": "AK",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-18",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Alaska",
+    "state_code": "AK",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-18",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Alaska",
+    "state_code": "AK",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-18",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Florida",
+    "state_code": "FL",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-18",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Florida",
+    "state_code": "FL",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-18",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Wyoming",
+    "state_code": "WY",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-18",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Wyoming",
+    "state_code": "WY",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-18",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Wyoming",
+    "state_code": "WY",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-08-18",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Wyoming",
+    "state_code": "WY",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-09-01",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Massachusetts",
+    "state_code": "MA",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-09-01",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Massachusetts",
+    "state_code": "MA",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-09-01",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Massachusetts",
+    "state_code": "MA",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-09-01",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Massachusetts",
+    "state_code": "MA",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-09-08",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "New Hampshire",
+    "state_code": "NH",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-09-08",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "New Hampshire",
+    "state_code": "NH",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-09-08",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "New Hampshire",
+    "state_code": "NH",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-09-08",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "New Hampshire",
+    "state_code": "NH",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-09-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Rhode Island",
+    "state_code": "RI",
+    "title": "Democratic Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-09-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Rhode Island",
+    "state_code": "RI",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-09-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Rhode Island",
+    "state_code": "RI",
+    "title": "Republican Gubernatorial Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-09-09",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Rhode Island",
+    "state_code": "RI",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  },
+  {
+    "date": "2026-09-15",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Delaware",
+    "state_code": "DE",
+    "title": "Democratic Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-09-15",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Delaware",
+    "state_code": "DE",
+    "title": "Republican Senate Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Senate"
+    ],
+    "party": "Republican"
+  }
+]
