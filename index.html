@@ -13,27 +13,20 @@
 </head>
 <body>
   <div class="page">
-    <header class="hero">
-      <p class="eyebrow">OECD · BRICS · Major economies · US &amp; German states</p>
+    <header class="page-header">
       <h1>Election Calendar</h1>
-      <p class="subtitle">Federal and state elections for the next 12 months. Exact dates when known, otherwise estimated.</p>
-      <p class="window-label" id="window-label"></p>
-      <div class="stats" id="stats"></div>
+      <div class="toolbar" aria-label="Filter elections">
+        <label class="search-wrap">
+          <span class="sr-only">Search</span>
+          <input type="search" id="search" placeholder="Search country, state, office…" autocomplete="off" enterkeyhint="search" />
+        </label>
+
+        <label class="toggle-states">
+          <input type="checkbox" id="toggle-states" checked />
+          <span>Show state elections</span>
+        </label>
+      </div>
     </header>
-
-    <div class="toolbar" aria-label="Filter elections">
-      <label class="search-wrap">
-        <span class="sr-only">Search</span>
-        <input type="search" id="search" placeholder="Search country, state, office…" autocomplete="off" enterkeyhint="search" />
-      </label>
-
-      <div class="chip-row" id="group-filters"></div>
-
-      <label class="toggle-states">
-        <input type="checkbox" id="toggle-states" checked />
-        <span>Show state elections</span>
-      </label>
-    </div>
 
     <main>
       <section class="timeline" id="timeline" aria-live="polite">
