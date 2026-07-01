@@ -106,6 +106,24 @@
     "source": "wikidata"
   },
   {
+    "date": "2026-09-27",
+    "date_precision": "exact",
+    "country": "France",
+    "country_code": "FR",
+    "state": null,
+    "state_code": null,
+    "title": "French Senate election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
     "date": "2026-10-01",
     "date_precision": "estimated",
     "country": "Czech Republic",
@@ -146,6 +164,42 @@
     "date_precision": "exact",
     "country": "Brazil",
     "country_code": "BR",
+    "state": null,
+    "state_code": null,
+    "title": "Brazilian General Election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "brics"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-10-04",
+    "date_precision": "exact",
+    "country": "Brazil",
+    "country_code": "BR",
+    "state": null,
+    "state_code": null,
+    "title": "Brazilian parliamentary election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "brics"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-10-04",
+    "date_precision": "exact",
+    "country": "Brazil",
+    "country_code": "BR",
     "title": "General Election — Round 1",
     "type": "general",
     "level": "federal",
@@ -163,6 +217,24 @@
     "date_precision": "exact",
     "country": "Brazil",
     "country_code": "BR",
+    "state": null,
+    "state_code": null,
+    "title": "Brazilian General Election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "brics"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-10-25",
+    "date_precision": "exact",
+    "country": "Brazil",
+    "country_code": "BR",
     "title": "General Election — Round 2",
     "type": "general",
     "level": "federal",
@@ -173,24 +245,6 @@
       "President"
     ],
     "source": "curated"
-  },
-  {
-    "date": "2026-10-27",
-    "date_precision": "exact",
-    "country": "Israel",
-    "country_code": "IL",
-    "state": null,
-    "state_code": null,
-    "title": "Israeli legislative election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
   },
   {
     "date": "2026-10-27",
@@ -914,6 +968,24 @@
   },
   {
     "date": "2026-11-07",
+    "date_precision": "exact",
+    "country": "New Zealand",
+    "country_code": "NZ",
+    "state": null,
+    "state_code": null,
+    "title": "New Zealand General Election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-11-07",
     "date_precision": "estimated",
     "country": "New Zealand",
     "country_code": "NZ",
@@ -966,6 +1038,24 @@
     "date_precision": "exact",
     "country": "Finland",
     "country_code": "FI",
+    "state": null,
+    "state_code": null,
+    "title": "Finnish parliamentary election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-04-18",
+    "date_precision": "exact",
+    "country": "Finland",
+    "country_code": "FI",
     "title": "Eduskunta Election",
     "type": "legislative",
     "level": "federal",
@@ -976,6 +1066,24 @@
       "Eduskunta"
     ],
     "source": "curated"
+  },
+  {
+    "date": "2027-04-18",
+    "date_precision": "exact",
+    "country": "France",
+    "country_code": "FR",
+    "state": null,
+    "state_code": null,
+    "title": "French presidential election",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "wikidata"
   },
   {
     "date": "2027-04-18",
@@ -1048,20 +1156,20 @@
     "source": "curated"
   },
   {
-    "date": "2027-05-01",
-    "date_precision": "estimated",
-    "country": "India",
-    "country_code": "IN",
+    "date": "2027-05-02",
+    "date_precision": "exact",
+    "country": "France",
+    "country_code": "FR",
     "state": null,
     "state_code": null,
-    "title": "Next Manipur Legislative Assembly election",
-    "type": "legislative",
+    "title": "French presidential election",
+    "type": "presidential",
     "level": "federal",
     "groups": [
-      "brics"
+      "oecd"
     ],
     "offices": [
-      "Parliament"
+      "President"
     ],
     "source": "wikidata"
   },
