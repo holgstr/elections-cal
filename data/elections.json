@@ -1095,6 +1095,24 @@
     "source": "wikidata"
   },
   {
+    "date": "2026-10-01",
+    "date_precision": "estimated",
+    "country": "Czech Republic",
+    "country_code": "CZ",
+    "state": null,
+    "state_code": null,
+    "title": "Czech Senate election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
     "date": "2026-10-03",
     "date_precision": "exact",
     "country": "Latvia",
@@ -1106,6 +1124,24 @@
     "level": "federal",
     "groups": [
       "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-10-04",
+    "date_precision": "exact",
+    "country": "Bosnia and Herzegovina",
+    "country_code": "BA",
+    "state": null,
+    "state_code": null,
+    "title": "Bosnian parliamentary election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "europe"
     ],
     "offices": [
       "Parliament"
@@ -1515,6 +1551,24 @@
   {
     "date": "2027-01-01",
     "date_precision": "estimated",
+    "country": "Albania",
+    "country_code": "AL",
+    "state": null,
+    "state_code": null,
+    "title": "Albanian presidential election",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "europe"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
     "country": "Nigeria",
     "country_code": "NG",
     "state": null,
@@ -1524,6 +1578,24 @@
     "level": "federal",
     "groups": [
       "major"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "Slovakia",
+    "country_code": "SK",
+    "state": null,
+    "state_code": null,
+    "title": "Next Slovak parliamentary election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "europe"
     ],
     "offices": [
       "Parliament"

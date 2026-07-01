@@ -30,7 +30,7 @@ export function flagUrl(election) {
 }
 
 export function countryFlagUrl(countryCode) {
-  return `https://flagcdn.com/w20/${countryCode.toLowerCase()}.png`;
+  return `https://flagcdn.com/${countryCode.toLowerCase()}.svg`;
 }
 
 export function flagAlt(election) {
