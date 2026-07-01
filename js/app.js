@@ -117,15 +117,12 @@ function filterElections() {
   });
 }
 
-const PARTY_SHORT = {
-  Democratic: "Dem",
-  Republican: "GOP",
+const OFFICE_PRIMARY_LABEL = {
+  Governor: "Governor Primary",
+  Senate: "Senate Primary",
 };
 
-const OFFICE_SHORT = {
-  Senate: "Senate",
-  Governor: "Gov",
-};
+const OFFICE_ORDER = ["Governor", "Senate"];
 
 const PARTY_ORDER = ["Democratic", "Republican"];
 
@@ -134,25 +131,49 @@ function mergeKey(election) {
 }
 
 function compactPrimaryLabels(items) {
-  const byParty = new Map();
-  for (const item of items) {
+  const primaries = items.filter((item) => item.type === "primary");
+  const runoffs = items.filter((item) => item.type === "runoff");
+  const labels = [];
+
+  const partiesByOffice = new Map();
+  for (const item of primaries) {
     if (!item.party) continue;
-    if (!byParty.has(item.party)) byParty.set(item.party, new Set());
     for (const office of item.offices || []) {
-      byParty.get(item.party).add(OFFICE_SHORT[office] || office);
+      if (!partiesByOffice.has(office)) partiesByOffice.set(office, new Set());
+      partiesByOffice.get(office).add(item.party);
     }
   }
 
-  return PARTY_ORDER.filter((party) => byParty.has(party)).map((party) => {
-    const offices = [...byParty.get(party)].sort((a, b) => a.localeCompare(b)).join(", ");
-    return `${PARTY_SHORT[party] || party} · ${offices}`;
-  });
+  for (const office of OFFICE_ORDER) {
+    const parties = partiesByOffice.get(office);
+    if (!parties) continue;
+
+    const hasBothMajorParties =
+      parties.has("Democratic") && parties.has("Republican");
+    if (hasBothMajorParties) {
+      labels.push(OFFICE_PRIMARY_LABEL[office] || `${office} Primary`);
+      continue;
+    }
+
+    for (const party of PARTY_ORDER.filter((p) => parties.has(p))) {
+      const officeName = office === "Governor" ? "Governor" : office;
+      labels.push(`${party} ${officeName} Primary`);
+    }
+  }
+
+  for (const item of [...runoffs].sort((a, b) => a.title.localeCompare(b.title))) {
+    const office = (item.offices || [])[0];
+    const officeName = office === "Governor" ? "Governor" : office || "Primary";
+    labels.push(`${item.party} ${officeName} Primary Runoff`);
+  }
+
+  return labels;
 }
 
 function mergeLabels(items) {
   const sorted = [...items].sort((a, b) => a.title.localeCompare(b.title));
   const isPrimaryGroup =
-    sorted.every((item) => item.type === "primary") &&
+    sorted.every((item) => item.type === "primary" || item.type === "runoff") &&
     sorted.some((item) => item.party);
 
   if (isPrimaryGroup) {

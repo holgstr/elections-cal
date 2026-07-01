@@ -6,7 +6,7 @@
     "country_code": "US",
     "state": "Arizona",
     "state_code": "AZ",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -25,7 +25,7 @@
     "country_code": "US",
     "state": "Arizona",
     "state_code": "AZ",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -44,7 +44,7 @@
     "country_code": "US",
     "state": "Kansas",
     "state_code": "KS",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -82,7 +82,7 @@
     "country_code": "US",
     "state": "Kansas",
     "state_code": "KS",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -120,7 +120,7 @@
     "country_code": "US",
     "state": "Michigan",
     "state_code": "MI",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -158,7 +158,7 @@
     "country_code": "US",
     "state": "Michigan",
     "state_code": "MI",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -234,7 +234,7 @@
     "country_code": "US",
     "state": "Tennessee",
     "state_code": "TN",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -272,7 +272,7 @@
     "country_code": "US",
     "state": "Tennessee",
     "state_code": "TN",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -310,7 +310,7 @@
     "country_code": "US",
     "state": "Hawaii",
     "state_code": "HI",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -329,7 +329,7 @@
     "country_code": "US",
     "state": "Hawaii",
     "state_code": "HI",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -348,7 +348,7 @@
     "country_code": "US",
     "state": "Connecticut",
     "state_code": "CT",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -367,7 +367,7 @@
     "country_code": "US",
     "state": "Connecticut",
     "state_code": "CT",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -386,7 +386,7 @@
     "country_code": "US",
     "state": "Minnesota",
     "state_code": "MN",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -424,7 +424,7 @@
     "country_code": "US",
     "state": "Minnesota",
     "state_code": "MN",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -462,7 +462,7 @@
     "country_code": "US",
     "state": "Vermont",
     "state_code": "VT",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -481,7 +481,7 @@
     "country_code": "US",
     "state": "Vermont",
     "state_code": "VT",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -500,7 +500,7 @@
     "country_code": "US",
     "state": "Wisconsin",
     "state_code": "WI",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -519,7 +519,7 @@
     "country_code": "US",
     "state": "Wisconsin",
     "state_code": "WI",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -538,7 +538,7 @@
     "country_code": "US",
     "state": "Alaska",
     "state_code": "AK",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -576,7 +576,7 @@
     "country_code": "US",
     "state": "Alaska",
     "state_code": "AK",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -614,7 +614,7 @@
     "country_code": "US",
     "state": "Florida",
     "state_code": "FL",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -633,7 +633,7 @@
     "country_code": "US",
     "state": "Florida",
     "state_code": "FL",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -652,7 +652,7 @@
     "country_code": "US",
     "state": "Wyoming",
     "state_code": "WY",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -690,7 +690,7 @@
     "country_code": "US",
     "state": "Wyoming",
     "state_code": "WY",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -728,7 +728,7 @@
     "country_code": "US",
     "state": "Massachusetts",
     "state_code": "MA",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -766,7 +766,7 @@
     "country_code": "US",
     "state": "Massachusetts",
     "state_code": "MA",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -822,7 +822,7 @@
     "country_code": "US",
     "state": "New Hampshire",
     "state_code": "NH",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -860,7 +860,7 @@
     "country_code": "US",
     "state": "New Hampshire",
     "state_code": "NH",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -898,7 +898,7 @@
     "country_code": "US",
     "state": "Rhode Island",
     "state_code": "RI",
-    "title": "Democratic Gubernatorial Primary",
+    "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -936,7 +936,7 @@
     "country_code": "US",
     "state": "Rhode Island",
     "state_code": "RI",
-    "title": "Republican Gubernatorial Primary",
+    "title": "Republican Governor Primary",
     "type": "primary",
     "level": "state",
     "groups": [
@@ -1057,78 +1057,6 @@
       }
     ],
     "source": "aggregated"
-  },
-  {
-    "date": "2026-09-20",
-    "date_precision": "exact",
-    "country": "Russia",
-    "country_code": "RU",
-    "state": null,
-    "state_code": null,
-    "title": "Russian legislative election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "brics"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-09-27",
-    "date_precision": "exact",
-    "country": "France",
-    "country_code": "FR",
-    "state": null,
-    "state_code": null,
-    "title": "French Senate election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-10-03",
-    "date_precision": "exact",
-    "country": "Latvia",
-    "country_code": "LV",
-    "state": null,
-    "state_code": null,
-    "title": "Latvian parliamentary election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-10-04",
-    "date_precision": "exact",
-    "country": "Bosnia and Herzegovina",
-    "country_code": "BA",
-    "state": null,
-    "state_code": null,
-    "title": "Bosnian parliamentary election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "europe"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
   },
   {
     "date": "2026-10-04",
@@ -1531,60 +1459,6 @@
     "source": "curated"
   },
   {
-    "date": "2027-01-01",
-    "date_precision": "estimated",
-    "country": "Albania",
-    "country_code": "AL",
-    "state": null,
-    "state_code": null,
-    "title": "Albanian presidential election",
-    "type": "presidential",
-    "level": "federal",
-    "groups": [
-      "europe"
-    ],
-    "offices": [
-      "President"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2027-01-01",
-    "date_precision": "estimated",
-    "country": "Nigeria",
-    "country_code": "NG",
-    "state": null,
-    "state_code": null,
-    "title": "Nigerian General Election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "major"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2027-01-01",
-    "date_precision": "estimated",
-    "country": "Slovakia",
-    "country_code": "SK",
-    "state": null,
-    "state_code": null,
-    "title": "Next Slovak parliamentary election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "europe"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
     "date": "2027-03-07",
     "date_precision": "exact",
     "country": "Estonia",
@@ -1631,24 +1505,6 @@
       "Eduskunta"
     ],
     "source": "curated"
-  },
-  {
-    "date": "2027-04-18",
-    "date_precision": "exact",
-    "country": "France",
-    "country_code": "FR",
-    "state": null,
-    "state_code": null,
-    "title": "French presidential election",
-    "type": "presidential",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "President"
-    ],
-    "source": "wikidata"
   },
   {
     "date": "2027-04-18",
@@ -1720,42 +1576,6 @@
       "Landtag"
     ],
     "source": "curated"
-  },
-  {
-    "date": "2027-05-01",
-    "date_precision": "estimated",
-    "country": "India",
-    "country_code": "IN",
-    "state": null,
-    "state_code": null,
-    "title": "Next Manipur Legislative Assembly election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "brics"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2027-05-02",
-    "date_precision": "exact",
-    "country": "France",
-    "country_code": "FR",
-    "state": null,
-    "state_code": null,
-    "title": "French presidential election",
-    "type": "presidential",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "President"
-    ],
-    "source": "wikidata"
   },
   {
     "date": "2027-05-30",
