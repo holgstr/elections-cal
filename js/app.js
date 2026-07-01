@@ -15,49 +15,21 @@ const LEVEL_LABELS = {
 };
 
 let allElections = [];
-let meta = null;
 let activeGroup = "all";
 let searchQuery = "";
 let hideStates = false;
 
 async function init() {
-  const [electionsRes, metaRes] = await Promise.all([
-    fetch("data/elections.json"),
-    fetch("data/meta.json"),
-  ]);
-
+  const electionsRes = await fetch("data/elections.json");
   allElections = await electionsRes.json();
-  meta = await metaRes.json();
 
-  buildFilters();
-  renderHeader();
   render();
   bindEvents();
-}
-
-function buildFilters() {
-  const groups = ["all", "oecd", "brics", "major", "US", "DE"];
-  document.getElementById("group-filters").innerHTML = groups
-    .map(
-      (group) =>
-        `<button type="button" class="chip${group === "all" ? " active" : ""}" data-group="${group}">${GROUP_LABELS[group]}</button>`
-    )
-    .join("");
 }
 
 function bindEvents() {
   document.getElementById("search").addEventListener("input", (e) => {
     searchQuery = e.target.value.toLowerCase().trim();
-    render();
-  });
-
-  document.getElementById("group-filters").addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-group]");
-    if (!btn) return;
-    activeGroup = btn.dataset.group;
-    document.querySelectorAll("[data-group]").forEach((chip) => {
-      chip.classList.toggle("active", chip.dataset.group === activeGroup);
-    });
     render();
   });
 
@@ -283,7 +255,7 @@ function formatCardDate(election) {
   const isEstimated = election.date_precision === "estimated";
 
   return {
-    day: isEstimated ? "~" : d.getDate(),
+    day: isEstimated ? "tbd" : d.getDate(),
     weekday: d.toLocaleDateString("en-US", { month: "short", year: "numeric" }),
     full: d.toLocaleDateString("en-US", {
       weekday: "short",
@@ -344,7 +316,7 @@ function renderCard(election) {
     <article class="card${sections.length ? " card-combined" : ""}${election.mergedPrimary ? " card-primary" : ""}">
       <img class="card-flag" src="${flagUrl(election)}" alt="${flagAlt(election)}" width="24" height="16" loading="lazy" />
       <div class="card-date">
-        <div class="card-day">${day}</div>
+        <div class="card-day${isEstimated ? " card-day-tbd" : ""}">${day}</div>
         <div class="card-weekday">${weekday}</div>
       </div>
       <div class="card-body">
@@ -362,47 +334,9 @@ function renderCard(election) {
   `;
 }
 
-function renderHeader() {
-  const filtered = getDisplayElections();
-  const exact = filtered.filter((e) => e.date_precision === "exact").length;
-  const estimated = filtered.length - exact;
-  const next = filtered[0];
-  const nextLocation = next ? formatLocation(next) : "";
-
-  const rangeLabel = meta
-    ? `${new Date(meta.window_start + "T12:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" })} – ${new Date(meta.window_end + "T12:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" })}`
-    : "Next 12 months";
-
-  document.getElementById("window-label").textContent = rangeLabel;
-
-  document.getElementById("stats").innerHTML = `
-    <div class="stat">
-      <div class="stat-value">${filtered.length}</div>
-      <div class="stat-label">Elections</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value">${exact}</div>
-      <div class="stat-label">Exact dates</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value">${estimated}</div>
-      <div class="stat-label">Estimated</div>
-    </div>
-    ${
-      next
-        ? `<div class="stat stat-next">
-      <div class="stat-value">${nextLocation}</div>
-      <div class="stat-label">Next · ${new Date(next.date + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" })}</div>
-    </div>`
-        : ""
-    }
-  `;
-}
-
 function render() {
   const filtered = getDisplayElections();
   const timeline = document.getElementById("timeline");
-  renderHeader();
 
   if (!filtered.length) {
     timeline.innerHTML = `<p class="empty">No elections match your filters.</p>`;
