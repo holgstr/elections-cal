@@ -333,6 +333,74 @@ body::before {
   line-height: 1.4;
 }
 
+.card-combined .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.card-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.15rem;
+}
+
+.election-section {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.5rem 0.6rem;
+}
+
+.section-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.section-offices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.state-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.state-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.state-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.state-offices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .state-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+}
+
 .card-time {
   display: none;
 }
