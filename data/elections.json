@@ -1218,24 +1218,6 @@
   },
   {
     "date": "2026-10-27",
-    "date_precision": "exact",
-    "country": "Israel",
-    "country_code": "IL",
-    "state": null,
-    "state_code": null,
-    "title": "Israeli legislative election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-10-27",
     "date_precision": "estimated",
     "country": "Israel",
     "country_code": "IL",
@@ -1956,24 +1938,6 @@
   },
   {
     "date": "2026-11-07",
-    "date_precision": "exact",
-    "country": "New Zealand",
-    "country_code": "NZ",
-    "state": null,
-    "state_code": null,
-    "title": "New Zealand General Election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-11-07",
     "date_precision": "estimated",
     "country": "New Zealand",
     "country_code": "NZ",
@@ -2126,24 +2090,6 @@
     "source": "curated"
   },
   {
-    "date": "2027-05-01",
-    "date_precision": "estimated",
-    "country": "India",
-    "country_code": "IN",
-    "state": null,
-    "state_code": null,
-    "title": "Next Manipur Legislative Assembly election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "brics"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
     "date": "2027-05-30",
     "date_precision": "exact",
     "country": "Germany",
@@ -2176,24 +2122,6 @@
       "Chamber of Deputies"
     ],
     "source": "curated"
-  },
-  {
-    "date": "2027-06-30",
-    "date_precision": "exact",
-    "country": "Greece",
-    "country_code": "GR",
-    "state": null,
-    "state_code": null,
-    "title": "Greek parliamentary election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
   },
   {
     "date": "2027-07-01",
