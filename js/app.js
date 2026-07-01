@@ -4,6 +4,7 @@ const GROUP_LABELS = {
   all: "All",
   oecd: "OECD",
   brics: "BRICS",
+  major: "Major",
   US: "United States",
   DE: "Germany",
 };
@@ -35,7 +36,7 @@ async function init() {
 }
 
 function buildFilters() {
-  const groups = ["all", "oecd", "brics", "US", "DE"];
+  const groups = ["all", "oecd", "brics", "major", "US", "DE"];
   document.getElementById("group-filters").innerHTML = groups
     .map(
       (group) =>
@@ -66,9 +67,39 @@ function bindEvents() {
   });
 }
 
+function electionHaystack(election) {
+  const sectionStates = (election.sections || [])
+    .flatMap((section) => section.states || [])
+    .flatMap((state) => [state.name, ...(state.offices || [])]);
+
+  return [
+    election.country,
+    election.state,
+    election.title,
+    election.type,
+    election.party,
+    election.notes,
+    ...(election.offices || []),
+    ...(election.labels || []),
+    ...sectionStates,
+    LEVEL_LABELS[election.level],
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+}
+
 function filterElections() {
   return allElections.filter((election) => {
-    if (hideStates && election.level === "state") return false;
+    if (hideStates) {
+      if (election.level === "state") return false;
+      if (
+        election.sections?.length &&
+        !election.sections.some((section) => section.level === "federal")
+      ) {
+        return false;
+      }
+    }
 
     if (activeGroup !== "all") {
       if (activeGroup === "US" || activeGroup === "DE") {
@@ -78,21 +109,8 @@ function filterElections() {
       }
     }
 
-    if (searchQuery) {
-      const haystack = [
-        election.country,
-        election.state,
-        election.title,
-        election.type,
-        election.party,
-        election.notes,
-        ...(election.offices || []),
-        LEVEL_LABELS[election.level],
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      if (!haystack.includes(searchQuery)) return false;
+    if (searchQuery && !electionHaystack(election).includes(searchQuery)) {
+      return false;
     }
 
     return true;
@@ -106,6 +124,11 @@ function mergeKey(election) {
 function mergeElectionGroups(elections) {
   const groups = new Map();
   for (const election of elections) {
+    if (election.sections?.length) {
+      groups.set(`${election.date}|${election.country_code}|combined`, [election]);
+      continue;
+    }
+
     const key = mergeKey(election);
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key).push(election);
@@ -130,6 +153,12 @@ function mergeElectionGroups(elections) {
       notes: notes.length ? notes.join(" · ") : undefined,
     };
   });
+}
+
+function visibleSections(election) {
+  if (!election.sections?.length) return [];
+  if (!hideStates) return election.sections;
+  return election.sections.filter((section) => section.level !== "state");
 }
 
 function getDisplayElections() {
@@ -176,20 +205,60 @@ function formatCardDate(election) {
   };
 }
 
+function renderOfficeTags(offices = []) {
+  return offices
+    .map((office) => `<span class="office-tag">${office}</span>`)
+    .join("");
+}
+
+function renderSections(election) {
+  const sections = visibleSections(election);
+  if (!sections.length) return "";
+
+  return `<div class="card-sections">${sections
+    .map((section) => {
+      if (section.states?.length) {
+        return `
+          <div class="election-section">
+            <div class="section-label">${section.label}</div>
+            <div class="state-list">
+              ${section.states
+                .map(
+                  (state) => `
+                <div class="state-row">
+                  <span class="state-name">${state.name}</span>
+                  <div class="state-offices">${renderOfficeTags(state.offices)}</div>
+                </div>`
+                )
+                .join("")}
+            </div>
+          </div>`;
+      }
+
+      return `
+        <div class="election-section">
+          <div class="section-label">${section.label}</div>
+          <div class="section-offices">${renderOfficeTags(section.offices)}</div>
+        </div>`;
+    })
+    .join("")}</div>`;
+}
+
 function renderCard(election) {
   const { day, weekday, full, isEstimated } = formatCardDate(election);
   const location = election.state
     ? `${election.state}, ${election.country}`
     : election.country;
-  const offices = (election.offices || [])
-    .map((office) => `<span class="office-tag">${office}</span>`)
-    .join("");
+  const sections = renderSections(election);
+  const offices = sections
+    ? ""
+    : renderOfficeTags(election.offices);
   const labels = (election.labels || [])
     .map((label) => `<span class="election-label">${label}</span>`)
     .join("");
 
   return `
-    <article class="card">
+    <article class="card${sections ? " card-combined" : ""}">
       <img class="card-flag" src="${flagUrl(election)}" alt="${flagAlt(election)}" width="24" height="16" loading="lazy" />
       <div class="card-date">
         <div class="card-day">${day}</div>
@@ -202,10 +271,7 @@ function renderCard(election) {
         </div>
         <p class="card-location">${location}</p>
         ${labels ? `<div class="card-labels">${labels}</div>` : ""}
-        <div class="card-meta">
-          <span class="badge badge-level">${LEVEL_LABELS[election.level] || election.level}</span>
-          ${offices}
-        </div>
+        ${sections || `<div class="card-meta"><span class="badge badge-level">${LEVEL_LABELS[election.level] || election.level}</span>${offices}</div>`}
         ${election.notes ? `<p class="card-notes">${election.notes}</p>` : ""}
       </div>
       <time class="card-time" datetime="${election.date}">${full}</time>

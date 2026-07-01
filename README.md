@@ -1,6 +1,6 @@
 # Election Calendar
 
-A mobile-friendly static site that lists upcoming elections over the next 12 months, focused on OECD and BRICS countries. US and German federal and state elections are tracked separately; other countries show presidential elections (where popularly elected) and parliamentary elections.
+A mobile-friendly static site that lists upcoming elections over the next 12 months. It covers OECD and BRICS members, plus other major countries selected by a simple inclusion rule. Same-day elections within a country are grouped into one card (for example US midterms or concurrent German state elections).
 
 ## Features
 
@@ -25,16 +25,28 @@ Open [http://localhost:8080](http://localhost:8080).
 
 Set `SKIP_WIKIDATA=1` for a fast curated-only build when Wikidata is slow.
 
+## Country inclusion
+
+A country is tracked if it meets **any** of these rules (documented in `data/config/countries.json`):
+
+1. OECD member
+2. BRICS member
+3. G20 sovereign member
+4. Population ≥ 50 million
+5. Nominal GDP in the global top 35
+
+Countries added via rules 3–5 are tagged `major` in the UI filter.
+
 ## Data sources
 
 | Source | What it covers |
 |--------|----------------|
-| `data/curated/us_elections.json` | US federal midterms + state gubernatorial elections |
+| `data/curated/us_elections.json` | US midterms (federal + state offices on the same day) |
 | `data/curated/de_elections.json` | German Landtag elections |
-| `data/curated/international.json` | Key OECD/BRICS federal elections |
+| `data/curated/international.json` | Key federal elections with specific office labels |
 | Wikidata SPARQL | Additional presidential and parliamentary elections |
 
-Edit curated files to add or correct dates. The build script merges curated data with Wikidata (US and Germany always come from curated sources).
+Edit curated files to add or correct dates. The build script merges curated data with Wikidata, removes duplicates, and groups same-day elections into combined cards (US and Germany always come from curated sources).
 
 ## Automation
 

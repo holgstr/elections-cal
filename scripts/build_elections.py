@@ -9,6 +9,7 @@ import re
 import sys
 import urllib.parse
 import urllib.request
+from collections import defaultdict
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -32,6 +33,7 @@ EXCLUDE_LABEL_RE = re.compile(
     re.I,
 )
 
+VAGUE_GENERAL_RE = re.compile(r"\bgeneral election\b", re.I)
 PRESIDENTIAL_RE = re.compile(r"\bpresidential\b", re.I)
 LEGISLATIVE_RE = re.compile(
     r"\b("
@@ -44,6 +46,9 @@ LEGISLATIVE_RE = re.compile(
     re.I,
 )
 
+AGGREGATE_TYPES = {"general", "legislative", "presidential", "combined"}
+CURATED_NEARBY_DAYS = 14
+
 
 def load_json(path: Path):
     with path.open(encoding="utf-8") as fh:
@@ -54,6 +59,11 @@ def save_json(path: Path, data) -> None:
     with path.open("w", encoding="utf-8") as fh:
         json.dump(data, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
+
+
+def load_countries() -> dict:
+    raw = load_json(CONFIG_PATH)
+    return {code: cfg for code, cfg in raw.items() if not code.startswith("_")}
 
 
 def date_window(today: date | None = None) -> tuple[date, date]:
@@ -250,12 +260,168 @@ def merge_elections(*sources: list[dict]) -> list[dict]:
             key = election_key(item)
             if key not in merged or item.get("source") == "curated":
                 merged[key] = item
-    return sorted(merged.values(), key=lambda e: (e["date"], e.get("country", ""), e.get("state") or ""))
+    return sorted(
+        merged.values(),
+        key=lambda e: (e["date"], e.get("country", ""), e.get("state") or ""),
+    )
+
+
+def days_apart(left: str, right: str) -> int:
+    return abs((date.fromisoformat(left) - date.fromisoformat(right)).days)
+
+
+def has_curated_legislative_nearby(item: dict, curated: list[dict]) -> bool:
+    if item.get("type") != "legislative":
+        return False
+    for other in curated:
+        if other.get("type") != "legislative":
+            continue
+        if other.get("country_code") != item.get("country_code"):
+            continue
+        if days_apart(other["date"], item["date"]) <= CURATED_NEARBY_DAYS:
+            return True
+    return False
+
+
+def remove_redundant_wikidata(elections: list[dict]) -> list[dict]:
+    curated = [e for e in elections if e.get("source") == "curated"]
+    curated_day_country = {
+        (e["date"], e["country_code"]) for e in curated
+    }
+    curated_types_by_day = defaultdict(set)
+    for entry in curated:
+        curated_types_by_day[(entry["date"], entry["country_code"])].add(entry["type"])
+
+    kept: list[dict] = []
+    for item in elections:
+        if item.get("source") != "wikidata":
+            kept.append(item)
+            continue
+
+        day_country = (item["date"], item["country_code"])
+
+        if has_curated_legislative_nearby(item, curated):
+            continue
+
+        if VAGUE_GENERAL_RE.search(item["title"]):
+            if day_country in curated_day_country:
+                continue
+            other_same_day = [
+                e
+                for e in elections
+                if e is not item
+                and e["date"] == item["date"]
+                and e["country_code"] == item["country_code"]
+            ]
+            if any(not VAGUE_GENERAL_RE.search(e["title"]) for e in other_same_day):
+                continue
+
+        if item["type"] in curated_types_by_day.get(day_country, set()):
+            continue
+
+        kept.append(item)
+
+    return kept
+
+
+def combined_title(country_code: str, federal: list[dict], states: list[dict]) -> str:
+    if country_code == "US" and federal:
+        return "Midterm Elections"
+    if country_code == "DE" and states and not federal:
+        return "State Elections"
+    if federal and not states and len(federal) > 1:
+        return " · ".join(entry["title"] for entry in sorted(federal, key=lambda e: e["title"]))
+    if federal and not states and len(federal) == 1:
+        return federal[0]["title"]
+    return federal[0]["country"] if federal else states[0]["country"]
+
+
+def aggregate_same_day_elections(elections: list[dict]) -> list[dict]:
+    aggregateable = [e for e in elections if e.get("type") in AGGREGATE_TYPES]
+    standalone = [e for e in elections if e.get("type") not in AGGREGATE_TYPES]
+
+    groups: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    for item in aggregateable:
+        groups[(item["date"], item["country_code"])].append(item)
+
+    aggregated: list[dict] = []
+    for (election_date, country_code), items in sorted(groups.items()):
+        if len(items) == 1:
+            aggregated.append(items[0])
+            continue
+
+        federal = [i for i in items if i.get("level") == "federal"]
+        states = [i for i in items if i.get("level") == "state"]
+
+        sections: list[dict] = []
+        if federal:
+            if len(federal) == 1:
+                sections.append(
+                    {
+                        "label": "Federal",
+                        "level": "federal",
+                        "offices": federal[0].get("offices", []),
+                    }
+                )
+            else:
+                for entry in sorted(federal, key=lambda e: e["title"]):
+                    sections.append(
+                        {
+                            "label": entry["title"],
+                            "level": "federal",
+                            "offices": entry.get("offices", []),
+                        }
+                    )
+
+        if states:
+            sections.append(
+                {
+                    "label": "State",
+                    "level": "state",
+                    "states": [
+                        {
+                            "name": entry["state"],
+                            "code": entry["state_code"],
+                            "offices": entry.get("offices", []),
+                        }
+                        for entry in sorted(states, key=lambda e: e.get("state", ""))
+                    ],
+                }
+            )
+
+        base = federal[0] if federal else states[0]
+        notes = [entry.get("notes") for entry in items if entry.get("notes")]
+        aggregated.append(
+            {
+                "date": election_date,
+                "date_precision": (
+                    "estimated"
+                    if any(entry.get("date_precision") == "estimated" for entry in items)
+                    else "exact"
+                ),
+                "country": base["country"],
+                "country_code": country_code,
+                "state": None,
+                "state_code": None,
+                "title": combined_title(country_code, federal, states),
+                "type": "combined",
+                "level": "federal" if federal else "state",
+                "groups": base.get("groups", []),
+                "sections": sections,
+                "source": "aggregated",
+                **({"notes": " · ".join(dict.fromkeys(notes))} if notes else {}),
+            }
+        )
+
+    return sorted(
+        aggregated + standalone,
+        key=lambda e: (e["date"], e.get("country", ""), e.get("state") or ""),
+    )
 
 
 def build(today: date | None = None) -> dict:
     start, end = date_window(today)
-    countries = load_json(CONFIG_PATH)
+    countries = load_countries()
     country_codes = sorted(countries.keys())
 
     try:
@@ -268,7 +434,9 @@ def build(today: date | None = None) -> dict:
         wikidata = []
 
     curated = load_curated(start, end)
-    elections = merge_elections(wikidata, curated)
+    merged = merge_elections(wikidata, curated)
+    deduped = remove_redundant_wikidata(merged)
+    elections = aggregate_same_day_elections(deduped)
 
     meta = {
         "generated_at": date.today().isoformat(),

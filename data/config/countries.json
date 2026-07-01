@@ -1,6 +1,18 @@
 {
+  "_criteria": {
+    "description": "A country is tracked if it meets ANY of these rules:",
+    "rules": [
+      "OECD member",
+      "BRICS member",
+      "G20 sovereign member",
+      "Population ≥ 50 million",
+      "Nominal GDP in the global top 35"
+    ]
+  },
+  "AR": { "name": "Argentina", "groups": ["major"], "popular_president": true },
   "AU": { "name": "Australia", "groups": ["oecd"], "popular_president": false },
   "AT": { "name": "Austria", "groups": ["oecd"], "popular_president": false },
+  "BD": { "name": "Bangladesh", "groups": ["major"], "popular_president": false },
   "BE": { "name": "Belgium", "groups": ["oecd"], "popular_president": false },
   "BR": { "name": "Brazil", "groups": ["brics"], "popular_president": true },
   "CA": { "name": "Canada", "groups": ["oecd"], "popular_president": false },
@@ -29,20 +41,28 @@
   "LV": { "name": "Latvia", "groups": ["oecd"], "popular_president": false },
   "LT": { "name": "Lithuania", "groups": ["oecd"], "popular_president": true },
   "LU": { "name": "Luxembourg", "groups": ["oecd"], "popular_president": false },
+  "MY": { "name": "Malaysia", "groups": ["major"], "popular_president": false },
   "MX": { "name": "Mexico", "groups": ["oecd"], "popular_president": true },
   "NL": { "name": "Netherlands", "groups": ["oecd"], "popular_president": false },
+  "NG": { "name": "Nigeria", "groups": ["major"], "popular_president": true },
   "NZ": { "name": "New Zealand", "groups": ["oecd"], "popular_president": false },
   "NO": { "name": "Norway", "groups": ["oecd"], "popular_president": false },
+  "PK": { "name": "Pakistan", "groups": ["major"], "popular_president": false },
+  "PH": { "name": "Philippines", "groups": ["major"], "popular_president": true },
   "PL": { "name": "Poland", "groups": ["oecd"], "popular_president": true },
   "PT": { "name": "Portugal", "groups": ["oecd"], "popular_president": true },
+  "RO": { "name": "Romania", "groups": ["oecd"], "popular_president": true },
   "RU": { "name": "Russia", "groups": ["brics"], "popular_president": true },
   "SA": { "name": "Saudi Arabia", "groups": ["brics"], "popular_president": false },
   "ZA": { "name": "South Africa", "groups": ["brics"], "popular_president": false },
   "ES": { "name": "Spain", "groups": ["oecd"], "popular_president": false },
   "SE": { "name": "Sweden", "groups": ["oecd"], "popular_president": false },
   "CH": { "name": "Switzerland", "groups": ["oecd"], "popular_president": false },
+  "TH": { "name": "Thailand", "groups": ["major"], "popular_president": false },
   "TR": { "name": "Turkey", "groups": ["oecd"], "popular_president": true },
+  "UA": { "name": "Ukraine", "groups": ["major"], "popular_president": true },
   "AE": { "name": "United Arab Emirates", "groups": ["brics"], "popular_president": false },
   "GB": { "name": "United Kingdom", "groups": ["oecd"], "popular_president": false },
-  "US": { "name": "United States", "groups": ["oecd"], "popular_president": true }
+  "US": { "name": "United States", "groups": ["oecd"], "popular_president": true },
+  "VN": { "name": "Vietnam", "groups": ["major"], "popular_president": false }
 }

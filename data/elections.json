@@ -972,25 +972,7 @@
     "date_precision": "exact",
     "country": "Sweden",
     "country_code": "SE",
-    "state": null,
-    "state_code": null,
-    "title": "Swedish General Election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-09-13",
-    "date_precision": "exact",
-    "country": "Sweden",
-    "country_code": "SE",
-    "title": "Riksdag General Election",
+    "title": "Riksdag Election",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1044,90 +1026,37 @@
     "date_precision": "exact",
     "country": "Germany",
     "country_code": "DE",
-    "state": "Berlin",
-    "state_code": "BE",
-    "title": "House of Representatives Election",
-    "type": "legislative",
+    "state": null,
+    "state_code": null,
+    "title": "State Elections",
+    "type": "combined",
     "level": "state",
     "groups": [
       "oecd"
     ],
-    "offices": [
-      "Abgeordnetenhaus"
+    "sections": [
+      {
+        "label": "State",
+        "level": "state",
+        "states": [
+          {
+            "name": "Berlin",
+            "code": "BE",
+            "offices": [
+              "Abgeordnetenhaus"
+            ]
+          },
+          {
+            "name": "Mecklenburg-Vorpommern",
+            "code": "MV",
+            "offices": [
+              "Landtag"
+            ]
+          }
+        ]
+      }
     ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-09-20",
-    "date_precision": "exact",
-    "country": "Germany",
-    "country_code": "DE",
-    "state": "Mecklenburg-Vorpommern",
-    "state_code": "MV",
-    "title": "Landtag Election",
-    "type": "legislative",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Landtag"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-09-20",
-    "date_precision": "exact",
-    "country": "Russia",
-    "country_code": "RU",
-    "state": null,
-    "state_code": null,
-    "title": "Russian legislative election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "brics"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-10-01",
-    "date_precision": "estimated",
-    "country": "Czech Republic",
-    "country_code": "CZ",
-    "state": null,
-    "state_code": null,
-    "title": "Czech Senate election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-10-03",
-    "date_precision": "exact",
-    "country": "Latvia",
-    "country_code": "LV",
-    "state": null,
-    "state_code": null,
-    "title": "Latvian parliamentary election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
+    "source": "aggregated"
   },
   {
     "date": "2026-10-04",
@@ -1136,77 +1065,37 @@
     "country_code": "BR",
     "state": null,
     "state_code": null,
-    "title": "Brazilian General Election",
-    "type": "legislative",
+    "title": "National Congress Election · Presidential Election — Round 1",
+    "type": "combined",
     "level": "federal",
     "groups": [
       "brics"
     ],
-    "offices": [
-      "Parliament"
+    "sections": [
+      {
+        "label": "National Congress Election",
+        "level": "federal",
+        "offices": [
+          "National Congress"
+        ]
+      },
+      {
+        "label": "Presidential Election — Round 1",
+        "level": "federal",
+        "offices": [
+          "President"
+        ]
+      }
     ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-10-04",
-    "date_precision": "exact",
-    "country": "Brazil",
-    "country_code": "BR",
-    "state": null,
-    "state_code": null,
-    "title": "Brazilian parliamentary election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "brics"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-10-04",
-    "date_precision": "exact",
-    "country": "Brazil",
-    "country_code": "BR",
-    "title": "General Election — Round 1",
-    "type": "general",
-    "level": "federal",
-    "groups": [
-      "brics"
-    ],
-    "offices": [
-      "President",
-      "National Congress"
-    ],
-    "source": "curated"
+    "source": "aggregated"
   },
   {
     "date": "2026-10-25",
     "date_precision": "exact",
     "country": "Brazil",
     "country_code": "BR",
-    "state": null,
-    "state_code": null,
-    "title": "Brazilian General Election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "brics"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-10-25",
-    "date_precision": "exact",
-    "country": "Brazil",
-    "country_code": "BR",
-    "title": "General Election — Round 2",
-    "type": "general",
+    "title": "Presidential Election — Round 2",
+    "type": "presidential",
     "level": "federal",
     "groups": [
       "brics"
@@ -1215,24 +1104,6 @@
       "President"
     ],
     "source": "curated"
-  },
-  {
-    "date": "2026-10-27",
-    "date_precision": "exact",
-    "country": "Israel",
-    "country_code": "IL",
-    "state": null,
-    "state_code": null,
-    "title": "Israeli legislative election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
   },
   {
     "date": "2026-10-27",
@@ -1258,719 +1129,317 @@
     "country_code": "US",
     "state": null,
     "state_code": null,
-    "title": "Federal Midterm Elections",
-    "type": "general",
+    "title": "Midterm Elections",
+    "type": "combined",
     "level": "federal",
     "groups": [
       "oecd"
     ],
-    "offices": [
-      "House of Representatives",
-      "Senate"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Alabama",
-    "state_code": "AL",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Alaska",
-    "state_code": "AK",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Arizona",
-    "state_code": "AZ",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Arkansas",
-    "state_code": "AR",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "California",
-    "state_code": "CA",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Colorado",
-    "state_code": "CO",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Connecticut",
-    "state_code": "CT",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Florida",
-    "state_code": "FL",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Georgia",
-    "state_code": "GA",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Hawaii",
-    "state_code": "HI",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Idaho",
-    "state_code": "ID",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Illinois",
-    "state_code": "IL",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Iowa",
-    "state_code": "IA",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Kansas",
-    "state_code": "KS",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Maine",
-    "state_code": "ME",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Maryland",
-    "state_code": "MD",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Massachusetts",
-    "state_code": "MA",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Michigan",
-    "state_code": "MI",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Minnesota",
-    "state_code": "MN",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Nebraska",
-    "state_code": "NE",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Nevada",
-    "state_code": "NV",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "New Hampshire",
-    "state_code": "NH",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "New Mexico",
-    "state_code": "NM",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "New York",
-    "state_code": "NY",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Ohio",
-    "state_code": "OH",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Oklahoma",
-    "state_code": "OK",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Oregon",
-    "state_code": "OR",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Pennsylvania",
-    "state_code": "PA",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Rhode Island",
-    "state_code": "RI",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "South Carolina",
-    "state_code": "SC",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "South Dakota",
-    "state_code": "SD",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Tennessee",
-    "state_code": "TN",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Texas",
-    "state_code": "TX",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Vermont",
-    "state_code": "VT",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Wisconsin",
-    "state_code": "WI",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-03",
-    "date_precision": "exact",
-    "country": "United States",
-    "country_code": "US",
-    "state": "Wyoming",
-    "state_code": "WY",
-    "title": "Gubernatorial Election",
-    "type": "general",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Governor",
-      "State Legislature"
-    ],
-    "source": "curated"
-  },
-  {
-    "date": "2026-11-07",
-    "date_precision": "exact",
-    "country": "New Zealand",
-    "country_code": "NZ",
-    "state": null,
-    "state_code": null,
-    "title": "New Zealand General Election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
+    "sections": [
+      {
+        "label": "Federal",
+        "level": "federal",
+        "offices": [
+          "House of Representatives",
+          "Senate"
+        ]
+      },
+      {
+        "label": "State",
+        "level": "state",
+        "states": [
+          {
+            "name": "Alabama",
+            "code": "AL",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Alaska",
+            "code": "AK",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Arizona",
+            "code": "AZ",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Arkansas",
+            "code": "AR",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "California",
+            "code": "CA",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Colorado",
+            "code": "CO",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Connecticut",
+            "code": "CT",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Florida",
+            "code": "FL",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Georgia",
+            "code": "GA",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Hawaii",
+            "code": "HI",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Idaho",
+            "code": "ID",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Illinois",
+            "code": "IL",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Iowa",
+            "code": "IA",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Kansas",
+            "code": "KS",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Maine",
+            "code": "ME",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Maryland",
+            "code": "MD",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Massachusetts",
+            "code": "MA",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Michigan",
+            "code": "MI",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Minnesota",
+            "code": "MN",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Nebraska",
+            "code": "NE",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Nevada",
+            "code": "NV",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "New Hampshire",
+            "code": "NH",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "New Mexico",
+            "code": "NM",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "New York",
+            "code": "NY",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Ohio",
+            "code": "OH",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Oklahoma",
+            "code": "OK",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Oregon",
+            "code": "OR",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Pennsylvania",
+            "code": "PA",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Rhode Island",
+            "code": "RI",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "South Carolina",
+            "code": "SC",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "South Dakota",
+            "code": "SD",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Tennessee",
+            "code": "TN",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Texas",
+            "code": "TX",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Vermont",
+            "code": "VT",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Wisconsin",
+            "code": "WI",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          },
+          {
+            "name": "Wyoming",
+            "code": "WY",
+            "offices": [
+              "Governor",
+              "State Legislature"
+            ]
+          }
+        ]
+      }
+    ],
+    "source": "aggregated"
   },
   {
     "date": "2026-11-07",
@@ -1990,8 +1459,8 @@
     "source": "curated"
   },
   {
-    "date": "2027-03-01",
-    "date_precision": "estimated",
+    "date": "2027-03-07",
+    "date_precision": "exact",
     "country": "Estonia",
     "country_code": "EE",
     "title": "Riigikogu Election",
@@ -2004,24 +1473,6 @@
       "Riigikogu"
     ],
     "source": "curated"
-  },
-  {
-    "date": "2027-03-07",
-    "date_precision": "exact",
-    "country": "Estonia",
-    "country_code": "EE",
-    "state": null,
-    "state_code": null,
-    "title": "Next Estonian parliamentary election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
   },
   {
     "date": "2027-04-11",
@@ -2060,36 +1511,37 @@
     "date_precision": "exact",
     "country": "Germany",
     "country_code": "DE",
-    "state": "Saarland",
-    "state_code": "SL",
-    "title": "Landtag Election",
-    "type": "legislative",
+    "state": null,
+    "state_code": null,
+    "title": "State Elections",
+    "type": "combined",
     "level": "state",
     "groups": [
       "oecd"
     ],
-    "offices": [
-      "Landtag"
+    "sections": [
+      {
+        "label": "State",
+        "level": "state",
+        "states": [
+          {
+            "name": "Saarland",
+            "code": "SL",
+            "offices": [
+              "Landtag"
+            ]
+          },
+          {
+            "name": "Schleswig-Holstein",
+            "code": "SH",
+            "offices": [
+              "Landtag"
+            ]
+          }
+        ]
+      }
     ],
-    "source": "curated"
-  },
-  {
-    "date": "2027-04-18",
-    "date_precision": "exact",
-    "country": "Germany",
-    "country_code": "DE",
-    "state": "Schleswig-Holstein",
-    "state_code": "SH",
-    "title": "Landtag Election",
-    "type": "legislative",
-    "level": "state",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Landtag"
-    ],
-    "source": "curated"
+    "source": "aggregated"
   },
   {
     "date": "2027-04-25",
@@ -2126,24 +1578,6 @@
     "source": "curated"
   },
   {
-    "date": "2027-05-01",
-    "date_precision": "estimated",
-    "country": "India",
-    "country_code": "IN",
-    "state": null,
-    "state_code": null,
-    "title": "Next Manipur Legislative Assembly election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "brics"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
     "date": "2027-05-30",
     "date_precision": "exact",
     "country": "Germany",
@@ -2176,24 +1610,6 @@
       "Chamber of Deputies"
     ],
     "source": "curated"
-  },
-  {
-    "date": "2027-06-30",
-    "date_precision": "exact",
-    "country": "Greece",
-    "country_code": "GR",
-    "state": null,
-    "state_code": null,
-    "title": "Greek parliamentary election",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
   },
   {
     "date": "2027-07-01",
