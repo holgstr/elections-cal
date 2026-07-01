@@ -117,8 +117,50 @@ function filterElections() {
   });
 }
 
+const PARTY_SHORT = {
+  Democratic: "Dem",
+  Republican: "GOP",
+};
+
+const OFFICE_SHORT = {
+  Senate: "Senate",
+  Governor: "Gov",
+};
+
+const PARTY_ORDER = ["Democratic", "Republican"];
+
 function mergeKey(election) {
   return `${election.date}|${election.country_code}|${election.state_code || ""}`;
+}
+
+function compactPrimaryLabels(items) {
+  const byParty = new Map();
+  for (const item of items) {
+    if (!item.party) continue;
+    if (!byParty.has(item.party)) byParty.set(item.party, new Set());
+    for (const office of item.offices || []) {
+      byParty.get(item.party).add(OFFICE_SHORT[office] || office);
+    }
+  }
+
+  return PARTY_ORDER.filter((party) => byParty.has(party)).map((party) => {
+    const offices = [...byParty.get(party)].sort((a, b) => a.localeCompare(b)).join(", ");
+    return `${PARTY_SHORT[party] || party} · ${offices}`;
+  });
+}
+
+function mergeLabels(items) {
+  const sorted = [...items].sort((a, b) => a.title.localeCompare(b.title));
+  const isPrimaryGroup =
+    sorted.every((item) => item.type === "primary") &&
+    sorted.some((item) => item.party);
+
+  if (isPrimaryGroup) {
+    const compact = compactPrimaryLabels(sorted);
+    if (compact.length) return compact;
+  }
+
+  return sorted.map((item) => item.title);
 }
 
 function mergeElectionGroups(elections) {
@@ -141,14 +183,17 @@ function mergeElectionGroups(elections) {
     const base = sorted[0];
     const isEstimated = items.some((e) => e.date_precision === "estimated");
     const offices = [...new Set(items.flatMap((e) => e.offices || []))];
-    const labels = sorted.map((e) => e.title);
+    const labels = mergeLabels(items);
     const notes = [...new Set(items.map((e) => e.notes).filter(Boolean))];
+    const isMergedPrimary =
+      base.type === "primary" && items.every((item) => item.type === "primary");
 
     return {
       ...base,
       title: base.state || base.country,
       offices,
       labels,
+      mergedPrimary: isMergedPrimary,
       date_precision: isEstimated ? "estimated" : base.date_precision,
       notes: notes.length ? notes.join(" · ") : undefined,
     };
@@ -246,19 +291,22 @@ function renderSections(election) {
 
 function renderCard(election) {
   const { day, weekday, full, isEstimated } = formatCardDate(election);
-  const location = election.state
-    ? `${election.state}, ${election.country}`
-    : election.country;
+  const isMerged = Boolean(election.labels?.length);
+  const showCountrySuffix = election.state && isMerged;
+  const location =
+    election.state && !isMerged
+      ? `${election.state}, ${election.country}`
+      : !election.state
+        ? election.country
+        : "";
   const sections = renderSections(election);
-  const offices = sections
-    ? ""
-    : renderOfficeTags(election.offices);
-  const labels = (election.labels || [])
-    .map((label) => `<span class="election-label">${label}</span>`)
-    .join("");
+  const showMeta = !sections && !election.mergedPrimary;
+  const offices = showMeta ? renderOfficeTags(election.offices) : "";
+  const labels = (election.labels || []).join(" · ");
+  const titleSuffix = showCountrySuffix ? ` <span class="card-country">${election.country}</span>` : "";
 
   return `
-    <article class="card${sections ? " card-combined" : ""}">
+    <article class="card${sections ? " card-combined" : ""}${election.mergedPrimary ? " card-primary" : ""}">
       <img class="card-flag" src="${flagUrl(election)}" alt="${flagAlt(election)}" width="24" height="16" loading="lazy" />
       <div class="card-date">
         <div class="card-day">${day}</div>
@@ -266,12 +314,12 @@ function renderCard(election) {
       </div>
       <div class="card-body">
         <div class="card-topline">
-          <h3 class="card-title">${election.title}</h3>
+          <h3 class="card-title">${election.title}${titleSuffix}</h3>
           ${isEstimated ? '<span class="badge badge-estimated">Est.</span>' : ""}
         </div>
-        <p class="card-location">${location}</p>
-        ${labels ? `<div class="card-labels">${labels}</div>` : ""}
-        ${sections || `<div class="card-meta"><span class="badge badge-level">${LEVEL_LABELS[election.level] || election.level}</span>${offices}</div>`}
+        ${location ? `<p class="card-location">${location}</p>` : ""}
+        ${labels ? `<p class="card-labels">${labels}</p>` : ""}
+        ${sections || (showMeta ? `<div class="card-meta"><span class="badge badge-level">${LEVEL_LABELS[election.level] || election.level}</span>${offices}</div>` : "")}
         ${election.notes ? `<p class="card-notes">${election.notes}</p>` : ""}
       </div>
       <time class="card-time" datetime="${election.date}">${full}</time>
