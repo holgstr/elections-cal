@@ -76,9 +76,26 @@ def precision_to_mode(precision: int) -> str:
     return "exact" if precision >= 11 else "estimated"
 
 
+UMBRELLA_TITLES = {
+    "midterm": "Midterms",
+    "general": "General",
+    "state": "State",
+}
+
+
+def strip_election_from_title(title: str) -> str:
+    round_match = re.match(r"^(.+?)\s+Election(\s+—\s+Round\s+\d+)$", title, re.I)
+    if round_match:
+        return f"{round_match.group(1)}{round_match.group(2)}"
+
+    stripped = re.sub(r"\s+Elections$", "", title, flags=re.I)
+    stripped = re.sub(r"\s+Election$", "", stripped, flags=re.I)
+    return UMBRELLA_TITLES.get(stripped.lower(), stripped)
+
+
 def normalize_title(label: str) -> str:
     title = re.sub(r"^\d{4}\s+", "", label).strip()
-    title = title.replace(" general election", " General Election")
+    title = strip_election_from_title(title)
     if title and title[0].islower():
         title = title[0].upper() + title[1:]
     return title
@@ -326,11 +343,11 @@ def remove_redundant_wikidata(elections: list[dict]) -> list[dict]:
 
 def combined_title(country_code: str, federal: list[dict], states: list[dict]) -> str:
     if country_code == "US" and federal:
-        return "Midterm Elections"
+        return "Midterms"
     if country_code == "DE" and states and not federal:
-        return "State Elections"
+        return "State"
     if federal and not states and len(federal) > 1:
-        return "General Elections"
+        return "General"
     if federal and not states and len(federal) == 1:
         return federal[0]["title"]
     return federal[0]["country"] if federal else states[0]["country"]
