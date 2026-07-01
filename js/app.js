@@ -84,6 +84,7 @@ function filterElections() {
         election.state,
         election.title,
         election.type,
+        election.party,
         election.notes,
         ...(election.offices || []),
         LEVEL_LABELS[election.level],
@@ -96,6 +97,43 @@ function filterElections() {
 
     return true;
   });
+}
+
+function mergeKey(election) {
+  return `${election.date}|${election.country_code}|${election.state_code || ""}`;
+}
+
+function mergeElectionGroups(elections) {
+  const groups = new Map();
+  for (const election of elections) {
+    const key = mergeKey(election);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(election);
+  }
+
+  return [...groups.values()].map((items) => {
+    if (items.length === 1) return items[0];
+
+    const sorted = [...items].sort((a, b) => a.title.localeCompare(b.title));
+    const base = sorted[0];
+    const isEstimated = items.some((e) => e.date_precision === "estimated");
+    const offices = [...new Set(items.flatMap((e) => e.offices || []))];
+    const labels = sorted.map((e) => e.title);
+    const notes = [...new Set(items.map((e) => e.notes).filter(Boolean))];
+
+    return {
+      ...base,
+      title: base.state || base.country,
+      offices,
+      labels,
+      date_precision: isEstimated ? "estimated" : base.date_precision,
+      notes: notes.length ? notes.join(" · ") : undefined,
+    };
+  });
+}
+
+function getDisplayElections() {
+  return mergeElectionGroups(filterElections());
 }
 
 function groupByMonth(elections) {
@@ -146,6 +184,9 @@ function renderCard(election) {
   const offices = (election.offices || [])
     .map((office) => `<span class="office-tag">${office}</span>`)
     .join("");
+  const labels = (election.labels || [])
+    .map((label) => `<span class="election-label">${label}</span>`)
+    .join("");
 
   return `
     <article class="card">
@@ -160,6 +201,7 @@ function renderCard(election) {
           ${isEstimated ? '<span class="badge badge-estimated">Est.</span>' : ""}
         </div>
         <p class="card-location">${location}</p>
+        ${labels ? `<div class="card-labels">${labels}</div>` : ""}
         <div class="card-meta">
           <span class="badge badge-level">${LEVEL_LABELS[election.level] || election.level}</span>
           ${offices}
@@ -172,7 +214,7 @@ function renderCard(election) {
 }
 
 function renderHeader() {
-  const filtered = filterElections();
+  const filtered = getDisplayElections();
   const exact = filtered.filter((e) => e.date_precision === "exact").length;
   const estimated = filtered.length - exact;
   const next = filtered[0];
@@ -208,7 +250,7 @@ function renderHeader() {
 }
 
 function render() {
-  const filtered = filterElections();
+  const filtered = getDisplayElections();
   const timeline = document.getElementById("timeline");
   renderHeader();
 
