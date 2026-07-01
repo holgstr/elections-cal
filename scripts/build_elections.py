@@ -330,7 +330,7 @@ def combined_title(country_code: str, federal: list[dict], states: list[dict]) -
     if country_code == "DE" and states and not federal:
         return "State Elections"
     if federal and not states and len(federal) > 1:
-        return " · ".join(entry["title"] for entry in sorted(federal, key=lambda e: e["title"]))
+        return "General Elections"
     if federal and not states and len(federal) == 1:
         return federal[0]["title"]
     return federal[0]["country"] if federal else states[0]["country"]

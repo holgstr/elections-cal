@@ -87,7 +87,7 @@ def primary_entry(
     party: str,
     office: str,
 ) -> dict:
-  office_label = "Gubernatorial" if office == "Governor" else office
+  office_label = "Governor" if office == "Governor" else office
   return {
       "date": date,
       "date_precision": "exact",
@@ -97,6 +97,32 @@ def primary_entry(
       "state_code": state_code,
       "title": f"{party} {office_label} Primary",
       "type": "primary",
+      "level": "state",
+      "groups": ["oecd"],
+      "offices": [office],
+      "party": party,
+  }
+
+
+def runoff_entry(
+    *,
+    date: str,
+    state: str,
+    state_code: str,
+    party: str,
+    office: str,
+) -> dict:
+  """Scheduled primary runoff after the first round has already been held."""
+  office_label = "Governor" if office == "Governor" else office
+  return {
+      "date": date,
+      "date_precision": "exact",
+      "country": "United States",
+      "country_code": "US",
+      "state": state,
+      "state_code": state_code,
+      "title": f"{party} {office_label} Primary Runoff",
+      "type": "runoff",
       "level": "state",
       "groups": ["oecd"],
       "offices": [office],

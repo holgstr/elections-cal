@@ -34,14 +34,21 @@ A country is tracked if it meets **any** of these rules (documented in `data/con
 3. G20 sovereign member
 4. Population ≥ 50 million
 5. Nominal GDP in the global top 35
+6. Latin American mainland sovereign state with population ≥ 3 million (Caribbean island nations excluded)
 
-Countries added via rules 3–5 are tagged `major` in the UI filter.
+Countries added via rules 3–6 are tagged `major` in the UI filter.
+
+## Event display
+
+Cards separate **location**, **event title**, and **contest detail** consistently. See [docs/events.md](docs/events.md) for the full framework and naming conventions.
 
 ## Data sources
 
 | Source | What it covers |
 |--------|----------------|
 | `data/curated/us_elections.json` | US midterms (federal + state offices on the same day) |
+| `data/curated/us_primaries.json` | US Senate and Governor primaries (both major parties) |
+| `data/curated/us_primary_runoffs.json` | Confirmed US primary runoffs (add only after the first round) |
 | `data/curated/de_elections.json` | German Landtag elections |
 | `data/curated/international.json` | Key federal elections with specific office labels |
 | Wikidata SPARQL | Additional presidential and parliamentary elections |
