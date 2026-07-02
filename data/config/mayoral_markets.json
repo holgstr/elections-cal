@@ -1,0 +1,10 @@
+{
+  "_comment": "Polymarket slugs for mayoral elections. Regenerate mayoral_info.json via scripts/generate_mayoral_info.py",
+  "markets": {
+    "MAN": {
+      "polymarket_slug": "greater-manchester-mayoral-election-winner-20260619154130299",
+      "label": "Mayor",
+      "city": "Manchester"
+    }
+  }
+}

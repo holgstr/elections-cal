@@ -1,9 +1,42 @@
 {
   "_comment": "Polymarket slugs for US gubernatorial general elections. Regenerate us_governor_info.json via scripts/generate_us_governor_info.py",
+  "incumbents": {
+    "AL": { "Republican": "Ivey" },
+    "AR": { "Republican": "Sanders" },
+    "AZ": { "Democrat": "Hobbs" },
+    "CT": { "Democrat": "Lamont" },
+    "HI": { "Democrat": "Green" },
+    "ID": { "Republican": "Little" },
+    "IL": { "Democrat": "Pritzker" },
+    "KS": { "Democrat": "Kelly" },
+    "ME": { "Democrat": "Mills" },
+    "MD": { "Democrat": "Moore" },
+    "MA": { "Democrat": "Healey" },
+    "MN": { "Democrat": "Walz" },
+    "NE": { "Republican": "Pillen" },
+    "NV": { "Republican": "Lombardo" },
+    "NY": { "Democrat": "Hochul" },
+    "OK": { "Republican": "Stitt" },
+    "OR": { "Democrat": "Kotek" },
+    "PA": { "Democrat": "Shapiro" },
+    "RI": { "Democrat": "McKee" },
+    "SC": { "Republican": "McMaster" },
+    "TX": { "Republican": "Abbott" },
+    "VT": { "Republican": "Scott" },
+    "WI": { "Democrat": "Evers" },
+    "WY": { "Republican": "Gordon" }
+  },
+  "nominee_slug_overrides": {
+    "FL": {
+      "Republican": "republican-nominee-for-florida-governor",
+      "Democrat": "democratic-nominee-for-florida-governor"
+    }
+  },
   "markets": {
     "AK": {
       "polymarket_slug": "alaska-governor-election-winner",
-      "odds_format": "candidates"
+      "odds_format": "candidates",
+      "incumbent": "Dunleavy"
     },
     "AL": { "polymarket_slug": "alabama-governor-winner-2026" },
     "AZ": { "polymarket_slug": "arizona-governor-winner-2026" },

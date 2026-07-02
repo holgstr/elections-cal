@@ -55,6 +55,9 @@ export function countryFlagUrl(countryCode) {
 }
 
 export function flagAlt(election) {
+  if (election.city) {
+    return `${election.city} flag`;
+  }
   if (election.state) {
     return `${election.state} flag`;
   }

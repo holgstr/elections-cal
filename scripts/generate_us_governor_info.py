@@ -10,9 +10,54 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ELECTIONS_PATH = ROOT / "data" / "curated" / "us_elections.json"
 MARKETS_PATH = ROOT / "data" / "config" / "us_governor_markets.json"
+PRIMARY_MARKETS_PATH = ROOT / "data" / "config" / "us_primary_markets.json"
 OUTPUT_PATH = ROOT / "data" / "curated" / "us_governor_info.json"
 
 WINDOW_MONTHS = 12
+
+STATE_SLUG_PREFIX = {
+    "AL": "alabama",
+    "AK": "alaska",
+    "AZ": "arizona",
+    "AR": "arkansas",
+    "CA": "california",
+    "CO": "colorado",
+    "CT": "connecticut",
+    "FL": "florida",
+    "GA": "georgia",
+    "HI": "hawaii",
+    "ID": "idaho",
+    "IL": "illinois",
+    "IA": "iowa",
+    "KS": "kansas",
+    "ME": "maine",
+    "MD": "maryland",
+    "MA": "massachusetts",
+    "MI": "michigan",
+    "MN": "minnesota",
+    "NE": "nebraska",
+    "NV": "nevada",
+    "NH": "new-hampshire",
+    "NM": "new-mexico",
+    "NY": "new-york",
+    "OH": "ohio",
+    "OK": "oklahoma",
+    "OR": "oregon",
+    "PA": "pennsylvania",
+    "RI": "rhode-island",
+    "SC": "south-carolina",
+    "SD": "south-dakota",
+    "TN": "tennessee",
+    "TX": "texas",
+    "VT": "vermont",
+    "WI": "wisconsin",
+    "WY": "wyoming",
+}
+
+PRIMARY_PARTY_TO_GOVERNOR = {
+    "Republican": "Republican",
+    "Democratic": "Democrat",
+}
 
 
 def load_json(path: Path) -> dict | list:
@@ -48,9 +93,64 @@ def governor_states_in_window(today: date | None = None) -> set[str]:
     return states
 
 
+def default_nominee_slugs(state_code: str) -> dict[str, str]:
+    prefix = STATE_SLUG_PREFIX.get(state_code)
+    if not prefix:
+        return {}
+
+    return {
+        "Republican": f"{prefix}-governor-republican-primary-winner",
+        "Democrat": f"{prefix}-governor-democratic-primary-winner",
+    }
+
+
+def primary_nominee_slugs(state_code: str, primary_meta: dict) -> dict[str, str]:
+    governor = primary_meta.get("polymarket_slugs", {}).get(state_code, {}).get("Governor", {})
+    slugs: dict[str, str] = {}
+
+    for party, slug in governor.items():
+        if party.startswith("_") or not isinstance(slug, str):
+            continue
+        governor_party = PRIMARY_PARTY_TO_GOVERNOR.get(party)
+        if governor_party:
+            slugs[governor_party] = slug
+
+    return slugs
+
+
+def build_state_entry(
+    state_code: str,
+    market_config: dict,
+    meta: dict,
+    primary_meta: dict,
+) -> dict:
+    entry = dict(market_config)
+    overrides = meta.get("nominee_slug_overrides", {}).get(state_code, {})
+    incumbents = meta.get("incumbents", {}).get(state_code)
+
+    nominee_slugs = default_nominee_slugs(state_code)
+    nominee_slugs.update(primary_nominee_slugs(state_code, primary_meta))
+    nominee_slugs.update(overrides)
+
+    if nominee_slugs and entry.get("odds_format") != "candidates":
+        entry["nominee_slugs"] = nominee_slugs
+
+    if incumbents:
+        if entry.get("odds_format") == "candidates":
+            for party, surname in incumbents.items():
+                if entry.get("incumbent"):
+                    break
+                entry.setdefault("incumbent", surname)
+        else:
+            entry["incumbents"] = incumbents
+
+    return entry
+
+
 def main() -> None:
     meta = load_json(MARKETS_PATH)
     markets = meta.get("markets", {})
+    primary_meta = load_json(PRIMARY_MARKETS_PATH)
     needed = sorted(governor_states_in_window())
 
     output: dict = {
@@ -63,7 +163,7 @@ def main() -> None:
 
     for state_code in needed:
         if state_code in markets:
-            output[state_code] = markets[state_code]
+            output[state_code] = build_state_entry(state_code, markets[state_code], meta, primary_meta)
 
     save_json(OUTPUT_PATH, output)
     print(

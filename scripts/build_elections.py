@@ -251,7 +251,7 @@ def election_key(item: dict) -> tuple:
     return (
         item["date"],
         item.get("country_code", ""),
-        item.get("state_code") or "",
+        item.get("state_code") or item.get("city_code") or "",
         item.get("title", "").lower(),
         item.get("level", ""),
     )
@@ -435,7 +435,7 @@ def merge_elections(*sources: list[dict]) -> list[dict]:
                 merged[key] = item
     return sorted(
         merged.values(),
-        key=lambda e: (e["date"], e.get("country", ""), e.get("state") or ""),
+        key=lambda e: (e["date"], e.get("country", ""), e.get("state") or e.get("city") or ""),
     )
 
 

@@ -186,7 +186,9 @@ python3 scripts/generate_us_governor_info.py
 
 | Rule | Detail |
 |------|--------|
-| Party labels | **Republican** in red, **Democratic** in blue |
+| Party odds labels | Show nominee **surname** in place of the party name, styled **Republican** in red and **Democratic** in blue |
+| Nominee names | Resolved from linked primary-winner Polymarket markets (`nominee_slugs`); fall back to configured incumbent surname when no market is available |
+| Incumbent | Append `(Inc.)` to the surname when the configured incumbent is running |
 | Polymarket odds (party format) | Always show Republican and Democratic win odds when available; display rounded percentage |
 | Candidate odds | For races without a simple Republican vs. Democratic market (`odds_format: "candidates"`), show individual candidates with the same rules as primaries: surname only, above **3%**, rounded percentage |
 | Auto-detect | When a party-format market has no Republican/Democratic outcomes, fall back to individual candidate odds |
@@ -197,6 +199,8 @@ python3 scripts/generate_us_governor_info.py
 
 - `polymarket_slug` — live odds source (required for interactivity)
 - `odds_format` — `party` (default) or `candidates` for individual-candidate markets
+- `nominee_slugs` — optional Polymarket slugs for Republican/Democrat primary-winner markets (generated automatically)
+- `incumbents` — optional per-party incumbent surnames for party-format markets
 - `incumbent` — optional surname for incumbent tagging in candidate-format markets
 
 ### Edge cases (not yet handled automatically)
@@ -209,3 +213,25 @@ python3 scripts/generate_us_governor_info.py
 - **Market fetch fails** — show a short error for that party only
 - **Same surname** — rare; may need a disambiguator (initial) if it becomes a problem
 - **Third parties / independents** — not shown unless explicitly added later
+
+## Mayoral info popover
+
+Interactive `Mayor` labels show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/mayoral_info.json` for mayoral elections within the **next 12 months** (`scripts/generate_mayoral_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set in `data/config/mayoral_markets.json`.
+
+Regenerate after updating mayoral market slugs:
+
+```bash
+python3 scripts/generate_mayoral_info.py
+```
+
+### Display rules
+
+| Rule | Detail |
+|------|--------|
+| Candidate names | Surname only |
+| Polymarket odds | Show only candidates above **3%**; display rounded percentage |
+| Incumbent | Append `(Inc.)` when configured |
+| No market | Label stays non-interactive (no popover) |
+| Rolling window | Popovers only appear for elections whose date falls within the next 12 months |
+
+Card titles use the **city** name (for example `Manchester`); the UK flag is shown.
