@@ -414,7 +414,10 @@ def infer_offices(label: str) -> list[str]:
 def load_curated(start: date, end: date) -> list[dict]:
     curated: list[dict] = []
     for path in sorted(CURATED_DIR.glob("*.json")):
-        for item in load_json(path):
+        data = load_json(path)
+        if not isinstance(data, list):
+            continue
+        for item in data:
             item = dict(item)
             item.setdefault("source", "curated")
             election_date = date.fromisoformat(item["date"])
