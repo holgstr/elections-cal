@@ -23,6 +23,7 @@ jobs:
           python3 scripts/generate_presidential_info.py
           python3 scripts/generate_de_state_info.py
           python3 scripts/generate_us_governor_info.py
+          python3 scripts/generate_us_senate_info.py
           python3 scripts/generate_mayoral_info.py
 
       - name: Validate election data
@@ -33,10 +34,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet data/elections.json data/meta.json data/curated/us_primary_info.json data/curated/presidential_info.json data/curated/de_state_info.json data/curated/us_governor_info.json data/curated/mayoral_info.json; then
+          if git diff --quiet data/elections.json data/meta.json data/curated/us_primary_info.json data/curated/presidential_info.json data/curated/de_state_info.json data/curated/us_governor_info.json data/curated/us_senate_info.json data/curated/mayoral_info.json; then
             echo "No election data changes."
           else
-            git add data/elections.json data/meta.json data/curated/us_primary_info.json data/curated/presidential_info.json data/curated/de_state_info.json data/curated/us_governor_info.json data/curated/mayoral_info.json
+            git add data/elections.json data/meta.json data/curated/us_primary_info.json data/curated/presidential_info.json data/curated/de_state_info.json data/curated/us_governor_info.json data/curated/us_senate_info.json data/curated/mayoral_info.json
             git commit -m "chore: refresh election calendar data"
             git push
           fi

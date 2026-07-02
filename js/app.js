@@ -11,6 +11,7 @@ const {
   isPresidentialLabel,
   isMayorLabel,
   prefetchOdds,
+  isSenateLabel,
 } = await import(`./primary-info.js?v=${v}`);
 
 const GROUP_LABELS = {
@@ -358,6 +359,8 @@ function multiStateDayTitle(election) {
 }
 
 function formatEventTitle(election, { sections }) {
+  if (election.title === "Midterms") return "US midterms";
+
   if (isMultiStateStateDay(election, sections)) {
     return multiStateDayTitle(election);
   }
@@ -614,7 +617,8 @@ function tagNeedsInteractivity(label, stateCode, countryCode, cityCode) {
     stateCode ||
     cityCode ||
     (isPresidentialLabel(label) && countryCode) ||
-    (isMayorLabel(label) && (cityCode || countryCode))
+    (isMayorLabel(label) && (cityCode || countryCode)) ||
+    (isSenateLabel(label) && stateCode)
   );
 }
 
@@ -700,7 +704,8 @@ function renderSections(election) {
   const sections = visibleSections(election);
   if (!sections.length) return "";
 
-  const showSectionLabels = hasMixedLevelSections(sections);
+  const showSectionLabels =
+    hasMixedLevelSections(sections) && election.title !== "Midterms";
 
   return `<div class="card-sections">${sections
     .map((section) => {

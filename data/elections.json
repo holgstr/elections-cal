@@ -1280,14 +1280,6 @@
     ],
     "sections": [
       {
-        "label": "Federal",
-        "level": "federal",
-        "offices": [
-          "House of Representatives",
-          "Senate"
-        ]
-      },
-      {
         "label": "State",
         "level": "state",
         "states": [
@@ -1296,6 +1288,7 @@
             "code": "AL",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1304,6 +1297,7 @@
             "code": "AK",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1320,6 +1314,7 @@
             "code": "AR",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1336,6 +1331,7 @@
             "code": "CO",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1360,6 +1356,7 @@
             "code": "GA",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1376,6 +1373,7 @@
             "code": "ID",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1384,6 +1382,7 @@
             "code": "IL",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1392,6 +1391,7 @@
             "code": "IA",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1400,6 +1400,7 @@
             "code": "KS",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1408,6 +1409,7 @@
             "code": "ME",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1424,6 +1426,7 @@
             "code": "MA",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1432,6 +1435,7 @@
             "code": "MI",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1440,6 +1444,7 @@
             "code": "MN",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1448,6 +1453,7 @@
             "code": "NE",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1464,6 +1470,7 @@
             "code": "NH",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1472,6 +1479,7 @@
             "code": "NM",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1496,6 +1504,7 @@
             "code": "OK",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1504,6 +1513,7 @@
             "code": "OR",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1520,6 +1530,7 @@
             "code": "RI",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1528,6 +1539,7 @@
             "code": "SC",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1536,6 +1548,7 @@
             "code": "SD",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1544,6 +1557,7 @@
             "code": "TN",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1552,6 +1566,7 @@
             "code": "TX",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           },
@@ -1576,6 +1591,7 @@
             "code": "WY",
             "offices": [
               "Governor",
+              "Senate",
               "State Legislature"
             ]
           }
