@@ -172,10 +172,13 @@ export function isMayorLabel(label) {
   return label?.trim() === "Mayor";
 }
 
-export function getMayoralInfo(cityCode, electionDate) {
-  if (!cityCode) return null;
+export function getMayoralInfo(cityCode, electionDate, countryCode = null) {
+  if (!cityCode && !countryCode) return null;
   if (!isWithinMayoralWindow(electionDate)) return null;
-  return mayoralInfo[cityCode] ?? null;
+
+  if (cityCode && mayoralInfo[cityCode]) return mayoralInfo[cityCode];
+  if (countryCode && mayoralInfo[countryCode]) return mayoralInfo[countryCode];
+  return null;
 }
 
 export function labelToOffice(label) {
@@ -242,8 +245,9 @@ function isPlaceholderMarketName(name) {
   return (
     !name ||
     name === "Other" ||
-    /^Candidate [A-Z]$/i.test(name) ||
-    /^Option [A-Z]$/i.test(name)
+    /^Candidate [A-Z]+$/i.test(name) ||
+    /^Option [A-Z]+$/i.test(name) ||
+    /^Person [A-Z]+$/i.test(name)
   );
 }
 
@@ -715,9 +719,10 @@ async function showGovernorPopover(trigger) {
 }
 
 async function showMayoralPopover(trigger) {
-  const cityCode = trigger.dataset.mayoral;
+  const cityCode = trigger.dataset.mayoral || null;
+  const countryCode = trigger.dataset.mayoralCountry || null;
   const electionDate = trigger.dataset.primaryDate;
-  const info = getMayoralInfo(cityCode, electionDate);
+  const info = getMayoralInfo(cityCode, electionDate, countryCode);
   if (!info) return;
 
   const popover = ensurePopover();
@@ -798,7 +803,7 @@ async function showPopover(trigger) {
     return showGovernorPopover(trigger);
   }
 
-  if (trigger.dataset.mayoral) {
+  if (trigger.dataset.mayoral || trigger.dataset.mayoralCountry) {
     return showMayoralPopover(trigger);
   }
 
@@ -907,8 +912,18 @@ export function renderInteractiveOfficeTag(label, stateCode, electionDate, count
     return `<span class="office-tag">${label}</span>`;
   }
 
-  if (isMayorLabel(label) && getMayoralInfo(cityCode, electionDate)) {
-    return `<button type="button" class="office-tag office-tag--interactive" data-mayoral="${cityCode}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
+  if (isMayorLabel(label)) {
+    const info = getMayoralInfo(cityCode, electionDate, countryCode);
+    if (info) {
+      const lookupAttrs = [
+        cityCode ? `data-mayoral="${cityCode}"` : "",
+        countryCode ? `data-mayoral-country="${countryCode}"` : "",
+      ]
+        .filter(Boolean)
+        .join(" ");
+      return `<button type="button" class="office-tag office-tag--interactive" ${lookupAttrs} data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
+    }
+    return `<span class="office-tag">${label}</span>`;
   }
 
   if (isGovernorLabel(label) && getGovernorInfo(stateCode, electionDate)) {

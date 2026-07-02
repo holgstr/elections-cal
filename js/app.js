@@ -9,6 +9,7 @@ const {
   renderInteractiveOfficeTag,
   labelToOffice,
   isPresidentialLabel,
+  isMayorLabel,
   prefetchOdds,
 } = await import(`./primary-info.js?v=${v}`);
 
@@ -185,7 +186,11 @@ const OFFICE_ORDER = ["Governor", "Senate"];
 const PARTY_ORDER = ["Democratic", "Republican"];
 
 function mergeKey(election) {
-  return `${election.date}|${election.country_code}|${election.state_code || ""}`;
+  return `${election.date}|${election.country_code}|${election.state_code || election.city_code || ""}`;
+}
+
+function isMayoralElection(election) {
+  return election.title === "Mayor" || (election.offices || []).includes("Mayor");
 }
 
 function compactPrimaryLabels(items) {
@@ -229,7 +234,7 @@ function compactPrimaryLabels(items) {
 }
 
 function locationPrefix(election) {
-  if (election.city) return election.city;
+  if (election.city && !isMayoralElection(election)) return election.city;
   if (election.state) return election.state;
   return election.country;
 }
@@ -580,7 +585,7 @@ function groupByMonth(elections) {
   for (const group of groups.values()) {
     group.items.sort((a, b) => {
       if (a.date !== b.date) return a.date.localeCompare(b.date);
-      return (a.state || a.country).localeCompare(b.state || a.country);
+      return (a.state || a.city || a.country).localeCompare(b.state || b.city || b.country);
     });
   }
 
@@ -604,8 +609,17 @@ function formatCardDate(election) {
   };
 }
 
+function tagNeedsInteractivity(label, stateCode, countryCode, cityCode) {
+  return (
+    stateCode ||
+    cityCode ||
+    (isPresidentialLabel(label) && countryCode) ||
+    (isMayorLabel(label) && (cityCode || countryCode))
+  );
+}
+
 function renderOfficeTag(label, stateCode = null, electionDate = null, countryCode = null, cityCode = null) {
-  if (stateCode || cityCode || (isPresidentialLabel(label) && countryCode)) {
+  if (tagNeedsInteractivity(label, stateCode, countryCode, cityCode)) {
     return renderInteractiveOfficeTag(label, stateCode, electionDate, countryCode, cityCode);
   }
   return `<span class="office-tag">${label}</span>`;
@@ -660,7 +674,7 @@ function renderLabelTags(labels = [], stateCode = null, electionDate = null, cou
 
   return `<div class="card-labels">${labels
     .map((label) =>
-      stateCode || cityCode || (isPresidentialLabel(label) && countryCode)
+      tagNeedsInteractivity(label, stateCode, countryCode, cityCode)
         ? renderInteractiveOfficeTag(label, stateCode, electionDate, countryCode, cityCode)
         : `<span class="office-tag">${label}</span>`
     )
