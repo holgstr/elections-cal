@@ -11,8 +11,12 @@ const PRIMARY_TYPE_LABELS = {
   party: "Party primaries",
 };
 
+const PRESIDENTIAL_LABEL_RE = /^President(?:\s+—\s+Round\s+\d+)?$/i;
+
 let primaryInfo = {};
 let primaryWindowMonths = 3;
+let presidentialInfo = {};
+let presidentialWindowMonths = 12;
 const oddsCache = new Map();
 
 let popoverEl = null;
@@ -35,24 +39,58 @@ export async function loadPrimaryInfo() {
   } catch {
     primaryInfo = {};
   }
+
+  try {
+    const res = await fetch("data/curated/presidential_info.json", {
+      cache: "no-store",
+    });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data._window_months) {
+      presidentialWindowMonths = data._window_months;
+    }
+    delete data._comment;
+    delete data._window_months;
+    presidentialInfo = data;
+  } catch {
+    presidentialInfo = {};
+  }
 }
 
-function isWithinPrimaryWindow(electionDate) {
+function isWithinWindow(electionDate, windowMonths) {
   if (!electionDate) return true;
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   const end = new Date(today);
-  end.setMonth(end.getMonth() + primaryWindowMonths);
+  end.setMonth(end.getMonth() + windowMonths);
 
   const date = new Date(`${electionDate}T12:00:00`);
   return date >= today && date <= end;
+}
+
+function isWithinPrimaryWindow(electionDate) {
+  return isWithinWindow(electionDate, primaryWindowMonths);
+}
+
+function isWithinPresidentialWindow(electionDate) {
+  return isWithinWindow(electionDate, presidentialWindowMonths);
 }
 
 export function getPrimaryInfo(stateCode, office, electionDate) {
   if (!stateCode || !office) return null;
   if (!isWithinPrimaryWindow(electionDate)) return null;
   return primaryInfo[stateCode]?.[office] ?? null;
+}
+
+export function isPresidentialLabel(label) {
+  return PRESIDENTIAL_LABEL_RE.test(label?.trim() || "");
+}
+
+export function getPresidentialInfo(countryCode, electionDate) {
+  if (!countryCode) return null;
+  if (!isWithinPresidentialWindow(electionDate)) return null;
+  return presidentialInfo[countryCode] ?? null;
 }
 
 export function labelToOffice(label) {
@@ -247,6 +285,17 @@ function renderTopFourBody(info, section) {
     ${candidates}`;
 }
 
+function renderPresidentialBody(info, section) {
+  const label = escapeHtml(info.label || "Presidential election");
+  const candidates = renderCandidateRows(section);
+
+  return `
+    <p class="primary-popover__type">
+      <span class="primary-popover__type-label">${label}</span>
+    </p>
+    ${candidates}`;
+}
+
 function ensurePopover() {
   if (popoverEl) return popoverEl;
 
@@ -281,7 +330,36 @@ function positionPopover(trigger) {
   popover.style.left = `${left + window.scrollX}px`;
 }
 
-async function showPopover(trigger, key) {
+async function showPresidentialPopover(trigger) {
+  const countryCode = trigger.dataset.presidential;
+  const electionDate = trigger.dataset.primaryDate;
+  const info = getPresidentialInfo(countryCode, electionDate);
+  if (!info) return;
+
+  const popover = ensurePopover();
+  activeTrigger = trigger;
+  trigger.setAttribute("aria-expanded", "true");
+
+  popover.hidden = false;
+  popover.innerHTML = `<p class="primary-popover__loading">Loading…</p>`;
+  positionPopover(trigger);
+
+  let section = { candidates: [] };
+  if (info.polymarket_slug) {
+    try {
+      section = await fetchPolymarketOdds(info.polymarket_slug);
+    } catch {
+      section = { candidates: [], error: true };
+    }
+  }
+
+  if (activeTrigger !== trigger) return;
+
+  popover.innerHTML = renderPresidentialBody(info, section);
+  positionPopover(trigger);
+}
+
+async function showPrimaryPopover(trigger, key) {
   const { stateCode, office } = parsePrimaryKey(key);
   const electionDate = trigger.dataset.primaryDate;
   const info = getPrimaryInfo(stateCode, office, electionDate);
@@ -327,6 +405,16 @@ async function showPopover(trigger, key) {
   positionPopover(trigger);
 }
 
+async function showPopover(trigger) {
+  if (trigger.dataset.presidential) {
+    return showPresidentialPopover(trigger);
+  }
+
+  const key = trigger.dataset.primary;
+  if (!key) return;
+  return showPrimaryPopover(trigger, key);
+}
+
 function hidePopover() {
   if (hoverCloseTimer) {
     clearTimeout(hoverCloseTimer);
@@ -355,11 +443,10 @@ function bindPopoverEvents(root) {
       if (isFinePointer()) return;
       event.preventDefault();
       event.stopPropagation();
-      const key = trigger.dataset.primary;
       if (activeTrigger === trigger && !popoverEl?.hidden) {
         hidePopover();
       } else {
-        showPopover(trigger, key);
+        showPopover(trigger);
       }
       return;
     }
@@ -379,7 +466,7 @@ function bindPopoverEvents(root) {
       hoverCloseTimer = null;
     }
 
-    showPopover(trigger, trigger.dataset.primary);
+    showPopover(trigger);
   }, true);
 
   root.addEventListener("pointerleave", (event) => {
@@ -415,7 +502,15 @@ function bindPopoverEvents(root) {
   window.addEventListener("scroll", hidePopover, true);
 }
 
-export function renderInteractiveOfficeTag(label, stateCode, electionDate) {
+export function renderInteractiveOfficeTag(label, stateCode, electionDate, countryCode = null) {
+  if (isPresidentialLabel(label)) {
+    const presidential = getPresidentialInfo(countryCode, electionDate);
+    if (presidential) {
+      return `<button type="button" class="office-tag office-tag--interactive" data-presidential="${countryCode}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
+    }
+    return `<span class="office-tag">${label}</span>`;
+  }
+
   const office = labelToOffice(label);
   const info = getPrimaryInfo(stateCode, office, electionDate);
 
