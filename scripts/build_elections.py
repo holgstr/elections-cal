@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.parse
 import urllib.request
 from collections import defaultdict
@@ -22,6 +23,8 @@ META_PATH = ROOT / "data" / "meta.json"
 
 WIKIDATA_ENDPOINT = "https://query.wikidata.org/sparql"
 USER_AGENT = "ElectionsCalBot/1.0 (https://github.com/holgstr/elections-cal)"
+WIKIDATA_RETRIES = 3
+WIKIDATA_TIMEOUT = 60
 
 EXCLUDE_LABEL_RE = re.compile(
     r"\b("
@@ -316,8 +319,18 @@ ORDER BY ?date
         method="POST",
     )
 
-    with urllib.request.urlopen(request, timeout=45) as response:
-        payload = json.load(response)
+    last_exc: Exception | None = None
+    for attempt in range(WIKIDATA_RETRIES):
+        try:
+            with urllib.request.urlopen(request, timeout=WIKIDATA_TIMEOUT) as response:
+                payload = json.load(response)
+            break
+        except Exception as exc:  # noqa: BLE001
+            last_exc = exc
+            if attempt + 1 < WIKIDATA_RETRIES:
+                time.sleep(2**attempt)
+    else:
+        raise last_exc  # type: ignore[misc]
 
     results: list[dict] = []
     for row in payload.get("results", {}).get("bindings", []):

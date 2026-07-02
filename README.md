@@ -57,6 +57,8 @@ Cards separate **location**, **event title**, and **contest detail** consistentl
 
 Edit curated files to add or correct dates. The build script merges curated data with Wikidata, removes duplicates, and groups same-day elections into combined cards (US and Germany always come from curated sources).
 
+**Snap and early elections:** When a government calls an early parliamentary vote before Wikidata lists it (or when Wikidata is unavailable), add an entry to `data/curated/international.json` with `date_precision: "estimated"`, a provisional date in the announced window, and `comment: "snap_election"`. Curated records always take precedence over Wikidata, so these elections stay visible even when the automated fetch fails.
+
 ## Automation
 
 The GitHub Actions workflow runs every Monday at 06:00 UTC:

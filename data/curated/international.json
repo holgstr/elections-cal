@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-07-02",
+    "date_precision": "exact",
+    "country": "Algeria",
+    "country_code": "DZ",
+    "title": "People's National Assembly",
+    "type": "legislative",
+    "level": "federal",
+    "groups": ["major"],
+    "offices": ["Parliament"]
+  },
+  {
     "date": "2026-09-13",
     "date_precision": "exact",
     "country": "Sweden",
@@ -86,6 +97,18 @@
     "level": "federal",
     "groups": ["brics"],
     "offices": ["President"]
+  },
+  {
+    "date": "2026-10-15",
+    "date_precision": "estimated",
+    "country": "Serbia",
+    "country_code": "RS",
+    "title": "National Assembly",
+    "type": "legislative",
+    "level": "federal",
+    "groups": ["europe"],
+    "offices": ["Parliament"],
+    "comment": "snap_election"
   },
   {
     "date": "2026-10-27",
