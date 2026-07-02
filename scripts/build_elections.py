@@ -100,8 +100,53 @@ BA_TITLE_OVERRIDES = {
     "republika srpska general": "Republika Srpska National Assembly",
 }
 
+COUNTRY_ADJECTIVES = {
+    "albania": ["albanian"],
+    "bosnia and herzegovina": ["bosnian"],
+    "czech republic": ["czech"],
+    "czechia": ["czech"],
+    "el salvador": ["salvadoran"],
+    "france": ["french"],
+    "latvia": ["latvian"],
+    "nicaragua": ["nicaraguan"],
+    "nigeria": ["nigerian"],
+    "russia": ["russian"],
+    "slovakia": ["slovak"],
+}
 
-def normalize_title(label: str, country_code: str | None = None) -> str:
+COMBINED_UMBRELLA_TITLES = {"Midterms", "General", "State"}
+
+
+def country_adjectives(country: str) -> list[str]:
+    lower = country.lower()
+    if lower in COUNTRY_ADJECTIVES:
+        return COUNTRY_ADJECTIVES[lower]
+
+    root = lower.split()[0]
+    return [root, f"{root}ian", f"{root}ish", f"{root}ese"]
+
+
+def strip_nationality_prefix(title: str, country: str) -> str:
+    cleaned = re.sub(r"^next\s+", "", title, flags=re.I).strip()
+    if not cleaned:
+        return cleaned
+
+    for adjective in country_adjectives(country):
+        if cleaned.lower().startswith(f"{adjective} "):
+            cleaned = cleaned[len(adjective) :].strip()
+            break
+
+    if cleaned and cleaned[0].islower():
+        cleaned = cleaned[0].upper() + cleaned[1:]
+
+    return cleaned
+
+
+def normalize_title(
+    label: str,
+    country_code: str | None = None,
+    country_name: str | None = None,
+) -> str:
     title = re.sub(r"^\d{4}\s+", "", label).strip()
     title = strip_election_from_title(title)
     if title and title[0].islower():
@@ -111,6 +156,9 @@ def normalize_title(label: str, country_code: str | None = None) -> str:
         override = BA_TITLE_OVERRIDES.get(title.lower())
         if override:
             return override
+
+    if country_name:
+        title = strip_nationality_prefix(title, country_name)
 
     return title
 
@@ -220,7 +268,11 @@ ORDER BY ?date
                 "country_code": country_code,
                 "state": None,
                 "state_code": None,
-                "title": normalize_title(label, country_code),
+                "title": normalize_title(
+                    label,
+                    country_code,
+                    country_cfg["name"],
+                ),
                 "type": infer_type(label),
                 "level": "federal",
                 "groups": country_cfg["groups"],
@@ -373,20 +425,16 @@ def remove_redundant_wikidata(elections: list[dict]) -> list[dict]:
     return kept
 
 
-def contest_names(entries: list[dict]) -> list[str]:
-    return [strip_election_from_title(entry["title"]) for entry in entries]
-
-
 def combined_title(country_code: str, federal: list[dict], states: list[dict]) -> str:
     if country_code == "US" and federal:
         return "Midterms"
     if country_code == "DE" and states and not federal:
         return "State"
-    if federal and not states and len(federal) > 1:
-        return " · ".join(contest_names(sorted(federal, key=lambda e: e["title"])))
-    if federal and not states and len(federal) == 1:
+    if len(federal) + len(states) > 1:
+        return "General"
+    if federal:
         return federal[0]["title"]
-    return federal[0]["country"] if federal else states[0]["country"]
+    return states[0].get("state") or states[0]["country"]
 
 
 def aggregate_same_day_elections(elections: list[dict]) -> list[dict]:
@@ -472,6 +520,47 @@ def aggregate_same_day_elections(elections: list[dict]) -> list[dict]:
     )
 
 
+def validate_elections(elections: list[dict]) -> list[str]:
+    errors: list[str] = []
+
+    for election in elections:
+        title = election.get("title", "")
+        country = election.get("country", "")
+        country_code = election.get("country_code", "")
+
+        if title.lower().startswith("next "):
+            errors.append(f"{country}: title must not start with 'Next': {title!r}")
+
+        for adjective in country_adjectives(country):
+            if title.lower().startswith(f"{adjective} "):
+                errors.append(
+                    f"{country}: title has redundant nationality adjective: {title!r}"
+                )
+                break
+
+        if election.get("type") == "combined":
+            if " · " in title:
+                errors.append(
+                    f"{country}: combined title must be an umbrella name, not joined contests: {title!r}"
+                )
+            if title not in COMBINED_UMBRELLA_TITLES:
+                errors.append(
+                    f"{country}: combined title must be one of {sorted(COMBINED_UMBRELLA_TITLES)}: {title!r}"
+                )
+
+        if (
+            election.get("type") != "combined"
+            and not election.get("state")
+            and country_code not in {"US", "DE"}
+            and title.lower() in {country.lower(), country.split()[0].lower()}
+        ):
+            errors.append(
+                f"{country}: standalone title must name the contest, not repeat the country: {title!r}"
+            )
+
+    return errors
+
+
 def build(today: date | None = None) -> dict:
     start, end = date_window(today)
     countries = load_countries()
@@ -490,6 +579,11 @@ def build(today: date | None = None) -> dict:
     merged = merge_elections(wikidata, curated)
     deduped = remove_redundant_wikidata(merged)
     elections = aggregate_same_day_elections(deduped)
+    validation_errors = validate_elections(elections)
+    if validation_errors:
+        for message in validation_errors:
+            print(f"Validation error: {message}", file=sys.stderr)
+        raise ValueError(f"{len(validation_errors)} election data validation error(s)")
 
     meta = {
         "generated_at": date.today().isoformat(),

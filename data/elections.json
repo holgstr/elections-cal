@@ -1065,7 +1065,7 @@
     "country_code": "RU",
     "state": null,
     "state_code": null,
-    "title": "Russian legislative",
+    "title": "Legislative",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1083,7 +1083,7 @@
     "country_code": "FR",
     "state": null,
     "state_code": null,
-    "title": "French Senate",
+    "title": "Senate",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1101,7 +1101,7 @@
     "country_code": "CZ",
     "state": null,
     "state_code": null,
-    "title": "Czech Senate",
+    "title": "Senate",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1119,7 +1119,7 @@
     "country_code": "LV",
     "state": null,
     "state_code": null,
-    "title": "Latvian parliamentary",
+    "title": "Parliamentary",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1137,7 +1137,7 @@
     "country_code": "BA",
     "state": null,
     "state_code": null,
-    "title": "Federation Parliament · House of Peoples · House of Representatives · Republika Srpska National Assembly",
+    "title": "General",
     "type": "combined",
     "level": "federal",
     "groups": [
@@ -1182,7 +1182,7 @@
     "country_code": "BR",
     "state": null,
     "state_code": null,
-    "title": "National Congress · Presidential — Round 1",
+    "title": "General",
     "type": "combined",
     "level": "federal",
     "groups": [
@@ -1582,7 +1582,7 @@
     "country_code": "AL",
     "state": null,
     "state_code": null,
-    "title": "Albanian presidential",
+    "title": "Presidential",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1600,7 +1600,7 @@
     "country_code": "SV",
     "state": null,
     "state_code": null,
-    "title": "Salvadoran presidential",
+    "title": "Presidential",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1618,7 +1618,7 @@
     "country_code": "NI",
     "state": null,
     "state_code": null,
-    "title": "Nicaraguan presidential",
+    "title": "Presidential",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1636,7 +1636,7 @@
     "country_code": "NG",
     "state": null,
     "state_code": null,
-    "title": "Nigerian general",
+    "title": "General",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1654,7 +1654,7 @@
     "country_code": "SK",
     "state": null,
     "state_code": null,
-    "title": "Next Slovak parliamentary",
+    "title": "Parliamentary",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1672,7 +1672,7 @@
     "country_code": "SV",
     "state": null,
     "state_code": null,
-    "title": "Salvadoran legislative",
+    "title": "Legislative",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1738,7 +1738,7 @@
     "country_code": "FR",
     "state": null,
     "state_code": null,
-    "title": "French presidential",
+    "title": "Presidential",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1827,7 +1827,7 @@
     "country_code": "IN",
     "state": null,
     "state_code": null,
-    "title": "Next Manipur Legislative Assembly",
+    "title": "Manipur Legislative Assembly",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1845,7 +1845,7 @@
     "country_code": "FR",
     "state": null,
     "state_code": null,
-    "title": "French presidential",
+    "title": "Presidential",
     "type": "presidential",
     "level": "federal",
     "groups": [

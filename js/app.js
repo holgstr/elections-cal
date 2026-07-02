@@ -14,6 +14,26 @@ const LEVEL_LABELS = {
   state: "State",
 };
 
+const UMBRELLA_TITLES = {
+  midterm: "Midterms",
+  general: "General",
+  state: "State",
+};
+
+const COUNTRY_ADJECTIVES = {
+  albania: ["albanian"],
+  "bosnia and herzegovina": ["bosnian"],
+  "czech republic": ["czech"],
+  czechia: ["czech"],
+  "el salvador": ["salvadoran"],
+  france: ["french"],
+  latvia: ["latvian"],
+  nicaragua: ["nicaraguan"],
+  nigeria: ["nigerian"],
+  russia: ["russian"],
+  slovakia: ["slovak"],
+};
+
 let allElections = [];
 let activeGroup = "all";
 let searchQuery = "";
@@ -94,12 +114,6 @@ const OFFICE_PRIMARY_LABEL = {
   Senate: "Senate Primary",
 };
 
-const UMBRELLA_TITLES = {
-  midterm: "Midterms",
-  general: "General",
-  state: "State",
-};
-
 const OFFICE_ORDER = ["Governor", "Senate"];
 
 const PARTY_ORDER = ["Democratic", "Republican"];
@@ -171,6 +185,32 @@ function stripElectionFromTitle(title) {
   return UMBRELLA_TITLES[stripped.toLowerCase()] || stripped;
 }
 
+function countryAdjectives(country) {
+  const lower = country.toLowerCase();
+  if (COUNTRY_ADJECTIVES[lower]) return COUNTRY_ADJECTIVES[lower];
+
+  const root = lower.split(/\s+/)[0];
+  return [root, `${root}ian`, `${root}ish`, `${root}ese`];
+}
+
+function stripNationalityPrefix(title, country) {
+  let cleaned = title.replace(/^next\s+/i, "").trim();
+  if (!cleaned) return cleaned;
+
+  for (const adjective of countryAdjectives(country)) {
+    if (cleaned.toLowerCase().startsWith(`${adjective} `)) {
+      cleaned = cleaned.slice(adjective.length).trim();
+      break;
+    }
+  }
+
+  if (cleaned && cleaned[0] === cleaned[0].toLowerCase()) {
+    cleaned = cleaned[0].toUpperCase() + cleaned.slice(1);
+  }
+
+  return cleaned;
+}
+
 function contestNameFromSection(section) {
   if (section.states?.length) return null;
 
@@ -189,7 +229,17 @@ function germanStateElectionTitle(election) {
     .filter(Boolean);
 }
 
-function formatEventTitle(election) {
+function contestLabelFromTitle(election) {
+  const raw = stripElectionFromTitle(election.title);
+  if (!raw || Object.values(UMBRELLA_TITLES).includes(raw)) return null;
+  return stripNationalityPrefix(raw, election.country);
+}
+
+function contestLabelsFromSections(sections) {
+  return sections.map((section) => contestNameFromSection(section)).filter(Boolean);
+}
+
+function formatEventTitle(election, { hasSections, labels }) {
   const loc = locationPrefix(election);
 
   if (election.mergedPrimary) {
@@ -210,14 +260,16 @@ function formatEventTitle(election) {
     if (stateTitles.length) return stateTitles.join(" · ");
   }
 
-  if (election.sections?.length) {
-    const contestNames = election.sections
-      .map((section) => contestNameFromSection(section))
-      .filter(Boolean);
+  if (election.state && election.country_code === "US") {
+    return `${loc} ${stripElectionFromTitle(election.title)}`;
+  }
 
-    if (contestNames.length) {
-      return `${loc} ${contestNames.join(" · ")}`;
-    }
+  if (labels.length && !hasSections) {
+    return loc;
+  }
+
+  if (election.type === "combined" || election.title === "General") {
+    return loc;
   }
 
   return `${loc} ${stripElectionFromTitle(election.title)}`;
@@ -293,13 +345,32 @@ function hasMixedLevelSections(sections) {
   return levels.has("federal") && levels.has("state");
 }
 
+function resolveCardLabels(election, sections, hasSections) {
+  if (election.labels?.length) return election.labels;
+
+  if (sections.length && !hasSections) {
+    return contestLabelsFromSections(sections);
+  }
+
+  if (hasSections || election.mergedPrimary) return [];
+
+  if (election.country_code === "DE" && election.state) return [];
+
+  if (election.state && election.country_code === "US") return [];
+
+  const label = contestLabelFromTitle(election);
+  return label ? [label] : [];
+}
+
 function resolveCardDisplay(election) {
-  const title = formatEventTitle(election);
-  const labels = (election.labels || []).join(" · ");
   const sections = visibleSections(election);
   const hasSections = shouldShowSections(election, sections);
-  const hasLabels = Boolean(labels);
-  const showMeta = !hasSections && !hasLabels && !titleCoversOffices(title, election.offices, election);
+  const labels = resolveCardLabels(election, sections, hasSections);
+  const title = formatEventTitle(election, { hasSections, labels });
+  const showMeta =
+    !hasSections &&
+    !labels.length &&
+    !titleCoversOffices(title, election.offices, election);
 
   return {
     title,
@@ -332,11 +403,8 @@ function groupByMonth(elections) {
 
   for (const group of groups.values()) {
     group.items.sort((a, b) => {
-      const levelOrder = { federal: 0, state: 1 };
-      const levelDiff = (levelOrder[a.level] ?? 2) - (levelOrder[b.level] ?? 2);
-      if (levelDiff !== 0) return levelDiff;
       if (a.date !== b.date) return a.date.localeCompare(b.date);
-      return (a.state || a.country).localeCompare(b.state || b.country);
+      return (a.state || a.country).localeCompare(b.state || a.country);
     });
   }
 
@@ -348,7 +416,7 @@ function formatCardDate(election) {
   const isEstimated = election.date_precision === "estimated";
 
   return {
-    day: isEstimated ? "tbd" : d.getDate(),
+    day: isEstimated ? "TBD" : d.getDate(),
     weekday: d.toLocaleDateString("en-US", { month: "short", year: "numeric" }),
     full: d.toLocaleDateString("en-US", {
       weekday: "short",
@@ -364,6 +432,14 @@ function renderOfficeTags(offices = []) {
   return offices
     .map((office) => `<span class="office-tag">${office}</span>`)
     .join("");
+}
+
+function renderLabelTags(labels = []) {
+  if (!labels.length) return "";
+
+  return `<div class="card-labels">${labels
+    .map((label) => `<span class="office-tag">${label}</span>`)
+    .join("")}</div>`;
 }
 
 function renderSections(election) {
@@ -420,9 +496,8 @@ function renderCard(election) {
       <div class="card-body">
         <div class="card-topline">
           <h3 class="card-title">${title}</h3>
-          ${isEstimated ? '<span class="badge badge-estimated">Est.</span>' : ""}
         </div>
-        ${labels ? `<p class="card-labels">${labels}</p>` : ""}
+        ${renderLabelTags(labels)}
         ${sections.length ? renderSections(election) : showMeta ? `<div class="card-meta">${officeTags}</div>` : ""}
         ${election.notes ? `<p class="card-notes">${election.notes}</p>` : ""}
       </div>
