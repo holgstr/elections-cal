@@ -34,6 +34,11 @@ const COUNTRY_ADJECTIVES = {
   slovakia: ["slovak"],
 };
 
+const COUNTRY_STATE_DAY_TITLES = {
+  US: "US State primaries",
+  DE: "German State primaries",
+};
+
 let allElections = [];
 let activeGroup = "all";
 let searchQuery = "";
@@ -162,12 +167,6 @@ function compactPrimaryLabels(items) {
   return labels;
 }
 
-function primaryEventTitle(offices = []) {
-  const parts = OFFICE_ORDER.filter((office) => offices.includes(office));
-  if (!parts.length) return "Primaries";
-  return `${parts.join("/")} primaries`;
-}
-
 function locationPrefix(election) {
   if (election.state) return election.state;
   return election.country;
@@ -219,16 +218,6 @@ function contestNameFromSection(section) {
   return (section.offices || [])[0] || label || null;
 }
 
-function germanStateElectionTitle(election) {
-  return (election.sections || [])
-    .flatMap((section) => section.states || [])
-    .map((state) => {
-      const body = (state.offices || [])[0];
-      return body ? `${state.name} ${body}` : state.name;
-    })
-    .filter(Boolean);
-}
-
 function contestLabelFromTitle(election) {
   const raw = stripElectionFromTitle(election.title);
   if (!raw || Object.values(UMBRELLA_TITLES).includes(raw)) return null;
@@ -239,40 +228,55 @@ function contestLabelsFromSections(sections) {
   return sections.map((section) => contestNameFromSection(section)).filter(Boolean);
 }
 
-function formatEventTitle(election, { hasSections, labels }) {
-  const loc = locationPrefix(election);
+function stateSectionCount(sections = []) {
+  return sections
+    .filter((section) => section.level === "state")
+    .reduce((count, section) => count + (section.states?.length || 0), 0);
+}
 
-  if (election.mergedPrimary) {
-    return `${loc} ${primaryEventTitle(election.offices)}`;
+function isMultiStateStateDay(election, sections = []) {
+  if (election.multiStateDay) return true;
+  if (election.title !== "State") return false;
+  if (sections.some((section) => section.level === "federal")) return false;
+  return stateSectionCount(sections) > 1;
+}
+
+function multiStateDayTitle(election) {
+  return (
+    COUNTRY_STATE_DAY_TITLES[election.country_code] ||
+    `${election.country} State elections`
+  );
+}
+
+function formatEventTitle(election, { sections }) {
+  if (isMultiStateStateDay(election, sections)) {
+    return multiStateDayTitle(election);
   }
 
-  if (election.country_code === "DE" && election.state && election.level === "state") {
-    const body = (election.offices || [])[0];
-    if (body) return `${election.state} ${body}`;
+  return locationPrefix(election);
+}
+
+function stateOfficeLabels(election) {
+  if (election.labels?.length) return election.labels;
+
+  const offices = election.offices || [];
+  if (
+    election.mergedPrimary ||
+    election.type === "primary" ||
+    election.type === "runoff"
+  ) {
+    const labels = [];
+    for (const office of OFFICE_ORDER) {
+      if (!offices.includes(office)) continue;
+      labels.push(OFFICE_PRIMARY_LABEL[office] || `${office} Primary`);
+    }
+    if (labels.length) return labels;
+
+    const label = contestLabelFromTitle(election);
+    return label ? [label] : offices;
   }
 
-  if (election.title === "Midterms") {
-    return `${loc} Midterms`;
-  }
-
-  if (election.title === "State" && election.country_code === "DE") {
-    const stateTitles = germanStateElectionTitle(election);
-    if (stateTitles.length) return stateTitles.join(" · ");
-  }
-
-  if (election.state && election.country_code === "US") {
-    return `${loc} ${stripElectionFromTitle(election.title)}`;
-  }
-
-  if (labels.length && !hasSections) {
-    return loc;
-  }
-
-  if (election.type === "combined" || election.title === "General") {
-    return loc;
-  }
-
-  return `${loc} ${stripElectionFromTitle(election.title)}`;
+  return offices;
 }
 
 function titleCoversOffices(title, offices = [], election = {}) {
@@ -301,6 +305,67 @@ function mergeLabels(items) {
   }
 
   return sorted.map((item) => item.title);
+}
+
+function isAggregatableStateElection(election) {
+  if (election.sections?.length) return false;
+  if (election.level !== "state" || !election.state) return false;
+  return true;
+}
+
+function aggregateMultiStateElections(elections) {
+  const passthrough = [];
+  const buckets = new Map();
+
+  for (const election of elections) {
+    if (!isAggregatableStateElection(election)) {
+      passthrough.push(election);
+      continue;
+    }
+
+    const key = `${election.date}|${election.country_code}`;
+    if (!buckets.has(key)) buckets.set(key, []);
+    buckets.get(key).push(election);
+  }
+
+  const aggregated = [];
+  for (const items of buckets.values()) {
+    const stateCodes = new Set(items.map((item) => item.state_code).filter(Boolean));
+    if (stateCodes.size < 2) {
+      aggregated.push(...items);
+      continue;
+    }
+
+    const sorted = [...items].sort((a, b) => (a.state || "").localeCompare(b.state || ""));
+    const base = sorted[0];
+    const isPrimaryDay = sorted.every(
+      (item) =>
+        item.mergedPrimary || item.type === "primary" || item.type === "runoff"
+    );
+
+    aggregated.push({
+      ...base,
+      state: null,
+      state_code: null,
+      title: "State",
+      level: "state",
+      multiStateDay: true,
+      isPrimaryDay,
+      sections: [
+        {
+          label: "State",
+          level: "state",
+          states: sorted.map((item) => ({
+            name: item.state,
+            code: item.state_code,
+            offices: stateOfficeLabels(item),
+          })),
+        },
+      ],
+    });
+  }
+
+  return [...passthrough, ...aggregated];
 }
 
 function mergeElectionGroups(elections) {
@@ -352,11 +417,17 @@ function resolveCardLabels(election, sections, hasSections) {
     return contestLabelsFromSections(sections);
   }
 
-  if (hasSections || election.mergedPrimary) return [];
+  if (hasSections) return [];
 
-  if (election.country_code === "DE" && election.state) return [];
+  if (election.country_code === "DE" && election.state) {
+    const body = (election.offices || [])[0];
+    return body ? [body] : [];
+  }
 
-  if (election.state && election.country_code === "US") return [];
+  if (election.state && election.country_code === "US") {
+    const label = contestLabelFromTitle(election);
+    return label ? [label] : [];
+  }
 
   const label = contestLabelFromTitle(election);
   return label ? [label] : [];
@@ -366,7 +437,7 @@ function resolveCardDisplay(election) {
   const sections = visibleSections(election);
   const hasSections = shouldShowSections(election, sections);
   const labels = resolveCardLabels(election, sections, hasSections);
-  const title = formatEventTitle(election, { hasSections, labels });
+  const title = formatEventTitle(election, { sections });
   const showMeta =
     !hasSections &&
     !labels.length &&
@@ -388,7 +459,7 @@ function visibleSections(election) {
 }
 
 function getDisplayElections() {
-  return mergeElectionGroups(filterElections());
+  return aggregateMultiStateElections(mergeElectionGroups(filterElections()));
 }
 
 function groupByMonth(elections) {
