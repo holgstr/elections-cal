@@ -134,8 +134,30 @@
     "comment": "snap_election"
   },
   {
-    "date": "2026-11-07",
+    "date": "2026-08-30",
     "date_precision": "estimated",
+    "country": "Haiti",
+    "country_code": "HT",
+    "title": "President — Round 1",
+    "type": "presidential",
+    "level": "federal",
+    "groups": ["major"],
+    "offices": ["President"]
+  },
+  {
+    "date": "2026-08-30",
+    "date_precision": "estimated",
+    "country": "Haiti",
+    "country_code": "HT",
+    "title": "Chamber of Deputies",
+    "type": "legislative",
+    "level": "federal",
+    "groups": ["major"],
+    "offices": ["Parliament"]
+  },
+  {
+    "date": "2026-11-07",
+    "date_precision": "exact",
     "country": "New Zealand",
     "country_code": "NZ",
     "title": "Parliament",
@@ -143,6 +165,17 @@
     "level": "federal",
     "groups": ["oecd"],
     "offices": ["Parliament"]
+  },
+  {
+    "date": "2026-12-06",
+    "date_precision": "estimated",
+    "country": "Haiti",
+    "country_code": "HT",
+    "title": "President — Round 2",
+    "type": "presidential",
+    "level": "federal",
+    "groups": ["major"],
+    "offices": ["President"]
   },
   {
     "date": "2027-03-07",

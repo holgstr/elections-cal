@@ -738,6 +738,37 @@
     "source": "curated"
   },
   {
+    "date": "2026-08-30",
+    "date_precision": "estimated",
+    "country": "Haiti",
+    "country_code": "HT",
+    "state": null,
+    "state_code": null,
+    "title": "General",
+    "type": "combined",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "sections": [
+      {
+        "label": "Chamber of Deputies",
+        "level": "federal",
+        "offices": [
+          "Parliament"
+        ]
+      },
+      {
+        "label": "President — Round 1",
+        "level": "federal",
+        "offices": [
+          "President"
+        ]
+      }
+    ],
+    "source": "aggregated"
+  },
+  {
     "date": "2026-09-01",
     "date_precision": "exact",
     "country": "United States",
@@ -1537,7 +1568,7 @@
   },
   {
     "date": "2026-11-07",
-    "date_precision": "estimated",
+    "date_precision": "exact",
     "country": "New Zealand",
     "country_code": "NZ",
     "title": "Parliament",
@@ -1548,6 +1579,22 @@
     ],
     "offices": [
       "Parliament"
+    ],
+    "source": "curated"
+  },
+  {
+    "date": "2026-12-06",
+    "date_precision": "estimated",
+    "country": "Haiti",
+    "country_code": "HT",
+    "title": "President — Round 2",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "President"
     ],
     "source": "curated"
   },

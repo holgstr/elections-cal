@@ -34,11 +34,12 @@ A country is tracked if it meets **any** of these rules (documented in `data/con
 3. G20 sovereign member
 4. Population ≥ 50 million
 5. Nominal GDP in the global top 35
-6. Latin American mainland sovereign state with population ≥ 3 million (Caribbean island nations excluded)
-7. Population ≥ 10 million (presidential or parliamentary elections)
-8. Sub-Saharan African sovereign state with population ≥ 20 million
+6. European sovereign state (excluding microstates: Andorra, Liechtenstein, Malta, Monaco, San Marino, Vatican City)
+7. Latin American mainland sovereign state with population ≥ 3 million (Caribbean island nations excluded)
+8. Population ≥ 10 million (presidential or parliamentary elections)
+9. Sub-Saharan African sovereign state with population ≥ 20 million
 
-Countries added via rules 3–8 are tagged `major` in the UI filter.
+Countries added via rules 3–9 are tagged `major` in the UI filter.
 
 ## Event display
 
