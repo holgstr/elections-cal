@@ -803,6 +803,10 @@ def build(today: date | None = None) -> dict:
             wikidata = []
         else:
             wikidata = fetch_wikidata(country_codes, start, end, countries)
+            if not wikidata:
+                print("Wikidata returned no results; retrying once…", file=sys.stderr)
+                time.sleep(5)
+                wikidata = fetch_wikidata(country_codes, start, end, countries)
     except Exception as exc:  # noqa: BLE001 - keep curated data if Wikidata is down
         print(f"Wikidata fetch failed, using curated data only: {exc}", file=sys.stderr)
         wikidata = []
