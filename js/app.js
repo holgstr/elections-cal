@@ -94,18 +94,13 @@ const OFFICE_PRIMARY_LABEL = {
   Senate: "Senate Primary",
 };
 
-const EVENT_OFFICE_SHORT = {
-  Governor: "Gov",
-  Senate: "Senate",
-};
-
 const UMBRELLA_TITLES = {
   midterm: "Midterms",
   general: "General",
   state: "State",
 };
 
-const OFFICE_ORDER = ["Senate", "Governor"];
+const OFFICE_ORDER = ["Governor", "Senate"];
 
 const PARTY_ORDER = ["Democratic", "Republican"];
 
@@ -154,11 +149,14 @@ function compactPrimaryLabels(items) {
 }
 
 function primaryEventTitle(offices = []) {
-  const parts = OFFICE_ORDER.filter((office) => offices.includes(office)).map(
-    (office) => EVENT_OFFICE_SHORT[office] || office
-  );
+  const parts = OFFICE_ORDER.filter((office) => offices.includes(office));
   if (!parts.length) return "Primaries";
   return `${parts.join("/")} primaries`;
+}
+
+function locationPrefix(election) {
+  if (election.state) return election.state;
+  return election.country;
 }
 
 function stripElectionFromTitle(title) {
@@ -174,8 +172,10 @@ function stripElectionFromTitle(title) {
 }
 
 function formatEventTitle(election) {
+  const loc = locationPrefix(election);
+
   if (election.mergedPrimary) {
-    return primaryEventTitle(election.offices);
+    return `${loc} ${primaryEventTitle(election.offices)}`;
   }
 
   if (election.country_code === "DE" && election.state && election.level === "state") {
@@ -183,7 +183,7 @@ function formatEventTitle(election) {
     if (body) return `${election.state} ${body}`;
   }
 
-  return stripElectionFromTitle(election.title);
+  return `${loc} ${stripElectionFromTitle(election.title)}`;
 }
 
 function mergeLabels(items) {
@@ -237,13 +237,12 @@ function mergeElectionGroups(elections) {
   });
 }
 
-function formatLocation(election) {
-  if (election.state) return `${election.state}, ${election.country}`;
-  return election.country;
+function hasMixedLevelSections(sections) {
+  const levels = new Set(sections.map((section) => section.level));
+  return levels.has("federal") && levels.has("state");
 }
 
 function resolveCardDisplay(election) {
-  const location = formatLocation(election);
   const labels = (election.labels || []).join(" · ");
   const sections = visibleSections(election);
   const hasSections = sections.length > 0;
@@ -252,7 +251,6 @@ function resolveCardDisplay(election) {
 
   return {
     title: formatEventTitle(election),
-    location,
     labels,
     sections,
     showMeta,
@@ -320,12 +318,18 @@ function renderSections(election) {
   const sections = visibleSections(election);
   if (!sections.length) return "";
 
+  const showSectionLabels = hasMixedLevelSections(sections);
+
   return `<div class="card-sections">${sections
     .map((section) => {
+      const sectionLabel = showSectionLabels
+        ? `<div class="section-label">${section.label}</div>`
+        : "";
+
       if (section.states?.length) {
         return `
           <div class="election-section">
-            <div class="section-label">${section.label}</div>
+            ${sectionLabel}
             <div class="state-list">
               ${section.states
                 .map(
@@ -342,7 +346,7 @@ function renderSections(election) {
 
       return `
         <div class="election-section">
-          <div class="section-label">${section.label}</div>
+          ${sectionLabel}
           <div class="section-offices">${renderOfficeTags(section.offices)}</div>
         </div>`;
     })
@@ -351,13 +355,12 @@ function renderSections(election) {
 
 function renderCard(election) {
   const { day, weekday, full, isEstimated } = formatCardDate(election);
-  const { title, location, labels, sections, showMeta, offices } =
-    resolveCardDisplay(election);
+  const { title, labels, sections, showMeta, offices } = resolveCardDisplay(election);
   const officeTags = showMeta ? renderOfficeTags(offices) : "";
 
   return `
     <article class="card${sections.length ? " card-combined" : ""}${election.mergedPrimary ? " card-primary" : ""}">
-      <img class="card-flag" src="${flagUrl(election)}" alt="${flagAlt(election)}" width="24" height="16" loading="lazy" />
+      <img class="card-flag" src="${flagUrl(election)}" alt="${flagAlt(election)}" width="30" height="20" loading="lazy" />
       <div class="card-date">
         <div class="card-day${isEstimated ? " card-day-tbd" : ""}">${day}</div>
         <div class="card-weekday">${weekday}</div>
@@ -367,9 +370,8 @@ function renderCard(election) {
           <h3 class="card-title">${title}</h3>
           ${isEstimated ? '<span class="badge badge-estimated">Est.</span>' : ""}
         </div>
-        <p class="card-location">${location}</p>
         ${labels ? `<p class="card-labels">${labels}</p>` : ""}
-        ${sections.length ? renderSections(election) : showMeta ? `<div class="card-meta"><span class="badge badge-level">${LEVEL_LABELS[election.level] || election.level}</span>${officeTags}</div>` : ""}
+        ${sections.length ? renderSections(election) : showMeta ? `<div class="card-meta">${officeTags}</div>` : ""}
         ${election.notes ? `<p class="card-notes">${election.notes}</p>` : ""}
       </div>
       <time class="card-time" datetime="${election.date}">${full}</time>
