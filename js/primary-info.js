@@ -104,8 +104,18 @@ function parseOutcomePrice(outcomePrices) {
   }
 }
 
-async function fetchPolymarketOdds(slug) {
-  if (oddsCache.has(slug)) return oddsCache.get(slug);
+function isIncumbent(candidateName, incumbentSurname) {
+  if (!incumbentSurname) return false;
+  return candidateName.toLowerCase() === incumbentSurname.toLowerCase();
+}
+
+function formatCandidateName(candidate) {
+  return candidate.incumbent ? `${candidate.name} (Inc.)` : candidate.name;
+}
+
+async function fetchPolymarketOdds(slug, incumbentSurname = null) {
+  const cacheKey = incumbentSurname ? `${slug}:${incumbentSurname}` : slug;
+  if (oddsCache.has(cacheKey)) return oddsCache.get(cacheKey);
 
   const promise = (async () => {
     const res = await fetch(`${POLYMARKET_API}?slug=${encodeURIComponent(slug)}`);
@@ -119,37 +129,41 @@ async function fetchPolymarketOdds(slug) {
         const pct = parseOutcomePrice(market.outcomePrices);
         if (!name || pct == null || name === "Other") return null;
         if (/^Candidate [A-Z]$/i.test(name)) return null;
-        return { name: surname(name), pct };
+        const candidateName = surname(name);
+        return {
+          name: candidateName,
+          pct,
+          incumbent: isIncumbent(candidateName, incumbentSurname),
+        };
       })
       .filter(Boolean)
       .filter((c) => c.pct > MIN_POLYMARKET_PCT)
       .sort((a, b) => b.pct - a.pct);
 
-    return { source: "Polymarket", candidates, hasMarket: true };
+    return { candidates, hasMarket: true };
   })();
 
-  oddsCache.set(slug, promise);
+  oddsCache.set(cacheKey, promise);
   return promise;
 }
 
 async function loadPartySection(config) {
   if (config.polymarket_slug) {
     try {
-      return await fetchPolymarketOdds(config.polymarket_slug);
+      return await fetchPolymarketOdds(config.polymarket_slug, config.incumbent);
     } catch {
-      return { source: "Polymarket", candidates: [], error: true, hasMarket: true };
+      return { candidates: [], error: true, hasMarket: true };
     }
   }
 
   if (config.incumbent) {
     return {
-      source: null,
-      candidates: [{ name: config.incumbent }],
+      candidates: [{ name: config.incumbent, incumbent: true }],
       hasMarket: false,
     };
   }
 
-  return { source: null, candidates: [], hasMarket: false };
+  return { candidates: [], hasMarket: false };
 }
 
 function renderCandidateRows(section) {
@@ -167,9 +181,17 @@ function renderCandidateRows(section) {
         candidate.pct != null
           ? `<span class="primary-popover__pct">${formatPercent(candidate.pct)}</span>`
           : "";
-      return `<li><span class="primary-popover__name">${candidate.name}</span>${pct}</li>`;
+      return `<li><span class="primary-popover__name">${formatCandidateName(candidate)}</span>${pct}</li>`;
     })
     .join("")}</ul>`;
+}
+
+function escapeHtml(text) {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
 function renderTypeHeader(info) {
@@ -179,10 +201,17 @@ function renderTypeHeader(info) {
     info.primary_type;
 
   const formatNote = info.primary_type_note || "";
+  const infoIcon = formatNote
+    ? `<span class="primary-popover__info" tabindex="0" aria-label="${escapeHtml(formatNote)}">
+        <span class="primary-popover__info-icon" aria-hidden="true">i</span>
+        <span class="primary-popover__info-tip" role="tooltip">${escapeHtml(formatNote)}</span>
+      </span>`
+    : "";
 
   return `
-    <p class="primary-popover__type">${typeLabel}</p>
-    ${formatNote ? `<p class="primary-popover__note-block">${formatNote}</p>` : ""}`;
+    <p class="primary-popover__type">
+      <span class="primary-popover__type-label">${typeLabel}</span>${infoIcon}
+    </p>`;
 }
 
 function renderPopoverBody(info, partySections) {
@@ -192,14 +221,10 @@ function renderPopoverBody(info, partySections) {
       const candidateRows = renderCandidateRows(section);
       if (!candidateRows && !section.error) return "";
 
-      const source = section.source
-        ? `<span class="primary-popover__source">via ${section.source}</span>`
-        : "";
       return `
         <div class="primary-popover__party">
           <div class="primary-popover__party-head">
             <span class="primary-popover__party-name primary-popover__party-name--${partySlug(party)}">${party}</span>
-            ${source}
           </div>
           ${candidateRows}
         </div>`;
@@ -213,14 +238,10 @@ function renderPopoverBody(info, partySections) {
 }
 
 function renderTopFourBody(info, section) {
-  const source = section.source
-    ? `<div class="primary-popover__party-head"><span class="primary-popover__source">via ${section.source}</span></div>`
-    : "";
   const candidates = renderCandidateRows(section);
 
   return `
     ${renderTypeHeader(info)}
-    ${source}
     ${candidates}`;
 }
 
@@ -278,7 +299,7 @@ async function showPopover(trigger, key) {
       try {
         section = await fetchPolymarketOdds(info.polymarket_slug);
       } catch {
-        section = { source: "Polymarket", candidates: [], error: true };
+        section = { candidates: [], error: true };
       }
     }
 
