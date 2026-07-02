@@ -12,7 +12,7 @@ A mobile-friendly static site that lists upcoming elections over the next 12 mon
 
 ## Live site
 
-Enable **GitHub Pages** (Settings → Pages → Source: GitHub Actions). The `update-elections` workflow deploys the site and refreshes data weekly.
+Enable **GitHub Pages** (Settings → Pages → Source: GitHub Actions). Pushes to `main` deploy the site; the `update-elections` workflow refreshes election data weekly (and on each push).
 
 ## Run locally
 
@@ -65,5 +65,5 @@ Edit curated files to add or correct dates. The build script merges curated data
 The GitHub Actions workflow runs every Monday at 06:00 UTC:
 
 1. Runs `scripts/build_elections.py`
-2. Commits updated `data/elections.json` and `data/meta.json` if changed
-3. Deploys the static site to GitHub Pages
+2. Commits updated `data/elections.json`, `data/meta.json`, and `data/curated/us_primary_info.json` if changed
+3. A push to `main` (including data refresh commits) triggers GitHub Pages deployment
