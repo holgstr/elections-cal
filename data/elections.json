@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-07-02",
+    "date_precision": "exact",
+    "country": "Algeria",
+    "country_code": "DZ",
+    "state": null,
+    "state_code": null,
+    "title": "Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
     "date": "2026-07-21",
     "date_precision": "exact",
     "country": "United States",
@@ -720,6 +738,78 @@
     ],
     "party": "Republican",
     "source": "curated"
+  },
+  {
+    "date": "2026-08-23",
+    "date_precision": "exact",
+    "country": "Kazakhstan",
+    "country_code": "KZ",
+    "state": null,
+    "state_code": null,
+    "title": "Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-08-30",
+    "date_precision": "exact",
+    "country": "Haiti",
+    "country_code": "HT",
+    "state": null,
+    "state_code": null,
+    "title": "President",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-08-31",
+    "date_precision": "exact",
+    "country": "Sri Lanka",
+    "country_code": "LK",
+    "state": null,
+    "state_code": null,
+    "title": "Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-09-01",
+    "date_precision": "estimated",
+    "country": "Morocco",
+    "country_code": "MA",
+    "state": null,
+    "state_code": null,
+    "title": "Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
   },
   {
     "date": "2026-09-01",
@@ -1059,6 +1149,60 @@
     "source": "aggregated"
   },
   {
+    "date": "2026-09-20",
+    "date_precision": "exact",
+    "country": "Russia",
+    "country_code": "RU",
+    "state": null,
+    "state_code": null,
+    "title": "Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "brics"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-10-01",
+    "date_precision": "estimated",
+    "country": "Czech Republic",
+    "country_code": "CZ",
+    "state": null,
+    "state_code": null,
+    "title": "Senate",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-10-03",
+    "date_precision": "exact",
+    "country": "Latvia",
+    "country_code": "LV",
+    "state": null,
+    "state_code": null,
+    "title": "Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
     "date": "2026-10-04",
     "date_precision": "exact",
     "country": "Bosnia and Herzegovina",
@@ -1125,7 +1269,7 @@
         ]
       },
       {
-        "label": "Presidential — Round 1",
+        "label": "President — Round 1",
         "level": "federal",
         "offices": [
           "President"
@@ -1139,7 +1283,7 @@
     "date_precision": "exact",
     "country": "Brazil",
     "country_code": "BR",
-    "title": "Presidential — Round 2",
+    "title": "President — Round 2",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1491,7 +1635,7 @@
     "date_precision": "estimated",
     "country": "New Zealand",
     "country_code": "NZ",
-    "title": "Parliamentary",
+    "title": "Parliament",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1501,6 +1645,163 @@
       "Parliament"
     ],
     "source": "curated"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "Albania",
+    "country_code": "AL",
+    "state": null,
+    "state_code": null,
+    "title": "President",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "europe"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "Angola",
+    "country_code": "AO",
+    "state": null,
+    "state_code": null,
+    "title": "General",
+    "type": "combined",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "sections": [
+      {
+        "label": "Parliament",
+        "level": "federal",
+        "offices": [
+          "Parliament"
+        ]
+      },
+      {
+        "label": "President",
+        "level": "federal",
+        "offices": [
+          "President"
+        ]
+      }
+    ],
+    "source": "aggregated"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "El Salvador",
+    "country_code": "SV",
+    "state": null,
+    "state_code": null,
+    "title": "President",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "Kenya",
+    "country_code": "KE",
+    "state": null,
+    "state_code": null,
+    "title": "President",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "Nicaragua",
+    "country_code": "NI",
+    "state": null,
+    "state_code": null,
+    "title": "President",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "Slovakia",
+    "country_code": "SK",
+    "state": null,
+    "state_code": null,
+    "title": "Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "europe"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "Tajikistan",
+    "country_code": "TJ",
+    "state": null,
+    "state_code": null,
+    "title": "President",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-02-28",
+    "date_precision": "exact",
+    "country": "El Salvador",
+    "country_code": "SV",
+    "state": null,
+    "state_code": null,
+    "title": "Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
   },
   {
     "date": "2027-03-07",
@@ -1523,7 +1824,7 @@
     "date_precision": "exact",
     "country": "France",
     "country_code": "FR",
-    "title": "Presidential — Round 1",
+    "title": "President — Round 1",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1592,7 +1893,7 @@
     "date_precision": "exact",
     "country": "France",
     "country_code": "FR",
-    "title": "Presidential — Round 2",
+    "title": "President — Round 2",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1620,6 +1921,24 @@
       "Landtag"
     ],
     "source": "curated"
+  },
+  {
+    "date": "2027-05-01",
+    "date_precision": "estimated",
+    "country": "India",
+    "country_code": "IN",
+    "state": null,
+    "state_code": null,
+    "title": "Manipur Legislative Assembly",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "brics"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
   },
   {
     "date": "2027-05-30",

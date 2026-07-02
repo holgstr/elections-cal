@@ -67,14 +67,14 @@ The `title` field in JSON describes the **contest**, never the location.
 | General | `{Office}` | `Governor` |
 | Primary | `{Party} {Office} Primary` | `Democratic Senate Primary` |
 | Runoff | `{Party} {Office} Primary Runoff` | `Republican Governor Primary Runoff` |
-| Presidential | `Presidential — Round {n}` | `Presidential — Round 2` |
+| Presidential | `President — Round {n}` | `President — Round 2` |
 | Legislative | `{Body}` | `Riksdag` |
 | Combined (aggregated) | Umbrella name | `Midterms`, `General`, `State` |
 
 ### Naming conventions
 
 - Use **Governor**, not "Gubernatorial".
-- Strip nationality adjectives that duplicate the country (`Latvian parliamentary` → `Parliamentary`).
+- Strip nationality adjectives that duplicate the country (`Latvian parliamentary` → `Parliament`).
 - Strip `Next` prefixes from Wikidata labels.
 - Do not embed state or country names in `title` (German state cards are formatted at display time).
 - Combined same-day cards must use umbrella titles (`General`, `Midterms`, `State`), never joined contest names.
@@ -84,11 +84,11 @@ The `title` field in JSON describes the **contest**, never the location.
 | Scenario | Title | Labels / detail |
 |----------|-------|-----------------|
 | Single federal election | `Sweden` | `Riksdag` |
-| Single federal election (generic) | `Latvia` | `Parliamentary` |
+| Single federal election (generic) | `Latvia` | `Parliament` |
 | Merged state primaries (one state) | `Kansas` | `Governor Primary` · `Senate Primary` |
 | US multi-state primary day | `US State primaries` | sections: states + primary labels |
 | US midterms (combined) | `United States` | sections: Federal + State |
-| Brazil election day (combined) | `Brazil` | `National Congress` · `Presidential — Round 1` |
+| Brazil election day (combined) | `Brazil` | `National Congress` · `President — Round 1` |
 | Bosnia election day (combined) | `Bosnia and Herzegovina` | `Federation Parliament` · `House of Peoples` · … |
 | German Landtag (standalone) | `Berlin` | `Landtag` |
 | German multi-state day | `German State primaries` | sections: states + bodies |
@@ -98,11 +98,14 @@ The `title` field in JSON describes the **contest**, never the location.
 `scripts/build_elections.py` validates all records before writing `data/elections.json`:
 
 - No `Next` prefixes in titles.
-- No nationality adjectives that duplicate the country name.
+- No nationality adjectives that duplicate the country name (titles and combined-card section labels).
+- Standalone contest titles must use canonical office nouns (`President`, `Parliament`) — not vague Wikidata labels like `general` or adjective forms like `presidential` / `parliamentary`.
 - Combined records use umbrella titles only (`General`, `Midterms`, `State`).
 - Combined titles must not contain ` · `.
 
-Build fails if any rule is violated.
+Wikidata and curated records are normalized on every build (`polish_contest_title`): nationality prefixes are stripped, vague labels are mapped to canonical contest names, and section labels in aggregated cards are cleaned the same way. Build fails if any record still violates the rules after normalization.
+
+The frontend mirrors the same nationality stripping and canonical contest titles as a display-time safeguard.
 
 ## Flags
 

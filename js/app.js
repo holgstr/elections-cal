@@ -22,17 +22,33 @@ const UMBRELLA_TITLES = {
 
 const COUNTRY_ADJECTIVES = {
   albania: ["albanian"],
+  algeria: ["algerian"],
+  angola: ["angolan"],
   "bosnia and herzegovina": ["bosnian"],
   "czech republic": ["czech"],
   czechia: ["czech"],
   "el salvador": ["salvadoran"],
   france: ["french"],
+  haiti: ["haitian"],
+  kazakhstan: ["kazakh", "kazakhstani"],
+  kenya: ["kenyan"],
   latvia: ["latvian"],
+  morocco: ["moroccan"],
   nicaragua: ["nicaraguan"],
   nigeria: ["nigerian"],
   russia: ["russian"],
   slovakia: ["slovak"],
+  "sri lanka": ["sri lankan", "lankan"],
+  tajikistan: ["tajik", "tajikistani"],
 };
+
+const CANONICAL_CONTEST_TITLES = {
+  presidential: "President",
+  parliamentary: "Parliament",
+  legislative: "Parliament",
+};
+
+const PRESIDENTIAL_ROUND_RE = /^Presidential(\s+—\s+Round\s+\d+)$/i;
 
 const COUNTRY_STATE_DAY_TITLES = {
   US: "US State primaries",
@@ -197,8 +213,36 @@ function countryAdjectives(country) {
   const lower = country.toLowerCase();
   if (COUNTRY_ADJECTIVES[lower]) return COUNTRY_ADJECTIVES[lower];
 
-  const root = lower.split(/\s+/)[0];
-  return [root, `${root}ian`, `${root}ish`, `${root}ese`];
+  const adjectives = [];
+  const words = lower.split(/\s+/);
+  const root = words[0];
+  adjectives.push(root, `${root}ian`, `${root}ish`, `${root}ese`);
+
+  if (root.endsWith("o")) adjectives.push(`${root.slice(0, -1)}an`);
+  if (root.endsWith("a")) adjectives.push(`${root.slice(0, -1)}ian`);
+  if (root.endsWith("i")) adjectives.push(`${root}an`);
+
+  if (words.length > 1) {
+    const last = words[words.length - 1];
+    adjectives.push(`${last}an`, `${last}ian`, [...words.slice(0, -1), `${last}an`].join(" "));
+  }
+
+  return [...new Set(adjectives)];
+}
+
+function canonicalizeContestTitle(title, electionType = "general") {
+  const roundMatch = title.trim().match(PRESIDENTIAL_ROUND_RE);
+  if (roundMatch) return `President${roundMatch[1]}`;
+
+  const lower = title.toLowerCase().trim();
+  if (CANONICAL_CONTEST_TITLES[lower]) return CANONICAL_CONTEST_TITLES[lower];
+
+  if (lower === "general") {
+    if (electionType === "presidential") return "President";
+    if (electionType === "legislative" || electionType === "general") return "Parliament";
+  }
+
+  return title;
 }
 
 function stripNationalityPrefix(title, country) {
@@ -219,22 +263,36 @@ function stripNationalityPrefix(title, country) {
   return cleaned;
 }
 
-function contestNameFromSection(section) {
+function contestNameFromSection(section, country, electionType = "general") {
   if (section.states?.length) return null;
 
   const label = stripElectionFromTitle(section.label || "");
-  if (label && label !== "Federal" && label !== "State") return label;
+  if (label && label !== "Federal" && label !== "State") {
+    const sectionType =
+      section.offices?.includes("President") || /presidential/i.test(label)
+        ? "presidential"
+        : electionType;
+    return canonicalizeContestTitle(
+      stripNationalityPrefix(label, country),
+      sectionType
+    );
+  }
   return (section.offices || [])[0] || label || null;
 }
 
 function contestLabelFromTitle(election) {
   const raw = stripElectionFromTitle(election.title);
   if (!raw || Object.values(UMBRELLA_TITLES).includes(raw)) return null;
-  return stripNationalityPrefix(raw, election.country);
+  return canonicalizeContestTitle(
+    stripNationalityPrefix(raw, election.country),
+    election.type
+  );
 }
 
-function contestLabelsFromSections(sections) {
-  return sections.map((section) => contestNameFromSection(section)).filter(Boolean);
+function contestLabelsFromSections(sections, country, electionType = "general") {
+  return sections
+    .map((section) => contestNameFromSection(section, country, electionType))
+    .filter(Boolean);
 }
 
 function stateSectionCount(sections = []) {
@@ -290,7 +348,7 @@ function stateOfficeLabels(election) {
 
 function titleCoversOffices(title, offices = [], election = {}) {
   if (!offices.length) return false;
-  if (election.type === "presidential" && /presidential/i.test(title)) return true;
+  if (election.type === "presidential" && /president/i.test(title)) return true;
   return offices.every((office) => title.includes(office));
 }
 
@@ -426,7 +484,7 @@ function resolveCardLabels(election, sections, hasSections) {
   if (election.labels?.length) return election.labels;
 
   if (sections.length) {
-    return contestLabelsFromSections(sections);
+    return contestLabelsFromSections(sections, election.country, election.type);
   }
 
   if (election.country_code === "DE" && election.state) {
