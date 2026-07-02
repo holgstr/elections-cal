@@ -111,3 +111,41 @@ The frontend mirrors the same nationality stripping and canonical contest titles
 
 - Subnational record (`state_code` set): state/Länder flag.
 - National record: country flag.
+
+## Primary info popover
+
+Interactive primary labels (`.office-tag--interactive`) show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/us_primary_info.json` for US primaries within the **next 3 months** (`scripts/generate_us_primary_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set.
+
+Regenerate after updating `data/config/us_primary_markets.json` (slugs, incumbents, primary types):
+
+```bash
+python3 scripts/generate_us_primary_info.py
+```
+
+### Display rules
+
+| Rule | Detail |
+|------|--------|
+| Party labels | **Republican** in red, **Democratic** in blue |
+| Candidate names | Surname only |
+| Polymarket odds | Show only candidates above **3%**; display rounded percentage |
+| No market | If no `polymarket_slug`, list the party `incumbent` surname only (no percentage) when the incumbent is running |
+| Empty party | Omit a party block when there are no candidates to show and no load error |
+| Top-four states | Alaska uses a single candidate list (no party headers) from one Polymarket market when linked |
+| Rolling window | Popovers only appear for primaries whose date falls within the next 3 months |
+
+### Curated fields per party
+
+- `polymarket_slug` — live odds source (takes precedence when present)
+- `incumbent` — surname fallback when no market is linked and the incumbent is competing
+
+### Edge cases (not yet handled automatically)
+
+- **Open / top-two primaries** — single ballot; Alaska uses top-four (handled separately)
+- **Runoffs** — same display rules apply; link a runoff market slug if one exists
+- **Open seat** — no incumbent to fall back to; party block is omitted without a market
+- **Retiring incumbent** — do not set `incumbent`; omit the party block if there is no market
+- **Market exists, nobody above 3%** — party block omitted (no fallback to incumbent)
+- **Market fetch fails** — show a short error for that party only
+- **Same surname** — rare; may need a disambiguator (initial) if it becomes a problem
+- **Third parties / independents** — not shown unless explicitly added later
