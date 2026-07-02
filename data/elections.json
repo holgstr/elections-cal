@@ -1611,6 +1611,42 @@
   {
     "date": "2027-01-01",
     "date_precision": "estimated",
+    "country": "Nicaragua",
+    "country_code": "NI",
+    "state": null,
+    "state_code": null,
+    "title": "Nicaraguan presidential",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "state": null,
+    "state_code": null,
+    "title": "Nigerian general",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
     "country": "Slovakia",
     "country_code": "SK",
     "state": null,
