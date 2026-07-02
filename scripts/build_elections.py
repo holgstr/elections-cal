@@ -131,12 +131,14 @@ COUNTRY_ADJECTIVES = {
 COMBINED_UMBRELLA_TITLES = {"Midterms", "General", "State"}
 
 CANONICAL_CONTEST_TITLES = {
-  "presidential": "Presidential",
-  "parliamentary": "Parliamentary",
-  "legislative": "Legislative",
+    "presidential": "President",
+    "parliamentary": "Parliament",
+    "legislative": "Parliament",
 }
 
 VAGUE_STANDALONE_TITLES = {"general"}
+
+PRESIDENTIAL_ROUND_RE = re.compile(r"^Presidential(\s+—\s+Round\s+\d+)$", re.I)
 
 
 def country_adjectives(country: str) -> list[str]:
@@ -182,15 +184,19 @@ def strip_nationality_prefix(title: str, country: str) -> str:
 
 
 def canonicalize_contest_title(title: str, election_type: str) -> str:
+    round_match = PRESIDENTIAL_ROUND_RE.match(title.strip())
+    if round_match:
+        return f"President{round_match.group(1)}"
+
     lower = title.lower().strip()
     if lower in CANONICAL_CONTEST_TITLES:
         return CANONICAL_CONTEST_TITLES[lower]
 
     if lower == "general":
         if election_type == "presidential":
-            return "Presidential"
+            return "President"
         if election_type in {"legislative", "general"}:
-            return "Parliamentary"
+            return "Parliament"
 
     return title
 
@@ -653,19 +659,25 @@ def validate_contest_label(
 
     lower = label.lower()
     if lower in VAGUE_STANDALONE_TITLES and not allow_umbrella:
-        errors.append(f"vague contest label must be Parliamentary or Legislative, not {label!r}")
+        errors.append(f"vague contest label must be Parliament or President, not {label!r}")
 
     if lower in CANONICAL_CONTEST_TITLES and label != CANONICAL_CONTEST_TITLES[lower]:
         errors.append(
-            f"contest label must use canonical casing "
+            f"contest label must use canonical office noun "
             f"({CANONICAL_CONTEST_TITLES[lower]!r}): {label!r}"
         )
+
+    if label in {"Parliamentary", "Presidential", "Legislative"}:
+        errors.append(f"contest label must use office noun, not adjective: {label!r}")
+
+    if PRESIDENTIAL_ROUND_RE.match(label):
+        errors.append(f"contest label must use President, not Presidential: {label!r}")
 
     if (
         election_type != "combined"
         and not allow_umbrella
         and lower in {"presidential", "parliamentary", "legislative", "general"}
-        and label not in set(CANONICAL_CONTEST_TITLES.values()) | {"Parliamentary", "Legislative", "Presidential"}
+        and label not in set(CANONICAL_CONTEST_TITLES.values())
     ):
         errors.append(f"contest label is not canonical: {label!r}")
 

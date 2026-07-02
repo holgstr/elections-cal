@@ -43,10 +43,12 @@ const COUNTRY_ADJECTIVES = {
 };
 
 const CANONICAL_CONTEST_TITLES = {
-  presidential: "Presidential",
-  parliamentary: "Parliamentary",
-  legislative: "Legislative",
+  presidential: "President",
+  parliamentary: "Parliament",
+  legislative: "Parliament",
 };
+
+const PRESIDENTIAL_ROUND_RE = /^Presidential(\s+—\s+Round\s+\d+)$/i;
 
 const COUNTRY_STATE_DAY_TITLES = {
   US: "US State primaries",
@@ -229,12 +231,15 @@ function countryAdjectives(country) {
 }
 
 function canonicalizeContestTitle(title, electionType = "general") {
+  const roundMatch = title.trim().match(PRESIDENTIAL_ROUND_RE);
+  if (roundMatch) return `President${roundMatch[1]}`;
+
   const lower = title.toLowerCase().trim();
   if (CANONICAL_CONTEST_TITLES[lower]) return CANONICAL_CONTEST_TITLES[lower];
 
   if (lower === "general") {
-    if (electionType === "presidential") return "Presidential";
-    if (electionType === "legislative" || electionType === "general") return "Parliamentary";
+    if (electionType === "presidential") return "President";
+    if (electionType === "legislative" || electionType === "general") return "Parliament";
   }
 
   return title;
@@ -343,7 +348,7 @@ function stateOfficeLabels(election) {
 
 function titleCoversOffices(title, offices = [], election = {}) {
   if (!offices.length) return false;
-  if (election.type === "presidential" && /presidential/i.test(title)) return true;
+  if (election.type === "presidential" && /president/i.test(title)) return true;
   return offices.every((office) => title.includes(office));
 }
 
