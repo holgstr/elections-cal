@@ -453,6 +453,52 @@ function renderGovernorBody(section) {
     ${renderGovernorPartyRows(section)}`;
 }
 
+function renderGovernorCandidateBody(section) {
+  const candidates = renderCandidateRows(section);
+
+  return `
+    <p class="primary-popover__type">
+      <span class="primary-popover__type-label">Governor</span>
+    </p>
+    ${candidates}`;
+}
+
+function usesGovernorCandidateOdds(info) {
+  return info.odds_format === "candidates";
+}
+
+async function loadGovernorOdds(info) {
+  if (!info.polymarket_slug) {
+    return { format: "party", section: { parties: {} } };
+  }
+
+  if (usesGovernorCandidateOdds(info)) {
+    try {
+      const section = await fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null);
+      return { format: "candidates", section };
+    } catch {
+      return { format: "candidates", section: { candidates: [], error: true } };
+    }
+  }
+
+  try {
+    const section = await fetchGovernorOdds(info.polymarket_slug);
+    const parties = GOVERNOR_PARTY_ORDER.filter((party) => section.parties?.[party] != null);
+    if (parties.length) {
+      return { format: "party", section };
+    }
+
+    const candidateSection = await fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null);
+    if (candidateSection.candidates.length) {
+      return { format: "candidates", section: candidateSection };
+    }
+
+    return { format: "party", section };
+  } catch {
+    return { format: "party", section: { parties: {}, error: true } };
+  }
+}
+
 function ensurePopover() {
   if (popoverEl) return popoverEl;
 
@@ -560,18 +606,12 @@ async function showGovernorPopover(trigger) {
   popover.innerHTML = `<p class="primary-popover__loading">Loading…</p>`;
   positionPopover(trigger);
 
-  let section = { parties: {} };
-  if (info.polymarket_slug) {
-    try {
-      section = await fetchGovernorOdds(info.polymarket_slug);
-    } catch {
-      section = { parties: {}, error: true };
-    }
-  }
+  const { format, section } = await loadGovernorOdds(info);
 
   if (activeTrigger !== trigger) return;
 
-  popover.innerHTML = renderGovernorBody(section);
+  popover.innerHTML =
+    format === "candidates" ? renderGovernorCandidateBody(section) : renderGovernorBody(section);
   positionPopover(trigger);
 }
 
@@ -752,6 +792,63 @@ export function renderInteractiveOfficeTag(label, stateCode, electionDate, count
 
   const key = primaryKey(stateCode, office);
   return `<button type="button" class="office-tag office-tag--interactive" data-primary="${key}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
+}
+
+function prefetchPromise(promise) {
+  promise.catch(() => {});
+}
+
+function prefetchGovernorOddsForInfo(info) {
+  if (!info?.polymarket_slug) return;
+
+  if (usesGovernorCandidateOdds(info)) {
+    prefetchPromise(fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null));
+    return;
+  }
+
+  prefetchPromise(
+    fetchGovernorOdds(info.polymarket_slug).then((section) => {
+      const parties = GOVERNOR_PARTY_ORDER.filter((party) => section.parties?.[party] != null);
+      if (!parties.length) {
+        prefetchPromise(fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null));
+      }
+    })
+  );
+}
+
+export function prefetchOdds() {
+  for (const info of Object.values(usGovernorInfo)) {
+    prefetchGovernorOddsForInfo(info);
+  }
+
+  for (const offices of Object.values(primaryInfo)) {
+    for (const info of Object.values(offices)) {
+      if (info.primary_format === "top-four") {
+        if (info.polymarket_slug) {
+          prefetchPromise(fetchPolymarketOdds(info.polymarket_slug));
+        }
+        continue;
+      }
+
+      for (const partyConfig of Object.values(info.parties || {})) {
+        if (partyConfig.polymarket_slug) {
+          prefetchPromise(fetchPolymarketOdds(partyConfig.polymarket_slug, partyConfig.incumbent));
+        }
+      }
+    }
+  }
+
+  for (const info of Object.values(presidentialInfo)) {
+    if (info.polymarket_slug) {
+      prefetchPromise(fetchPolymarketOdds(info.polymarket_slug));
+    }
+  }
+
+  for (const info of Object.values(deStateInfo)) {
+    if (info.polymarket_slug) {
+      prefetchPromise(fetchPolymarketPartyOdds(info.polymarket_slug, MIN_DE_STATE_POLYMARKET_PCT));
+    }
+  }
 }
 
 export function initPrimaryPopovers(root = document.getElementById("timeline")) {

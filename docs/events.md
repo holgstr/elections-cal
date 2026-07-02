@@ -187,14 +187,17 @@ python3 scripts/generate_us_governor_info.py
 | Rule | Detail |
 |------|--------|
 | Party labels | **Republican** in red, **Democratic** in blue |
-| Polymarket odds | Always show Republican and Democratic win odds when available; display rounded percentage |
+| Polymarket odds (party format) | Always show Republican and Democratic win odds when available; display rounded percentage |
+| Candidate odds | For races without a simple Republican vs. Democratic market (`odds_format: "candidates"`), show individual candidates with the same rules as primaries: surname only, above **3%**, rounded percentage |
+| Auto-detect | When a party-format market has no Republican/Democratic outcomes, fall back to individual candidate odds |
 | No market | Label stays non-interactive (no popover) |
 | Rolling window | Popovers only appear for elections whose date falls within the next 12 months |
 
-### Curated fields per party
+### Curated fields
 
-- `polymarket_slug` — live odds source (takes precedence when present)
-- `incumbent` — surname fallback when no market is linked and the incumbent is competing
+- `polymarket_slug` — live odds source (required for interactivity)
+- `odds_format` — `party` (default) or `candidates` for individual-candidate markets
+- `incumbent` — optional surname for incumbent tagging in candidate-format markets
 
 ### Edge cases (not yet handled automatically)
 

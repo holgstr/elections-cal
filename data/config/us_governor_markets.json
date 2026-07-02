@@ -1,6 +1,10 @@
 {
   "_comment": "Polymarket slugs for US gubernatorial general elections. Regenerate us_governor_info.json via scripts/generate_us_governor_info.py",
   "markets": {
+    "AK": {
+      "polymarket_slug": "alaska-governor-election-winner",
+      "odds_format": "candidates"
+    },
     "AL": { "polymarket_slug": "alabama-governor-winner-2026" },
     "AZ": { "polymarket_slug": "arizona-governor-winner-2026" },
     "AR": { "polymarket_slug": "arkansas-governor-winner-2026" },
