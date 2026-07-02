@@ -20,6 +20,7 @@ jobs:
         run: |
           python3 scripts/build_elections.py || SKIP_WIKIDATA=1 python3 scripts/build_elections.py
           python3 scripts/generate_us_primary_info.py
+          python3 scripts/generate_presidential_info.py
 
       - name: Validate election data
         run: SKIP_WIKIDATA=1 python3 scripts/build_elections.py
@@ -29,10 +30,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet data/elections.json data/meta.json data/curated/us_primary_info.json; then
+          if git diff --quiet data/elections.json data/meta.json data/curated/us_primary_info.json data/curated/presidential_info.json; then
             echo "No election data changes."
           else
-            git add data/elections.json data/meta.json data/curated/us_primary_info.json
+            git add data/elections.json data/meta.json data/curated/us_primary_info.json data/curated/presidential_info.json
             git commit -m "chore: refresh election calendar data"
             git push
           fi

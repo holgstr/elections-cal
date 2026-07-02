@@ -1,0 +1,13 @@
+{
+  "_comment": "Polymarket slugs for presidential elections. Regenerate presidential_info.json via scripts/generate_presidential_info.py",
+  "elections": {
+    "BR": {
+      "polymarket_slug": "brazil-presidential-election",
+      "label": "Presidential election"
+    },
+    "FR": {
+      "polymarket_slug": "next-french-presidential-election",
+      "label": "Presidential election"
+    }
+  }
+}

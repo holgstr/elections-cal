@@ -4,7 +4,8 @@ import {
   initPrimaryPopovers,
   renderInteractiveOfficeTag,
   labelToOffice,
-} from "./primary-info.js?v=2";
+  isPresidentialLabel,
+} from "./primary-info.js?v=3";
 
 const GROUP_LABELS = {
   all: "All",
@@ -589,14 +590,14 @@ function formatCardDate(election) {
   };
 }
 
-function renderOfficeTag(label, stateCode = null, electionDate = null) {
-  return stateCode
-    ? renderInteractiveOfficeTag(label, stateCode, electionDate)
+function renderOfficeTag(label, stateCode = null, electionDate = null, countryCode = null) {
+  return stateCode || (isPresidentialLabel(label) && countryCode)
+    ? renderInteractiveOfficeTag(label, stateCode, electionDate, countryCode)
     : `<span class="office-tag">${label}</span>`;
 }
 
-function renderOfficeTags(offices = [], stateCode = null, electionDate = null) {
-  return offices.map((office) => renderOfficeTag(office, stateCode, electionDate)).join("");
+function renderOfficeTags(offices = [], stateCode = null, electionDate = null, countryCode = null) {
+  return offices.map((office) => renderOfficeTag(office, stateCode, electionDate, countryCode)).join("");
 }
 
 function getPrimaryOfficeColumns(states) {
@@ -607,7 +608,7 @@ function getPrimaryOfficeColumns(states) {
   );
 }
 
-function renderAlignedOfficeCells(offices, columns, stateCode, electionDate) {
+function renderAlignedOfficeCells(offices, columns, stateCode, electionDate, countryCode = null) {
   const labelsByOffice = new Map();
   const extraLabels = [];
 
@@ -623,27 +624,27 @@ function renderAlignedOfficeCells(offices, columns, stateCode, electionDate) {
   const cells = columns
     .map((office) => {
       const label = labelsByOffice.get(office);
-      const content = label ? renderOfficeTag(label, stateCode, electionDate) : "";
+      const content = label ? renderOfficeTag(label, stateCode, electionDate, countryCode) : "";
       return `<div class="state-office-cell">${content}</div>`;
     })
     .join("");
 
   const extras = extraLabels.length
     ? `<div class="state-offices-extra">${extraLabels
-        .map((label) => renderOfficeTag(label, stateCode, electionDate))
+        .map((label) => renderOfficeTag(label, stateCode, electionDate, countryCode))
         .join("")}</div>`
     : "";
 
   return cells + extras;
 }
 
-function renderLabelTags(labels = [], stateCode = null, electionDate = null) {
+function renderLabelTags(labels = [], stateCode = null, electionDate = null, countryCode = null) {
   if (!labels.length) return "";
 
   return `<div class="card-labels">${labels
     .map((label) =>
-      stateCode
-        ? renderInteractiveOfficeTag(label, stateCode, electionDate)
+      stateCode || (isPresidentialLabel(label) && countryCode)
+        ? renderInteractiveOfficeTag(label, stateCode, electionDate, countryCode)
         : `<span class="office-tag">${label}</span>`
     )
     .join("")}</div>`;
@@ -696,9 +697,10 @@ function renderSections(election) {
                         state.offices,
                         officeColumns,
                         state.code,
-                        election.date
+                        election.date,
+                        election.country_code
                       )
-                    : renderOfficeTags(state.offices, state.code, election.date);
+                    : renderOfficeTags(state.offices, state.code, election.date, election.country_code);
                   const officesWrapper = useAlignedOffices
                     ? officesHtml
                     : `<div class="state-offices">${officesHtml}</div>`;
@@ -717,7 +719,7 @@ function renderSections(election) {
       return `
         <div class="election-section">
           ${sectionLabel}
-          <div class="section-offices">${renderOfficeTags(section.offices)}</div>
+          <div class="section-offices">${renderOfficeTags(section.offices, null, election.date, election.country_code)}</div>
         </div>`;
     })
     .join("")}</div>`;
@@ -726,7 +728,7 @@ function renderSections(election) {
 function renderCard(election) {
   const { day, weekday, full, isEstimated } = formatCardDate(election);
   const { title, labels, sections, showMeta, offices } = resolveCardDisplay(election);
-  const officeTags = showMeta ? renderOfficeTags(offices) : "";
+  const officeTags = showMeta ? renderOfficeTags(offices, null, election.date, election.country_code) : "";
 
   return `
     <article class="card${sections.length ? " card-combined" : ""}${election.mergedPrimary ? " card-primary" : ""}">
@@ -739,7 +741,7 @@ function renderCard(election) {
         <div class="card-topline">
           <h3 class="card-title">${title}</h3>
         </div>
-        ${renderLabelTags(labels, election.state_code, election.date)}
+        ${renderLabelTags(labels, election.state_code, election.date, election.country_code)}
         ${sections.length ? renderSections(election) : showMeta ? `<div class="card-meta">${officeTags}</div>` : ""}
         ${electionCommentLabel(election.comment) ? `<p class="card-comment">${electionCommentLabel(election.comment)}</p>` : ""}
       </div>

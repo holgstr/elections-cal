@@ -134,6 +134,25 @@ python3 scripts/generate_us_primary_info.py
 | Top-four states | Alaska uses a single candidate list (no party headers) from one Polymarket market when linked |
 | Rolling window | Popovers only appear for primaries whose date falls within the next 3 months |
 
+## Presidential info popover
+
+Interactive presidential labels use the same `.office-tag--interactive` popover as US primaries. Metadata is generated into `data/curated/presidential_info.json` for presidential elections within the **next 12 months** (`scripts/generate_presidential_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set in `data/config/presidential_markets.json`.
+
+Regenerate after updating presidential market slugs:
+
+```bash
+python3 scripts/generate_presidential_info.py
+```
+
+### Display rules
+
+| Rule | Detail |
+|------|--------|
+| Candidate names | Surname only |
+| Polymarket odds | Show only candidates above **3%**; display rounded percentage |
+| No market | Label stays non-interactive (no popover) |
+| Rolling window | Popovers only appear for presidential elections whose date falls within the next 12 months |
+
 ### Curated fields per party
 
 - `polymarket_slug` — live odds source (takes precedence when present)

@@ -439,6 +439,7 @@ body::before {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 0.35rem 0.45rem;
+  min-width: 0;
 }
 
 .section-label {
@@ -514,6 +515,24 @@ body::before {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
+}
+
+@media (max-width: 639px) {
+  .state-list--aligned {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .state-row--aligned {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .state-office-cell {
+    flex-wrap: wrap;
+  }
 }
 
 @media (min-width: 640px) {
