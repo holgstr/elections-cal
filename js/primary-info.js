@@ -244,6 +244,11 @@ function formatPercent(value) {
   return `${Math.round(value)}%`;
 }
 
+function formatOddsSuffix(pct) {
+  if (pct == null) return "";
+  return ` <span class="primary-popover__pct">${formatPercent(pct)}</span>`;
+}
+
 function partySlug(party) {
   if (party === "Republican") return "republican";
   if (party === "Democratic") return "democratic";
@@ -439,13 +444,10 @@ function renderCandidateRows(section) {
   }
 
   return `<ul class="primary-popover__candidates">${section.candidates
-    .map((candidate) => {
-      const pct =
-        candidate.pct != null
-          ? `<span class="primary-popover__pct">${formatPercent(candidate.pct)}</span>`
-          : "";
-      return `<li><span class="primary-popover__name">${formatCandidateName(candidate)}</span>${pct}</li>`;
-    })
+    .map(
+      (candidate) =>
+        `<li><span class="primary-popover__name">${formatCandidateName(candidate)}${formatOddsSuffix(candidate.pct)}</span></li>`
+    )
     .join("")}</ul>`;
 }
 
@@ -549,7 +551,6 @@ function renderGovernorPartyRows(section, nominees = {}) {
       const partyLabel = GOVERNOR_PARTY_LABELS[party] || party;
       const nominee = nominees[party];
       const candidateName = nominee ? formatCandidateName(nominee) : "TBD";
-      const pct = formatPercent(section.parties[party]);
 
       return `
         <div class="primary-popover__party">
@@ -558,8 +559,7 @@ function renderGovernorPartyRows(section, nominees = {}) {
           </div>
           <ul class="primary-popover__candidates">
             <li>
-              <span class="primary-popover__name">${candidateName}</span>
-              <span class="primary-popover__pct">${pct}</span>
+              <span class="primary-popover__name">${candidateName}${formatOddsSuffix(section.parties[party])}</span>
             </li>
           </ul>
         </div>`;

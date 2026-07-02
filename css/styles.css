@@ -381,21 +381,12 @@ body::before {
   gap: 0.18rem;
 }
 
-.primary-popover__candidates li {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.75rem;
-}
-
 .primary-popover__name {
   min-width: 0;
 }
 
 .primary-popover__pct {
   font-variant-numeric: tabular-nums;
-  font-weight: 600;
-  color: var(--accent);
   white-space: nowrap;
 }
 
