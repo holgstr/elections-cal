@@ -17,9 +17,30 @@ const DE_STATE_FLAGS = {
   TH: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Thuringia.svg/60px-Flag_of_Thuringia.svg.png",
 };
 
+function usStateFlagUrl(stateCode) {
+  const code = stateCode.toLowerCase();
+  return `https://flags.telco.dev/us/${code}/${code}_48x32.png`;
+}
+
+export function stateFlagUrl(countryCode, stateCode) {
+  if (countryCode === "US" && stateCode) {
+    return usStateFlagUrl(stateCode);
+  }
+
+  if (countryCode === "DE" && stateCode) {
+    return DE_STATE_FLAGS[stateCode] || countryFlagUrl(countryCode);
+  }
+
+  return countryFlagUrl(countryCode);
+}
+
+export function stateFlagAlt(stateName) {
+  return `${stateName} flag`;
+}
+
 export function flagUrl(election) {
   if (election.country_code === "US" && election.state_code) {
-    return `https://flags.telco.dev/us/${election.state_code.toLowerCase()}/${election.state_code.toLowerCase()}_48x32.png`;
+    return usStateFlagUrl(election.state_code);
   }
 
   if (election.country_code === "DE" && election.state_code) {
