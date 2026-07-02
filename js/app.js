@@ -9,6 +9,7 @@ const {
   renderInteractiveOfficeTag,
   labelToOffice,
   isPresidentialLabel,
+  prefetchOdds,
 } = await import(`./primary-info.js?v=${v}`);
 
 const GROUP_LABELS = {
@@ -95,6 +96,7 @@ async function loadData() {
 
 async function init() {
   await loadData();
+  prefetchOdds();
   render();
   bindEvents();
   initPrimaryPopovers();
@@ -102,7 +104,10 @@ async function init() {
 
 window.addEventListener("pageshow", (event) => {
   if (event.persisted) {
-    loadData().then(() => render());
+    loadData().then(() => {
+      prefetchOdds();
+      render();
+    });
   }
 });
 
