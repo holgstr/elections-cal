@@ -251,6 +251,15 @@ function isPlaceholderMarketName(name) {
   );
 }
 
+function isActivePolymarketMarket(market) {
+  return market?.active !== false;
+}
+
+function isIncludedPolymarketMarket(market) {
+  const name = market?.groupItemTitle;
+  return isActivePolymarketMarket(market) && !isPlaceholderMarketName(name);
+}
+
 async function fetchPolymarketOdds(slug, incumbentSurname = null) {
   const cacheKey = incumbentSurname ? `${slug}:${incumbentSurname}` : slug;
   if (oddsCache.has(cacheKey)) return oddsCache.get(cacheKey);
@@ -263,9 +272,10 @@ async function fetchPolymarketOdds(slug, incumbentSurname = null) {
 
     const candidates = markets
       .map((market) => {
+        if (!isIncludedPolymarketMarket(market)) return null;
         const name = market.groupItemTitle;
         const pct = parseOutcomePrice(market.outcomePrices);
-        if (!name || pct == null || isPlaceholderMarketName(name)) return null;
+        if (pct == null) return null;
         const candidateName = surname(name);
         return {
           name: candidateName,
@@ -296,9 +306,10 @@ async function fetchNomineeSurname(slug, incumbentSurname = null) {
 
     const candidates = markets
       .map((market) => {
+        if (!isIncludedPolymarketMarket(market)) return null;
         const name = market.groupItemTitle;
         const pct = parseOutcomePrice(market.outcomePrices);
-        if (!name || pct == null || isPlaceholderMarketName(name)) return null;
+        if (pct == null) return null;
         const candidateName = surname(name);
         return {
           name: candidateName,
@@ -328,9 +339,10 @@ async function fetchPolymarketPartyOdds(slug, minPct) {
 
     const candidates = markets
       .map((market) => {
+        if (!isIncludedPolymarketMarket(market)) return null;
         const name = market.groupItemTitle;
         const pct = parseOutcomePrice(market.outcomePrices);
-        if (!name || pct == null || isPlaceholderMarketName(name)) return null;
+        if (pct == null) return null;
         return { name, pct };
       })
       .filter(Boolean)
@@ -356,6 +368,7 @@ async function fetchGovernorOdds(slug) {
     const parties = {};
 
     for (const market of markets) {
+      if (!isActivePolymarketMarket(market)) continue;
       const party = market.groupItemTitle;
       const pct = parseOutcomePrice(market.outcomePrices);
       if (!GOVERNOR_PARTY_ORDER.includes(party) || pct == null) continue;
