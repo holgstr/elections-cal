@@ -64,6 +64,6 @@ Edit curated files to add or correct dates. The build script merges curated data
 
 The GitHub Actions workflow runs every Monday at 06:00 UTC:
 
-1. Runs `scripts/build_elections.py` and regenerates Polymarket info files (`us_primary_info.json`, `presidential_info.json`, `de_state_info.json`, `us_governor_info.json`)
+1. Runs `scripts/build_elections.py` and regenerates Polymarket info files (`us_primary_info.json`, `presidential_info.json`, `de_state_info.json`, `us_governor_info.json`, `mayoral_info.json`)
 2. Commits updated `data/elections.json`, `data/meta.json`, and curated info JSON if changed
 3. A push to `main` (including data refresh commits) triggers GitHub Pages deployment

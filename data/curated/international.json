@@ -242,5 +242,18 @@
     "level": "federal",
     "groups": ["oecd"],
     "offices": ["Parliament"]
+  },
+  {
+    "date": "2026-07-30",
+    "date_precision": "exact",
+    "country": "United Kingdom",
+    "country_code": "GB",
+    "city": "Manchester",
+    "city_code": "MAN",
+    "title": "Mayor",
+    "type": "general",
+    "level": "local",
+    "groups": ["oecd"],
+    "offices": ["Mayor"]
   }
 ]

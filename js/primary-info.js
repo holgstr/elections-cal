@@ -29,6 +29,8 @@ let deStateInfo = {};
 let deStateWindowMonths = 12;
 let usGovernorInfo = {};
 let usGovernorWindowMonths = 12;
+let mayoralInfo = {};
+let mayoralWindowMonths = 12;
 const oddsCache = new Map();
 
 let popoverEl = null;
@@ -84,6 +86,18 @@ export async function loadPrimaryInfo(fetchJson) {
     usGovernorInfo = data;
   } catch {
     usGovernorInfo = {};
+  }
+
+  try {
+    const data = await fetchJson("data/curated/mayoral_info.json");
+    if (data._window_months) {
+      mayoralWindowMonths = data._window_months;
+    }
+    delete data._comment;
+    delete data._window_months;
+    mayoralInfo = data;
+  } catch {
+    mayoralInfo = {};
   }
 }
 
@@ -148,6 +162,20 @@ export function getGovernorInfo(stateCode, electionDate) {
   if (!stateCode) return null;
   if (!isWithinGovernorWindow(electionDate)) return null;
   return usGovernorInfo[stateCode] ?? null;
+}
+
+function isWithinMayoralWindow(electionDate) {
+  return isWithinWindow(electionDate, mayoralWindowMonths);
+}
+
+export function isMayorLabel(label) {
+  return label?.trim() === "Mayor";
+}
+
+export function getMayoralInfo(cityCode, electionDate) {
+  if (!cityCode) return null;
+  if (!isWithinMayoralWindow(electionDate)) return null;
+  return mayoralInfo[cityCode] ?? null;
 }
 
 export function labelToOffice(label) {
@@ -246,6 +274,38 @@ async function fetchPolymarketOdds(slug, incumbentSurname = null) {
       .sort((a, b) => b.pct - a.pct);
 
     return { candidates, hasMarket: true };
+  })();
+
+  oddsCache.set(cacheKey, promise);
+  return promise;
+}
+
+async function fetchNomineeSurname(slug, incumbentSurname = null) {
+  const cacheKey = `nominee:${slug}:${incumbentSurname || ""}`;
+  if (oddsCache.has(cacheKey)) return oddsCache.get(cacheKey);
+
+  const promise = (async () => {
+    const res = await fetch(`${POLYMARKET_API}?slug=${encodeURIComponent(slug)}`);
+    if (!res.ok) throw new Error("Polymarket fetch failed");
+    const data = await res.json();
+    const markets = data[0]?.markets || [];
+
+    const candidates = markets
+      .map((market) => {
+        const name = market.groupItemTitle;
+        const pct = parseOutcomePrice(market.outcomePrices);
+        if (!name || pct == null || isPlaceholderMarketName(name)) return null;
+        const candidateName = surname(name);
+        return {
+          name: candidateName,
+          pct,
+          incumbent: isIncumbent(candidateName, incumbentSurname),
+        };
+      })
+      .filter(Boolean)
+      .sort((a, b) => b.pct - a.pct);
+
+    return candidates[0] ?? null;
   })();
 
   oddsCache.set(cacheKey, promise);
@@ -429,7 +489,7 @@ function renderDeStateBody(info, section) {
     ${candidates}`;
 }
 
-function renderGovernorPartyRows(section) {
+function renderGovernorPartyRows(section, nominees = {}) {
   if (section.error) {
     return `<p class="primary-popover__empty">Could not load market data</p>`;
   }
@@ -441,22 +501,24 @@ function renderGovernorPartyRows(section) {
 
   return `<ul class="primary-popover__candidates">${parties
     .map((party) => {
-      const label = GOVERNOR_PARTY_LABELS[party] || party;
+      const partyLabel = GOVERNOR_PARTY_LABELS[party] || party;
+      const nominee = nominees[party];
+      const displayName = nominee ? formatCandidateName(nominee) : partyLabel;
       const pct = formatPercent(section.parties[party]);
       return `<li>
-        <span class="primary-popover__name primary-popover__party-name primary-popover__party-name--${partySlug(label)}">${label}</span>
+        <span class="primary-popover__name primary-popover__party-name primary-popover__party-name--${partySlug(partyLabel)}">${displayName}</span>
         <span class="primary-popover__pct">${pct}</span>
       </li>`;
     })
     .join("")}</ul>`;
 }
 
-function renderGovernorBody(section) {
+function renderGovernorBody(section, nominees = {}) {
   return `
     <p class="primary-popover__type">
       <span class="primary-popover__type-label">Governor</span>
     </p>
-    ${renderGovernorPartyRows(section)}`;
+    ${renderGovernorPartyRows(section, nominees)}`;
 }
 
 function renderGovernorCandidateBody(section) {
@@ -473,9 +535,39 @@ function usesGovernorCandidateOdds(info) {
   return info.odds_format === "candidates";
 }
 
+async function resolveGovernorNominees(info, parties) {
+  const nominees = {};
+  const incumbents = info.incumbents || {};
+
+  await Promise.all(
+    parties.map(async (party) => {
+      const slug = info.nominee_slugs?.[party];
+      const incumbentSurname = incumbents[party] ?? null;
+
+      if (slug) {
+        try {
+          const nominee = await fetchNomineeSurname(slug, incumbentSurname);
+          if (nominee) {
+            nominees[party] = nominee;
+            return;
+          }
+        } catch {
+          // Fall through to incumbent-only fallback.
+        }
+      }
+
+      if (incumbentSurname) {
+        nominees[party] = { name: incumbentSurname, incumbent: true };
+      }
+    })
+  );
+
+  return nominees;
+}
+
 async function loadGovernorOdds(info) {
   if (!info.polymarket_slug) {
-    return { format: "party", section: { parties: {} } };
+    return { format: "party", section: { parties: {} }, nominees: {} };
   }
 
   if (usesGovernorCandidateOdds(info)) {
@@ -491,7 +583,8 @@ async function loadGovernorOdds(info) {
     const section = await fetchGovernorOdds(info.polymarket_slug);
     const parties = GOVERNOR_PARTY_ORDER.filter((party) => section.parties?.[party] != null);
     if (parties.length) {
-      return { format: "party", section };
+      const nominees = await resolveGovernorNominees(info, parties);
+      return { format: "party", section, nominees };
     }
 
     const candidateSection = await fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null);
@@ -499,9 +592,9 @@ async function loadGovernorOdds(info) {
       return { format: "candidates", section: candidateSection };
     }
 
-    return { format: "party", section };
+    return { format: "party", section, nominees: {} };
   } catch {
-    return { format: "party", section: { parties: {}, error: true } };
+    return { format: "party", section: { parties: {}, error: true }, nominees: {} };
   }
 }
 
@@ -612,12 +705,41 @@ async function showGovernorPopover(trigger) {
   popover.innerHTML = `<p class="primary-popover__loading">Loading…</p>`;
   positionPopover(trigger);
 
-  const { format, section } = await loadGovernorOdds(info);
+  const { format, section, nominees = {} } = await loadGovernorOdds(info);
 
   if (activeTrigger !== trigger) return;
 
   popover.innerHTML =
-    format === "candidates" ? renderGovernorCandidateBody(section) : renderGovernorBody(section);
+    format === "candidates" ? renderGovernorCandidateBody(section) : renderGovernorBody(section, nominees);
+  positionPopover(trigger);
+}
+
+async function showMayoralPopover(trigger) {
+  const cityCode = trigger.dataset.mayoral;
+  const electionDate = trigger.dataset.primaryDate;
+  const info = getMayoralInfo(cityCode, electionDate);
+  if (!info) return;
+
+  const popover = ensurePopover();
+  activeTrigger = trigger;
+  trigger.setAttribute("aria-expanded", "true");
+
+  popover.hidden = false;
+  popover.innerHTML = `<p class="primary-popover__loading">Loading…</p>`;
+  positionPopover(trigger);
+
+  let section = { candidates: [] };
+  if (info.polymarket_slug) {
+    try {
+      section = await fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null);
+    } catch {
+      section = { candidates: [], error: true };
+    }
+  }
+
+  if (activeTrigger !== trigger) return;
+
+  popover.innerHTML = renderPresidentialBody(info, section);
   positionPopover(trigger);
 }
 
@@ -674,6 +796,10 @@ async function showPopover(trigger) {
 
   if (trigger.dataset.governor) {
     return showGovernorPopover(trigger);
+  }
+
+  if (trigger.dataset.mayoral) {
+    return showMayoralPopover(trigger);
   }
 
   if (trigger.dataset.deState) {
@@ -772,13 +898,17 @@ function bindPopoverEvents(root) {
   window.addEventListener("scroll", hidePopover, true);
 }
 
-export function renderInteractiveOfficeTag(label, stateCode, electionDate, countryCode = null) {
+export function renderInteractiveOfficeTag(label, stateCode, electionDate, countryCode = null, cityCode = null) {
   if (isPresidentialLabel(label)) {
     const presidential = getPresidentialInfo(countryCode, electionDate);
     if (presidential) {
       return `<button type="button" class="office-tag office-tag--interactive" data-presidential="${countryCode}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
     }
     return `<span class="office-tag">${label}</span>`;
+  }
+
+  if (isMayorLabel(label) && getMayoralInfo(cityCode, electionDate)) {
+    return `<button type="button" class="office-tag office-tag--interactive" data-mayoral="${cityCode}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
   }
 
   if (isGovernorLabel(label) && getGovernorInfo(stateCode, electionDate)) {
@@ -813,11 +943,22 @@ function prefetchGovernorOddsForInfo(info) {
   }
 
   prefetchPromise(
-    fetchGovernorOdds(info.polymarket_slug).then((section) => {
+    fetchGovernorOdds(info.polymarket_slug).then(async (section) => {
       const parties = GOVERNOR_PARTY_ORDER.filter((party) => section.parties?.[party] != null);
-      if (!parties.length) {
-        prefetchPromise(fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null));
+      if (parties.length) {
+        await Promise.all(
+          parties.map(async (party) => {
+            const slug = info.nominee_slugs?.[party];
+            const incumbentSurname = info.incumbents?.[party] ?? null;
+            if (slug) {
+              prefetchPromise(fetchNomineeSurname(slug, incumbentSurname));
+            }
+          })
+        );
+        return;
       }
+
+      prefetchPromise(fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null));
     })
   );
 }
@@ -853,6 +994,12 @@ export function prefetchOdds() {
   for (const info of Object.values(deStateInfo)) {
     if (info.polymarket_slug) {
       prefetchPromise(fetchPolymarketPartyOdds(info.polymarket_slug, MIN_DE_STATE_POLYMARKET_PCT));
+    }
+  }
+
+  for (const info of Object.values(mayoralInfo)) {
+    if (info.polymarket_slug) {
+      prefetchPromise(fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null));
     }
   }
 }
