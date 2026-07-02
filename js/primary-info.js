@@ -1,4 +1,7 @@
 const POLYMARKET_API = "https://gamma-api.polymarket.com/events";
+const MIN_POLYMARKET_PCT = 3;
+
+const NAME_SUFFIXES = new Set(["jr", "jr.", "sr", "sr.", "ii", "iii", "iv"]);
 
 const PRIMARY_TYPE_LABELS = {
   open: "Open primary",
@@ -50,11 +53,26 @@ function parsePrimaryKey(key) {
   return { stateCode, office };
 }
 
+function surname(name) {
+  const parts = name.trim().split(/\s+/);
+  if (!parts.length) return name;
+
+  const last = parts[parts.length - 1].replace(/\./g, "").toLowerCase();
+  if (NAME_SUFFIXES.has(last) && parts.length > 1) {
+    return parts[parts.length - 2];
+  }
+
+  return parts[parts.length - 1];
+}
+
 function formatPercent(value) {
-  if (value >= 10) return `${Math.round(value)}%`;
-  if (value >= 1) return `${value.toFixed(1)}%`;
-  if (value >= 0.1) return `${value.toFixed(1)}%`;
-  return "<0.1%";
+  return `${Math.round(value)}%`;
+}
+
+function partySlug(party) {
+  if (party === "Republican") return "republican";
+  if (party === "Democratic") return "democratic";
+  return party.toLowerCase().replace(/\s+/g, "-");
 }
 
 function parseOutcomePrice(outcomePrices) {
@@ -82,33 +100,37 @@ async function fetchPolymarketOdds(slug) {
         const pct = parseOutcomePrice(market.outcomePrices);
         if (!name || pct == null || name === "Other") return null;
         if (/^Candidate [A-Z]$/i.test(name)) return null;
-        return { name, pct };
+        return { name: surname(name), pct };
       })
       .filter(Boolean)
-      .filter((c) => c.pct >= 0.05)
+      .filter((c) => c.pct > MIN_POLYMARKET_PCT)
       .sort((a, b) => b.pct - a.pct);
 
-    return { source: "Polymarket", candidates };
+    return { source: "Polymarket", candidates, hasMarket: true };
   })();
 
   oddsCache.set(slug, promise);
   return promise;
 }
 
-async function loadPartySection(party, config) {
+async function loadPartySection(config) {
   if (config.polymarket_slug) {
     try {
       return await fetchPolymarketOdds(config.polymarket_slug);
     } catch {
-      return { source: "Polymarket", candidates: [], error: true };
+      return { source: "Polymarket", candidates: [], error: true, hasMarket: true };
     }
   }
 
-  if (config.candidates?.length) {
-    return { source: null, candidates: config.candidates };
+  if (config.incumbent) {
+    return {
+      source: null,
+      candidates: [{ name: config.incumbent }],
+      hasMarket: false,
+    };
   }
 
-  return { source: null, candidates: [] };
+  return { source: null, candidates: [], hasMarket: false };
 }
 
 function renderCandidateRows(section) {
@@ -117,7 +139,7 @@ function renderCandidateRows(section) {
   }
 
   if (!section.candidates.length) {
-    return `<p class="primary-popover__empty">No market data yet</p>`;
+    return "";
   }
 
   return `<ul class="primary-popover__candidates">${section.candidates
@@ -125,9 +147,7 @@ function renderCandidateRows(section) {
       const pct =
         candidate.pct != null
           ? `<span class="primary-popover__pct">${formatPercent(candidate.pct)}</span>`
-          : candidate.note
-            ? `<span class="primary-popover__note">${candidate.note}</span>`
-            : "";
+          : "";
       return `<li><span class="primary-popover__name">${candidate.name}</span>${pct}</li>`;
     })
     .join("")}</ul>`;
@@ -145,19 +165,24 @@ function renderPopoverBody(info, partySections) {
       : info.primary_type_note || "";
 
   const partyBlocks = Object.entries(partySections)
+    .filter(([, section]) => section.candidates.length || section.error)
     .map(([party, section]) => {
+      const candidateRows = renderCandidateRows(section);
+      if (!candidateRows && !section.error) return "";
+
       const source = section.source
         ? `<span class="primary-popover__source">via ${section.source}</span>`
         : "";
       return `
         <div class="primary-popover__party">
           <div class="primary-popover__party-head">
-            <span class="primary-popover__party-name">${party}</span>
+            <span class="primary-popover__party-name primary-popover__party-name--${partySlug(party)}">${party}</span>
             ${source}
           </div>
-          ${renderCandidateRows(section)}
+          ${candidateRows}
         </div>`;
     })
+    .filter(Boolean)
     .join("");
 
   return `
@@ -218,7 +243,7 @@ async function showPopover(trigger, key) {
 
   await Promise.all(
     partyEntries.map(async ([party, config]) => {
-      partySections[party] = await loadPartySection(party, config);
+      partySections[party] = await loadPartySection(config);
     })
   );
 

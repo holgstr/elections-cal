@@ -307,7 +307,14 @@ body::before {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--muted);
+}
+
+.primary-popover__party-name--republican {
+  color: #e87070;
+}
+
+.primary-popover__party-name--democratic {
+  color: #6ba8e8;
 }
 
 .primary-popover__source {

@@ -1,5 +1,5 @@
 {
-  "_comment": "Primary type and prediction-market links for US state primaries. Odds are fetched live from Polymarket when available.",
+  "_comment": "Primary type and prediction-market links for US state primaries. Display rules: docs/events.md#primary-info-popover",
   "AZ": {
     "Governor": {
       "primary_format": "party",
@@ -11,9 +11,7 @@
           "polymarket_slug": "arizona-governor-republican-primary-winner"
         },
         "Democratic": {
-          "candidates": [
-            { "name": "Katie Hobbs", "note": "Incumbent" }
-          ]
+          "incumbent": "Hobbs"
         }
       }
     }
