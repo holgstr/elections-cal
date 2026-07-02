@@ -1059,78 +1059,6 @@
     "source": "aggregated"
   },
   {
-    "date": "2026-09-20",
-    "date_precision": "exact",
-    "country": "Russia",
-    "country_code": "RU",
-    "state": null,
-    "state_code": null,
-    "title": "Legislative",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "brics"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-09-27",
-    "date_precision": "exact",
-    "country": "France",
-    "country_code": "FR",
-    "state": null,
-    "state_code": null,
-    "title": "Senate",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-10-01",
-    "date_precision": "estimated",
-    "country": "Czech Republic",
-    "country_code": "CZ",
-    "state": null,
-    "state_code": null,
-    "title": "Senate",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2026-10-03",
-    "date_precision": "exact",
-    "country": "Latvia",
-    "country_code": "LV",
-    "state": null,
-    "state_code": null,
-    "title": "Parliamentary",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
     "date": "2026-10-04",
     "date_precision": "exact",
     "country": "Bosnia and Herzegovina",
@@ -1576,114 +1504,6 @@
     "source": "curated"
   },
   {
-    "date": "2027-01-01",
-    "date_precision": "estimated",
-    "country": "Albania",
-    "country_code": "AL",
-    "state": null,
-    "state_code": null,
-    "title": "Presidential",
-    "type": "presidential",
-    "level": "federal",
-    "groups": [
-      "europe"
-    ],
-    "offices": [
-      "President"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2027-01-01",
-    "date_precision": "estimated",
-    "country": "El Salvador",
-    "country_code": "SV",
-    "state": null,
-    "state_code": null,
-    "title": "Presidential",
-    "type": "presidential",
-    "level": "federal",
-    "groups": [
-      "major"
-    ],
-    "offices": [
-      "President"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2027-01-01",
-    "date_precision": "estimated",
-    "country": "Nicaragua",
-    "country_code": "NI",
-    "state": null,
-    "state_code": null,
-    "title": "Presidential",
-    "type": "presidential",
-    "level": "federal",
-    "groups": [
-      "major"
-    ],
-    "offices": [
-      "President"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2027-01-01",
-    "date_precision": "estimated",
-    "country": "Nigeria",
-    "country_code": "NG",
-    "state": null,
-    "state_code": null,
-    "title": "General",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "major"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2027-01-01",
-    "date_precision": "estimated",
-    "country": "Slovakia",
-    "country_code": "SK",
-    "state": null,
-    "state_code": null,
-    "title": "Parliamentary",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "europe"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2027-02-28",
-    "date_precision": "exact",
-    "country": "El Salvador",
-    "country_code": "SV",
-    "state": null,
-    "state_code": null,
-    "title": "Legislative",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "major"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
     "date": "2027-03-07",
     "date_precision": "exact",
     "country": "Estonia",
@@ -1730,24 +1550,6 @@
       "Eduskunta"
     ],
     "source": "curated"
-  },
-  {
-    "date": "2027-04-18",
-    "date_precision": "exact",
-    "country": "France",
-    "country_code": "FR",
-    "state": null,
-    "state_code": null,
-    "title": "Presidential",
-    "type": "presidential",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "President"
-    ],
-    "source": "wikidata"
   },
   {
     "date": "2027-04-18",
@@ -1819,42 +1621,6 @@
       "Landtag"
     ],
     "source": "curated"
-  },
-  {
-    "date": "2027-05-01",
-    "date_precision": "estimated",
-    "country": "India",
-    "country_code": "IN",
-    "state": null,
-    "state_code": null,
-    "title": "Manipur Legislative Assembly",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "brics"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2027-05-02",
-    "date_precision": "exact",
-    "country": "France",
-    "country_code": "FR",
-    "state": null,
-    "state_code": null,
-    "title": "Presidential",
-    "type": "presidential",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "President"
-    ],
-    "source": "wikidata"
   },
   {
     "date": "2027-05-30",
