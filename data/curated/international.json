@@ -97,7 +97,7 @@
     "level": "federal",
     "groups": ["oecd"],
     "offices": ["Knesset"],
-    "notes": "Snap election date may shift"
+    "comment": "snap_election"
   },
   {
     "date": "2026-11-07",
@@ -108,8 +108,7 @@
     "type": "legislative",
     "level": "federal",
     "groups": ["oecd"],
-    "offices": ["Parliament"],
-    "notes": "Expected late 2026; exact date not yet confirmed"
+    "offices": ["Parliament"]
   },
   {
     "date": "2027-03-07",

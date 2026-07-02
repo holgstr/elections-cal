@@ -101,7 +101,6 @@
     "type": "legislative",
     "level": "state",
     "groups": ["oecd"],
-    "offices": ["Landtag"],
-    "notes": "Expected autumn 2027; exact date not yet proclaimed"
+    "offices": ["Landtag"]
   }
 ]
