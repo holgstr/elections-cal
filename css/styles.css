@@ -399,6 +399,11 @@ body::before {
   white-space: nowrap;
 }
 
+.primary-popover__pct--plain {
+  font-weight: inherit;
+  color: var(--text);
+}
+
 .primary-popover__candidates .primary-popover__note {
   font-style: italic;
 }

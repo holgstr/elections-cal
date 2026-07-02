@@ -555,10 +555,12 @@ function renderGovernorPartyRows(section, nominees = {}) {
         <div class="primary-popover__party">
           <div class="primary-popover__party-head">
             <span class="primary-popover__party-name primary-popover__party-name--${partySlug(partyLabel)}">${partyLabel}</span>
-            <span class="primary-popover__pct">${pct}</span>
           </div>
           <ul class="primary-popover__candidates">
-            <li><span class="primary-popover__name">${candidateName}</span></li>
+            <li>
+              <span class="primary-popover__name">${candidateName}</span>
+              <span class="primary-popover__pct primary-popover__pct--plain">${pct}</span>
+            </li>
           </ul>
         </div>`;
     })
