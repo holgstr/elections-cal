@@ -6,24 +6,23 @@ Every election card uses three distinct layers. **Location**, **event title**, a
 
 | Layer | DOM | Question | Example |
 |-------|-----|----------|---------|
-| **Location / title** | `.card-title` | Where is the election? | `Sweden` · `Kansas Governor/Senate primaries` · `Berlin Landtag` |
+| **Location / title** | `.card-title` | Where is the election? | `Sweden` · `Kansas` · `Berlin` · `US State primaries` |
 | **Contest detail** | `.card-labels` or `.card-sections` | What is being elected? | `Riksdag` · `Governor Primary · Senate Primary` |
 
 Contest labels use the same blue pill styling as office tags (`.office-tag`).
 
 ### Title rules
 
-The title is always **concise**. It names the place (or US primary day), never a long list of contests.
+The title is always **concise**. It names the place only — contest names belong in labels or sections.
 
 | Case | Title pattern | Example |
 |------|---------------|---------|
-| National / federal (single contest) | `{Country}` | `Sweden` |
-| National / federal (multi-contest day) | `{Country}` | `Bosnia and Herzegovina` · `Brazil` |
-| US merged primaries | `{State} {Office}/{Office} primaries` | `Kansas Governor/Senate primaries` |
-| US single primary / runoff | `{State} {Party} {Office} Primary` | `Arizona Democratic Governor Primary` |
-| US midterms | `{Country} Midterms` | `United States Midterms` |
-| German state (standalone) | `{State} {Body}` | `Berlin Landtag` |
-| German state (combined day) | `{State} {Body} · …` | `Berlin Abgeordnetenhaus · Mecklenburg-Vorpommern Landtag` |
+| National / federal (single or multi-contest day) | `{Country}` | `Sweden` · `Bosnia and Herzegovina` · `Brazil` |
+| US state (single state on a date) | `{State}` | `Kansas` · `Arizona` |
+| US multi-state same day (state-level) | `US State primaries` | `US State primaries` |
+| German state (standalone) | `{State}` | `Berlin` |
+| German multi-state same day | `German State primaries` | `German State primaries` |
+| US midterms | `{Country}` | `United States` |
 
 **Never:**
 
@@ -34,8 +33,8 @@ The title is always **concise**. It names the place (or US primary day), never a
 
 ### Contest detail rules
 
-- **Labels** (`.card-labels`): blue pills listing specific races when several contests share one location and date (merged US primaries, Bosnia general election day, Brazil election day, standalone federal elections).
-- **Sections** (`.card-sections`): structured breakdown when contests span levels or many states (US midterms, German combined state election day).
+- **Labels** (`.card-labels`): blue pills listing specific races when several contests share one location and date (merged US primaries in a single state, Bosnia general election day, Brazil election day, standalone federal elections).
+- **Sections** (`.card-sections`): structured breakdown when contests span levels or many states (US midterms, multi-state US primary day, German combined state election day).
 - **Office tags** (`.card-meta`): fallback for simple standalone cards with a single contest when the title does not already name the body.
 
 ### Date display
@@ -74,11 +73,13 @@ The `title` field in JSON describes the **contest**, never the location.
 |----------|-------|-----------------|
 | Single federal election | `Sweden` | `Riksdag` |
 | Single federal election (generic) | `Latvia` | `Parliamentary` |
-| Merged state primaries | `Kansas Governor/Senate primaries` | `Governor Primary` · `Senate Primary` |
-| US midterms (combined) | `United States Midterms` | sections: Federal + State |
+| Merged state primaries (one state) | `Kansas` | `Governor Primary` · `Senate Primary` |
+| US multi-state primary day | `US State primaries` | sections: states + primary labels |
+| US midterms (combined) | `United States` | sections: Federal + State |
 | Brazil election day (combined) | `Brazil` | `National Congress` · `Presidential — Round 1` |
 | Bosnia election day (combined) | `Bosnia and Herzegovina` | `Federation Parliament` · `House of Peoples` · … |
-| German Landtag | `Berlin Landtag` | office tags (if needed) |
+| German Landtag (standalone) | `Berlin` | `Landtag` |
+| German multi-state day | `German State primaries` | sections: states + bodies |
 
 ## Validation
 
