@@ -250,8 +250,6 @@ function isFinePointer() {
 }
 
 function bindPopoverEvents(root) {
-  touchMode = !isFinePointer();
-
   root.addEventListener("click", (event) => {
     const trigger = event.target.closest(".office-tag--interactive");
     if (trigger) {
