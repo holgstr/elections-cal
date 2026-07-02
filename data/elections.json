@@ -1059,6 +1059,105 @@
     "source": "aggregated"
   },
   {
+    "date": "2026-09-20",
+    "date_precision": "exact",
+    "country": "Russia",
+    "country_code": "RU",
+    "state": null,
+    "state_code": null,
+    "title": "Russian legislative",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "brics"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-10-01",
+    "date_precision": "estimated",
+    "country": "Czech Republic",
+    "country_code": "CZ",
+    "state": null,
+    "state_code": null,
+    "title": "Czech Senate",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-10-03",
+    "date_precision": "exact",
+    "country": "Latvia",
+    "country_code": "LV",
+    "state": null,
+    "state_code": null,
+    "title": "Latvian parliamentary",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2026-10-04",
+    "date_precision": "exact",
+    "country": "Bosnia and Herzegovina",
+    "country_code": "BA",
+    "state": null,
+    "state_code": null,
+    "title": "General",
+    "type": "combined",
+    "level": "federal",
+    "groups": [
+      "europe"
+    ],
+    "sections": [
+      {
+        "label": "Bosnian general",
+        "level": "federal",
+        "offices": [
+          "Parliament"
+        ]
+      },
+      {
+        "label": "Bosnian parliamentary",
+        "level": "federal",
+        "offices": [
+          "Parliament"
+        ]
+      },
+      {
+        "label": "Federation of Bosnia and Herzegovina general",
+        "level": "federal",
+        "offices": [
+          "Parliament"
+        ]
+      },
+      {
+        "label": "Republika Srpska general",
+        "level": "federal",
+        "offices": [
+          "Parliament"
+        ]
+      }
+    ],
+    "source": "aggregated"
+  },
+  {
     "date": "2026-10-04",
     "date_precision": "exact",
     "country": "Brazil",
@@ -1094,16 +1193,31 @@
     "date_precision": "exact",
     "country": "Brazil",
     "country_code": "BR",
-    "title": "Presidential — Round 2",
-    "type": "presidential",
+    "state": null,
+    "state_code": null,
+    "title": "General",
+    "type": "combined",
     "level": "federal",
     "groups": [
       "brics"
     ],
-    "offices": [
-      "President"
+    "sections": [
+      {
+        "label": "Brazilian general",
+        "level": "federal",
+        "offices": [
+          "Parliament"
+        ]
+      },
+      {
+        "label": "Presidential — Round 2",
+        "level": "federal",
+        "offices": [
+          "President"
+        ]
+      }
     ],
-    "source": "curated"
+    "source": "aggregated"
   },
   {
     "date": "2026-10-27",
@@ -1459,6 +1573,78 @@
     "source": "curated"
   },
   {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "Albania",
+    "country_code": "AL",
+    "state": null,
+    "state_code": null,
+    "title": "Albanian presidential",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "europe"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "El Salvador",
+    "country_code": "SV",
+    "state": null,
+    "state_code": null,
+    "title": "Salvadoran presidential",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "Slovakia",
+    "country_code": "SK",
+    "state": null,
+    "state_code": null,
+    "title": "Next Slovak parliamentary",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "europe"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-02-28",
+    "date_precision": "exact",
+    "country": "El Salvador",
+    "country_code": "SV",
+    "state": null,
+    "state_code": null,
+    "title": "Salvadoran legislative",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
     "date": "2027-03-07",
     "date_precision": "exact",
     "country": "Estonia",
@@ -1576,6 +1762,24 @@
       "Landtag"
     ],
     "source": "curated"
+  },
+  {
+    "date": "2027-05-01",
+    "date_precision": "estimated",
+    "country": "India",
+    "country_code": "IN",
+    "state": null,
+    "state_code": null,
+    "title": "Next Manipur Legislative Assembly",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "brics"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
   },
   {
     "date": "2027-05-30",
