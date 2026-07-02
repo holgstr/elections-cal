@@ -13,6 +13,7 @@ MARKETS_PATH = ROOT / "data" / "config" / "us_primary_markets.json"
 OUTPUT_PATH = ROOT / "data" / "curated" / "us_primary_info.json"
 
 WINDOW_MONTHS = 3
+COMBINED_BALLOT_FORMATS = frozenset({"top-two", "top-four"})
 
 
 def load_json(path: Path) -> dict:
@@ -94,7 +95,7 @@ def build_entry(
     }
 
     office_slugs = slugs.get(state_code, {}).get(office, {})
-    if entry["primary_format"] == "top-four":
+    if entry["primary_format"] in COMBINED_BALLOT_FORMATS:
         if "_slug" in office_slugs:
             entry["polymarket_slug"] = office_slugs["_slug"]
         return entry

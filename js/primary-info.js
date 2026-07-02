@@ -17,6 +17,8 @@ const PRIMARY_TYPE_LABELS = {
   party: "Party primaries",
 };
 
+const COMBINED_BALLOT_FORMATS = new Set(["top-two", "top-four"]);
+
 const PRESIDENTIAL_LABEL_RE = /^President(?:\s+—\s+Round\s+\d+)?$/i;
 
 let primaryInfo = {};
@@ -393,7 +395,11 @@ function renderPopoverBody(info, partySections) {
     <div class="primary-popover__parties">${partyBlocks}</div>`;
 }
 
-function renderTopFourBody(info, section) {
+function isCombinedBallotPrimary(info) {
+  return COMBINED_BALLOT_FORMATS.has(info.primary_format);
+}
+
+function renderCombinedBallotBody(info, section) {
   const candidates = renderCandidateRows(section);
 
   return `
@@ -629,7 +635,7 @@ async function showPrimaryPopover(trigger, key) {
   popover.innerHTML = `<p class="primary-popover__loading">Loading…</p>`;
   positionPopover(trigger);
 
-  if (info.primary_format === "top-four") {
+  if (isCombinedBallotPrimary(info)) {
     let section = { candidates: [] };
     if (info.polymarket_slug) {
       try {
@@ -641,7 +647,7 @@ async function showPrimaryPopover(trigger, key) {
 
     if (activeTrigger !== trigger) return;
 
-    popover.innerHTML = renderTopFourBody(info, section);
+    popover.innerHTML = renderCombinedBallotBody(info, section);
     positionPopover(trigger);
     return;
   }
@@ -823,7 +829,7 @@ export function prefetchOdds() {
 
   for (const offices of Object.values(primaryInfo)) {
     for (const info of Object.values(offices)) {
-      if (info.primary_format === "top-four") {
+      if (isCombinedBallotPrimary(info)) {
         if (info.polymarket_slug) {
           prefetchPromise(fetchPolymarketOdds(info.polymarket_slug));
         }

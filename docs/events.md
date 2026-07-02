@@ -131,7 +131,7 @@ python3 scripts/generate_us_primary_info.py
 | Polymarket odds | Show only candidates above **3%**; display rounded percentage |
 | No market | If no `polymarket_slug`, list the party `incumbent` surname only (no percentage) when the incumbent is running |
 | Empty party | Omit a party block when there are no candidates to show and no load error |
-| Top-four states | Alaska uses a single candidate list (no party headers) from one Polymarket market when linked |
+| Combined-ballot primaries | Top-two (California) and top-four (Alaska) use a single candidate list (no party headers) from one Polymarket market when linked |
 | Rolling window | Popovers only appear for primaries whose date falls within the next 3 months |
 
 ## Presidential info popover
@@ -201,7 +201,7 @@ python3 scripts/generate_us_governor_info.py
 
 ### Edge cases (not yet handled automatically)
 
-- **Open / top-two primaries** — single ballot; Alaska uses top-four (handled separately)
+- **Combined-ballot primaries** — top-two (California) and top-four (Alaska) use a single candidate list instead of party subcategories
 - **Runoffs** — same display rules apply; link a runoff market slug if one exists
 - **Open seat** — no incumbent to fall back to; party block is omitted without a market
 - **Retiring incumbent** — do not set `incumbent`; omit the party block if there is no market
