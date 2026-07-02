@@ -234,4 +234,4 @@ python3 scripts/generate_mayoral_info.py
 | No market | Label stays non-interactive (no popover) |
 | Rolling window | Popovers only appear for elections whose date falls within the next 12 months |
 
-Card titles use the **city** name (for example `Manchester`); the UK flag is shown.
+Card titles use the **country** name (for example `United Kingdom`); the UK flag is shown. The city is stored in election data for market lookup and search.

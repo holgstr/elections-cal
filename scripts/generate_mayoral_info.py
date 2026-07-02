@@ -30,10 +30,10 @@ def window_end(today: date) -> date:
     return today + timedelta(days=WINDOW_MONTHS * 30)
 
 
-def mayoral_cities_in_window(today: date | None = None) -> set[str]:
+def mayoral_market_keys_in_window(today: date | None = None) -> set[str]:
     today = today or date.today()
     end = window_end(today)
-    cities: set[str] = set()
+    keys: set[str] = set()
 
     for item in load_json(ELECTIONS_PATH):
         if item.get("title") != "Mayor":
@@ -42,16 +42,19 @@ def mayoral_cities_in_window(today: date | None = None) -> set[str]:
         if election_date < today or election_date > end:
             continue
         city_code = item.get("city_code")
+        country_code = item.get("country_code")
         if city_code:
-            cities.add(city_code)
+            keys.add(city_code)
+        if country_code:
+            keys.add(country_code)
 
-    return cities
+    return keys
 
 
 def main() -> None:
     meta = load_json(MARKETS_PATH)
     markets = meta.get("markets", {})
-    needed = sorted(mayoral_cities_in_window())
+    needed = sorted(mayoral_market_keys_in_window())
 
     output: dict = {
         "_comment": (
@@ -67,7 +70,7 @@ def main() -> None:
 
     save_json(OUTPUT_PATH, output)
     print(
-        f"Wrote {len([k for k in output if not k.startswith('_')])} city entries "
+        f"Wrote {len([k for k in output if not k.startswith('_')])} market entries "
         f"to {OUTPUT_PATH.relative_to(ROOT)}"
     )
 
