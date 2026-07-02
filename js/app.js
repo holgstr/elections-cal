@@ -1,11 +1,15 @@
 import { flagUrl, flagAlt, stateFlagUrl, stateFlagAlt } from "./flags.js";
-import {
+
+const v = globalThis.__ECAL_V__ ?? "4";
+
+const { fetchJson } = await import(`./fetch-json.js?v=${v}`);
+const {
   loadPrimaryInfo,
   initPrimaryPopovers,
   renderInteractiveOfficeTag,
   labelToOffice,
   isPresidentialLabel,
-} from "./primary-info.js?v=3";
+} = await import(`./primary-info.js?v=${v}`);
 
 const GROUP_LABELS = {
   all: "All",
@@ -75,17 +79,11 @@ let activeGroup = "all";
 let searchQuery = "";
 let hideStates = false;
 
-async function fetchJson(path) {
-  const res = await fetch(path, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Failed to load ${path}`);
-  return res.json();
-}
-
-async function init() {
+async function loadData() {
   const [meta, elections] = await Promise.all([
     fetchJson("data/meta.json"),
     fetchJson("data/elections.json"),
-    loadPrimaryInfo(),
+    loadPrimaryInfo(fetchJson),
   ]);
   allElections = elections;
 
@@ -93,11 +91,20 @@ async function init() {
   if (footer && meta.generated_at) {
     footer.textContent = `Updated ${meta.generated_at} · ${meta.count} elections in window`;
   }
+}
 
+async function init() {
+  await loadData();
   render();
   bindEvents();
   initPrimaryPopovers();
 }
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    loadData().then(() => render());
+  }
+});
 
 function bindEvents() {
   document.getElementById("search").addEventListener("input", (e) => {

@@ -40,6 +40,18 @@
     </footer>
   </div>
 
-  <script src="js/app.js?v=3" type="module"></script>
+  <script type="module">
+    const APP_REV = "4";
+    let v = APP_REV;
+    try {
+      const res = await fetch(`data/meta.json?_=${Date.now()}`, { cache: "no-store" });
+      if (res.ok) {
+        const meta = await res.json();
+        if (meta.generated_at) v = `${APP_REV}.${meta.generated_at}`;
+      }
+    } catch {}
+    globalThis.__ECAL_V__ = v;
+    await import(`./js/app.js?v=${v}`);
+  </script>
 </body>
 </html>

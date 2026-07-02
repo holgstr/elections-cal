@@ -23,13 +23,11 @@ let popoverEl = null;
 let activeTrigger = null;
 let hoverCloseTimer = null;
 
-export async function loadPrimaryInfo() {
+export async function loadPrimaryInfo(fetchJson) {
+  oddsCache.clear();
+
   try {
-    const res = await fetch("data/curated/us_primary_info.json", {
-      cache: "no-store",
-    });
-    if (!res.ok) return;
-    const data = await res.json();
+    const data = await fetchJson("data/curated/us_primary_info.json");
     if (data._window_months) {
       primaryWindowMonths = data._window_months;
     }
@@ -41,11 +39,7 @@ export async function loadPrimaryInfo() {
   }
 
   try {
-    const res = await fetch("data/curated/presidential_info.json", {
-      cache: "no-store",
-    });
-    if (!res.ok) return;
-    const data = await res.json();
+    const data = await fetchJson("data/curated/presidential_info.json");
     if (data._window_months) {
       presidentialWindowMonths = data._window_months;
     }
