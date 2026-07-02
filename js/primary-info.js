@@ -244,9 +244,9 @@ function formatPercent(value) {
   return `${Math.round(value)}%`;
 }
 
-function formatOddsSuffix(pct) {
+function formatOddsPct(pct) {
   if (pct == null) return "";
-  return ` <span class="primary-popover__pct">${formatPercent(pct)}</span>`;
+  return `<span class="primary-popover__pct">${formatPercent(pct)}</span>`;
 }
 
 function partySlug(party) {
@@ -444,10 +444,10 @@ function renderCandidateRows(section) {
   }
 
   return `<ul class="primary-popover__candidates">${section.candidates
-    .map(
-      (candidate) =>
-        `<li><span class="primary-popover__name">${formatCandidateName(candidate)}${formatOddsSuffix(candidate.pct)}</span></li>`
-    )
+    .map((candidate) => {
+      const pct = formatOddsPct(candidate.pct);
+      return `<li><span class="primary-popover__name">${formatCandidateName(candidate)}</span>${pct}</li>`;
+    })
     .join("")}</ul>`;
 }
 
@@ -559,7 +559,8 @@ function renderGovernorPartyRows(section, nominees = {}) {
           </div>
           <ul class="primary-popover__candidates">
             <li>
-              <span class="primary-popover__name">${candidateName}${formatOddsSuffix(section.parties[party])}</span>
+              <span class="primary-popover__name">${candidateName}</span>
+              ${formatOddsPct(section.parties[party])}
             </li>
           </ul>
         </div>`;
