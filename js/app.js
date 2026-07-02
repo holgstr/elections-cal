@@ -3,7 +3,7 @@ import {
   loadPrimaryInfo,
   initPrimaryPopovers,
   renderInteractiveOfficeTag,
-} from "./primary-info.js";
+} from "./primary-info.js?v=2";
 
 const GROUP_LABELS = {
   all: "All",
@@ -73,12 +73,24 @@ let activeGroup = "all";
 let searchQuery = "";
 let hideStates = false;
 
+async function fetchJson(path) {
+  const res = await fetch(path, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to load ${path}`);
+  return res.json();
+}
+
 async function init() {
-  const [electionsRes] = await Promise.all([
-    fetch("data/elections.json"),
+  const [meta, elections] = await Promise.all([
+    fetchJson("data/meta.json"),
+    fetchJson("data/elections.json"),
     loadPrimaryInfo(),
   ]);
-  allElections = await electionsRes.json();
+  allElections = elections;
+
+  const footer = document.getElementById("footer-meta");
+  if (footer && meta.generated_at) {
+    footer.textContent = `Updated ${meta.generated_at} · ${meta.count} elections in window`;
+  }
 
   render();
   bindEvents();

@@ -40,17 +40,6 @@
     </footer>
   </div>
 
-  <script src="js/app.js" type="module"></script>
-  <script>
-    fetch("data/meta.json")
-      .then((r) => r.json())
-      .then((meta) => {
-        const el = document.getElementById("footer-meta");
-        if (el && meta.generated_at) {
-          el.textContent = `Updated ${meta.generated_at} · ${meta.count} elections in window`;
-        }
-      })
-      .catch(() => {});
-  </script>
+  <script src="js/app.js?v=2" type="module"></script>
 </body>
 </html>

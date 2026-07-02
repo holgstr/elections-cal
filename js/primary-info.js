@@ -21,7 +21,9 @@ let hoverCloseTimer = null;
 
 export async function loadPrimaryInfo() {
   try {
-    const res = await fetch("data/curated/us_primary_info.json");
+    const res = await fetch("data/curated/us_primary_info.json", {
+      cache: "no-store",
+    });
     if (!res.ok) return;
     const data = await res.json();
     if (data._window_months) {
