@@ -1,5 +1,11 @@
 const POLYMARKET_API = "https://gamma-api.polymarket.com/events";
 const MIN_POLYMARKET_PCT = 3;
+const MIN_DE_STATE_POLYMARKET_PCT = 10;
+const GOVERNOR_PARTY_ORDER = ["Republican", "Democrat"];
+const GOVERNOR_PARTY_LABELS = {
+  Republican: "Republican",
+  Democrat: "Democratic",
+};
 
 const NAME_SUFFIXES = new Set(["jr", "jr.", "sr", "sr.", "ii", "iii", "iv"]);
 
@@ -17,6 +23,10 @@ let primaryInfo = {};
 let primaryWindowMonths = 3;
 let presidentialInfo = {};
 let presidentialWindowMonths = 12;
+let deStateInfo = {};
+let deStateWindowMonths = 12;
+let usGovernorInfo = {};
+let usGovernorWindowMonths = 12;
 const oddsCache = new Map();
 
 let popoverEl = null;
@@ -48,6 +58,30 @@ export async function loadPrimaryInfo(fetchJson) {
     presidentialInfo = data;
   } catch {
     presidentialInfo = {};
+  }
+
+  try {
+    const data = await fetchJson("data/curated/de_state_info.json");
+    if (data._window_months) {
+      deStateWindowMonths = data._window_months;
+    }
+    delete data._comment;
+    delete data._window_months;
+    deStateInfo = data;
+  } catch {
+    deStateInfo = {};
+  }
+
+  try {
+    const data = await fetchJson("data/curated/us_governor_info.json");
+    if (data._window_months) {
+      usGovernorWindowMonths = data._window_months;
+    }
+    delete data._comment;
+    delete data._window_months;
+    usGovernorInfo = data;
+  } catch {
+    usGovernorInfo = {};
   }
 }
 
@@ -85,6 +119,33 @@ export function getPresidentialInfo(countryCode, electionDate) {
   if (!countryCode) return null;
   if (!isWithinPresidentialWindow(electionDate)) return null;
   return presidentialInfo[countryCode] ?? null;
+}
+
+function isWithinDeStateWindow(electionDate) {
+  return isWithinWindow(electionDate, deStateWindowMonths);
+}
+
+function isWithinGovernorWindow(electionDate) {
+  return isWithinWindow(electionDate, usGovernorWindowMonths);
+}
+
+export function isGovernorLabel(label) {
+  return label?.trim() === "Governor";
+}
+
+export function getDeStateInfo(stateCode, label, electionDate) {
+  if (!stateCode || !label) return null;
+  if (!isWithinDeStateWindow(electionDate)) return null;
+
+  const info = deStateInfo[stateCode];
+  if (!info || info.label !== label) return null;
+  return info;
+}
+
+export function getGovernorInfo(stateCode, electionDate) {
+  if (!stateCode) return null;
+  if (!isWithinGovernorWindow(electionDate)) return null;
+  return usGovernorInfo[stateCode] ?? null;
 }
 
 export function labelToOffice(label) {
@@ -147,6 +208,15 @@ function formatCandidateName(candidate) {
   return candidate.incumbent ? `${candidate.name} (Inc.)` : candidate.name;
 }
 
+function isPlaceholderMarketName(name) {
+  return (
+    !name ||
+    name === "Other" ||
+    /^Candidate [A-Z]$/i.test(name) ||
+    /^Option [A-Z]$/i.test(name)
+  );
+}
+
 async function fetchPolymarketOdds(slug, incumbentSurname = null) {
   const cacheKey = incumbentSurname ? `${slug}:${incumbentSurname}` : slug;
   if (oddsCache.has(cacheKey)) return oddsCache.get(cacheKey);
@@ -161,8 +231,7 @@ async function fetchPolymarketOdds(slug, incumbentSurname = null) {
       .map((market) => {
         const name = market.groupItemTitle;
         const pct = parseOutcomePrice(market.outcomePrices);
-        if (!name || pct == null || name === "Other") return null;
-        if (/^Candidate [A-Z]$/i.test(name)) return null;
+        if (!name || pct == null || isPlaceholderMarketName(name)) return null;
         const candidateName = surname(name);
         return {
           name: candidateName,
@@ -175,6 +244,59 @@ async function fetchPolymarketOdds(slug, incumbentSurname = null) {
       .sort((a, b) => b.pct - a.pct);
 
     return { candidates, hasMarket: true };
+  })();
+
+  oddsCache.set(cacheKey, promise);
+  return promise;
+}
+
+async function fetchPolymarketPartyOdds(slug, minPct) {
+  const cacheKey = `party:${slug}:${minPct}`;
+  if (oddsCache.has(cacheKey)) return oddsCache.get(cacheKey);
+
+  const promise = (async () => {
+    const res = await fetch(`${POLYMARKET_API}?slug=${encodeURIComponent(slug)}`);
+    if (!res.ok) throw new Error("Polymarket fetch failed");
+    const data = await res.json();
+    const markets = data[0]?.markets || [];
+
+    const candidates = markets
+      .map((market) => {
+        const name = market.groupItemTitle;
+        const pct = parseOutcomePrice(market.outcomePrices);
+        if (!name || pct == null || isPlaceholderMarketName(name)) return null;
+        return { name, pct };
+      })
+      .filter(Boolean)
+      .filter((c) => c.pct > minPct)
+      .sort((a, b) => b.pct - a.pct);
+
+    return { candidates, hasMarket: true };
+  })();
+
+  oddsCache.set(cacheKey, promise);
+  return promise;
+}
+
+async function fetchGovernorOdds(slug) {
+  const cacheKey = `governor:${slug}`;
+  if (oddsCache.has(cacheKey)) return oddsCache.get(cacheKey);
+
+  const promise = (async () => {
+    const res = await fetch(`${POLYMARKET_API}?slug=${encodeURIComponent(slug)}`);
+    if (!res.ok) throw new Error("Polymarket fetch failed");
+    const data = await res.json();
+    const markets = data[0]?.markets || [];
+    const parties = {};
+
+    for (const market of markets) {
+      const party = market.groupItemTitle;
+      const pct = parseOutcomePrice(market.outcomePrices);
+      if (!GOVERNOR_PARTY_ORDER.includes(party) || pct == null) continue;
+      parties[party] = pct;
+    }
+
+    return { parties, hasMarket: true };
   })();
 
   oddsCache.set(cacheKey, promise);
@@ -290,6 +412,47 @@ function renderPresidentialBody(info, section) {
     ${candidates}`;
 }
 
+function renderDeStateBody(info, section) {
+  const label = escapeHtml(info.label || "State election");
+  const candidates = renderCandidateRows(section);
+
+  return `
+    <p class="primary-popover__type">
+      <span class="primary-popover__type-label">${label}</span>
+    </p>
+    ${candidates}`;
+}
+
+function renderGovernorPartyRows(section) {
+  if (section.error) {
+    return `<p class="primary-popover__empty">Could not load market data</p>`;
+  }
+
+  const parties = GOVERNOR_PARTY_ORDER.filter((party) => section.parties?.[party] != null);
+  if (!parties.length) {
+    return "";
+  }
+
+  return `<ul class="primary-popover__candidates">${parties
+    .map((party) => {
+      const label = GOVERNOR_PARTY_LABELS[party] || party;
+      const pct = formatPercent(section.parties[party]);
+      return `<li>
+        <span class="primary-popover__name primary-popover__party-name primary-popover__party-name--${partySlug(label)}">${label}</span>
+        <span class="primary-popover__pct">${pct}</span>
+      </li>`;
+    })
+    .join("")}</ul>`;
+}
+
+function renderGovernorBody(section) {
+  return `
+    <p class="primary-popover__type">
+      <span class="primary-popover__type-label">Governor</span>
+    </p>
+    ${renderGovernorPartyRows(section)}`;
+}
+
 function ensurePopover() {
   if (popoverEl) return popoverEl;
 
@@ -353,6 +516,65 @@ async function showPresidentialPopover(trigger) {
   positionPopover(trigger);
 }
 
+async function showDeStatePopover(trigger) {
+  const stateCode = trigger.dataset.deState;
+  const electionDate = trigger.dataset.primaryDate;
+  const label = trigger.dataset.deStateLabel;
+  const info = getDeStateInfo(stateCode, label, electionDate);
+  if (!info) return;
+
+  const popover = ensurePopover();
+  activeTrigger = trigger;
+  trigger.setAttribute("aria-expanded", "true");
+
+  popover.hidden = false;
+  popover.innerHTML = `<p class="primary-popover__loading">Loading…</p>`;
+  positionPopover(trigger);
+
+  let section = { candidates: [] };
+  if (info.polymarket_slug) {
+    try {
+      section = await fetchPolymarketPartyOdds(info.polymarket_slug, MIN_DE_STATE_POLYMARKET_PCT);
+    } catch {
+      section = { candidates: [], error: true };
+    }
+  }
+
+  if (activeTrigger !== trigger) return;
+
+  popover.innerHTML = renderDeStateBody(info, section);
+  positionPopover(trigger);
+}
+
+async function showGovernorPopover(trigger) {
+  const stateCode = trigger.dataset.governor;
+  const electionDate = trigger.dataset.primaryDate;
+  const info = getGovernorInfo(stateCode, electionDate);
+  if (!info) return;
+
+  const popover = ensurePopover();
+  activeTrigger = trigger;
+  trigger.setAttribute("aria-expanded", "true");
+
+  popover.hidden = false;
+  popover.innerHTML = `<p class="primary-popover__loading">Loading…</p>`;
+  positionPopover(trigger);
+
+  let section = { parties: {} };
+  if (info.polymarket_slug) {
+    try {
+      section = await fetchGovernorOdds(info.polymarket_slug);
+    } catch {
+      section = { parties: {}, error: true };
+    }
+  }
+
+  if (activeTrigger !== trigger) return;
+
+  popover.innerHTML = renderGovernorBody(section);
+  positionPopover(trigger);
+}
+
 async function showPrimaryPopover(trigger, key) {
   const { stateCode, office } = parsePrimaryKey(key);
   const electionDate = trigger.dataset.primaryDate;
@@ -402,6 +624,14 @@ async function showPrimaryPopover(trigger, key) {
 async function showPopover(trigger) {
   if (trigger.dataset.presidential) {
     return showPresidentialPopover(trigger);
+  }
+
+  if (trigger.dataset.governor) {
+    return showGovernorPopover(trigger);
+  }
+
+  if (trigger.dataset.deState) {
+    return showDeStatePopover(trigger);
   }
 
   const key = trigger.dataset.primary;
@@ -503,6 +733,14 @@ export function renderInteractiveOfficeTag(label, stateCode, electionDate, count
       return `<button type="button" class="office-tag office-tag--interactive" data-presidential="${countryCode}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
     }
     return `<span class="office-tag">${label}</span>`;
+  }
+
+  if (isGovernorLabel(label) && getGovernorInfo(stateCode, electionDate)) {
+    return `<button type="button" class="office-tag office-tag--interactive" data-governor="${stateCode}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
+  }
+
+  if (countryCode === "DE" && getDeStateInfo(stateCode, label, electionDate)) {
+    return `<button type="button" class="office-tag office-tag--interactive" data-de-state="${stateCode}" data-de-state-label="${label}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
   }
 
   const office = labelToOffice(label);
