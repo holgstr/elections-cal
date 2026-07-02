@@ -544,18 +544,27 @@ function renderGovernorPartyRows(section, nominees = {}) {
     return "";
   }
 
-  return `<ul class="primary-popover__candidates">${parties
+  const partyBlocks = parties
     .map((party) => {
       const partyLabel = GOVERNOR_PARTY_LABELS[party] || party;
       const nominee = nominees[party];
-      const displayName = nominee ? formatCandidateName(nominee) : partyLabel;
+      const candidateName = nominee ? formatCandidateName(nominee) : "TBD";
       const pct = formatPercent(section.parties[party]);
-      return `<li>
-        <span class="primary-popover__name primary-popover__party-name primary-popover__party-name--${partySlug(partyLabel)}">${displayName}</span>
-        <span class="primary-popover__pct">${pct}</span>
-      </li>`;
+
+      return `
+        <div class="primary-popover__party">
+          <div class="primary-popover__party-head">
+            <span class="primary-popover__party-name primary-popover__party-name--${partySlug(partyLabel)}">${partyLabel}</span>
+            <span class="primary-popover__pct">${pct}</span>
+          </div>
+          <ul class="primary-popover__candidates">
+            <li><span class="primary-popover__name">${candidateName}</span></li>
+          </ul>
+        </div>`;
     })
-    .join("")}</ul>`;
+    .join("");
+
+  return `<div class="primary-popover__parties">${partyBlocks}</div>`;
 }
 
 function renderGovernorBody(section, nominees = {}) {
