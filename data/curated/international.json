@@ -13,6 +13,50 @@
   {
     "date": "2026-10-04",
     "date_precision": "exact",
+    "country": "Bosnia and Herzegovina",
+    "country_code": "BA",
+    "title": "House of Peoples",
+    "type": "legislative",
+    "level": "federal",
+    "groups": ["europe"],
+    "offices": ["House of Peoples"]
+  },
+  {
+    "date": "2026-10-04",
+    "date_precision": "exact",
+    "country": "Bosnia and Herzegovina",
+    "country_code": "BA",
+    "title": "House of Representatives",
+    "type": "legislative",
+    "level": "federal",
+    "groups": ["europe"],
+    "offices": ["House of Representatives"]
+  },
+  {
+    "date": "2026-10-04",
+    "date_precision": "exact",
+    "country": "Bosnia and Herzegovina",
+    "country_code": "BA",
+    "title": "Federation Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": ["europe"],
+    "offices": ["Federation Parliament"]
+  },
+  {
+    "date": "2026-10-04",
+    "date_precision": "exact",
+    "country": "Bosnia and Herzegovina",
+    "country_code": "BA",
+    "title": "Republika Srpska National Assembly",
+    "type": "legislative",
+    "level": "federal",
+    "groups": ["europe"],
+    "offices": ["Republika Srpska National Assembly"]
+  },
+  {
+    "date": "2026-10-04",
+    "date_precision": "exact",
     "country": "Brazil",
     "country_code": "BR",
     "title": "Presidential — Round 1",

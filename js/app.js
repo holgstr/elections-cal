@@ -171,6 +171,24 @@ function stripElectionFromTitle(title) {
   return UMBRELLA_TITLES[stripped.toLowerCase()] || stripped;
 }
 
+function contestNameFromSection(section) {
+  if (section.states?.length) return null;
+
+  const label = stripElectionFromTitle(section.label || "");
+  if (label && label !== "Federal" && label !== "State") return label;
+  return (section.offices || [])[0] || label || null;
+}
+
+function germanStateElectionTitle(election) {
+  return (election.sections || [])
+    .flatMap((section) => section.states || [])
+    .map((state) => {
+      const body = (state.offices || [])[0];
+      return body ? `${state.name} ${body}` : state.name;
+    })
+    .filter(Boolean);
+}
+
 function formatEventTitle(election) {
   const loc = locationPrefix(election);
 
@@ -183,7 +201,40 @@ function formatEventTitle(election) {
     if (body) return `${election.state} ${body}`;
   }
 
+  if (election.title === "Midterms") {
+    return `${loc} Midterms`;
+  }
+
+  if (election.title === "State" && election.country_code === "DE") {
+    const stateTitles = germanStateElectionTitle(election);
+    if (stateTitles.length) return stateTitles.join(" · ");
+  }
+
+  if (election.sections?.length) {
+    const contestNames = election.sections
+      .map((section) => contestNameFromSection(section))
+      .filter(Boolean);
+
+    if (contestNames.length) {
+      return `${loc} ${contestNames.join(" · ")}`;
+    }
+  }
+
   return `${loc} ${stripElectionFromTitle(election.title)}`;
+}
+
+function titleCoversOffices(title, offices = [], election = {}) {
+  if (!offices.length) return false;
+  if (election.type === "presidential" && /presidential/i.test(title)) return true;
+  return offices.every((office) => title.includes(office));
+}
+
+function shouldShowSections(election, sections) {
+  if (!sections.length) return false;
+  if (election.title === "Midterms") return true;
+  if (hasMixedLevelSections(sections)) return true;
+  if (sections.some((section) => section.states?.length)) return true;
+  return false;
 }
 
 function mergeLabels(items) {
@@ -243,16 +294,17 @@ function hasMixedLevelSections(sections) {
 }
 
 function resolveCardDisplay(election) {
+  const title = formatEventTitle(election);
   const labels = (election.labels || []).join(" · ");
   const sections = visibleSections(election);
-  const hasSections = sections.length > 0;
+  const hasSections = shouldShowSections(election, sections);
   const hasLabels = Boolean(labels);
-  const showMeta = !hasSections && !hasLabels;
+  const showMeta = !hasSections && !hasLabels && !titleCoversOffices(title, election.offices, election);
 
   return {
-    title: formatEventTitle(election),
+    title,
     labels,
-    sections,
+    sections: hasSections ? sections : [],
     showMeta,
     offices: election.offices || [],
   };

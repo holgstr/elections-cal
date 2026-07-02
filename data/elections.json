@@ -1119,7 +1119,7 @@
     "country_code": "BA",
     "state": null,
     "state_code": null,
-    "title": "General",
+    "title": "Federation Parliament · House of Peoples · House of Representatives · Republika Srpska National Assembly",
     "type": "combined",
     "level": "federal",
     "groups": [
@@ -1127,31 +1127,31 @@
     ],
     "sections": [
       {
-        "label": "Bosnian general",
+        "label": "Federation Parliament",
         "level": "federal",
         "offices": [
-          "Parliament"
+          "Federation Parliament"
         ]
       },
       {
-        "label": "Bosnian parliamentary",
+        "label": "House of Peoples",
         "level": "federal",
         "offices": [
-          "Parliament"
+          "House of Peoples"
         ]
       },
       {
-        "label": "Federation of Bosnia and Herzegovina general",
+        "label": "House of Representatives",
         "level": "federal",
         "offices": [
-          "Parliament"
+          "House of Representatives"
         ]
       },
       {
-        "label": "Republika Srpska general",
+        "label": "Republika Srpska National Assembly",
         "level": "federal",
         "offices": [
-          "Parliament"
+          "Republika Srpska National Assembly"
         ]
       }
     ],
@@ -1164,7 +1164,7 @@
     "country_code": "BR",
     "state": null,
     "state_code": null,
-    "title": "General",
+    "title": "National Congress · Presidential — Round 1",
     "type": "combined",
     "level": "federal",
     "groups": [
@@ -1193,31 +1193,16 @@
     "date_precision": "exact",
     "country": "Brazil",
     "country_code": "BR",
-    "state": null,
-    "state_code": null,
-    "title": "General",
-    "type": "combined",
+    "title": "Presidential — Round 2",
+    "type": "presidential",
     "level": "federal",
     "groups": [
       "brics"
     ],
-    "sections": [
-      {
-        "label": "Brazilian general",
-        "level": "federal",
-        "offices": [
-          "Parliament"
-        ]
-      },
-      {
-        "label": "Presidential — Round 2",
-        "level": "federal",
-        "offices": [
-          "President"
-        ]
-      }
+    "offices": [
+      "President"
     ],
-    "source": "aggregated"
+    "source": "curated"
   },
   {
     "date": "2026-10-27",

@@ -93,11 +93,25 @@ def strip_election_from_title(title: str) -> str:
     return UMBRELLA_TITLES.get(stripped.lower(), stripped)
 
 
-def normalize_title(label: str) -> str:
+BA_TITLE_OVERRIDES = {
+    "bosnian general": "House of Peoples",
+    "bosnian parliamentary": "House of Representatives",
+    "federation of bosnia and herzegovina general": "Federation Parliament",
+    "republika srpska general": "Republika Srpska National Assembly",
+}
+
+
+def normalize_title(label: str, country_code: str | None = None) -> str:
     title = re.sub(r"^\d{4}\s+", "", label).strip()
     title = strip_election_from_title(title)
     if title and title[0].islower():
         title = title[0].upper() + title[1:]
+
+    if country_code == "BA":
+        override = BA_TITLE_OVERRIDES.get(title.lower())
+        if override:
+            return override
+
     return title
 
 
@@ -206,7 +220,7 @@ ORDER BY ?date
                 "country_code": country_code,
                 "state": None,
                 "state_code": None,
-                "title": normalize_title(label),
+                "title": normalize_title(label, country_code),
                 "type": infer_type(label),
                 "level": "federal",
                 "groups": country_cfg["groups"],
@@ -300,6 +314,22 @@ def has_curated_legislative_nearby(item: dict, curated: list[dict]) -> bool:
     return False
 
 
+def has_curated_any_nearby(item: dict, curated: list[dict]) -> bool:
+    for other in curated:
+        if other.get("country_code") != item.get("country_code"):
+            continue
+        if days_apart(other["date"], item["date"]) <= CURATED_NEARBY_DAYS:
+            return True
+    return False
+
+
+def is_vague_wikidata_title(title: str) -> bool:
+    lower = title.lower()
+    if VAGUE_GENERAL_RE.search(title):
+        return True
+    return lower.endswith(" general")
+
+
 def remove_redundant_wikidata(elections: list[dict]) -> list[dict]:
     curated = [e for e in elections if e.get("source") == "curated"]
     curated_day_country = {
@@ -320,8 +350,10 @@ def remove_redundant_wikidata(elections: list[dict]) -> list[dict]:
         if has_curated_legislative_nearby(item, curated):
             continue
 
-        if VAGUE_GENERAL_RE.search(item["title"]):
+        if is_vague_wikidata_title(item["title"]):
             if day_country in curated_day_country:
+                continue
+            if has_curated_any_nearby(item, curated):
                 continue
             other_same_day = [
                 e
@@ -330,7 +362,7 @@ def remove_redundant_wikidata(elections: list[dict]) -> list[dict]:
                 and e["date"] == item["date"]
                 and e["country_code"] == item["country_code"]
             ]
-            if any(not VAGUE_GENERAL_RE.search(e["title"]) for e in other_same_day):
+            if any(not is_vague_wikidata_title(e["title"]) for e in other_same_day):
                 continue
 
         if item["type"] in curated_types_by_day.get(day_country, set()):
@@ -341,13 +373,17 @@ def remove_redundant_wikidata(elections: list[dict]) -> list[dict]:
     return kept
 
 
+def contest_names(entries: list[dict]) -> list[str]:
+    return [strip_election_from_title(entry["title"]) for entry in entries]
+
+
 def combined_title(country_code: str, federal: list[dict], states: list[dict]) -> str:
     if country_code == "US" and federal:
         return "Midterms"
     if country_code == "DE" and states and not federal:
         return "State"
     if federal and not states and len(federal) > 1:
-        return "General"
+        return " · ".join(contest_names(sorted(federal, key=lambda e: e["title"])))
     if federal and not states and len(federal) == 1:
         return federal[0]["title"]
     return federal[0]["country"] if federal else states[0]["country"]
