@@ -29,6 +29,9 @@ jobs:
         run: |
           python3 scripts/build_elections.py || SKIP_WIKIDATA=1 python3 scripts/build_elections.py
 
+      - name: Validate election data
+        run: SKIP_WIKIDATA=1 python3 scripts/build_elections.py
+
       - name: Commit data updates
         if: github.ref == 'refs/heads/main'
         run: |
