@@ -108,19 +108,35 @@ BA_TITLE_OVERRIDES = {
 
 COUNTRY_ADJECTIVES = {
     "albania": ["albanian"],
+    "algeria": ["algerian"],
+    "angola": ["angolan"],
     "bosnia and herzegovina": ["bosnian"],
     "czech republic": ["czech"],
     "czechia": ["czech"],
     "el salvador": ["salvadoran"],
     "france": ["french"],
+    "haiti": ["haitian"],
+    "kazakhstan": ["kazakh", "kazakhstani"],
+    "kenya": ["kenyan"],
     "latvia": ["latvian"],
+    "morocco": ["moroccan"],
     "nicaragua": ["nicaraguan"],
     "nigeria": ["nigerian"],
     "russia": ["russian"],
     "slovakia": ["slovak"],
+    "sri lanka": ["sri lankan", "lankan"],
+    "tajikistan": ["tajik", "tajikistani"],
 }
 
 COMBINED_UMBRELLA_TITLES = {"Midterms", "General", "State"}
+
+CANONICAL_CONTEST_TITLES = {
+  "presidential": "Presidential",
+  "parliamentary": "Parliamentary",
+  "legislative": "Legislative",
+}
+
+VAGUE_STANDALONE_TITLES = {"general"}
 
 
 def country_adjectives(country: str) -> list[str]:
@@ -128,8 +144,25 @@ def country_adjectives(country: str) -> list[str]:
     if lower in COUNTRY_ADJECTIVES:
         return COUNTRY_ADJECTIVES[lower]
 
-    root = lower.split()[0]
-    return [root, f"{root}ian", f"{root}ish", f"{root}ese"]
+    adjectives: list[str] = []
+    words = lower.split()
+    root = words[0]
+    adjectives.extend([root, f"{root}ian", f"{root}ish", f"{root}ese"])
+
+    if root.endswith("o"):
+        adjectives.append(f"{root[:-1]}an")
+    if root.endswith("a"):
+        adjectives.append(f"{root[:-1]}ian")
+    if root.endswith("i"):
+        adjectives.append(f"{root}an")
+
+    if len(words) > 1:
+        last = words[-1]
+        adjectives.append(f"{last}an")
+        adjectives.append(f"{last}ian")
+        adjectives.append(" ".join(words[:-1] + [f"{last}an"]))
+
+    return list(dict.fromkeys(adjectives))
 
 
 def strip_nationality_prefix(title: str, country: str) -> str:
@@ -148,25 +181,52 @@ def strip_nationality_prefix(title: str, country: str) -> str:
     return cleaned
 
 
+def canonicalize_contest_title(title: str, election_type: str) -> str:
+    lower = title.lower().strip()
+    if lower in CANONICAL_CONTEST_TITLES:
+        return CANONICAL_CONTEST_TITLES[lower]
+
+    if lower == "general":
+        if election_type == "presidential":
+            return "Presidential"
+        if election_type in {"legislative", "general"}:
+            return "Parliamentary"
+
+    return title
+
+
+def polish_contest_title(
+    title: str,
+    country: str,
+    country_code: str | None = None,
+    election_type: str = "general",
+) -> str:
+    polished = re.sub(r"^\d{4}\s+", "", title).strip()
+    polished = strip_election_from_title(polished)
+    if polished and polished[0].islower():
+        polished = polished[0].upper() + polished[1:]
+
+    if country_code == "BA":
+        override = BA_TITLE_OVERRIDES.get(polished.lower())
+        if override:
+            polished = override
+
+    polished = strip_nationality_prefix(polished, country)
+    return canonicalize_contest_title(polished, election_type)
+
+
 def normalize_title(
     label: str,
     country_code: str | None = None,
     country_name: str | None = None,
+    election_type: str = "general",
 ) -> str:
-    title = re.sub(r"^\d{4}\s+", "", label).strip()
-    title = strip_election_from_title(title)
-    if title and title[0].islower():
-        title = title[0].upper() + title[1:]
-
-    if country_code == "BA":
-        override = BA_TITLE_OVERRIDES.get(title.lower())
-        if override:
-            return override
-
-    if country_name:
-        title = strip_nationality_prefix(title, country_name)
-
-    return title
+    return polish_contest_title(
+        label,
+        country_name or "",
+        country_code,
+        election_type,
+    )
 
 
 def infer_type(label: str) -> str:
@@ -278,6 +338,7 @@ ORDER BY ?date
                     label,
                     country_code,
                     country_cfg["name"],
+                    infer_type(label),
                 ),
                 "type": infer_type(label),
                 "level": "federal",
@@ -526,6 +587,91 @@ def aggregate_same_day_elections(elections: list[dict]) -> list[dict]:
     )
 
 
+def infer_section_type(section: dict) -> str:
+    label = section.get("label", "")
+    offices = section.get("offices", [])
+    if "President" in offices or PRESIDENTIAL_RE.search(label):
+        return "presidential"
+    if LEGISLATIVE_RE.search(label) or "Parliament" in offices:
+        return "legislative"
+    return "general"
+
+
+def polish_election(item: dict) -> dict:
+    polished = dict(item)
+    country = polished.get("country", "")
+    country_code = polished.get("country_code")
+    election_type = polished.get("type", "general")
+
+    if polished.get("title"):
+        polished["title"] = polish_contest_title(
+            polished["title"],
+            country,
+            country_code,
+            election_type,
+        )
+
+    if polished.get("sections"):
+        sections = []
+        for section in polished["sections"]:
+            section = dict(section)
+            label = section.get("label")
+            if label and label not in {"Federal", "State"}:
+                section["label"] = polish_contest_title(
+                    label,
+                    country,
+                    country_code,
+                    infer_section_type(section),
+                )
+            sections.append(section)
+        polished["sections"] = sections
+
+    return polished
+
+
+def polish_elections(elections: list[dict]) -> list[dict]:
+    return [polish_election(item) for item in elections]
+
+
+def title_has_nationality_adjective(title: str, country: str) -> bool:
+    return any(title.lower().startswith(f"{adjective} ") for adjective in country_adjectives(country))
+
+
+def validate_contest_label(
+    label: str,
+    country: str,
+    election_type: str,
+    *,
+    allow_umbrella: bool = False,
+) -> list[str]:
+    errors: list[str] = []
+    if not label:
+        return errors
+
+    if title_has_nationality_adjective(label, country):
+        errors.append(f"redundant nationality adjective in contest label: {label!r}")
+
+    lower = label.lower()
+    if lower in VAGUE_STANDALONE_TITLES and not allow_umbrella:
+        errors.append(f"vague contest label must be Parliamentary or Legislative, not {label!r}")
+
+    if lower in CANONICAL_CONTEST_TITLES and label != CANONICAL_CONTEST_TITLES[lower]:
+        errors.append(
+            f"contest label must use canonical casing "
+            f"({CANONICAL_CONTEST_TITLES[lower]!r}): {label!r}"
+        )
+
+    if (
+        election_type != "combined"
+        and not allow_umbrella
+        and lower in {"presidential", "parliamentary", "legislative", "general"}
+        and label not in set(CANONICAL_CONTEST_TITLES.values()) | {"Parliamentary", "Legislative", "Presidential"}
+    ):
+        errors.append(f"contest label is not canonical: {label!r}")
+
+    return errors
+
+
 def validate_elections(elections: list[dict], comments: dict[str, str]) -> list[str]:
     errors: list[str] = []
     allowed_comments = set(comments)
@@ -553,12 +699,35 @@ def validate_elections(elections: list[dict], comments: dict[str, str]) -> list[
         if title.lower().startswith("next "):
             errors.append(f"{country}: title must not start with 'Next': {title!r}")
 
-        for adjective in country_adjectives(country):
-            if title.lower().startswith(f"{adjective} "):
-                errors.append(
-                    f"{country}: title has redundant nationality adjective: {title!r}"
+        if title_has_nationality_adjective(title, country):
+            errors.append(
+                f"{country}: title has redundant nationality adjective: {title!r}"
+            )
+
+        election_type = election.get("type", "general")
+        allow_umbrella = election_type == "combined"
+        errors.extend(
+            f"{country}: {message}"
+            for message in validate_contest_label(
+                title,
+                country,
+                election_type,
+                allow_umbrella=allow_umbrella,
+            )
+        )
+
+        for section in election.get("sections") or []:
+            label = section.get("label")
+            if not label or label in {"Federal", "State"}:
+                continue
+            errors.extend(
+                f"{country}: {message}"
+                for message in validate_contest_label(
+                    label,
+                    country,
+                    infer_section_type(section),
                 )
-                break
+            )
 
         if election.get("type") == "combined":
             if " · " in title:
@@ -600,8 +769,9 @@ def build(today: date | None = None) -> dict:
 
     curated = load_curated(start, end)
     merged = merge_elections(wikidata, curated)
-    deduped = remove_redundant_wikidata(merged)
-    elections = aggregate_same_day_elections(deduped)
+    polished = polish_elections(merged)
+    deduped = remove_redundant_wikidata(polished)
+    elections = polish_elections(aggregate_same_day_elections(deduped))
     validation_errors = validate_elections(elections, comments)
     if validation_errors:
         for message in validation_errors:

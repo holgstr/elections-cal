@@ -1,23 +1,5 @@
 [
   {
-    "date": "2026-07-02",
-    "date_precision": "exact",
-    "country": "Algeria",
-    "country_code": "DZ",
-    "state": null,
-    "state_code": null,
-    "title": "Algerian parliamentary",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "major"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
     "date": "2026-07-21",
     "date_precision": "exact",
     "country": "United States",
@@ -738,24 +720,6 @@
     ],
     "party": "Republican",
     "source": "curated"
-  },
-  {
-    "date": "2026-08-23",
-    "date_precision": "exact",
-    "country": "Kazakhstan",
-    "country_code": "KZ",
-    "state": null,
-    "state_code": null,
-    "title": "Kazakh legislative",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "major"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
   },
   {
     "date": "2026-08-30",
@@ -764,7 +728,7 @@
     "country_code": "HT",
     "state": null,
     "state_code": null,
-    "title": "Haitian presidential",
+    "title": "Presidential",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -782,7 +746,7 @@
     "country_code": "LK",
     "state": null,
     "state_code": null,
-    "title": "Lankan parliamentary",
+    "title": "Parliamentary",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -800,7 +764,7 @@
     "country_code": "MA",
     "state": null,
     "state_code": null,
-    "title": "Moroccan general",
+    "title": "Parliamentary",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1293,7 +1257,7 @@
     ],
     "sections": [
       {
-        "label": "General",
+        "label": "Parliamentary",
         "level": "federal",
         "offices": [
           "Parliament"
@@ -1694,14 +1658,14 @@
     ],
     "sections": [
       {
-        "label": "Angolan parliamentary",
+        "label": "Parliamentary",
         "level": "federal",
         "offices": [
           "Parliament"
         ]
       },
       {
-        "label": "Angolan presidential",
+        "label": "Presidential",
         "level": "federal",
         "offices": [
           "President"
@@ -1718,24 +1682,6 @@
     "state": null,
     "state_code": null,
     "title": "Presidential",
-    "type": "presidential",
-    "level": "federal",
-    "groups": [
-      "major"
-    ],
-    "offices": [
-      "President"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2027-01-01",
-    "date_precision": "estimated",
-    "country": "Kenya",
-    "country_code": "KE",
-    "state": null,
-    "state_code": null,
-    "title": "Kenyan presidential",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1771,7 +1717,7 @@
     "country_code": "NG",
     "state": null,
     "state_code": null,
-    "title": "General",
+    "title": "Parliamentary",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1807,7 +1753,7 @@
     "country_code": "TJ",
     "state": null,
     "state_code": null,
-    "title": "Tajik presidential",
+    "title": "Presidential",
     "type": "presidential",
     "level": "federal",
     "groups": [

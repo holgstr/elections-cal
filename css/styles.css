@@ -131,7 +131,7 @@ body::before {
   border-radius: 12px;
   padding: 0.55rem 0.65rem 0.55rem 0.55rem;
   display: grid;
-  grid-template-columns: 30px 2.85rem 1fr;
+  grid-template-columns: 30px 3.1rem 1fr;
   gap: 0.45rem;
   align-items: start;
 }
@@ -147,6 +147,7 @@ body::before {
 
 .card-date {
   text-align: center;
+  min-width: 3.1rem;
 }
 
 .card-day {
@@ -154,10 +155,14 @@ body::before {
   font-weight: 700;
   line-height: 1;
   color: var(--accent);
+  font-variant-numeric: tabular-nums;
 }
 
 .card-day-tbd {
   color: var(--estimated);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .card-weekday {
@@ -375,7 +380,7 @@ body::before {
   }
 
   .card {
-    grid-template-columns: 30px 3rem 1fr auto;
+    grid-template-columns: 30px 3.25rem 1fr auto;
     align-items: center;
   }
 

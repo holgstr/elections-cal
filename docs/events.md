@@ -98,11 +98,14 @@ The `title` field in JSON describes the **contest**, never the location.
 `scripts/build_elections.py` validates all records before writing `data/elections.json`:
 
 - No `Next` prefixes in titles.
-- No nationality adjectives that duplicate the country name.
+- No nationality adjectives that duplicate the country name (titles and combined-card section labels).
+- Standalone contest titles must use canonical names (`Presidential`, `Parliamentary`, `Legislative`) — not vague Wikidata labels like `general` or lowercase `presidential`.
 - Combined records use umbrella titles only (`General`, `Midterms`, `State`).
 - Combined titles must not contain ` · `.
 
-Build fails if any rule is violated.
+Wikidata and curated records are normalized on every build (`polish_contest_title`): nationality prefixes are stripped, vague labels are mapped to canonical contest names, and section labels in aggregated cards are cleaned the same way. Build fails if any record still violates the rules after normalization.
+
+The frontend mirrors the same nationality stripping and canonical contest titles as a display-time safeguard.
 
 ## Flags
 
