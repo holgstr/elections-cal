@@ -153,6 +153,44 @@ python3 scripts/generate_presidential_info.py
 | No market | Label stays non-interactive (no popover) |
 | Rolling window | Popovers only appear for presidential elections whose date falls within the next 12 months |
 
+## German state info popover
+
+Interactive German state labels (`.office-tag--interactive`) show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/de_state_info.json` for German state elections within the **next 12 months** (`scripts/generate_de_state_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set in `data/config/de_state_markets.json`.
+
+Regenerate after updating German state market slugs:
+
+```bash
+python3 scripts/generate_de_state_info.py
+```
+
+### Display rules
+
+| Rule | Detail |
+|------|--------|
+| Party names | Use Polymarket party abbreviations (e.g. CDU, AfD, Grüne) |
+| Polymarket odds | Show only parties above **10%**; display rounded percentage |
+| No market | Label stays non-interactive (no popover) |
+| Rolling window | Popovers only appear for elections whose date falls within the next 12 months |
+
+## US governor info popover
+
+Interactive `Governor` labels in US midterm state sections show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/us_governor_info.json` for gubernatorial general elections within the **next 12 months** (`scripts/generate_us_governor_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set in `data/config/us_governor_markets.json`.
+
+Regenerate after updating governor market slugs:
+
+```bash
+python3 scripts/generate_us_governor_info.py
+```
+
+### Display rules
+
+| Rule | Detail |
+|------|--------|
+| Party labels | **Republican** in red, **Democratic** in blue |
+| Polymarket odds | Always show Republican and Democratic win odds when available; display rounded percentage |
+| No market | Label stays non-interactive (no popover) |
+| Rolling window | Popovers only appear for elections whose date falls within the next 12 months |
+
 ### Curated fields per party
 
 - `polymarket_slug` — live odds source (takes precedence when present)
