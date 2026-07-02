@@ -1,4 +1,9 @@
 import { flagUrl, flagAlt, stateFlagUrl, stateFlagAlt } from "./flags.js";
+import {
+  loadPrimaryInfo,
+  initPrimaryPopovers,
+  renderInteractiveOfficeTag,
+} from "./primary-info.js";
 
 const GROUP_LABELS = {
   all: "All",
@@ -69,11 +74,15 @@ let searchQuery = "";
 let hideStates = false;
 
 async function init() {
-  const electionsRes = await fetch("data/elections.json");
+  const [electionsRes] = await Promise.all([
+    fetch("data/elections.json"),
+    loadPrimaryInfo(),
+  ]);
   allElections = await electionsRes.json();
 
   render();
   bindEvents();
+  initPrimaryPopovers();
 }
 
 function bindEvents() {
@@ -567,17 +576,25 @@ function formatCardDate(election) {
   };
 }
 
-function renderOfficeTags(offices = []) {
+function renderOfficeTags(offices = [], stateCode = null) {
   return offices
-    .map((office) => `<span class="office-tag">${office}</span>`)
+    .map((office) =>
+      stateCode
+        ? renderInteractiveOfficeTag(office, stateCode)
+        : `<span class="office-tag">${office}</span>`
+    )
     .join("");
 }
 
-function renderLabelTags(labels = []) {
+function renderLabelTags(labels = [], stateCode = null) {
   if (!labels.length) return "";
 
   return `<div class="card-labels">${labels
-    .map((label) => `<span class="office-tag">${label}</span>`)
+    .map((label) =>
+      stateCode
+        ? renderInteractiveOfficeTag(label, stateCode)
+        : `<span class="office-tag">${label}</span>`
+    )
     .join("")}</div>`;
 }
 
@@ -618,7 +635,7 @@ function renderSections(election) {
                   (state) => `
                 <div class="state-row">
                   ${renderStateName(state, election.country_code)}
-                  <div class="state-offices">${renderOfficeTags(state.offices)}</div>
+                  <div class="state-offices">${renderOfficeTags(state.offices, state.code)}</div>
                 </div>`
                 )
                 .join("")}
@@ -651,7 +668,7 @@ function renderCard(election) {
         <div class="card-topline">
           <h3 class="card-title">${title}</h3>
         </div>
-        ${renderLabelTags(labels)}
+        ${renderLabelTags(labels, election.state_code)}
         ${sections.length ? renderSections(election) : showMeta ? `<div class="card-meta">${officeTags}</div>` : ""}
         ${electionCommentLabel(election.comment) ? `<p class="card-comment">${electionCommentLabel(election.comment)}</p>` : ""}
       </div>

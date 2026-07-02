@@ -1,0 +1,21 @@
+{
+  "_comment": "Primary type and prediction-market links for US state primaries. Odds are fetched live from Polymarket when available.",
+  "AZ": {
+    "Governor": {
+      "primary_format": "party",
+      "primary_type": "semi-closed",
+      "primary_type_label": "Semi-closed primary",
+      "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
+      "parties": {
+        "Republican": {
+          "polymarket_slug": "arizona-governor-republican-primary-winner"
+        },
+        "Democratic": {
+          "candidates": [
+            { "name": "Katie Hobbs", "note": "Incumbent" }
+          ]
+        }
+      }
+    }
+  }
+}
