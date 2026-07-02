@@ -183,15 +183,12 @@ const OFFICE_PRIMARY_LABEL = {
 };
 
 const OFFICE_ORDER = ["Governor", "Senate"];
+const MIDTERM_OFFICE_ORDER = ["Governor", "State Legislature", "Senate"];
 
 const PARTY_ORDER = ["Democratic", "Republican"];
 
 function mergeKey(election) {
   return `${election.date}|${election.country_code}|${election.state_code || election.city_code || ""}`;
-}
-
-function isMayoralElection(election) {
-  return election.title === "Mayor" || (election.offices || []).includes("Mayor");
 }
 
 function compactPrimaryLabels(items) {
@@ -235,7 +232,7 @@ function compactPrimaryLabels(items) {
 }
 
 function locationPrefix(election) {
-  if (election.city && !isMayoralElection(election)) return election.city;
+  if (election.city) return election.city;
   if (election.state) return election.state;
   return election.country;
 }
@@ -635,20 +632,42 @@ function renderOfficeTags(offices = [], stateCode = null, electionDate = null, c
     .join("");
 }
 
-function getPrimaryOfficeColumns(states) {
-  return OFFICE_ORDER.filter((office) =>
+function resolveOfficeLabel(label, labelMapper = labelToOffice) {
+  return labelMapper(label) ?? label;
+}
+
+function getOfficeColumns(states, officeOrder, labelMapper = labelToOffice) {
+  return officeOrder.filter((office) =>
     states.some((state) =>
-      (state.offices || []).some((label) => labelToOffice(label) === office)
+      (state.offices || []).some(
+        (label) => resolveOfficeLabel(label, labelMapper) === office
+      )
     )
   );
 }
 
-function renderAlignedOfficeCells(offices, columns, stateCode, electionDate, countryCode = null, cityCode = null) {
+function getPrimaryOfficeColumns(states) {
+  return getOfficeColumns(states, OFFICE_ORDER);
+}
+
+function getMidtermOfficeColumns(states) {
+  return getOfficeColumns(states, MIDTERM_OFFICE_ORDER);
+}
+
+function renderAlignedOfficeCells(
+  offices,
+  columns,
+  stateCode,
+  electionDate,
+  countryCode = null,
+  cityCode = null,
+  labelMapper = labelToOffice
+) {
   const labelsByOffice = new Map();
   const extraLabels = [];
 
   for (const label of offices || []) {
-    const office = labelToOffice(label);
+    const office = resolveOfficeLabel(label, labelMapper);
     if (office && columns.includes(office)) {
       labelsByOffice.set(office, label);
     } else if (label) {
@@ -714,8 +733,12 @@ function renderSections(election) {
         : "";
 
       if (section.states?.length) {
-        const officeColumns =
-          election.isPrimaryDay ? getPrimaryOfficeColumns(section.states) : [];
+        const isMidterms = election.title === "Midterms";
+        const officeColumns = election.isPrimaryDay
+          ? getPrimaryOfficeColumns(section.states)
+          : isMidterms
+            ? getMidtermOfficeColumns(section.states)
+            : [];
         const useAlignedOffices = officeColumns.length > 0;
         const listStyle = useAlignedOffices
           ? ` style="--office-cols: ${officeColumns.length}"`

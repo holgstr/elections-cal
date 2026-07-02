@@ -19,10 +19,11 @@ The title is always **concise**. It names the place only — contest names belon
 |------|---------------|---------|
 | National / federal (single or multi-contest day) | `{Country}` | `Sweden` · `Bosnia and Herzegovina` · `Brazil` |
 | US state (single state on a date) | `{State}` | `Kansas` · `Arizona` |
+| Local / mayoral | `{City}` | `Manchester` |
 | US multi-state same day (state-level) | `US State primaries` | `US State primaries` |
 | German state (standalone) | `{State}` | `Berlin` |
 | German multi-state same day | `German State primaries` | `German State primaries` |
-| US midterms | `US midterms` | state list: `Governor` · `Senate` (where applicable) |
+| US midterms | `US midterms` | state list: `Governor` · `State Legislature` · `Senate` (where applicable) |
 
 **Never:**
 
@@ -87,7 +88,7 @@ The `title` field in JSON describes the **contest**, never the location.
 | Single federal election (generic) | `Latvia` | `Parliament` |
 | Merged state primaries (one state) | `Kansas` | `Governor Primary` · `Senate Primary` |
 | US multi-state primary day | `US State primaries` | sections: states + primary labels |
-| US midterms (combined) | `US midterms` | sections: states with `Governor` and `Senate` (where applicable) |
+| US midterms (combined) | `US midterms` | sections: states with `Governor`, `State Legislature`, and `Senate` (where applicable) |
 | Brazil election day (combined) | `Brazil` | `National Congress` · `President — Round 1` |
 | Bosnia election day (combined) | `Bosnia and Herzegovina` | `Federation Parliament` · `House of Peoples` · … |
 | German Landtag (standalone) | `Berlin` | `Landtag` |
@@ -246,4 +247,4 @@ python3 scripts/generate_mayoral_info.py
 | No market | Label stays non-interactive (no popover) |
 | Rolling window | Popovers only appear for elections whose date falls within the next 12 months |
 
-Card titles use the **country** name (for example `United Kingdom`); the UK flag is shown. The city is stored in election data for market lookup and search.
+Card titles use the **city** name (for example `Manchester`); the country flag is shown. The city is stored in election data for market lookup and search.

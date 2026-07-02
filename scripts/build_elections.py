@@ -556,11 +556,7 @@ def midterm_state_offices(entry: dict) -> list[str]:
     offices = [office for office in entry.get("offices", []) if office != "House of Representatives"]
     state_code = entry.get("state_code")
     if state_code in SENATE_2026 and "Senate" not in offices:
-        if "Governor" in offices:
-            governor_index = offices.index("Governor") + 1
-            offices.insert(governor_index, "Senate")
-        else:
-            offices.insert(0, "Senate")
+        offices.append("Senate")
     return offices
 
 
