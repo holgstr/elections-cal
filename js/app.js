@@ -1,4 +1,4 @@
-import { flagUrl, flagAlt } from "./flags.js";
+import { flagUrl, flagAlt, stateFlagUrl, stateFlagAlt } from "./flags.js";
 
 const GROUP_LABELS = {
   all: "All",
@@ -349,6 +349,7 @@ function aggregateMultiStateElections(elections) {
       state_code: null,
       title: "State",
       level: "state",
+      labels: [],
       multiStateDay: true,
       isPrimaryDay,
       sections: [
@@ -411,13 +412,13 @@ function hasMixedLevelSections(sections) {
 }
 
 function resolveCardLabels(election, sections, hasSections) {
+  if (hasSections) return [];
+
   if (election.labels?.length) return election.labels;
 
-  if (sections.length && !hasSections) {
+  if (sections.length) {
     return contestLabelsFromSections(sections);
   }
-
-  if (hasSections) return [];
 
   if (election.country_code === "DE" && election.state) {
     const body = (election.offices || [])[0];
@@ -513,6 +514,21 @@ function renderLabelTags(labels = []) {
     .join("")}</div>`;
 }
 
+function renderStateName(state, countryCode) {
+  const showFlag =
+    (countryCode === "US" || countryCode === "DE") && state.code;
+
+  if (!showFlag) {
+    return `<span class="state-name">${state.name}</span>`;
+  }
+
+  return `
+    <span class="state-name">
+      <img class="state-flag" src="${stateFlagUrl(countryCode, state.code)}" alt="${stateFlagAlt(state.name)}" width="22" height="15" loading="lazy" />
+      ${state.name}
+    </span>`;
+}
+
 function renderSections(election) {
   const sections = visibleSections(election);
   if (!sections.length) return "";
@@ -534,7 +550,7 @@ function renderSections(election) {
                 .map(
                   (state) => `
                 <div class="state-row">
-                  <span class="state-name">${state.name}</span>
+                  ${renderStateName(state, election.country_code)}
                   <div class="state-offices">${renderOfficeTags(state.offices)}</div>
                 </div>`
                 )

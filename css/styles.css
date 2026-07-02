@@ -295,9 +295,21 @@ body::before {
 }
 
 .state-name {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
   font-size: 0.74rem;
   font-weight: 600;
   color: var(--text);
+}
+
+.state-flag {
+  width: 22px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
 }
 
 .state-offices {
