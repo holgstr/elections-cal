@@ -14,6 +14,10 @@
   "AZ": {
     "polymarket_slug": "arizona-governor-winner-2026"
   },
+  "CA": {
+    "polymarket_slug": "california-governor-election-2026",
+    "odds_format": "candidates"
+  },
   "CO": {
     "polymarket_slug": "colorado-governor-winner-2026"
   },

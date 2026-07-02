@@ -7,6 +7,10 @@
     },
     "AL": { "polymarket_slug": "alabama-governor-winner-2026" },
     "AZ": { "polymarket_slug": "arizona-governor-winner-2026" },
+    "CA": {
+      "polymarket_slug": "california-governor-election-2026",
+      "odds_format": "candidates"
+    },
     "AR": { "polymarket_slug": "arkansas-governor-winner-2026" },
     "CO": { "polymarket_slug": "colorado-governor-winner-2026" },
     "CT": { "polymarket_slug": "connecticut-governor-winner-2026" },

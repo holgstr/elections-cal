@@ -12,6 +12,7 @@
     "VT": { "type": "open", "note_key": "open" },
     "WI": { "type": "open", "note_key": "open" },
     "AK": { "type": "top-four", "note_key": "top-four", "format": "top-four" },
+    "CA": { "type": "top-two", "note_key": "top-two", "format": "top-two" },
     "FL": { "type": "closed", "note_key": "closed" },
     "WY": { "type": "closed", "note_key": "closed" },
     "MA": { "type": "semi-closed", "note_key": "semi-closed" },
@@ -23,12 +24,14 @@
     "semi-closed": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
     "closed": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
     "open": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+    "top-two": "All candidates appear on one ballot; the top two advance to the general election.",
     "top-four": "All candidates appear on one ballot; the top four advance to the general election."
   },
   "type_labels": {
     "semi-closed": "Semi-closed primary",
     "closed": "Closed primary",
     "open": "Open primary",
+    "top-two": "Top-two primary",
     "top-four": "Top-four primary"
   },
   "polymarket_slugs": {
@@ -95,6 +98,9 @@
     },
     "AK": {
       "Governor": { "_slug": "who-will-advance-from-the-alaska-governor-primary" }
+    },
+    "CA": {
+      "Governor": { "_slug": "who-will-advance-from-the-california-governor-primary" }
     },
     "FL": {
       "Governor": {
