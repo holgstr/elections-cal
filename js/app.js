@@ -39,6 +39,14 @@ const COUNTRY_STATE_DAY_TITLES = {
   DE: "German State primaries",
 };
 
+const ELECTION_COMMENTS = {
+  snap_election: "Snap election",
+};
+
+function electionCommentLabel(comment) {
+  return ELECTION_COMMENTS[comment] || null;
+}
+
 let allElections = [];
 let activeGroup = "all";
 let searchQuery = "";
@@ -75,7 +83,8 @@ function electionHaystack(election) {
     election.title,
     election.type,
     election.party,
-    election.notes,
+    election.comment,
+    electionCommentLabel(election.comment),
     ...(election.offices || []),
     ...(election.labels || []),
     ...sectionStates,
@@ -390,7 +399,7 @@ function mergeElectionGroups(elections) {
     const isEstimated = items.some((e) => e.date_precision === "estimated");
     const offices = [...new Set(items.flatMap((e) => e.offices || []))];
     const labels = mergeLabels(items);
-    const notes = [...new Set(items.map((e) => e.notes).filter(Boolean))];
+    const comments = [...new Set(items.map((e) => e.comment).filter(Boolean))];
     const isMergedPrimary = items.every(
       (item) => item.type === "primary" || item.type === "runoff"
     );
@@ -401,7 +410,7 @@ function mergeElectionGroups(elections) {
       labels,
       mergedPrimary: isMergedPrimary,
       date_precision: isEstimated ? "estimated" : base.date_precision,
-      notes: notes.length ? notes.join(" · ") : undefined,
+      comment: comments.length === 1 ? comments[0] : undefined,
     };
   });
 }
@@ -586,7 +595,7 @@ function renderCard(election) {
         </div>
         ${renderLabelTags(labels)}
         ${sections.length ? renderSections(election) : showMeta ? `<div class="card-meta">${officeTags}</div>` : ""}
-        ${election.notes ? `<p class="card-notes">${election.notes}</p>` : ""}
+        ${electionCommentLabel(election.comment) ? `<p class="card-comment">${electionCommentLabel(election.comment)}</p>` : ""}
       </div>
       <time class="card-time" datetime="${election.date}">${full}</time>
     </article>

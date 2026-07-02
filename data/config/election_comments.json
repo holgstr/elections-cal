@@ -1,0 +1,4 @@
+{
+  "_description": "Standardized comment keys for estimated-date (TBD) elections. Use only when the date is uncertain for a reason beyond a regular scheduled election with no fixed date yet.",
+  "snap_election": "Snap election"
+}

@@ -157,8 +157,6 @@ body::before {
 }
 
 .card-day-tbd {
-  font-size: 0.62rem;
-  letter-spacing: 0.02em;
   color: var(--estimated);
 }
 
@@ -240,7 +238,7 @@ body::before {
   margin-bottom: 0.1rem;
 }
 
-.card-notes {
+.card-comment {
   font-size: 0.72rem;
   color: var(--muted);
   margin: 0.2rem 0 0;

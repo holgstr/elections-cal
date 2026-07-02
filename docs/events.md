@@ -40,7 +40,19 @@ The title is always **concise**. It names the place only — contest names belon
 ### Date display
 
 - Exact dates show the day number in blue.
-- Estimated dates show **TBD** in yellow (`--estimated`); the `Est.` badge is not used.
+- Estimated dates show **TBD** in yellow (`--estimated`) at the same size as the day number; the `Est.` badge is not used.
+
+### Election comments (TBD only)
+
+When an estimated date needs context beyond a regular scheduled election with no fixed date yet, use a standardized `comment` key from `data/config/election_comments.json`.
+
+| Key | Label | When to use |
+|-----|-------|-------------|
+| `snap_election` | Snap election | Parliament dissolved early; date is provisional |
+
+**Do not** add a comment for regular elections that must happen by a constitutional deadline but have no announced date yet (for example a scheduled parliamentary term ending).
+
+Display: `.card-comment` below contest detail.
 
 ### Month ordering
 

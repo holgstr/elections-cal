@@ -15,6 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data" / "config" / "countries.json"
+COMMENTS_PATH = ROOT / "data" / "config" / "election_comments.json"
 CURATED_DIR = ROOT / "data" / "curated"
 OUTPUT_PATH = ROOT / "data" / "elections.json"
 META_PATH = ROOT / "data" / "meta.json"
@@ -64,6 +65,11 @@ def save_json(path: Path, data) -> None:
 def load_countries() -> dict:
     raw = load_json(CONFIG_PATH)
     return {code: cfg for code, cfg in raw.items() if not code.startswith("_")}
+
+
+def load_election_comments() -> dict[str, str]:
+    raw = load_json(COMMENTS_PATH)
+    return {key: label for key, label in raw.items() if not key.startswith("_")}
 
 
 def date_window(today: date | None = None) -> tuple[date, date]:
@@ -491,7 +497,7 @@ def aggregate_same_day_elections(elections: list[dict]) -> list[dict]:
             )
 
         base = federal[0] if federal else states[0]
-        notes = [entry.get("notes") for entry in items if entry.get("notes")]
+        notes = [entry.get("comment") for entry in items if entry.get("comment")]
         aggregated.append(
             {
                 "date": election_date,
@@ -510,7 +516,7 @@ def aggregate_same_day_elections(elections: list[dict]) -> list[dict]:
                 "groups": base.get("groups", []),
                 "sections": sections,
                 "source": "aggregated",
-                **({"notes": " · ".join(dict.fromkeys(notes))} if notes else {}),
+                **({"comment": notes[0]} if len(notes) == 1 else {}),
             }
         )
 
@@ -520,13 +526,29 @@ def aggregate_same_day_elections(elections: list[dict]) -> list[dict]:
     )
 
 
-def validate_elections(elections: list[dict]) -> list[str]:
+def validate_elections(elections: list[dict], comments: dict[str, str]) -> list[str]:
     errors: list[str] = []
+    allowed_comments = set(comments)
 
     for election in elections:
         title = election.get("title", "")
         country = election.get("country", "")
         country_code = election.get("country_code", "")
+
+        if election.get("notes"):
+            errors.append(f"{country}: use 'comment' instead of deprecated 'notes' field")
+
+        comment = election.get("comment")
+        if comment:
+            if comment not in allowed_comments:
+                errors.append(
+                    f"{country}: unknown election comment {comment!r}; "
+                    f"allowed: {sorted(allowed_comments)}"
+                )
+            if election.get("date_precision") != "estimated":
+                errors.append(
+                    f"{country}: comment is only allowed on estimated-date elections: {title!r}"
+                )
 
         if title.lower().startswith("next "):
             errors.append(f"{country}: title must not start with 'Next': {title!r}")
@@ -564,6 +586,7 @@ def validate_elections(elections: list[dict]) -> list[str]:
 def build(today: date | None = None) -> dict:
     start, end = date_window(today)
     countries = load_countries()
+    comments = load_election_comments()
     country_codes = sorted(countries.keys())
 
     try:
@@ -579,7 +602,7 @@ def build(today: date | None = None) -> dict:
     merged = merge_elections(wikidata, curated)
     deduped = remove_redundant_wikidata(merged)
     elections = aggregate_same_day_elections(deduped)
-    validation_errors = validate_elections(elections)
+    validation_errors = validate_elections(elections, comments)
     if validation_errors:
         for message in validation_errors:
             print(f"Validation error: {message}", file=sys.stderr)
