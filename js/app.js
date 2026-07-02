@@ -3,6 +3,7 @@ import {
   loadPrimaryInfo,
   initPrimaryPopovers,
   renderInteractiveOfficeTag,
+  labelToOffice,
 } from "./primary-info.js?v=2";
 
 const GROUP_LABELS = {
@@ -588,14 +589,52 @@ function formatCardDate(election) {
   };
 }
 
+function renderOfficeTag(label, stateCode = null, electionDate = null) {
+  return stateCode
+    ? renderInteractiveOfficeTag(label, stateCode, electionDate)
+    : `<span class="office-tag">${label}</span>`;
+}
+
 function renderOfficeTags(offices = [], stateCode = null, electionDate = null) {
-  return offices
-    .map((office) =>
-      stateCode
-        ? renderInteractiveOfficeTag(office, stateCode, electionDate)
-        : `<span class="office-tag">${office}</span>`
+  return offices.map((office) => renderOfficeTag(office, stateCode, electionDate)).join("");
+}
+
+function getPrimaryOfficeColumns(states) {
+  return OFFICE_ORDER.filter((office) =>
+    states.some((state) =>
+      (state.offices || []).some((label) => labelToOffice(label) === office)
     )
+  );
+}
+
+function renderAlignedOfficeCells(offices, columns, stateCode, electionDate) {
+  const labelsByOffice = new Map();
+  const extraLabels = [];
+
+  for (const label of offices || []) {
+    const office = labelToOffice(label);
+    if (office && columns.includes(office)) {
+      labelsByOffice.set(office, label);
+    } else if (label) {
+      extraLabels.push(label);
+    }
+  }
+
+  const cells = columns
+    .map((office) => {
+      const label = labelsByOffice.get(office);
+      const content = label ? renderOfficeTag(label, stateCode, electionDate) : "";
+      return `<div class="state-office-cell">${content}</div>`;
+    })
     .join("");
+
+  const extras = extraLabels.length
+    ? `<div class="state-offices-extra">${extraLabels
+        .map((label) => renderOfficeTag(label, stateCode, electionDate))
+        .join("")}</div>`
+    : "";
+
+  return cells + extras;
 }
 
 function renderLabelTags(labels = [], stateCode = null, electionDate = null) {
@@ -638,18 +677,38 @@ function renderSections(election) {
         : "";
 
       if (section.states?.length) {
+        const officeColumns =
+          election.isPrimaryDay ? getPrimaryOfficeColumns(section.states) : [];
+        const useAlignedOffices = officeColumns.length > 0;
+        const listStyle = useAlignedOffices
+          ? ` style="--office-cols: ${officeColumns.length}"`
+          : "";
+
         return `
           <div class="election-section">
             ${sectionLabel}
-            <div class="state-list">
+            <div class="state-list${useAlignedOffices ? " state-list--aligned" : ""}"${listStyle}>
               ${section.states
-                .map(
-                  (state) => `
-                <div class="state-row">
+                .map((state) => {
+                  const rowClass = useAlignedOffices ? "state-row state-row--aligned" : "state-row";
+                  const officesHtml = useAlignedOffices
+                    ? renderAlignedOfficeCells(
+                        state.offices,
+                        officeColumns,
+                        state.code,
+                        election.date
+                      )
+                    : renderOfficeTags(state.offices, state.code, election.date);
+                  const officesWrapper = useAlignedOffices
+                    ? officesHtml
+                    : `<div class="state-offices">${officesHtml}</div>`;
+
+                  return `
+                <div class="${rowClass}">
                   ${renderStateName(state, election.country_code)}
-                  <div class="state-offices">${renderOfficeTags(state.offices, state.code, election.date)}</div>
-                </div>`
-                )
+                  ${officesWrapper}
+                </div>`;
+                })
                 .join("")}
             </div>
           </div>`;

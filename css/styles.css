@@ -303,7 +303,7 @@ body::before {
   border-radius: 50%;
   font-size: 0.58rem;
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
   line-height: 1;
   color: var(--muted);
 }
@@ -492,8 +492,27 @@ body::before {
   gap: 0.25rem;
 }
 
+.state-row--aligned {
+  display: grid;
+  grid-template-columns: minmax(5rem, auto) repeat(var(--office-cols, 2), max-content);
+  gap: 0.25rem 0.75rem;
+  align-items: center;
+}
+
+.state-office-cell {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.state-offices-extra {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
 @media (min-width: 640px) {
-  .state-row {
+  .state-row:not(.state-row--aligned) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
