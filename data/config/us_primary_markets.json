@@ -1,0 +1,147 @@
+{
+  "_comment": "Polymarket slugs and incumbent fallbacks for US primaries. Regenerate us_primary_info.json via scripts/generate_us_primary_info.py",
+  "primary_types": {
+    "AZ": { "type": "semi-closed", "note_key": "semi-closed" },
+    "KS": { "type": "closed", "note_key": "closed" },
+    "MI": { "type": "open", "note_key": "open" },
+    "VA": { "type": "open", "note_key": "open" },
+    "TN": { "type": "open", "note_key": "open" },
+    "HI": { "type": "open", "note_key": "open" },
+    "CT": { "type": "closed", "note_key": "closed" },
+    "MN": { "type": "open", "note_key": "open" },
+    "VT": { "type": "open", "note_key": "open" },
+    "WI": { "type": "open", "note_key": "open" },
+    "AK": { "type": "top-four", "note_key": "top-four", "format": "top-four" },
+    "FL": { "type": "closed", "note_key": "closed" },
+    "WY": { "type": "closed", "note_key": "closed" },
+    "MA": { "type": "semi-closed", "note_key": "semi-closed" },
+    "NH": { "type": "semi-closed", "note_key": "semi-closed" },
+    "RI": { "type": "semi-closed", "note_key": "semi-closed" },
+    "DE": { "type": "closed", "note_key": "closed" }
+  },
+  "type_notes": {
+    "semi-closed": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
+    "closed": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
+    "open": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+    "top-four": "All candidates appear on one ballot; the top four advance to the general election."
+  },
+  "type_labels": {
+    "semi-closed": "Semi-closed primary",
+    "closed": "Closed primary",
+    "open": "Open primary",
+    "top-four": "Top-four primary"
+  },
+  "polymarket_slugs": {
+    "AZ": {
+      "Governor": { "Republican": "arizona-governor-republican-primary-winner" }
+    },
+    "KS": {
+      "Governor": {
+        "Republican": "kansas-governor-republican-primary-winner",
+        "Democratic": "kansas-governor-democratic-primary-winner"
+      },
+      "Senate": { "Democratic": "kansas-democratic-senate-primary-winner" }
+    },
+    "MI": {
+      "Governor": {
+        "Republican": "michigan-governor-republican-primary-winner",
+        "Democratic": "michigan-governor-democratic-primary-winner"
+      },
+      "Senate": {
+        "Republican": "michigan-republican-senate-primary-winner-954",
+        "Democratic": "michigan-democratic-senate-primary-winner"
+      }
+    },
+    "VA": {
+      "Senate": {
+        "Republican": "virginia-senate-republican-primary-winner",
+        "Democratic": "virginia-democratic-senate-primary-winner"
+      }
+    },
+    "TN": {
+      "Governor": {
+        "Republican": "tennessee-governor-republican-primary-winner",
+        "Democratic": "tennessee-governor-democratic-primary-winner"
+      },
+      "Senate": { "Democratic": "tennessee-democratic-senate-primary-winner" }
+    },
+    "CT": {
+      "Governor": {
+        "Republican": "connecticut-governor-republican-primary-winner",
+        "Democratic": "connecticut-governor-democratic-primary-winner"
+      }
+    },
+    "MN": {
+      "Governor": {
+        "Republican": "minnesota-governor-republican-primary-winner",
+        "Democratic": "minnesota-governor-democratic-primary-winner"
+      },
+      "Senate": {
+        "Republican": "minnesota-republican-senate-primary-winner",
+        "Democratic": "minnesota-democratic-senate-primary-winner"
+      }
+    },
+    "VT": {
+      "Governor": {
+        "Republican": "vermont-governor-republican-primary-winner",
+        "Democratic": "vermont-governor-democratic-primary-winner"
+      }
+    },
+    "WI": {
+      "Governor": {
+        "Republican": "wisconsin-governor-republican-primary-winner",
+        "Democratic": "wisconsin-governor-democratic-primary-winner"
+      }
+    },
+    "AK": {
+      "Governor": { "_slug": "who-will-advance-from-the-alaska-governor-primary" }
+    },
+    "FL": {
+      "Governor": {
+        "Republican": "republican-nominee-for-florida-governor",
+        "Democratic": "democratic-nominee-for-florida-governor"
+      }
+    },
+    "WY": {
+      "Governor": { "Republican": "wyoming-governor-republican-primary-winner" }
+    },
+    "MA": {
+      "Governor": { "Republican": "massachusetts-governor-republican-primary-winner" },
+      "Senate": { "Democratic": "massachusetts-democratic-senate-primary-winner" }
+    },
+    "NH": {
+      "Governor": {
+        "Republican": "new-hampshire-governor-republican-primary-winner",
+        "Democratic": "new-hampshire-governor-democratic-primary-winner"
+      },
+      "Senate": {
+        "Republican": "new-hampshire-republican-senate-primary-winner-296",
+        "Democratic": "new-hampshire-democratic-senate-primary-winner"
+      }
+    },
+    "RI": {
+      "Governor": {
+        "Republican": "rhode-island-governor-republican-primary-winner",
+        "Democratic": "rhode-island-governor-democratic-primary-winner"
+      },
+      "Senate": {
+        "Republican": "rhode-island-republican-senate-primary-winner",
+        "Democratic": "rhode-island-democratic-senate-primary-winner"
+      }
+    },
+    "DE": {
+      "Senate": {
+        "Republican": "delaware-republican-senate-primary-winner",
+        "Democratic": "delaware-democratic-senate-primary-winner"
+      }
+    }
+  },
+  "incumbents": {
+    "AZ": { "Governor": { "Democratic": "Hobbs" } },
+    "KS": { "Senate": { "Republican": "Marshall" } },
+    "TN": { "Senate": { "Republican": "Hagerty" } },
+    "HI": { "Governor": { "Democratic": "Green" } },
+    "MA": { "Governor": { "Democratic": "Healey" } },
+    "WY": { "Senate": { "Republican": "Barrasso" } }
+  }
+}

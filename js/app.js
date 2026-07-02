@@ -576,23 +576,23 @@ function formatCardDate(election) {
   };
 }
 
-function renderOfficeTags(offices = [], stateCode = null) {
+function renderOfficeTags(offices = [], stateCode = null, electionDate = null) {
   return offices
     .map((office) =>
       stateCode
-        ? renderInteractiveOfficeTag(office, stateCode)
+        ? renderInteractiveOfficeTag(office, stateCode, electionDate)
         : `<span class="office-tag">${office}</span>`
     )
     .join("");
 }
 
-function renderLabelTags(labels = [], stateCode = null) {
+function renderLabelTags(labels = [], stateCode = null, electionDate = null) {
   if (!labels.length) return "";
 
   return `<div class="card-labels">${labels
     .map((label) =>
       stateCode
-        ? renderInteractiveOfficeTag(label, stateCode)
+        ? renderInteractiveOfficeTag(label, stateCode, electionDate)
         : `<span class="office-tag">${label}</span>`
     )
     .join("")}</div>`;
@@ -635,7 +635,7 @@ function renderSections(election) {
                   (state) => `
                 <div class="state-row">
                   ${renderStateName(state, election.country_code)}
-                  <div class="state-offices">${renderOfficeTags(state.offices, state.code)}</div>
+                  <div class="state-offices">${renderOfficeTags(state.offices, state.code, election.date)}</div>
                 </div>`
                 )
                 .join("")}
@@ -668,7 +668,7 @@ function renderCard(election) {
         <div class="card-topline">
           <h3 class="card-title">${title}</h3>
         </div>
-        ${renderLabelTags(labels, election.state_code)}
+        ${renderLabelTags(labels, election.state_code, election.date)}
         ${sections.length ? renderSections(election) : showMeta ? `<div class="card-meta">${officeTags}</div>` : ""}
         ${electionCommentLabel(election.comment) ? `<p class="card-comment">${electionCommentLabel(election.comment)}</p>` : ""}
       </div>

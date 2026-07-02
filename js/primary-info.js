@@ -12,6 +12,7 @@ const PRIMARY_TYPE_LABELS = {
 };
 
 let primaryInfo = {};
+let primaryWindowMonths = 3;
 const oddsCache = new Map();
 
 let popoverEl = null;
@@ -22,11 +23,34 @@ export async function loadPrimaryInfo() {
   try {
     const res = await fetch("data/curated/us_primary_info.json");
     if (!res.ok) return;
-    primaryInfo = await res.json();
-    delete primaryInfo._comment;
+    const data = await res.json();
+    if (data._window_months) {
+      primaryWindowMonths = data._window_months;
+    }
+    delete data._comment;
+    delete data._window_months;
+    primaryInfo = data;
   } catch {
     primaryInfo = {};
   }
+}
+
+function isWithinPrimaryWindow(electionDate) {
+  if (!electionDate) return true;
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const end = new Date(today);
+  end.setMonth(end.getMonth() + primaryWindowMonths);
+
+  const date = new Date(`${electionDate}T12:00:00`);
+  return date >= today && date <= end;
+}
+
+export function getPrimaryInfo(stateCode, office, electionDate) {
+  if (!stateCode || !office) return null;
+  if (!isWithinPrimaryWindow(electionDate)) return null;
+  return primaryInfo[stateCode]?.[office] ?? null;
 }
 
 export function labelToOffice(label) {
@@ -34,14 +58,9 @@ export function labelToOffice(label) {
   return match ? match[1] : null;
 }
 
-export function getPrimaryInfo(stateCode, office) {
-  if (!stateCode || !office) return null;
-  return primaryInfo[stateCode]?.[office] ?? null;
-}
-
-export function hasPrimaryInfo(stateCode, label) {
+export function hasPrimaryInfo(stateCode, label, electionDate) {
   const office = labelToOffice(label);
-  return Boolean(getPrimaryInfo(stateCode, office));
+  return Boolean(getPrimaryInfo(stateCode, office, electionDate));
 }
 
 function primaryKey(stateCode, office) {
@@ -153,17 +172,20 @@ function renderCandidateRows(section) {
     .join("")}</ul>`;
 }
 
-function renderPopoverBody(info, partySections) {
+function renderTypeHeader(info) {
   const typeLabel =
     info.primary_type_label ||
     PRIMARY_TYPE_LABELS[info.primary_type] ||
     info.primary_type;
 
-  const formatNote =
-    info.primary_format === "open"
-      ? "All candidates appear on one ballot; voters are not limited by party registration."
-      : info.primary_type_note || "";
+  const formatNote = info.primary_type_note || "";
 
+  return `
+    <p class="primary-popover__type">${typeLabel}</p>
+    ${formatNote ? `<p class="primary-popover__note-block">${formatNote}</p>` : ""}`;
+}
+
+function renderPopoverBody(info, partySections) {
   const partyBlocks = Object.entries(partySections)
     .filter(([, section]) => section.candidates.length || section.error)
     .map(([party, section]) => {
@@ -186,9 +208,20 @@ function renderPopoverBody(info, partySections) {
     .join("");
 
   return `
-    <p class="primary-popover__type">${typeLabel}</p>
-    ${formatNote ? `<p class="primary-popover__note-block">${formatNote}</p>` : ""}
+    ${renderTypeHeader(info)}
     <div class="primary-popover__parties">${partyBlocks}</div>`;
+}
+
+function renderTopFourBody(info, section) {
+  const source = section.source
+    ? `<div class="primary-popover__party-head"><span class="primary-popover__source">via ${section.source}</span></div>`
+    : "";
+  const candidates = renderCandidateRows(section);
+
+  return `
+    ${renderTypeHeader(info)}
+    ${source}
+    ${candidates}`;
 }
 
 function ensurePopover() {
@@ -227,7 +260,8 @@ function positionPopover(trigger) {
 
 async function showPopover(trigger, key) {
   const { stateCode, office } = parsePrimaryKey(key);
-  const info = getPrimaryInfo(stateCode, office);
+  const electionDate = trigger.dataset.primaryDate;
+  const info = getPrimaryInfo(stateCode, office, electionDate);
   if (!info) return;
 
   const popover = ensurePopover();
@@ -237,6 +271,23 @@ async function showPopover(trigger, key) {
   popover.hidden = false;
   popover.innerHTML = `<p class="primary-popover__loading">Loading…</p>`;
   positionPopover(trigger);
+
+  if (info.primary_format === "top-four") {
+    let section = { candidates: [] };
+    if (info.polymarket_slug) {
+      try {
+        section = await fetchPolymarketOdds(info.polymarket_slug);
+      } catch {
+        section = { source: "Polymarket", candidates: [], error: true };
+      }
+    }
+
+    if (activeTrigger !== trigger) return;
+
+    popover.innerHTML = renderTopFourBody(info, section);
+    positionPopover(trigger);
+    return;
+  }
 
   const partyEntries = Object.entries(info.parties || {});
   const partySections = {};
@@ -341,16 +392,16 @@ function bindPopoverEvents(root) {
   window.addEventListener("scroll", hidePopover, true);
 }
 
-export function renderInteractiveOfficeTag(label, stateCode) {
+export function renderInteractiveOfficeTag(label, stateCode, electionDate) {
   const office = labelToOffice(label);
-  const info = getPrimaryInfo(stateCode, office);
+  const info = getPrimaryInfo(stateCode, office, electionDate);
 
   if (!info) {
     return `<span class="office-tag">${label}</span>`;
   }
 
   const key = primaryKey(stateCode, office);
-  return `<button type="button" class="office-tag office-tag--interactive" data-primary="${key}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
+  return `<button type="button" class="office-tag office-tag--interactive" data-primary="${key}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
 }
 
 export function initPrimaryPopovers(root = document.getElementById("timeline")) {
