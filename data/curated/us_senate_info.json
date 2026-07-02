@@ -3,13 +3,8 @@
   "_window_months": 12,
   "AK": {
     "polymarket_slug": "alaska-senate-election-winner",
-    "nominee_slugs": {
-      "Republican": "alaska-republican-senate-primary-winner",
-      "Democrat": "alaska-democratic-senate-primary-winner"
-    },
-    "incumbents": {
-      "Republican": "Sullivan"
-    }
+    "odds_format": "candidates",
+    "incumbent": "Sullivan"
   },
   "AR": {
     "polymarket_slug": "arkansas-senate-election-winner",
@@ -63,13 +58,7 @@
   },
   "IL": {
     "polymarket_slug": "illinois-senate-election-winner",
-    "nominee_slugs": {
-      "Republican": "illinois-republican-senate-primary-winner",
-      "Democrat": "illinois-democratic-senate-primary-winner"
-    },
-    "incumbents": {
-      "Democrat": "Duckworth"
-    }
+    "odds_format": "candidates"
   },
   "KS": {
     "polymarket_slug": "kansas-senate-election-winner",
@@ -213,13 +202,7 @@
   },
   "TX": {
     "polymarket_slug": "texas-senate-election-winner",
-    "nominee_slugs": {
-      "Republican": "texas-republican-senate-primary-winner",
-      "Democrat": "texas-democratic-senate-primary-winner"
-    },
-    "incumbents": {
-      "Republican": "Cornyn"
-    }
+    "odds_format": "candidates"
   },
   "WY": {
     "polymarket_slug": "wyoming-senate-election-winner",
