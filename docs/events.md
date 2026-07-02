@@ -191,7 +191,7 @@ python3 scripts/generate_us_governor_info.py
 | Nominee names | Shown on the line below the party label in default text; resolved from linked primary-winner Polymarket markets (`nominee_slugs`); fall back to configured incumbent surname when no market is available |
 | No nominee yet | Show **TBD** on the candidate line when neither a primary winner nor incumbent is known |
 | Incumbent | Append `(Inc.)` to the surname when the configured incumbent is running |
-| Polymarket odds (party format) | Always show Republican and Democratic win odds when available; display rounded percentage |
+| Polymarket odds (party format) | Always show Republican and Democratic win odds when available; display rounded percentage on the same line as the nominee (or TBD) |
 | Candidate odds | For races without a simple Republican vs. Democratic market (`odds_format: "candidates"`), show individual candidates with the same rules as primaries: surname only, above **3%**, rounded percentage |
 | Auto-detect | When a party-format market has no Republican/Democratic outcomes, fall back to individual candidate odds |
 | No market | Label stays non-interactive (no popover) |
@@ -226,7 +226,7 @@ Regenerate after updating Senate market slugs:
 python3 scripts/generate_us_senate_info.py
 ```
 
-Display rules match the US governor popover (party labels with nominee surnames on a separate line, candidate-format fallback, 3% minimum for individuals).
+Display rules match the US governor popover (party labels with nominee surnames and win odds on the candidate line, candidate-format fallback, 3% minimum for individuals).
 
 ## Mayoral info popover
 
