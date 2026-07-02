@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-07-02",
+    "date_precision": "exact",
+    "country": "Algeria",
+    "country_code": "DZ",
+    "state": null,
+    "state_code": null,
+    "title": "Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
+  },
+  {
     "date": "2026-07-21",
     "date_precision": "exact",
     "country": "United States",
@@ -720,6 +738,24 @@
     ],
     "party": "Republican",
     "source": "curated"
+  },
+  {
+    "date": "2026-08-23",
+    "date_precision": "exact",
+    "country": "Kazakhstan",
+    "country_code": "KZ",
+    "state": null,
+    "state_code": null,
+    "title": "Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "wikidata"
   },
   {
     "date": "2026-08-30",
@@ -728,7 +764,7 @@
     "country_code": "HT",
     "state": null,
     "state_code": null,
-    "title": "Presidential",
+    "title": "President",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -746,7 +782,7 @@
     "country_code": "LK",
     "state": null,
     "state_code": null,
-    "title": "Parliamentary",
+    "title": "Parliament",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -764,7 +800,7 @@
     "country_code": "MA",
     "state": null,
     "state_code": null,
-    "title": "Parliamentary",
+    "title": "Parliament",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1119,7 +1155,7 @@
     "country_code": "RU",
     "state": null,
     "state_code": null,
-    "title": "Legislative",
+    "title": "Parliament",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1155,7 +1191,7 @@
     "country_code": "LV",
     "state": null,
     "state_code": null,
-    "title": "Parliamentary",
+    "title": "Parliament",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1233,7 +1269,7 @@
         ]
       },
       {
-        "label": "Presidential — Round 1",
+        "label": "President — Round 1",
         "level": "federal",
         "offices": [
           "President"
@@ -1247,31 +1283,16 @@
     "date_precision": "exact",
     "country": "Brazil",
     "country_code": "BR",
-    "state": null,
-    "state_code": null,
-    "title": "General",
-    "type": "combined",
+    "title": "President — Round 2",
+    "type": "presidential",
     "level": "federal",
     "groups": [
       "brics"
     ],
-    "sections": [
-      {
-        "label": "Parliamentary",
-        "level": "federal",
-        "offices": [
-          "Parliament"
-        ]
-      },
-      {
-        "label": "Presidential — Round 2",
-        "level": "federal",
-        "offices": [
-          "President"
-        ]
-      }
+    "offices": [
+      "President"
     ],
-    "source": "aggregated"
+    "source": "curated"
   },
   {
     "date": "2026-10-27",
@@ -1614,7 +1635,7 @@
     "date_precision": "estimated",
     "country": "New Zealand",
     "country_code": "NZ",
-    "title": "Parliamentary",
+    "title": "Parliament",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1632,7 +1653,7 @@
     "country_code": "AL",
     "state": null,
     "state_code": null,
-    "title": "Presidential",
+    "title": "President",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1658,14 +1679,14 @@
     ],
     "sections": [
       {
-        "label": "Parliamentary",
+        "label": "Parliament",
         "level": "federal",
         "offices": [
           "Parliament"
         ]
       },
       {
-        "label": "Presidential",
+        "label": "President",
         "level": "federal",
         "offices": [
           "President"
@@ -1681,7 +1702,25 @@
     "country_code": "SV",
     "state": null,
     "state_code": null,
-    "title": "Presidential",
+    "title": "President",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "wikidata"
+  },
+  {
+    "date": "2027-01-01",
+    "date_precision": "estimated",
+    "country": "Kenya",
+    "country_code": "KE",
+    "state": null,
+    "state_code": null,
+    "title": "President",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1699,7 +1738,7 @@
     "country_code": "NI",
     "state": null,
     "state_code": null,
-    "title": "Presidential",
+    "title": "President",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1713,29 +1752,11 @@
   {
     "date": "2027-01-01",
     "date_precision": "estimated",
-    "country": "Nigeria",
-    "country_code": "NG",
-    "state": null,
-    "state_code": null,
-    "title": "Parliamentary",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "major"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "wikidata"
-  },
-  {
-    "date": "2027-01-01",
-    "date_precision": "estimated",
     "country": "Slovakia",
     "country_code": "SK",
     "state": null,
     "state_code": null,
-    "title": "Parliamentary",
+    "title": "Parliament",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1753,7 +1774,7 @@
     "country_code": "TJ",
     "state": null,
     "state_code": null,
-    "title": "Presidential",
+    "title": "President",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1771,7 +1792,7 @@
     "country_code": "SV",
     "state": null,
     "state_code": null,
-    "title": "Legislative",
+    "title": "Parliament",
     "type": "legislative",
     "level": "federal",
     "groups": [
@@ -1803,7 +1824,7 @@
     "date_precision": "exact",
     "country": "France",
     "country_code": "FR",
-    "title": "Presidential — Round 1",
+    "title": "President — Round 1",
     "type": "presidential",
     "level": "federal",
     "groups": [
@@ -1872,7 +1893,7 @@
     "date_precision": "exact",
     "country": "France",
     "country_code": "FR",
-    "title": "Presidential — Round 2",
+    "title": "President — Round 2",
     "type": "presidential",
     "level": "federal",
     "groups": [

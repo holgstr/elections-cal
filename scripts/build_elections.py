@@ -139,6 +139,7 @@ CANONICAL_CONTEST_TITLES = {
 VAGUE_STANDALONE_TITLES = {"general"}
 
 PRESIDENTIAL_ROUND_RE = re.compile(r"^Presidential(\s+—\s+Round\s+\d+)$", re.I)
+ROUND_TITLE_RE = re.compile(r"\bround\s+\d+\b", re.I)
 
 
 def country_adjectives(country: str) -> list[str]:
@@ -448,6 +449,17 @@ def has_curated_any_nearby(item: dict, curated: list[dict]) -> bool:
     return False
 
 
+def has_curated_round_same_day(item: dict, curated: list[dict]) -> bool:
+    for other in curated:
+        if other.get("country_code") != item.get("country_code"):
+            continue
+        if other["date"] != item["date"]:
+            continue
+        if ROUND_TITLE_RE.search(other.get("title", "")):
+            return True
+    return False
+
+
 def is_vague_wikidata_title(title: str) -> bool:
     lower = title.lower()
     if VAGUE_GENERAL_RE.search(title):
@@ -471,6 +483,9 @@ def remove_redundant_wikidata(elections: list[dict]) -> list[dict]:
             continue
 
         day_country = (item["date"], item["country_code"])
+
+        if has_curated_round_same_day(item, curated):
+            continue
 
         if has_curated_legislative_nearby(item, curated):
             continue
