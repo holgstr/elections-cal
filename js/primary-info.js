@@ -29,6 +29,8 @@ let deStateInfo = {};
 let deStateWindowMonths = 12;
 let usGovernorInfo = {};
 let usGovernorWindowMonths = 12;
+let usSenateInfo = {};
+let usSenateWindowMonths = 12;
 let mayoralInfo = {};
 let mayoralWindowMonths = 12;
 const oddsCache = new Map();
@@ -86,6 +88,18 @@ export async function loadPrimaryInfo(fetchJson) {
     usGovernorInfo = data;
   } catch {
     usGovernorInfo = {};
+  }
+
+  try {
+    const data = await fetchJson("data/curated/us_senate_info.json");
+    if (data._window_months) {
+      usSenateWindowMonths = data._window_months;
+    }
+    delete data._comment;
+    delete data._window_months;
+    usSenateInfo = data;
+  } catch {
+    usSenateInfo = {};
   }
 
   try {
@@ -149,6 +163,10 @@ export function isGovernorLabel(label) {
   return label?.trim() === "Governor";
 }
 
+export function isSenateLabel(label) {
+  return label?.trim() === "Senate";
+}
+
 export function getDeStateInfo(stateCode, label, electionDate) {
   if (!stateCode || !label) return null;
   if (!isWithinDeStateWindow(electionDate)) return null;
@@ -162,6 +180,16 @@ export function getGovernorInfo(stateCode, electionDate) {
   if (!stateCode) return null;
   if (!isWithinGovernorWindow(electionDate)) return null;
   return usGovernorInfo[stateCode] ?? null;
+}
+
+function isWithinSenateWindow(electionDate) {
+  return isWithinWindow(electionDate, usSenateWindowMonths);
+}
+
+export function getSenateInfo(stateCode, electionDate) {
+  if (!stateCode) return null;
+  if (!isWithinSenateWindow(electionDate)) return null;
+  return usSenateInfo[stateCode] ?? null;
 }
 
 function isWithinMayoralWindow(electionDate) {
@@ -538,6 +566,14 @@ function renderGovernorBody(section, nominees = {}) {
     ${renderGovernorPartyRows(section, nominees)}`;
 }
 
+function renderSenateBody(section, nominees = {}) {
+  return `
+    <p class="primary-popover__type">
+      <span class="primary-popover__type-label">Senate</span>
+    </p>
+    ${renderGovernorPartyRows(section, nominees)}`;
+}
+
 function renderGovernorCandidateBody(section) {
   const candidates = renderCandidateRows(section);
 
@@ -613,6 +649,10 @@ async function loadGovernorOdds(info) {
   } catch {
     return { format: "party", section: { parties: {}, error: true }, nominees: {} };
   }
+}
+
+async function loadSenateOdds(info) {
+  return loadGovernorOdds(info);
 }
 
 function ensurePopover() {
@@ -731,6 +771,41 @@ async function showGovernorPopover(trigger) {
   positionPopover(trigger);
 }
 
+async function showSenatePopover(trigger) {
+  const stateCode = trigger.dataset.senate;
+  const electionDate = trigger.dataset.primaryDate;
+  const info = getSenateInfo(stateCode, electionDate);
+  if (!info) return;
+
+  const popover = ensurePopover();
+  activeTrigger = trigger;
+  trigger.setAttribute("aria-expanded", "true");
+
+  popover.hidden = false;
+  popover.innerHTML = `<p class="primary-popover__loading">Loading…</p>`;
+  positionPopover(trigger);
+
+  const { format, section, nominees = {} } = await loadSenateOdds(info);
+
+  if (activeTrigger !== trigger) return;
+
+  popover.innerHTML =
+    format === "candidates"
+      ? renderSenateCandidateBody(section)
+      : renderSenateBody(section, nominees);
+  positionPopover(trigger);
+}
+
+function renderSenateCandidateBody(section) {
+  const candidates = renderCandidateRows(section);
+
+  return `
+    <p class="primary-popover__type">
+      <span class="primary-popover__type-label">Senate</span>
+    </p>
+    ${candidates}`;
+}
+
 async function showMayoralPopover(trigger) {
   const cityCode = trigger.dataset.mayoral || null;
   const countryCode = trigger.dataset.mayoralCountry || null;
@@ -814,6 +889,10 @@ async function showPopover(trigger) {
 
   if (trigger.dataset.governor) {
     return showGovernorPopover(trigger);
+  }
+
+  if (trigger.dataset.senate) {
+    return showSenatePopover(trigger);
   }
 
   if (trigger.dataset.mayoral || trigger.dataset.mayoralCountry) {
@@ -943,6 +1022,10 @@ export function renderInteractiveOfficeTag(label, stateCode, electionDate, count
     return `<button type="button" class="office-tag office-tag--interactive" data-governor="${stateCode}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
   }
 
+  if (isSenateLabel(label) && getSenateInfo(stateCode, electionDate)) {
+    return `<button type="button" class="office-tag office-tag--interactive" data-senate="${stateCode}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
+  }
+
   if (countryCode === "DE" && getDeStateInfo(stateCode, label, electionDate)) {
     return `<button type="button" class="office-tag office-tag--interactive" data-de-state="${stateCode}" data-de-state-label="${label}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
   }
@@ -993,6 +1076,10 @@ function prefetchGovernorOddsForInfo(info) {
 
 export function prefetchOdds() {
   for (const info of Object.values(usGovernorInfo)) {
+    prefetchGovernorOddsForInfo(info);
+  }
+
+  for (const info of Object.values(usSenateInfo)) {
     prefetchGovernorOddsForInfo(info);
   }
 

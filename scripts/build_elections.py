@@ -53,6 +53,13 @@ LEGISLATIVE_RE = re.compile(
 AGGREGATE_TYPES = {"general", "legislative", "presidential", "combined"}
 CURATED_NEARBY_DAYS = 14
 
+# Class II Senate seats up in 2026 (mirrors scripts/generate_us_primaries.py).
+SENATE_2026 = {
+    "AL", "AK", "AR", "CO", "DE", "GA", "IA", "ID", "IL", "KS", "KY", "LA",
+    "MA", "ME", "MI", "MN", "MS", "MT", "NC", "NE", "NH", "NJ", "NM", "OK",
+    "OR", "RI", "SC", "SD", "TN", "TX", "VA", "WV", "WY",
+}
+
 
 def load_json(path: Path):
     with path.open(encoding="utf-8") as fh:
@@ -541,6 +548,22 @@ def combined_title(country_code: str, federal: list[dict], states: list[dict]) -
     return states[0].get("state") or states[0]["country"]
 
 
+def is_us_midterms_day(country_code: str, federal: list[dict]) -> bool:
+    return country_code == "US" and any(entry.get("title") == "Midterms" for entry in federal)
+
+
+def midterm_state_offices(entry: dict) -> list[str]:
+    offices = [office for office in entry.get("offices", []) if office != "House of Representatives"]
+    state_code = entry.get("state_code")
+    if state_code in SENATE_2026 and "Senate" not in offices:
+        if "Governor" in offices:
+            governor_index = offices.index("Governor") + 1
+            offices.insert(governor_index, "Senate")
+        else:
+            offices.insert(0, "Senate")
+    return offices
+
+
 def aggregate_same_day_elections(elections: list[dict]) -> list[dict]:
     aggregateable = [e for e in elections if e.get("type") in AGGREGATE_TYPES]
     standalone = [e for e in elections if e.get("type") not in AGGREGATE_TYPES]
@@ -557,28 +580,35 @@ def aggregate_same_day_elections(elections: list[dict]) -> list[dict]:
 
         federal = [i for i in items if i.get("level") == "federal"]
         states = [i for i in items if i.get("level") == "state"]
+        us_midterms = is_us_midterms_day(country_code, federal)
 
         sections: list[dict] = []
-        if federal:
+        if federal and not us_midterms:
             if len(federal) == 1:
-                sections.append(
-                    {
-                        "label": "Federal",
-                        "level": "federal",
-                        "offices": federal[0].get("offices", []),
-                    }
-                )
+                offices = federal[0].get("offices", [])
+                if offices:
+                    sections.append(
+                        {
+                            "label": "Federal",
+                            "level": "federal",
+                            "offices": offices,
+                        }
+                    )
             else:
                 for entry in sorted(federal, key=lambda e: e["title"]):
+                    offices = entry.get("offices", [])
+                    if not offices:
+                        continue
                     sections.append(
                         {
                             "label": entry["title"],
                             "level": "federal",
-                            "offices": entry.get("offices", []),
+                            "offices": offices,
                         }
                     )
 
         if states:
+            state_entries = sorted(states, key=lambda e: e.get("state", ""))
             sections.append(
                 {
                     "label": "State",
@@ -587,9 +617,13 @@ def aggregate_same_day_elections(elections: list[dict]) -> list[dict]:
                         {
                             "name": entry["state"],
                             "code": entry["state_code"],
-                            "offices": entry.get("offices", []),
+                            "offices": (
+                                midterm_state_offices(entry)
+                                if us_midterms
+                                else entry.get("offices", [])
+                            ),
                         }
-                        for entry in sorted(states, key=lambda e: e.get("state", ""))
+                        for entry in state_entries
                     ],
                 }
             )

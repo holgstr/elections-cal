@@ -22,7 +22,7 @@ The title is always **concise**. It names the place only — contest names belon
 | US multi-state same day (state-level) | `US State primaries` | `US State primaries` |
 | German state (standalone) | `{State}` | `Berlin` |
 | German multi-state same day | `German State primaries` | `German State primaries` |
-| US midterms | `{Country}` | `United States` |
+| US midterms | `US midterms` | state list: `Governor` · `Senate` (where applicable) |
 
 **Never:**
 
@@ -87,7 +87,7 @@ The `title` field in JSON describes the **contest**, never the location.
 | Single federal election (generic) | `Latvia` | `Parliament` |
 | Merged state primaries (one state) | `Kansas` | `Governor Primary` · `Senate Primary` |
 | US multi-state primary day | `US State primaries` | sections: states + primary labels |
-| US midterms (combined) | `United States` | sections: Federal + State |
+| US midterms (combined) | `US midterms` | sections: states with `Governor` and `Senate` (where applicable) |
 | Brazil election day (combined) | `Brazil` | `National Congress` · `President — Round 1` |
 | Bosnia election day (combined) | `Bosnia and Herzegovina` | `Federation Parliament` · `House of Peoples` · … |
 | German Landtag (standalone) | `Berlin` | `Landtag` |
@@ -213,6 +213,18 @@ python3 scripts/generate_us_governor_info.py
 - **Market fetch fails** — show a short error for that party only
 - **Same surname** — rare; may need a disambiguator (initial) if it becomes a problem
 - **Third parties / independents** — not shown unless explicitly added later
+
+## US Senate info popover
+
+Interactive `Senate` labels in US midterm state sections show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/us_senate_info.json` for Senate general elections within the **next 12 months** (`scripts/generate_us_senate_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set in `data/config/us_senate_markets.json`.
+
+Regenerate after updating Senate market slugs:
+
+```bash
+python3 scripts/generate_us_senate_info.py
+```
+
+Display rules match the US governor popover (party odds with nominee surnames, candidate-format fallback, 3% minimum for individuals).
 
 ## Mayoral info popover
 
