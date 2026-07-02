@@ -228,9 +228,14 @@ function parsePrimaryKey(key) {
   return { stateCode, office };
 }
 
+function stripPartySuffix(name) {
+  return name.replace(/\s*\([A-Z](?:-[A-Z]{2})?\)\s*$/i, "").trim();
+}
+
 function surname(name) {
-  const parts = name.trim().split(/\s+/);
-  if (!parts.length) return name;
+  const cleaned = stripPartySuffix(name.trim());
+  const parts = cleaned.split(/\s+/).filter(Boolean);
+  if (!parts.length) return cleaned || name.trim();
 
   const last = parts[parts.length - 1].replace(/\./g, "").toLowerCase();
   if (NAME_SUFFIXES.has(last) && parts.length > 1) {

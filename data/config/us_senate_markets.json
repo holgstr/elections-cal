@@ -7,7 +7,6 @@
     "GA": { "Democrat": "Ossoff" },
     "IA": { "Republican": "Grassley" },
     "ID": { "Republican": "Risch" },
-    "IL": { "Democrat": "Duckworth" },
     "KS": { "Republican": "Marshall" },
     "MA": { "Democrat": "Warren" },
     "ME": { "Republican": "Collins" },
@@ -22,17 +21,23 @@
     "SC": { "Republican": "Graham" },
     "SD": { "Republican": "Rounds" },
     "TN": { "Republican": "Hagerty" },
-    "TX": { "Republican": "Cornyn" },
     "WY": { "Republican": "Barrasso" }
   },
   "markets": {
-    "AK": { "polymarket_slug": "alaska-senate-election-winner" },
+    "AK": {
+      "polymarket_slug": "alaska-senate-election-winner",
+      "odds_format": "candidates",
+      "incumbent": "Sullivan"
+    },
     "AR": { "polymarket_slug": "arkansas-senate-election-winner" },
     "CO": { "polymarket_slug": "colorado-senate-election-winner" },
     "GA": { "polymarket_slug": "georgia-senate-election-winner" },
     "IA": { "polymarket_slug": "iowa-senate-election-winner" },
     "ID": { "polymarket_slug": "idaho-senate-election-winner" },
-    "IL": { "polymarket_slug": "illinois-senate-election-winner" },
+    "IL": {
+      "polymarket_slug": "illinois-senate-election-winner",
+      "odds_format": "candidates"
+    },
     "KS": { "polymarket_slug": "kansas-senate-election-winner" },
     "MA": { "polymarket_slug": "massachusetts-senate-election-winner" },
     "ME": { "polymarket_slug": "maine-senate-election-winner" },
@@ -47,7 +52,10 @@
     "SC": { "polymarket_slug": "south-carolina-senate-election-winner" },
     "SD": { "polymarket_slug": "south-dakota-senate-election-winner" },
     "TN": { "polymarket_slug": "tennessee-senate-election-winner" },
-    "TX": { "polymarket_slug": "texas-senate-election-winner" },
+    "TX": {
+      "polymarket_slug": "texas-senate-election-winner",
+      "odds_format": "candidates"
+    },
     "WY": { "polymarket_slug": "wyoming-senate-election-winner" }
   }
 }
