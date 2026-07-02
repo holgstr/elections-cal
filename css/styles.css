@@ -462,6 +462,14 @@ body::before {
   gap: 0.2rem;
 }
 
+.state-list--aligned {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, auto) repeat(var(--office-cols, 2), max-content);
+  column-gap: 0.75rem;
+  row-gap: 0.2rem;
+  align-items: center;
+}
+
 .state-row {
   display: flex;
   flex-direction: column;
@@ -493,10 +501,7 @@ body::before {
 }
 
 .state-row--aligned {
-  display: grid;
-  grid-template-columns: minmax(5rem, auto) repeat(var(--office-cols, 2), max-content);
-  gap: 0.25rem 0.75rem;
-  align-items: center;
+  display: contents;
 }
 
 .state-office-cell {
