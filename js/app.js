@@ -12,6 +12,7 @@ const {
   isMayorLabel,
   prefetchOdds,
   isSenateLabel,
+  getNationalElectionInfo,
 } = await import(`./primary-info.js?v=${v}`);
 
 const GROUP_LABELS = {
@@ -609,18 +610,19 @@ function formatCardDate(election) {
   };
 }
 
-function tagNeedsInteractivity(label, stateCode, countryCode, cityCode) {
+function tagNeedsInteractivity(label, stateCode, countryCode, cityCode, electionDate = null) {
   return (
     stateCode ||
     cityCode ||
     (isPresidentialLabel(label) && countryCode) ||
     (isMayorLabel(label) && (cityCode || countryCode)) ||
-    (isSenateLabel(label) && stateCode)
+    (isSenateLabel(label) && stateCode) ||
+    Boolean(getNationalElectionInfo(countryCode, label, electionDate))
   );
 }
 
 function renderOfficeTag(label, stateCode = null, electionDate = null, countryCode = null, cityCode = null) {
-  if (tagNeedsInteractivity(label, stateCode, countryCode, cityCode)) {
+  if (tagNeedsInteractivity(label, stateCode, countryCode, cityCode, electionDate)) {
     return renderInteractiveOfficeTag(label, stateCode, electionDate, countryCode, cityCode);
   }
   return `<span class="office-tag">${label}</span>`;
@@ -697,7 +699,7 @@ function renderLabelTags(labels = [], stateCode = null, electionDate = null, cou
 
   return `<div class="card-labels">${labels
     .map((label) =>
-      tagNeedsInteractivity(label, stateCode, countryCode, cityCode)
+      tagNeedsInteractivity(label, stateCode, countryCode, cityCode, electionDate)
         ? renderInteractiveOfficeTag(label, stateCode, electionDate, countryCode, cityCode)
         : `<span class="office-tag">${label}</span>`
     )
