@@ -299,6 +299,74 @@ def filter_prices(prices: dict[str, float], min_pct: float) -> dict[str, float]:
     return {name: pct for name, pct in prices.items() if pct >= min_pct}
 
 
+def outcome_price_history(
+    snapshots: list[dict],
+    market_id: str,
+    outcome: str,
+    through_day: str,
+) -> list[tuple[str, float]]:
+    history: list[tuple[str, float]] = []
+    for snapshot in sorted(snapshots, key=lambda item: item["date"]):
+        day = snapshot.get("date")
+        if not day or day > through_day:
+            continue
+        market_data = snapshot.get("markets", {}).get(market_id)
+        if not market_data:
+            continue
+        pct = market_data.get("prices", {}).get(outcome)
+        if pct is not None:
+            history.append((day, pct))
+    return history
+
+
+def find_move_anchor(
+    history: list[tuple[str, float]],
+    threshold_pp: float = CHANGE_THRESHOLD_PP,
+) -> tuple[float, int, str, str] | None:
+    """Find the last snapshot at least threshold_pp away from the current price."""
+    if not history:
+        return None
+
+    current_date, current_pct = history[-1]
+    anchor: tuple[str, float] | None = None
+
+    for day, pct in reversed(history[:-1]):
+        if abs(pct - current_pct) >= threshold_pp:
+            anchor = (day, pct)
+            break
+
+    if anchor is None:
+        return None
+
+    anchor_date, anchor_pct = anchor
+    change_pp = round(abs(current_pct - anchor_pct), 2)
+    change_days = (date.fromisoformat(current_date) - date.fromisoformat(anchor_date)).days
+    direction = "up" if current_pct > anchor_pct else "down"
+    return change_pp, change_days, anchor_date, direction
+
+
+def enrich_change_from_history(
+    change: dict,
+    snapshots: list[dict],
+    market_id: str,
+    today: str,
+) -> dict:
+    history = outcome_price_history(snapshots, market_id, change["name"], today)
+    anchor = find_move_anchor(history)
+    if anchor is not None:
+        change_pp, change_days, since_date, direction = anchor
+        change["change_pp"] = change_pp
+        change["change_days"] = change_days
+        change["since_date"] = since_date
+        change["direction"] = direction
+        return change
+
+    since_date = change.get("since_date")
+    if since_date:
+        change["change_days"] = (date.fromisoformat(today) - date.fromisoformat(since_date)).days
+    return change
+
+
 def detect_changes(
     market: TrackedMarket,
     prices: dict[str, float],
@@ -427,10 +495,15 @@ def build_suggestion_entry(
     changes: list[dict],
     prices: dict[str, float],
     election: dict | None,
+    snapshots: list[dict],
+    today: str,
 ) -> dict:
     display_prices = []
     filtered = filter_prices(prices, market.min_pct)
-    change_by_name = {change["name"]: change for change in changes}
+    change_by_name = {
+        change["name"]: enrich_change_from_history(change, snapshots, market.market_id, today)
+        for change in changes
+    }
 
     for name, pct in sorted(filtered.items(), key=lambda item: -item[1]):
         entry = {"name": name, "current_pct": pct}
@@ -450,7 +523,7 @@ def build_suggestion_entry(
         "party": market.party,
         "election_date": election.get("date") if election else None,
         "election_title": election.get("title") if election else None,
-        "changes": changes,
+        "changes": [change_by_name[change["name"]] for change in changes],
         "prices": display_prices,
     }
 
@@ -499,7 +572,9 @@ def main() -> None:
             continue
 
         election = find_election_for_market(market, elections)
-        suggestions.append(build_suggestion_entry(market, changes, prices, election))
+        suggestions.append(
+            build_suggestion_entry(market, changes, prices, election, snapshots, today)
+        )
 
     suggestions.sort(
         key=lambda item: (

@@ -64,12 +64,6 @@ function findElectionForSuggestion(item) {
   }) || null;
 }
 
-function formatShortDate(isoDate) {
-  if (!isoDate) return "";
-  const [year, month, day] = isoDate.split("-");
-  return `${day}/${month}`;
-}
-
 function formatCardDate(isoDate, precision = "exact") {
   if (!isoDate) {
     return { day: "—", weekday: "", full: "", isEstimated: false };
@@ -127,18 +121,19 @@ function contestLabel(item) {
 }
 
 function renderChangeArrow(change) {
-  if (!change?.change_pp) return "";
+  if (!change?.change_pp) return `<span class="price-change" aria-hidden="true"></span>`;
   const arrow = change.direction === "up" ? "↑" : "↓";
   const cls = change.direction === "up" ? "price-change--up" : "price-change--down";
-  const since = formatShortDate(change.since_date);
-  return `<span class="price-change ${cls}" aria-label="${change.direction === "up" ? "Up" : "Down"} ${change.change_pp} percentage points since ${since}">${arrow} ${Math.round(change.change_pp)}% since ${since}</span>`;
+  const days = Number.isFinite(change.change_days) ? `${change.change_days}d` : "";
+  const daysLabel = days ? ` over ${change.change_days} day${change.change_days === 1 ? "" : "s"}` : "";
+  return `<span class="price-change ${cls}" aria-label="${change.direction === "up" ? "Up" : "Down"} ${Math.round(change.change_pp)} percentage points${daysLabel}">${arrow} ${Math.round(change.change_pp)}%${days ? ` ${days}` : ""}</span>`;
 }
 
 function renderPriceRow(price) {
   const change = price.change_pp ? price : null;
   const pct = `<span class="price-current">${Math.round(price.current_pct)}%</span>`;
-  const changeHtml = change ? renderChangeArrow(change) : "";
-  return `<li class="price-row${change ? " price-row--changed" : ""}"><span class="price-name">${price.name}</span><span class="price-values">${pct}${changeHtml}</span></li>`;
+  const changeHtml = change ? renderChangeArrow(change) : `<span class="price-change" aria-hidden="true"></span>`;
+  return `<li class="price-row${change ? " price-row--changed" : ""}"><span class="price-name">${price.name}</span>${pct}${changeHtml}</li>`;
 }
 
 function renderSuggestionCard(item) {
