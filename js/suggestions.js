@@ -120,6 +120,31 @@ function contestLabel(item) {
   return item.contest;
 }
 
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function polymarketEventUrl(slug) {
+  if (!slug) return null;
+  return `https://polymarket.com/event/${encodeURIComponent(slug)}`;
+}
+
+function renderContestLabelTag(item) {
+  const label = contestLabel(item);
+  const safeLabel = escapeHtml(label);
+  const url = polymarketEventUrl(item.slug);
+
+  if (!url) {
+    return `<span class="office-tag">${safeLabel}</span>`;
+  }
+
+  return `<a class="office-tag" href="${url}" target="_blank" rel="noopener noreferrer">${safeLabel}</a>`;
+}
+
 function renderChangeArrow(change) {
   if (!change?.change_pp) return `<span class="price-change" aria-hidden="true"></span>`;
   const arrow = change.direction === "up" ? "↑" : "↓";
@@ -144,7 +169,6 @@ function renderSuggestionCard(item) {
     pseudo.date_precision
   );
   const title = cardTitle(item, election);
-  const label = contestLabel(item);
 
   return `
     <article class="card card-suggestion">
@@ -157,7 +181,7 @@ function renderSuggestionCard(item) {
         <div class="card-topline">
           <h3 class="card-title">${title}</h3>
         </div>
-        <div class="card-labels"><span class="office-tag">${label}</span></div>
+        <div class="card-labels">${renderContestLabelTag(item)}</div>
         <ul class="price-list" aria-label="Market probabilities">
           ${item.prices.map(renderPriceRow).join("")}
         </ul>

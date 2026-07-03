@@ -272,6 +272,15 @@ body::before {
   font-weight: 500;
 }
 
+a.office-tag {
+  text-decoration: none;
+}
+
+a.office-tag:hover,
+a.office-tag:focus-visible {
+  text-decoration: none;
+}
+
 .office-tag--interactive {
   border: none;
   cursor: help;
