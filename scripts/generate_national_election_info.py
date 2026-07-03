@@ -5,10 +5,15 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from national_market_helpers import resolve_contest_markets  # noqa: E402
+
 ELECTIONS_PATH = ROOT / "data" / "elections.json"
 MARKETS_PATH = ROOT / "data" / "config" / "national_election_markets.json"
 OUTPUT_PATH = ROOT / "data" / "curated" / "national_election_info.json"
@@ -159,7 +164,10 @@ def main() -> None:
             continue
         for label in card_labels(election):
             if label in contests[country_code]:
-                needed.setdefault(country_code, {})[label] = contests[country_code][label]
+                contest_cfg = contests[country_code][label]
+                needed.setdefault(country_code, {})[label] = {
+                    "markets": resolve_contest_markets(contest_cfg, meta),
+                }
 
     output: dict = {
         "_comment": (

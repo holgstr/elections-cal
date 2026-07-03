@@ -7,7 +7,8 @@
         {
           "polymarket_slug": "brazil-chamber-of-deputies-election-winner",
           "label": "Chamber of Deputies",
-          "odds_format": "party"
+          "odds_format": "party",
+          "kind": "party_winner"
         }
       ]
     }
@@ -18,7 +19,8 @@
         {
           "polymarket_slug": "who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
           "label": "Next Prime Minister",
-          "odds_format": "candidates"
+          "odds_format": "candidates",
+          "kind": "prime_minister"
         }
       ]
     }
@@ -29,7 +31,8 @@
         {
           "polymarket_slug": "latvian-parliamentary-election-winner",
           "label": "Parliamentary election",
-          "odds_format": "party"
+          "odds_format": "party",
+          "kind": "party_winner"
         }
       ]
     }
@@ -40,7 +43,8 @@
         {
           "polymarket_slug": "mexico-legislative-election-winner",
           "label": "Legislative election",
-          "odds_format": "party"
+          "odds_format": "party",
+          "kind": "party_winner"
         }
       ]
     }
@@ -51,7 +55,8 @@
         {
           "polymarket_slug": "next-prime-minister-of-new-zealand-174",
           "label": "Next Prime Minister",
-          "odds_format": "candidates"
+          "odds_format": "candidates",
+          "kind": "prime_minister"
         }
       ]
     }
@@ -62,12 +67,14 @@
         {
           "polymarket_slug": "next-prime-minister-of-sweden",
           "label": "Next Prime Minister",
-          "odds_format": "candidates"
+          "odds_format": "candidates",
+          "kind": "prime_minister"
         },
         {
           "polymarket_slug": "sweden-parliamentary-election-winner",
           "label": "Largest party",
-          "odds_format": "party"
+          "odds_format": "party",
+          "kind": "party_winner"
         }
       ]
     }

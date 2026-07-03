@@ -1,24 +1,35 @@
 {
   "_comment": "Polymarket slugs for national/federal legislative elections. Regenerate national_election_info.json via scripts/generate_national_election_info.py. Market selection rules: docs/events.md#national-election-info-popover",
-  "companion_markets": {
-    "SE:Riksdag": {
-      "description": "Link both next-PM and largest-party markets when Polymarket lists them for the Riksdag election.",
-      "required_labels": ["Next Prime Minister", "Largest party"]
+  "market_kinds": {
+    "prime_minister": {
+      "label": "Next Prime Minister",
+      "odds_format": "candidates"
+    },
+    "party_winner": {
+      "label": "Largest party",
+      "odds_format": "party"
+    },
+    "most_seats": {
+      "label": "Most seats",
+      "odds_format": "party"
     }
+  },
+  "coverage_rules": {
+    "description": "Parliamentary contests that set companion_kinds must link every listed kind when the contest is in the calendar window. Use when Polymarket lists multiple market types (e.g. next PM and largest party).",
+    "legislative_companion_kinds": ["prime_minister", "party_winner"]
   },
   "contests": {
     "SE": {
       "Riksdag": {
+        "companion_kinds": ["prime_minister", "party_winner"],
         "markets": [
           {
-            "polymarket_slug": "next-prime-minister-of-sweden",
-            "label": "Next Prime Minister",
-            "odds_format": "candidates"
+            "kind": "prime_minister",
+            "polymarket_slug": "next-prime-minister-of-sweden"
           },
           {
-            "polymarket_slug": "sweden-parliamentary-election-winner",
-            "label": "Largest party",
-            "odds_format": "party"
+            "kind": "party_winner",
+            "polymarket_slug": "sweden-parliamentary-election-winner"
           }
         ]
       }
@@ -27,9 +38,8 @@
       "Knesset": {
         "markets": [
           {
-            "polymarket_slug": "who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
-            "label": "Next Prime Minister",
-            "odds_format": "candidates"
+            "kind": "prime_minister",
+            "polymarket_slug": "who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
           }
         ]
       }
@@ -38,9 +48,8 @@
       "Parliament": {
         "markets": [
           {
-            "polymarket_slug": "next-prime-minister-of-new-zealand-174",
-            "label": "Next Prime Minister",
-            "odds_format": "candidates"
+            "kind": "prime_minister",
+            "polymarket_slug": "next-prime-minister-of-new-zealand-174"
           }
         ]
       }
@@ -49,9 +58,9 @@
       "Parliament": {
         "markets": [
           {
-            "polymarket_slug": "latvian-parliamentary-election-winner",
+            "kind": "party_winner",
             "label": "Parliamentary election",
-            "odds_format": "party"
+            "polymarket_slug": "latvian-parliamentary-election-winner"
           }
         ]
       }
@@ -60,9 +69,9 @@
       "Chamber of Deputies": {
         "markets": [
           {
-            "polymarket_slug": "mexico-legislative-election-winner",
+            "kind": "party_winner",
             "label": "Legislative election",
-            "odds_format": "party"
+            "polymarket_slug": "mexico-legislative-election-winner"
           }
         ]
       }
@@ -71,9 +80,9 @@
       "National Congress": {
         "markets": [
           {
-            "polymarket_slug": "brazil-chamber-of-deputies-election-winner",
+            "kind": "party_winner",
             "label": "Chamber of Deputies",
-            "odds_format": "party"
+            "polymarket_slug": "brazil-chamber-of-deputies-election-winner"
           }
         ]
       }

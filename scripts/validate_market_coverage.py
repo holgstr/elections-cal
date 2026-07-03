@@ -2,7 +2,7 @@
 """Validate that calendar elections within market windows have Polymarket slugs configured.
 
 Catches gaps like a top-four primary office missing its _slug (e.g. Alaska Senate) or
-companion national markets (e.g. Sweden Riksdag PM + largest party) not being linked.
+parliamentary contests missing companion market kinds (e.g. PM without largest party).
 """
 
 from __future__ import annotations
@@ -24,6 +24,11 @@ from generate_national_election_info import (  # noqa: E402
 from generate_us_primary_info import (  # noqa: E402
     COMBINED_BALLOT_FORMATS,
     primaries_in_window,
+)
+from national_market_helpers import (  # noqa: E402
+    companion_kinds_for_contest,
+    configured_market_kinds,
+    market_kinds,
 )
 
 PRIMARY_MARKETS_PATH = ROOT / "data" / "config" / "us_primary_markets.json"
@@ -80,22 +85,10 @@ def validate_us_primaries(meta: dict, today: date | None = None) -> list[str]:
     return errors
 
 
-def contest_market_labels(contest_cfg: dict) -> set[str]:
-    labels: set[str] = set()
-    for market in contest_cfg.get("markets") or []:
-        label = (market.get("label") or "").strip()
-        if label:
-            labels.add(label)
-    legacy_label = (contest_cfg.get("label") or "").strip()
-    if legacy_label:
-        labels.add(legacy_label)
-    return labels
-
-
 def validate_national_elections(meta: dict, today: date | None = None) -> list[str]:
     errors: list[str] = []
     contests = meta.get("contests", {})
-    companion_rules = meta.get("companion_markets", {})
+    kinds = market_kinds(meta)
     elections = federal_elections_in_window(today)
 
     seen_contests: set[tuple[str, str]] = set()
@@ -109,18 +102,20 @@ def validate_national_elections(meta: dict, today: date | None = None) -> list[s
                 continue
             seen_contests.add((country_code, label))
 
-    for key, rule in companion_rules.items():
-        country_code, contest_label = key.split(":", 1)
-        if (country_code, contest_label) not in seen_contests:
+    for country_code, contest_label in sorted(seen_contests):
+        contest_cfg = contests[country_code][contest_label]
+        required_kinds = companion_kinds_for_contest(contest_cfg, meta)
+        if not required_kinds:
             continue
-        contest_cfg = contests.get(country_code, {}).get(contest_label, {})
-        configured = contest_market_labels(contest_cfg)
-        for required in rule.get("required_labels") or []:
-            if required not in configured:
+
+        configured = configured_market_kinds(contest_cfg, meta)
+        for kind in required_kinds:
+            if kind not in configured:
+                label = kinds.get(kind, {}).get("label", kind)
                 errors.append(
                     f"Companion market gap: {country_code} {contest_label!r} "
-                    f"missing required market label {required!r} "
-                    f"(configured: {sorted(configured) or 'none'})"
+                    f"missing market kind {kind!r} ({label}); "
+                    f"configured kinds: {sorted(configured) or 'none'}"
                 )
 
     return errors
