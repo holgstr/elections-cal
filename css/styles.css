@@ -274,11 +274,24 @@ body::before {
 
 a.office-tag {
   text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(91, 159, 212, 0.2);
 }
 
 a.office-tag:hover,
-a.office-tag:focus-visible {
+a.office-tag:focus-visible,
+a.office-tag:active {
   text-decoration: none;
+}
+
+a.office-tag--external {
+  position: relative;
+  z-index: 1;
+}
+
+a.office-tag--external:active {
+  background: rgba(91, 159, 212, 0.25);
 }
 
 .office-tag--interactive {

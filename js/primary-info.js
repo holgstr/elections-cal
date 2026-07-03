@@ -1144,11 +1144,16 @@ function hidePopover() {
 }
 
 function isFinePointer() {
-  return window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  return (
+    window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
+    !window.matchMedia("(pointer: coarse)").matches
+  );
 }
 
 function bindPopoverEvents(root) {
   root.addEventListener("click", (event) => {
+    if (event.target.closest("a[href]")) return;
+
     const trigger = event.target.closest(".office-tag--interactive");
     if (trigger) {
       if (isFinePointer()) return;

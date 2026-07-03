@@ -142,7 +142,26 @@ function renderContestLabelTag(item) {
     return `<span class="office-tag">${safeLabel}</span>`;
   }
 
-  return `<a class="office-tag" href="${url}" target="_blank" rel="noopener noreferrer">${safeLabel}</a>`;
+  return `<a class="office-tag office-tag--external" href="${url}" target="_blank" rel="noopener noreferrer">${safeLabel}</a>`;
+}
+
+function isTouchPrimary() {
+  return window.matchMedia("(hover: none), (pointer: coarse)").matches;
+}
+
+let suggestionLinksBound = false;
+
+function bindSuggestionLinks(container) {
+  if (!container || suggestionLinksBound) return;
+  suggestionLinksBound = true;
+
+  container.addEventListener("click", (event) => {
+    const link = event.target.closest("a.office-tag--external");
+    if (!link?.href || !isTouchPrimary()) return;
+
+    event.preventDefault();
+    window.open(link.href, "_blank", "noopener,noreferrer");
+  });
 }
 
 function renderChangeArrow(change) {
@@ -255,6 +274,8 @@ export function renderSuggestions(container) {
     `
     )
     .join("");
+
+  bindSuggestionLinks(container);
 }
 
 export function suggestionsFooterText() {
