@@ -276,12 +276,12 @@ body::before {
   align-items: center;
   gap: 0.35rem;
   margin: 0 0 0.55rem;
-  font-weight: 600;
-  color: var(--text);
 }
 
 .primary-popover__type-label {
   min-width: 0;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .primary-popover__info {
