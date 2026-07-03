@@ -27,17 +27,24 @@ STATE_SLUG_PREFIX = {
     "AK": "alaska",
     "AR": "arkansas",
     "CO": "colorado",
+    "DE": "delaware",
     "GA": "georgia",
     "IA": "iowa",
     "ID": "idaho",
     "IL": "illinois",
     "KS": "kansas",
+    "KY": "kentucky",
+    "LA": "louisiana",
     "ME": "maine",
     "MA": "massachusetts",
     "MI": "michigan",
     "MN": "minnesota",
+    "MS": "mississippi",
+    "MT": "montana",
+    "NC": "north-carolina",
     "NE": "nebraska",
     "NH": "new-hampshire",
+    "NJ": "new-jersey",
     "NM": "new-mexico",
     "OK": "oklahoma",
     "OR": "oregon",
@@ -46,6 +53,8 @@ STATE_SLUG_PREFIX = {
     "SD": "south-dakota",
     "TN": "tennessee",
     "TX": "texas",
+    "VA": "virginia",
+    "WV": "west-virginia",
     "WY": "wyoming",
 }
 
@@ -70,21 +79,20 @@ def window_end(today: date) -> date:
     return today + timedelta(days=WINDOW_MONTHS * 30)
 
 
+def midterm_date() -> date | None:
+    for item in load_json(ELECTIONS_PATH):
+        if item.get("title") == "Midterms" and not item.get("state_code"):
+            return date.fromisoformat(item["date"])
+    return None
+
+
 def senate_states_in_window(today: date | None = None) -> set[str]:
     today = today or date.today()
     end = window_end(today)
-    states: set[str] = set()
-
-    for item in load_json(ELECTIONS_PATH):
-        state_code = item.get("state_code")
-        if not state_code or state_code not in SENATE_2026:
-            continue
-        election_date = date.fromisoformat(item["date"])
-        if election_date < today or election_date > end:
-            continue
-        states.add(state_code)
-
-    return states
+    midterm = midterm_date()
+    if midterm is None or midterm < today or midterm > end:
+        return set()
+    return set(SENATE_2026)
 
 
 def default_nominee_slugs(state_code: str) -> dict[str, str]:

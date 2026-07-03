@@ -1344,6 +1344,13 @@
             ]
           },
           {
+            "name": "Delaware",
+            "code": "DE",
+            "offices": [
+              "Senate"
+            ]
+          },
+          {
             "name": "Florida",
             "code": "FL",
             "offices": [
@@ -1405,6 +1412,20 @@
             ]
           },
           {
+            "name": "Kentucky",
+            "code": "KY",
+            "offices": [
+              "Senate"
+            ]
+          },
+          {
+            "name": "Louisiana",
+            "code": "LA",
+            "offices": [
+              "Senate"
+            ]
+          },
+          {
             "name": "Maine",
             "code": "ME",
             "offices": [
@@ -1449,6 +1470,20 @@
             ]
           },
           {
+            "name": "Mississippi",
+            "code": "MS",
+            "offices": [
+              "Senate"
+            ]
+          },
+          {
+            "name": "Montana",
+            "code": "MT",
+            "offices": [
+              "Senate"
+            ]
+          },
+          {
             "name": "Nebraska",
             "code": "NE",
             "offices": [
@@ -1475,6 +1510,13 @@
             ]
           },
           {
+            "name": "New Jersey",
+            "code": "NJ",
+            "offices": [
+              "Senate"
+            ]
+          },
+          {
             "name": "New Mexico",
             "code": "NM",
             "offices": [
@@ -1489,6 +1531,13 @@
             "offices": [
               "Governor",
               "State Legislature"
+            ]
+          },
+          {
+            "name": "North Carolina",
+            "code": "NC",
+            "offices": [
+              "Senate"
             ]
           },
           {
@@ -1576,6 +1625,20 @@
             "offices": [
               "Governor",
               "State Legislature"
+            ]
+          },
+          {
+            "name": "Virginia",
+            "code": "VA",
+            "offices": [
+              "Senate"
+            ]
+          },
+          {
+            "name": "West Virginia",
+            "code": "WV",
+            "offices": [
+              "Senate"
             ]
           },
           {
