@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0f1219" />
   <meta name="description" content="Upcoming elections in OECD, BRICS, and other major countries over the next 12 months." />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>Election Calendar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,18 +57,27 @@
   </div>
 
   <script type="module">
-    const APP_REV = "13";
-    document.getElementById("app-css").href = `css/styles.css?v=${APP_REV}`;
-    let v = APP_REV;
+    let rev = String(Date.now());
     try {
-      const res = await fetch(`data/meta.json?_=${Date.now()}`, { cache: "no-store" });
+      const res = await fetch(`data/site-rev.json?_=${Date.now()}`, { cache: "no-store" });
       if (res.ok) {
-        const meta = await res.json();
-        if (meta.generated_at) v = `${APP_REV}.${meta.generated_at}`;
+        const data = await res.json();
+        if (data.rev) rev = data.rev;
       }
     } catch {}
-    globalThis.__ECAL_V__ = v;
-    await import(`./js/app.js?v=${v}`);
+
+    const prevRev = sessionStorage.getItem("ecal_site_rev");
+    const hasBust = new URLSearchParams(location.search).has("_");
+    if (prevRev && prevRev !== rev && !hasBust) {
+      sessionStorage.setItem("ecal_site_rev", rev);
+      location.replace(`${location.pathname}?_=${Date.now()}`);
+    } else {
+      sessionStorage.setItem("ecal_site_rev", rev);
+    }
+
+    document.getElementById("app-css").href = `css/styles.css?v=${encodeURIComponent(rev)}`;
+    globalThis.__ECAL_V__ = rev;
+    await import(`./js/app.js?v=${encodeURIComponent(rev)}`);
   </script>
 </body>
 </html>
