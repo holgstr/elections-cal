@@ -52,16 +52,45 @@ function suggestionElectionKey(item) {
   ].join("|");
 }
 
+function electionStateCodes(election) {
+  const codes = new Set();
+  if (election.state_code) codes.add(election.state_code);
+  for (const section of election.sections || []) {
+    for (const state of section.states || []) {
+      if (state.code) codes.add(state.code);
+    }
+  }
+  return codes;
+}
+
+function findNestedState(election, stateCode) {
+  if (!election || !stateCode) return null;
+  if (election.state_code === stateCode) {
+    return { name: election.state, code: election.state_code, offices: election.offices || [] };
+  }
+  for (const section of election.sections || []) {
+    for (const state of section.states || []) {
+      if (state.code === stateCode) return state;
+    }
+  }
+  return null;
+}
+
 function findElectionForSuggestion(item) {
   const key = suggestionElectionKey(item);
   if (electionsByKey.has(key)) return electionsByKey.get(key);
 
   return [...electionsByKey.values()].find((election) => {
     if (item.country_code && election.country_code !== item.country_code) return false;
-    if (item.state_code && election.state_code !== item.state_code) return false;
+    if (item.state_code && !electionStateCodes(election).has(item.state_code)) return false;
     if (item.city_code && election.city_code !== item.city_code) return false;
     return true;
   }) || null;
+}
+
+function resolvedElectionDate(item) {
+  const election = findElectionForSuggestion(item);
+  return item.election_date || election?.date || null;
 }
 
 function formatCardDate(isoDate, precision = "exact") {
@@ -84,8 +113,9 @@ function formatCardDate(isoDate, precision = "exact") {
 }
 
 function pseudoElection(item, election) {
+  const nestedState = item.state_code ? findNestedState(election, item.state_code) : null;
   const country = election?.country || COUNTRY_NAMES[item.country_code] || item.country_code;
-  const state = election?.state
+  const state = election?.state || nestedState?.name
     || (item.country_code === "US" ? US_STATE_NAMES[item.state_code] : null)
     || (item.country_code === "DE" ? DE_STATE_NAMES[item.state_code] : null);
   const city = election?.city || null;
@@ -213,7 +243,7 @@ function renderSuggestionCard(item) {
 function groupByMonth(items) {
   const groups = new Map();
   for (const item of items) {
-    const date = item.election_date || "9999-12-31";
+    const date = resolvedElectionDate(item) || "9999-12-31";
     const d = new Date(`${date}T12:00:00`);
     const key = date.startsWith("9999")
       ? "unknown"
@@ -227,7 +257,7 @@ function groupByMonth(items) {
 
   for (const group of groups.values()) {
     group.items.sort((a, b) => {
-      const dateCmp = (a.election_date || "").localeCompare(b.election_date || "");
+      const dateCmp = (resolvedElectionDate(a) || "").localeCompare(resolvedElectionDate(b) || "");
       if (dateCmp) return dateCmp;
       return (a.contest || "").localeCompare(b.contest || "");
     });

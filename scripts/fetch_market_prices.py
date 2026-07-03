@@ -426,17 +426,32 @@ def election_has_contest(election: dict, contest: str, market_label: str | None 
     )
 
 
+def election_state_codes(election: dict) -> set[str]:
+    codes: set[str] = set()
+    if election.get("state_code"):
+        codes.add(election["state_code"])
+    for section in election.get("sections") or []:
+        for state in section.get("states") or []:
+            if state.get("code"):
+                codes.add(state["code"])
+    return codes
+
+
+def election_matches_location(market: TrackedMarket, election: dict) -> bool:
+    if market.country_code and election.get("country_code") != market.country_code:
+        return False
+    if market.state_code and market.state_code not in election_state_codes(election):
+        return False
+    if market.city_code and election.get("city_code") != market.city_code:
+        return False
+    return True
+
+
 def find_election_for_market(market: TrackedMarket, elections: list[dict]) -> dict | None:
     candidates = []
 
     for election in elections:
-        if market.country_code and election.get("country_code") != market.country_code:
-            continue
-
-        if market.state_code and election.get("state_code") != market.state_code:
-            continue
-
-        if market.city_code and election.get("city_code") != market.city_code:
+        if not election_matches_location(market, election):
             continue
 
         if market.category == "presidential":
@@ -468,7 +483,9 @@ def find_election_for_market(market: TrackedMarket, elections: list[dict]) -> di
                     continue
 
         if market.category == "de_state":
-            if election.get("country_code") != "DE" or not election.get("state_code"):
+            if election.get("country_code") != "DE":
+                continue
+            if market.state_code and market.state_code not in election_state_codes(election):
                 continue
 
         if market.category == "national":
