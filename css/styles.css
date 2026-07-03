@@ -276,12 +276,18 @@ body::before {
   align-items: center;
   gap: 0.35rem;
   margin: 0 0 0.55rem;
+  font-weight: 700;
+  color: var(--text);
 }
 
 .primary-popover__type-label {
   min-width: 0;
-  font-weight: 600;
-  color: var(--text);
+  font-weight: inherit;
+  color: inherit;
+}
+
+.primary-popover__party > .primary-popover__type {
+  margin-bottom: 0.25rem;
 }
 
 .primary-popover__info {

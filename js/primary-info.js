@@ -684,17 +684,24 @@ function renderStackedElectionBody(contestLabel, marketSections) {
     return `<p class="primary-popover__empty">No market data available</p>`;
   }
 
-  if (marketSections.length === 1) {
-    const { market, section } = marketSections[0];
-    const label = escapeHtml(market.label || contestLabel);
-    const candidates = renderCandidateRows(section);
+  const contest = escapeHtml(contestLabel);
+  const singleMarket = marketSections.length === 1 ? marketSections[0] : null;
+  if (singleMarket) {
+    const { market, section } = singleMarket;
+    const marketLabel = (market.label || "").trim();
+    const showNested =
+      marketSections.length > 1 ||
+      (marketLabel && marketLabel.toLowerCase() !== contestLabel.trim().toLowerCase());
 
-    return `
-      ${renderSectionHeadline(label)}
-      ${candidates || `<p class="primary-popover__empty">Could not load market data</p>`}`;
+    if (!showNested) {
+      const candidates = renderCandidateRows(section);
+      return `
+        ${renderSectionHeadline(contest)}
+        ${candidates || `<p class="primary-popover__empty">Could not load market data</p>`}`;
+    }
   }
 
-  return `${renderSectionHeadline(escapeHtml(contestLabel))}<div class="primary-popover__parties">${blocks}</div>`;
+  return `${renderSectionHeadline(contest)}<div class="primary-popover__parties">${blocks}</div>`;
 }
 
 function renderGovernorPartyRows(section, nominees = {}) {
