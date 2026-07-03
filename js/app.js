@@ -1,5 +1,6 @@
 const v = globalThis.__ECAL_V__ ?? "4";
 
+const { fetchLiveSiteRev, reloadIfSiteRevChanged } = await import(`./site-rev.js?v=${v}`);
 const { flagUrl, flagAlt, stateFlagUrl, stateFlagAlt } = await import(`./flags.js?v=${v}`);
 const { fetchJson } = await import(`./fetch-json.js?v=${v}`);
 const {
@@ -115,24 +116,10 @@ function updateFooter(meta) {
   }
 }
 
-async function fetchLiveSiteRev() {
-  const res = await fetch(`data/site-rev.json?_=${Date.now()}`, { cache: "no-store" });
-  if (!res.ok) return null;
-  const data = await res.json();
-  return data.rev ?? null;
-}
-
-async function reloadIfSiteRevChanged(liveRev) {
-  if (!liveRev || liveRev === v || new URLSearchParams(location.search).has("_")) return false;
-  sessionStorage.setItem("ecal_site_rev", liveRev);
-  location.replace(`${location.pathname}?_=${Date.now()}`);
-  return true;
-}
-
 async function init() {
   try {
     const liveRev = await fetchLiveSiteRev();
-    if (await reloadIfSiteRevChanged(liveRev)) return;
+    if (await reloadIfSiteRevChanged(liveRev, v)) return;
   } catch {}
 
   await loadData();
@@ -147,7 +134,7 @@ window.addEventListener("pageshow", async (event) => {
 
   try {
     const liveRev = await fetchLiveSiteRev();
-    if (await reloadIfSiteRevChanged(liveRev)) return;
+    if (await reloadIfSiteRevChanged(liveRev, v)) return;
   } catch {}
 
   loadData().then(() => {
@@ -161,7 +148,7 @@ document.addEventListener("visibilitychange", async () => {
 
   try {
     const liveRev = await fetchLiveSiteRev();
-    if (await reloadIfSiteRevChanged(liveRev)) return;
+    if (await reloadIfSiteRevChanged(liveRev, v)) return;
     await loadData();
     prefetchOdds();
     render();

@@ -57,27 +57,8 @@
   </div>
 
   <script type="module">
-    let rev = String(Date.now());
-    try {
-      const res = await fetch(`data/site-rev.json?_=${Date.now()}`, { cache: "no-store" });
-      if (res.ok) {
-        const data = await res.json();
-        if (data.rev) rev = data.rev;
-      }
-    } catch {}
-
-    const prevRev = sessionStorage.getItem("ecal_site_rev");
-    const hasBust = new URLSearchParams(location.search).has("_");
-    if (prevRev && prevRev !== rev && !hasBust) {
-      sessionStorage.setItem("ecal_site_rev", rev);
-      location.replace(`${location.pathname}?_=${Date.now()}`);
-    } else {
-      sessionStorage.setItem("ecal_site_rev", rev);
-    }
-
-    document.getElementById("app-css").href = `css/styles.css?v=${encodeURIComponent(rev)}`;
-    globalThis.__ECAL_V__ = rev;
-    await import(`./js/app.js?v=${encodeURIComponent(rev)}`);
+    const { bootstrap } = await import(`./js/site-rev.js?b=${Date.now()}`);
+    await bootstrap();
   </script>
 </body>
 </html>
