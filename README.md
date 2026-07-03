@@ -8,6 +8,7 @@ A mobile-friendly static site that lists upcoming elections over the next 12 mon
 - Exact dates when known; estimated dates clearly marked
 - Small country and state flags (US states, German Länder)
 - Mobile-first layout with search and quick filters
+- **Market moves** tab highlighting Polymarket races with ≥5pp probability shifts
 - No build step — plain HTML, CSS, and JavaScript
 
 ## Live site
@@ -67,3 +68,9 @@ The GitHub Actions workflow runs every Monday at 06:00 UTC:
 1. Runs `scripts/build_elections.py` and regenerates Polymarket info files (`us_primary_info.json`, `presidential_info.json`, `de_state_info.json`, `us_governor_info.json`, `mayoral_info.json`)
 2. Commits updated `data/elections.json`, `data/meta.json`, and curated info JSON if changed
 3. A push to `main` (including data refresh commits) triggers GitHub Pages deployment
+
+A separate workflow runs daily at 07:00 UTC:
+
+1. Regenerates Polymarket info files
+2. Runs `scripts/fetch_market_prices.py` to pull odds from Polymarket and detect ≥5pp moves since the last signaled price
+3. Commits `data/market_prices/state.json` and `data/market_suggestions.json` if changed

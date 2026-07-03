@@ -15,7 +15,11 @@
   <div class="page">
     <header class="page-header">
       <h1>Election Calendar</h1>
-      <div class="toolbar" aria-label="Filter elections">
+      <nav class="tab-bar" aria-label="Sections">
+        <button type="button" class="tab-btn is-active" data-tab="calendar" aria-selected="true">Calendar</button>
+        <button type="button" class="tab-btn" data-tab="suggestions" aria-selected="false">Market moves</button>
+      </nav>
+      <div class="toolbar" id="calendar-toolbar" aria-label="Filter elections">
         <label class="search-wrap">
           <span class="sr-only">Search</span>
           <input type="search" id="search" placeholder="Search country, state, office…" autocomplete="off" enterkeyhint="search" />
@@ -29,8 +33,11 @@
     </header>
 
     <main>
-      <section class="timeline" id="timeline" aria-live="polite">
+      <section class="timeline tab-panel is-active" id="timeline" data-panel="calendar" aria-live="polite">
         <p class="loading">Loading elections…</p>
+      </section>
+      <section class="timeline tab-panel" id="suggestions" data-panel="suggestions" aria-live="polite" hidden>
+        <p class="loading">Loading market moves…</p>
       </section>
     </main>
 
@@ -41,7 +48,7 @@
   </div>
 
   <script type="module">
-    const APP_REV = "11";
+    const APP_REV = "12";
     document.getElementById("app-css").href = `css/styles.css?v=${APP_REV}`;
     let v = APP_REV;
     try {

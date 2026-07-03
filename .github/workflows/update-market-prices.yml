@@ -1,0 +1,41 @@
+name: Update market prices
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate market info files
+        run: |
+          python3 scripts/generate_us_primary_info.py
+          python3 scripts/generate_presidential_info.py
+          python3 scripts/generate_de_state_info.py
+          python3 scripts/generate_us_governor_info.py
+          python3 scripts/generate_us_senate_info.py
+          python3 scripts/generate_mayoral_info.py
+          python3 scripts/generate_national_election_info.py
+
+      - name: Fetch Polymarket prices
+        run: python3 scripts/fetch_market_prices.py
+
+      - name: Commit price updates
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet data/market_prices/state.json data/market_suggestions.json; then
+            echo "No market price changes."
+          else
+            git add data/market_prices/state.json data/market_suggestions.json
+            git commit -m "chore: refresh Polymarket market prices"
+            git push
+          fi
