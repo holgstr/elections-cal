@@ -14,6 +14,11 @@ const {
   isSenateLabel,
   getNationalElectionInfo,
 } = await import(`./primary-info.js?v=${v}`);
+const {
+  loadSuggestionsData,
+  renderSuggestions,
+  suggestionsFooterText,
+} = await import(`./suggestions.js?v=${v}`);
 
 const GROUP_LABELS = {
   all: "All",
@@ -80,6 +85,7 @@ function electionCommentLabel(comment) {
 
 let allElections = [];
 let activeGroup = "all";
+let activeTab = "calendar";
 let searchQuery = "";
 let hideStates = false;
 
@@ -88,11 +94,22 @@ async function loadData() {
     fetchJson("data/meta.json"),
     fetchJson("data/elections.json"),
     loadPrimaryInfo(fetchJson),
+    loadSuggestionsData(fetchJson),
   ]);
   allElections = elections;
+  updateFooter(meta);
+}
 
+function updateFooter(meta) {
   const footer = document.getElementById("footer-meta");
-  if (footer && meta.generated_at) {
+  if (!footer) return;
+
+  if (activeTab === "suggestions") {
+    footer.textContent = suggestionsFooterText();
+    return;
+  }
+
+  if (meta?.generated_at) {
     footer.textContent = `Updated ${meta.generated_at} · ${meta.count} elections in window`;
   }
 }
@@ -124,6 +141,42 @@ function bindEvents() {
     hideStates = !e.target.checked;
     render();
   });
+
+  for (const button of document.querySelectorAll(".tab-btn")) {
+    button.addEventListener("click", () => {
+      setActiveTab(button.dataset.tab);
+    });
+  }
+}
+
+function setActiveTab(tab) {
+  if (!tab || tab === activeTab) return;
+  activeTab = tab;
+
+  for (const button of document.querySelectorAll(".tab-btn")) {
+    const isActive = button.dataset.tab === tab;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-selected", String(isActive));
+  }
+
+  for (const panel of document.querySelectorAll(".tab-panel")) {
+    const isActive = panel.dataset.panel === tab;
+    panel.classList.toggle("is-active", isActive);
+    panel.hidden = !isActive;
+  }
+
+  const toolbar = document.getElementById("calendar-toolbar");
+  if (toolbar) toolbar.hidden = tab !== "calendar";
+
+  if (tab === "suggestions") {
+    renderSuggestions(document.getElementById("suggestions"));
+  } else {
+    render();
+  }
+
+  fetchJson("data/meta.json")
+    .then(updateFooter)
+    .catch(() => updateFooter());
 }
 
 function electionHaystack(election) {
