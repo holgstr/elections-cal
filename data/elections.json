@@ -1,21 +1,5 @@
 [
   {
-    "date": "2026-07-02",
-    "date_precision": "exact",
-    "country": "Algeria",
-    "country_code": "DZ",
-    "title": "People's National Assembly",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "major"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "source": "curated"
-  },
-  {
     "date": "2026-07-21",
     "date_precision": "exact",
     "country": "United States",
@@ -1140,6 +1124,22 @@
     "source": "curated"
   },
   {
+    "date": "2026-10-03",
+    "date_precision": "exact",
+    "country": "Latvia",
+    "country_code": "LV",
+    "title": "Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "curated"
+  },
+  {
     "date": "2026-10-04",
     "date_precision": "exact",
     "country": "Bosnia and Herzegovina",
@@ -1631,6 +1631,37 @@
       "President"
     ],
     "source": "curated"
+  },
+  {
+    "date": "2027-01-16",
+    "date_precision": "exact",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "state": null,
+    "state_code": null,
+    "title": "General",
+    "type": "combined",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "sections": [
+      {
+        "label": "National Assembly",
+        "level": "federal",
+        "offices": [
+          "National Assembly"
+        ]
+      },
+      {
+        "label": "President",
+        "level": "federal",
+        "offices": [
+          "President"
+        ]
+      }
+    ],
+    "source": "aggregated"
   },
   {
     "date": "2027-03-07",

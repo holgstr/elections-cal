@@ -33,6 +33,17 @@
     "offices": ["Parliament"]
   },
   {
+    "date": "2026-10-03",
+    "date_precision": "exact",
+    "country": "Latvia",
+    "country_code": "LV",
+    "title": "Parliament",
+    "type": "legislative",
+    "level": "federal",
+    "groups": ["oecd"],
+    "offices": ["Parliament"]
+  },
+  {
     "date": "2026-10-04",
     "date_precision": "exact",
     "country": "Bosnia and Herzegovina",
@@ -176,6 +187,28 @@
     "level": "federal",
     "groups": ["major"],
     "offices": ["President"]
+  },
+  {
+    "date": "2027-01-16",
+    "date_precision": "exact",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "title": "President",
+    "type": "presidential",
+    "level": "federal",
+    "groups": ["major"],
+    "offices": ["President"]
+  },
+  {
+    "date": "2027-01-16",
+    "date_precision": "exact",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "title": "National Assembly",
+    "type": "legislative",
+    "level": "federal",
+    "groups": ["major"],
+    "offices": ["National Assembly"]
   },
   {
     "date": "2027-03-07",
