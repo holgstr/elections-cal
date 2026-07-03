@@ -121,7 +121,13 @@ body::before {
   outline-offset: 1px;
 }
 
-.toggle-states {
+.toolbar-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+}
+
+.toolbar-toggle {
   display: flex;
   align-items: center;
   gap: 0.55rem;
@@ -130,7 +136,7 @@ body::before {
   user-select: none;
 }
 
-.toggle-states input {
+.toolbar-toggle input {
   width: 1rem;
   height: 1rem;
   accent-color: var(--accent);

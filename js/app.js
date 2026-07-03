@@ -32,6 +32,7 @@ const GROUP_LABELS = {
 const LEVEL_LABELS = {
   federal: "Federal",
   state: "State",
+  local: "Local",
 };
 
 const UMBRELLA_TITLES = {
@@ -88,6 +89,7 @@ let activeGroup = "all";
 let activeTab = "calendar";
 let searchQuery = "";
 let hideStates = false;
+let hideLocal = false;
 
 async function loadData() {
   const [meta, elections] = await Promise.all([
@@ -139,6 +141,11 @@ function bindEvents() {
 
   document.getElementById("toggle-states").addEventListener("change", (e) => {
     hideStates = !e.target.checked;
+    render();
+  });
+
+  document.getElementById("toggle-local").addEventListener("change", (e) => {
+    hideLocal = !e.target.checked;
     render();
   });
 
@@ -214,6 +221,8 @@ function filterElections() {
         return false;
       }
     }
+
+    if (hideLocal && election.level === "local") return false;
 
     if (activeGroup !== "all") {
       if (activeGroup === "US" || activeGroup === "DE") {
