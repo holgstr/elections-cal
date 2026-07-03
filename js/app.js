@@ -102,12 +102,16 @@ async function loadData() {
   updateFooter(meta);
 }
 
+function suggestionFilters() {
+  return { hideStates, hideLocal };
+}
+
 function updateFooter(meta) {
   const footer = document.getElementById("footer-meta");
   if (!footer) return;
 
   if (activeTab === "suggestions") {
-    footer.textContent = suggestionsFooterText();
+    footer.textContent = suggestionsFooterText(suggestionFilters());
     return;
   }
 
@@ -163,12 +167,12 @@ function bindEvents() {
 
   document.getElementById("toggle-states").addEventListener("change", (e) => {
     hideStates = !e.target.checked;
-    render();
+    renderActiveTab();
   });
 
   document.getElementById("toggle-local").addEventListener("change", (e) => {
     hideLocal = !e.target.checked;
-    render();
+    renderActiveTab();
   });
 
   for (const button of document.querySelectorAll(".tab-btn")) {
@@ -195,17 +199,24 @@ function setActiveTab(tab) {
   }
 
   const toolbar = document.getElementById("calendar-toolbar");
-  if (toolbar) toolbar.hidden = tab !== "calendar";
+  const searchWrap = toolbar?.querySelector(".search-wrap");
+  if (searchWrap) searchWrap.hidden = tab !== "calendar";
 
-  if (tab === "suggestions") {
-    renderSuggestions(document.getElementById("suggestions"));
-  } else {
-    render();
-  }
+  renderActiveTab();
 
   fetchJson("data/meta.json")
     .then(updateFooter)
     .catch(() => updateFooter());
+}
+
+function renderActiveTab() {
+  if (activeTab === "suggestions") {
+    renderSuggestions(document.getElementById("suggestions"), suggestionFilters());
+    updateFooter();
+    return;
+  }
+
+  render();
 }
 
 function electionHaystack(election) {
