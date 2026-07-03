@@ -1,5 +1,11 @@
 {
   "_comment": "Polymarket slugs for national/federal legislative elections. Regenerate national_election_info.json via scripts/generate_national_election_info.py. Market selection rules: docs/events.md#national-election-info-popover",
+  "companion_markets": {
+    "SE:Riksdag": {
+      "description": "Link both next-PM and largest-party markets when Polymarket lists them for the Riksdag election.",
+      "required_labels": ["Next Prime Minister", "Largest party"]
+    }
+  },
   "contests": {
     "SE": {
       "Riksdag": {
@@ -8,6 +14,11 @@
             "polymarket_slug": "next-prime-minister-of-sweden",
             "label": "Next Prime Minister",
             "odds_format": "candidates"
+          },
+          {
+            "polymarket_slug": "sweden-parliamentary-election-winner",
+            "label": "Largest party",
+            "odds_format": "party"
           }
         ]
       }

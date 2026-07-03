@@ -1,5 +1,6 @@
 {
   "_comment": "Polymarket slugs and incumbent fallbacks for US primaries. Regenerate us_primary_info.json via scripts/generate_us_primary_info.py",
+  "_coverage_rules": "Top-two/top-four states require a _slug for every office in the primary window. Enforced by scripts/validate_market_coverage.py",
   "primary_types": {
     "AZ": { "type": "semi-closed", "note_key": "semi-closed" },
     "KS": { "type": "closed", "note_key": "closed" },
@@ -97,7 +98,8 @@
       }
     },
     "AK": {
-      "Governor": { "_slug": "who-will-advance-from-the-alaska-governor-primary" }
+      "Governor": { "_slug": "who-will-advance-from-the-alaska-governor-primary" },
+      "Senate": { "_slug": "vote-winner-in-alaska-senate-primary-final-round-20260630164517313" }
     },
     "CA": {
       "Governor": { "_slug": "who-will-advance-from-the-california-governor-primary" }

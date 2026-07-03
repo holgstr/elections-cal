@@ -63,6 +63,11 @@
           "polymarket_slug": "next-prime-minister-of-sweden",
           "label": "Next Prime Minister",
           "odds_format": "candidates"
+        },
+        {
+          "polymarket_slug": "sweden-parliamentary-election-winner",
+          "label": "Largest party",
+          "odds_format": "party"
         }
       ]
     }
