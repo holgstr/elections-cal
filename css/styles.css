@@ -473,10 +473,10 @@ body::before {
 }
 
 .price-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 2.75rem 4.75rem;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 0.75rem;
+  gap: 0.35rem 0.75rem;
   font-size: 0.74rem;
 }
 
@@ -492,24 +492,19 @@ body::before {
   color: var(--text);
 }
 
-.price-values {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.35rem;
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
 .price-current {
   font-variant-numeric: tabular-nums;
   font-weight: 600;
   color: #fff;
+  text-align: right;
 }
 
 .price-change {
   font-size: 0.68rem;
   font-variant-numeric: tabular-nums;
   font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .price-change--up {
