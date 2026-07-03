@@ -60,6 +60,42 @@ SENATE_2026 = {
     "OR", "RI", "SC", "SD", "TN", "TX", "VA", "WV", "WY",
 }
 
+US_STATE_NAMES = {
+    "AL": "Alabama",
+    "AK": "Alaska",
+    "AR": "Arkansas",
+    "CO": "Colorado",
+    "DE": "Delaware",
+    "GA": "Georgia",
+    "IA": "Iowa",
+    "ID": "Idaho",
+    "IL": "Illinois",
+    "KS": "Kansas",
+    "KY": "Kentucky",
+    "LA": "Louisiana",
+    "MA": "Massachusetts",
+    "ME": "Maine",
+    "MI": "Michigan",
+    "MN": "Minnesota",
+    "MS": "Mississippi",
+    "MT": "Montana",
+    "NC": "North Carolina",
+    "NE": "Nebraska",
+    "NH": "New Hampshire",
+    "NJ": "New Jersey",
+    "NM": "New Mexico",
+    "OK": "Oklahoma",
+    "OR": "Oregon",
+    "RI": "Rhode Island",
+    "SC": "South Carolina",
+    "SD": "South Dakota",
+    "TN": "Tennessee",
+    "TX": "Texas",
+    "VA": "Virginia",
+    "WV": "West Virginia",
+    "WY": "Wyoming",
+}
+
 
 def load_json(path: Path):
     with path.open(encoding="utf-8") as fh:
@@ -560,6 +596,29 @@ def midterm_state_offices(entry: dict) -> list[str]:
     return offices
 
 
+def midterm_state_sections(states: list[dict]) -> list[dict]:
+    """Build midterm state rows, including Senate-only states without a governor race."""
+    midterm_states = [
+        {
+            "name": entry["state"],
+            "code": entry["state_code"],
+            "offices": midterm_state_offices(entry),
+        }
+        for entry in sorted(states, key=lambda e: e.get("state", ""))
+    ]
+
+    existing_codes = {state["code"] for state in midterm_states}
+    for code in sorted(SENATE_2026):
+        if code in existing_codes:
+            continue
+        name = US_STATE_NAMES.get(code)
+        if not name:
+            continue
+        midterm_states.append({"name": name, "code": code, "offices": ["Senate"]})
+
+    return sorted(midterm_states, key=lambda state: state["name"])
+
+
 def aggregate_same_day_elections(elections: list[dict]) -> list[dict]:
     aggregateable = [e for e in elections if e.get("type") in AGGREGATE_TYPES]
     standalone = [e for e in elections if e.get("type") not in AGGREGATE_TYPES]
@@ -604,23 +663,22 @@ def aggregate_same_day_elections(elections: list[dict]) -> list[dict]:
                     )
 
         if states:
-            state_entries = sorted(states, key=lambda e: e.get("state", ""))
             sections.append(
                 {
                     "label": "State",
                     "level": "state",
-                    "states": [
-                        {
-                            "name": entry["state"],
-                            "code": entry["state_code"],
-                            "offices": (
-                                midterm_state_offices(entry)
-                                if us_midterms
-                                else entry.get("offices", [])
-                            ),
-                        }
-                        for entry in state_entries
-                    ],
+                    "states": (
+                        midterm_state_sections(states)
+                        if us_midterms
+                        else [
+                            {
+                                "name": entry["state"],
+                                "code": entry["state_code"],
+                                "offices": entry.get("offices", []),
+                            }
+                            for entry in sorted(states, key=lambda e: e.get("state", ""))
+                        ]
+                    ),
                 }
             )
 

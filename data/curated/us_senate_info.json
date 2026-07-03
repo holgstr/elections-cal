@@ -6,6 +6,16 @@
     "odds_format": "candidates",
     "incumbent": "Sullivan"
   },
+  "AL": {
+    "polymarket_slug": "alabama-senate-election-winner",
+    "nominee_slugs": {
+      "Republican": "alabama-republican-senate-primary-winner",
+      "Democrat": "alabama-democratic-senate-primary-winner"
+    },
+    "incumbents": {
+      "Republican": "Tuberville"
+    }
+  },
   "AR": {
     "polymarket_slug": "arkansas-senate-election-winner",
     "nominee_slugs": {
@@ -24,6 +34,16 @@
     },
     "incumbents": {
       "Democrat": "Hickenlooper"
+    }
+  },
+  "DE": {
+    "polymarket_slug": "delaware-senate-election-winner",
+    "nominee_slugs": {
+      "Republican": "delaware-republican-senate-primary-winner",
+      "Democrat": "delaware-democratic-senate-primary-winner"
+    },
+    "incumbents": {
+      "Democrat": "Coons"
     }
   },
   "GA": {
@@ -70,6 +90,23 @@
       "Republican": "Marshall"
     }
   },
+  "KY": {
+    "polymarket_slug": "kentucky-senate-election-winner",
+    "nominee_slugs": {
+      "Republican": "kentucky-republican-senate-primary-winner",
+      "Democrat": "kentucky-democratic-senate-primary-winner"
+    }
+  },
+  "LA": {
+    "polymarket_slug": "louisiana-senate-election-winner",
+    "nominee_slugs": {
+      "Republican": "louisiana-republican-senate-primary-winner",
+      "Democrat": "louisiana-democratic-senate-primary-winner"
+    },
+    "incumbents": {
+      "Republican": "Cassidy"
+    }
+  },
   "MA": {
     "polymarket_slug": "massachusetts-senate-election-winner",
     "nominee_slugs": {
@@ -110,6 +147,36 @@
       "Democrat": "Klobuchar"
     }
   },
+  "MS": {
+    "polymarket_slug": "mississippi-senate-election-winner",
+    "nominee_slugs": {
+      "Republican": "mississippi-republican-senate-primary-winner",
+      "Democrat": "mississippi-democratic-senate-primary-winner"
+    },
+    "incumbents": {
+      "Republican": "Hyde-Smith"
+    }
+  },
+  "MT": {
+    "polymarket_slug": "montana-senate-election-winner",
+    "nominee_slugs": {
+      "Republican": "montana-republican-senate-primary-winner",
+      "Democrat": "montana-democratic-senate-primary-winner"
+    },
+    "incumbents": {
+      "Republican": "Daines"
+    }
+  },
+  "NC": {
+    "polymarket_slug": "north-carolina-senate-election-winner",
+    "nominee_slugs": {
+      "Republican": "north-carolina-republican-senate-primary-winner",
+      "Democrat": "north-carolina-democratic-senate-primary-winner"
+    },
+    "incumbents": {
+      "Republican": "Tillis"
+    }
+  },
   "NE": {
     "polymarket_slug": "nebraska-senate-election-winner",
     "nominee_slugs": {
@@ -128,6 +195,16 @@
     },
     "incumbents": {
       "Democrat": "Shaheen"
+    }
+  },
+  "NJ": {
+    "polymarket_slug": "new-jersey-senate-election-winner",
+    "nominee_slugs": {
+      "Republican": "new-jersey-republican-senate-primary-winner",
+      "Democrat": "new-jersey-democratic-senate-primary-winner"
+    },
+    "incumbents": {
+      "Democrat": "Booker"
     }
   },
   "NM": {
@@ -203,6 +280,26 @@
   "TX": {
     "polymarket_slug": "texas-senate-election-winner",
     "odds_format": "candidates"
+  },
+  "VA": {
+    "polymarket_slug": "virginia-senate-election-winner",
+    "nominee_slugs": {
+      "Republican": "virginia-senate-republican-primary-winner",
+      "Democrat": "virginia-democratic-senate-primary-winner"
+    },
+    "incumbents": {
+      "Democrat": "Warner"
+    }
+  },
+  "WV": {
+    "polymarket_slug": "west-virginia-senate-election-winner",
+    "nominee_slugs": {
+      "Republican": "west-virginia-republican-senate-primary-winner",
+      "Democrat": "west-virginia-democratic-senate-primary-winner"
+    },
+    "incumbents": {
+      "Republican": "Capito"
+    }
   },
   "WY": {
     "polymarket_slug": "wyoming-senate-election-winner",
