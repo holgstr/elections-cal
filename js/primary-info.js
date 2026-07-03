@@ -521,6 +521,13 @@ function escapeHtml(text) {
     .replace(/"/g, "&quot;");
 }
 
+function renderSectionHeadline(label, infoIcon = "") {
+  return `
+    <p class="primary-popover__type">
+      <span class="primary-popover__type-label">${label}</span>${infoIcon}
+    </p>`;
+}
+
 function renderTypeHeader(info) {
   const typeLabel =
     info.primary_type_label ||
@@ -535,10 +542,7 @@ function renderTypeHeader(info) {
       </span>`
     : "";
 
-  return `
-    <p class="primary-popover__type">
-      <span class="primary-popover__type-label">${typeLabel}</span>${infoIcon}
-    </p>`;
+  return renderSectionHeadline(typeLabel, infoIcon);
 }
 
 function renderPopoverBody(info, partySections) {
@@ -581,9 +585,7 @@ function renderPresidentialBody(info, section) {
   const candidates = renderCandidateRows(section);
 
   return `
-    <p class="primary-popover__type">
-      <span class="primary-popover__type-label">${label}</span>
-    </p>
+    ${renderSectionHeadline(label)}
     ${candidates}`;
 }
 
@@ -592,9 +594,7 @@ function renderDeStateBody(info, section) {
   const candidates = renderCandidateRows(section);
 
   return `
-    <p class="primary-popover__type">
-      <span class="primary-popover__type-label">${label}</span>
-    </p>
+    ${renderSectionHeadline(label)}
     ${candidates}`;
 }
 
@@ -624,9 +624,7 @@ function renderNationalMarketBlock(market, section) {
 
   return `
     <div class="primary-popover__party">
-      <div class="primary-popover__party-head">
-        <span class="primary-popover__type-label">${label}</span>
-      </div>
+      ${renderSectionHeadline(label)}
       ${candidates || `<p class="primary-popover__empty">Could not load market data</p>`}
     </div>`;
 }
@@ -642,12 +640,7 @@ function renderNationalElectionBody(contestLabel, marketSections) {
   }
 
   const header =
-    marketSections.length === 1
-      ? ""
-      : `
-    <p class="primary-popover__type">
-      <span class="primary-popover__type-label">${escapeHtml(contestLabel)}</span>
-    </p>`;
+    marketSections.length === 1 ? "" : renderSectionHeadline(escapeHtml(contestLabel));
 
   return `${header}<div class="primary-popover__parties">${blocks}</div>`;
 }
@@ -688,17 +681,13 @@ function renderGovernorPartyRows(section, nominees = {}) {
 
 function renderGovernorBody(section, nominees = {}) {
   return `
-    <p class="primary-popover__type">
-      <span class="primary-popover__type-label">Governor</span>
-    </p>
+    ${renderSectionHeadline("Governor")}
     ${renderGovernorPartyRows(section, nominees)}`;
 }
 
 function renderSenateBody(section, nominees = {}) {
   return `
-    <p class="primary-popover__type">
-      <span class="primary-popover__type-label">Senate</span>
-    </p>
+    ${renderSectionHeadline("Senate")}
     ${renderGovernorPartyRows(section, nominees)}`;
 }
 
@@ -706,9 +695,7 @@ function renderGovernorCandidateBody(section) {
   const candidates = renderCandidateRows(section);
 
   return `
-    <p class="primary-popover__type">
-      <span class="primary-popover__type-label">Governor</span>
-    </p>
+    ${renderSectionHeadline("Governor")}
     ${candidates}`;
 }
 
@@ -971,9 +958,7 @@ function renderSenateCandidateBody(section) {
   const candidates = renderCandidateRows(section);
 
   return `
-    <p class="primary-popover__type">
-      <span class="primary-popover__type-label">Senate</span>
-    </p>
+    ${renderSectionHeadline("Senate")}
     ${candidates}`;
 }
 
