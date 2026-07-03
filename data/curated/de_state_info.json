@@ -10,7 +10,18 @@
     "label": "Landtag"
   },
   "ST": {
-    "polymarket_slug": "sachsen-anhalt-parliamentary-election-winner",
-    "label": "Landtag"
+    "label": "Landtag",
+    "markets": [
+      {
+        "polymarket_slug": "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt",
+        "label": "AfD absolute majority",
+        "odds_format": "binary"
+      },
+      {
+        "polymarket_slug": "sachsen-anhalt-parliamentary-election-winner",
+        "label": "Most seats",
+        "odds_format": "party"
+      }
+    ]
   }
 }

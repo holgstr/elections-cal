@@ -2,8 +2,19 @@
   "_comment": "Polymarket slugs for German state (Landtag) elections. Regenerate de_state_info.json via scripts/generate_de_state_info.py",
   "markets": {
     "ST": {
-      "polymarket_slug": "sachsen-anhalt-parliamentary-election-winner",
-      "label": "Landtag"
+      "label": "Landtag",
+      "markets": [
+        {
+          "polymarket_slug": "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt",
+          "label": "AfD absolute majority",
+          "odds_format": "binary"
+        },
+        {
+          "polymarket_slug": "sachsen-anhalt-parliamentary-election-winner",
+          "label": "Most seats",
+          "odds_format": "party"
+        }
+      ]
     },
     "BE": {
       "polymarket_slug": "berlin-state-election-winner",
