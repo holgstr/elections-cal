@@ -25,10 +25,16 @@
           <input type="search" id="search" placeholder="Search country, state, office…" autocomplete="off" enterkeyhint="search" />
         </label>
 
-        <label class="toggle-states">
-          <input type="checkbox" id="toggle-states" checked />
-          <span>Show state elections</span>
-        </label>
+        <div class="toolbar-toggles">
+          <label class="toolbar-toggle">
+            <input type="checkbox" id="toggle-states" checked />
+            <span>Show state elections</span>
+          </label>
+          <label class="toolbar-toggle">
+            <input type="checkbox" id="toggle-local" checked />
+            <span>Show local elections</span>
+          </label>
+        </div>
       </div>
     </header>
 
@@ -48,7 +54,7 @@
   </div>
 
   <script type="module">
-    const APP_REV = "12";
+    const APP_REV = "13";
     document.getElementById("app-css").href = `css/styles.css?v=${APP_REV}`;
     let v = APP_REV;
     try {
