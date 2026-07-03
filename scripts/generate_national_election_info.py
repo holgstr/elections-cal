@@ -119,10 +119,13 @@ def card_labels(election: dict) -> list[str]:
         ]
 
     label = contest_label_from_title(election)
+    labels: list[str] = []
     if label:
-        return [label]
-
-    return list(election.get("offices") or [])
+        labels.append(label)
+    for office in election.get("offices") or []:
+        if office not in labels:
+            labels.append(office)
+    return labels
 
 
 def federal_elections_in_window(today: date | None = None) -> list[dict]:

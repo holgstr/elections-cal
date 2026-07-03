@@ -228,10 +228,42 @@ function isWithinNationalElectionWindow(electionDate) {
   return isWithinWindow(electionDate, nationalElectionWindowMonths);
 }
 
-export function getNationalElectionInfo(countryCode, label, electionDate) {
-  if (!countryCode || !label) return null;
+export function resolveNationalElectionLabel(
+  countryCode,
+  label,
+  electionDate,
+  alternateLabels = []
+) {
+  if (!countryCode) return null;
   if (!isWithinNationalElectionWindow(electionDate)) return null;
-  return nationalElectionInfo[countryCode]?.[label] ?? null;
+
+  const contests = nationalElectionInfo[countryCode];
+  if (!contests) return null;
+
+  const seen = new Set();
+  for (const key of [label, ...alternateLabels]) {
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    if (contests[key]) return key;
+  }
+
+  return null;
+}
+
+export function getNationalElectionInfo(
+  countryCode,
+  label,
+  electionDate,
+  alternateLabels = []
+) {
+  const matchedLabel = resolveNationalElectionLabel(
+    countryCode,
+    label,
+    electionDate,
+    alternateLabels
+  );
+  if (!matchedLabel) return null;
+  return nationalElectionInfo[countryCode][matchedLabel];
 }
 
 export function labelToOffice(label) {
@@ -605,6 +637,10 @@ function renderNationalElectionBody(contestLabel, marketSections) {
     .filter(Boolean)
     .join("");
 
+  if (!blocks) {
+    return `<p class="primary-popover__empty">No market data available</p>`;
+  }
+
   const header =
     marketSections.length === 1
       ? ""
@@ -680,6 +716,10 @@ function usesGovernorCandidateOdds(info) {
   return info.odds_format === "candidates";
 }
 
+function requiresPrimaryNominees(info) {
+  return Boolean(info.nominee_slugs && Object.keys(info.nominee_slugs).length);
+}
+
 async function resolveGovernorNominees(info, parties) {
   const nominees = {};
   const incumbents = info.incumbents || {};
@@ -715,7 +755,9 @@ async function loadGovernorOdds(info) {
     return { format: "party", section: { parties: {} }, nominees: {} };
   }
 
-  if (usesGovernorCandidateOdds(info)) {
+  const primaryRequired = requiresPrimaryNominees(info);
+
+  if (usesGovernorCandidateOdds(info) && !primaryRequired) {
     try {
       const section = await fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null);
       return { format: "candidates", section };
@@ -732,9 +774,11 @@ async function loadGovernorOdds(info) {
       return { format: "party", section, nominees };
     }
 
-    const candidateSection = await fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null);
-    if (candidateSection.candidates.length) {
-      return { format: "candidates", section: candidateSection };
+    if (!primaryRequired) {
+      const candidateSection = await fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null);
+      if (candidateSection.candidates.length) {
+        return { format: "candidates", section: candidateSection };
+      }
     }
 
     return { format: "party", section, nominees: {} };
@@ -867,7 +911,13 @@ async function showNationalElectionPopover(trigger) {
   const countryCode = trigger.dataset.nationalElection;
   const contestLabel = trigger.dataset.nationalElectionLabel;
   const electionDate = trigger.dataset.primaryDate;
-  const info = getNationalElectionInfo(countryCode, contestLabel, electionDate);
+  const alternateLabels = (trigger.dataset.nationalElectionAlternates || "")
+    .split("|")
+    .filter(Boolean);
+  const matchedLabel =
+    resolveNationalElectionLabel(countryCode, contestLabel, electionDate, alternateLabels) ||
+    contestLabel;
+  const info = getNationalElectionInfo(countryCode, matchedLabel, electionDate);
   if (!info) return;
 
   const popover = ensurePopover();
@@ -888,7 +938,7 @@ async function showNationalElectionPopover(trigger) {
 
   if (activeTrigger !== trigger) return;
 
-  popover.innerHTML = renderNationalElectionBody(contestLabel, marketSections);
+  popover.innerHTML = renderNationalElectionBody(matchedLabel, marketSections);
   positionPopover(trigger);
 }
 
@@ -1120,7 +1170,14 @@ function bindPopoverEvents(root) {
   window.addEventListener("scroll", hidePopover, true);
 }
 
-export function renderInteractiveOfficeTag(label, stateCode, electionDate, countryCode = null, cityCode = null) {
+export function renderInteractiveOfficeTag(
+  label,
+  stateCode,
+  electionDate,
+  countryCode = null,
+  cityCode = null,
+  alternateLabels = []
+) {
   if (isPresidentialLabel(label)) {
     const presidential = getPresidentialInfo(countryCode, electionDate);
     if (presidential) {
@@ -1155,9 +1212,17 @@ export function renderInteractiveOfficeTag(label, stateCode, electionDate, count
     return `<button type="button" class="office-tag office-tag--interactive" data-de-state="${stateCode}" data-de-state-label="${label}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
   }
 
-  const nationalElection = getNationalElectionInfo(countryCode, label, electionDate);
-  if (nationalElection) {
-    return `<button type="button" class="office-tag office-tag--interactive" data-national-election="${countryCode}" data-national-election-label="${label}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
+  const matchedNationalLabel = resolveNationalElectionLabel(
+    countryCode,
+    label,
+    electionDate,
+    alternateLabels
+  );
+  if (matchedNationalLabel) {
+    const alternatesAttr = alternateLabels.length
+      ? ` data-national-election-alternates="${alternateLabels.join("|")}"`
+      : "";
+    return `<button type="button" class="office-tag office-tag--interactive" data-national-election="${countryCode}" data-national-election-label="${matchedNationalLabel}"${alternatesAttr} data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
   }
 
   const office = labelToOffice(label);
@@ -1178,7 +1243,7 @@ function prefetchPromise(promise) {
 function prefetchGovernorOddsForInfo(info) {
   if (!info?.polymarket_slug) return;
 
-  if (usesGovernorCandidateOdds(info)) {
+  if (usesGovernorCandidateOdds(info) && !requiresPrimaryNominees(info)) {
     prefetchPromise(fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null));
     return;
   }
