@@ -228,6 +228,54 @@ python3 scripts/generate_us_senate_info.py
 
 Display rules match the US governor popover (party labels with nominee surnames and win odds on the candidate line, candidate-format fallback, 3% minimum for individuals).
 
+## National election info popover
+
+Interactive national legislative labels (`.office-tag--interactive`) show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/national_election_info.json` for national/federal legislative elections within the **next 12 months** (`scripts/generate_national_election_info.py`). Polymarket odds are fetched live from slugs in `data/config/national_election_markets.json`.
+
+Regenerate after updating national election market slugs:
+
+```bash
+python3 scripts/generate_national_election_info.py
+```
+
+### Market selection rules
+
+Parliamentary and legislative elections often have multiple Polymarket markets (next prime minister, party/coalition winner, most seats). Choose the **main** market for each card contest label using competitiveness:
+
+| Step | Rule |
+|------|------|
+| 1. Candidate markets | Compare **next PM** (or presidential candidate) vs **party/coalition winner** vs **most seats** markets that match the calendar election |
+| 2. Competitiveness score | Gap between 1st and 2nd place odds (lower gap = more competitive) |
+| 3. Tiebreaker | More outcomes above the display threshold (3% for candidates, 10% for parties) |
+| 4. Unclear call | If gap scores are within **10 percentage points** and viable-outcome counts differ by at most **1**, include **both** markets in the popover |
+| 5. Single market type | If only one market type exists (e.g. Latvia party winner), link that market |
+| 6. Combined cards | Link each contest label separately (e.g. Brazil `National Congress` vs `President — Round 1`) |
+
+**Examples (2026):**
+
+| Country | Contest | Selected market | Reason |
+|---------|---------|-----------------|--------|
+| Sweden | Riksdag | Next PM | PM gap 51.5% vs party gap 93.2% |
+| Israel | Knesset | Next PM | PM gap 4.3% vs party gap 16% |
+| New Zealand | Parliament | Next PM | PM gap 10% vs party gap 31% |
+| Latvia | Parliament | Party winner | Only linked market |
+| Mexico | Chamber of Deputies | Party winner | Only linked market |
+| Brazil | National Congress | Chamber of Deputies (party) | Matches lower house |
+
+Re-assess when adding new markets: `python3 scripts/assess_polymarket_competitiveness.py`
+
+### Display rules
+
+| Rule | Detail |
+|------|--------|
+| Candidate names | Surname only (PM / presidential-style markets) |
+| Party names | Use Polymarket abbreviations as shown |
+| Polymarket odds (candidates) | Show only above **3%**; display rounded percentage |
+| Polymarket odds (parties) | Show only above **10%**; display rounded percentage |
+| Multiple markets | Stack market blocks with sub-labels when both are linked |
+| No market | Label stays non-interactive (no popover) |
+| Rolling window | Popovers only appear for elections whose date falls within the next 12 months |
+
 ## Mayoral info popover
 
 Interactive `Mayor` labels show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/mayoral_info.json` for mayoral elections within the **next 12 months** (`scripts/generate_mayoral_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set in `data/config/mayoral_markets.json`.

@@ -1,6 +1,7 @@
 const POLYMARKET_API = "https://gamma-api.polymarket.com/events";
 const MIN_POLYMARKET_PCT = 3;
 const MIN_DE_STATE_POLYMARKET_PCT = 10;
+const MIN_NATIONAL_PARTY_POLYMARKET_PCT = 10;
 const GOVERNOR_PARTY_ORDER = ["Republican", "Democrat"];
 const GOVERNOR_PARTY_LABELS = {
   Republican: "Republican",
@@ -33,6 +34,8 @@ let usSenateInfo = {};
 let usSenateWindowMonths = 12;
 let mayoralInfo = {};
 let mayoralWindowMonths = 12;
+let nationalElectionInfo = {};
+let nationalElectionWindowMonths = 12;
 const oddsCache = new Map();
 
 let popoverEl = null;
@@ -112,6 +115,18 @@ export async function loadPrimaryInfo(fetchJson) {
     mayoralInfo = data;
   } catch {
     mayoralInfo = {};
+  }
+
+  try {
+    const data = await fetchJson("data/curated/national_election_info.json");
+    if (data._window_months) {
+      nationalElectionWindowMonths = data._window_months;
+    }
+    delete data._comment;
+    delete data._window_months;
+    nationalElectionInfo = data;
+  } catch {
+    nationalElectionInfo = {};
   }
 }
 
@@ -207,6 +222,16 @@ export function getMayoralInfo(cityCode, electionDate, countryCode = null) {
   if (cityCode && mayoralInfo[cityCode]) return mayoralInfo[cityCode];
   if (countryCode && mayoralInfo[countryCode]) return mayoralInfo[countryCode];
   return null;
+}
+
+function isWithinNationalElectionWindow(electionDate) {
+  return isWithinWindow(electionDate, nationalElectionWindowMonths);
+}
+
+export function getNationalElectionInfo(countryCode, label, electionDate) {
+  if (!countryCode || !label) return null;
+  if (!isWithinNationalElectionWindow(electionDate)) return null;
+  return nationalElectionInfo[countryCode]?.[label] ?? null;
 }
 
 export function labelToOffice(label) {
@@ -541,6 +566,56 @@ function renderDeStateBody(info, section) {
     ${candidates}`;
 }
 
+function usesPartyOdds(market) {
+  return market.odds_format === "party";
+}
+
+async function loadNationalMarketSection(market) {
+  if (!market.polymarket_slug) {
+    return { candidates: [], hasMarket: false };
+  }
+
+  try {
+    if (usesPartyOdds(market)) {
+      return await fetchPolymarketPartyOdds(market.polymarket_slug, MIN_NATIONAL_PARTY_POLYMARKET_PCT);
+    }
+    return await fetchPolymarketOdds(market.polymarket_slug);
+  } catch {
+    return { candidates: [], error: true, hasMarket: true };
+  }
+}
+
+function renderNationalMarketBlock(market, section) {
+  const label = escapeHtml(market.label || "Election");
+  const candidates = renderCandidateRows(section);
+  if (!candidates && !section.error) return "";
+
+  return `
+    <div class="primary-popover__party">
+      <div class="primary-popover__party-head">
+        <span class="primary-popover__type-label">${label}</span>
+      </div>
+      ${candidates || `<p class="primary-popover__empty">Could not load market data</p>`}
+    </div>`;
+}
+
+function renderNationalElectionBody(contestLabel, marketSections) {
+  const blocks = marketSections
+    .map(({ market, section }) => renderNationalMarketBlock(market, section))
+    .filter(Boolean)
+    .join("");
+
+  const header =
+    marketSections.length === 1
+      ? ""
+      : `
+    <p class="primary-popover__type">
+      <span class="primary-popover__type-label">${escapeHtml(contestLabel)}</span>
+    </p>`;
+
+  return `${header}<div class="primary-popover__parties">${blocks}</div>`;
+}
+
 function renderGovernorPartyRows(section, nominees = {}) {
   if (section.error) {
     return `<p class="primary-popover__empty">Could not load market data</p>`;
@@ -788,6 +863,35 @@ async function showGovernorPopover(trigger) {
   positionPopover(trigger);
 }
 
+async function showNationalElectionPopover(trigger) {
+  const countryCode = trigger.dataset.nationalElection;
+  const contestLabel = trigger.dataset.nationalElectionLabel;
+  const electionDate = trigger.dataset.primaryDate;
+  const info = getNationalElectionInfo(countryCode, contestLabel, electionDate);
+  if (!info) return;
+
+  const popover = ensurePopover();
+  activeTrigger = trigger;
+  trigger.setAttribute("aria-expanded", "true");
+
+  popover.hidden = false;
+  popover.innerHTML = `<p class="primary-popover__loading">Loading…</p>`;
+  positionPopover(trigger);
+
+  const markets = info.markets || [];
+  const marketSections = await Promise.all(
+    markets.map(async (market) => ({
+      market,
+      section: await loadNationalMarketSection(market),
+    }))
+  );
+
+  if (activeTrigger !== trigger) return;
+
+  popover.innerHTML = renderNationalElectionBody(contestLabel, marketSections);
+  positionPopover(trigger);
+}
+
 async function showSenatePopover(trigger) {
   const stateCode = trigger.dataset.senate;
   const electionDate = trigger.dataset.primaryDate;
@@ -914,6 +1018,10 @@ async function showPopover(trigger) {
 
   if (trigger.dataset.mayoral || trigger.dataset.mayoralCountry) {
     return showMayoralPopover(trigger);
+  }
+
+  if (trigger.dataset.nationalElection) {
+    return showNationalElectionPopover(trigger);
   }
 
   if (trigger.dataset.deState) {
@@ -1047,6 +1155,11 @@ export function renderInteractiveOfficeTag(label, stateCode, electionDate, count
     return `<button type="button" class="office-tag office-tag--interactive" data-de-state="${stateCode}" data-de-state-label="${label}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
   }
 
+  const nationalElection = getNationalElectionInfo(countryCode, label, electionDate);
+  if (nationalElection) {
+    return `<button type="button" class="office-tag office-tag--interactive" data-national-election="${countryCode}" data-national-election-label="${label}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
+  }
+
   const office = labelToOffice(label);
   const info = getPrimaryInfo(stateCode, office, electionDate);
 
@@ -1132,6 +1245,19 @@ export function prefetchOdds() {
   for (const info of Object.values(mayoralInfo)) {
     if (info.polymarket_slug) {
       prefetchPromise(fetchPolymarketOdds(info.polymarket_slug, info.incumbent ?? null));
+    }
+  }
+
+  for (const contests of Object.values(nationalElectionInfo)) {
+    for (const info of Object.values(contests)) {
+      for (const market of info.markets || []) {
+        if (!market.polymarket_slug) continue;
+        if (usesPartyOdds(market)) {
+          prefetchPromise(fetchPolymarketPartyOdds(market.polymarket_slug, MIN_NATIONAL_PARTY_POLYMARKET_PCT));
+        } else {
+          prefetchPromise(fetchPolymarketOdds(market.polymarket_slug));
+        }
+      }
     }
   }
 }

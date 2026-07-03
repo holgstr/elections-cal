@@ -8,6 +8,10 @@
     "FR": {
       "polymarket_slug": "next-french-presidential-election",
       "label": "Presidential election"
+    },
+    "NG": {
+      "polymarket_slug": "nigerian-presidential-election-winner-20260602162945585",
+      "label": "Presidential election"
     }
   }
 }

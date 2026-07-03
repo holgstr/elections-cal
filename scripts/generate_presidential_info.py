@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -13,6 +14,7 @@ MARKETS_PATH = ROOT / "data" / "config" / "presidential_markets.json"
 OUTPUT_PATH = ROOT / "data" / "curated" / "presidential_info.json"
 
 WINDOW_MONTHS = 12
+PRESIDENTIAL_LABEL_RE = re.compile(r"^President(?:\s+—\s+Round\s+\d+)?$", re.I)
 
 
 def load_json(path: Path) -> dict | list:
@@ -36,14 +38,22 @@ def presidential_countries_in_window(today: date | None = None) -> set[str]:
     countries: set[str] = set()
 
     for item in load_json(ELECTIONS_PATH):
-        if item.get("type") != "presidential":
-            continue
         election_date = date.fromisoformat(item["date"])
         if election_date < today or election_date > end:
             continue
         country_code = item.get("country_code")
-        if country_code:
+        if not country_code:
+            continue
+
+        if item.get("type") == "presidential":
             countries.add(country_code)
+            continue
+
+        for section in item.get("sections") or []:
+            for office in section.get("offices") or []:
+                if PRESIDENTIAL_LABEL_RE.match(office):
+                    countries.add(country_code)
+                    break
 
     return countries
 
