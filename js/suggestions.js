@@ -1,6 +1,6 @@
-import { flagUrl, flagAlt } from "./flags.js";
-
 const v = globalThis.__ECAL_V__ ?? "4";
+
+const { flagUrl, flagAlt } = await import(`./flags.js?v=${v}`);
 const { fetchJson } = await import(`./fetch-json.js?v=${v}`);
 
 const US_STATE_NAMES = {

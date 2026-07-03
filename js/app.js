@@ -1,7 +1,6 @@
-import { flagUrl, flagAlt, stateFlagUrl, stateFlagAlt } from "./flags.js";
-
 const v = globalThis.__ECAL_V__ ?? "4";
 
+const { flagUrl, flagAlt, stateFlagUrl, stateFlagAlt } = await import(`./flags.js?v=${v}`);
 const { fetchJson } = await import(`./fetch-json.js?v=${v}`);
 const {
   loadPrimaryInfo,
@@ -116,7 +115,26 @@ function updateFooter(meta) {
   }
 }
 
+async function fetchLiveSiteRev() {
+  const res = await fetch(`data/site-rev.json?_=${Date.now()}`, { cache: "no-store" });
+  if (!res.ok) return null;
+  const data = await res.json();
+  return data.rev ?? null;
+}
+
+async function reloadIfSiteRevChanged(liveRev) {
+  if (!liveRev || liveRev === v || new URLSearchParams(location.search).has("_")) return false;
+  sessionStorage.setItem("ecal_site_rev", liveRev);
+  location.replace(`${location.pathname}?_=${Date.now()}`);
+  return true;
+}
+
 async function init() {
+  try {
+    const liveRev = await fetchLiveSiteRev();
+    if (await reloadIfSiteRevChanged(liveRev)) return;
+  } catch {}
+
   await loadData();
   prefetchOdds();
   render();
@@ -124,13 +142,30 @@ async function init() {
   initPrimaryPopovers();
 }
 
-window.addEventListener("pageshow", (event) => {
-  if (event.persisted) {
-    loadData().then(() => {
-      prefetchOdds();
-      render();
-    });
-  }
+window.addEventListener("pageshow", async (event) => {
+  if (!event.persisted) return;
+
+  try {
+    const liveRev = await fetchLiveSiteRev();
+    if (await reloadIfSiteRevChanged(liveRev)) return;
+  } catch {}
+
+  loadData().then(() => {
+    prefetchOdds();
+    render();
+  });
+});
+
+document.addEventListener("visibilitychange", async () => {
+  if (document.visibilityState !== "visible") return;
+
+  try {
+    const liveRev = await fetchLiveSiteRev();
+    if (await reloadIfSiteRevChanged(liveRev)) return;
+    await loadData();
+    prefetchOdds();
+    render();
+  } catch {}
 });
 
 function bindEvents() {
