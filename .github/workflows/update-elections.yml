@@ -46,6 +46,6 @@ jobs:
             REV=$(git rev-parse --short HEAD)
             printf '{\n  "rev": "%s"\n}\n' "$REV" > data/site-rev.json
             git add data/site-rev.json
-            git commit --amend --no-edit
+            git commit -m "chore: bump site revision for cache busting"
             git push
           fi
