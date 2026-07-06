@@ -558,14 +558,39 @@ function escapeHtml(text) {
     .replace(/"/g, "&quot;");
 }
 
-function renderSectionHeadline(label, infoIcon = "") {
+function polymarketEventUrl(slug) {
+  if (!slug) return null;
+  return `https://polymarket.com/event/${encodeURIComponent(slug)}`;
+}
+
+function renderLinkedText(label, slug, { className = "", linkClassName = "primary-popover__link" } = {}) {
+  const safeLabel = escapeHtml(label);
+  const url = polymarketEventUrl(slug);
+  if (!url) {
+    return className ? `<span class="${className}">${safeLabel}</span>` : safeLabel;
+  }
+
+  const classes = [linkClassName, className].filter(Boolean).join(" ");
+  return `<a class="${classes}" href="${url}" target="_blank" rel="noopener noreferrer">${safeLabel}</a>`;
+}
+
+function renderSectionHeadline(label, infoIcon = "", slug = null) {
+  const labelHtml = renderLinkedText(label, slug, { className: "primary-popover__type-label" });
   return `
     <p class="primary-popover__type">
-      <span class="primary-popover__type-label">${label}</span>${infoIcon}
+      ${labelHtml}${infoIcon}
     </p>`;
 }
 
-function renderTypeHeader(info) {
+function renderPartyName(party, slug) {
+  const partyClass = `primary-popover__party-name primary-popover__party-name--${partySlug(party)}`;
+  return renderLinkedText(party, slug, {
+    className: partyClass,
+    linkClassName: `${partyClass} primary-popover__link`,
+  });
+}
+
+function renderTypeHeader(info, slug = null) {
   const typeLabel =
     info.primary_type_label ||
     PRIMARY_TYPE_LABELS[info.primary_type] ||
@@ -579,20 +604,22 @@ function renderTypeHeader(info) {
       </span>`
     : "";
 
-  return renderSectionHeadline(typeLabel, infoIcon);
+  return renderSectionHeadline(typeLabel, infoIcon, slug);
 }
 
 function renderPopoverBody(info, partySections) {
+  const partyConfigs = info.parties || {};
   const partyBlocks = Object.entries(partySections)
     .filter(([, section]) => section.candidates.length || section.error)
     .map(([party, section]) => {
       const candidateRows = renderCandidateRows(section);
       if (!candidateRows && !section.error) return "";
+      const slug = partyConfigs[party]?.polymarket_slug;
 
       return `
         <div class="primary-popover__party">
           <div class="primary-popover__party-head">
-            <span class="primary-popover__party-name primary-popover__party-name--${partySlug(party)}">${party}</span>
+            ${renderPartyName(party, slug)}
           </div>
           ${candidateRows}
         </div>`;
@@ -613,16 +640,16 @@ function renderCombinedBallotBody(info, section) {
   const candidates = renderCandidateRows(section);
 
   return `
-    ${renderTypeHeader(info)}
+    ${renderTypeHeader(info, info.polymarket_slug)}
     ${candidates}`;
 }
 
 function renderPresidentialBody(info, section) {
-  const label = escapeHtml(info.label || "Presidential election");
+  const label = info.label || "Presidential election";
   const candidates = renderCandidateRows(section);
 
   return `
-    ${renderSectionHeadline(label)}
+    ${renderSectionHeadline(label, "", info.polymarket_slug)}
     ${candidates}`;
 }
 
@@ -663,13 +690,13 @@ async function loadElectionMarketSection(market, partyMinPct) {
 }
 
 function renderElectionMarketBlock(market, section) {
-  const label = escapeHtml(market.label || "Election");
+  const label = market.label || "Election";
   const candidates = renderCandidateRows(section);
   if (!candidates && !section.error) return "";
 
   return `
     <div class="primary-popover__party">
-      ${renderSectionHeadline(label)}
+      ${renderSectionHeadline(label, "", market.polymarket_slug)}
       ${candidates || `<p class="primary-popover__empty">Could not load market data</p>`}
     </div>`;
 }
@@ -684,7 +711,6 @@ function renderStackedElectionBody(contestLabel, marketSections) {
     return `<p class="primary-popover__empty">No market data available</p>`;
   }
 
-  const contest = escapeHtml(contestLabel);
   const singleMarket = marketSections.length === 1 ? marketSections[0] : null;
   if (singleMarket) {
     const { market, section } = singleMarket;
@@ -696,12 +722,12 @@ function renderStackedElectionBody(contestLabel, marketSections) {
     if (!showNested) {
       const candidates = renderCandidateRows(section);
       return `
-        ${renderSectionHeadline(contest)}
+        ${renderSectionHeadline(contestLabel, "", market.polymarket_slug)}
         ${candidates || `<p class="primary-popover__empty">Could not load market data</p>`}`;
     }
   }
 
-  return `${renderSectionHeadline(contest)}<div class="primary-popover__parties">${blocks}</div>`;
+  return `${renderSectionHeadline(contestLabel)}<div class="primary-popover__parties">${blocks}</div>`;
 }
 
 function renderGovernorPartyRows(section, nominees = {}) {
@@ -723,7 +749,7 @@ function renderGovernorPartyRows(section, nominees = {}) {
       return `
         <div class="primary-popover__party">
           <div class="primary-popover__party-head">
-            <span class="primary-popover__party-name primary-popover__party-name--${partySlug(partyLabel)}">${partyLabel}</span>
+            <span class="primary-popover__party-name primary-popover__party-name--${partySlug(partyLabel)}">${escapeHtml(partyLabel)}</span>
           </div>
           <ul class="primary-popover__candidates">
             <li>
@@ -738,23 +764,23 @@ function renderGovernorPartyRows(section, nominees = {}) {
   return `<div class="primary-popover__parties">${partyBlocks}</div>`;
 }
 
-function renderGovernorBody(section, nominees = {}) {
+function renderGovernorBody(section, nominees = {}, slug = null) {
   return `
-    ${renderSectionHeadline("Governor")}
+    ${renderSectionHeadline("Governor", "", slug)}
     ${renderGovernorPartyRows(section, nominees)}`;
 }
 
-function renderSenateBody(section, nominees = {}) {
+function renderSenateBody(section, nominees = {}, slug = null) {
   return `
-    ${renderSectionHeadline("Senate")}
+    ${renderSectionHeadline("Senate", "", slug)}
     ${renderGovernorPartyRows(section, nominees)}`;
 }
 
-function renderGovernorCandidateBody(section) {
+function renderGovernorCandidateBody(section, slug = null) {
   const candidates = renderCandidateRows(section);
 
   return `
-    ${renderSectionHeadline("Governor")}
+    ${renderSectionHeadline("Governor", "", slug)}
     ${candidates}`;
 }
 
@@ -948,7 +974,9 @@ async function showGovernorPopover(trigger) {
   if (activeTrigger !== trigger) return;
 
   popover.innerHTML =
-    format === "candidates" ? renderGovernorCandidateBody(section) : renderGovernorBody(section, nominees);
+    format === "candidates"
+      ? renderGovernorCandidateBody(section, info.polymarket_slug)
+      : renderGovernorBody(section, nominees, info.polymarket_slug);
   positionPopover(trigger);
 }
 
@@ -1007,16 +1035,16 @@ async function showSenatePopover(trigger) {
 
   popover.innerHTML =
     format === "candidates"
-      ? renderSenateCandidateBody(section)
-      : renderSenateBody(section, nominees);
+      ? renderSenateCandidateBody(section, info.polymarket_slug)
+      : renderSenateBody(section, nominees, info.polymarket_slug);
   positionPopover(trigger);
 }
 
-function renderSenateCandidateBody(section) {
+function renderSenateCandidateBody(section, slug = null) {
   const candidates = renderCandidateRows(section);
 
   return `
-    ${renderSectionHeadline("Senate")}
+    ${renderSectionHeadline("Senate", "", slug)}
     ${candidates}`;
 }
 
