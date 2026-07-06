@@ -348,6 +348,26 @@ a.office-tag--external:active {
   color: inherit;
 }
 
+a.primary-popover__type-label.primary-popover__link:hover,
+a.primary-popover__type-label.primary-popover__link:focus-visible {
+  text-decoration: underline;
+}
+
+.primary-popover__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.primary-popover__link:hover,
+a.primary-popover__link:focus-visible {
+  text-decoration: underline;
+}
+
+a.primary-popover__party-name.primary-popover__link:hover,
+a.primary-popover__party-name.primary-popover__link:focus-visible {
+  text-decoration: underline;
+}
+
 .primary-popover__party > .primary-popover__type {
   margin-bottom: 0.25rem;
 }
