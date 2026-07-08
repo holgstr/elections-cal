@@ -8,6 +8,9 @@ const GOVERNOR_PARTY_LABELS = {
   Democrat: "Democratic",
 };
 
+const v = globalThis.__ECAL_V__ ?? "4";
+const { formatOddsPctWithChange, loadOddsChanges } = await import(`./odds-change.js?v=${v}`);
+
 const NAME_SUFFIXES = new Set(["jr", "jr.", "sr", "sr.", "ii", "iii", "iv"]);
 
 const PRIMARY_TYPE_LABELS = {
@@ -128,6 +131,8 @@ export async function loadPrimaryInfo(fetchJson) {
   } catch {
     nationalElectionInfo = {};
   }
+
+  await loadOddsChanges(fetchJson);
 }
 
 function isWithinWindow(electionDate, windowMonths) {
@@ -306,9 +311,12 @@ function formatPercent(value) {
   return `${Math.round(value)}%`;
 }
 
-function formatOddsPct(pct) {
+function formatOddsPct(pct, slug = null, name = null, oddsFormat = "candidates") {
   if (pct == null) return "";
-  return `<span class="primary-popover__pct">${formatPercent(pct)}</span>`;
+  if (!slug || name == null) {
+    return `<span class="primary-popover__pct">${formatPercent(pct)}</span>`;
+  }
+  return formatOddsPctWithChange(pct, slug, name, oddsFormat, formatPercent, surname);
 }
 
 function partySlug(party) {
@@ -533,7 +541,7 @@ async function loadPartySection(config) {
   return { candidates: [], hasMarket: false };
 }
 
-function renderCandidateRows(section) {
+function renderCandidateRows(section, { slug = null, oddsFormat = "candidates" } = {}) {
   if (section.error) {
     return `<p class="primary-popover__empty">Could not load market data</p>`;
   }
@@ -544,7 +552,7 @@ function renderCandidateRows(section) {
 
   return `<ul class="primary-popover__candidates">${section.candidates
     .map((candidate) => {
-      const pct = formatOddsPct(candidate.pct);
+      const pct = formatOddsPct(candidate.pct, slug, candidate.name, oddsFormat);
       return `<li><span class="primary-popover__name">${formatCandidateName(candidate)}</span>${pct}</li>`;
     })
     .join("")}</ul>`;
@@ -612,7 +620,10 @@ function renderPopoverBody(info, partySections) {
   const partyBlocks = Object.entries(partySections)
     .filter(([, section]) => section.candidates.length || section.error)
     .map(([party, section]) => {
-      const candidateRows = renderCandidateRows(section);
+      const candidateRows = renderCandidateRows(section, {
+        slug: partyConfigs[party]?.polymarket_slug,
+        oddsFormat: "candidates",
+      });
       if (!candidateRows && !section.error) return "";
       const slug = partyConfigs[party]?.polymarket_slug;
 
@@ -637,7 +648,10 @@ function isCombinedBallotPrimary(info) {
 }
 
 function renderCombinedBallotBody(info, section) {
-  const candidates = renderCandidateRows(section);
+  const candidates = renderCandidateRows(section, {
+    slug: info.polymarket_slug,
+    oddsFormat: "candidates",
+  });
 
   return `
     ${renderTypeHeader(info, info.polymarket_slug)}
@@ -646,7 +660,10 @@ function renderCombinedBallotBody(info, section) {
 
 function renderPresidentialBody(info, section) {
   const label = info.label || "Presidential election";
-  const candidates = renderCandidateRows(section);
+  const candidates = renderCandidateRows(section, {
+    slug: info.polymarket_slug,
+    oddsFormat: "candidates",
+  });
 
   return `
     ${renderSectionHeadline(label, "", info.polymarket_slug)}
@@ -691,7 +708,11 @@ async function loadElectionMarketSection(market, partyMinPct) {
 
 function renderElectionMarketBlock(market, section) {
   const label = market.label || "Election";
-  const candidates = renderCandidateRows(section);
+  const oddsFormat = market.odds_format || "party";
+  const candidates = renderCandidateRows(section, {
+    slug: market.polymarket_slug,
+    oddsFormat,
+  });
   if (!candidates && !section.error) return "";
 
   return `
@@ -720,7 +741,11 @@ function renderStackedElectionBody(contestLabel, marketSections) {
       (marketLabel && marketLabel.toLowerCase() !== contestLabel.trim().toLowerCase());
 
     if (!showNested) {
-      const candidates = renderCandidateRows(section);
+      const oddsFormat = market.odds_format || "party";
+      const candidates = renderCandidateRows(section, {
+        slug: market.polymarket_slug,
+        oddsFormat,
+      });
       return `
         ${renderSectionHeadline(contestLabel, "", market.polymarket_slug)}
         ${candidates || `<p class="primary-popover__empty">Could not load market data</p>`}`;
@@ -730,7 +755,7 @@ function renderStackedElectionBody(contestLabel, marketSections) {
   return `${renderSectionHeadline(contestLabel)}<div class="primary-popover__parties">${blocks}</div>`;
 }
 
-function renderGovernorPartyRows(section, nominees = {}) {
+function renderGovernorPartyRows(section, nominees = {}, slug = null) {
   if (section.error) {
     return `<p class="primary-popover__empty">Could not load market data</p>`;
   }
@@ -754,7 +779,7 @@ function renderGovernorPartyRows(section, nominees = {}) {
           <ul class="primary-popover__candidates">
             <li>
               <span class="primary-popover__name">${candidateName}</span>
-              ${formatOddsPct(section.parties[party])}
+              ${formatOddsPct(section.parties[party], slug, partyLabel, "party")}
             </li>
           </ul>
         </div>`;
@@ -767,17 +792,20 @@ function renderGovernorPartyRows(section, nominees = {}) {
 function renderGovernorBody(section, nominees = {}, slug = null) {
   return `
     ${renderSectionHeadline("Governor", "", slug)}
-    ${renderGovernorPartyRows(section, nominees)}`;
+    ${renderGovernorPartyRows(section, nominees, slug)}`;
 }
 
 function renderSenateBody(section, nominees = {}, slug = null) {
   return `
     ${renderSectionHeadline("Senate", "", slug)}
-    ${renderGovernorPartyRows(section, nominees)}`;
+    ${renderGovernorPartyRows(section, nominees, slug)}`;
 }
 
 function renderGovernorCandidateBody(section, slug = null) {
-  const candidates = renderCandidateRows(section);
+  const candidates = renderCandidateRows(section, {
+    slug,
+    oddsFormat: "candidates",
+  });
 
   return `
     ${renderSectionHeadline("Governor", "", slug)}
@@ -1041,7 +1069,10 @@ async function showSenatePopover(trigger) {
 }
 
 function renderSenateCandidateBody(section, slug = null) {
-  const candidates = renderCandidateRows(section);
+  const candidates = renderCandidateRows(section, {
+    slug,
+    oddsFormat: "candidates",
+  });
 
   return `
     ${renderSectionHeadline("Senate", "", slug)}

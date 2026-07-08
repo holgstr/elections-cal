@@ -21,21 +21,21 @@
       "changes": [
         {
           "name": "Jerri Green",
-          "current_pct": 84.0,
+          "current_pct": 85.5,
           "change_pp": 5.0,
           "direction": "up",
-          "since_date": "2026-07-04",
-          "change_days": 4
+          "since_date": "2026-07-07",
+          "change_days": 1
         }
       ],
       "prices": [
         {
           "name": "Jerri Green",
-          "current_pct": 84.0,
+          "current_pct": 85.5,
           "change_pp": 5.0,
           "direction": "up",
-          "since_date": "2026-07-04",
-          "change_days": 4
+          "since_date": "2026-07-07",
+          "change_days": 1
         },
         {
           "name": "Carnita Atwater",
@@ -154,16 +154,16 @@
       "changes": [
         {
           "name": "Democrat",
-          "current_pct": 4.9,
-          "change_pp": 5.5,
+          "current_pct": 4.95,
+          "change_pp": 5.45,
           "direction": "down",
           "since_date": "2026-07-04",
           "change_days": 4
         },
         {
           "name": "Republican",
-          "current_pct": 76.35,
-          "change_pp": 15.0,
+          "current_pct": 82.55,
+          "change_pp": 8.8,
           "direction": "down",
           "since_date": "2026-07-07",
           "change_days": 1
@@ -172,16 +172,16 @@
       "prices": [
         {
           "name": "Republican",
-          "current_pct": 76.35,
-          "change_pp": 15.0,
+          "current_pct": 82.55,
+          "change_pp": 8.8,
           "direction": "down",
           "since_date": "2026-07-07",
           "change_days": 1
         },
         {
           "name": "Democrat",
-          "current_pct": 4.9,
-          "change_pp": 5.5,
+          "current_pct": 4.95,
+          "change_pp": 5.45,
           "direction": "down",
           "since_date": "2026-07-04",
           "change_days": 4
@@ -205,8 +205,8 @@
       "changes": [
         {
           "name": "Karishma Manzur",
-          "current_pct": 11.7,
-          "change_pp": 7.05,
+          "current_pct": 11.35,
+          "change_pp": 6.7,
           "direction": "up",
           "since_date": "2026-07-07",
           "change_days": 1
@@ -231,8 +231,8 @@
         },
         {
           "name": "Karishma Manzur",
-          "current_pct": 11.7,
-          "change_pp": 7.05,
+          "current_pct": 11.35,
+          "change_pp": 6.7,
           "direction": "up",
           "since_date": "2026-07-07",
           "change_days": 1
@@ -256,8 +256,8 @@
       "changes": [
         {
           "name": "Aaron Guckian",
-          "current_pct": 43.95,
-          "change_pp": 7.4,
+          "current_pct": 44.2,
+          "change_pp": 7.65,
           "direction": "up",
           "since_date": "2026-07-07",
           "change_days": 1
@@ -270,8 +270,8 @@
         },
         {
           "name": "Aaron Guckian",
-          "current_pct": 43.95,
-          "change_pp": 7.4,
+          "current_pct": 44.2,
+          "change_pp": 7.65,
           "direction": "up",
           "since_date": "2026-07-07",
           "change_days": 1
@@ -471,16 +471,16 @@
       "changes": [
         {
           "name": "Marine Le Pen",
-          "current_pct": 24.5,
-          "change_pp": 16.0,
+          "current_pct": 24.55,
+          "change_pp": 16.05,
           "direction": "up",
           "since_date": "2026-07-07",
           "change_days": 1
         },
         {
           "name": "Jordan Bardella",
-          "current_pct": 5.85,
-          "change_pp": 19.65,
+          "current_pct": 6.35,
+          "change_pp": 19.15,
           "direction": "down",
           "since_date": "2026-07-07",
           "change_days": 1
@@ -493,8 +493,8 @@
         },
         {
           "name": "Marine Le Pen",
-          "current_pct": 24.5,
-          "change_pp": 16.0,
+          "current_pct": 24.55,
+          "change_pp": 16.05,
           "direction": "up",
           "since_date": "2026-07-07",
           "change_days": 1
@@ -505,15 +505,15 @@
         },
         {
           "name": "Jordan Bardella",
-          "current_pct": 5.85,
-          "change_pp": 19.65,
+          "current_pct": 6.35,
+          "change_pp": 19.15,
           "direction": "down",
           "since_date": "2026-07-07",
           "change_days": 1
         },
         {
           "name": "Bruno Retailleau",
-          "current_pct": 4.05
+          "current_pct": 4.0
         }
       ]
     }
