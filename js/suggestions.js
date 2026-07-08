@@ -196,18 +196,16 @@ function bindSuggestionLinks(container) {
 }
 
 function renderChangeArrow(change) {
-  if (!change?.change_pp) return `<span class="price-change" aria-hidden="true"></span>`;
+  if (!change?.change_pp) return `<span class="price-change price-change--placeholder" aria-hidden="true">--</span>`;
   const arrow = change.direction === "up" ? "↑" : "↓";
   const cls = change.direction === "up" ? "price-change--up" : "price-change--down";
-  const days = Number.isFinite(change.change_days) ? `${change.change_days}d` : "";
-  const daysLabel = days ? ` over ${change.change_days} day${change.change_days === 1 ? "" : "s"}` : "";
-  return `<span class="price-change ${cls}" aria-label="${change.direction === "up" ? "Up" : "Down"} ${Math.round(change.change_pp)} percentage points${daysLabel}">${arrow} ${Math.round(change.change_pp)}%${days ? ` ${days}` : ""}</span>`;
+  return `<span class="price-change ${cls}" aria-label="${change.direction === "up" ? "Up" : "Down"} ${Math.round(change.change_pp)} percentage points">${arrow} ${Math.round(change.change_pp)}%</span>`;
 }
 
 function renderPriceRow(price) {
   const change = price.change_pp ? price : null;
   const pct = `<span class="price-current">${Math.round(price.current_pct)}%</span>`;
-  const changeHtml = change ? renderChangeArrow(change) : `<span class="price-change" aria-hidden="true"></span>`;
+  const changeHtml = change ? renderChangeArrow(change) : `<span class="price-change price-change--placeholder" aria-hidden="true">--</span>`;
   return `<li class="price-row${change ? " price-row--changed" : ""}"><span class="price-name">${escapeHtml(price.name)}</span>${pct}${changeHtml}</li>`;
 }
 

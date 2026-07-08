@@ -474,7 +474,7 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
 
 .primary-popover__odds-values {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 2.75rem 4.25rem;
   align-items: baseline;
   gap: 0.35rem;
   justify-self: end;
@@ -489,10 +489,11 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
 
 .primary-popover__odds-values .price-change {
   font-size: 0.68rem;
+  text-align: right;
 }
 
-.primary-popover__odds-values .price-change:empty {
-  display: none;
+.price-change--placeholder {
+  visibility: hidden;
 }
 
 .primary-popover__name {
