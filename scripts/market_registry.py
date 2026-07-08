@@ -142,7 +142,7 @@ def collect_us_governor(markets: list[TrackedMarket]) -> None:
             country_code="US",
             contest="Governor",
             state_code=state_code,
-            odds_format=info.get("odds_format", "candidates"),
+            odds_format=info.get("odds_format", "party"),
         )
 
 
@@ -157,7 +157,7 @@ def collect_us_senate(markets: list[TrackedMarket]) -> None:
             country_code="US",
             contest="Senate",
             state_code=state_code,
-            odds_format=info.get("odds_format", "candidates"),
+            odds_format=info.get("odds_format", "party"),
         )
 
 

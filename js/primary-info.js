@@ -1418,3 +1418,67 @@ export function initPrimaryPopovers(root = document.getElementById("timeline")) 
   if (!root) return;
   bindPopoverEvents(root);
 }
+
+function governorPartyCandidates(parties) {
+  return GOVERNOR_PARTY_ORDER.filter((party) => parties?.[party] != null).map((party) => ({
+    name: party,
+    pct: parties[party],
+  }));
+}
+
+export async function fetchDisplayOdds({
+  slug,
+  oddsFormat = "candidates",
+  minPct = MIN_POLYMARKET_PCT,
+}) {
+  if (!slug) return [];
+
+  if (oddsFormat === "party") {
+    const { candidates } = await fetchPolymarketPartyOdds(slug, minPct);
+    return candidates;
+  }
+
+  if (oddsFormat === "binary") {
+    const { candidates } = await fetchPolymarketBinaryOdds(slug, minPct);
+    return candidates;
+  }
+
+  const { candidates } = await fetchPolymarketOdds(slug);
+  return candidates;
+}
+
+export async function fetchSuggestionOdds(item) {
+  const slug = item.slug;
+  if (!slug) return [];
+
+  const oddsFormat = item.odds_format || "candidates";
+  const minPct = item.min_pct ?? MIN_POLYMARKET_PCT;
+
+  if (item.category === "us_governor" || item.category === "us_senate") {
+    if (oddsFormat === "candidates") {
+      const { candidates } = await fetchPolymarketOdds(slug);
+      return candidates;
+    }
+
+    try {
+      const { parties } = await fetchGovernorOdds(slug);
+      const partyCandidates = governorPartyCandidates(parties);
+      if (partyCandidates.length) return partyCandidates;
+    } catch {
+      // Fall through to candidate odds.
+    }
+
+    const { candidates } = await fetchPolymarketOdds(slug);
+    return candidates;
+  }
+
+  return fetchDisplayOdds({ slug, oddsFormat, minPct });
+}
+
+export function matchSuggestionPrice(staticPrices, displayName, oddsFormat = "candidates") {
+  for (const price of staticPrices || []) {
+    if (price.name === displayName) return price;
+    if (oddsFormat === "candidates" && surname(price.name) === displayName) return price;
+  }
+  return null;
+}

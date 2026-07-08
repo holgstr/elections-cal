@@ -209,9 +209,9 @@ function setActiveTab(tab) {
     .catch(() => updateFooter());
 }
 
-function renderActiveTab() {
+async function renderActiveTab() {
   if (activeTab === "suggestions") {
-    renderSuggestions(document.getElementById("suggestions"), suggestionFilters());
+    await renderSuggestions(document.getElementById("suggestions"), suggestionFilters());
     updateFooter();
     return;
   }
