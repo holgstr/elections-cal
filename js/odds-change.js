@@ -34,15 +34,14 @@ export function lookupOddsChange(slug, displayName, oddsFormat = "candidates", m
 
 export function renderOddsChangeBadge(change) {
   if (!change?.change_pp) {
-    return `<span class="price-change" aria-hidden="true"></span>`;
+    return `<span class="price-change price-change--placeholder" aria-hidden="true">--</span>`;
   }
 
   const arrow = change.direction === "up" ? "↑" : "↓";
   const cls = change.direction === "up" ? "price-change--up" : "price-change--down";
-  const windowLabel = change.window || "2d";
   const directionLabel = change.direction === "up" ? "Up" : "Down";
 
-  return `<span class="price-change ${cls}" aria-label="${directionLabel} ${Math.round(change.change_pp)} percentage points over ${windowLabel}">${arrow} ${Math.round(change.change_pp)}% ${windowLabel}</span>`;
+  return `<span class="price-change ${cls}" aria-label="${directionLabel} ${Math.round(change.change_pp)} percentage points">${arrow} ${Math.round(change.change_pp)}%</span>`;
 }
 
 export function formatOddsPctWithChange(pct, slug, name, oddsFormat, formatPercent, matchName) {
