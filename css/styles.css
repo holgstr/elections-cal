@@ -474,9 +474,9 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
 
 .primary-popover__odds-values {
   display: grid;
-  grid-template-columns: 2.75rem 4.25rem;
+  grid-template-columns: 2.5rem 3.75rem;
   align-items: baseline;
-  gap: 0.35rem;
+  gap: 0.15rem;
   justify-self: end;
 }
 
