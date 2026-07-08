@@ -106,6 +106,42 @@ def markets_to_token_map(markets: list[dict]) -> dict[str, str]:
     return tokens
 
 
+def binary_market_to_prices(markets: list[dict]) -> dict[str, float]:
+    """Parse a single binary market's outcomes array, matching the calendar popover."""
+    market = next((item for item in markets if item.get("active") is not False), None)
+    if not market:
+        return {}
+
+    outcomes = market.get("outcomes")
+    outcome_prices = market.get("outcomePrices")
+    try:
+        outcomes = json.loads(outcomes) if isinstance(outcomes, str) else outcomes
+        outcome_prices = (
+            json.loads(outcome_prices) if isinstance(outcome_prices, str) else outcome_prices
+        )
+    except (TypeError, ValueError, json.JSONDecodeError):
+        return {}
+
+    prices: dict[str, float] = {}
+    for name, raw_price in zip(outcomes or [], outcome_prices or []):
+        label = (name or "").strip()
+        if not label:
+            continue
+        try:
+            pct = round(float(raw_price) * 100, 2)
+        except (TypeError, ValueError):
+            continue
+        prices[label] = pct
+    return prices
+
+
+def fetch_market_prices(market: TrackedMarket) -> dict[str, float]:
+    markets = fetch_gamma_event(market.slug)
+    if market.odds_format == "binary":
+        return binary_market_to_prices(markets)
+    return markets_to_prices(markets)
+
+
 def fetch_slug_prices(slug: str) -> dict[str, float]:
     return markets_to_prices(fetch_gamma_event(slug))
 
@@ -296,7 +332,7 @@ def snapshot_for_date(state: dict, day: str) -> dict | None:
 
 
 def filter_prices(prices: dict[str, float], min_pct: float) -> dict[str, float]:
-    return {name: pct for name, pct in prices.items() if pct >= min_pct}
+    return {name: pct for name, pct in prices.items() if pct > min_pct}
 
 
 def outcome_price_history(
@@ -532,6 +568,8 @@ def build_suggestion_entry(
         "market_id": market.market_id,
         "slug": market.slug,
         "category": market.category,
+        "odds_format": market.odds_format,
+        "min_pct": market.min_pct,
         "country_code": market.country_code,
         "state_code": market.state_code,
         "city_code": market.city_code,
@@ -573,7 +611,7 @@ def main() -> None:
         seed_baselines_from_snapshots(baselines, market, snapshots, today, BACKFILL_DAYS)
 
         try:
-            prices = fetch_slug_prices(market.slug)
+            prices = fetch_market_prices(market)
             fetched += 1
         except Exception as exc:  # noqa: BLE001 - collect per-market failures
             errors.append(f"{market.slug}: {exc}")

@@ -2,6 +2,7 @@ const v = globalThis.__ECAL_V__ ?? "4";
 
 const { flagUrl, flagAlt } = await import(`./flags.js?v=${v}`);
 const { fetchJson } = await import(`./fetch-json.js?v=${v}`);
+const { fetchSuggestionOdds, matchSuggestionPrice } = await import(`./primary-info.js?v=${v}`);
 
 const US_STATE_NAMES = {
   AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
@@ -207,7 +208,57 @@ function renderPriceRow(price) {
   const change = price.change_pp ? price : null;
   const pct = `<span class="price-current">${Math.round(price.current_pct)}%</span>`;
   const changeHtml = change ? renderChangeArrow(change) : `<span class="price-change" aria-hidden="true"></span>`;
-  return `<li class="price-row${change ? " price-row--changed" : ""}"><span class="price-name">${price.name}</span>${pct}${changeHtml}</li>`;
+  return `<li class="price-row${change ? " price-row--changed" : ""}"><span class="price-name">${escapeHtml(price.name)}</span>${pct}${changeHtml}</li>`;
+}
+
+function mergeLivePrices(item, liveCandidates) {
+  const oddsFormat = item.odds_format || "candidates";
+
+  return liveCandidates.map((candidate) => {
+    const matched = matchSuggestionPrice(item.prices, candidate.name, oddsFormat);
+    const merged = {
+      name: candidate.name,
+      current_pct: candidate.pct,
+    };
+
+    if (matched?.change_pp) {
+      merged.change_pp = matched.change_pp;
+      merged.direction = matched.direction;
+      merged.change_days = matched.change_days;
+      merged.since_date = matched.since_date;
+    }
+
+    return merged;
+  });
+}
+
+async function refreshSuggestionPrices(container, items) {
+  const cards = [...container.querySelectorAll(".card-suggestion")];
+  const cardByMarketId = new Map(
+    cards
+      .map((card) => [card.dataset.marketId, card])
+      .filter(([marketId]) => marketId)
+  );
+
+  await Promise.all(
+    items.map(async (item) => {
+      const card = cardByMarketId.get(item.market_id);
+      if (!card) return;
+
+      try {
+        const liveCandidates = await fetchSuggestionOdds(item);
+        if (!liveCandidates.length) return;
+
+        const prices = mergeLivePrices(item, liveCandidates);
+        const priceList = card.querySelector(".price-list");
+        if (!priceList) return;
+
+        priceList.innerHTML = prices.map(renderPriceRow).join("");
+      } catch {
+        // Keep the snapshot prices when live refresh fails.
+      }
+    })
+  );
 }
 
 function renderSuggestionCard(item) {
@@ -220,7 +271,7 @@ function renderSuggestionCard(item) {
   const title = cardTitle(item, election);
 
   return `
-    <article class="card card-suggestion">
+    <article class="card card-suggestion" data-market-id="${escapeHtml(item.market_id)}">
       <img class="card-flag" src="${flagUrl(pseudo)}" alt="${flagAlt(pseudo)}" width="30" height="20" loading="lazy" />
       <div class="card-date">
         <div class="card-day${isEstimated ? " card-day-tbd" : ""}">${day}</div>
@@ -321,7 +372,7 @@ export async function loadSuggestionsData(fetcher = fetchJson) {
   return suggestions;
 }
 
-export function renderSuggestions(
+export async function renderSuggestions(
   container,
   { hideStates = false, hideLocal = false } = {}
 ) {
@@ -354,6 +405,7 @@ export function renderSuggestions(
     .join("");
 
   bindSuggestionLinks(container);
+  await refreshSuggestionPrices(container, items);
 }
 
 export function suggestionsFooterText(
