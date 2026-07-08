@@ -466,21 +466,33 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
 }
 
 .primary-popover__candidates li {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 0.75rem;
+  gap: 0.35rem 0.75rem;
 }
 
-.primary-popover__name {
-  min-width: 0;
+.primary-popover__odds-values {
+  display: grid;
+  grid-template-columns: 2.75rem 4.75rem;
+  align-items: baseline;
+  gap: 0.35rem 0.75rem;
+  justify-self: end;
 }
 
 .primary-popover__pct {
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
   color: #fff;
-  flex-shrink: 0;
+  text-align: right;
+}
+
+.primary-popover__odds-values .price-change {
+  font-size: 0.68rem;
+}
+
+.primary-popover__name {
+  min-width: 0;
 }
 
 .primary-popover__candidates .primary-popover__note {
