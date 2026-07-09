@@ -469,7 +469,7 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: baseline;
-  gap: 0.35rem 0.75rem;
+  gap: 0.35rem 0.35rem;
 }
 
 .primary-popover__odds-values {
@@ -535,7 +535,7 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 2.75rem 4.75rem;
   align-items: baseline;
-  gap: 0.35rem 0.75rem;
+  gap: 0.35rem 0.35rem;
   font-size: 0.74rem;
 }
 

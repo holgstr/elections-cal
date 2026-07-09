@@ -10,6 +10,7 @@ const GOVERNOR_PARTY_LABELS = {
 
 const v = globalThis.__ECAL_V__ ?? "4";
 const { formatOddsPctWithChange, loadOddsChanges } = await import(`./odds-change.js?v=${v}`);
+const { formatDisplayName } = await import(`./display-name.js?v=${v}`);
 
 const NAME_SUFFIXES = new Set(["jr", "jr.", "sr", "sr.", "ii", "iii", "iv"]);
 
@@ -341,7 +342,8 @@ function isIncumbent(candidateName, incumbentSurname) {
 }
 
 function formatCandidateName(candidate) {
-  return candidate.incumbent ? `${candidate.name} (Inc.)` : candidate.name;
+  const name = candidate.incumbent ? `${candidate.name} (Inc.)` : candidate.name;
+  return formatDisplayName(name);
 }
 
 function isPlaceholderMarketName(name) {
@@ -572,7 +574,7 @@ function polymarketEventUrl(slug) {
 }
 
 function renderLinkedText(label, slug, { className = "", linkClassName = "primary-popover__link" } = {}) {
-  const safeLabel = escapeHtml(label);
+  const safeLabel = escapeHtml(formatDisplayName(label));
   const url = polymarketEventUrl(slug);
   if (!url) {
     return className ? `<span class="${className}">${safeLabel}</span>` : safeLabel;
@@ -770,11 +772,12 @@ function renderGovernorPartyRows(section, nominees = {}, slug = null) {
       const partyLabel = GOVERNOR_PARTY_LABELS[party] || party;
       const nominee = nominees[party];
       const candidateName = nominee ? formatCandidateName(nominee) : "TBD";
+      const displayPartyLabel = formatDisplayName(partyLabel);
 
       return `
         <div class="primary-popover__party">
           <div class="primary-popover__party-head">
-            <span class="primary-popover__party-name primary-popover__party-name--${partySlug(partyLabel)}">${escapeHtml(partyLabel)}</span>
+            <span class="primary-popover__party-name primary-popover__party-name--${partySlug(partyLabel)}">${escapeHtml(displayPartyLabel)}</span>
           </div>
           <ul class="primary-popover__candidates">
             <li>

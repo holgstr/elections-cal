@@ -3,6 +3,7 @@ const v = globalThis.__ECAL_V__ ?? "4";
 const { flagUrl, flagAlt } = await import(`./flags.js?v=${v}`);
 const { fetchJson } = await import(`./fetch-json.js?v=${v}`);
 const { fetchSuggestionOdds, matchSuggestionPrice } = await import(`./primary-info.js?v=${v}`);
+const { formatDisplayName } = await import(`./display-name.js?v=${v}`);
 
 const US_STATE_NAMES = {
   AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
@@ -206,7 +207,7 @@ function renderPriceRow(price) {
   const change = price.change_pp ? price : null;
   const pct = `<span class="price-current">${Math.round(price.current_pct)}%</span>`;
   const changeHtml = change ? renderChangeArrow(change) : `<span class="price-change price-change--placeholder" aria-hidden="true">--</span>`;
-  return `<li class="price-row${change ? " price-row--changed" : ""}"><span class="price-name">${escapeHtml(price.name)}</span>${pct}${changeHtml}</li>`;
+  return `<li class="price-row${change ? " price-row--changed" : ""}"><span class="price-name">${escapeHtml(formatDisplayName(price.name))}</span>${pct}${changeHtml}</li>`;
 }
 
 function mergeLivePrices(item, liveCandidates) {
