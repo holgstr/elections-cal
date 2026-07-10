@@ -13,7 +13,7 @@
         "window": "2d"
       },
       "SPD": {
-        "change_pp": 4.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-07-08",
         "window": "2d"
@@ -35,6 +35,14 @@
         "window": "2d"
       }
     },
+    "nevada-governor-winner-2026": {
+      "Republican": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-07-08",
+        "window": "2d"
+      }
+    },
     "wyoming-governor-winner-2026": {
       "Republican": {
         "change_pp": 12.5,
@@ -45,41 +53,63 @@
     },
     "who-will-advance-from-the-alaska-governor-primary": {
       "Lesil McGuire": {
-        "change_pp": 16.0,
-        "direction": "down",
-        "reference_date": "2026-07-08",
-        "window": "2d"
-      },
-      "Dave Bronson": {
-        "change_pp": 11.5,
-        "direction": "down",
-        "reference_date": "2026-07-08",
-        "window": "2d"
-      },
-      "Matt Heilala": {
-        "change_pp": 4.3,
-        "direction": "down",
+        "change_pp": 12.5,
+        "direction": "up",
         "reference_date": "2026-07-08",
         "window": "2d"
       },
       "Treg Taylor": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-07-08",
+        "window": "2d"
+      },
+      "Bernadette Wilson": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-07-08",
+        "window": "2d"
+      }
+    },
+    "minnesota-governor-republican-primary-winner": {
+      "Mike Lindell": {
         "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-07-08",
         "window": "2d"
       }
     },
+    "minnesota-democratic-senate-primary-winner": {
+      "Peggy Flanagan": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-07-08",
+        "window": "2d"
+      }
+    },
     "new-hampshire-democratic-senate-primary-winner": {
       "Karishma Manzur": {
-        "change_pp": 4.6,
+        "change_pp": 4.9,
         "direction": "down",
+        "reference_date": "2026-07-08",
+        "window": "2d"
+      },
+      "Chris Pappas": {
+        "change_pp": 4.0,
+        "direction": "up",
         "reference_date": "2026-07-08",
         "window": "2d"
       }
     },
     "rhode-island-governor-republican-primary-winner": {
+      "Aaron Guckian": {
+        "change_pp": 5.55,
+        "direction": "down",
+        "reference_date": "2026-07-08",
+        "window": "2d"
+      },
       "Elaine Pelino": {
-        "change_pp": 8.0,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-07-08",
         "window": "2d"
@@ -87,7 +117,7 @@
     },
     "tennessee-governor-republican-primary-winner": {
       "John Rose": {
-        "change_pp": 5.5,
+        "change_pp": 4.7,
         "direction": "up",
         "reference_date": "2026-07-08",
         "window": "2d"
@@ -101,7 +131,7 @@
         "window": "2d"
       },
       "Maria Brewer": {
-        "change_pp": 12.45,
+        "change_pp": 12.6,
         "direction": "down",
         "reference_date": "2026-07-08",
         "window": "2d"
@@ -115,7 +145,7 @@
         "window": "2d"
       },
       "Amanda Janoo": {
-        "change_pp": 5.6,
+        "change_pp": 6.5,
         "direction": "down",
         "reference_date": "2026-07-08",
         "window": "2d"
@@ -129,7 +159,7 @@
         "window": "2d"
       },
       "Mary Peltola": {
-        "change_pp": 6.0,
+        "change_pp": 8.0,
         "direction": "down",
         "reference_date": "2026-07-08",
         "window": "2d"
@@ -153,7 +183,7 @@
         "window": "2d"
       },
       "SPD": {
-        "change_pp": 4.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-07-08",
         "window": "2d"
@@ -175,6 +205,14 @@
         "window": "2d"
       }
     },
+    "us-governor:NV": {
+      "Republican": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-07-08",
+        "window": "2d"
+      }
+    },
     "us-governor:WY": {
       "Republican": {
         "change_pp": 12.5,
@@ -185,41 +223,63 @@
     },
     "us-primary:AK:Governor": {
       "Lesil McGuire": {
-        "change_pp": 16.0,
-        "direction": "down",
-        "reference_date": "2026-07-08",
-        "window": "2d"
-      },
-      "Dave Bronson": {
-        "change_pp": 11.5,
-        "direction": "down",
-        "reference_date": "2026-07-08",
-        "window": "2d"
-      },
-      "Matt Heilala": {
-        "change_pp": 4.3,
-        "direction": "down",
+        "change_pp": 12.5,
+        "direction": "up",
         "reference_date": "2026-07-08",
         "window": "2d"
       },
       "Treg Taylor": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-07-08",
+        "window": "2d"
+      },
+      "Bernadette Wilson": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-07-08",
+        "window": "2d"
+      }
+    },
+    "us-primary:MN:Governor:Republican": {
+      "Mike Lindell": {
         "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-07-08",
         "window": "2d"
       }
     },
+    "us-primary:MN:Senate:Democratic": {
+      "Peggy Flanagan": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-07-08",
+        "window": "2d"
+      }
+    },
     "us-primary:NH:Senate:Democratic": {
       "Karishma Manzur": {
-        "change_pp": 4.6,
+        "change_pp": 4.9,
         "direction": "down",
+        "reference_date": "2026-07-08",
+        "window": "2d"
+      },
+      "Chris Pappas": {
+        "change_pp": 4.0,
+        "direction": "up",
         "reference_date": "2026-07-08",
         "window": "2d"
       }
     },
     "us-primary:RI:Governor:Republican": {
+      "Aaron Guckian": {
+        "change_pp": 5.55,
+        "direction": "down",
+        "reference_date": "2026-07-08",
+        "window": "2d"
+      },
       "Elaine Pelino": {
-        "change_pp": 8.0,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-07-08",
         "window": "2d"
@@ -227,7 +287,7 @@
     },
     "us-primary:TN:Governor:Republican": {
       "John Rose": {
-        "change_pp": 5.5,
+        "change_pp": 4.7,
         "direction": "up",
         "reference_date": "2026-07-08",
         "window": "2d"
@@ -241,7 +301,7 @@
         "window": "2d"
       },
       "Maria Brewer": {
-        "change_pp": 12.45,
+        "change_pp": 12.6,
         "direction": "down",
         "reference_date": "2026-07-08",
         "window": "2d"
@@ -255,7 +315,7 @@
         "window": "2d"
       },
       "Amanda Janoo": {
-        "change_pp": 5.6,
+        "change_pp": 6.5,
         "direction": "down",
         "reference_date": "2026-07-08",
         "window": "2d"
@@ -269,7 +329,7 @@
         "window": "2d"
       },
       "Mary Peltola": {
-        "change_pp": 6.0,
+        "change_pp": 8.0,
         "direction": "down",
         "reference_date": "2026-07-08",
         "window": "2d"
