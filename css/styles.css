@@ -54,15 +54,24 @@ body::before {
   z-index: 10;
   padding: 1rem 0 0.85rem;
   margin-bottom: 0.5rem;
-  background: linear-gradient(var(--bg) 70%, transparent);
-  backdrop-filter: blur(8px);
 }
 
-.page-header h1 {
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   font-size: clamp(1.85rem, 7vw, 2.4rem);
   font-weight: 700;
   margin: 0 0 0.75rem;
   letter-spacing: -0.03em;
+}
+
+.site-logo {
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
 }
 
 .tab-bar {
