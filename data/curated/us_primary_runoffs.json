@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "date": "2026-07-28",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "South Dakota",
+    "state_code": "SD",
+    "title": "Republican Governor Primary Runoff",
+    "type": "runoff",
+    "level": "state",
+    "groups": ["oecd"],
+    "offices": ["Governor"],
+    "party": "Republican"
+  }
+]

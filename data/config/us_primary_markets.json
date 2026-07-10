@@ -16,6 +16,8 @@
     "CA": { "type": "top-two", "note_key": "top-two", "format": "top-two" },
     "FL": { "type": "closed", "note_key": "closed" },
     "WY": { "type": "closed", "note_key": "closed" },
+    "WA": { "type": "top-two", "note_key": "top-two", "format": "top-two" },
+    "SD": { "type": "closed", "note_key": "closed" },
     "MA": { "type": "semi-closed", "note_key": "semi-closed" },
     "NH": { "type": "semi-closed", "note_key": "semi-closed" },
     "RI": { "type": "semi-closed", "note_key": "semi-closed" },
@@ -142,6 +144,14 @@
         "Republican": "delaware-republican-senate-primary-winner",
         "Democratic": "delaware-democratic-senate-primary-winner"
       }
+    },
+    "WA": {
+      "Governor": { "_slug": "washington-governor-election-winner" }
+    },
+    "SD": {
+      "Governor": {
+        "Republican": "south-dakota-governor-republican-primary-winner"
+      }
     }
   },
   "incumbents": {
@@ -150,6 +160,8 @@
     "TN": { "Senate": { "Republican": "Hagerty" } },
     "HI": { "Governor": { "Democratic": "Green" } },
     "MA": { "Governor": { "Democratic": "Healey" } },
-    "WY": { "Senate": { "Republican": "Barrasso" } }
+    "WY": { "Senate": { "Republican": "Barrasso" } },
+    "WA": { "Governor": { "Democratic": "Ferguson" } },
+    "SD": { "Governor": { "Republican": "Rhoden" } }
   }
 }

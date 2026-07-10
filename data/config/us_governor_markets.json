@@ -23,6 +23,7 @@
     "SC": { "Republican": "McMaster" },
     "TX": { "Republican": "Abbott" },
     "VT": { "Republican": "Scott" },
+    "WA": { "Democrat": "Ferguson" },
     "WI": { "Democrat": "Evers" },
     "WY": { "Republican": "Gordon" }
   },
@@ -74,6 +75,7 @@
     "TN": { "polymarket_slug": "tennessee-governor-winner-2026" },
     "TX": { "polymarket_slug": "texas-governor-winner-2026" },
     "VT": { "polymarket_slug": "vermont-governor-winner-2026" },
+    "WA": { "polymarket_slug": "washington-governor-election-winner" },
     "WI": { "polymarket_slug": "wisconsin-governor-winner-2026" },
     "WY": { "polymarket_slug": "wyoming-governor-winner-2026" }
   }

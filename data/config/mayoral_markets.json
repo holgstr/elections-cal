@@ -5,6 +5,11 @@
       "polymarket_slug": "greater-manchester-mayoral-election-winner-20260619154130299",
       "label": "Mayor",
       "city": "Manchester"
+    },
+    "CLAC": {
+      "polymarket_slug": "clacton-by-election-winner-20260707143521303",
+      "label": "By-election",
+      "city": "Clacton"
     }
   }
 }

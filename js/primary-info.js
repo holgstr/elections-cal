@@ -218,7 +218,8 @@ function isWithinMayoralWindow(electionDate) {
 }
 
 export function isMayorLabel(label) {
-  return label?.trim() === "Mayor";
+  const trimmed = label?.trim();
+  return trimmed === "Mayor" || trimmed === "By-election";
 }
 
 export function getMayoralInfo(cityCode, electionDate, countryCode = null) {

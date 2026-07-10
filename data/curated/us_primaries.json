@@ -1728,6 +1728,42 @@
     "party": "Republican"
   },
   {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Washington",
+    "state_code": "WA",
+    "title": "Democratic Governor Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Washington",
+    "state_code": "WA",
+    "title": "Republican Governor Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican"
+  },
+  {
     "date": "2026-08-06",
     "date_precision": "exact",
     "country": "United States",

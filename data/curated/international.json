@@ -288,5 +288,18 @@
     "level": "local",
     "groups": ["oecd"],
     "offices": ["Mayor"]
+  },
+  {
+    "date": "2026-08-13",
+    "date_precision": "exact",
+    "country": "United Kingdom",
+    "country_code": "GB",
+    "city": "Clacton",
+    "city_code": "CLAC",
+    "title": "By-election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": ["oecd"],
+    "offices": ["By-election"]
   }
 ]

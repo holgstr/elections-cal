@@ -271,6 +271,19 @@
       }
     }
   },
+  "SD": {
+    "Governor": {
+      "primary_format": "party",
+      "primary_type": "closed",
+      "primary_type_label": "Closed primary",
+      "primary_type_note": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
+      "parties": {
+        "Republican": {
+          "polymarket_slug": "south-dakota-governor-republican-primary-winner"
+        }
+      }
+    }
+  },
   "TN": {
     "Governor": {
       "primary_format": "party",
@@ -331,6 +344,15 @@
           "polymarket_slug": "vermont-governor-democratic-primary-winner"
         }
       }
+    }
+  },
+  "WA": {
+    "Governor": {
+      "primary_format": "top-two",
+      "primary_type": "top-two",
+      "primary_type_label": "Top-two primary",
+      "primary_type_note": "All candidates appear on one ballot; the top two advance to the general election.",
+      "polymarket_slug": "washington-governor-election-winner"
     }
   },
   "WI": {

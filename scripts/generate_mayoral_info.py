@@ -34,9 +34,10 @@ def mayoral_market_keys_in_window(today: date | None = None) -> set[str]:
     today = today or date.today()
     end = window_end(today)
     keys: set[str] = set()
+    local_titles = {"Mayor", "By-election"}
 
     for item in load_json(ELECTIONS_PATH):
-        if item.get("title") != "Mayor":
+        if item.get("title") not in local_titles:
             continue
         election_date = date.fromisoformat(item["date"])
         if election_date < today or election_date > end:

@@ -300,6 +300,16 @@
       "Republican": "Scott"
     }
   },
+  "WA": {
+    "polymarket_slug": "washington-governor-election-winner",
+    "nominee_slugs": {
+      "Republican": "washington-governor-republican-primary-winner",
+      "Democrat": "washington-governor-democratic-primary-winner"
+    },
+    "incumbents": {
+      "Democrat": "Ferguson"
+    }
+  },
   "WI": {
     "polymarket_slug": "wisconsin-governor-winner-2026",
     "nominee_slugs": {

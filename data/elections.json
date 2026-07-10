@@ -38,6 +38,25 @@
     "source": "curated"
   },
   {
+    "date": "2026-07-28",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "South Dakota",
+    "state_code": "SD",
+    "title": "Republican Governor Primary Runoff",
+    "type": "runoff",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican",
+    "source": "curated"
+  },
+  {
     "date": "2026-07-30",
     "date_precision": "exact",
     "country": "United Kingdom",
@@ -246,6 +265,44 @@
     "source": "curated"
   },
   {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Washington",
+    "state_code": "WA",
+    "title": "Democratic Governor Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Democratic",
+    "source": "curated"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Washington",
+    "state_code": "WA",
+    "title": "Republican Governor Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Governor"
+    ],
+    "party": "Republican",
+    "source": "curated"
+  },
+  {
     "date": "2026-08-06",
     "date_precision": "exact",
     "country": "United States",
@@ -547,6 +604,24 @@
       "Governor"
     ],
     "party": "Republican",
+    "source": "curated"
+  },
+  {
+    "date": "2026-08-13",
+    "date_precision": "exact",
+    "country": "United Kingdom",
+    "country_code": "GB",
+    "city": "Clacton",
+    "city_code": "CLAC",
+    "title": "By-election",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "By-election"
+    ],
     "source": "curated"
   },
   {
@@ -1632,6 +1707,14 @@
             "code": "VA",
             "offices": [
               "Senate"
+            ]
+          },
+          {
+            "name": "Washington",
+            "code": "WA",
+            "offices": [
+              "Governor",
+              "State Legislature"
             ]
           },
           {

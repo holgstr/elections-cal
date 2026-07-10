@@ -50,6 +50,7 @@ STATE_SLUG_PREFIX = {
     "TN": "tennessee",
     "TX": "texas",
     "VT": "vermont",
+    "WA": "washington",
     "WI": "wisconsin",
     "WY": "wyoming",
 }

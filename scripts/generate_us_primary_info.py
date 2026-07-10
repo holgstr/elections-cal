@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PRIMARIES_PATH = ROOT / "data" / "curated" / "us_primaries.json"
+RUNOFFS_PATH = ROOT / "data" / "curated" / "us_primary_runoffs.json"
 MARKETS_PATH = ROOT / "data" / "config" / "us_primary_markets.json"
 OUTPUT_PATH = ROOT / "data" / "curated" / "us_primary_info.json"
 
@@ -41,16 +42,19 @@ def primaries_in_window(today: date | None = None) -> set[tuple[str, str]]:
     end = window_end(today)
     needed: set[tuple[str, str]] = set()
 
-    for item in load_json(PRIMARIES_PATH):
-        if item.get("type") != "primary":
+    for path, contest_type in ((PRIMARIES_PATH, "primary"), (RUNOFFS_PATH, "runoff")):
+        if not path.exists():
             continue
-        primary_date = date.fromisoformat(item["date"])
-        if primary_date < today or primary_date > end:
-            continue
-        state_code = item.get("state_code")
-        for office in item.get("offices") or []:
-            if state_code and office:
-                needed.add((state_code, office))
+        for item in load_json(path):
+            if item.get("type") != contest_type:
+                continue
+            primary_date = date.fromisoformat(item["date"])
+            if primary_date < today or primary_date > end:
+                continue
+            state_code = item.get("state_code")
+            for office in item.get("offices") or []:
+                if state_code and office:
+                    needed.add((state_code, office))
 
     return needed
 
