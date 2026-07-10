@@ -159,6 +159,11 @@ body::before {
   z-index: 5;
 }
 
+#timeline .month-heading {
+  background: transparent;
+  backdrop-filter: none;
+}
+
 .cards {
   display: flex;
   flex-direction: column;
