@@ -90,11 +90,6 @@ function findElectionForSuggestion(item) {
   }) || null;
 }
 
-function resolvedElectionDate(item) {
-  const election = findElectionForSuggestion(item);
-  return item.election_date || election?.date || null;
-}
-
 function formatCardDate(isoDate, precision = "exact") {
   if (!isoDate) {
     return { day: "—", weekday: "", full: "", isEstimated: false };
@@ -330,30 +325,14 @@ export function filterSuggestions(items, { hideStates = false, hideLocal = false
   });
 }
 
-function groupByMonth(items) {
-  const groups = new Map();
-  for (const item of items) {
-    const date = resolvedElectionDate(item) || "9999-12-31";
-    const d = new Date(`${date}T12:00:00`);
-    const key = date.startsWith("9999")
-      ? "unknown"
-      : `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
-    const label = date.startsWith("9999")
-      ? "Date unknown"
-      : d.toLocaleDateString("en-US", { month: "long", year: "numeric" });
-    if (!groups.has(key)) groups.set(key, { label, items: [] });
-    groups.get(key).items.push(item);
-  }
+function maxChangePp(item) {
+  if (item.max_change_pp != null) return item.max_change_pp;
+  const changes = item.changes || item.prices?.filter((price) => price.change_pp) || [];
+  return Math.max(0, ...changes.map((change) => change.change_pp || 0));
+}
 
-  for (const group of groups.values()) {
-    group.items.sort((a, b) => {
-      const dateCmp = (resolvedElectionDate(a) || "").localeCompare(resolvedElectionDate(b) || "");
-      if (dateCmp) return dateCmp;
-      return (a.contest || "").localeCompare(b.contest || "");
-    });
-  }
-
-  return [...groups.entries()].sort(([a], [b]) => a.localeCompare(b));
+function sortByMaxChange(items) {
+  return [...items].sort((a, b) => maxChangePp(b) - maxChangePp(a));
 }
 
 export async function loadSuggestionsData(fetcher = fetchJson) {
@@ -387,21 +366,12 @@ export async function renderSuggestions(
       container.innerHTML = `<p class="empty">${updated}No races match your filters.</p>`;
       return;
     }
-    container.innerHTML = `<p class="empty">${updated}No races with ≥${suggestionsData?.threshold_pp ?? 5}pp market moves right now.</p>`;
+    container.innerHTML = `<p class="empty">${updated}No races with ≥${suggestionsData?.threshold_pp ?? 4}pp market moves in the last 48 hours right now.</p>`;
     return;
   }
 
-  const groups = groupByMonth(items);
-  container.innerHTML = groups
-    .map(
-      ([, { label, items: groupItems }]) => `
-      <div class="month-group">
-        <h2 class="month-heading">${label}</h2>
-        <div class="cards">${groupItems.map(renderSuggestionCard).join("")}</div>
-      </div>
-    `
-    )
-    .join("");
+  const sorted = sortByMaxChange(items);
+  container.innerHTML = `<div class="cards">${sorted.map(renderSuggestionCard).join("")}</div>`;
 
   bindSuggestionLinks(container);
   await refreshSuggestionPrices(container, items);
@@ -415,5 +385,5 @@ export function suggestionsFooterText(
     hideStates,
     hideLocal,
   }).length;
-  return `Market prices updated ${suggestionsData.generated_at} · ${count} race${count === 1 ? "" : "s"} with significant moves`;
+  return `Market prices updated ${suggestionsData.generated_at} · ${count} race${count === 1 ? "" : "s"} with ≥${suggestionsData.threshold_pp ?? 4}pp moves (48h)`;
 }
