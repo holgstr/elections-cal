@@ -440,6 +440,7 @@ def compute_window_changes(
             "change_pp": abs(delta),
             "direction": "up" if delta > 0 else "down",
             "reference_date": reference_day,
+            "reference_pct": reference_pct,
             "window": CHANGE_WINDOW_LABEL,
         }
 
@@ -465,6 +466,7 @@ def detect_window_changes(
                 "change_pp": change["change_pp"],
                 "direction": change["direction"],
                 "since_date": change["reference_date"],
+                "reference_pct": change["reference_pct"],
                 "change_days": CHANGE_WINDOW_DAYS,
                 "window": change["window"],
             }

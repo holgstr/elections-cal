@@ -3,6 +3,7 @@ const v = globalThis.__ECAL_V__ ?? "4";
 const { flagUrl, flagAlt } = await import(`./flags.js?v=${v}`);
 const { fetchJson } = await import(`./fetch-json.js?v=${v}`);
 const { fetchSuggestionOdds, matchSuggestionPrice } = await import(`./primary-info.js?v=${v}`);
+const { adjustChangeForLivePrice } = await import(`./odds-change.js?v=${v}`);
 const { formatDisplayName } = await import(`./display-name.js?v=${v}`);
 
 const US_STATE_NAMES = {
@@ -207,6 +208,7 @@ function renderPriceRow(price) {
 
 function mergeLivePrices(item, liveCandidates) {
   const oddsFormat = item.odds_format || "candidates";
+  const thresholdPp = suggestionsData?.threshold_pp ?? 4;
 
   return liveCandidates.map((candidate) => {
     const matched = matchSuggestionPrice(item.prices, candidate.name, oddsFormat);
@@ -215,11 +217,22 @@ function mergeLivePrices(item, liveCandidates) {
       current_pct: candidate.pct,
     };
 
-    if (matched?.change_pp) {
-      merged.change_pp = matched.change_pp;
-      merged.direction = matched.direction;
-      merged.change_days = matched.change_days;
-      merged.since_date = matched.since_date;
+    if (!matched?.change_pp && matched?.reference_pct == null) {
+      return merged;
+    }
+
+    const adjusted = adjustChangeForLivePrice(
+      matched,
+      matched?.current_pct,
+      candidate.pct,
+      thresholdPp
+    );
+
+    if (adjusted?.change_pp) {
+      merged.change_pp = adjusted.change_pp;
+      merged.direction = adjusted.direction;
+      merged.change_days = matched.change_days ?? item.window_days ?? 2;
+      merged.since_date = matched.since_date ?? adjusted.reference_date;
     }
 
     return merged;
