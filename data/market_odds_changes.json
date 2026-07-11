@@ -10,12 +10,14 @@
         "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 24.5,
         "window": "2d"
       },
       "Linke": {
         "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 29.5,
         "window": "2d"
       }
     },
@@ -24,6 +26,7 @@
         "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 38.0,
         "window": "2d"
       }
     },
@@ -32,12 +35,14 @@
         "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 20.0,
         "window": "2d"
       },
       "Magdalena Andersson": {
         "change_pp": 7.5,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 73.5,
         "window": "2d"
       }
     },
@@ -46,6 +51,7 @@
         "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 25.5,
         "window": "2d"
       }
     },
@@ -54,6 +60,7 @@
         "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 29.0,
         "window": "2d"
       }
     },
@@ -62,6 +69,7 @@
         "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 72.5,
         "window": "2d"
       }
     },
@@ -70,12 +78,14 @@
         "change_pp": 21.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 30.5,
         "window": "2d"
       },
       "Bill Walker": {
         "change_pp": 30.0,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 25.0,
         "window": "2d"
       }
     },
@@ -84,90 +94,105 @@
         "change_pp": 24.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Fred C. Grauberger": {
         "change_pp": 22.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Richard Grayson": {
         "change_pp": 21.2,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Carol Hafner": {
         "change_pp": 24.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Gerald L. Heikes": {
         "change_pp": 25.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Sid Hill": {
         "change_pp": 24.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Scott Kohlhaas": {
         "change_pp": 15.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Richard Benedict Mayers": {
         "change_pp": 27.4,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Heather McElwain": {
         "change_pp": 30.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Mary Peltola": {
         "change_pp": 16.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Reece Roberts": {
         "change_pp": 24.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Shirley Saucerman": {
         "change_pp": 20.35,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Earl D. \"Skip\" Southworth": {
         "change_pp": 24.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Dan J. Sullivan": {
         "change_pp": 17.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 35.0,
         "window": "2d"
       },
       "Sen. Dan S. Sullivan": {
         "change_pp": 17.9,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       }
     },
@@ -176,6 +201,7 @@
         "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 33.5,
         "window": "2d"
       }
     },
@@ -184,6 +210,7 @@
         "change_pp": 4.55,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 1.8,
         "window": "2d"
       }
     },
@@ -192,6 +219,7 @@
         "change_pp": 11.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 36.5,
         "window": "2d"
       }
     },
@@ -200,6 +228,7 @@
         "change_pp": 4.8,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 11.8,
         "window": "2d"
       }
     },
@@ -208,12 +237,14 @@
         "change_pp": 26.15,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 45.25,
         "window": "2d"
       },
       "Elaine Pelino": {
         "change_pp": 10.5,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 56.5,
         "window": "2d"
       }
     },
@@ -222,6 +253,7 @@
         "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 6.0,
         "window": "2d"
       }
     },
@@ -230,6 +262,7 @@
         "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 17.0,
         "window": "2d"
       }
     },
@@ -238,6 +271,7 @@
         "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 84.0,
         "window": "2d"
       }
     }
@@ -248,12 +282,14 @@
         "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 24.5,
         "window": "2d"
       },
       "Linke": {
         "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 29.5,
         "window": "2d"
       }
     },
@@ -262,6 +298,7 @@
         "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 38.0,
         "window": "2d"
       }
     },
@@ -270,12 +307,14 @@
         "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 20.0,
         "window": "2d"
       },
       "Magdalena Andersson": {
         "change_pp": 7.5,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 73.5,
         "window": "2d"
       }
     },
@@ -284,6 +323,7 @@
         "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 25.5,
         "window": "2d"
       }
     },
@@ -292,6 +332,7 @@
         "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 29.0,
         "window": "2d"
       }
     },
@@ -300,6 +341,7 @@
         "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 72.5,
         "window": "2d"
       }
     },
@@ -308,12 +350,14 @@
         "change_pp": 21.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 30.5,
         "window": "2d"
       },
       "Bill Walker": {
         "change_pp": 30.0,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 25.0,
         "window": "2d"
       }
     },
@@ -322,90 +366,105 @@
         "change_pp": 24.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Fred C. Grauberger": {
         "change_pp": 22.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Richard Grayson": {
         "change_pp": 21.2,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Carol Hafner": {
         "change_pp": 24.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Gerald L. Heikes": {
         "change_pp": 25.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Sid Hill": {
         "change_pp": 24.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Scott Kohlhaas": {
         "change_pp": 15.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Richard Benedict Mayers": {
         "change_pp": 27.4,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Heather McElwain": {
         "change_pp": 30.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Mary Peltola": {
         "change_pp": 16.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Reece Roberts": {
         "change_pp": 24.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Shirley Saucerman": {
         "change_pp": 20.35,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Earl D. \"Skip\" Southworth": {
         "change_pp": 24.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       },
       "Dan J. Sullivan": {
         "change_pp": 17.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 35.0,
         "window": "2d"
       },
       "Sen. Dan S. Sullivan": {
         "change_pp": 17.9,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 44.0,
         "window": "2d"
       }
     },
@@ -414,6 +473,7 @@
         "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 33.5,
         "window": "2d"
       }
     },
@@ -422,6 +482,7 @@
         "change_pp": 4.55,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 1.8,
         "window": "2d"
       }
     },
@@ -430,6 +491,7 @@
         "change_pp": 11.5,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 36.5,
         "window": "2d"
       }
     },
@@ -438,6 +500,7 @@
         "change_pp": 4.8,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 11.8,
         "window": "2d"
       }
     },
@@ -446,12 +509,14 @@
         "change_pp": 26.15,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 45.25,
         "window": "2d"
       },
       "Elaine Pelino": {
         "change_pp": 10.5,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 56.5,
         "window": "2d"
       }
     },
@@ -460,6 +525,7 @@
         "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-07-09",
+        "reference_pct": 6.0,
         "window": "2d"
       }
     },
@@ -468,6 +534,7 @@
         "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 17.0,
         "window": "2d"
       }
     },
@@ -476,6 +543,7 @@
         "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-07-09",
+        "reference_pct": 84.0,
         "window": "2d"
       }
     }

@@ -32,6 +32,52 @@ export function lookupOddsChange(slug, displayName, oddsFormat = "candidates", m
   return null;
 }
 
+export function deriveReferencePct(change, snapshotCurrentPct = null) {
+  if (!change) return null;
+  if (change.reference_pct != null) return change.reference_pct;
+  if (change.change_pp == null) return null;
+
+  const snapshotPct = snapshotCurrentPct ?? change.current_pct;
+  if (snapshotPct == null) return null;
+
+  return change.direction === "up"
+    ? snapshotPct - change.change_pp
+    : snapshotPct + change.change_pp;
+}
+
+export function computeChangeFromReference(referencePct, currentPct, thresholdPp = 0) {
+  if (referencePct == null || currentPct == null) return null;
+
+  const delta = Math.round((currentPct - referencePct) * 100) / 100;
+  if (Math.abs(delta) < thresholdPp) return null;
+
+  return {
+    change_pp: Math.abs(delta),
+    direction: delta > 0 ? "up" : "down",
+    reference_pct: referencePct,
+    reference_date: null,
+    window: null,
+  };
+}
+
+export function adjustChangeForLivePrice(
+  staticChange,
+  snapshotCurrentPct,
+  livePct,
+  thresholdPp = 0
+) {
+  const referencePct = deriveReferencePct(staticChange, snapshotCurrentPct);
+  if (referencePct == null) return staticChange;
+
+  const adjusted = computeChangeFromReference(referencePct, livePct, thresholdPp);
+  if (!adjusted) return null;
+
+  return {
+    ...staticChange,
+    ...adjusted,
+  };
+}
+
 export function renderOddsChangeBadge(change) {
   if (!change?.change_pp) {
     return `<span class="price-change price-change--placeholder" aria-hidden="true">--</span>`;
@@ -47,7 +93,8 @@ export function renderOddsChangeBadge(change) {
 export function formatOddsPctWithChange(pct, slug, name, oddsFormat, formatPercent, matchName) {
   if (pct == null) return "";
 
-  const change = lookupOddsChange(slug, name, oddsFormat, matchName);
+  const staticChange = lookupOddsChange(slug, name, oddsFormat, matchName);
+  const change = adjustChangeForLivePrice(staticChange, null, pct, 0);
   const pctHtml = `<span class="primary-popover__pct">${formatPercent(pct)}</span>`;
   const changeHtml = renderOddsChangeBadge(change);
 
