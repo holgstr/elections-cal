@@ -13,6 +13,12 @@ RUNOFFS_PATH = ROOT / "data" / "curated" / "us_primary_runoffs.json"
 MARKETS_PATH = ROOT / "data" / "config" / "us_primary_markets.json"
 OUTPUT_PATH = ROOT / "data" / "curated" / "us_primary_info.json"
 
+from us_election_winner_systems import (  # noqa: E402
+    load_winner_systems,
+    primary_runoff_winner_note,
+    primary_winner_note,
+)
+
 WINDOW_MONTHS = 3
 COMBINED_BALLOT_FORMATS = frozenset({"top-two", "top-four"})
 
@@ -88,14 +94,20 @@ def build_entry(
     meta: dict,
     slugs: dict,
     incumbents: dict,
+    winner_systems: dict,
 ) -> dict:
     type_cfg = meta["primary_types"][state_code]
     note_key = type_cfg["note_key"]
+    primary_format = type_cfg.get("format", "party")
     entry: dict = {
-        "primary_format": type_cfg.get("format", "party"),
+        "primary_format": primary_format,
         "primary_type": type_cfg["type"],
         "primary_type_label": meta["type_labels"][note_key],
         "primary_type_note": meta["type_notes"][note_key],
+        "winner_note": primary_winner_note(
+            winner_systems, state_code, office, primary_format
+        ),
+        "runoff_winner_note": primary_runoff_winner_note(winner_systems),
     }
 
     office_slugs = slugs.get(state_code, {}).get(office, {})
@@ -113,6 +125,7 @@ def build_entry(
 
 def main() -> None:
     meta = load_json(MARKETS_PATH)
+    winner_systems = load_winner_systems()
     slugs = meta.get("polymarket_slugs", {})
     incumbents = meta.get("incumbents", {})
     needed = sorted(primaries_in_window())
@@ -129,7 +142,7 @@ def main() -> None:
         if state_code not in meta["primary_types"]:
             continue
         output.setdefault(state_code, {})[office] = build_entry(
-            state_code, office, meta, slugs, incumbents
+            state_code, office, meta, slugs, incumbents, winner_systems
         )
 
     save_json(OUTPUT_PATH, output)

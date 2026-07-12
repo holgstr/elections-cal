@@ -1,0 +1,50 @@
+{
+  "_comment": "Winner-determination rules for US state elections. Short notes shown in popover info tooltips.",
+  "winner_notes": {
+    "fptp": "Winner: FPTP (most votes wins).",
+    "majority_runoff": "Winner: 50%+1; else top-two runoff (FPTP).",
+    "majority_35_runoff": "Winner: 35%+ avoids runoff; else top-two runoff (FPTP).",
+    "majority_30_optional": "Winner: FPTP; runoff only if under 30% and second place requests.",
+    "runoff_fptp": "Winner: FPTP (most votes wins).",
+    "top_two_advance": "General winner: FPTP (top two advance).",
+    "top_four_advance": "General winner: RCV (top four advance).",
+    "louisiana_jungle": "Winner: 50%+1 on one ballot; else top-two runoff (FPTP).",
+    "rcv": "Winner: RCV (ranked-choice voting).",
+    "vermont_majority_legislature": "Winner: 50%+1; else legislature picks from top three."
+  },
+  "primary_party": {
+    "default": "fptp",
+    "AL": "majority_runoff",
+    "AR": "majority_runoff",
+    "GA": "majority_runoff",
+    "MS": "majority_runoff",
+    "NC": "majority_30_optional",
+    "OK": "majority_runoff",
+    "SC": "majority_runoff",
+    "SD": "majority_35_runoff",
+    "TX": "majority_runoff"
+  },
+  "primary_runoff": {
+    "default": "runoff_fptp"
+  },
+  "general_governor": {
+    "default": "fptp",
+    "AK": "rcv",
+    "CA": "top_two_advance",
+    "GA": "majority_runoff",
+    "LA": "louisiana_jungle",
+    "MS": "majority_runoff",
+    "VT": "vermont_majority_legislature",
+    "WA": "top_two_advance"
+  },
+  "general_senate": {
+    "default": "fptp",
+    "AK": "rcv",
+    "CA": "top_two_advance",
+    "GA": "majority_runoff",
+    "LA": "louisiana_jungle",
+    "ME": "rcv",
+    "MS": "majority_runoff",
+    "WA": "top_two_advance"
+  }
+}

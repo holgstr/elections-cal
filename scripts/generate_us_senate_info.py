@@ -13,6 +13,11 @@ MARKETS_PATH = ROOT / "data" / "config" / "us_senate_markets.json"
 PRIMARY_MARKETS_PATH = ROOT / "data" / "config" / "us_primary_markets.json"
 OUTPUT_PATH = ROOT / "data" / "curated" / "us_senate_info.json"
 
+from us_election_winner_systems import (  # noqa: E402
+    general_senate_winner_note,
+    load_winner_systems,
+)
+
 WINDOW_MONTHS = 12
 
 # Class II Senate seats up in 2026 (mirrors scripts/generate_us_primaries.py).
@@ -125,8 +130,10 @@ def build_state_entry(
     market_config: dict,
     meta: dict,
     primary_meta: dict,
+    winner_systems: dict,
 ) -> dict:
     entry = dict(market_config)
+    entry["winner_note"] = general_senate_winner_note(winner_systems, state_code)
     incumbents = meta.get("incumbents", {}).get(state_code)
 
     nominee_slugs = default_nominee_slugs(state_code)
@@ -149,6 +156,7 @@ def build_state_entry(
 
 def main() -> None:
     meta = load_json(MARKETS_PATH)
+    winner_systems = load_winner_systems()
     markets = meta.get("markets", {})
     primary_meta = load_json(PRIMARY_MARKETS_PATH)
     needed = sorted(senate_states_in_window())
@@ -163,7 +171,9 @@ def main() -> None:
 
     for state_code in needed:
         if state_code in markets:
-            output[state_code] = build_state_entry(state_code, markets[state_code], meta, primary_meta)
+            output[state_code] = build_state_entry(
+                state_code, markets[state_code], meta, primary_meta, winner_systems
+            )
 
     save_json(OUTPUT_PATH, output)
     print(

@@ -7,6 +7,8 @@
       "primary_type": "top-four",
       "primary_type_label": "Top-four primary",
       "primary_type_note": "All candidates appear on one ballot; the top four advance to the general election.",
+      "winner_note": "General winner: RCV (top four advance).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "polymarket_slug": "who-will-advance-from-the-alaska-governor-primary"
     },
     "Senate": {
@@ -14,6 +16,8 @@
       "primary_type": "top-four",
       "primary_type_label": "Top-four primary",
       "primary_type_note": "All candidates appear on one ballot; the top four advance to the general election.",
+      "winner_note": "General winner: RCV (top four advance).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "polymarket_slug": "vote-winner-in-alaska-senate-primary-final-round-20260630164517313"
     }
   },
@@ -23,6 +27,8 @@
       "primary_type": "semi-closed",
       "primary_type_label": "Semi-closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "arizona-governor-republican-primary-winner"
@@ -39,6 +45,8 @@
       "primary_type": "closed",
       "primary_type_label": "Closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "connecticut-governor-republican-primary-winner"
@@ -55,6 +63,8 @@
       "primary_type": "closed",
       "primary_type_label": "Closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "delaware-republican-senate-primary-winner"
@@ -71,6 +81,8 @@
       "primary_type": "closed",
       "primary_type_label": "Closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "republican-nominee-for-florida-governor"
@@ -87,6 +99,8 @@
       "primary_type": "open",
       "primary_type_label": "Open primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Democratic": {
           "incumbent": "Green"
@@ -100,6 +114,8 @@
       "primary_type": "closed",
       "primary_type_label": "Closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "kansas-governor-republican-primary-winner"
@@ -114,6 +130,8 @@
       "primary_type": "closed",
       "primary_type_label": "Closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "incumbent": "Marshall"
@@ -130,6 +148,8 @@
       "primary_type": "semi-closed",
       "primary_type_label": "Semi-closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "massachusetts-governor-republican-primary-winner"
@@ -144,6 +164,8 @@
       "primary_type": "semi-closed",
       "primary_type_label": "Semi-closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Democratic": {
           "polymarket_slug": "massachusetts-democratic-senate-primary-winner"
@@ -157,6 +179,8 @@
       "primary_type": "open",
       "primary_type_label": "Open primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "michigan-governor-republican-primary-winner"
@@ -171,6 +195,8 @@
       "primary_type": "open",
       "primary_type_label": "Open primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "michigan-republican-senate-primary-winner-954"
@@ -187,6 +213,8 @@
       "primary_type": "open",
       "primary_type_label": "Open primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "minnesota-governor-republican-primary-winner"
@@ -201,6 +229,8 @@
       "primary_type": "open",
       "primary_type_label": "Open primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "minnesota-republican-senate-primary-winner"
@@ -217,6 +247,8 @@
       "primary_type": "semi-closed",
       "primary_type_label": "Semi-closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "new-hampshire-governor-republican-primary-winner"
@@ -231,6 +263,8 @@
       "primary_type": "semi-closed",
       "primary_type_label": "Semi-closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "new-hampshire-republican-senate-primary-winner-296"
@@ -247,6 +281,8 @@
       "primary_type": "semi-closed",
       "primary_type_label": "Semi-closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "rhode-island-governor-republican-primary-winner"
@@ -261,6 +297,8 @@
       "primary_type": "semi-closed",
       "primary_type_label": "Semi-closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "rhode-island-republican-senate-primary-winner"
@@ -277,6 +315,8 @@
       "primary_type": "closed",
       "primary_type_label": "Closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
+      "winner_note": "Winner: 35%+ avoids runoff; else top-two runoff (FPTP).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "south-dakota-governor-republican-primary-winner"
@@ -290,6 +330,8 @@
       "primary_type": "open",
       "primary_type_label": "Open primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "tennessee-governor-republican-primary-winner"
@@ -304,6 +346,8 @@
       "primary_type": "open",
       "primary_type_label": "Open primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "incumbent": "Hagerty"
@@ -320,6 +364,8 @@
       "primary_type": "open",
       "primary_type_label": "Open primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "virginia-senate-republican-primary-winner"
@@ -336,6 +382,8 @@
       "primary_type": "open",
       "primary_type_label": "Open primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "vermont-governor-republican-primary-winner"
@@ -352,6 +400,8 @@
       "primary_type": "top-two",
       "primary_type_label": "Top-two primary",
       "primary_type_note": "All candidates appear on one ballot; the top two advance to the general election.",
+      "winner_note": "General winner: FPTP (top two advance).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "polymarket_slug": "washington-governor-election-winner"
     }
   },
@@ -361,6 +411,8 @@
       "primary_type": "open",
       "primary_type_label": "Open primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "wisconsin-governor-republican-primary-winner"
@@ -377,6 +429,8 @@
       "primary_type": "closed",
       "primary_type_label": "Closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "polymarket_slug": "wyoming-governor-republican-primary-winner"
@@ -388,6 +442,8 @@
       "primary_type": "closed",
       "primary_type_label": "Closed primary",
       "primary_type_note": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "parties": {
         "Republican": {
           "incumbent": "Barrasso"

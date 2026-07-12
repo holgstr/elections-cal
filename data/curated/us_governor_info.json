@@ -4,10 +4,12 @@
   "AK": {
     "polymarket_slug": "alaska-governor-election-winner",
     "odds_format": "candidates",
-    "incumbent": "Dunleavy"
+    "incumbent": "Dunleavy",
+    "winner_note": "Winner: RCV (ranked-choice voting)."
   },
   "AL": {
     "polymarket_slug": "alabama-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "alabama-governor-republican-primary-winner",
       "Democrat": "alabama-governor-democratic-primary-winner"
@@ -18,6 +20,7 @@
   },
   "AR": {
     "polymarket_slug": "arkansas-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "arkansas-governor-republican-primary-winner",
       "Democrat": "arkansas-governor-democratic-primary-winner"
@@ -28,6 +31,7 @@
   },
   "AZ": {
     "polymarket_slug": "arizona-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "arizona-governor-republican-primary-winner",
       "Democrat": "arizona-governor-democratic-primary-winner"
@@ -38,10 +42,12 @@
   },
   "CA": {
     "polymarket_slug": "california-governor-election-2026",
-    "odds_format": "candidates"
+    "odds_format": "candidates",
+    "winner_note": "General winner: FPTP (top two advance)."
   },
   "CO": {
     "polymarket_slug": "colorado-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "colorado-governor-republican-primary-winner",
       "Democrat": "colorado-governor-democratic-primary-winner"
@@ -49,6 +55,7 @@
   },
   "CT": {
     "polymarket_slug": "connecticut-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "connecticut-governor-republican-primary-winner",
       "Democrat": "connecticut-governor-democratic-primary-winner"
@@ -59,6 +66,7 @@
   },
   "FL": {
     "polymarket_slug": "florida-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "republican-nominee-for-florida-governor",
       "Democrat": "democratic-nominee-for-florida-governor"
@@ -66,6 +74,7 @@
   },
   "GA": {
     "polymarket_slug": "georgia-governor-winner-2026",
+    "winner_note": "Winner: 50%+1; else top-two runoff (FPTP).",
     "nominee_slugs": {
       "Republican": "georgia-governor-republican-primary-winner",
       "Democrat": "georgia-governor-democratic-primary-winner"
@@ -73,6 +82,7 @@
   },
   "HI": {
     "polymarket_slug": "hawaii-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "hawaii-governor-republican-primary-winner",
       "Democrat": "hawaii-governor-democratic-primary-winner"
@@ -83,6 +93,7 @@
   },
   "IA": {
     "polymarket_slug": "iowa-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "iowa-governor-republican-primary-winner",
       "Democrat": "iowa-governor-democratic-primary-winner"
@@ -90,6 +101,7 @@
   },
   "ID": {
     "polymarket_slug": "idaho-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "idaho-governor-republican-primary-winner",
       "Democrat": "idaho-governor-democratic-primary-winner"
@@ -100,6 +112,7 @@
   },
   "IL": {
     "polymarket_slug": "illinois-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "illinois-governor-republican-primary-winner",
       "Democrat": "illinois-governor-democratic-primary-winner"
@@ -110,6 +123,7 @@
   },
   "KS": {
     "polymarket_slug": "kansas-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "kansas-governor-republican-primary-winner",
       "Democrat": "kansas-governor-democratic-primary-winner"
@@ -120,6 +134,7 @@
   },
   "MA": {
     "polymarket_slug": "massachusetts-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "massachusetts-governor-republican-primary-winner",
       "Democrat": "massachusetts-governor-democratic-primary-winner"
@@ -130,6 +145,7 @@
   },
   "MD": {
     "polymarket_slug": "maryland-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "maryland-governor-republican-primary-winner",
       "Democrat": "maryland-governor-democratic-primary-winner"
@@ -140,6 +156,7 @@
   },
   "ME": {
     "polymarket_slug": "maine-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "maine-governor-republican-primary-winner",
       "Democrat": "maine-governor-democratic-primary-winner"
@@ -150,6 +167,7 @@
   },
   "MI": {
     "polymarket_slug": "michigan-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "michigan-governor-republican-primary-winner",
       "Democrat": "michigan-governor-democratic-primary-winner"
@@ -157,6 +175,7 @@
   },
   "MN": {
     "polymarket_slug": "minnesota-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "minnesota-governor-republican-primary-winner",
       "Democrat": "minnesota-governor-democratic-primary-winner"
@@ -167,6 +186,7 @@
   },
   "NE": {
     "polymarket_slug": "nebraska-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "nebraska-governor-republican-primary-winner",
       "Democrat": "nebraska-governor-democratic-primary-winner"
@@ -177,6 +197,7 @@
   },
   "NH": {
     "polymarket_slug": "new-hampshire-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "new-hampshire-governor-republican-primary-winner",
       "Democrat": "new-hampshire-governor-democratic-primary-winner"
@@ -184,6 +205,7 @@
   },
   "NM": {
     "polymarket_slug": "new-mexico-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "new-mexico-governor-republican-primary-winner",
       "Democrat": "new-mexico-governor-democratic-primary-winner"
@@ -191,6 +213,7 @@
   },
   "NV": {
     "polymarket_slug": "nevada-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "nevada-governor-republican-primary-winner",
       "Democrat": "nevada-governor-democratic-primary-winner"
@@ -201,6 +224,7 @@
   },
   "NY": {
     "polymarket_slug": "new-york-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "new-york-governor-republican-primary-winner",
       "Democrat": "new-york-governor-democratic-primary-winner"
@@ -211,6 +235,7 @@
   },
   "OH": {
     "polymarket_slug": "ohio-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "ohio-governor-republican-primary-winner",
       "Democrat": "ohio-governor-democratic-primary-winner"
@@ -218,6 +243,7 @@
   },
   "OK": {
     "polymarket_slug": "oklahoma-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "oklahoma-governor-republican-primary-winner",
       "Democrat": "oklahoma-governor-democratic-primary-winner"
@@ -228,6 +254,7 @@
   },
   "OR": {
     "polymarket_slug": "oregon-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "oregon-governor-republican-primary-winner",
       "Democrat": "oregon-governor-democratic-primary-winner"
@@ -238,6 +265,7 @@
   },
   "PA": {
     "polymarket_slug": "pennsylvania-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "pennsylvania-governor-republican-primary-winner",
       "Democrat": "pennsylvania-governor-democratic-primary-winner"
@@ -248,6 +276,7 @@
   },
   "RI": {
     "polymarket_slug": "rhode-island-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "rhode-island-governor-republican-primary-winner",
       "Democrat": "rhode-island-governor-democratic-primary-winner"
@@ -258,6 +287,7 @@
   },
   "SC": {
     "polymarket_slug": "south-carolina-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "south-carolina-governor-republican-primary-winner",
       "Democrat": "south-carolina-governor-democratic-primary-winner"
@@ -268,6 +298,7 @@
   },
   "SD": {
     "polymarket_slug": "south-dakota-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "south-dakota-governor-republican-primary-winner",
       "Democrat": "south-dakota-governor-democratic-primary-winner"
@@ -275,6 +306,7 @@
   },
   "TN": {
     "polymarket_slug": "tennessee-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "tennessee-governor-republican-primary-winner",
       "Democrat": "tennessee-governor-democratic-primary-winner"
@@ -282,6 +314,7 @@
   },
   "TX": {
     "polymarket_slug": "texas-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "texas-governor-republican-primary-winner",
       "Democrat": "texas-governor-democratic-primary-winner"
@@ -292,6 +325,7 @@
   },
   "VT": {
     "polymarket_slug": "vermont-governor-winner-2026",
+    "winner_note": "Winner: 50%+1; else legislature picks from top three.",
     "nominee_slugs": {
       "Republican": "vermont-governor-republican-primary-winner",
       "Democrat": "vermont-governor-democratic-primary-winner"
@@ -302,6 +336,7 @@
   },
   "WA": {
     "polymarket_slug": "washington-governor-election-winner",
+    "winner_note": "General winner: FPTP (top two advance).",
     "nominee_slugs": {
       "Republican": "washington-governor-republican-primary-winner",
       "Democrat": "washington-governor-democratic-primary-winner"
@@ -312,6 +347,7 @@
   },
   "WI": {
     "polymarket_slug": "wisconsin-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "wisconsin-governor-republican-primary-winner",
       "Democrat": "wisconsin-governor-democratic-primary-winner"
@@ -322,6 +358,7 @@
   },
   "WY": {
     "polymarket_slug": "wyoming-governor-winner-2026",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "wyoming-governor-republican-primary-winner",
       "Democrat": "wyoming-governor-democratic-primary-winner"
