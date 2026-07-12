@@ -13,6 +13,11 @@ MARKETS_PATH = ROOT / "data" / "config" / "us_governor_markets.json"
 PRIMARY_MARKETS_PATH = ROOT / "data" / "config" / "us_primary_markets.json"
 OUTPUT_PATH = ROOT / "data" / "curated" / "us_governor_info.json"
 
+from us_election_winner_systems import (  # noqa: E402
+    general_governor_winner_note,
+    load_winner_systems,
+)
+
 WINDOW_MONTHS = 12
 
 STATE_SLUG_PREFIX = {
@@ -124,8 +129,10 @@ def build_state_entry(
     market_config: dict,
     meta: dict,
     primary_meta: dict,
+    winner_systems: dict,
 ) -> dict:
     entry = dict(market_config)
+    entry["winner_note"] = general_governor_winner_note(winner_systems, state_code)
     overrides = meta.get("nominee_slug_overrides", {}).get(state_code, {})
     incumbents = meta.get("incumbents", {}).get(state_code)
 
@@ -150,6 +157,7 @@ def build_state_entry(
 
 def main() -> None:
     meta = load_json(MARKETS_PATH)
+    winner_systems = load_winner_systems()
     markets = meta.get("markets", {})
     primary_meta = load_json(PRIMARY_MARKETS_PATH)
     needed = sorted(governor_states_in_window())
@@ -164,7 +172,9 @@ def main() -> None:
 
     for state_code in needed:
         if state_code in markets:
-            output[state_code] = build_state_entry(state_code, markets[state_code], meta, primary_meta)
+            output[state_code] = build_state_entry(
+                state_code, markets[state_code], meta, primary_meta, winner_systems
+            )
 
     save_json(OUTPUT_PATH, output)
     print(

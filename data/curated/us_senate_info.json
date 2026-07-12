@@ -4,10 +4,12 @@
   "AK": {
     "polymarket_slug": "alaska-senate-election-winner",
     "odds_format": "candidates",
-    "incumbent": "Sullivan"
+    "incumbent": "Sullivan",
+    "winner_note": "Winner: RCV (ranked-choice voting)."
   },
   "AL": {
     "polymarket_slug": "alabama-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "alabama-republican-senate-primary-winner",
       "Democrat": "alabama-democratic-senate-primary-winner"
@@ -18,6 +20,7 @@
   },
   "AR": {
     "polymarket_slug": "arkansas-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "arkansas-republican-senate-primary-winner",
       "Democrat": "arkansas-democratic-senate-primary-winner"
@@ -28,6 +31,7 @@
   },
   "CO": {
     "polymarket_slug": "colorado-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "colorado-republican-senate-primary-winner",
       "Democrat": "colorado-democratic-senate-primary-winner"
@@ -38,6 +42,7 @@
   },
   "DE": {
     "polymarket_slug": "delaware-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "delaware-republican-senate-primary-winner",
       "Democrat": "delaware-democratic-senate-primary-winner"
@@ -48,6 +53,7 @@
   },
   "GA": {
     "polymarket_slug": "georgia-senate-election-winner",
+    "winner_note": "Winner: 50%+1; else top-two runoff (FPTP).",
     "nominee_slugs": {
       "Republican": "georgia-republican-senate-primary-winner",
       "Democrat": "georgia-democratic-senate-primary-winner"
@@ -58,6 +64,7 @@
   },
   "IA": {
     "polymarket_slug": "iowa-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "iowa-republican-senate-primary-winner",
       "Democrat": "iowa-democratic-senate-primary-winner"
@@ -68,6 +75,7 @@
   },
   "ID": {
     "polymarket_slug": "idaho-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "idaho-republican-senate-primary-winner",
       "Democrat": "idaho-democratic-senate-primary-winner"
@@ -78,10 +86,12 @@
   },
   "IL": {
     "polymarket_slug": "illinois-senate-election-winner",
-    "odds_format": "candidates"
+    "odds_format": "candidates",
+    "winner_note": "Winner: FPTP (most votes wins)."
   },
   "KS": {
     "polymarket_slug": "kansas-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "kansas-republican-senate-primary-winner",
       "Democrat": "kansas-democratic-senate-primary-winner"
@@ -92,6 +102,7 @@
   },
   "KY": {
     "polymarket_slug": "kentucky-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "kentucky-republican-senate-primary-winner",
       "Democrat": "kentucky-democratic-senate-primary-winner"
@@ -99,6 +110,7 @@
   },
   "LA": {
     "polymarket_slug": "louisiana-senate-election-winner",
+    "winner_note": "Winner: 50%+1 on one ballot; else top-two runoff (FPTP).",
     "nominee_slugs": {
       "Republican": "louisiana-republican-senate-primary-winner",
       "Democrat": "louisiana-democratic-senate-primary-winner"
@@ -109,6 +121,7 @@
   },
   "MA": {
     "polymarket_slug": "massachusetts-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "massachusetts-republican-senate-primary-winner",
       "Democrat": "massachusetts-democratic-senate-primary-winner"
@@ -119,6 +132,7 @@
   },
   "ME": {
     "polymarket_slug": "maine-senate-election-winner",
+    "winner_note": "Winner: RCV (ranked-choice voting).",
     "nominee_slugs": {
       "Republican": "maine-republican-senate-primary-winner",
       "Democrat": "maine-democratic-senate-primary-winner"
@@ -129,6 +143,7 @@
   },
   "MI": {
     "polymarket_slug": "michigan-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "michigan-republican-senate-primary-winner-954",
       "Democrat": "michigan-democratic-senate-primary-winner"
@@ -139,6 +154,7 @@
   },
   "MN": {
     "polymarket_slug": "minnesota-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "minnesota-republican-senate-primary-winner",
       "Democrat": "minnesota-democratic-senate-primary-winner"
@@ -149,6 +165,7 @@
   },
   "MS": {
     "polymarket_slug": "mississippi-senate-election-winner",
+    "winner_note": "Winner: 50%+1; else top-two runoff (FPTP).",
     "nominee_slugs": {
       "Republican": "mississippi-republican-senate-primary-winner",
       "Democrat": "mississippi-democratic-senate-primary-winner"
@@ -159,6 +176,7 @@
   },
   "MT": {
     "polymarket_slug": "montana-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "montana-republican-senate-primary-winner",
       "Democrat": "montana-democratic-senate-primary-winner"
@@ -169,6 +187,7 @@
   },
   "NC": {
     "polymarket_slug": "north-carolina-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "north-carolina-republican-senate-primary-winner",
       "Democrat": "north-carolina-democratic-senate-primary-winner"
@@ -179,6 +198,7 @@
   },
   "NE": {
     "polymarket_slug": "nebraska-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "nebraska-republican-senate-primary-winner",
       "Democrat": "nebraska-democratic-senate-primary-winner"
@@ -189,6 +209,7 @@
   },
   "NH": {
     "polymarket_slug": "new-hampshire-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "new-hampshire-republican-senate-primary-winner-296",
       "Democrat": "new-hampshire-democratic-senate-primary-winner"
@@ -199,6 +220,7 @@
   },
   "NJ": {
     "polymarket_slug": "new-jersey-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "new-jersey-republican-senate-primary-winner",
       "Democrat": "new-jersey-democratic-senate-primary-winner"
@@ -209,6 +231,7 @@
   },
   "NM": {
     "polymarket_slug": "new-mexico-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "new-mexico-republican-senate-primary-winner",
       "Democrat": "new-mexico-democratic-senate-primary-winner"
@@ -219,6 +242,7 @@
   },
   "OK": {
     "polymarket_slug": "oklahoma-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "oklahoma-republican-senate-primary-winner",
       "Democrat": "oklahoma-democratic-senate-primary-winner"
@@ -229,6 +253,7 @@
   },
   "OR": {
     "polymarket_slug": "oregon-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "oregon-republican-senate-primary-winner",
       "Democrat": "oregon-democratic-senate-primary-winner"
@@ -239,6 +264,7 @@
   },
   "RI": {
     "polymarket_slug": "rhode-island-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "rhode-island-republican-senate-primary-winner",
       "Democrat": "rhode-island-democratic-senate-primary-winner"
@@ -249,6 +275,7 @@
   },
   "SC": {
     "polymarket_slug": "south-carolina-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "south-carolina-republican-senate-primary-winner",
       "Democrat": "south-carolina-democratic-senate-primary-winner"
@@ -259,6 +286,7 @@
   },
   "SD": {
     "polymarket_slug": "south-dakota-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "south-dakota-republican-senate-primary-winner",
       "Democrat": "south-dakota-democratic-senate-primary-winner"
@@ -269,6 +297,7 @@
   },
   "TN": {
     "polymarket_slug": "tennessee-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "tennessee-republican-senate-primary-winner",
       "Democrat": "tennessee-democratic-senate-primary-winner"
@@ -279,10 +308,12 @@
   },
   "TX": {
     "polymarket_slug": "texas-senate-election-winner",
-    "odds_format": "candidates"
+    "odds_format": "candidates",
+    "winner_note": "Winner: FPTP (most votes wins)."
   },
   "VA": {
     "polymarket_slug": "virginia-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "virginia-senate-republican-primary-winner",
       "Democrat": "virginia-democratic-senate-primary-winner"
@@ -293,6 +324,7 @@
   },
   "WV": {
     "polymarket_slug": "west-virginia-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "west-virginia-republican-senate-primary-winner",
       "Democrat": "west-virginia-democratic-senate-primary-winner"
@@ -303,6 +335,7 @@
   },
   "WY": {
     "polymarket_slug": "wyoming-senate-election-winner",
+    "winner_note": "Winner: FPTP (most votes wins).",
     "nominee_slugs": {
       "Republican": "wyoming-republican-senate-primary-winner",
       "Democrat": "wyoming-democratic-senate-primary-winner"

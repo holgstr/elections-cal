@@ -593,6 +593,23 @@ function renderSectionHeadline(label, infoIcon = "", slug = null) {
     </p>`;
 }
 
+function renderInfoIcon(note) {
+  if (!note) return "";
+  return `<span class="primary-popover__info" tabindex="0" aria-label="${escapeHtml(note)}">
+        <span class="primary-popover__info-icon" aria-hidden="true">i</span>
+        <span class="primary-popover__info-tip" role="tooltip">${escapeHtml(note)}</span>
+      </span>`;
+}
+
+function buildPrimaryTooltipNote(info, { isRunoff = false } = {}) {
+  const parts = [info.primary_type_note].filter(Boolean);
+  const winnerNote = isRunoff
+    ? info.runoff_winner_note || info.winner_note
+    : info.winner_note;
+  if (winnerNote) parts.push(winnerNote);
+  return parts.join(" ");
+}
+
 function renderPartyName(party, slug) {
   const partyClass = `primary-popover__party-name primary-popover__party-name--${partySlug(party)}`;
   return renderLinkedText(party, slug, {
@@ -601,24 +618,19 @@ function renderPartyName(party, slug) {
   });
 }
 
-function renderTypeHeader(info, slug = null) {
+function renderTypeHeader(info, slug = null, { isRunoff = false } = {}) {
   const typeLabel =
     info.primary_type_label ||
     PRIMARY_TYPE_LABELS[info.primary_type] ||
     info.primary_type;
 
-  const formatNote = info.primary_type_note || "";
-  const infoIcon = formatNote
-    ? `<span class="primary-popover__info" tabindex="0" aria-label="${escapeHtml(formatNote)}">
-        <span class="primary-popover__info-icon" aria-hidden="true">i</span>
-        <span class="primary-popover__info-tip" role="tooltip">${escapeHtml(formatNote)}</span>
-      </span>`
-    : "";
+  const formatNote = buildPrimaryTooltipNote(info, { isRunoff });
+  const infoIcon = formatNote ? renderInfoIcon(formatNote) : "";
 
   return renderSectionHeadline(typeLabel, infoIcon, slug);
 }
 
-function renderPopoverBody(info, partySections) {
+function renderPopoverBody(info, partySections, { isRunoff = false } = {}) {
   const partyConfigs = info.parties || {};
   const partyBlocks = Object.entries(partySections)
     .filter(([, section]) => section.candidates.length || section.error)
@@ -642,7 +654,7 @@ function renderPopoverBody(info, partySections) {
     .join("");
 
   return `
-    ${renderTypeHeader(info)}
+    ${renderTypeHeader(info, null, { isRunoff })}
     <div class="primary-popover__parties">${partyBlocks}</div>`;
 }
 
@@ -650,14 +662,14 @@ function isCombinedBallotPrimary(info) {
   return COMBINED_BALLOT_FORMATS.has(info.primary_format);
 }
 
-function renderCombinedBallotBody(info, section) {
+function renderCombinedBallotBody(info, section, { isRunoff = false } = {}) {
   const candidates = renderCandidateRows(section, {
     slug: info.polymarket_slug,
     oddsFormat: "candidates",
   });
 
   return `
-    ${renderTypeHeader(info, info.polymarket_slug)}
+    ${renderTypeHeader(info, info.polymarket_slug, { isRunoff })}
     ${candidates}`;
 }
 
@@ -793,26 +805,29 @@ function renderGovernorPartyRows(section, nominees = {}, slug = null) {
   return `<div class="primary-popover__parties">${partyBlocks}</div>`;
 }
 
-function renderGovernorBody(section, nominees = {}, slug = null) {
+function renderGovernorBody(section, nominees = {}, slug = null, info = null) {
+  const infoIcon = info?.winner_note ? renderInfoIcon(info.winner_note) : "";
   return `
-    ${renderSectionHeadline("Governor", "", slug)}
+    ${renderSectionHeadline("Governor", infoIcon, slug)}
     ${renderGovernorPartyRows(section, nominees, slug)}`;
 }
 
-function renderSenateBody(section, nominees = {}, slug = null) {
+function renderSenateBody(section, nominees = {}, slug = null, info = null) {
+  const infoIcon = info?.winner_note ? renderInfoIcon(info.winner_note) : "";
   return `
-    ${renderSectionHeadline("Senate", "", slug)}
+    ${renderSectionHeadline("Senate", infoIcon, slug)}
     ${renderGovernorPartyRows(section, nominees, slug)}`;
 }
 
-function renderGovernorCandidateBody(section, slug = null) {
+function renderGovernorCandidateBody(section, slug = null, info = null) {
   const candidates = renderCandidateRows(section, {
     slug,
     oddsFormat: "candidates",
   });
+  const infoIcon = info?.winner_note ? renderInfoIcon(info.winner_note) : "";
 
   return `
-    ${renderSectionHeadline("Governor", "", slug)}
+    ${renderSectionHeadline("Governor", infoIcon, slug)}
     ${candidates}`;
 }
 
@@ -1007,8 +1022,8 @@ async function showGovernorPopover(trigger) {
 
   popover.innerHTML =
     format === "candidates"
-      ? renderGovernorCandidateBody(section, info.polymarket_slug)
-      : renderGovernorBody(section, nominees, info.polymarket_slug);
+      ? renderGovernorCandidateBody(section, info.polymarket_slug, info)
+      : renderGovernorBody(section, nominees, info.polymarket_slug, info);
   positionPopover(trigger);
 }
 
@@ -1067,19 +1082,20 @@ async function showSenatePopover(trigger) {
 
   popover.innerHTML =
     format === "candidates"
-      ? renderSenateCandidateBody(section, info.polymarket_slug)
-      : renderSenateBody(section, nominees, info.polymarket_slug);
+      ? renderSenateCandidateBody(section, info.polymarket_slug, info)
+      : renderSenateBody(section, nominees, info.polymarket_slug, info);
   positionPopover(trigger);
 }
 
-function renderSenateCandidateBody(section, slug = null) {
+function renderSenateCandidateBody(section, slug = null, info = null) {
   const candidates = renderCandidateRows(section, {
     slug,
     oddsFormat: "candidates",
   });
+  const infoIcon = info?.winner_note ? renderInfoIcon(info.winner_note) : "";
 
   return `
-    ${renderSectionHeadline("Senate", "", slug)}
+    ${renderSectionHeadline("Senate", infoIcon, slug)}
     ${candidates}`;
 }
 
@@ -1113,11 +1129,16 @@ async function showMayoralPopover(trigger) {
   positionPopover(trigger);
 }
 
+export function isPrimaryRunoffLabel(label) {
+  return /\s+Primary\s+Runoff$/i.test(label?.trim() || "");
+}
+
 async function showPrimaryPopover(trigger, key) {
   const { stateCode, office } = parsePrimaryKey(key);
   const electionDate = trigger.dataset.primaryDate;
   const info = getPrimaryInfo(stateCode, office, electionDate);
   if (!info) return;
+  const isRunoff = trigger.dataset.primaryRunoff === "1";
 
   const popover = ensurePopover();
   activeTrigger = trigger;
@@ -1139,7 +1160,7 @@ async function showPrimaryPopover(trigger, key) {
 
     if (activeTrigger !== trigger) return;
 
-    popover.innerHTML = renderCombinedBallotBody(info, section);
+    popover.innerHTML = renderCombinedBallotBody(info, section, { isRunoff });
     positionPopover(trigger);
     return;
   }
@@ -1155,7 +1176,7 @@ async function showPrimaryPopover(trigger, key) {
 
   if (activeTrigger !== trigger) return;
 
-  popover.innerHTML = renderPopoverBody(info, partySections);
+  popover.innerHTML = renderPopoverBody(info, partySections, { isRunoff });
   positionPopover(trigger);
 }
 
@@ -1344,7 +1365,8 @@ export function renderInteractiveOfficeTag(
   }
 
   const key = primaryKey(stateCode, office);
-  return `<button type="button" class="office-tag office-tag--interactive" data-primary="${key}" data-primary-date="${electionDate || ""}" aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
+  const runoffAttr = isPrimaryRunoffLabel(label) ? ' data-primary-runoff="1"' : "";
+  return `<button type="button" class="office-tag office-tag--interactive" data-primary="${key}" data-primary-date="${electionDate || ""}"${runoffAttr} aria-expanded="false" aria-haspopup="dialog">${label}</button>`;
 }
 
 function prefetchPromise(promise) {
