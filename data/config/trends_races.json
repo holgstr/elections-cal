@@ -13,7 +13,7 @@
         "label": "Marx"
       },
       {
-        "name": "Barbara Kirkmeyer",
+        "name": "Barb Kirkmeyer",
         "label": "Kirkmeyer",
         "mid": "/g/11c51whhyt",
         "topic_title": "Barbara Kirkmeyer",
@@ -91,7 +91,10 @@
       },
       {
         "name": "Jo Rae Perkins",
-        "label": "Perkins"
+        "label": "Perkins",
+        "mid": "/g/11c742x6jt",
+        "topic_title": "Jo Rae Perkins",
+        "topic_type": "Politician"
       }
     ],
     "result": {
