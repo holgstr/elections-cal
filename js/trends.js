@@ -985,7 +985,10 @@ function buildCorrelationPanel(races) {
     <section class="trends-correlation" aria-label="Search share versus result">
       <header class="trends-card-header">
         <h3 class="trends-card-title">Search share vs result</h3>
-        <p class="trends-card-meta">Each point is one race’s tracked winner: search share vs result (rescaled to 100%). Circles = R1; squares = R2. Green = search share also picked the winner; red = miss. Omits primaries that clearly do not decide who wins the office.</p>
+        <details class="trends-card-explain">
+          <summary>About this chart</summary>
+          <p class="trends-card-meta">Each point is one race’s tracked winner: search share vs result (rescaled to 100%). Circles = R1; squares = R2. Green = search share also picked the winner; red = miss. Omits primaries that clearly do not decide who wins the office.</p>
+        </details>
       </header>
       <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root="correlation">
         ${buildScatterSvg(points, {
@@ -1017,7 +1020,10 @@ function buildLeadDaysMarginPanel(races) {
     <section class="trends-correlation" aria-label="Daily search lead versus result margin">
       <header class="trends-card-header">
         <h3 class="trends-card-title">Daily search lead vs margin</h3>
-        <p class="trends-card-meta">Each point is one race: exponentially weighted share of the ${shareDays} pre-election days the eventual winner led on relative search interest (recent days count more; half-life ${LEAD_DAY_WEIGHT_HALF_LIFE}d), versus that winner’s two-way margin (pp) against the runner-up among tracked candidates. Circles = R1; squares = R2. Green = weighted lead share over 50%; red = not.</p>
+        <details class="trends-card-explain">
+          <summary>About this chart</summary>
+          <p class="trends-card-meta">Each point is one race: exponentially weighted share of the ${shareDays} pre-election days the eventual winner led on relative search interest (recent days count more; half-life ${LEAD_DAY_WEIGHT_HALF_LIFE}d), versus that winner’s two-way margin (pp) against the runner-up among tracked candidates. Circles = R1; squares = R2. Green = weighted lead share over 50%; red = not.</p>
+        </details>
       </header>
       <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root="lead-margin">
         ${buildScatterSvg(points, {
@@ -1042,7 +1048,7 @@ function wireOneScatter(wrap, points) {
     if (!point) return;
     const rect = svg.getBoundingClientRect();
     const pctX = rect.width ? ((clientX - rect.left) / rect.width) * 100 : 50;
-    const call = point.predicted ? "Hit" : "Miss";
+    const round = point.round || "";
     const formatX = point.formatX || formatVotePct;
     const formatY = point.formatY || formatVotePct;
     const tipXLabel = point.tipXLabel || "X";
@@ -1053,7 +1059,7 @@ function wireOneScatter(wrap, points) {
       <div class="trends-tooltip-dense-title">
         <span class="trends-tooltip-swatch" style="background:${point.color}"></span>
         ${escapeHtml(point.raceTitle)}
-        <span class="trends-tooltip-call">${call}</span>
+        ${round ? `<span class="trends-tooltip-round">${escapeHtml(round)}</span>` : ""}
       </div>
       <div class="trends-tooltip-dense-meta">
         ${escapeHtml(tipXLabel)} ${escapeHtml(formatX(point.x))} · ${escapeHtml(tipYLabel)} ${escapeHtml(formatY(point.y))}
@@ -1087,14 +1093,15 @@ function wireOneScatter(wrap, points) {
     dot.setAttribute("role", "img");
     const point = points[index];
     if (point) {
-      const call = point.predicted ? "hit" : "miss";
+      const round = point.round || "";
       const formatX = point.formatX || formatVotePct;
       const formatY = point.formatY || formatVotePct;
       const tipXLabel = point.tipXLabel || "X";
       const tipYLabel = point.tipYLabel || "Y";
+      const roundPart = round ? `, ${round}` : "";
       dot.setAttribute(
         "aria-label",
-        `${point.raceLabel}: ${tipXLabel} ${formatX(point.x)}, ${tipYLabel} ${formatY(point.y)}, ${call}`
+        `${point.raceLabel}${roundPart}: ${tipXLabel} ${formatX(point.x)}, ${tipYLabel} ${formatY(point.y)}`
       );
     }
   }

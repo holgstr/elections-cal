@@ -888,6 +888,41 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   color: var(--muted);
 }
 
+.trends-card-explain {
+  margin: 0.15rem 0 0;
+}
+
+.trends-card-explain > summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--muted);
+  user-select: none;
+}
+
+.trends-card-explain > summary::-webkit-details-marker {
+  display: none;
+}
+
+.trends-card-explain > summary::before {
+  content: "▸ ";
+  display: inline-block;
+  width: 0.85em;
+}
+
+.trends-card-explain[open] > summary::before {
+  content: "▾ ";
+}
+
+.trends-card-explain > summary:hover {
+  color: var(--text);
+}
+
+.trends-card-explain .trends-card-meta {
+  margin-top: 0.35rem;
+}
+
 .trends-chart-wrap {
   position: relative;
   margin: 0.15rem 0 0.55rem;
@@ -976,12 +1011,11 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   flex-shrink: 0;
 }
 
-.trends-tooltip-call {
+.trends-tooltip-round {
   margin-left: auto;
   font-weight: 700;
   font-size: 0.65rem;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
   color: var(--muted);
 }
 
