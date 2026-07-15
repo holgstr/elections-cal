@@ -148,25 +148,15 @@ function candidateDisplayName(candidate) {
 }
 
 /**
- * Mid / resolution meta for the chart legend.
- * Autocomplete stores topic_type (e.g. "United States Senator") alongside mid.
+ * Parenthetical after the legend name: exact Knowledge Graph type, or "raw"
+ * when the series is a search-term comparison (not an entity mid).
  */
-function candidateLegendMeta(candidate) {
+function candidateLegendType(candidate) {
   const mid = (candidate?.mid || "").trim();
-  const topicType = (candidate?.topic_type || "").trim();
   const usingEntity = candidate?.query_mode === "entity" && mid;
-
-  if (usingEntity) {
-    return topicType ? `${mid} · ${topicType}` : mid;
-  }
-
-  if (mid) {
-    // Curated mid exists but the race fell back to search terms.
-    const unused = topicType ? `${mid} · ${topicType}` : mid;
-    return `search term · mid unused (${unused})`;
-  }
-
-  return "no mid · search term";
+  if (!usingEntity) return { text: "raw", isRaw: true };
+  const topicType = (candidate?.topic_type || "").trim();
+  return { text: topicType || "Topic", isRaw: false };
 }
 
 function formatVotePct(pct) {
@@ -723,13 +713,16 @@ function buildChartSvg(model) {
 function buildLegend(candidateSeries) {
   return candidateSeries
     .map(({ candidate, color }) => {
-      const meta = candidateLegendMeta(candidate);
+      const type = candidateLegendType(candidate);
+      const typeClass = type.isRaw
+        ? "trends-legend-type trends-legend-type-raw"
+        : "trends-legend-type";
       return `
         <span class="trends-legend-item">
           <span class="trends-swatch" style="background:${color}"></span>
           <span class="trends-legend-text">
-            <span class="trends-legend-name">${escapeHtml(candidateDisplayName(candidate))}</span>
-            <span class="trends-legend-meta">${escapeHtml(meta)}</span>
+            ${escapeHtml(candidateDisplayName(candidate))}
+            (<span class="${typeClass}">${escapeHtml(type.text)}</span>)
           </span>
         </span>
       `;
