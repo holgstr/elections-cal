@@ -65,6 +65,45 @@ function locationLine(race) {
   return parts.join(" · ");
 }
 
+function electionYearShort(race) {
+  const iso = race.election_date || "";
+  return /^\d{4}/.test(iso) ? iso.slice(2, 4) : "";
+}
+
+/** Compact race tag for dropdowns, e.g. "CO US Senate 26". */
+function raceShortTag(race) {
+  if (race.short_label) return String(race.short_label);
+  const parts = [];
+  if (race.state_code) parts.push(race.state_code);
+
+  const title = race.title || "";
+  const cdMatch = title.match(/\bCD[-\s]?(\d+)\b/i);
+  if (cdMatch) {
+    parts.push(`CD-${cdMatch[1]}`);
+  } else if (/\bsenate\b/i.test(title)) {
+    parts.push(race.country_code === "US" || !race.country_code ? "US Senate" : "Senate");
+  } else if (/\bgovernor\b/i.test(title)) {
+    parts.push(race.country_code === "US" || !race.country_code ? "US Governor" : "Governor");
+  } else {
+    const trimmed = title
+      .replace(/\bColorado\b/gi, "")
+      .replace(/\bDemocratic\b/gi, "")
+      .replace(/\bRepublican\b/gi, "")
+      .replace(/\bPrimary\b/gi, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (trimmed) parts.push(trimmed);
+  }
+
+  const yy = electionYearShort(race);
+  if (yy) parts.push(yy);
+  return parts.join(" ");
+}
+
+function candidateShortName(candidate) {
+  return candidate?.label || candidate?.name || candidate?.keyword || "Candidate";
+}
+
 function linePath(points) {
   if (!points.length) return "";
   return points
@@ -104,7 +143,75 @@ function footnoteForRace(race) {
       : entityCount > 0
         ? "Mixed Topics/search terms (0–100, relative within this comparison)"
         : "Google Trends search interest (0–100, relative within this comparison)";
-  return `${basis}. Daily series for the ${race.window_days || 30} days through election day.`;
+  const geo = race.geo || "worldwide";
+  return (
+    `${basis}. Custom range ${race.start_date || "?"} → ${race.end_date || "?"} ` +
+    `(${race.window_days || 30}-day run-up ending on election day), geo ${geo}. ` +
+    "Live Google Trends can differ if you use Past 30 days, a different region, " +
+    "typed search terms instead of Topics, or because Google re-samples over time."
+  );
+}
+
+/**
+ * Relative share of displayed search interest (area under each series),
+ * normalized so integer percents sum to 100.
+ */
+function computeRelativeShares(candidateSeries) {
+  const rows = (candidateSeries || []).map(({ candidate, color, points }) => {
+    const sum = (points || []).reduce((acc, point) => {
+      const value = typeof point.value === "number" ? point.value : 0;
+      return acc + Math.max(0, value);
+    }, 0);
+    return {
+      label: candidateShortName(candidate),
+      color,
+      sum,
+    };
+  });
+  const total = rows.reduce((acc, row) => acc + row.sum, 0);
+  if (!rows.length || total <= 0) {
+    return rows.map((row) => ({ ...row, share: 0 }));
+  }
+
+  const exact = rows.map((row) => (row.sum / total) * 100);
+  const floors = exact.map((value) => Math.floor(value));
+  let remainder = 100 - floors.reduce((acc, value) => acc + value, 0);
+  const order = exact
+    .map((value, index) => ({ index, frac: value - floors[index] }))
+    .sort((a, b) => b.frac - a.frac);
+  const shares = [...floors];
+  for (let i = 0; i < order.length && remainder > 0; i++, remainder--) {
+    shares[order[i].index] += 1;
+  }
+  return rows.map((row, index) => ({ ...row, share: shares[index] }));
+}
+
+function buildShareSummary(candidateSeries, windowDays) {
+  const shares = computeRelativeShares(candidateSeries);
+  if (!shares.length) return "";
+  const total = shares.reduce((acc, row) => acc + row.sum, 0);
+  if (total <= 0) {
+    return `<p class="trends-share">No cumulative search interest in this window.</p>`;
+  }
+  const parts = shares
+    .map(
+      (row) => `
+        <span class="trends-share-item">
+          <span class="trends-swatch" style="background:${row.color}"></span>
+          <span class="trends-share-label">${escapeHtml(row.label)}</span>
+          <span class="trends-share-value">${row.share}%</span>
+        </span>
+      `
+    )
+    .join('<span class="trends-share-sep" aria-hidden="true">·</span>');
+  const days = windowDays || 30;
+  return `
+    <p class="trends-share">
+      <span class="trends-share-heading">Relative search share (${days}-day window)</span>
+      <span class="trends-share-row">${parts}</span>
+      <span class="trends-share-note">Area under each displayed curve, rescaled to sum to 100.</span>
+    </p>
+  `;
 }
 
 function buildChartModel(race) {
@@ -335,6 +442,7 @@ function renderRaceCard(race) {
         <h3 class="trends-card-title">${escapeHtml(race.title)}</h3>
         <p class="trends-card-meta">${escapeHtml(subtitle)}</p>
       </header>
+      ${buildShareSummary(model.candidateSeries, race.window_days)}
       <div class="trends-chart-wrap" data-chart-root>
         ${buildChartSvg(model)}
         <div class="trends-tooltip" hidden></div>
@@ -345,9 +453,15 @@ function renderRaceCard(race) {
   `;
 }
 
+/** Dropdown label: "Hickenlooper - Gonzales (CO US Senate 26)". */
 function raceOptionLabel(race) {
-  const location = locationLine(race);
-  return location ? `${race.title} (${location})` : race.title;
+  const names = (race.candidates || [])
+    .map((candidate) => candidateShortName(candidate))
+    .filter((name) => name && name !== "Candidate");
+  const tag = raceShortTag(race);
+  if (names.length && tag) return `${names.join(" - ")} (${tag})`;
+  if (names.length) return names.join(" - ");
+  return tag || race.title || race.id || "Race";
 }
 
 function bindInteractions(container, races) {
@@ -398,7 +512,8 @@ export async function renderTrends(container) {
 
   container.innerHTML = `
     <div class="trends-intro">
-      <p>Search interest from Google Trends for recent races. Where possible, comparisons use Google’s person topics (not raw name strings) so each series maps to one candidate. Values are relative within each head-to-head comparison (peak = 100). Hover a chart to compare both candidates on that day.</p>
+      <p>Search interest from Google Trends for recent races. Where possible, comparisons use Google’s person topics (not raw name strings) so each series maps to one candidate. Values are relative within each head-to-head comparison (peak = 100). The share line below each title is each candidate’s area under the displayed curves, rescaled to 100%. Hover a chart to compare both candidates on that day.</p>
+      <p class="trends-intro-note">To match Google Trends online, use the same custom date range and Colorado geo, and pick the same Topics—not “Past 30 days” from today or typed search terms. Even then, Google re-samples periodically, so a fresh pull can shift daily values slightly.</p>
     </div>
     <div class="trends-toolbar">
       <label class="trends-race-label" for="trends-race-select">Race</label>
