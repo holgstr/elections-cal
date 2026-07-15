@@ -110,6 +110,15 @@ function candidateShortName(candidate) {
   return candidate?.label || candidate?.name || candidate?.keyword || "Candidate";
 }
 
+/** Scatter-plot race title from given names, e.g. "Weiser-Bennet". */
+function raceGivenNamesTitle(race) {
+  const names = (race?.candidates || [])
+    .map((candidate) => candidateShortName(candidate))
+    .filter((name) => name && name !== "Candidate");
+  if (names.length) return names.join("-");
+  return raceShortTag(race) || race?.title || race?.id || "Race";
+}
+
 function linePath(points) {
   if (!points.length) return "";
   return points
@@ -287,15 +296,21 @@ function buildRaceCorrelationPoints(races) {
     const winner = resultShares.reduce((best, row) =>
       !best || row.share > best.share ? row : best
     );
+    const searchWinner = searchShares.reduce((best, row) =>
+      !best || row.share > best.share ? row : best
+    );
     const searchRow = searchShares.find((row) => row.label === winner.label);
-    if (!searchRow) continue;
+    if (!searchRow || !searchWinner) continue;
 
+    const predicted = searchWinner.label === winner.label;
     points.push({
       raceId: race.id,
-      raceLabel: raceShortTag(race),
-      raceTitle: race.title || raceShortTag(race),
+      raceLabel: raceGivenNamesTitle(race),
+      raceTitle: raceGivenNamesTitle(race),
       candidateLabel: winner.label,
-      color: winner.color,
+      searchWinnerLabel: searchWinner.label,
+      predicted,
+      color: predicted ? "#2f9e44" : "#e03131",
       x: searchRow.share,
       y: winner.share,
       resultStatus: race.result?.status || null,
@@ -783,7 +798,7 @@ function buildCorrelationPanel(races) {
     <section class="trends-correlation" aria-label="Search share versus result">
       <header class="trends-card-header">
         <h3 class="trends-card-title">Search share vs result</h3>
-        <p class="trends-card-meta">Each point is one race from the dropdown: the tracked winner’s relative search share and relative result (rescaled among Trends candidates to 100%).</p>
+        <p class="trends-card-meta">Each point is one race’s tracked winner: search share vs result (rescaled to 100%). Green = search share also picked the winner; red = miss.</p>
       </header>
       <p class="trends-corr-stat">${escapeHtml(corrText)}</p>
       <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root>
@@ -807,23 +822,17 @@ function wireScatterInteractions(container, races) {
     if (!point) return;
     const rect = svg.getBoundingClientRect();
     const pctX = rect.width ? ((clientX - rect.left) / rect.width) * 100 : 50;
+    const call = point.predicted ? "Hit" : "Miss";
     tooltip.hidden = false;
+    tooltip.classList.add("is-dense");
     tooltip.innerHTML = `
-      <div class="trends-tooltip-date">${escapeHtml(point.raceTitle)}</div>
-      <div class="trends-tooltip-row">
+      <div class="trends-tooltip-dense-title">
         <span class="trends-tooltip-swatch" style="background:${point.color}"></span>
-        <span class="trends-tooltip-label">${escapeHtml(point.candidateLabel)}</span>
-        <span class="trends-tooltip-value"></span>
+        ${escapeHtml(point.raceTitle)}
+        <span class="trends-tooltip-call">${call}</span>
       </div>
-      <div class="trends-tooltip-row">
-        <span></span>
-        <span class="trends-tooltip-label">Search</span>
-        <span class="trends-tooltip-value">${escapeHtml(formatVotePct(point.x))}</span>
-      </div>
-      <div class="trends-tooltip-row">
-        <span></span>
-        <span class="trends-tooltip-label">${escapeHtml(resultStatusHeading(point.resultStatus))}</span>
-        <span class="trends-tooltip-value">${escapeHtml(formatVotePct(point.y))}</span>
+      <div class="trends-tooltip-dense-meta">
+        Search ${escapeHtml(formatVotePct(point.x))} · Result ${escapeHtml(formatVotePct(point.y))}
       </div>
     `;
     const preferRight = pctX < 55;
@@ -836,6 +845,7 @@ function wireScatterInteractions(container, races) {
 
   const hideTip = () => {
     tooltip.hidden = true;
+    tooltip.classList.remove("is-dense");
     tooltip.innerHTML = "";
   };
 
@@ -853,9 +863,10 @@ function wireScatterInteractions(container, races) {
     dot.setAttribute("role", "img");
     const point = points[index];
     if (point) {
+      const call = point.predicted ? "hit" : "miss";
       dot.setAttribute(
         "aria-label",
-        `${point.raceLabel}: search ${formatVotePct(point.x)}, result ${formatVotePct(point.y)}`
+        `${point.raceLabel}: search ${formatVotePct(point.x)}, result ${formatVotePct(point.y)}, ${call}`
       );
     }
   }

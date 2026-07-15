@@ -954,6 +954,44 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   font-weight: 600;
 }
 
+.trends-tooltip.is-dense {
+  min-width: 0;
+  max-width: 12rem;
+  padding: 0.28rem 0.4rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  line-height: 1.25;
+}
+
+.trends-tooltip-dense-title {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.trends-tooltip-dense-title .trends-tooltip-swatch {
+  flex-shrink: 0;
+}
+
+.trends-tooltip-call {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.trends-tooltip-dense-meta {
+  margin-top: 0.12rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
 .trends-grid {
   stroke: var(--border);
   stroke-width: 1;
