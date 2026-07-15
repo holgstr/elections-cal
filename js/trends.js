@@ -16,6 +16,12 @@ const CHART = {
   pad: { top: 16, right: 16, bottom: 36, left: 36 },
 };
 
+const SCATTER = {
+  width: 640,
+  height: 300,
+  pad: { top: 18, right: 18, bottom: 44, left: 48 },
+};
+
 let trendsData = null;
 let selectedRaceId = null;
 
@@ -229,6 +235,123 @@ function buildShareItems(rows) {
       `
     )
     .join('<span class="trends-share-sep" aria-hidden="true">·</span>');
+}
+
+/**
+ * Relative result shares among Trends-tracked candidates only, rescaled to
+ * 100 so third-party / untracked vote is excluded from the comparison.
+ */
+function computeRelativeResults(race, candidateSeries) {
+  const result = race?.result;
+  if (!result?.candidates?.length || !candidateSeries?.length) return [];
+
+  const rows = candidateSeries
+    .map(({ candidate, color }) => {
+      const pct = resultPctForCandidate(result, candidate);
+      if (typeof pct !== "number" || !Number.isFinite(pct) || pct < 0) return null;
+      return {
+        label: candidateShortName(candidate),
+        color,
+        candidate,
+        raw: pct,
+      };
+    })
+    .filter(Boolean);
+
+  const total = rows.reduce((acc, row) => acc + row.raw, 0);
+  if (!rows.length || total <= 0) return [];
+
+  return rows.map((row) => ({
+    ...row,
+    share: (row.raw / total) * 100,
+  }));
+}
+
+/**
+ * One point per dropdown race: tracked vote winner’s search share (x) vs
+ * relative result share (y). Both axes are among Trends-tracked candidates.
+ */
+function buildRaceCorrelationPoints(races) {
+  const points = [];
+  for (const race of races || []) {
+    const model = buildChartModel(race);
+    if (!model.series.length || !model.candidateSeries.length) continue;
+
+    const searchShares = computeRelativeShares(model.candidateSeries, race);
+    const resultShares = computeRelativeResults(race, model.candidateSeries);
+    if (!searchShares.length || !resultShares.length) continue;
+
+    const searchTotal = searchShares.reduce((acc, row) => acc + row.sum, 0);
+    if (searchTotal <= 0) continue;
+
+    const winner = resultShares.reduce((best, row) =>
+      !best || row.share > best.share ? row : best
+    );
+    const searchRow = searchShares.find((row) => row.label === winner.label);
+    if (!searchRow) continue;
+
+    points.push({
+      raceId: race.id,
+      raceLabel: raceShortTag(race),
+      raceTitle: race.title || raceShortTag(race),
+      candidateLabel: winner.label,
+      color: winner.color,
+      x: searchRow.share,
+      y: winner.share,
+      resultStatus: race.result?.status || null,
+    });
+  }
+  return points;
+}
+
+function pearsonCorrelation(points) {
+  const n = points.length;
+  if (n < 2) return null;
+  let sumX = 0;
+  let sumY = 0;
+  let sumXX = 0;
+  let sumYY = 0;
+  let sumXY = 0;
+  for (const point of points) {
+    sumX += point.x;
+    sumY += point.y;
+    sumXX += point.x * point.x;
+    sumYY += point.y * point.y;
+    sumXY += point.x * point.y;
+  }
+  const denomX = n * sumXX - sumX * sumX;
+  const denomY = n * sumYY - sumY * sumY;
+  if (denomX <= 0 || denomY <= 0) return null;
+  return (n * sumXY - sumX * sumY) / Math.sqrt(denomX * denomY);
+}
+
+/** Ordinary least-squares line: y = intercept + slope * x */
+function fitLinearModel(points) {
+  const n = points.length;
+  if (n < 2) return null;
+  let sumX = 0;
+  let sumY = 0;
+  let sumXX = 0;
+  let sumXY = 0;
+  for (const point of points) {
+    sumX += point.x;
+    sumY += point.y;
+    sumXX += point.x * point.x;
+    sumXY += point.x * point.y;
+  }
+  const denom = n * sumXX - sumX * sumX;
+  if (Math.abs(denom) < 1e-12) return null;
+  const slope = (n * sumXY - sumX * sumY) / denom;
+  const intercept = (sumY - slope * sumX) / n;
+  const r = pearsonCorrelation(points);
+  const r2 = r == null ? null : r * r;
+  return { slope, intercept, r, r2, n };
+}
+
+function formatCorr(value) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "—";
+  const fixed = value.toFixed(2);
+  return fixed.startsWith("-") ? fixed : fixed;
 }
 
 function buildShareSummary(candidateSeries, race) {
@@ -521,6 +644,223 @@ function renderRaceCard(race) {
   `;
 }
 
+function buildCorrelationScatterSvg(points, modelFit) {
+  const { width, height, pad } = SCATTER;
+  const plotW = width - pad.left - pad.right;
+  const plotH = height - pad.top - pad.bottom;
+  const xAt = (value) => pad.left + (Math.max(0, Math.min(100, value)) / 100) * plotW;
+  const yAt = (value) => pad.top + plotH - (Math.max(0, Math.min(100, value)) / 100) * plotH;
+
+  const ticks = [0, 25, 50, 75, 100];
+  const grid = ticks
+    .map((tick) => {
+      const x = xAt(tick);
+      const y = yAt(tick);
+      return `
+        <line class="trends-grid" x1="${pad.left}" y1="${y}" x2="${width - pad.right}" y2="${y}" />
+        <line class="trends-grid" x1="${x}" y1="${pad.top}" x2="${x}" y2="${height - pad.bottom}" />
+        <text class="trends-axis-label" x="${pad.left - 8}" y="${y + 3}" text-anchor="end">${tick}</text>
+        <text class="trends-axis-label" x="${x}" y="${height - 14}" text-anchor="middle">${tick}</text>
+      `;
+    })
+    .join("");
+
+  let lmPath = "";
+  if (modelFit) {
+    const y0 = modelFit.intercept;
+    const y100 = modelFit.intercept + modelFit.slope * 100;
+    // Clip the line segment to the 0–100 plot box.
+    const segments = [];
+    const candidates = [
+      { x: 0, y: y0 },
+      { x: 100, y: y100 },
+    ];
+    // Intersections with y=0 and y=100 when slope is non-zero.
+    if (Math.abs(modelFit.slope) > 1e-12) {
+      candidates.push({ x: (0 - modelFit.intercept) / modelFit.slope, y: 0 });
+      candidates.push({ x: (100 - modelFit.intercept) / modelFit.slope, y: 100 });
+    }
+    for (const pt of candidates) {
+      if (pt.x >= -1e-9 && pt.x <= 100 + 1e-9 && pt.y >= -1e-9 && pt.y <= 100 + 1e-9) {
+        segments.push({
+          x: Math.max(0, Math.min(100, pt.x)),
+          y: Math.max(0, Math.min(100, pt.y)),
+        });
+      }
+    }
+    segments.sort((a, b) => a.x - b.x || a.y - b.y);
+    const unique = [];
+    for (const pt of segments) {
+      const prev = unique[unique.length - 1];
+      if (!prev || Math.abs(prev.x - pt.x) > 1e-6 || Math.abs(prev.y - pt.y) > 1e-6) {
+        unique.push(pt);
+      }
+    }
+    if (unique.length >= 2) {
+      const a = unique[0];
+      const b = unique[unique.length - 1];
+      lmPath = `
+        <line
+          class="trends-lm-line"
+          x1="${xAt(a.x)}"
+          y1="${yAt(a.y)}"
+          x2="${xAt(b.x)}"
+          y2="${yAt(b.y)}"
+        />
+      `;
+    }
+  }
+
+  const dots = points
+    .map((point, index) => {
+      const selected = point.raceId === selectedRaceId ? " is-selected" : "";
+      return `
+        <circle
+          class="trends-scatter-dot${selected}"
+          data-scatter-index="${index}"
+          cx="${xAt(point.x).toFixed(1)}"
+          cy="${yAt(point.y).toFixed(1)}"
+          r="${point.raceId === selectedRaceId ? 6.5 : 5.5}"
+          fill="${point.color}"
+          stroke="#fff"
+          stroke-width="1.5"
+        />
+      `;
+    })
+    .join("");
+
+  const labels = points
+    .map((point) => {
+      const x = xAt(point.x);
+      const y = yAt(point.y);
+      const above = y > pad.top + 18;
+      return `
+        <text
+          class="trends-scatter-label"
+          x="${x.toFixed(1)}"
+          y="${(above ? y - 10 : y + 16).toFixed(1)}"
+          text-anchor="middle"
+        >${escapeHtml(point.raceLabel)}</text>
+      `;
+    })
+    .join("");
+
+  return `
+    <svg class="trends-chart trends-scatter-chart" viewBox="0 0 ${width} ${height}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" data-scatter-root>
+      ${grid}
+      ${lmPath}
+      ${dots}
+      ${labels}
+      <text class="trends-axis-title" x="${pad.left + plotW / 2}" y="${height - 2}" text-anchor="middle">Search share (%)</text>
+      <text class="trends-axis-title" x="14" y="${pad.top + plotH / 2}" text-anchor="middle" transform="rotate(-90 14 ${pad.top + plotH / 2})">Result share (%)</text>
+    </svg>
+  `;
+}
+
+function buildCorrelationPanel(races) {
+  const points = buildRaceCorrelationPoints(races);
+  if (points.length < 1) {
+    return `
+      <section class="trends-correlation" aria-label="Search share versus result">
+        <header class="trends-card-header">
+          <h3 class="trends-card-title">Search share vs result</h3>
+          <p class="trends-card-meta">One point per race once preliminary or official results are available.</p>
+        </header>
+        <p class="trends-empty">No race results yet to compare with search share.</p>
+      </section>
+    `;
+  }
+
+  const modelFit = fitLinearModel(points);
+  const corrText =
+    modelFit?.r == null
+      ? points.length < 2
+        ? "Need at least two races for correlation."
+        : "Correlation undefined (no variance)."
+      : `Pearson r = ${formatCorr(modelFit.r)} · R² = ${formatCorr(modelFit.r2)} · n = ${modelFit.n}`;
+
+  return `
+    <section class="trends-correlation" aria-label="Search share versus result">
+      <header class="trends-card-header">
+        <h3 class="trends-card-title">Search share vs result</h3>
+        <p class="trends-card-meta">Each point is one race from the dropdown: the tracked winner’s relative search share and relative result (rescaled among Trends candidates to 100%).</p>
+      </header>
+      <p class="trends-corr-stat">${escapeHtml(corrText)}</p>
+      <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root>
+        ${buildCorrelationScatterSvg(points, modelFit)}
+        <div class="trends-tooltip" hidden></div>
+      </div>
+    </section>
+  `;
+}
+
+function wireScatterInteractions(container, races) {
+  const wrap = container.querySelector("[data-scatter-chart-root]");
+  const svg = wrap?.querySelector("[data-scatter-root]");
+  const tooltip = wrap?.querySelector(".trends-tooltip");
+  if (!wrap || !svg || !tooltip) return;
+
+  const points = buildRaceCorrelationPoints(races);
+
+  const showTip = (index, clientX) => {
+    const point = points[index];
+    if (!point) return;
+    const rect = svg.getBoundingClientRect();
+    const pctX = rect.width ? ((clientX - rect.left) / rect.width) * 100 : 50;
+    tooltip.hidden = false;
+    tooltip.innerHTML = `
+      <div class="trends-tooltip-date">${escapeHtml(point.raceTitle)}</div>
+      <div class="trends-tooltip-row">
+        <span class="trends-tooltip-swatch" style="background:${point.color}"></span>
+        <span class="trends-tooltip-label">${escapeHtml(point.candidateLabel)}</span>
+        <span class="trends-tooltip-value"></span>
+      </div>
+      <div class="trends-tooltip-row">
+        <span></span>
+        <span class="trends-tooltip-label">Search</span>
+        <span class="trends-tooltip-value">${escapeHtml(formatVotePct(point.x))}</span>
+      </div>
+      <div class="trends-tooltip-row">
+        <span></span>
+        <span class="trends-tooltip-label">${escapeHtml(resultStatusHeading(point.resultStatus))}</span>
+        <span class="trends-tooltip-value">${escapeHtml(formatVotePct(point.y))}</span>
+      </div>
+    `;
+    const preferRight = pctX < 55;
+    tooltip.style.left = `${pctX}%`;
+    tooltip.style.top = "28%";
+    tooltip.style.transform = preferRight
+      ? "translate(12px, -50%)"
+      : "translate(calc(-100% - 12px), -50%)";
+  };
+
+  const hideTip = () => {
+    tooltip.hidden = true;
+    tooltip.innerHTML = "";
+  };
+
+  for (const dot of svg.querySelectorAll("[data-scatter-index]")) {
+    const index = Number(dot.getAttribute("data-scatter-index"));
+    dot.addEventListener("pointerenter", (event) => showTip(index, event.clientX));
+    dot.addEventListener("pointermove", (event) => showTip(index, event.clientX));
+    dot.addEventListener("pointerleave", hideTip);
+    dot.addEventListener("focus", () => {
+      const rect = svg.getBoundingClientRect();
+      showTip(index, rect.left + rect.width / 2);
+    });
+    dot.addEventListener("blur", hideTip);
+    dot.setAttribute("tabindex", "0");
+    dot.setAttribute("role", "img");
+    const point = points[index];
+    if (point) {
+      dot.setAttribute(
+        "aria-label",
+        `${point.raceLabel}: search ${formatVotePct(point.x)}, result ${formatVotePct(point.y)}`
+      );
+    }
+  }
+}
+
 /** Dropdown label: "Hickenlooper - Gonzales (CO US Senate 26)". */
 function raceOptionLabel(race) {
   const names = (race.candidates || [])
@@ -587,10 +927,12 @@ export async function renderTrends(container) {
     </div>
     <div class="trends-list">
       ${renderRaceCard(activeRace)}
+      ${buildCorrelationPanel(races)}
     </div>
   `;
 
   bindInteractions(container, [activeRace]);
+  wireScatterInteractions(container, races);
 }
 
 export function trendsFooterText() {
