@@ -1,7 +1,1317 @@
 {
-  "generated_at": "2026-07-15T15:39:25Z",
+  "generated_at": "2026-07-15T16:57:33Z",
   "source": "google_trends",
   "races": [
+    {
+      "id": "co-gop-governor-primary-2026",
+      "title": "Colorado Republican Governor Primary",
+      "election_date": "2026-06-30",
+      "country_code": "US",
+      "state_code": "CO",
+      "geo": "US-CO",
+      "window_days": 30,
+      "start_date": "2026-05-31",
+      "end_date": "2026-06-30",
+      "candidates": [
+        {
+          "keyword": "Victor Marx",
+          "label": "Marx",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Victor Marx",
+          "resolve_note": "no confident political entity (top='The Victor Marx Story' / '2012 film')"
+        },
+        {
+          "keyword": "Barb Kirkmeyer",
+          "label": "Kirkmeyer",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Barb Kirkmeyer",
+          "mid": "/g/11c51whhyt",
+          "topic_title": "Barbara Kirkmeyer",
+          "topic_type": "Colorado State Senator"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Victor Marx": 46,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Victor Marx": 31,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Victor Marx": 23,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "Victor Marx": 68,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "Victor Marx": 35,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "Victor Marx": 18,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "Victor Marx": 0,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "Victor Marx": 26,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "Victor Marx": 42,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "Victor Marx": 54,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "Victor Marx": 57,
+            "Barb Kirkmeyer": 24
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "Victor Marx": 62,
+            "Barb Kirkmeyer": 18
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "Victor Marx": 51,
+            "Barb Kirkmeyer": 20
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "Victor Marx": 38,
+            "Barb Kirkmeyer": 17
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "Victor Marx": 45,
+            "Barb Kirkmeyer": 20
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "Victor Marx": 34,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "Victor Marx": 42,
+            "Barb Kirkmeyer": 26
+          }
+        },
+        {
+          "date": "2026-06-17",
+          "values": {
+            "Victor Marx": 46,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-18",
+          "values": {
+            "Victor Marx": 92,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "Victor Marx": 42,
+            "Barb Kirkmeyer": 19
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "Victor Marx": 0,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "Victor Marx": 41,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "Victor Marx": 33,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "Victor Marx": 38,
+            "Barb Kirkmeyer": 25
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "Victor Marx": 50,
+            "Barb Kirkmeyer": 18
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "Victor Marx": 44,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "Victor Marx": 30,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "Victor Marx": 56,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "Victor Marx": 43,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "Victor Marx": 70,
+            "Barb Kirkmeyer": 44
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "Victor Marx": 100,
+            "Barb Kirkmeyer": 62
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Marx",
+            "pct": 39.9
+          },
+          {
+            "label": "Kirkmeyer",
+            "pct": 39.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "ia-gop-governor-primary-2026",
+      "title": "Iowa Republican Governor Primary",
+      "election_date": "2026-06-02",
+      "country_code": "US",
+      "state_code": "IA",
+      "geo": "US-IA",
+      "window_days": 30,
+      "start_date": "2026-05-03",
+      "end_date": "2026-06-02",
+      "candidates": [
+        {
+          "keyword": "Zach Lahn",
+          "label": "Lahn",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Zach Lahn",
+          "resolve_note": "no confident political entity (top='Zach Lahn' / 'Topic')"
+        },
+        {
+          "keyword": "Randy Feenstra",
+          "label": "Feenstra",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Randy Feenstra",
+          "mid": "/m/05p06tx",
+          "topic_title": "Randy Feenstra",
+          "topic_type": "United States Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-03",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "Zach Lahn": 20,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "Zach Lahn": 19,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "Zach Lahn": 18,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "Zach Lahn": 25,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "Zach Lahn": 23,
+            "Randy Feenstra": 18
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "Zach Lahn": 27,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "Zach Lahn": 21,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "Zach Lahn": 21,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "Zach Lahn": 36,
+            "Randy Feenstra": 34
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "Zach Lahn": 38,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Zach Lahn": 45,
+            "Randy Feenstra": 22
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Zach Lahn": 61,
+            "Randy Feenstra": 34
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Zach Lahn": 100,
+            "Randy Feenstra": 48
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Lahn",
+            "pct": 37.8
+          },
+          {
+            "label": "Feenstra",
+            "pct": 37.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "or-gop-senate-primary-2026",
+      "title": "Oregon Republican Senate Primary",
+      "election_date": "2026-05-19",
+      "country_code": "US",
+      "state_code": "OR",
+      "geo": "US-OR",
+      "window_days": 30,
+      "start_date": "2026-04-19",
+      "end_date": "2026-05-19",
+      "candidates": [
+        {
+          "keyword": "/g/11c67w253_",
+          "label": "Smith",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "David Brock Smith",
+          "mid": "/g/11c67w253_",
+          "topic_title": "David Brock Smith",
+          "topic_type": "Oregon State Senator"
+        },
+        {
+          "keyword": "/g/11c742x6jt",
+          "label": "Perkins",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Jo Rae Perkins",
+          "mid": "/g/11c742x6jt",
+          "topic_title": "Jo Rae Perkins",
+          "topic_type": "Politician"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-04-19",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-20",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-21",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-22",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-23",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-24",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-25",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-26",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-27",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-28",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-29",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-30",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-01",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-02",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-03",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "/g/11c67w253_": 100,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "/g/11c67w253_": 69,
+            "/g/11c742x6jt": 0
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Smith",
+            "pct": 29.0
+          },
+          {
+            "label": "Perkins",
+            "pct": 27.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "nj-gop-senate-primary-2026",
+      "title": "New Jersey Republican Senate Primary",
+      "election_date": "2026-06-02",
+      "country_code": "US",
+      "state_code": "NJ",
+      "geo": "US-NJ",
+      "window_days": 30,
+      "start_date": "2026-05-03",
+      "end_date": "2026-06-02",
+      "candidates": [
+        {
+          "keyword": "Justin Murphy",
+          "label": "Murphy",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Justin Murphy",
+          "resolve_note": "no confident political entity (top='Dear Evan Hansen: THE NOVEL' / 'Book')"
+        },
+        {
+          "keyword": "Richard Tabor",
+          "label": "Tabor",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Richard Tabor",
+          "resolve_note": "no confident political entity (top='Richard Tabor DDS' / 'Topic')"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-03",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "Justin Murphy": 22,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 27
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "Justin Murphy": 27,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Justin Murphy": 26,
+            "Richard Tabor": 18
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Justin Murphy": 100,
+            "Richard Tabor": 92
+          }
+        }
+      ]
+    },
+    {
+      "id": "ga-gop-governor-primary-runoff-2026",
+      "title": "Georgia Republican Governor Primary Runoff",
+      "election_date": "2026-06-16",
+      "country_code": "US",
+      "state_code": "GA",
+      "geo": "US-GA",
+      "window_days": 30,
+      "start_date": "2026-05-17",
+      "end_date": "2026-06-16",
+      "candidates": [
+        {
+          "keyword": "Rick Jackson",
+          "label": "Jackson",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Rick Jackson",
+          "resolve_note": "no confident political entity (top='Read Riordan' / 'Book by Rick Riordan')"
+        },
+        {
+          "keyword": "Burt Jones",
+          "label": "Jones",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Burt Jones",
+          "mid": "/m/0130rk4g",
+          "topic_title": "Burt Jones",
+          "topic_type": "Lieutenant Governor of Georgia"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-17",
+          "values": {
+            "Rick Jackson": 19,
+            "Burt Jones": 13
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "Rick Jackson": 25,
+            "Burt Jones": 20
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "Rick Jackson": 60,
+            "Burt Jones": 70
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "Rick Jackson": 96,
+            "Burt Jones": 100
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "Rick Jackson": 19,
+            "Burt Jones": 22
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "Rick Jackson": 28,
+            "Burt Jones": 11
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "Rick Jackson": 12,
+            "Burt Jones": 16
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "Rick Jackson": 14,
+            "Burt Jones": 12
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "Rick Jackson": 15,
+            "Burt Jones": 8
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "Rick Jackson": 18,
+            "Burt Jones": 8
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "Rick Jackson": 25,
+            "Burt Jones": 13
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "Rick Jackson": 17,
+            "Burt Jones": 10
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "Rick Jackson": 20,
+            "Burt Jones": 11
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "Rick Jackson": 15,
+            "Burt Jones": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Rick Jackson": 19,
+            "Burt Jones": 14
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Rick Jackson": 19,
+            "Burt Jones": 10
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Rick Jackson": 23,
+            "Burt Jones": 9
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "Rick Jackson": 26,
+            "Burt Jones": 11
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "Rick Jackson": 20,
+            "Burt Jones": 9
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "Rick Jackson": 26,
+            "Burt Jones": 11
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "Rick Jackson": 26,
+            "Burt Jones": 15
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "Rick Jackson": 20,
+            "Burt Jones": 12
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "Rick Jackson": 27,
+            "Burt Jones": 15
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "Rick Jackson": 31,
+            "Burt Jones": 14
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "Rick Jackson": 35,
+            "Burt Jones": 15
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "Rick Jackson": 38,
+            "Burt Jones": 19
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "Rick Jackson": 35,
+            "Burt Jones": 17
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "Rick Jackson": 30,
+            "Burt Jones": 10
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "Rick Jackson": 37,
+            "Burt Jones": 17
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "Rick Jackson": 36,
+            "Burt Jones": 36
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "Rick Jackson": 68,
+            "Burt Jones": 53
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Jackson",
+            "pct": 52.7
+          },
+          {
+            "label": "Jones",
+            "pct": 47.3
+          }
+        ]
+      }
+    },
     {
       "id": "co-dem-senate-primary-2026",
       "title": "Colorado Democratic Senate Primary",
@@ -270,6 +1580,3463 @@
       }
     },
     {
+      "id": "wv-dem-senate-primary-2026",
+      "title": "West Virginia Democratic Senate Primary",
+      "election_date": "2026-05-12",
+      "country_code": "US",
+      "state_code": "WV",
+      "geo": "US-WV",
+      "window_days": 30,
+      "start_date": "2026-04-12",
+      "end_date": "2026-05-12",
+      "candidates": [
+        {
+          "keyword": "Rachel Fetty Anderson",
+          "label": "Anderson",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Rachel Fetty Anderson",
+          "resolve_note": "no confident political entity (top='Rachel Fetty Anderson' / 'Topic')"
+        },
+        {
+          "keyword": "Jeff Kessler",
+          "label": "Kessler",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Jeff Kessler",
+          "mid": "/m/04f_6dk",
+          "topic_title": "Jeff Kessler",
+          "topic_type": "Former President of the West Virginia Senate"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-04-12",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-13",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-14",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-15",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-16",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-17",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-18",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-19",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-20",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-21",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-22",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-23",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-24",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-25",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-26",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-27",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-28",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-29",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-04-30",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-05-01",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-05-02",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-05-03",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "Rachel Fetty Anderson": 0,
+            "Jeff Kessler": 100
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Anderson",
+            "pct": 33.2
+          },
+          {
+            "label": "Kessler",
+            "pct": 27.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "tx-dem-senate-primary-2026",
+      "title": "Texas Democratic Senate Primary",
+      "election_date": "2026-03-03",
+      "country_code": "US",
+      "state_code": "TX",
+      "geo": "US-TX",
+      "window_days": 30,
+      "start_date": "2026-02-01",
+      "end_date": "2026-03-03",
+      "candidates": [
+        {
+          "keyword": "/g/11f0rj_mb_",
+          "label": "Talarico",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "James Talarico",
+          "mid": "/g/11f0rj_mb_",
+          "topic_title": "James Talarico",
+          "topic_type": "Texas State Representative"
+        },
+        {
+          "keyword": "/g/11j90m9942",
+          "label": "Crockett",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Jasmine Crockett",
+          "mid": "/g/11j90m9942",
+          "topic_title": "Jasmine Crockett",
+          "topic_type": "United States Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-02-01",
+          "values": {
+            "/g/11f0rj_mb_": 14,
+            "/g/11j90m9942": 9
+          }
+        },
+        {
+          "date": "2026-02-02",
+          "values": {
+            "/g/11f0rj_mb_": 12,
+            "/g/11j90m9942": 6
+          }
+        },
+        {
+          "date": "2026-02-03",
+          "values": {
+            "/g/11f0rj_mb_": 17,
+            "/g/11j90m9942": 7
+          }
+        },
+        {
+          "date": "2026-02-04",
+          "values": {
+            "/g/11f0rj_mb_": 13,
+            "/g/11j90m9942": 7
+          }
+        },
+        {
+          "date": "2026-02-05",
+          "values": {
+            "/g/11f0rj_mb_": 10,
+            "/g/11j90m9942": 6
+          }
+        },
+        {
+          "date": "2026-02-06",
+          "values": {
+            "/g/11f0rj_mb_": 11,
+            "/g/11j90m9942": 6
+          }
+        },
+        {
+          "date": "2026-02-07",
+          "values": {
+            "/g/11f0rj_mb_": 9,
+            "/g/11j90m9942": 7
+          }
+        },
+        {
+          "date": "2026-02-08",
+          "values": {
+            "/g/11f0rj_mb_": 11,
+            "/g/11j90m9942": 6
+          }
+        },
+        {
+          "date": "2026-02-09",
+          "values": {
+            "/g/11f0rj_mb_": 10,
+            "/g/11j90m9942": 5
+          }
+        },
+        {
+          "date": "2026-02-10",
+          "values": {
+            "/g/11f0rj_mb_": 10,
+            "/g/11j90m9942": 8
+          }
+        },
+        {
+          "date": "2026-02-11",
+          "values": {
+            "/g/11f0rj_mb_": 9,
+            "/g/11j90m9942": 10
+          }
+        },
+        {
+          "date": "2026-02-12",
+          "values": {
+            "/g/11f0rj_mb_": 9,
+            "/g/11j90m9942": 14
+          }
+        },
+        {
+          "date": "2026-02-13",
+          "values": {
+            "/g/11f0rj_mb_": 8,
+            "/g/11j90m9942": 12
+          }
+        },
+        {
+          "date": "2026-02-14",
+          "values": {
+            "/g/11f0rj_mb_": 9,
+            "/g/11j90m9942": 9
+          }
+        },
+        {
+          "date": "2026-02-15",
+          "values": {
+            "/g/11f0rj_mb_": 7,
+            "/g/11j90m9942": 10
+          }
+        },
+        {
+          "date": "2026-02-16",
+          "values": {
+            "/g/11f0rj_mb_": 11,
+            "/g/11j90m9942": 10
+          }
+        },
+        {
+          "date": "2026-02-17",
+          "values": {
+            "/g/11f0rj_mb_": 66,
+            "/g/11j90m9942": 24
+          }
+        },
+        {
+          "date": "2026-02-18",
+          "values": {
+            "/g/11f0rj_mb_": 100,
+            "/g/11j90m9942": 43
+          }
+        },
+        {
+          "date": "2026-02-19",
+          "values": {
+            "/g/11f0rj_mb_": 61,
+            "/g/11j90m9942": 34
+          }
+        },
+        {
+          "date": "2026-02-20",
+          "values": {
+            "/g/11f0rj_mb_": 39,
+            "/g/11j90m9942": 25
+          }
+        },
+        {
+          "date": "2026-02-21",
+          "values": {
+            "/g/11f0rj_mb_": 44,
+            "/g/11j90m9942": 27
+          }
+        },
+        {
+          "date": "2026-02-22",
+          "values": {
+            "/g/11f0rj_mb_": 39,
+            "/g/11j90m9942": 25
+          }
+        },
+        {
+          "date": "2026-02-23",
+          "values": {
+            "/g/11f0rj_mb_": 35,
+            "/g/11j90m9942": 27
+          }
+        },
+        {
+          "date": "2026-02-24",
+          "values": {
+            "/g/11f0rj_mb_": 37,
+            "/g/11j90m9942": 27
+          }
+        },
+        {
+          "date": "2026-02-25",
+          "values": {
+            "/g/11f0rj_mb_": 37,
+            "/g/11j90m9942": 29
+          }
+        },
+        {
+          "date": "2026-02-26",
+          "values": {
+            "/g/11f0rj_mb_": 39,
+            "/g/11j90m9942": 37
+          }
+        },
+        {
+          "date": "2026-02-27",
+          "values": {
+            "/g/11f0rj_mb_": 45,
+            "/g/11j90m9942": 41
+          }
+        },
+        {
+          "date": "2026-02-28",
+          "values": {
+            "/g/11f0rj_mb_": 36,
+            "/g/11j90m9942": 38
+          }
+        },
+        {
+          "date": "2026-03-01",
+          "values": {
+            "/g/11f0rj_mb_": 27,
+            "/g/11j90m9942": 25
+          }
+        },
+        {
+          "date": "2026-03-02",
+          "values": {
+            "/g/11f0rj_mb_": 26,
+            "/g/11j90m9942": 24
+          }
+        },
+        {
+          "date": "2026-03-03",
+          "values": {
+            "/g/11f0rj_mb_": 84,
+            "/g/11j90m9942": 76
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Talarico",
+            "pct": 52.5
+          },
+          {
+            "label": "Crockett",
+            "pct": 46.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "md-gop-governor-primary-2026",
+      "title": "Maryland Republican Governor Primary",
+      "election_date": "2026-06-23",
+      "country_code": "US",
+      "state_code": "MD",
+      "geo": "US-MD",
+      "window_days": 30,
+      "start_date": "2026-05-24",
+      "end_date": "2026-06-23",
+      "candidates": [
+        {
+          "keyword": "Dan Cox",
+          "label": "Cox",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Dan Cox",
+          "mid": "/g/11c55svf4v",
+          "topic_title": "Dan Cox",
+          "topic_type": "Former Maryland State Delegate"
+        },
+        {
+          "keyword": "Ed Hale",
+          "label": "Hale",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Ed Hale",
+          "resolve_note": "no confident political entity (top='Make: Electronics' / 'Book by Charles Platt')"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-24",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "Dan Cox": 32,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-17",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-18",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "Dan Cox": 0,
+            "Ed Hale": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "Dan Cox": 79,
+            "Ed Hale": 100
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Maryland State Board of Elections",
+        "candidates": [
+          {
+            "label": "Cox",
+            "pct": 43.3
+          },
+          {
+            "label": "Hale",
+            "pct": 36.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "or-gop-governor-primary-2026",
+      "title": "Oregon Republican Governor Primary",
+      "election_date": "2026-05-19",
+      "country_code": "US",
+      "state_code": "OR",
+      "geo": "US-OR",
+      "window_days": 30,
+      "start_date": "2026-04-19",
+      "end_date": "2026-05-19",
+      "candidates": [
+        {
+          "keyword": "/g/11j08255yz",
+          "label": "Drazan",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Christine Drazan",
+          "mid": "/g/11j08255yz",
+          "topic_title": "Christine Drazan",
+          "topic_type": "Oregon State Senator"
+        },
+        {
+          "keyword": "/g/11rtsl0b24",
+          "label": "Diehl",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Ed Diehl",
+          "mid": "/g/11rtsl0b24",
+          "topic_title": "Ed Diehl",
+          "topic_type": "Oregon State Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-04-19",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-04-20",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-04-21",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-04-22",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-04-23",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-04-24",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-04-25",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-04-26",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-04-27",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-04-28",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-04-29",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-04-30",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-05-01",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-05-02",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-05-03",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 54
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 95
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 65
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 100
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 58
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "/g/11j08255yz": 48,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 54
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "/g/11j08255yz": 0,
+            "/g/11rtsl0b24": 52
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "/g/11j08255yz": 98,
+            "/g/11rtsl0b24": 84
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Drazan",
+            "pct": 40.5
+          },
+          {
+            "label": "Diehl",
+            "pct": 33.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "il-dem-senate-primary-2026",
+      "title": "Illinois Democratic Senate Primary",
+      "election_date": "2026-03-17",
+      "country_code": "US",
+      "state_code": "IL",
+      "geo": "US-IL",
+      "window_days": 30,
+      "start_date": "2026-02-15",
+      "end_date": "2026-03-17",
+      "candidates": [
+        {
+          "keyword": "/g/11c292ky_p",
+          "label": "Stratton",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Juliana Stratton",
+          "mid": "/g/11c292ky_p",
+          "topic_title": "Juliana Stratton",
+          "topic_type": "Lieutenant Governor of Illinois"
+        },
+        {
+          "keyword": "/g/11c5m7lxtk",
+          "label": "Krishnamoorthi",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Raja Krishnamoorthi",
+          "mid": "/g/11c5m7lxtk",
+          "topic_title": "Raja Krishnamoorthi",
+          "topic_type": "United States Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-02-15",
+          "values": {
+            "/g/11c292ky_p": 0,
+            "/g/11c5m7lxtk": 0
+          }
+        },
+        {
+          "date": "2026-02-16",
+          "values": {
+            "/g/11c292ky_p": 5,
+            "/g/11c5m7lxtk": 4
+          }
+        },
+        {
+          "date": "2026-02-17",
+          "values": {
+            "/g/11c292ky_p": 0,
+            "/g/11c5m7lxtk": 4
+          }
+        },
+        {
+          "date": "2026-02-18",
+          "values": {
+            "/g/11c292ky_p": 5,
+            "/g/11c5m7lxtk": 5
+          }
+        },
+        {
+          "date": "2026-02-19",
+          "values": {
+            "/g/11c292ky_p": 10,
+            "/g/11c5m7lxtk": 4
+          }
+        },
+        {
+          "date": "2026-02-20",
+          "values": {
+            "/g/11c292ky_p": 9,
+            "/g/11c5m7lxtk": 7
+          }
+        },
+        {
+          "date": "2026-02-21",
+          "values": {
+            "/g/11c292ky_p": 7,
+            "/g/11c5m7lxtk": 8
+          }
+        },
+        {
+          "date": "2026-02-22",
+          "values": {
+            "/g/11c292ky_p": 6,
+            "/g/11c5m7lxtk": 5
+          }
+        },
+        {
+          "date": "2026-02-23",
+          "values": {
+            "/g/11c292ky_p": 7,
+            "/g/11c5m7lxtk": 6
+          }
+        },
+        {
+          "date": "2026-02-24",
+          "values": {
+            "/g/11c292ky_p": 8,
+            "/g/11c5m7lxtk": 7
+          }
+        },
+        {
+          "date": "2026-02-25",
+          "values": {
+            "/g/11c292ky_p": 8,
+            "/g/11c5m7lxtk": 7
+          }
+        },
+        {
+          "date": "2026-02-26",
+          "values": {
+            "/g/11c292ky_p": 13,
+            "/g/11c5m7lxtk": 7
+          }
+        },
+        {
+          "date": "2026-02-27",
+          "values": {
+            "/g/11c292ky_p": 10,
+            "/g/11c5m7lxtk": 12
+          }
+        },
+        {
+          "date": "2026-02-28",
+          "values": {
+            "/g/11c292ky_p": 7,
+            "/g/11c5m7lxtk": 12
+          }
+        },
+        {
+          "date": "2026-03-01",
+          "values": {
+            "/g/11c292ky_p": 9,
+            "/g/11c5m7lxtk": 9
+          }
+        },
+        {
+          "date": "2026-03-02",
+          "values": {
+            "/g/11c292ky_p": 7,
+            "/g/11c5m7lxtk": 7
+          }
+        },
+        {
+          "date": "2026-03-03",
+          "values": {
+            "/g/11c292ky_p": 12,
+            "/g/11c5m7lxtk": 8
+          }
+        },
+        {
+          "date": "2026-03-04",
+          "values": {
+            "/g/11c292ky_p": 11,
+            "/g/11c5m7lxtk": 13
+          }
+        },
+        {
+          "date": "2026-03-05",
+          "values": {
+            "/g/11c292ky_p": 12,
+            "/g/11c5m7lxtk": 9
+          }
+        },
+        {
+          "date": "2026-03-06",
+          "values": {
+            "/g/11c292ky_p": 9,
+            "/g/11c5m7lxtk": 7
+          }
+        },
+        {
+          "date": "2026-03-07",
+          "values": {
+            "/g/11c292ky_p": 13,
+            "/g/11c5m7lxtk": 10
+          }
+        },
+        {
+          "date": "2026-03-08",
+          "values": {
+            "/g/11c292ky_p": 9,
+            "/g/11c5m7lxtk": 10
+          }
+        },
+        {
+          "date": "2026-03-09",
+          "values": {
+            "/g/11c292ky_p": 8,
+            "/g/11c5m7lxtk": 10
+          }
+        },
+        {
+          "date": "2026-03-10",
+          "values": {
+            "/g/11c292ky_p": 15,
+            "/g/11c5m7lxtk": 13
+          }
+        },
+        {
+          "date": "2026-03-11",
+          "values": {
+            "/g/11c292ky_p": 13,
+            "/g/11c5m7lxtk": 8
+          }
+        },
+        {
+          "date": "2026-03-12",
+          "values": {
+            "/g/11c292ky_p": 15,
+            "/g/11c5m7lxtk": 16
+          }
+        },
+        {
+          "date": "2026-03-13",
+          "values": {
+            "/g/11c292ky_p": 11,
+            "/g/11c5m7lxtk": 13
+          }
+        },
+        {
+          "date": "2026-03-14",
+          "values": {
+            "/g/11c292ky_p": 23,
+            "/g/11c5m7lxtk": 17
+          }
+        },
+        {
+          "date": "2026-03-15",
+          "values": {
+            "/g/11c292ky_p": 24,
+            "/g/11c5m7lxtk": 26
+          }
+        },
+        {
+          "date": "2026-03-16",
+          "values": {
+            "/g/11c292ky_p": 43,
+            "/g/11c5m7lxtk": 36
+          }
+        },
+        {
+          "date": "2026-03-17",
+          "values": {
+            "/g/11c292ky_p": 100,
+            "/g/11c5m7lxtk": 76
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Stratton",
+            "pct": 40.4
+          },
+          {
+            "label": "Krishnamoorthi",
+            "pct": 32.7
+          }
+        ]
+      }
+    },
+    {
+      "id": "al-dem-senate-primary-runoff-2026",
+      "title": "Alabama Democratic Senate Primary Runoff",
+      "election_date": "2026-06-16",
+      "country_code": "US",
+      "state_code": "AL",
+      "geo": "US-AL",
+      "window_days": 30,
+      "start_date": "2026-05-17",
+      "end_date": "2026-06-16",
+      "candidates": [
+        {
+          "keyword": "Everett Wess",
+          "label": "Wess",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Everett Wess",
+          "resolve_note": "no confident political entity (top='Everett Wess' / 'Topic')"
+        },
+        {
+          "keyword": "Dakarai Larriett",
+          "label": "Larriett",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Dakarai Larriett",
+          "resolve_note": "no confident political entity (top='Dakarai Larriett' / 'Topic')"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-17",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "Everett Wess": 82,
+            "Dakarai Larriett": 100
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "Everett Wess": 26,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 13
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "Everett Wess": 0,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "Everett Wess": 14,
+            "Dakarai Larriett": 0
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "Everett Wess": 54,
+            "Dakarai Larriett": 71
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Wess",
+            "pct": 54.4
+          },
+          {
+            "label": "Larriett",
+            "pct": 45.6
+          }
+        ]
+      }
+    },
+    {
+      "id": "nm-gop-governor-primary-2026",
+      "title": "New Mexico Republican Governor Primary",
+      "election_date": "2026-06-02",
+      "country_code": "US",
+      "state_code": "NM",
+      "geo": "US-NM",
+      "window_days": 30,
+      "start_date": "2026-05-03",
+      "end_date": "2026-06-02",
+      "candidates": [
+        {
+          "keyword": "Gregg Hull",
+          "label": "Hull",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Gregg Hull",
+          "mid": "/g/11s96r6jss",
+          "topic_title": "Gregg Hull",
+          "topic_type": "Politician"
+        },
+        {
+          "keyword": "Doug Turner",
+          "label": "Turner",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Doug Turner",
+          "resolve_note": "no confident political entity (top='Here, Bullet' / 'Book by Brian Turner')"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-03",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 72
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 47
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Gregg Hull": 0,
+            "Doug Turner": 100
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Hull",
+            "pct": 47.0
+          },
+          {
+            "label": "Turner",
+            "pct": 36.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "mt-dem-senate-primary-2026",
+      "title": "Montana Democratic Senate Primary",
+      "election_date": "2026-06-02",
+      "country_code": "US",
+      "state_code": "MT",
+      "geo": "US-MT",
+      "window_days": 30,
+      "start_date": "2026-05-03",
+      "end_date": "2026-06-02",
+      "candidates": [
+        {
+          "keyword": "Alani Bankhead",
+          "label": "Bankhead",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Alani Bankhead",
+          "resolve_note": "no confident political entity (top='Alani Bankhead' / 'Topic')"
+        },
+        {
+          "keyword": "Reilly Neill",
+          "label": "Neill",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Reilly Neill",
+          "mid": "/g/11h3_yw_mj",
+          "topic_title": "Reilly Neill",
+          "topic_type": "Former Montana State Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-03",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Alani Bankhead": 0,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Alani Bankhead": 83,
+            "Reilly Neill": 0
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Alani Bankhead": 100,
+            "Reilly Neill": 93
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Bankhead",
+            "pct": 44.0
+          },
+          {
+            "label": "Neill",
+            "pct": 33.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "ky-dem-senate-primary-2026",
+      "title": "Kentucky Democratic Senate Primary",
+      "election_date": "2026-05-19",
+      "country_code": "US",
+      "state_code": "KY",
+      "geo": "US-KY",
+      "window_days": 30,
+      "start_date": "2026-04-19",
+      "end_date": "2026-05-19",
+      "candidates": [
+        {
+          "keyword": "/g/11j4r74hy5",
+          "label": "Booker",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Charles Booker",
+          "mid": "/g/11j4r74hy5",
+          "topic_title": "Charles Booker",
+          "topic_type": "Former Kentucky State Representative"
+        },
+        {
+          "keyword": "/g/11fy131s3_",
+          "label": "McGrath",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Amy McGrath",
+          "mid": "/g/11fy131s3_",
+          "topic_title": "Amy McGrath",
+          "topic_type": "American fighter pilot"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-04-19",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-04-20",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-04-21",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-04-22",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-04-23",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-04-24",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-04-25",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-04-26",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-04-27",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-04-28",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-04-29",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-04-30",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-01",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-02",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-03",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "/g/11j4r74hy5": 18,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "/g/11j4r74hy5": 0,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "/g/11j4r74hy5": 16,
+            "/g/11fy131s3_": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "/g/11j4r74hy5": 100,
+            "/g/11fy131s3_": 72
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Booker",
+            "pct": 46.8
+          },
+          {
+            "label": "McGrath",
+            "pct": 35.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "ga-gop-senate-primary-runoff-2026",
+      "title": "Georgia Republican Senate Primary Runoff",
+      "election_date": "2026-06-16",
+      "country_code": "US",
+      "state_code": "GA",
+      "geo": "US-GA",
+      "window_days": 30,
+      "start_date": "2026-05-17",
+      "end_date": "2026-06-16",
+      "candidates": [
+        {
+          "keyword": "/g/11nnr438zm",
+          "label": "Collins",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Mike Collins",
+          "mid": "/g/11nnr438zm",
+          "topic_title": "Mike Collins",
+          "topic_type": "United States Representative"
+        },
+        {
+          "keyword": "/m/0275fzv",
+          "label": "Dooley",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Derek Dooley",
+          "mid": "/m/0275fzv",
+          "topic_title": "Derek Dooley",
+          "topic_type": "American football coach"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-17",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 20
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "/g/11nnr438zm": 28,
+            "/m/0275fzv": 17
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "/g/11nnr438zm": 100,
+            "/m/0275fzv": 77
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "/g/11nnr438zm": 79,
+            "/m/0275fzv": 48
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 13
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "/g/11nnr438zm": 17,
+            "/m/0275fzv": 14
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "/g/11nnr438zm": 13,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 13
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "/g/11nnr438zm": 17,
+            "/m/0275fzv": 14
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "/g/11nnr438zm": 18,
+            "/m/0275fzv": 26
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "/g/11nnr438zm": 15,
+            "/m/0275fzv": 22
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "/g/11nnr438zm": 18,
+            "/m/0275fzv": 14
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "/g/11nnr438zm": 16,
+            "/m/0275fzv": 18
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "/g/11nnr438zm": 19,
+            "/m/0275fzv": 21
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "/g/11nnr438zm": 17,
+            "/m/0275fzv": 0
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "/g/11nnr438zm": 21,
+            "/m/0275fzv": 13
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "/g/11nnr438zm": 74,
+            "/m/0275fzv": 62
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Collins",
+            "pct": 55.5
+          },
+          {
+            "label": "Dooley",
+            "pct": 44.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "al-gop-senate-primary-runoff-2026",
+      "title": "Alabama Republican Senate Primary Runoff",
+      "election_date": "2026-06-16",
+      "country_code": "US",
+      "state_code": "AL",
+      "geo": "US-AL",
+      "window_days": 30,
+      "start_date": "2026-05-17",
+      "end_date": "2026-06-16",
+      "candidates": [
+        {
+          "keyword": "/g/11fkw7vjdf",
+          "label": "Moore",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Barry Moore",
+          "mid": "/g/11fkw7vjdf",
+          "topic_title": "Barry Moore",
+          "topic_type": "United States Representative"
+        },
+        {
+          "keyword": "/g/11xgjv2tbv",
+          "label": "Hudson",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Jared Hudson",
+          "mid": "/g/11xgjv2tbv",
+          "topic_title": "Jared Hudson",
+          "topic_type": "Politician"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-17",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "/g/11fkw7vjdf": 22,
+            "/g/11xgjv2tbv": 22
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "/g/11fkw7vjdf": 53,
+            "/g/11xgjv2tbv": 74
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "/g/11fkw7vjdf": 51,
+            "/g/11xgjv2tbv": 77
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "/g/11fkw7vjdf": 20,
+            "/g/11xgjv2tbv": 24
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 26
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 19
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "/g/11fkw7vjdf": 23,
+            "/g/11xgjv2tbv": 22
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 17
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "/g/11fkw7vjdf": 19,
+            "/g/11xgjv2tbv": 0
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "/g/11fkw7vjdf": 31,
+            "/g/11xgjv2tbv": 20
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "/g/11fkw7vjdf": 21,
+            "/g/11xgjv2tbv": 26
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "/g/11fkw7vjdf": 26,
+            "/g/11xgjv2tbv": 46
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "/g/11fkw7vjdf": 67,
+            "/g/11xgjv2tbv": 100
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Moore",
+            "pct": 56.0
+          },
+          {
+            "label": "Hudson",
+            "pct": 44.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "me-dem-governor-primary-2026",
+      "title": "Maine Democratic Governor Primary",
+      "election_date": "2026-06-09",
+      "country_code": "US",
+      "state_code": "ME",
+      "geo": "US-ME",
+      "window_days": 30,
+      "start_date": "2026-05-10",
+      "end_date": "2026-06-09",
+      "candidates": [
+        {
+          "keyword": "Hannah Pingree",
+          "label": "Pingree",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Hannah Pingree",
+          "mid": "/m/06m9v1",
+          "topic_title": "Hannah Pingree",
+          "topic_type": "Former Maine State Representative"
+        },
+        {
+          "keyword": "Nirav Shah",
+          "label": "Shah",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Nirav Shah",
+          "resolve_note": "no confident political entity (top='Nirav D. Shah' / 'Economist')"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-10",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "Hannah Pingree": 50,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "Hannah Pingree": 0,
+            "Nirav Shah": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "Hannah Pingree": 100,
+            "Nirav Shah": 89
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Maine Secretary of State (RCV final)",
+        "candidates": [
+          {
+            "label": "Pingree",
+            "pct": 56.2
+          },
+          {
+            "label": "Shah",
+            "pct": 43.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "la-gop-senate-primary-runoff-2026",
+      "title": "Louisiana Republican Senate Primary Runoff",
+      "election_date": "2026-06-27",
+      "country_code": "US",
+      "state_code": "LA",
+      "geo": "US-LA",
+      "window_days": 30,
+      "start_date": "2026-05-28",
+      "end_date": "2026-06-27",
+      "candidates": [
+        {
+          "keyword": "/g/11qq9ggdyw",
+          "label": "Letlow",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Julia Letlow",
+          "mid": "/g/11qq9ggdyw",
+          "topic_title": "Julia Letlow",
+          "topic_type": "United States Representative"
+        },
+        {
+          "keyword": "/m/04z_dt3",
+          "label": "Fleming",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "John Fleming",
+          "mid": "/m/04z_dt3",
+          "topic_title": "John Fleming",
+          "topic_type": "Louisiana State Treasurer"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-28",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "/g/11qq9ggdyw": 12,
+            "/m/04z_dt3": 15
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "/g/11qq9ggdyw": 14,
+            "/m/04z_dt3": 21
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "/g/11qq9ggdyw": 14,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 13
+          }
+        },
+        {
+          "date": "2026-06-17",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-18",
+          "values": {
+            "/g/11qq9ggdyw": 12,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "/g/11qq9ggdyw": 18,
+            "/m/04z_dt3": 14
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "/g/11qq9ggdyw": 23,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 18
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/g/11qq9ggdyw": 19,
+            "/m/04z_dt3": 18
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/g/11qq9ggdyw": 20,
+            "/m/04z_dt3": 0
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "/g/11qq9ggdyw": 18,
+            "/m/04z_dt3": 16
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "/g/11qq9ggdyw": 24,
+            "/m/04z_dt3": 13
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "/g/11qq9ggdyw": 35,
+            "/m/04z_dt3": 12
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "/g/11qq9ggdyw": 100,
+            "/m/04z_dt3": 67
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Letlow",
+            "pct": 56.9
+          },
+          {
+            "label": "Fleming",
+            "pct": 43.1
+          }
+        ]
+      }
+    },
+    {
       "id": "co-dem-governor-primary-2026",
       "title": "Colorado Democratic Governor Primary",
       "election_date": "2026-06-30",
@@ -532,6 +5299,1841 @@
           {
             "label": "Bennet",
             "pct": 43.1
+          }
+        ]
+      }
+    },
+    {
+      "id": "il-gop-senate-primary-2026",
+      "title": "Illinois Republican Senate Primary",
+      "election_date": "2026-03-17",
+      "country_code": "US",
+      "state_code": "IL",
+      "geo": "US-IL",
+      "window_days": 30,
+      "start_date": "2026-02-15",
+      "end_date": "2026-03-17",
+      "candidates": [
+        {
+          "keyword": "Don Tracy",
+          "label": "Tracy",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Don Tracy",
+          "mid": "/g/11q2yy99qj",
+          "topic_title": "Don Tracy",
+          "topic_type": "American Politician"
+        },
+        {
+          "keyword": "Jeannie Evans",
+          "label": "Evans",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Jeannie Evans",
+          "resolve_note": "no confident political entity (top='Jeannie Evans' / 'Topic')"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-02-15",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-16",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-17",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-18",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-19",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-20",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-21",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-22",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-23",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-24",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-25",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-26",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-27",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-02-28",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-01",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-02",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-03",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-04",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-05",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-06",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-07",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-08",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-09",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-10",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-11",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-12",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-13",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-14",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-15",
+          "values": {
+            "Don Tracy": 0,
+            "Jeannie Evans": 0
+          }
+        },
+        {
+          "date": "2026-03-16",
+          "values": {
+            "Don Tracy": 31,
+            "Jeannie Evans": 29
+          }
+        },
+        {
+          "date": "2026-03-17",
+          "values": {
+            "Don Tracy": 100,
+            "Jeannie Evans": 58
+          }
+        }
+      ]
+    },
+    {
+      "id": "me-gop-governor-primary-2026",
+      "title": "Maine Republican Governor Primary",
+      "election_date": "2026-06-09",
+      "country_code": "US",
+      "state_code": "ME",
+      "geo": "US-ME",
+      "window_days": 30,
+      "start_date": "2026-05-10",
+      "end_date": "2026-06-09",
+      "candidates": [
+        {
+          "keyword": "Bobby Charles",
+          "label": "Charles",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Bobby Charles",
+          "resolve_note": "no confident political entity (top='See You Later, Alligator' / 'Song by Bobby Charles')"
+        },
+        {
+          "keyword": "Ben Midgley",
+          "label": "Midgley",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Ben Midgley",
+          "mid": "/g/11xs8_rhm9",
+          "topic_title": "Ben Midgley",
+          "topic_type": "Politician"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-10",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "Bobby Charles": 43,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 39
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "Bobby Charles": 100,
+            "Ben Midgley": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "il-gop-governor-primary-2026",
+      "title": "Illinois Republican Governor Primary",
+      "election_date": "2026-03-17",
+      "country_code": "US",
+      "state_code": "IL",
+      "geo": "US-IL",
+      "window_days": 30,
+      "start_date": "2026-02-15",
+      "end_date": "2026-03-17",
+      "candidates": [
+        {
+          "keyword": "/g/11fhr107ff",
+          "label": "Bailey",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Darren Bailey",
+          "mid": "/g/11fhr107ff",
+          "topic_title": "Darren Bailey",
+          "topic_type": "Former Illinois State Representative"
+        },
+        {
+          "keyword": "/g/11gbhcd1_4",
+          "label": "Dabrowski",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Ted Dabrowski",
+          "mid": "/g/11gbhcd1_4",
+          "topic_title": "Ted Dabrowski",
+          "topic_type": "Politician"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-02-15",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-16",
+          "values": {
+            "/g/11fhr107ff": 16,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-17",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-18",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-19",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-20",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-21",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-22",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-23",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-24",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-25",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-26",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-27",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-02-28",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-01",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-02",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-03",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-04",
+          "values": {
+            "/g/11fhr107ff": 13,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-05",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-06",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-07",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-08",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-09",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-10",
+          "values": {
+            "/g/11fhr107ff": 13,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-11",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-12",
+          "values": {
+            "/g/11fhr107ff": 19,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-13",
+          "values": {
+            "/g/11fhr107ff": 12,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-14",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-15",
+          "values": {
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 0
+          }
+        },
+        {
+          "date": "2026-03-16",
+          "values": {
+            "/g/11fhr107ff": 16,
+            "/g/11gbhcd1_4": 17
+          }
+        },
+        {
+          "date": "2026-03-17",
+          "values": {
+            "/g/11fhr107ff": 81,
+            "/g/11gbhcd1_4": 100
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Bailey",
+            "pct": 53.5
+          },
+          {
+            "label": "Dabrowski",
+            "pct": 28.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "ia-dem-senate-primary-2026",
+      "title": "Iowa Democratic Senate Primary",
+      "election_date": "2026-06-02",
+      "country_code": "US",
+      "state_code": "IA",
+      "geo": "US-IA",
+      "window_days": 30,
+      "start_date": "2026-05-03",
+      "end_date": "2026-06-02",
+      "candidates": [
+        {
+          "keyword": "/g/11hdt4_x7y",
+          "label": "Turek",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Josh Turek",
+          "mid": "/g/11hdt4_x7y",
+          "topic_title": "Joshua Turek",
+          "topic_type": "Iowa State Representative"
+        },
+        {
+          "keyword": "/m/0j_4vjz",
+          "label": "Wahls",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Zach Wahls",
+          "mid": "/m/0j_4vjz",
+          "topic_title": "Zach Wahls",
+          "topic_type": "Member of the Iowa Senate"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-03",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "/g/11hdt4_x7y": 10,
+            "/m/0j_4vjz": 13
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "/g/11hdt4_x7y": 17,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "/g/11hdt4_x7y": 8,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "/g/11hdt4_x7y": 9,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 9
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "/g/11hdt4_x7y": 12,
+            "/m/0j_4vjz": 8
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "/g/11hdt4_x7y": 14,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "/g/11hdt4_x7y": 9,
+            "/m/0j_4vjz": 9
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "/g/11hdt4_x7y": 9,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "/g/11hdt4_x7y": 10,
+            "/m/0j_4vjz": 10
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 8
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "/g/11hdt4_x7y": 12,
+            "/m/0j_4vjz": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "/g/11hdt4_x7y": 8,
+            "/m/0j_4vjz": 10
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "/g/11hdt4_x7y": 27,
+            "/m/0j_4vjz": 17
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "/g/11hdt4_x7y": 100,
+            "/m/0j_4vjz": 74
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Turek",
+            "pct": 62.6
+          },
+          {
+            "label": "Wahls",
+            "pct": 37.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "tx-gop-senate-primary-runoff-2026",
+      "title": "Texas Republican Senate Primary Runoff",
+      "election_date": "2026-05-26",
+      "country_code": "US",
+      "state_code": "TX",
+      "geo": "US-TX",
+      "window_days": 30,
+      "start_date": "2026-04-26",
+      "end_date": "2026-05-26",
+      "candidates": [
+        {
+          "keyword": "/m/0fpglz1",
+          "label": "Paxton",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Ken Paxton",
+          "mid": "/m/0fpglz1",
+          "topic_title": "Ken Paxton",
+          "topic_type": "Texas Attorney General"
+        },
+        {
+          "keyword": "/m/01xcqs",
+          "label": "Cornyn",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "John Cornyn",
+          "mid": "/m/01xcqs",
+          "topic_title": "John Cornyn",
+          "topic_type": "United States Senator"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-04-26",
+          "values": {
+            "/m/0fpglz1": 0,
+            "/m/01xcqs": 0
+          }
+        },
+        {
+          "date": "2026-04-27",
+          "values": {
+            "/m/0fpglz1": 8,
+            "/m/01xcqs": 4
+          }
+        },
+        {
+          "date": "2026-04-28",
+          "values": {
+            "/m/0fpglz1": 7,
+            "/m/01xcqs": 4
+          }
+        },
+        {
+          "date": "2026-04-29",
+          "values": {
+            "/m/0fpglz1": 7,
+            "/m/01xcqs": 3
+          }
+        },
+        {
+          "date": "2026-04-30",
+          "values": {
+            "/m/0fpglz1": 8,
+            "/m/01xcqs": 7
+          }
+        },
+        {
+          "date": "2026-05-01",
+          "values": {
+            "/m/0fpglz1": 10,
+            "/m/01xcqs": 7
+          }
+        },
+        {
+          "date": "2026-05-02",
+          "values": {
+            "/m/0fpglz1": 12,
+            "/m/01xcqs": 7
+          }
+        },
+        {
+          "date": "2026-05-03",
+          "values": {
+            "/m/0fpglz1": 16,
+            "/m/01xcqs": 14
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "/m/0fpglz1": 11,
+            "/m/01xcqs": 7
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "/m/0fpglz1": 9,
+            "/m/01xcqs": 7
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "/m/0fpglz1": 11,
+            "/m/01xcqs": 12
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "/m/0fpglz1": 11,
+            "/m/01xcqs": 9
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "/m/0fpglz1": 9,
+            "/m/01xcqs": 9
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "/m/0fpglz1": 11,
+            "/m/01xcqs": 8
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "/m/0fpglz1": 8,
+            "/m/01xcqs": 7
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "/m/0fpglz1": 10,
+            "/m/01xcqs": 6
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "/m/0fpglz1": 12,
+            "/m/01xcqs": 8
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "/m/0fpglz1": 14,
+            "/m/01xcqs": 15
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "/m/0fpglz1": 13,
+            "/m/01xcqs": 10
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "/m/0fpglz1": 17,
+            "/m/01xcqs": 10
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "/m/0fpglz1": 17,
+            "/m/01xcqs": 13
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "/m/0fpglz1": 19,
+            "/m/01xcqs": 17
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "/m/0fpglz1": 29,
+            "/m/01xcqs": 25
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "/m/0fpglz1": 98,
+            "/m/01xcqs": 56
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "/m/0fpglz1": 80,
+            "/m/01xcqs": 60
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "/m/0fpglz1": 40,
+            "/m/01xcqs": 28
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "/m/0fpglz1": 40,
+            "/m/01xcqs": 29
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "/m/0fpglz1": 25,
+            "/m/01xcqs": 18
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "/m/0fpglz1": 26,
+            "/m/01xcqs": 19
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "/m/0fpglz1": 40,
+            "/m/01xcqs": 31
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "/m/0fpglz1": 100,
+            "/m/01xcqs": 82
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Paxton",
+            "pct": 63.8
+          },
+          {
+            "label": "Cornyn",
+            "pct": 36.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "sc-gop-senate-primary-2026",
+      "title": "South Carolina Republican Senate Primary",
+      "election_date": "2026-06-09",
+      "country_code": "US",
+      "state_code": "SC",
+      "geo": "US-SC",
+      "window_days": 30,
+      "start_date": "2026-05-10",
+      "end_date": "2026-06-09",
+      "candidates": [
+        {
+          "keyword": "/m/01_pdg",
+          "label": "Graham",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Lindsey Graham",
+          "mid": "/m/01_pdg",
+          "topic_title": "Lindsey Graham",
+          "topic_type": "United States Senator"
+        },
+        {
+          "keyword": "/g/11ftgy_k_h",
+          "label": "Lynch",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Mark Lynch",
+          "mid": "/g/11ftgy_k_h",
+          "topic_title": "Mark Lynch",
+          "topic_type": "Politician"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-10",
+          "values": {
+            "/m/01_pdg": 0,
+            "/g/11ftgy_k_h": 15
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "/m/01_pdg": 11,
+            "/g/11ftgy_k_h": 15
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "/m/01_pdg": 20,
+            "/g/11ftgy_k_h": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "/m/01_pdg": 25,
+            "/g/11ftgy_k_h": 17
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "/m/01_pdg": 14,
+            "/g/11ftgy_k_h": 12
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "/m/01_pdg": 0,
+            "/g/11ftgy_k_h": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "/m/01_pdg": 15,
+            "/g/11ftgy_k_h": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "/m/01_pdg": 47,
+            "/g/11ftgy_k_h": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "/m/01_pdg": 17,
+            "/g/11ftgy_k_h": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "/m/01_pdg": 26,
+            "/g/11ftgy_k_h": 0
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "/m/01_pdg": 26,
+            "/g/11ftgy_k_h": 14
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "/m/01_pdg": 15,
+            "/g/11ftgy_k_h": 0
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "/m/01_pdg": 20,
+            "/g/11ftgy_k_h": 14
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "/m/01_pdg": 13,
+            "/g/11ftgy_k_h": 24
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "/m/01_pdg": 14,
+            "/g/11ftgy_k_h": 17
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "/m/01_pdg": 35,
+            "/g/11ftgy_k_h": 29
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "/m/01_pdg": 34,
+            "/g/11ftgy_k_h": 38
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "/m/01_pdg": 37,
+            "/g/11ftgy_k_h": 30
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "/m/01_pdg": 42,
+            "/g/11ftgy_k_h": 33
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "/m/01_pdg": 33,
+            "/g/11ftgy_k_h": 24
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "/m/01_pdg": 25,
+            "/g/11ftgy_k_h": 25
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "/m/01_pdg": 15,
+            "/g/11ftgy_k_h": 19
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "/m/01_pdg": 30,
+            "/g/11ftgy_k_h": 22
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "/m/01_pdg": 34,
+            "/g/11ftgy_k_h": 25
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "/m/01_pdg": 26,
+            "/g/11ftgy_k_h": 20
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "/m/01_pdg": 35,
+            "/g/11ftgy_k_h": 21
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "/m/01_pdg": 34,
+            "/g/11ftgy_k_h": 30
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "/m/01_pdg": 0,
+            "/g/11ftgy_k_h": 17
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "/m/01_pdg": 20,
+            "/g/11ftgy_k_h": 30
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "/m/01_pdg": 39,
+            "/g/11ftgy_k_h": 36
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "/m/01_pdg": 100,
+            "/g/11ftgy_k_h": 57
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Graham",
+            "pct": 56.8
+          },
+          {
+            "label": "Lynch",
+            "pct": 28.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "ky-gop-senate-primary-2026",
+      "title": "Kentucky Republican Senate Primary",
+      "election_date": "2026-05-19",
+      "country_code": "US",
+      "state_code": "KY",
+      "geo": "US-KY",
+      "window_days": 30,
+      "start_date": "2026-04-19",
+      "end_date": "2026-05-19",
+      "candidates": [
+        {
+          "keyword": "/m/0ddc6r6",
+          "label": "Barr",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Andy Barr",
+          "mid": "/m/0ddc6r6",
+          "topic_title": "Andy Barr",
+          "topic_type": "United States Representative"
+        },
+        {
+          "keyword": "/g/11h4vgvwh_",
+          "label": "Cameron",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Daniel Cameron",
+          "mid": "/g/11h4vgvwh_",
+          "topic_title": "Daniel Cameron",
+          "topic_type": "Former Attorney General of Kentucky"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-04-19",
+          "values": {
+            "/m/0ddc6r6": 0,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-04-20",
+          "values": {
+            "/m/0ddc6r6": 0,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-04-21",
+          "values": {
+            "/m/0ddc6r6": 12,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-04-22",
+          "values": {
+            "/m/0ddc6r6": 8,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-04-23",
+          "values": {
+            "/m/0ddc6r6": 14,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-04-24",
+          "values": {
+            "/m/0ddc6r6": 0,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-04-25",
+          "values": {
+            "/m/0ddc6r6": 10,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-04-26",
+          "values": {
+            "/m/0ddc6r6": 12,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-04-27",
+          "values": {
+            "/m/0ddc6r6": 0,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-04-28",
+          "values": {
+            "/m/0ddc6r6": 8,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-04-29",
+          "values": {
+            "/m/0ddc6r6": 0,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-04-30",
+          "values": {
+            "/m/0ddc6r6": 0,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-01",
+          "values": {
+            "/m/0ddc6r6": 0,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-02",
+          "values": {
+            "/m/0ddc6r6": 14,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-03",
+          "values": {
+            "/m/0ddc6r6": 0,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "/m/0ddc6r6": 18,
+            "/g/11h4vgvwh_": 8
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "/m/0ddc6r6": 21,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "/m/0ddc6r6": 14,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "/m/0ddc6r6": 12,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "/m/0ddc6r6": 14,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "/m/0ddc6r6": 0,
+            "/g/11h4vgvwh_": 11
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "/m/0ddc6r6": 25,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "/m/0ddc6r6": 22,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "/m/0ddc6r6": 9,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "/m/0ddc6r6": 19,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "/m/0ddc6r6": 13,
+            "/g/11h4vgvwh_": 9
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "/m/0ddc6r6": 16,
+            "/g/11h4vgvwh_": 10
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "/m/0ddc6r6": 14,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "/m/0ddc6r6": 21,
+            "/g/11h4vgvwh_": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "/m/0ddc6r6": 22,
+            "/g/11h4vgvwh_": 12
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "/m/0ddc6r6": 100,
+            "/g/11h4vgvwh_": 48
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Barr",
+            "pct": 60.5
+          },
+          {
+            "label": "Cameron",
+            "pct": 30.8
           }
         ]
       }
