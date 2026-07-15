@@ -408,6 +408,83 @@ function formatCorr(value) {
   return fixed.startsWith("-") ? fixed : fixed;
 }
 
+/**
+ * Data-driven axis domain with padding, clamped to [hardMin, hardMax].
+ * Keeps a minimum span so a cluster of similar points still has room to breathe.
+ * Tick marks are nice round values inside that zoomed domain.
+ */
+function paddedDomain(
+  values,
+  { padRatio = 0.12, hardMin = 0, hardMax = 100, minSpan = 12, tickCount = 5 } = {}
+) {
+  const nums = (values || []).filter(
+    (value) => typeof value === "number" && Number.isFinite(value)
+  );
+  if (!nums.length) {
+    return { min: hardMin, max: hardMax, ticks: niceTicks(hardMin, hardMax, tickCount) };
+  }
+
+  let min = Math.min(...nums);
+  let max = Math.max(...nums);
+  if (max - min < minSpan) {
+    const mid = (min + max) / 2;
+    min = mid - minSpan / 2;
+    max = mid + minSpan / 2;
+  }
+
+  const pad = (max - min) * padRatio;
+  min = Math.max(hardMin, min - pad);
+  max = Math.min(hardMax, max + pad);
+
+  if (max - min < minSpan) {
+    if (min <= hardMin + 1e-9) {
+      min = hardMin;
+      max = Math.min(hardMax, hardMin + minSpan);
+    } else if (max >= hardMax - 1e-9) {
+      max = hardMax;
+      min = Math.max(hardMin, hardMax - minSpan);
+    }
+  }
+
+  return { min, max, ticks: niceTicks(min, max, tickCount) };
+}
+
+/** Nice tick marks covering [min, max] (about `count` ticks). */
+function niceTicks(min, max, count = 5) {
+  if (!(max > min) || count < 2) return [min, max];
+  const span = max - min;
+  const rawStep = span / (count - 1);
+  const magnitude = 10 ** Math.floor(Math.log10(Math.max(rawStep, 1e-9)));
+  const candidates = [1, 2, 2.5, 5, 10].map((factor) => factor * magnitude);
+  // Also consider one magnitude finer so dense ranges still get readable ticks.
+  if (magnitude >= 1) {
+    for (const factor of [1, 2, 2.5, 5]) candidates.push(factor * (magnitude / 10));
+  }
+
+  let best = null;
+  for (const step of candidates) {
+    if (!(step > 0)) continue;
+    const start = Math.ceil((min - 1e-9) / step) * step;
+    const ticks = [];
+    for (let value = start; value <= max + step * 1e-9; value += step) {
+      let rounded = Math.round(value / step) * step;
+      if (Object.is(rounded, -0) || Math.abs(rounded) < 1e-12) rounded = 0;
+      if (rounded >= min - 1e-9 && rounded <= max + 1e-9) ticks.push(rounded);
+    }
+    if (ticks.length < 2) continue;
+    // Prefer ~count ticks; lightly penalize overcrowding or sparsity.
+    const score = Math.abs(ticks.length - count) + (ticks.length > count + 2 ? ticks.length - count : 0);
+    if (!best || score < best.score) best = { ticks, score };
+  }
+  return best?.ticks ?? [min, max];
+}
+
+function formatAxisTick(value) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "";
+  const rounded = Math.round(value * 10) / 10;
+  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1);
+}
+
 function buildShareSummary(candidateSeries, race) {
   const shares = computeRelativeShares(candidateSeries, race);
   if (!shares.length) return "";
@@ -702,43 +779,66 @@ function buildCorrelationScatterSvg(points, modelFit) {
   const { width, height, pad } = SCATTER;
   const plotW = width - pad.left - pad.right;
   const plotH = height - pad.top - pad.bottom;
-  const xAt = (value) => pad.left + (Math.max(0, Math.min(100, value)) / 100) * plotW;
-  const yAt = (value) => pad.top + plotH - (Math.max(0, Math.min(100, value)) / 100) * plotH;
+  const xDomain = paddedDomain(points.map((point) => point.x));
+  const yDomain = paddedDomain(points.map((point) => point.y));
+  const xSpan = Math.max(1e-9, xDomain.max - xDomain.min);
+  const ySpan = Math.max(1e-9, yDomain.max - yDomain.min);
+  const xAt = (value) =>
+    pad.left + ((Math.max(xDomain.min, Math.min(xDomain.max, value)) - xDomain.min) / xSpan) * plotW;
+  const yAt = (value) =>
+    pad.top +
+    plotH -
+    ((Math.max(yDomain.min, Math.min(yDomain.max, value)) - yDomain.min) / ySpan) * plotH;
 
-  const ticks = [0, 25, 50, 75, 100];
-  const grid = ticks
+  const xTicks = xDomain.ticks?.length ? xDomain.ticks : niceTicks(xDomain.min, xDomain.max);
+  const yTicks = yDomain.ticks?.length ? yDomain.ticks : niceTicks(yDomain.min, yDomain.max);
+  const hGrid = yTicks
     .map((tick) => {
-      const x = xAt(tick);
       const y = yAt(tick);
       return `
         <line class="trends-grid" x1="${pad.left}" y1="${y}" x2="${width - pad.right}" y2="${y}" />
-        <line class="trends-grid" x1="${x}" y1="${pad.top}" x2="${x}" y2="${height - pad.bottom}" />
-        <text class="trends-axis-label" x="${pad.left - 8}" y="${y + 3}" text-anchor="end">${tick}</text>
-        <text class="trends-axis-label" x="${x}" y="${height - 14}" text-anchor="middle">${tick}</text>
+        <text class="trends-axis-label" x="${pad.left - 8}" y="${y + 3}" text-anchor="end">${formatAxisTick(tick)}</text>
       `;
     })
     .join("");
+  const vGrid = xTicks
+    .map((tick) => {
+      const x = xAt(tick);
+      return `
+        <line class="trends-grid" x1="${x}" y1="${pad.top}" x2="${x}" y2="${height - pad.bottom}" />
+        <text class="trends-axis-label" x="${x}" y="${height - 14}" text-anchor="middle">${formatAxisTick(tick)}</text>
+      `;
+    })
+    .join("");
+  const grid = `${hGrid}${vGrid}`;
 
   let lmPath = "";
   if (modelFit) {
-    const y0 = modelFit.intercept;
-    const y100 = modelFit.intercept + modelFit.slope * 100;
-    // Clip the line segment to the 0–100 plot box.
+    const { min: xMin, max: xMax } = xDomain;
+    const { min: yMin, max: yMax } = yDomain;
+    const yAtXMin = modelFit.intercept + modelFit.slope * xMin;
+    const yAtXMax = modelFit.intercept + modelFit.slope * xMax;
+    // Clip the line segment to the zoomed plot box.
     const segments = [];
     const candidates = [
-      { x: 0, y: y0 },
-      { x: 100, y: y100 },
+      { x: xMin, y: yAtXMin },
+      { x: xMax, y: yAtXMax },
     ];
-    // Intersections with y=0 and y=100 when slope is non-zero.
+    // Intersections with yMin and yMax when slope is non-zero.
     if (Math.abs(modelFit.slope) > 1e-12) {
-      candidates.push({ x: (0 - modelFit.intercept) / modelFit.slope, y: 0 });
-      candidates.push({ x: (100 - modelFit.intercept) / modelFit.slope, y: 100 });
+      candidates.push({ x: (yMin - modelFit.intercept) / modelFit.slope, y: yMin });
+      candidates.push({ x: (yMax - modelFit.intercept) / modelFit.slope, y: yMax });
     }
     for (const pt of candidates) {
-      if (pt.x >= -1e-9 && pt.x <= 100 + 1e-9 && pt.y >= -1e-9 && pt.y <= 100 + 1e-9) {
+      if (
+        pt.x >= xMin - 1e-9 &&
+        pt.x <= xMax + 1e-9 &&
+        pt.y >= yMin - 1e-9 &&
+        pt.y <= yMax + 1e-9
+      ) {
         segments.push({
-          x: Math.max(0, Math.min(100, pt.x)),
-          y: Math.max(0, Math.min(100, pt.y)),
+          x: Math.max(xMin, Math.min(xMax, pt.x)),
+          y: Math.max(yMin, Math.min(yMax, pt.y)),
         });
       }
     }
