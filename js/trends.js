@@ -106,6 +106,23 @@ function raceShortTag(race) {
   return parts.join(" ");
 }
 
+/** Party label from race id/title: "GOP", "DEM", or null. */
+function racePartyTag(race) {
+  const id = race?.id || "";
+  const title = race?.title || "";
+  if (/-gop-/.test(id) || /\bRepublican\b/i.test(title)) return "GOP";
+  if (/-dem-/.test(id) || /\bDemocratic\b/i.test(title)) return "DEM";
+  return null;
+}
+
+/** Round label: "R2" for runoffs, otherwise "R1". */
+function raceRoundTag(race) {
+  const id = race?.id || "";
+  const title = race?.title || "";
+  if (/runoff/i.test(id) || /runoff/i.test(title)) return "R2";
+  return "R1";
+}
+
 function candidateShortName(candidate) {
   return candidate?.label || candidate?.name || candidate?.keyword || "Candidate";
 }
@@ -322,6 +339,7 @@ function buildRaceCorrelationPoints(races) {
       candidateLabel: winner.label,
       searchWinnerLabel: searchWinner.label,
       predicted,
+      round: raceRoundTag(race),
       color: predicted ? "#2f9e44" : "#e03131",
       x: searchRow.share,
       y: winner.share,
@@ -443,6 +461,7 @@ function buildLeadDaysMarginPoints(races) {
       daysWinnerLed,
       shareDays,
       predicted,
+      round: raceRoundTag(race),
       color: predicted ? "#2f9e44" : "#e03131",
       x: leadShare,
       y: margin,
@@ -887,16 +906,35 @@ function buildScatterSvg(
   const dots = points
     .map((point, index) => {
       const selected = point.raceId === selectedRaceId ? " is-selected" : "";
-      return `
-        <circle
+      const r = point.raceId === selectedRaceId ? 6.5 : 5.5;
+      const cx = xAt(point.x);
+      const cy = yAt(point.y);
+      const common = `
           class="trends-scatter-dot${selected}"
           data-scatter-index="${index}"
-          cx="${xAt(point.x).toFixed(1)}"
-          cy="${yAt(point.y).toFixed(1)}"
-          r="${point.raceId === selectedRaceId ? 6.5 : 5.5}"
           fill="${point.color}"
           stroke="#fff"
           stroke-width="1.5"
+      `;
+      // R1 = circle; R2 (runoff) = square.
+      if (point.round === "R2") {
+        const side = r * 2;
+        return `
+        <rect
+          ${common}
+          x="${(cx - side / 2).toFixed(1)}"
+          y="${(cy - side / 2).toFixed(1)}"
+          width="${side.toFixed(1)}"
+          height="${side.toFixed(1)}"
+        />
+      `;
+      }
+      return `
+        <circle
+          ${common}
+          cx="${cx.toFixed(1)}"
+          cy="${cy.toFixed(1)}"
+          r="${r}"
         />
       `;
     })
@@ -947,7 +985,7 @@ function buildCorrelationPanel(races) {
     <section class="trends-correlation" aria-label="Search share versus result">
       <header class="trends-card-header">
         <h3 class="trends-card-title">Search share vs result</h3>
-        <p class="trends-card-meta">Each point is one race’s tracked winner: search share vs result (rescaled to 100%). Green = search share also picked the winner; red = miss. Omits primaries that clearly do not decide who wins the office.</p>
+        <p class="trends-card-meta">Each point is one race’s tracked winner: search share vs result (rescaled to 100%). Circles = R1; squares = R2. Green = search share also picked the winner; red = miss. Omits primaries that clearly do not decide who wins the office.</p>
       </header>
       <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root="correlation">
         ${buildScatterSvg(points, {
@@ -979,7 +1017,7 @@ function buildLeadDaysMarginPanel(races) {
     <section class="trends-correlation" aria-label="Daily search lead versus result margin">
       <header class="trends-card-header">
         <h3 class="trends-card-title">Daily search lead vs margin</h3>
-        <p class="trends-card-meta">Each point is one race: exponentially weighted share of the ${shareDays} pre-election days the eventual winner led on relative search interest (recent days count more; half-life ${LEAD_DAY_WEIGHT_HALF_LIFE}d), versus that winner’s two-way margin (pp) against the runner-up among tracked candidates. Green = weighted lead share over 50%; red = not.</p>
+        <p class="trends-card-meta">Each point is one race: exponentially weighted share of the ${shareDays} pre-election days the eventual winner led on relative search interest (recent days count more; half-life ${LEAD_DAY_WEIGHT_HALF_LIFE}d), versus that winner’s two-way margin (pp) against the runner-up among tracked candidates. Circles = R1; squares = R2. Green = weighted lead share over 50%; red = not.</p>
       </header>
       <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root="lead-margin">
         ${buildScatterSvg(points, {
@@ -1074,12 +1112,13 @@ function wireScatterInteractions(container, races) {
   }
 }
 
-/** Dropdown label: "Hickenlooper - Gonzales (CO US Senate 26)". */
+/** Dropdown label: "Hickenlooper - Gonzales (CO US Senate 26 · DEM · R1)". */
 function raceOptionLabel(race) {
   const names = (race.candidates || [])
     .map((candidate) => candidateShortName(candidate))
     .filter((name) => name && name !== "Candidate");
-  const tag = raceShortTag(race);
+  const tagParts = [raceShortTag(race), racePartyTag(race), raceRoundTag(race)].filter(Boolean);
+  const tag = tagParts.join(" · ");
   if (names.length && tag) return `${names.join(" - ")} (${tag})`;
   if (names.length) return names.join(" - ");
   return tag || race.title || race.id || "Race";
