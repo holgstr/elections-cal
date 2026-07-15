@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T23:51:41Z",
+  "generated_at": "2026-07-15T23:57:22Z",
   "source": "google_trends",
   "races": [
     {
@@ -8778,240 +8778,242 @@
       "end_date": "2026-05-19",
       "candidates": [
         {
-          "keyword": "Thomas Massie",
+          "keyword": "/m/0h_cb6v",
           "label": "Massie",
-          "query_mode": "search_term",
-          "resolve_source": "race_fallback",
+          "query_mode": "entity",
+          "resolve_source": "config",
           "name": "Thomas Massie",
           "mid": "/m/0h_cb6v",
           "topic_title": "Thomas Massie",
           "topic_type": "United States Representative"
         },
         {
-          "keyword": "Ed Gallrein",
+          "keyword": "/g/11v5fs6qy0",
           "label": "Gallrein",
-          "query_mode": "search_term",
-          "resolve_source": "search_term",
+          "query_mode": "entity",
+          "resolve_source": "config",
           "name": "Ed Gallrein",
-          "resolve_note": "no confident political entity (top='Ed Gallrein' / 'Topic')"
+          "mid": "/g/11v5fs6qy0",
+          "topic_title": "Ed Gallrein",
+          "topic_type": "Topic"
         }
       ],
       "series": [
         {
           "date": "2026-04-19",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-04-20",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-04-21",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-04-22",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-04-23",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-04-24",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-04-25",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-04-26",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-04-27",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-04-28",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-04-29",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-04-30",
           "values": {
-            "Thomas Massie": 4,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 2,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-01",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 3,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-02",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-03",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-04",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-05",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 3,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-06",
           "values": {
-            "Thomas Massie": 5,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 5,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-07",
           "values": {
-            "Thomas Massie": 7,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 4,
+            "/g/11v5fs6qy0": 3
           }
         },
         {
           "date": "2026-05-08",
           "values": {
-            "Thomas Massie": 0,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 4,
+            "/g/11v5fs6qy0": 2
           }
         },
         {
           "date": "2026-05-09",
           "values": {
-            "Thomas Massie": 5,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 3,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-10",
           "values": {
-            "Thomas Massie": 7,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 4,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-11",
           "values": {
-            "Thomas Massie": 6,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 3,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-12",
           "values": {
-            "Thomas Massie": 5,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 6,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-13",
           "values": {
-            "Thomas Massie": 9,
-            "Ed Gallrein": 0
+            "/m/0h_cb6v": 7,
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-14",
           "values": {
-            "Thomas Massie": 11,
-            "Ed Gallrein": 5
+            "/m/0h_cb6v": 15,
+            "/g/11v5fs6qy0": 4
           }
         },
         {
           "date": "2026-05-15",
           "values": {
-            "Thomas Massie": 12,
-            "Ed Gallrein": 6
+            "/m/0h_cb6v": 13,
+            "/g/11v5fs6qy0": 5
           }
         },
         {
           "date": "2026-05-16",
           "values": {
-            "Thomas Massie": 15,
-            "Ed Gallrein": 7
+            "/m/0h_cb6v": 13,
+            "/g/11v5fs6qy0": 5
           }
         },
         {
           "date": "2026-05-17",
           "values": {
-            "Thomas Massie": 20,
-            "Ed Gallrein": 8
+            "/m/0h_cb6v": 18,
+            "/g/11v5fs6qy0": 7
           }
         },
         {
           "date": "2026-05-18",
           "values": {
-            "Thomas Massie": 35,
-            "Ed Gallrein": 13
+            "/m/0h_cb6v": 30,
+            "/g/11v5fs6qy0": 11
           }
         },
         {
           "date": "2026-05-19",
           "values": {
-            "Thomas Massie": 100,
-            "Ed Gallrein": 25
+            "/m/0h_cb6v": 100,
+            "/g/11v5fs6qy0": 28
           }
         }
       ],
