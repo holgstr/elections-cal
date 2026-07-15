@@ -1058,14 +1058,6 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   padding: 0.85rem 0.9rem 0.75rem;
 }
 
-.trends-corr-stat {
-  margin: 0 0 0.55rem;
-  font-size: 0.88rem;
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-  color: var(--text);
-}
-
 .trends-scatter-wrap {
   margin-top: 0.25rem;
 }
@@ -1093,11 +1085,3 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   font-family: "DM Sans", system-ui, sans-serif;
 }
 
-.trends-lm-line {
-  stroke: var(--text);
-  stroke-width: 1.75;
-  stroke-linecap: round;
-  stroke-dasharray: 5 4;
-  opacity: 0.72;
-  pointer-events: none;
-}

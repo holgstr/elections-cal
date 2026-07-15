@@ -277,6 +277,16 @@ function computeRelativeResults(race, candidateSeries) {
 }
 
 /**
+ * Vote winner and runner-up among Trends-tracked candidates (by relative
+ * result share). Returns null when fewer than two result rows exist.
+ */
+function trackedWinnerAndLoser(resultShares) {
+  if (!resultShares || resultShares.length < 2) return null;
+  const ranked = [...resultShares].sort((a, b) => b.share - a.share);
+  return { winner: ranked[0], loser: ranked[1] };
+}
+
+/**
  * One point per dropdown race: tracked vote winner’s search share (x) vs
  * relative result share (y). Both axes are among Trends-tracked candidates.
  * Races marked exclude (primary clearly won’t decide the office) are omitted.
@@ -295,9 +305,9 @@ function buildRaceCorrelationPoints(races) {
     const searchTotal = searchShares.reduce((acc, row) => acc + row.sum, 0);
     if (searchTotal <= 0) continue;
 
-    const winner = resultShares.reduce((best, row) =>
-      !best || row.share > best.share ? row : best
-    );
+    const pair = trackedWinnerAndLoser(resultShares);
+    if (!pair) continue;
+    const { winner } = pair;
     const searchWinner = searchShares.reduce((best, row) =>
       !best || row.share > best.share ? row : best
     );
@@ -316,6 +326,100 @@ function buildRaceCorrelationPoints(races) {
       x: searchRow.share,
       y: winner.share,
       resultStatus: race.result?.status || null,
+      tipXLabel: "Search",
+      tipYLabel: "Result",
+      formatX: formatVotePct,
+      formatY: formatVotePct,
+    });
+  }
+  return points;
+}
+
+/**
+ * Daily values for a candidate over the pre-election search-share window,
+ * keyed by date.
+ */
+function searchShareValueByDate(candidateSeries, race, label) {
+  const row = (candidateSeries || []).find(
+    ({ candidate }) => candidateShortName(candidate) === label
+  );
+  if (!row) return new Map();
+  const electionDate = race?.election_date || null;
+  const shareDays = searchShareDays(race);
+  const sharePoints = pointsForSearchShare(row.points, electionDate, shareDays);
+  const byDate = new Map();
+  for (const point of sharePoints) {
+    if (!point?.date) continue;
+    byDate.set(point.date, typeof point.value === "number" ? point.value : 0);
+  }
+  return byDate;
+}
+
+/**
+ * One point per race: share of tracked pre-election days the vote winner led
+ * on relative search interest (x) vs two-way result margin in pp (y).
+ */
+function buildLeadDaysMarginPoints(races) {
+  const points = [];
+  for (const race of races || []) {
+    if (isRaceExcluded(race)) continue;
+    const model = buildChartModel(race);
+    if (!model.series.length || !model.candidateSeries.length) continue;
+
+    const resultShares = computeRelativeResults(race, model.candidateSeries);
+    const pair = trackedWinnerAndLoser(resultShares);
+    if (!pair) continue;
+    const { winner, loser } = pair;
+
+    const rawTotal = winner.raw + loser.raw;
+    if (!(rawTotal > 0)) continue;
+    const winnerTwoWay = (winner.raw / rawTotal) * 100;
+    const loserTwoWay = (loser.raw / rawTotal) * 100;
+    const margin = winnerTwoWay - loserTwoWay;
+
+    const winnerByDate = searchShareValueByDate(
+      model.candidateSeries,
+      race,
+      winner.label
+    );
+    const loserByDate = searchShareValueByDate(
+      model.candidateSeries,
+      race,
+      loser.label
+    );
+    const dates = new Set([...winnerByDate.keys(), ...loserByDate.keys()]);
+    const shareDays = searchShareDays(race);
+    if (!dates.size || shareDays < 1) continue;
+
+    let daysWinnerLed = 0;
+    for (const date of dates) {
+      const w = winnerByDate.get(date) ?? 0;
+      const l = loserByDate.get(date) ?? 0;
+      const total = Math.max(0, w) + Math.max(0, l);
+      if (total <= 0) continue;
+      // Relative share that day: winner ahead iff raw interest is higher.
+      if (w > l) daysWinnerLed += 1;
+    }
+
+    const leadShare = (daysWinnerLed / shareDays) * 100;
+    const predicted = daysWinnerLed > shareDays / 2;
+    points.push({
+      raceId: race.id,
+      raceLabel: raceGivenNamesTitle(race),
+      raceTitle: raceGivenNamesTitle(race),
+      candidateLabel: winner.label,
+      loserLabel: loser.label,
+      daysWinnerLed,
+      shareDays,
+      predicted,
+      color: predicted ? "#2f9e44" : "#e03131",
+      x: leadShare,
+      y: margin,
+      resultStatus: race.result?.status || null,
+      tipXLabel: "Winner led",
+      tipYLabel: "Margin",
+      formatX: (value) => `${formatAxisTick(value)}% of days`,
+      formatY: (value) => `${formatAxisTick(value)} pp`,
     });
   }
   return points;
@@ -329,83 +433,6 @@ function isRaceExcluded(race) {
 /** Races shown in the Trends dropdown (excludes clear non-deciding primaries). */
 function visibleRaces(races) {
   return (races || []).filter((race) => !isRaceExcluded(race));
-}
-
-function pearsonCorrelation(points) {
-  const n = points.length;
-  if (n < 2) return null;
-  let sumX = 0;
-  let sumY = 0;
-  let sumXX = 0;
-  let sumYY = 0;
-  let sumXY = 0;
-  for (const point of points) {
-    sumX += point.x;
-    sumY += point.y;
-    sumXX += point.x * point.x;
-    sumYY += point.y * point.y;
-    sumXY += point.x * point.y;
-  }
-  const denomX = n * sumXX - sumX * sumX;
-  const denomY = n * sumYY - sumY * sumY;
-  if (denomX <= 0 || denomY <= 0) return null;
-  return (n * sumXY - sumX * sumY) / Math.sqrt(denomX * denomY);
-}
-
-/** Average ranks for ties; ranks are 1-based. */
-function averageRanks(values) {
-  const indexed = values.map((value, index) => ({ value, index }));
-  indexed.sort((a, b) => a.value - b.value);
-  const ranks = new Array(values.length);
-  let i = 0;
-  while (i < indexed.length) {
-    let j = i + 1;
-    while (j < indexed.length && indexed[j].value === indexed[i].value) j += 1;
-    const avg = (i + 1 + j) / 2;
-    for (let k = i; k < j; k += 1) ranks[indexed[k].index] = avg;
-    i = j;
-  }
-  return ranks;
-}
-
-function spearmanCorrelation(points) {
-  const n = points.length;
-  if (n < 2) return null;
-  const rankX = averageRanks(points.map((point) => point.x));
-  const rankY = averageRanks(points.map((point) => point.y));
-  return pearsonCorrelation(
-    rankX.map((x, index) => ({ x, y: rankY[index] }))
-  );
-}
-
-/** Ordinary least-squares line: y = intercept + slope * x */
-function fitLinearModel(points) {
-  const n = points.length;
-  if (n < 2) return null;
-  let sumX = 0;
-  let sumY = 0;
-  let sumXX = 0;
-  let sumXY = 0;
-  for (const point of points) {
-    sumX += point.x;
-    sumY += point.y;
-    sumXX += point.x * point.x;
-    sumXY += point.x * point.y;
-  }
-  const denom = n * sumXX - sumX * sumX;
-  if (Math.abs(denom) < 1e-12) return null;
-  const slope = (n * sumXY - sumX * sumY) / denom;
-  const intercept = (sumY - slope * sumX) / n;
-  const r = pearsonCorrelation(points);
-  const r2 = r == null ? null : r * r;
-  const spearman = spearmanCorrelation(points);
-  return { slope, intercept, r2, spearman, n };
-}
-
-function formatCorr(value) {
-  if (typeof value !== "number" || !Number.isFinite(value)) return "—";
-  const fixed = value.toFixed(2);
-  return fixed.startsWith("-") ? fixed : fixed;
 }
 
 /**
@@ -775,12 +802,26 @@ function renderRaceCard(race) {
   `;
 }
 
-function buildCorrelationScatterSvg(points, modelFit) {
+function buildScatterSvg(
+  points,
+  {
+    xLabel = "Search share (%)",
+    yLabel = "Result share (%)",
+    xDomainOpts = {},
+    yDomainOpts = {},
+  } = {}
+) {
   const { width, height, pad } = SCATTER;
   const plotW = width - pad.left - pad.right;
   const plotH = height - pad.top - pad.bottom;
-  const xDomain = paddedDomain(points.map((point) => point.x));
-  const yDomain = paddedDomain(points.map((point) => point.y));
+  const xDomain = paddedDomain(
+    points.map((point) => point.x),
+    xDomainOpts
+  );
+  const yDomain = paddedDomain(
+    points.map((point) => point.y),
+    yDomainOpts
+  );
   const xSpan = Math.max(1e-9, xDomain.max - xDomain.min);
   const ySpan = Math.max(1e-9, yDomain.max - yDomain.min);
   const xAt = (value) =>
@@ -811,59 +852,6 @@ function buildCorrelationScatterSvg(points, modelFit) {
     })
     .join("");
   const grid = `${hGrid}${vGrid}`;
-
-  let lmPath = "";
-  if (modelFit) {
-    const { min: xMin, max: xMax } = xDomain;
-    const { min: yMin, max: yMax } = yDomain;
-    const yAtXMin = modelFit.intercept + modelFit.slope * xMin;
-    const yAtXMax = modelFit.intercept + modelFit.slope * xMax;
-    // Clip the line segment to the zoomed plot box.
-    const segments = [];
-    const candidates = [
-      { x: xMin, y: yAtXMin },
-      { x: xMax, y: yAtXMax },
-    ];
-    // Intersections with yMin and yMax when slope is non-zero.
-    if (Math.abs(modelFit.slope) > 1e-12) {
-      candidates.push({ x: (yMin - modelFit.intercept) / modelFit.slope, y: yMin });
-      candidates.push({ x: (yMax - modelFit.intercept) / modelFit.slope, y: yMax });
-    }
-    for (const pt of candidates) {
-      if (
-        pt.x >= xMin - 1e-9 &&
-        pt.x <= xMax + 1e-9 &&
-        pt.y >= yMin - 1e-9 &&
-        pt.y <= yMax + 1e-9
-      ) {
-        segments.push({
-          x: Math.max(xMin, Math.min(xMax, pt.x)),
-          y: Math.max(yMin, Math.min(yMax, pt.y)),
-        });
-      }
-    }
-    segments.sort((a, b) => a.x - b.x || a.y - b.y);
-    const unique = [];
-    for (const pt of segments) {
-      const prev = unique[unique.length - 1];
-      if (!prev || Math.abs(prev.x - pt.x) > 1e-6 || Math.abs(prev.y - pt.y) > 1e-6) {
-        unique.push(pt);
-      }
-    }
-    if (unique.length >= 2) {
-      const a = unique[0];
-      const b = unique[unique.length - 1];
-      lmPath = `
-        <line
-          class="trends-lm-line"
-          x1="${xAt(a.x)}"
-          y1="${yAt(a.y)}"
-          x2="${xAt(b.x)}"
-          y2="${yAt(b.y)}"
-        />
-      `;
-    }
-  }
 
   const dots = points
     .map((point, index) => {
@@ -902,11 +890,10 @@ function buildCorrelationScatterSvg(points, modelFit) {
   return `
     <svg class="trends-chart trends-scatter-chart" viewBox="0 0 ${width} ${height}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" data-scatter-root>
       ${grid}
-      ${lmPath}
       ${dots}
       ${labels}
-      <text class="trends-axis-title" x="${pad.left + plotW / 2}" y="${height - 2}" text-anchor="middle">Search share (%)</text>
-      <text class="trends-axis-title" x="14" y="${pad.top + plotH / 2}" text-anchor="middle" transform="rotate(-90 14 ${pad.top + plotH / 2})">Result share (%)</text>
+      <text class="trends-axis-title" x="${pad.left + plotW / 2}" y="${height - 2}" text-anchor="middle">${escapeHtml(xLabel)}</text>
+      <text class="trends-axis-title" x="14" y="${pad.top + plotH / 2}" text-anchor="middle" transform="rotate(-90 14 ${pad.top + plotH / 2})">${escapeHtml(yLabel)}</text>
     </svg>
   `;
 }
@@ -925,37 +912,61 @@ function buildCorrelationPanel(races) {
     `;
   }
 
-  const modelFit = fitLinearModel(points);
-  const corrReady =
-    modelFit && modelFit.r2 != null && modelFit.spearman != null;
-  const corrText = !corrReady
-    ? points.length < 2
-      ? "Need at least two races for correlation."
-      : "Correlation undefined (no variance)."
-    : `R² = ${formatCorr(modelFit.r2)} · Spearman ρ = ${formatCorr(modelFit.spearman)} · n = ${modelFit.n}`;
-
   return `
     <section class="trends-correlation" aria-label="Search share versus result">
       <header class="trends-card-header">
         <h3 class="trends-card-title">Search share vs result</h3>
         <p class="trends-card-meta">Each point is one race’s tracked winner: search share vs result (rescaled to 100%). Green = search share also picked the winner; red = miss. Omits primaries that clearly do not decide who wins the office.</p>
       </header>
-      <p class="trends-corr-stat">${escapeHtml(corrText)}</p>
-      <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root>
-        ${buildCorrelationScatterSvg(points, modelFit)}
+      <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root="correlation">
+        ${buildScatterSvg(points, {
+          xLabel: "Search share (%)",
+          yLabel: "Result share (%)",
+        })}
         <div class="trends-tooltip" hidden></div>
       </div>
     </section>
   `;
 }
 
-function wireScatterInteractions(container, races) {
-  const wrap = container.querySelector("[data-scatter-chart-root]");
+function buildLeadDaysMarginPanel(races) {
+  const points = buildLeadDaysMarginPoints(races);
+  if (points.length < 1) {
+    return `
+      <section class="trends-correlation" aria-label="Daily search lead versus result margin">
+        <header class="trends-card-header">
+          <h3 class="trends-card-title">Daily search lead vs margin</h3>
+          <p class="trends-card-meta">One point per race once preliminary or official results are available.</p>
+        </header>
+        <p class="trends-empty">No race results yet to compare daily search leads with margins.</p>
+      </section>
+    `;
+  }
+
+  const shareDays = searchShareDays(races.find((race) => !isRaceExcluded(race)) || races[0]);
+  return `
+    <section class="trends-correlation" aria-label="Daily search lead versus result margin">
+      <header class="trends-card-header">
+        <h3 class="trends-card-title">Daily search lead vs margin</h3>
+        <p class="trends-card-meta">Each point is one race: share of the ${shareDays} pre-election days the eventual winner led on relative search interest, versus that winner’s two-way margin (pp) against the runner-up among tracked candidates. Green = led on a majority of days; red = did not.</p>
+      </header>
+      <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root="lead-margin">
+        ${buildScatterSvg(points, {
+          xLabel: `% of days winner led (${shareDays}d)`,
+          yLabel: "Two-way margin (pp)",
+          xDomainOpts: { hardMin: 0, hardMax: 100, minSpan: 20 },
+          yDomainOpts: { hardMin: 0, hardMax: 100, minSpan: 5 },
+        })}
+        <div class="trends-tooltip" hidden></div>
+      </div>
+    </section>
+  `;
+}
+
+function wireOneScatter(wrap, points) {
   const svg = wrap?.querySelector("[data-scatter-root]");
   const tooltip = wrap?.querySelector(".trends-tooltip");
-  if (!wrap || !svg || !tooltip) return;
-
-  const points = buildRaceCorrelationPoints(races);
+  if (!wrap || !svg || !tooltip || !points.length) return;
 
   const showTip = (index, clientX) => {
     const point = points[index];
@@ -963,6 +974,10 @@ function wireScatterInteractions(container, races) {
     const rect = svg.getBoundingClientRect();
     const pctX = rect.width ? ((clientX - rect.left) / rect.width) * 100 : 50;
     const call = point.predicted ? "Hit" : "Miss";
+    const formatX = point.formatX || formatVotePct;
+    const formatY = point.formatY || formatVotePct;
+    const tipXLabel = point.tipXLabel || "X";
+    const tipYLabel = point.tipYLabel || "Y";
     tooltip.hidden = false;
     tooltip.classList.add("is-dense");
     tooltip.innerHTML = `
@@ -972,7 +987,7 @@ function wireScatterInteractions(container, races) {
         <span class="trends-tooltip-call">${call}</span>
       </div>
       <div class="trends-tooltip-dense-meta">
-        Search ${escapeHtml(formatVotePct(point.x))} · Result ${escapeHtml(formatVotePct(point.y))}
+        ${escapeHtml(tipXLabel)} ${escapeHtml(formatX(point.x))} · ${escapeHtml(tipYLabel)} ${escapeHtml(formatY(point.y))}
       </div>
     `;
     const preferRight = pctX < 55;
@@ -1004,11 +1019,27 @@ function wireScatterInteractions(container, races) {
     const point = points[index];
     if (point) {
       const call = point.predicted ? "hit" : "miss";
+      const formatX = point.formatX || formatVotePct;
+      const formatY = point.formatY || formatVotePct;
+      const tipXLabel = point.tipXLabel || "X";
+      const tipYLabel = point.tipYLabel || "Y";
       dot.setAttribute(
         "aria-label",
-        `${point.raceLabel}: search ${formatVotePct(point.x)}, result ${formatVotePct(point.y)}, ${call}`
+        `${point.raceLabel}: ${tipXLabel} ${formatX(point.x)}, ${tipYLabel} ${formatY(point.y)}, ${call}`
       );
     }
+  }
+}
+
+function wireScatterInteractions(container, races) {
+  const scatterBuilders = {
+    correlation: buildRaceCorrelationPoints,
+    "lead-margin": buildLeadDaysMarginPoints,
+  };
+  for (const wrap of container.querySelectorAll("[data-scatter-chart-root]")) {
+    const kind = wrap.getAttribute("data-scatter-chart-root");
+    const builder = scatterBuilders[kind] || buildRaceCorrelationPoints;
+    wireOneScatter(wrap, builder(races));
   }
 }
 
@@ -1080,6 +1111,7 @@ export async function renderTrends(container) {
     <div class="trends-list">
       ${renderRaceCard(activeRace)}
       ${buildCorrelationPanel(races)}
+      ${buildLeadDaysMarginPanel(races)}
     </div>
   `;
 
