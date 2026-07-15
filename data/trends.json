@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T13:37:44Z",
+  "generated_at": "2026-07-15T13:41:27Z",
   "source": "google_trends",
   "races": [
     {
@@ -17,6 +17,8 @@
           "keyword": "/m/04g_1z",
           "label": "Hickenlooper",
           "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "John Hickenlooper",
           "mid": "/m/04g_1z",
           "topic_title": "John Hickenlooper",
           "topic_type": "United States Senator"
@@ -25,6 +27,8 @@
           "keyword": "/g/11h24f3x_y",
           "label": "Gonzales",
           "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Julie Gonzales",
           "mid": "/g/11h24f3x_y",
           "topic_title": "Julie Gonzales",
           "topic_type": "Colorado State Senator"

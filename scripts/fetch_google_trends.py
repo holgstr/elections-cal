@@ -6,16 +6,21 @@ via urllib + cookies (stdlib only). Suitable for periodic GitHub Actions
 runs. Writes data/trends.json for the Trends tab.
 
 Prefer Google Knowledge Graph *person/topic entities* (mids like
-``/m/04g_1z``) over raw search strings when comparing candidates. Entities
-disambiguate people (e.g. "John Hickenlooper" → United States Senator,
-"Julie Gonzales" → Colorado State Senator) and aggregate related queries
-about that person. Resolve mids with:
+``/m/04g_1z``) when a confident political person match exists. Entities
+disambiguate people (e.g. "John Hickenlooper" → United States Senator) and
+aggregate related queries about that person.
+
+Lookup policy (per race, all-or-nothing so scales stay comparable):
+
+1. Curated ``mid`` in config wins when present.
+2. Otherwise autocomplete resolves ``name`` / ``keyword``; keep the entity
+   only if the top hit looks like a political person (office/type hints).
+3. If any candidate cannot be resolved confidently, the whole race falls
+   back to raw search-term comparison.
+
+Inspect matches manually with:
 
     python3 scripts/fetch_google_trends.py --suggest "Julie Gonzales"
-
-Then store the chosen ``mid`` in ``data/config/trends_races.json``. Within a
-race, use entities for every candidate (do not mix entity mids and raw
-search terms): Google indexes them on different scales.
 """
 
 from __future__ import annotations
@@ -46,6 +51,38 @@ USER_AGENT = (
 REQUEST_DELAY_S = 1.5
 MAX_RETRIES = 4
 TZ_OFFSET_MINUTES = 360  # US Mountain (MST) as used for CO races
+# Autocomplete must look like a political office/person to auto-adopt a mid.
+ENTITY_SCORE_THRESHOLD = 10
+POLITICAL_TYPE_HINTS = (
+    "senator",
+    "representative",
+    "congressman",
+    "congresswoman",
+    "congressperson",
+    "governor",
+    "lieutenant governor",
+    "mayor",
+    "politician",
+    "member of",
+    "presidential",
+    "vice president",
+    "president of the united states",
+    "speaker of",
+    "assembly",
+    "delegate",
+    "secretary",
+    "attorney general",
+    "house of representatives",
+    "state senator",
+    "state representative",
+    "u.s. representative",
+    "united states representative",
+    "united states senator",
+    "member of parliament",
+    "prime minister",
+    "chancellor",
+    "premier",
+)
 
 
 def load_json(path: Path):
@@ -77,23 +114,79 @@ def format_trends_time(start: date, end: date) -> str:
 
 def is_entity_mid(value: str) -> bool:
     """True for Knowledge Graph / Trends topic ids (/m/... or /g/...)."""
-    return value.startswith("/m/") or value.startswith("/g/")
+    return bool(value) and (value.startswith("/m/") or value.startswith("/g/"))
 
 
-def query_for_row(row: dict) -> str:
-    """Trends API query: prefer curated entity mid, else raw keyword."""
+def display_name_for_row(row: dict) -> str:
+    """Human name used for autocomplete and search-term fallback."""
+    for key in ("name", "keyword", "topic_title", "label"):
+        value = (row.get(key) or "").strip()
+        if value and not is_entity_mid(value):
+            return value
     mid = (row.get("mid") or "").strip()
     if mid:
         return mid
-    keyword = (row.get("keyword") or "").strip()
-    if not keyword:
-        raise ValueError("keyword row needs mid or keyword")
-    return keyword
+    raise ValueError("keyword row needs name, keyword, or mid")
 
 
-def series_key_for_row(row: dict) -> str:
-    """Stable key used in series.values and candidates[].keyword."""
-    return query_for_row(row)
+def score_topic_for_person(topic: dict, query: str) -> int:
+    """Heuristic score for picking a political person entity from autocomplete."""
+    title = (topic.get("title") or "").strip()
+    topic_type = (topic.get("type") or "").strip()
+    title_l = title.lower()
+    type_l = topic_type.lower()
+    query_l = query.strip().lower()
+    score = 0
+    if any(hint in type_l for hint in POLITICAL_TYPE_HINTS):
+        score += 10
+    if title_l == query_l:
+        score += 5
+    elif query_l and (query_l in title_l or title_l in query_l):
+        score += 3
+    mid = topic.get("mid") or ""
+    if mid.startswith("/m/"):
+        score += 1
+    if type_l == "topic":
+        score -= 2
+    return score
+
+
+def pick_political_entity(
+    topics: list[dict], query: str, *, threshold: int = ENTITY_SCORE_THRESHOLD
+) -> dict | None:
+    """Return best confident political person topic, or None to fall back."""
+    if not topics or not query.strip():
+        return None
+    ranked = sorted(
+        ((score_topic_for_person(topic, query), topic) for topic in topics),
+        key=lambda item: item[0],
+        reverse=True,
+    )
+    best_score, best = ranked[0]
+    if best_score < threshold:
+        return None
+    if not (best.get("mid") or "").strip():
+        return None
+    # Ambiguous: two strong political hits close together → don't guess.
+    if len(ranked) > 1:
+        second_score, second = ranked[1]
+        if (
+            second_score >= threshold
+            and best_score - second_score <= 1
+            and (second.get("mid") or "") != (best.get("mid") or "")
+        ):
+            best_title = (best.get("title") or "").strip().lower()
+            second_title = (second.get("title") or "").strip().lower()
+            query_l = query.strip().lower()
+            if best_title != query_l or second_title == query_l:
+                return None
+    return {
+        "mid": best["mid"],
+        "topic_title": best.get("title") or query,
+        "topic_type": best.get("type") or "",
+        "score": best_score,
+        "source": "autocomplete",
+    }
 
 
 class TrendsClient:
@@ -293,27 +386,152 @@ def _parse_trends_date(formatted: str | None, unix_time: str | int | None) -> da
     return None
 
 
+def resolve_candidate_queries(
+    client: TrendsClient, keyword_rows: list[dict]
+) -> list[dict]:
+    """Resolve each config row to a query plan.
+
+    Per-race caller enforces all-or-nothing entity vs search-term mode.
+    """
+    resolved: list[dict] = []
+    for idx, row in enumerate(keyword_rows):
+        if idx:
+            time.sleep(REQUEST_DELAY_S)
+        name = display_name_for_row(row)
+        label = row.get("label") or name
+        curated_mid = (row.get("mid") or "").strip()
+
+        plan = {
+            "row": row,
+            "name": name,
+            "label": label,
+            "query": name,
+            "series_key": name,
+            "query_mode": "search_term",
+            "resolve_source": "search_term",
+            "mid": None,
+            "topic_title": row.get("topic_title"),
+            "topic_type": row.get("topic_type"),
+            "resolve_note": None,
+        }
+
+        if curated_mid and is_entity_mid(curated_mid):
+            plan.update(
+                {
+                    "query": curated_mid,
+                    "series_key": curated_mid,
+                    "query_mode": "entity",
+                    "resolve_source": "config",
+                    "mid": curated_mid,
+                    "topic_title": row.get("topic_title") or name,
+                    "topic_type": row.get("topic_type") or "",
+                }
+            )
+            resolved.append(plan)
+            continue
+
+        # Already configured as a mid string in keyword/name — treat as curated.
+        if is_entity_mid(name):
+            plan.update(
+                {
+                    "query": name,
+                    "series_key": name,
+                    "query_mode": "entity",
+                    "resolve_source": "config",
+                    "mid": name,
+                }
+            )
+            resolved.append(plan)
+            continue
+
+        try:
+            topics = client.suggest(name)
+        except Exception as exc:  # noqa: BLE001
+            plan["resolve_note"] = f"autocomplete failed: {exc}"
+            resolved.append(plan)
+            continue
+
+        picked = pick_political_entity(topics, name)
+        if picked:
+            plan.update(
+                {
+                    "query": picked["mid"],
+                    "series_key": picked["mid"],
+                    "query_mode": "entity",
+                    "resolve_source": "autocomplete",
+                    "mid": picked["mid"],
+                    "topic_title": picked["topic_title"],
+                    "topic_type": picked["topic_type"],
+                    "resolve_note": f"score={picked['score']}",
+                }
+            )
+        else:
+            top = topics[0] if topics else None
+            if top:
+                plan["resolve_note"] = (
+                    f"no confident political entity "
+                    f"(top={top.get('title')!r} / {top.get('type')!r})"
+                )
+            else:
+                plan["resolve_note"] = "no autocomplete topics"
+        resolved.append(plan)
+    return resolved
+
+
+def apply_race_query_mode(plans: list[dict]) -> list[dict]:
+    """Force all-entity or all-search-term within a race for comparable scales."""
+    entity_ok = all(plan["query_mode"] == "entity" for plan in plans)
+    if entity_ok:
+        return plans
+
+    fell_back = []
+    for plan in plans:
+        if plan["query_mode"] == "entity":
+            note = plan.get("resolve_note") or plan["resolve_source"]
+            print(
+                f"  fallback {plan['label']}: had entity {plan['mid']} "
+                f"({note}) but race not unanimous → search term "
+                f"{plan['name']!r}",
+                file=sys.stderr,
+            )
+        new_plan = dict(plan)
+        new_plan["query"] = plan["name"]
+        new_plan["series_key"] = plan["name"]
+        new_plan["query_mode"] = "search_term"
+        if plan["resolve_source"] != "search_term":
+            new_plan["resolve_source"] = "race_fallback"
+        # Keep mid/topic_* as metadata about what we *would* have used.
+        fell_back.append(new_plan)
+    return fell_back
+
+
 def fetch_race(client: TrendsClient, race: dict) -> dict:
     election_date = parse_iso_date(race["election_date"])
     window_days = int(race.get("window_days", 30))
     start, end = window_bounds(election_date, window_days)
     keyword_rows = race["keywords"]
-    queries = [query_for_row(row) for row in keyword_rows]
-    series_keys = [series_key_for_row(row) for row in keyword_rows]
     geo = race.get("geo") or ""
 
+    print(f"Resolving topics for {race['id']}…")
+    plans = apply_race_query_mode(resolve_candidate_queries(client, keyword_rows))
+    queries = [plan["query"] for plan in plans]
+    series_keys = [plan["series_key"] for plan in plans]
+
     display = []
-    for row, query in zip(keyword_rows, queries):
-        label = row.get("label") or row.get("topic_title") or query
-        kind = "entity" if is_entity_mid(query) else "keyword"
-        display.append(f"{label}[{kind}]")
+    for plan in plans:
+        extras = []
+        if plan.get("topic_type"):
+            extras.append(plan["topic_type"])
+        extras.append(plan["resolve_source"])
+        display.append(f"{plan['label']}[{plan['query_mode']}:{'/'.join(extras)}]")
+        if plan.get("resolve_note") and plan["query_mode"] == "search_term":
+            print(f"  note {plan['label']}: {plan['resolve_note']}", file=sys.stderr)
 
     print(
         f"Fetching {race['id']}: {', '.join(display)} "
         f"geo={geo or 'WORLD'} {start}→{end}"
     )
     series = client.interest_over_time(queries, geo=geo, start=start, end=end)
-    # Remap API keys → stable series keys (identical unless schema evolves).
     if series_keys != queries:
         for point in series:
             remapped: dict[str, int | None] = {}
@@ -323,20 +541,22 @@ def fetch_race(client: TrendsClient, race: dict) -> dict:
     print(f"  {len(series)} daily points")
 
     candidates = []
-    for row, key, query in zip(keyword_rows, series_keys, queries):
+    for plan in plans:
         candidate = {
-            "keyword": key,
-            "label": row.get("label") or row.get("topic_title") or key,
-            "query_mode": "entity" if is_entity_mid(query) else "search_term",
+            "keyword": plan["series_key"],
+            "label": plan["label"],
+            "query_mode": plan["query_mode"],
+            "resolve_source": plan["resolve_source"],
+            "name": plan["name"],
         }
-        if row.get("mid"):
-            candidate["mid"] = row["mid"]
-        elif is_entity_mid(query):
-            candidate["mid"] = query
-        if row.get("topic_title"):
-            candidate["topic_title"] = row["topic_title"]
-        if row.get("topic_type"):
-            candidate["topic_type"] = row["topic_type"]
+        if plan.get("mid"):
+            candidate["mid"] = plan["mid"]
+        if plan.get("topic_title"):
+            candidate["topic_title"] = plan["topic_title"]
+        if plan.get("topic_type"):
+            candidate["topic_type"] = plan["topic_type"]
+        if plan.get("resolve_note"):
+            candidate["resolve_note"] = plan["resolve_note"]
         candidates.append(candidate)
 
     return {
@@ -368,11 +588,16 @@ def run_suggest(terms: list[str]) -> int:
         if not topics:
             print("  (none)")
             continue
+        picked = pick_political_entity(topics, term)
         for topic in topics:
             mid = topic.get("mid", "")
             title = topic.get("title", "")
             topic_type = topic.get("type", "")
-            print(f"  {mid}\t{title}\t({topic_type})")
+            score = score_topic_for_person(topic, term)
+            marker = "  <-- auto" if picked and mid == picked["mid"] else ""
+            print(f"  [{score:3d}] {mid}\t{title}\t({topic_type}){marker}")
+        if not picked:
+            print("  (no confident political auto-pick; would use search term)")
     return 0
 
 

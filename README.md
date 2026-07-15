@@ -81,7 +81,13 @@ Another workflow refreshes Google Trends interest weekly (Mondays 08:30 UTC):
 1. Runs `scripts/fetch_google_trends.py` for races listed in `data/config/trends_races.json`
 2. Commits `data/trends.json` when the series change
 
-Prefer Google Trends **person/topic entities** (Knowledge Graph mids like `/m/04g_1z`) over raw name strings. Entities disambiguate candidates (e.g. Hickenlooper as United States Senator vs Gonzales as Colorado State Senator) and aggregate related searches about that person. Resolve mids, then paste them into the race config:
+Prefer Google Trends **person/topic entities** (Knowledge Graph mids like `/m/04g_1z`) when a confident political match exists. The weekly fetch pipeline:
+
+1. Uses a curated `"mid"` from config when present (stable pin).
+2. Otherwise calls Trends autocomplete on `"name"` / `"keyword"` and auto-adopts the top hit only if it looks like a political office/person.
+3. Falls back to raw search terms for the **whole race** if any candidate can’t be resolved confidently (keeps scales comparable).
+
+Inspect matches:
 
 ```bash
 python3 scripts/fetch_google_trends.py --suggest "John Hickenlooper"
@@ -89,4 +95,4 @@ python3 scripts/fetch_google_trends.py --suggest "Julie Gonzales"
 python3 scripts/fetch_google_trends.py
 ```
 
-In `trends_races.json`, each candidate row can use `"mid"` (entity) plus `"label"` / optional `"topic_type"`. Use entities for every candidate in a comparison (do not mix entity mids with raw search terms). Max 5 candidates per race.
+For a new race, either pin `mid` after `--suggest`, or omit `mid` and let the pipeline auto-resolve when confidence is high. Max 5 candidates per race.
