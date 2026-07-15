@@ -1005,3 +1005,10 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   color: var(--muted);
   font-size: 0.88rem;
 }
+
+.trends-share-footnote {
+  margin: 0.15rem 0 0;
+  font-size: 0.68rem;
+  line-height: 1.35;
+  color: var(--muted);
+}
