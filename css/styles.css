@@ -792,6 +792,61 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   line-height: 1.45;
 }
 
+.trends-intro p.trends-intro-note {
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+}
+
+.trends-share {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0 0 0.65rem;
+  padding: 0;
+}
+
+.trends-share-heading {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+
+.trends-share-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.45rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.trends-share-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.trends-share-label {
+  font-weight: 500;
+}
+
+.trends-share-value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.trends-share-sep {
+  color: var(--muted);
+  margin: 0 0.1rem;
+}
+
+.trends-share-note {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
 .trends-toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -807,7 +862,7 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
 }
 
 .trends-race-select {
-  min-width: min(100%, 22rem);
+  min-width: min(100%, 28rem);
   max-width: 100%;
   padding: 0.4rem 0.55rem;
   border: 1px solid var(--border);
