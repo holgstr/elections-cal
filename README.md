@@ -95,4 +95,4 @@ python3 scripts/fetch_google_trends.py --suggest "Julie Gonzales"
 python3 scripts/fetch_google_trends.py
 ```
 
-For a new race, either pin `mid` after `--suggest`, or omit `mid` and let the pipeline auto-resolve when confidence is high. Max 5 candidates per race.
+For a new race, either pin `mid` after `--suggest`, or omit `mid` and let the pipeline auto-resolve when confidence is high. Max 5 candidates per race. The Trends tab shows each candidate’s mid (or “no mid · search term”) in the legend, a race dropdown, and day-level hover values.
