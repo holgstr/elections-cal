@@ -797,6 +797,9 @@
             "pct": 27.0
           }
         ]
+      },
+      "exclude": {
+        "reason": "Oregon is safely Democratic statewide; the GOP primary does not determine the Senate winner."
       }
     },
     {
@@ -1842,6 +1845,9 @@
             "pct": 27.0
           }
         ]
+      },
+      "exclude": {
+        "reason": "West Virginia is safely Republican statewide; the Democratic primary does not determine the Senate winner."
       }
     },
     {
@@ -2374,6 +2380,9 @@
             "pct": 36.0
           }
         ]
+      },
+      "exclude": {
+        "reason": "Maryland is safely Democratic statewide; the GOP primary does not determine the governor's race."
       }
     },
     {
@@ -2641,6 +2650,9 @@
             "pct": 33.0
           }
         ]
+      },
+      "exclude": {
+        "reason": "Oregon is safely Democratic statewide; the GOP primary does not determine the governor's race."
       }
     },
     {
@@ -3171,6 +3183,9 @@
             "pct": 45.6
           }
         ]
+      },
+      "exclude": {
+        "reason": "Alabama is safely Republican statewide; the Democratic primary does not determine the Senate winner."
       }
     },
     {
@@ -3436,6 +3451,9 @@
             "pct": 36.9
           }
         ]
+      },
+      "exclude": {
+        "reason": "New Mexico is safely Democratic statewide; the GOP primary does not determine the governor's race."
       }
     },
     {
@@ -5551,7 +5569,10 @@
             "Jeannie Evans": 58
           }
         }
-      ]
+      ],
+      "exclude": {
+        "reason": "Illinois is safely Democratic statewide; the GOP primary does not determine the Senate winner."
+      }
     },
     {
       "id": "me-gop-governor-primary-2026",
@@ -6068,6 +6089,9 @@
             "pct": 28.8
           }
         ]
+      },
+      "exclude": {
+        "reason": "Illinois is safely Democratic statewide; the GOP primary does not determine the governor's race."
       }
     },
     {

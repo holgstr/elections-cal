@@ -81,6 +81,9 @@
     "state_code": "OR",
     "geo": "US-OR",
     "window_days": 30,
+    "exclude": {
+      "reason": "Oregon is safely Democratic statewide; the GOP primary does not determine the Senate winner."
+    },
     "keywords": [
       {
         "name": "David Brock Smith",
@@ -217,6 +220,9 @@
     "state_code": "WV",
     "geo": "US-WV",
     "window_days": 30,
+    "exclude": {
+      "reason": "West Virginia is safely Republican statewide; the Democratic primary does not determine the Senate winner."
+    },
     "keywords": [
       {
         "name": "Rachel Fetty Anderson",
@@ -294,6 +300,9 @@
     "state_code": "MD",
     "geo": "US-MD",
     "window_days": 30,
+    "exclude": {
+      "reason": "Maryland is safely Democratic statewide; the GOP primary does not determine the governor's race."
+    },
     "keywords": [
       {
         "name": "Dan Cox",
@@ -331,6 +340,9 @@
     "state_code": "OR",
     "geo": "US-OR",
     "window_days": 30,
+    "exclude": {
+      "reason": "Oregon is safely Democratic statewide; the GOP primary does not determine the governor's race."
+    },
     "keywords": [
       {
         "name": "Christine Drazan",
@@ -411,6 +423,9 @@
     "state_code": "AL",
     "geo": "US-AL",
     "window_days": 30,
+    "exclude": {
+      "reason": "Alabama is safely Republican statewide; the Democratic primary does not determine the Senate winner."
+    },
     "keywords": [
       {
         "name": "Everett Wess",
@@ -445,6 +460,9 @@
     "state_code": "NM",
     "geo": "US-NM",
     "window_days": 30,
+    "exclude": {
+      "reason": "New Mexico is safely Democratic statewide; the GOP primary does not determine the governor's race."
+    },
     "keywords": [
       {
         "name": "Gregg Hull",
@@ -756,6 +774,9 @@
     "state_code": "IL",
     "geo": "US-IL",
     "window_days": 30,
+    "exclude": {
+      "reason": "Illinois is safely Democratic statewide; the GOP primary does not determine the Senate winner."
+    },
     "keywords": [
       {
         "name": "Don Tracy",
@@ -800,6 +821,9 @@
     "state_code": "IL",
     "geo": "US-IL",
     "window_days": 30,
+    "exclude": {
+      "reason": "Illinois is safely Democratic statewide; the GOP primary does not determine the governor's race."
+    },
     "keywords": [
       {
         "name": "Darren Bailey",

@@ -575,6 +575,9 @@ def fetch_race(client: TrendsClient, race: dict) -> dict:
     # Optional curated race result (official / preliminary / current vote shares).
     if isinstance(race.get("result"), dict):
         out["result"] = race["result"]
+    # Optional exclusion: primary that clearly does not decide the office winner.
+    if isinstance(race.get("exclude"), dict):
+        out["exclude"] = race["exclude"]
     return out
 
 

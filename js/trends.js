@@ -31,7 +31,7 @@ export async function loadTrendsData(fetcher = fetchJson) {
   } catch {
     trendsData = { races: [], generated_at: null };
   }
-  const races = trendsData?.races || [];
+  const races = visibleRaces(trendsData?.races);
   if (!races.some((race) => race.id === selectedRaceId)) {
     selectedRaceId = races[0]?.id ?? null;
   }
@@ -279,10 +279,12 @@ function computeRelativeResults(race, candidateSeries) {
 /**
  * One point per dropdown race: tracked vote winner’s search share (x) vs
  * relative result share (y). Both axes are among Trends-tracked candidates.
+ * Races marked exclude (primary clearly won’t decide the office) are omitted.
  */
 function buildRaceCorrelationPoints(races) {
   const points = [];
   for (const race of races || []) {
+    if (isRaceExcluded(race)) continue;
     const model = buildChartModel(race);
     if (!model.series.length || !model.candidateSeries.length) continue;
 
@@ -319,6 +321,16 @@ function buildRaceCorrelationPoints(races) {
   return points;
 }
 
+/** True when the race is marked as irrelevant to who wins the office. */
+function isRaceExcluded(race) {
+  return Boolean(race?.exclude && typeof race.exclude === "object");
+}
+
+/** Races shown in the Trends dropdown (excludes clear non-deciding primaries). */
+function visibleRaces(races) {
+  return (races || []).filter((race) => !isRaceExcluded(race));
+}
+
 function pearsonCorrelation(points) {
   const n = points.length;
   if (n < 2) return null;
@@ -338,6 +350,32 @@ function pearsonCorrelation(points) {
   const denomY = n * sumYY - sumY * sumY;
   if (denomX <= 0 || denomY <= 0) return null;
   return (n * sumXY - sumX * sumY) / Math.sqrt(denomX * denomY);
+}
+
+/** Average ranks for ties; ranks are 1-based. */
+function averageRanks(values) {
+  const indexed = values.map((value, index) => ({ value, index }));
+  indexed.sort((a, b) => a.value - b.value);
+  const ranks = new Array(values.length);
+  let i = 0;
+  while (i < indexed.length) {
+    let j = i + 1;
+    while (j < indexed.length && indexed[j].value === indexed[i].value) j += 1;
+    const avg = (i + 1 + j) / 2;
+    for (let k = i; k < j; k += 1) ranks[indexed[k].index] = avg;
+    i = j;
+  }
+  return ranks;
+}
+
+function spearmanCorrelation(points) {
+  const n = points.length;
+  if (n < 2) return null;
+  const rankX = averageRanks(points.map((point) => point.x));
+  const rankY = averageRanks(points.map((point) => point.y));
+  return pearsonCorrelation(
+    rankX.map((x, index) => ({ x, y: rankY[index] }))
+  );
 }
 
 /** Ordinary least-squares line: y = intercept + slope * x */
@@ -360,7 +398,8 @@ function fitLinearModel(points) {
   const intercept = (sumY - slope * sumX) / n;
   const r = pearsonCorrelation(points);
   const r2 = r == null ? null : r * r;
-  return { slope, intercept, r, r2, n };
+  const spearman = spearmanCorrelation(points);
+  return { slope, intercept, r2, spearman, n };
 }
 
 function formatCorr(value) {
@@ -787,18 +826,19 @@ function buildCorrelationPanel(races) {
   }
 
   const modelFit = fitLinearModel(points);
-  const corrText =
-    modelFit?.r == null
-      ? points.length < 2
-        ? "Need at least two races for correlation."
-        : "Correlation undefined (no variance)."
-      : `Pearson r = ${formatCorr(modelFit.r)} · R² = ${formatCorr(modelFit.r2)} · n = ${modelFit.n}`;
+  const corrReady =
+    modelFit && modelFit.r2 != null && modelFit.spearman != null;
+  const corrText = !corrReady
+    ? points.length < 2
+      ? "Need at least two races for correlation."
+      : "Correlation undefined (no variance)."
+    : `R² = ${formatCorr(modelFit.r2)} · Spearman ρ = ${formatCorr(modelFit.spearman)} · n = ${modelFit.n}`;
 
   return `
     <section class="trends-correlation" aria-label="Search share versus result">
       <header class="trends-card-header">
         <h3 class="trends-card-title">Search share vs result</h3>
-        <p class="trends-card-meta">Each point is one race’s tracked winner: search share vs result (rescaled to 100%). Green = search share also picked the winner; red = miss.</p>
+        <p class="trends-card-meta">Each point is one race’s tracked winner: search share vs result (rescaled to 100%). Green = search share also picked the winner; red = miss. Omits primaries that clearly do not decide who wins the office.</p>
       </header>
       <p class="trends-corr-stat">${escapeHtml(corrText)}</p>
       <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root>
@@ -905,7 +945,8 @@ function bindInteractions(container, races) {
 export async function renderTrends(container) {
   if (!container) return;
 
-  const races = trendsData?.races || [];
+  const allRaces = trendsData?.races || [];
+  const races = visibleRaces(allRaces);
   if (!races.length) {
     const updated = trendsData?.generated_at
       ? `Last checked ${trendsData.generated_at}. `
@@ -948,6 +989,6 @@ export async function renderTrends(container) {
 
 export function trendsFooterText() {
   if (!trendsData?.generated_at) return "";
-  const count = trendsData.races?.length || 0;
+  const count = visibleRaces(trendsData.races).length;
   return `Trends updated ${trendsData.generated_at} · ${count} race${count === 1 ? "" : "s"}`;
 }
