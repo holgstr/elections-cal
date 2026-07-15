@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T16:57:33Z",
+  "generated_at": "2026-07-15T23:51:41Z",
   "source": "google_trends",
   "races": [
     {
@@ -7429,6 +7429,1604 @@
           {
             "label": "James",
             "pct": 7.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "ny-cd13-dem-primary-2026",
+      "title": "New York CD-13 Democratic Primary",
+      "election_date": "2026-06-23",
+      "country_code": "US",
+      "state_code": "NY",
+      "geo": "US-NY",
+      "window_days": 30,
+      "start_date": "2026-05-24",
+      "end_date": "2026-06-23",
+      "candidates": [
+        {
+          "keyword": "Adriano Espaillat",
+          "label": "Espaillat",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Adriano Espaillat",
+          "mid": "/m/06nfs2",
+          "topic_title": "Adriano Espaillat",
+          "topic_type": "United States Representative"
+        },
+        {
+          "keyword": "Darializa Avila Chevalier",
+          "label": "Avila",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Darializa Avila Chevalier",
+          "resolve_note": "no confident political entity (top='Darializa Avila Chevalier' / 'Topic')"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-24",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "Adriano Espaillat": 25,
+            "Darializa Avila Chevalier": 24
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 19
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 16
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 14
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 15
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 17
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 14
+          }
+        },
+        {
+          "date": "2026-06-17",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 38
+          }
+        },
+        {
+          "date": "2026-06-18",
+          "values": {
+            "Adriano Espaillat": 13,
+            "Darializa Avila Chevalier": 32
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 33
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 29
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "Adriano Espaillat": 20,
+            "Darializa Avila Chevalier": 44
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "Adriano Espaillat": 20,
+            "Darializa Avila Chevalier": 46
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "Adriano Espaillat": 46,
+            "Darializa Avila Chevalier": 100
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Associated Press / NYC Board of Elections",
+        "candidates": [
+          {
+            "label": "Avila",
+            "pct": 49.4
+          },
+          {
+            "label": "Espaillat",
+            "pct": 45.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "ny-cd10-dem-primary-2026",
+      "title": "New York CD-10 Democratic Primary",
+      "election_date": "2026-06-23",
+      "country_code": "US",
+      "state_code": "NY",
+      "geo": "US-NY",
+      "window_days": 30,
+      "start_date": "2026-05-24",
+      "end_date": "2026-06-23",
+      "candidates": [
+        {
+          "keyword": "/g/11j0y32d4c",
+          "label": "Goldman",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Dan Goldman",
+          "mid": "/g/11j0y32d4c",
+          "topic_title": "Dan Goldman",
+          "topic_type": "United States Representative"
+        },
+        {
+          "keyword": "/m/06_vl6m",
+          "label": "Lander",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Brad Lander",
+          "mid": "/m/06_vl6m",
+          "topic_title": "Brad Lander",
+          "topic_type": "Politician"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-24",
+          "values": {
+            "/g/11j0y32d4c": 10,
+            "/m/06_vl6m": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 8
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 12
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 8
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 9
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "/g/11j0y32d4c": 9,
+            "/m/06_vl6m": 12
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "/g/11j0y32d4c": 9,
+            "/m/06_vl6m": 8
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "/g/11j0y32d4c": 13,
+            "/m/06_vl6m": 18
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "/g/11j0y32d4c": 10,
+            "/m/06_vl6m": 6
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 17
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 0
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 0
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "/g/11j0y32d4c": 10,
+            "/m/06_vl6m": 9
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 11
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 11
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "/g/11j0y32d4c": 9,
+            "/m/06_vl6m": 0
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 11
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "/g/11j0y32d4c": 10,
+            "/m/06_vl6m": 10
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "/g/11j0y32d4c": 11,
+            "/m/06_vl6m": 19
+          }
+        },
+        {
+          "date": "2026-06-17",
+          "values": {
+            "/g/11j0y32d4c": 16,
+            "/m/06_vl6m": 14
+          }
+        },
+        {
+          "date": "2026-06-18",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 0
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "/g/11j0y32d4c": 8,
+            "/m/06_vl6m": 13
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 16
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/g/11j0y32d4c": 17,
+            "/m/06_vl6m": 17
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/g/11j0y32d4c": 27,
+            "/m/06_vl6m": 16
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/g/11j0y32d4c": 93,
+            "/m/06_vl6m": 100
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Associated Press / NYC Board of Elections",
+        "candidates": [
+          {
+            "label": "Lander",
+            "pct": 65.8
+          },
+          {
+            "label": "Goldman",
+            "pct": 34.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "ny-cd7-dem-primary-2026",
+      "title": "New York CD-7 Democratic Primary",
+      "election_date": "2026-06-23",
+      "country_code": "US",
+      "state_code": "NY",
+      "geo": "US-NY",
+      "window_days": 30,
+      "start_date": "2026-05-24",
+      "end_date": "2026-06-23",
+      "candidates": [
+        {
+          "keyword": "/g/11s7hw_w7f",
+          "label": "Valdez",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Claire Valdez",
+          "mid": "/g/11s7hw_w7f",
+          "topic_title": "Claire Valdez",
+          "topic_type": "New York State Representative"
+        },
+        {
+          "keyword": "/m/0y4_7sl",
+          "label": "Reynoso",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Antonio Reynoso",
+          "mid": "/m/0y4_7sl",
+          "topic_title": "Antonio Reynoso",
+          "topic_type": "Brooklyn Borough President"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-24",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "/g/11s7hw_w7f": 17,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "/g/11s7hw_w7f": 11,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "/g/11s7hw_w7f": 14,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "/g/11s7hw_w7f": 10,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "/g/11s7hw_w7f": 14,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "/g/11s7hw_w7f": 0,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-17",
+          "values": {
+            "/g/11s7hw_w7f": 22,
+            "/m/0y4_7sl": 10
+          }
+        },
+        {
+          "date": "2026-06-18",
+          "values": {
+            "/g/11s7hw_w7f": 18,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "/g/11s7hw_w7f": 24,
+            "/m/0y4_7sl": 15
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "/g/11s7hw_w7f": 29,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/g/11s7hw_w7f": 33,
+            "/m/0y4_7sl": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/g/11s7hw_w7f": 34,
+            "/m/0y4_7sl": 20
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/g/11s7hw_w7f": 100,
+            "/m/0y4_7sl": 41
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Associated Press / NYC Board of Elections",
+        "candidates": [
+          {
+            "label": "Valdez",
+            "pct": 56.1
+          },
+          {
+            "label": "Reynoso",
+            "pct": 35.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "ny-cd21-gop-primary-2026",
+      "title": "New York CD-21 Republican Primary",
+      "election_date": "2026-06-23",
+      "country_code": "US",
+      "state_code": "NY",
+      "geo": "US-NY",
+      "window_days": 30,
+      "start_date": "2026-05-24",
+      "end_date": "2026-06-23",
+      "candidates": [
+        {
+          "keyword": "/g/11yzlxyyjs",
+          "label": "Constantino",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Anthony Constantino",
+          "mid": "/g/11yzlxyyjs",
+          "topic_title": "Anthony Constantino",
+          "topic_type": "Politician"
+        },
+        {
+          "keyword": "/g/11gbdn161x",
+          "label": "Smullen",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Robert Smullen",
+          "mid": "/g/11gbdn161x",
+          "topic_title": "Robert Smullen",
+          "topic_type": "New York State Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-24",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 31
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "/g/11yzlxyyjs": 56,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-17",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-18",
+          "values": {
+            "/g/11yzlxyyjs": 39,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/g/11yzlxyyjs": 0,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/g/11yzlxyyjs": 31,
+            "/g/11gbdn161x": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/g/11yzlxyyjs": 100,
+            "/g/11gbdn161x": 76
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Associated Press / New York State Board of Elections",
+        "candidates": [
+          {
+            "label": "Constantino",
+            "pct": 59.3
+          },
+          {
+            "label": "Smullen",
+            "pct": 40.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "tx-cd2-gop-primary-2026",
+      "title": "Texas CD-2 Republican Primary",
+      "election_date": "2026-03-03",
+      "country_code": "US",
+      "state_code": "TX",
+      "geo": "US-TX",
+      "window_days": 30,
+      "start_date": "2026-02-01",
+      "end_date": "2026-03-03",
+      "candidates": [
+        {
+          "keyword": "/m/0_v4hj_",
+          "label": "Toth",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Steve Toth",
+          "mid": "/m/0_v4hj_",
+          "topic_title": "Steve Toth",
+          "topic_type": "Texas State Representative"
+        },
+        {
+          "keyword": "/g/11fk40sjyz",
+          "label": "Crenshaw",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Dan Crenshaw",
+          "mid": "/g/11fk40sjyz",
+          "topic_title": "Dan Crenshaw",
+          "topic_type": "United States Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-02-01",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-02",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-03",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-04",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-05",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 42
+          }
+        },
+        {
+          "date": "2026-02-06",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-07",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-08",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 52
+          }
+        },
+        {
+          "date": "2026-02-09",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-10",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 41
+          }
+        },
+        {
+          "date": "2026-02-11",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-12",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-13",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-14",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-15",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-16",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-17",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 53
+          }
+        },
+        {
+          "date": "2026-02-18",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 57
+          }
+        },
+        {
+          "date": "2026-02-19",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 56
+          }
+        },
+        {
+          "date": "2026-02-20",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 59
+          }
+        },
+        {
+          "date": "2026-02-21",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-02-22",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 59
+          }
+        },
+        {
+          "date": "2026-02-23",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 85
+          }
+        },
+        {
+          "date": "2026-02-24",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 88
+          }
+        },
+        {
+          "date": "2026-02-25",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 59
+          }
+        },
+        {
+          "date": "2026-02-26",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 89
+          }
+        },
+        {
+          "date": "2026-02-27",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 57
+          }
+        },
+        {
+          "date": "2026-02-28",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-03-01",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-03-02",
+          "values": {
+            "/m/0_v4hj_": 0,
+            "/g/11fk40sjyz": 0
+          }
+        },
+        {
+          "date": "2026-03-03",
+          "values": {
+            "/m/0_v4hj_": 58,
+            "/g/11fk40sjyz": 100
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press",
+        "candidates": [
+          {
+            "label": "Toth",
+            "pct": 55.8
+          },
+          {
+            "label": "Crenshaw",
+            "pct": 40.7
+          }
+        ]
+      }
+    },
+    {
+      "id": "ky-cd4-gop-primary-2026",
+      "title": "Kentucky CD-4 Republican Primary",
+      "election_date": "2026-05-19",
+      "country_code": "US",
+      "state_code": "KY",
+      "geo": "US-KY",
+      "window_days": 30,
+      "start_date": "2026-04-19",
+      "end_date": "2026-05-19",
+      "candidates": [
+        {
+          "keyword": "Thomas Massie",
+          "label": "Massie",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Thomas Massie",
+          "mid": "/m/0h_cb6v",
+          "topic_title": "Thomas Massie",
+          "topic_type": "United States Representative"
+        },
+        {
+          "keyword": "Ed Gallrein",
+          "label": "Gallrein",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Ed Gallrein",
+          "resolve_note": "no confident political entity (top='Ed Gallrein' / 'Topic')"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-04-19",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-04-20",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-04-21",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-04-22",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-04-23",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-04-24",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-04-25",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-04-26",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-04-27",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-04-28",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-04-29",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-04-30",
+          "values": {
+            "Thomas Massie": 4,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-01",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-02",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-03",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "Thomas Massie": 5,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "Thomas Massie": 7,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "Thomas Massie": 0,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "Thomas Massie": 5,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "Thomas Massie": 7,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "Thomas Massie": 6,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "Thomas Massie": 5,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "Thomas Massie": 9,
+            "Ed Gallrein": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "Thomas Massie": 11,
+            "Ed Gallrein": 5
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "Thomas Massie": 12,
+            "Ed Gallrein": 6
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "Thomas Massie": 15,
+            "Ed Gallrein": 7
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "Thomas Massie": 20,
+            "Ed Gallrein": 8
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "Thomas Massie": 35,
+            "Ed Gallrein": 13
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "Thomas Massie": 100,
+            "Ed Gallrein": 25
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press",
+        "candidates": [
+          {
+            "label": "Gallrein",
+            "pct": 55.0
+          },
+          {
+            "label": "Massie",
+            "pct": 45.0
           }
         ]
       }

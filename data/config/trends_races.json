@@ -1059,5 +1059,239 @@
         }
       ]
     }
+  },
+  {
+    "id": "ny-cd13-dem-primary-2026",
+    "title": "New York CD-13 Democratic Primary",
+    "election_date": "2026-06-23",
+    "country_code": "US",
+    "state_code": "NY",
+    "geo": "US-NY",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Adriano Espaillat",
+        "label": "Espaillat",
+        "mid": "/m/06nfs2",
+        "topic_title": "Adriano Espaillat",
+        "topic_type": "United States Representative"
+      },
+      {
+        "name": "Darializa Avila Chevalier",
+        "label": "Avila"
+      }
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-07-15",
+      "source": "Associated Press / NYC Board of Elections",
+      "candidates": [
+        {
+          "label": "Avila",
+          "pct": 49.4
+        },
+        {
+          "label": "Espaillat",
+          "pct": 45.9
+        }
+      ]
+    }
+  },
+  {
+    "id": "ny-cd10-dem-primary-2026",
+    "title": "New York CD-10 Democratic Primary",
+    "election_date": "2026-06-23",
+    "country_code": "US",
+    "state_code": "NY",
+    "geo": "US-NY",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Dan Goldman",
+        "label": "Goldman",
+        "mid": "/g/11j0y32d4c",
+        "topic_title": "Dan Goldman",
+        "topic_type": "United States Representative"
+      },
+      {
+        "name": "Brad Lander",
+        "label": "Lander",
+        "mid": "/m/06_vl6m",
+        "topic_title": "Brad Lander",
+        "topic_type": "Politician"
+      }
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-07-15",
+      "source": "Associated Press / NYC Board of Elections",
+      "candidates": [
+        {
+          "label": "Lander",
+          "pct": 65.8
+        },
+        {
+          "label": "Goldman",
+          "pct": 34.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "ny-cd7-dem-primary-2026",
+    "title": "New York CD-7 Democratic Primary",
+    "election_date": "2026-06-23",
+    "country_code": "US",
+    "state_code": "NY",
+    "geo": "US-NY",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Claire Valdez",
+        "label": "Valdez",
+        "mid": "/g/11s7hw_w7f",
+        "topic_title": "Claire Valdez",
+        "topic_type": "New York State Representative"
+      },
+      {
+        "name": "Antonio Reynoso",
+        "label": "Reynoso",
+        "mid": "/m/0y4_7sl",
+        "topic_title": "Antonio Reynoso",
+        "topic_type": "Brooklyn Borough President"
+      }
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-07-15",
+      "source": "Associated Press / NYC Board of Elections",
+      "candidates": [
+        {
+          "label": "Valdez",
+          "pct": 56.1
+        },
+        {
+          "label": "Reynoso",
+          "pct": 35.8
+        }
+      ]
+    }
+  },
+  {
+    "id": "ny-cd21-gop-primary-2026",
+    "title": "New York CD-21 Republican Primary",
+    "election_date": "2026-06-23",
+    "country_code": "US",
+    "state_code": "NY",
+    "geo": "US-NY",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Anthony Constantino",
+        "label": "Constantino",
+        "mid": "/g/11yzlxyyjs",
+        "topic_title": "Anthony Constantino",
+        "topic_type": "Politician"
+      },
+      {
+        "name": "Robert Smullen",
+        "label": "Smullen",
+        "mid": "/g/11gbdn161x",
+        "topic_title": "Robert Smullen",
+        "topic_type": "New York State Representative"
+      }
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-07-15",
+      "source": "Associated Press / New York State Board of Elections",
+      "candidates": [
+        {
+          "label": "Constantino",
+          "pct": 59.3
+        },
+        {
+          "label": "Smullen",
+          "pct": 40.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "tx-cd2-gop-primary-2026",
+    "title": "Texas CD-2 Republican Primary",
+    "election_date": "2026-03-03",
+    "country_code": "US",
+    "state_code": "TX",
+    "geo": "US-TX",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Steve Toth",
+        "label": "Toth",
+        "mid": "/m/0_v4hj_",
+        "topic_title": "Steve Toth",
+        "topic_type": "Texas State Representative"
+      },
+      {
+        "name": "Dan Crenshaw",
+        "label": "Crenshaw",
+        "mid": "/g/11fk40sjyz",
+        "topic_title": "Dan Crenshaw",
+        "topic_type": "United States Representative"
+      }
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-07-15",
+      "source": "Decision Desk HQ / Associated Press",
+      "candidates": [
+        {
+          "label": "Toth",
+          "pct": 55.8
+        },
+        {
+          "label": "Crenshaw",
+          "pct": 40.7
+        }
+      ]
+    }
+  },
+  {
+    "id": "ky-cd4-gop-primary-2026",
+    "title": "Kentucky CD-4 Republican Primary",
+    "election_date": "2026-05-19",
+    "country_code": "US",
+    "state_code": "KY",
+    "geo": "US-KY",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Thomas Massie",
+        "label": "Massie",
+        "mid": "/m/0h_cb6v",
+        "topic_title": "Thomas Massie",
+        "topic_type": "United States Representative"
+      },
+      {
+        "name": "Ed Gallrein",
+        "label": "Gallrein"
+      }
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-07-15",
+      "source": "Decision Desk HQ / Associated Press",
+      "candidates": [
+        {
+          "label": "Gallrein",
+          "pct": 55.0
+        },
+        {
+          "label": "Massie",
+          "pct": 45.0
+        }
+      ]
+    }
   }
 ]
