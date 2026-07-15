@@ -147,6 +147,28 @@ function candidateDisplayName(candidate) {
   return candidateShortName(candidate);
 }
 
+/**
+ * Mid / resolution meta for the chart legend.
+ * Autocomplete stores topic_type (e.g. "United States Senator") alongside mid.
+ */
+function candidateLegendMeta(candidate) {
+  const mid = (candidate?.mid || "").trim();
+  const topicType = (candidate?.topic_type || "").trim();
+  const usingEntity = candidate?.query_mode === "entity" && mid;
+
+  if (usingEntity) {
+    return topicType ? `${mid} · ${topicType}` : mid;
+  }
+
+  if (mid) {
+    // Curated mid exists but the race fell back to search terms.
+    const unused = topicType ? `${mid} · ${topicType}` : mid;
+    return `search term · mid unused (${unused})`;
+  }
+
+  return "no mid · search term";
+}
+
 function formatVotePct(pct) {
   if (typeof pct !== "number" || !Number.isFinite(pct)) return "—";
   const rounded = Math.round(pct * 10) / 10;
@@ -700,14 +722,18 @@ function buildChartSvg(model) {
 
 function buildLegend(candidateSeries) {
   return candidateSeries
-    .map(
-      ({ candidate, color }) => `
+    .map(({ candidate, color }) => {
+      const meta = candidateLegendMeta(candidate);
+      return `
         <span class="trends-legend-item">
           <span class="trends-swatch" style="background:${color}"></span>
-          <span class="trends-legend-text">${escapeHtml(candidateDisplayName(candidate))}</span>
+          <span class="trends-legend-text">
+            <span class="trends-legend-name">${escapeHtml(candidateDisplayName(candidate))}</span>
+            <span class="trends-legend-meta">${escapeHtml(meta)}</span>
+          </span>
         </span>
-      `
-    )
+      `;
+    })
     .join("");
 }
 

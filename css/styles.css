@@ -1060,8 +1060,21 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
 }
 
 .trends-legend-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
   min-width: 0;
   overflow-wrap: anywhere;
+}
+
+.trends-legend-name {
+  font-weight: 600;
+}
+
+.trends-legend-meta {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 .trends-swatch {
