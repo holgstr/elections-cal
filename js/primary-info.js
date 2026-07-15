@@ -46,94 +46,55 @@ let popoverEl = null;
 let activeTrigger = null;
 let hoverCloseTimer = null;
 
+async function loadCuratedInfo(fetchJson, path, apply) {
+  try {
+    const data = await fetchJson(path);
+    if (data._window_months != null) {
+      apply(data, data._window_months);
+    } else {
+      apply(data, null);
+    }
+    delete data._comment;
+    delete data._window_months;
+  } catch {
+    apply({}, null);
+  }
+}
+
 export async function loadPrimaryInfo(fetchJson) {
   oddsCache.clear();
 
-  try {
-    const data = await fetchJson("data/curated/us_primary_info.json");
-    if (data._window_months) {
-      primaryWindowMonths = data._window_months;
-    }
-    delete data._comment;
-    delete data._window_months;
-    primaryInfo = data;
-  } catch {
-    primaryInfo = {};
-  }
-
-  try {
-    const data = await fetchJson("data/curated/presidential_info.json");
-    if (data._window_months) {
-      presidentialWindowMonths = data._window_months;
-    }
-    delete data._comment;
-    delete data._window_months;
-    presidentialInfo = data;
-  } catch {
-    presidentialInfo = {};
-  }
-
-  try {
-    const data = await fetchJson("data/curated/de_state_info.json");
-    if (data._window_months) {
-      deStateWindowMonths = data._window_months;
-    }
-    delete data._comment;
-    delete data._window_months;
-    deStateInfo = data;
-  } catch {
-    deStateInfo = {};
-  }
-
-  try {
-    const data = await fetchJson("data/curated/us_governor_info.json");
-    if (data._window_months) {
-      usGovernorWindowMonths = data._window_months;
-    }
-    delete data._comment;
-    delete data._window_months;
-    usGovernorInfo = data;
-  } catch {
-    usGovernorInfo = {};
-  }
-
-  try {
-    const data = await fetchJson("data/curated/us_senate_info.json");
-    if (data._window_months) {
-      usSenateWindowMonths = data._window_months;
-    }
-    delete data._comment;
-    delete data._window_months;
-    usSenateInfo = data;
-  } catch {
-    usSenateInfo = {};
-  }
-
-  try {
-    const data = await fetchJson("data/curated/mayoral_info.json");
-    if (data._window_months) {
-      mayoralWindowMonths = data._window_months;
-    }
-    delete data._comment;
-    delete data._window_months;
-    mayoralInfo = data;
-  } catch {
-    mayoralInfo = {};
-  }
-
-  try {
-    const data = await fetchJson("data/curated/national_election_info.json");
-    if (data._window_months) {
-      nationalElectionWindowMonths = data._window_months;
-    }
-    delete data._comment;
-    delete data._window_months;
-    nationalElectionInfo = data;
-  } catch {
-    nationalElectionInfo = {};
-  }
-
-  await loadOddsChanges(fetchJson);
+  await Promise.all([
+    loadCuratedInfo(fetchJson, "data/curated/us_primary_info.json", (data, months) => {
+      if (months != null) primaryWindowMonths = months;
+      primaryInfo = data;
+    }),
+    loadCuratedInfo(fetchJson, "data/curated/presidential_info.json", (data, months) => {
+      if (months != null) presidentialWindowMonths = months;
+      presidentialInfo = data;
+    }),
+    loadCuratedInfo(fetchJson, "data/curated/de_state_info.json", (data, months) => {
+      if (months != null) deStateWindowMonths = months;
+      deStateInfo = data;
+    }),
+    loadCuratedInfo(fetchJson, "data/curated/us_governor_info.json", (data, months) => {
+      if (months != null) usGovernorWindowMonths = months;
+      usGovernorInfo = data;
+    }),
+    loadCuratedInfo(fetchJson, "data/curated/us_senate_info.json", (data, months) => {
+      if (months != null) usSenateWindowMonths = months;
+      usSenateInfo = data;
+    }),
+    loadCuratedInfo(fetchJson, "data/curated/mayoral_info.json", (data, months) => {
+      if (months != null) mayoralWindowMonths = months;
+      mayoralInfo = data;
+    }),
+    loadCuratedInfo(fetchJson, "data/curated/national_election_info.json", (data, months) => {
+      if (months != null) nationalElectionWindowMonths = months;
+      nationalElectionInfo = data;
+    }),
+    loadOddsChanges(fetchJson),
+  ]);
 }
 
 function isWithinWindow(electionDate, windowMonths) {

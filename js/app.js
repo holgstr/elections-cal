@@ -14,16 +14,23 @@ const {
   isSenateLabel,
   getNationalElectionInfo,
 } = await import(`./primary-info.js?v=${v}`);
-const {
-  loadSuggestionsData,
-  renderSuggestions,
-  suggestionsFooterText,
-} = await import(`./suggestions.js?v=${v}`);
-const {
-  loadTrendsData,
-  renderTrends,
-  trendsFooterText,
-} = await import(`./trends.js?v=${v}`);
+
+let suggestionsModulePromise = null;
+let trendsModulePromise = null;
+
+function loadSuggestionsModule() {
+  if (!suggestionsModulePromise) {
+    suggestionsModulePromise = import(`./suggestions.js?v=${v}`);
+  }
+  return suggestionsModulePromise;
+}
+
+function loadTrendsModule() {
+  if (!trendsModulePromise) {
+    trendsModulePromise = import(`./trends.js?v=${v}`);
+  }
+  return trendsModulePromise;
+}
 
 const GROUP_LABELS = {
   all: "All",
@@ -97,31 +104,39 @@ let hideStates = false;
 let hideLocal = false;
 
 async function loadData() {
-  const [meta, elections] = await Promise.all([
+  const tasks = [
     fetchJson("data/meta.json"),
     fetchJson("data/elections.json"),
     loadPrimaryInfo(fetchJson),
-    loadSuggestionsData(fetchJson),
-    loadTrendsData(fetchJson),
-  ]);
+  ];
+
+  if (activeTab === "suggestions") {
+    tasks.push(loadSuggestionsModule().then((m) => m.loadSuggestionsData(fetchJson)));
+  } else if (activeTab === "trends") {
+    tasks.push(loadTrendsModule().then((m) => m.loadTrendsData(fetchJson)));
+  }
+
+  const [meta, elections] = await Promise.all(tasks);
   allElections = elections;
-  updateFooter(meta);
+  await updateFooter(meta);
 }
 
 function suggestionFilters() {
   return { hideStates, hideLocal };
 }
 
-function updateFooter(meta) {
+async function updateFooter(meta) {
   const footer = document.getElementById("footer-meta");
   if (!footer) return;
 
   if (activeTab === "suggestions") {
+    const { suggestionsFooterText } = await loadSuggestionsModule();
     footer.textContent = suggestionsFooterText(suggestionFilters());
     return;
   }
 
   if (activeTab === "trends") {
+    const { trendsFooterText } = await loadTrendsModule();
     footer.textContent = trendsFooterText();
     return;
   }
@@ -139,7 +154,7 @@ async function init() {
 
   await loadData();
   prefetchOdds();
-  render();
+  await renderActiveTab();
   bindEvents();
   initPrimaryPopovers();
 }
@@ -154,7 +169,7 @@ window.addEventListener("pageshow", async (event) => {
 
   loadData().then(() => {
     prefetchOdds();
-    render();
+    renderActiveTab();
   });
 });
 
@@ -166,7 +181,7 @@ document.addEventListener("visibilitychange", async () => {
     if (await reloadIfSiteRevChanged(liveRev, v)) return;
     await loadData();
     prefetchOdds();
-    render();
+    await renderActiveTab();
   } catch {}
 });
 
@@ -223,14 +238,18 @@ function setActiveTab(tab) {
 
 async function renderActiveTab() {
   if (activeTab === "suggestions") {
+    const { loadSuggestionsData, renderSuggestions } = await loadSuggestionsModule();
+    await loadSuggestionsData(fetchJson);
     await renderSuggestions(document.getElementById("suggestions"), suggestionFilters());
-    updateFooter();
+    await updateFooter();
     return;
   }
 
   if (activeTab === "trends") {
+    const { loadTrendsData, renderTrends } = await loadTrendsModule();
+    await loadTrendsData(fetchJson);
     await renderTrends(document.getElementById("trends"));
-    updateFooter();
+    await updateFooter();
     return;
   }
 
