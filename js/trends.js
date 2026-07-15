@@ -111,45 +111,53 @@ function linePath(points) {
     .join(" ");
 }
 
-function midStatusLabel(candidate) {
-  if (candidate.mid) {
-    const source =
-      candidate.resolve_source === "autocomplete"
-        ? "auto"
-        : candidate.resolve_source === "config"
-          ? "pinned"
-          : candidate.resolve_source || "mid";
-    return `mid ${candidate.mid} (${source})`;
-  }
-  if (candidate.query_mode === "search_term") {
-    return "no mid · search term";
-  }
-  return "no mid";
-}
-
 function candidateDisplayName(candidate) {
-  const parts = [candidate.label || candidate.name || candidate.keyword];
-  if (candidate.topic_type) parts.push(candidate.topic_type);
-  parts.push(midStatusLabel(candidate));
-  return parts.join(" · ");
+  return candidateShortName(candidate);
 }
 
-function footnoteForRace(race) {
-  const candidates = race.candidates || [];
-  const entityCount = candidates.filter((c) => c.query_mode === "entity" && c.mid).length;
-  const basis =
-    entityCount === candidates.length && candidates.length
-      ? "Google Trends person topics (0–100, relative within this comparison)"
-      : entityCount > 0
-        ? "Mixed Topics/search terms (0–100, relative within this comparison)"
-        : "Google Trends search interest (0–100, relative within this comparison)";
-  const geo = race.geo || "worldwide";
-  return (
-    `${basis}. Custom range ${race.start_date || "?"} → ${race.end_date || "?"} ` +
-    `(${race.window_days || 30}-day run-up ending on election day), geo ${geo}. ` +
-    "Live Google Trends can differ if you use Past 30 days, a different region, " +
-    "typed search terms instead of Topics, or because Google re-samples over time."
-  );
+function formatVotePct(pct) {
+  if (typeof pct !== "number" || !Number.isFinite(pct)) return "—";
+  const rounded = Math.round(pct * 10) / 10;
+  return Number.isInteger(rounded) ? `${rounded}%` : `${rounded.toFixed(1)}%`;
+}
+
+function resultStatusHeading(status) {
+  switch (String(status || "").toLowerCase()) {
+    case "official":
+      return "Official result";
+    case "preliminary":
+      return "Preliminary result";
+    case "current":
+      return "Current result";
+    default:
+      return "Result";
+  }
+}
+
+/** Match a curated result candidate to a Trends series row (label / name). */
+function resultPctForCandidate(result, candidate) {
+  const rows = result?.candidates || [];
+  if (!rows.length || !candidate) return null;
+  const label = String(candidate.label || "").toLowerCase();
+  const name = String(candidate.name || "").toLowerCase();
+  const hit =
+    rows.find((row) => String(row.label || "").toLowerCase() === label) ||
+    rows.find((row) => String(row.name || "").toLowerCase() === name) ||
+    rows.find(
+      (row) =>
+        name &&
+        String(row.name || "")
+          .toLowerCase()
+          .includes(name)
+    ) ||
+    rows.find(
+      (row) =>
+        label &&
+        String(row.label || "")
+          .toLowerCase()
+          .includes(label)
+    );
+  return typeof hit?.pct === "number" ? hit.pct : null;
 }
 
 /**
@@ -186,32 +194,68 @@ function computeRelativeShares(candidateSeries) {
   return rows.map((row, index) => ({ ...row, share: shares[index] }));
 }
 
-function buildShareSummary(candidateSeries, windowDays) {
-  const shares = computeRelativeShares(candidateSeries);
-  if (!shares.length) return "";
-  const total = shares.reduce((acc, row) => acc + row.sum, 0);
-  if (total <= 0) {
-    return `<p class="trends-share">No cumulative search interest in this window.</p>`;
-  }
-  const parts = shares
+function buildShareItems(rows) {
+  return rows
     .map(
       (row) => `
         <span class="trends-share-item">
           <span class="trends-swatch" style="background:${row.color}"></span>
           <span class="trends-share-label">${escapeHtml(row.label)}</span>
-          <span class="trends-share-value">${row.share}%</span>
+          <span class="trends-share-value">${escapeHtml(row.value)}</span>
         </span>
       `
     )
     .join('<span class="trends-share-sep" aria-hidden="true">·</span>');
-  const days = windowDays || 30;
-  return `
-    <p class="trends-share">
-      <span class="trends-share-heading">Relative search share (${days}-day window)</span>
-      <span class="trends-share-row">${parts}</span>
-      <span class="trends-share-note">Area under each displayed curve, rescaled to sum to 100.</span>
-    </p>
-  `;
+}
+
+function buildShareSummary(candidateSeries, race) {
+  const shares = computeRelativeShares(candidateSeries);
+  if (!shares.length) return "";
+  const total = shares.reduce((acc, row) => acc + row.sum, 0);
+  const days = race?.window_days || 30;
+
+  let searchBlock;
+  if (total <= 0) {
+    searchBlock = `<p class="trends-split">No cumulative search interest in this window.</p>`;
+  } else {
+    const searchRows = shares.map((row) => ({
+      label: row.label,
+      color: row.color,
+      value: `${row.share}%`,
+    }));
+    searchBlock = `
+      <div class="trends-split">
+        <span class="trends-split-heading">Search share (${days}d)</span>
+        <span class="trends-share-row">${buildShareItems(searchRows)}</span>
+      </div>
+    `;
+  }
+
+  const result = race?.result;
+  let resultBlock = "";
+  if (result?.candidates?.length) {
+    const resultRows = (candidateSeries || [])
+      .map(({ candidate, color }) => {
+        const pct = resultPctForCandidate(result, candidate);
+        if (pct == null) return null;
+        return {
+          label: candidateShortName(candidate),
+          color,
+          value: formatVotePct(pct),
+        };
+      })
+      .filter(Boolean);
+    if (resultRows.length) {
+      resultBlock = `
+        <div class="trends-split">
+          <span class="trends-split-heading">${escapeHtml(resultStatusHeading(result.status))}</span>
+          <span class="trends-share-row">${buildShareItems(resultRows)}</span>
+        </div>
+      `;
+    }
+  }
+
+  return `<div class="trends-splits">${searchBlock}${resultBlock}</div>`;
 }
 
 function buildChartModel(race) {
@@ -442,13 +486,12 @@ function renderRaceCard(race) {
         <h3 class="trends-card-title">${escapeHtml(race.title)}</h3>
         <p class="trends-card-meta">${escapeHtml(subtitle)}</p>
       </header>
-      ${buildShareSummary(model.candidateSeries, race.window_days)}
+      ${buildShareSummary(model.candidateSeries, race)}
       <div class="trends-chart-wrap" data-chart-root>
         ${buildChartSvg(model)}
         <div class="trends-tooltip" hidden></div>
         <div class="trends-legend">${buildLegend(model.candidateSeries)}</div>
       </div>
-      <p class="trends-footnote">${escapeHtml(footnoteForRace(race))}</p>
     </article>
   `;
 }
@@ -511,10 +554,6 @@ export async function renderTrends(container) {
     .join("");
 
   container.innerHTML = `
-    <div class="trends-intro">
-      <p>Search interest from Google Trends for recent races. Where possible, comparisons use Google’s person topics (not raw name strings) so each series maps to one candidate. Values are relative within each head-to-head comparison (peak = 100). The share line below each title is each candidate’s area under the displayed curves, rescaled to 100%. Hover a chart to compare both candidates on that day.</p>
-      <p class="trends-intro-note">To match Google Trends online, use the same custom date range and Colorado geo, and pick the same Topics—not “Past 30 days” from today or typed search terms. Even then, Google re-samples periodically, so a fresh pull can shift daily values slightly.</p>
-    </div>
     <div class="trends-toolbar">
       <label class="trends-race-label" for="trends-race-select">Race</label>
       <select id="trends-race-select" class="trends-race-select" data-trends-race-select>
