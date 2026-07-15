@@ -9,6 +9,7 @@ A mobile-friendly static site that lists upcoming elections over the next 12 mon
 - Small country and state flags (US states, German Länder)
 - Mobile-first layout with search and quick filters
 - **Market moves** tab highlighting Polymarket races with ≥5pp probability shifts
+- **Trends** tab with Google Trends search-interest charts for selected races
 - No build step — plain HTML, CSS, and JavaScript
 
 ## Live site
@@ -74,3 +75,12 @@ A separate workflow runs daily at 07:00 UTC:
 1. Regenerates Polymarket info files
 2. Runs `scripts/fetch_market_prices.py` to pull odds from Polymarket and detect ≥5pp moves since the last signaled price
 3. Commits `data/market_prices/state.json` and `data/market_suggestions.json` if changed
+
+Another workflow refreshes Google Trends interest weekly (Mondays 08:30 UTC):
+
+1. Runs `scripts/fetch_google_trends.py` for races listed in `data/config/trends_races.json`
+2. Commits `data/trends.json` when the series change
+
+```bash
+python3 scripts/fetch_google_trends.py
+```

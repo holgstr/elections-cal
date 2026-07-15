@@ -1,0 +1,246 @@
+{
+  "generated_at": "2026-07-15T13:25:54Z",
+  "source": "google_trends",
+  "races": [
+    {
+      "id": "co-dem-senate-primary-2026",
+      "title": "Colorado Democratic Senate Primary",
+      "election_date": "2026-06-30",
+      "country_code": "US",
+      "state_code": "CO",
+      "geo": "US-CO",
+      "window_days": 30,
+      "start_date": "2026-05-31",
+      "end_date": "2026-06-30",
+      "candidates": [
+        {
+          "keyword": "John Hickenlooper",
+          "label": "Hickenlooper"
+        },
+        {
+          "keyword": "Julie Gonzales",
+          "label": "Gonzales"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-31",
+          "values": {
+            "John Hickenlooper": 0,
+            "Julie Gonzales": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "John Hickenlooper": 0,
+            "Julie Gonzales": 0
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "John Hickenlooper": 0,
+            "Julie Gonzales": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "John Hickenlooper": 0,
+            "Julie Gonzales": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "John Hickenlooper": 0,
+            "Julie Gonzales": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "John Hickenlooper": 0,
+            "Julie Gonzales": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "John Hickenlooper": 0,
+            "Julie Gonzales": 0
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "John Hickenlooper": 0,
+            "Julie Gonzales": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "John Hickenlooper": 0,
+            "Julie Gonzales": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "John Hickenlooper": 4,
+            "Julie Gonzales": 5
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "John Hickenlooper": 5,
+            "Julie Gonzales": 12
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "John Hickenlooper": 11,
+            "Julie Gonzales": 17
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "John Hickenlooper": 9,
+            "Julie Gonzales": 19
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "John Hickenlooper": 11,
+            "Julie Gonzales": 17
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "John Hickenlooper": 14,
+            "Julie Gonzales": 23
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "John Hickenlooper": 7,
+            "Julie Gonzales": 15
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "John Hickenlooper": 15,
+            "Julie Gonzales": 17
+          }
+        },
+        {
+          "date": "2026-06-17",
+          "values": {
+            "John Hickenlooper": 10,
+            "Julie Gonzales": 15
+          }
+        },
+        {
+          "date": "2026-06-18",
+          "values": {
+            "John Hickenlooper": 11,
+            "Julie Gonzales": 12
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "John Hickenlooper": 10,
+            "Julie Gonzales": 14
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "John Hickenlooper": 8,
+            "Julie Gonzales": 15
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "John Hickenlooper": 11,
+            "Julie Gonzales": 19
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "John Hickenlooper": 18,
+            "Julie Gonzales": 21
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "John Hickenlooper": 18,
+            "Julie Gonzales": 17
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "John Hickenlooper": 13,
+            "Julie Gonzales": 22
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "John Hickenlooper": 12,
+            "Julie Gonzales": 17
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "John Hickenlooper": 13,
+            "Julie Gonzales": 21
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "John Hickenlooper": 17,
+            "Julie Gonzales": 23
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "John Hickenlooper": 22,
+            "Julie Gonzales": 31
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "John Hickenlooper": 33,
+            "Julie Gonzales": 49
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "John Hickenlooper": 60,
+            "Julie Gonzales": 100
+          }
+        }
+      ]
+    }
+  ]
+}

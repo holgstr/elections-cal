@@ -1,0 +1,36 @@
+name: Update Google Trends
+
+on:
+  schedule:
+    # Weekly — Trends historical windows change slowly for past races.
+    - cron: "30 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-trends:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Google Trends interest
+        run: python3 scripts/fetch_google_trends.py
+
+      - name: Commit Trends updates
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet data/trends.json; then
+            echo "No Trends changes."
+          else
+            git add data/trends.json
+            git commit -m "chore: refresh Google Trends race interest"
+            REV=$(git rev-parse --short HEAD)
+            printf '{\n  "rev": "%s"\n}\n' "$REV" > data/site-rev.json
+            git add data/site-rev.json
+            git commit -m "chore: bump site revision for cache busting"
+            git push
+          fi

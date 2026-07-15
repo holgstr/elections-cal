@@ -1,0 +1,21 @@
+[
+  {
+    "id": "co-dem-senate-primary-2026",
+    "title": "Colorado Democratic Senate Primary",
+    "election_date": "2026-06-30",
+    "country_code": "US",
+    "state_code": "CO",
+    "geo": "US-CO",
+    "window_days": 30,
+    "keywords": [
+      {
+        "keyword": "John Hickenlooper",
+        "label": "Hickenlooper"
+      },
+      {
+        "keyword": "Julie Gonzales",
+        "label": "Gonzales"
+      }
+    ]
+  }
+]

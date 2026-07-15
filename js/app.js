@@ -19,6 +19,11 @@ const {
   renderSuggestions,
   suggestionsFooterText,
 } = await import(`./suggestions.js?v=${v}`);
+const {
+  loadTrendsData,
+  renderTrends,
+  trendsFooterText,
+} = await import(`./trends.js?v=${v}`);
 
 const GROUP_LABELS = {
   all: "All",
@@ -97,6 +102,7 @@ async function loadData() {
     fetchJson("data/elections.json"),
     loadPrimaryInfo(fetchJson),
     loadSuggestionsData(fetchJson),
+    loadTrendsData(fetchJson),
   ]);
   allElections = elections;
   updateFooter(meta);
@@ -112,6 +118,11 @@ function updateFooter(meta) {
 
   if (activeTab === "suggestions") {
     footer.textContent = suggestionsFooterText(suggestionFilters());
+    return;
+  }
+
+  if (activeTab === "trends") {
+    footer.textContent = trendsFooterText();
     return;
   }
 
@@ -199,6 +210,7 @@ function setActiveTab(tab) {
   }
 
   const toolbar = document.getElementById("calendar-toolbar");
+  if (toolbar) toolbar.hidden = tab === "trends";
   const searchWrap = toolbar?.querySelector(".search-wrap");
   if (searchWrap) searchWrap.hidden = tab !== "calendar";
 
@@ -212,6 +224,12 @@ function setActiveTab(tab) {
 async function renderActiveTab() {
   if (activeTab === "suggestions") {
     await renderSuggestions(document.getElementById("suggestions"), suggestionFilters());
+    updateFooter();
+    return;
+  }
+
+  if (activeTab === "trends") {
+    await renderTrends(document.getElementById("trends"));
     updateFooter();
     return;
   }
