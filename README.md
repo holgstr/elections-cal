@@ -81,6 +81,12 @@ Another workflow refreshes Google Trends interest weekly (Mondays 08:30 UTC):
 1. Runs `scripts/fetch_google_trends.py` for races listed in `data/config/trends_races.json`
 2. Commits `data/trends.json` when the series change
 
+Prefer Google Trends **person/topic entities** (Knowledge Graph mids like `/m/04g_1z`) over raw name strings. Entities disambiguate candidates (e.g. Hickenlooper as United States Senator vs Gonzales as Colorado State Senator) and aggregate related searches about that person. Resolve mids, then paste them into the race config:
+
 ```bash
+python3 scripts/fetch_google_trends.py --suggest "John Hickenlooper"
+python3 scripts/fetch_google_trends.py --suggest "Julie Gonzales"
 python3 scripts/fetch_google_trends.py
 ```
+
+In `trends_races.json`, each candidate row can use `"mid"` (entity) plus `"label"` / optional `"topic_type"`. Use entities for every candidate in a comparison (do not mix entity mids with raw search terms). Max 5 candidates per race.

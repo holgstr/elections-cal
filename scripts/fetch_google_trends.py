@@ -4,10 +4,23 @@
 Uses Google Trends' undocumented but stable explore/widgetdata endpoints
 via urllib + cookies (stdlib only). Suitable for periodic GitHub Actions
 runs. Writes data/trends.json for the Trends tab.
+
+Prefer Google Knowledge Graph *person/topic entities* (mids like
+``/m/04g_1z``) over raw search strings when comparing candidates. Entities
+disambiguate people (e.g. "John Hickenlooper" → United States Senator,
+"Julie Gonzales" → Colorado State Senator) and aggregate related queries
+about that person. Resolve mids with:
+
+    python3 scripts/fetch_google_trends.py --suggest "Julie Gonzales"
+
+Then store the chosen ``mid`` in ``data/config/trends_races.json``. Within a
+race, use entities for every candidate (do not mix entity mids and raw
+search terms): Google indexes them on different scales.
 """
 
 from __future__ import annotations
 
+import argparse
 import http.cookiejar
 import json
 import sys
@@ -25,6 +38,7 @@ OUTPUT_PATH = ROOT / "data" / "trends.json"
 TRENDS_HOME = "https://trends.google.com/trends/?geo=US"
 EXPLORE_API = "https://trends.google.com/trends/api/explore"
 MULTILINE_API = "https://trends.google.com/trends/api/widgetdata/multiline"
+AUTOCOMPLETE_API = "https://trends.google.com/trends/api/autocomplete/"
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
@@ -59,6 +73,27 @@ def window_bounds(election_date: date, window_days: int) -> tuple[date, date]:
 
 def format_trends_time(start: date, end: date) -> str:
     return f"{start.isoformat()} {end.isoformat()}"
+
+
+def is_entity_mid(value: str) -> bool:
+    """True for Knowledge Graph / Trends topic ids (/m/... or /g/...)."""
+    return value.startswith("/m/") or value.startswith("/g/")
+
+
+def query_for_row(row: dict) -> str:
+    """Trends API query: prefer curated entity mid, else raw keyword."""
+    mid = (row.get("mid") or "").strip()
+    if mid:
+        return mid
+    keyword = (row.get("keyword") or "").strip()
+    if not keyword:
+        raise ValueError("keyword row needs mid or keyword")
+    return keyword
+
+
+def series_key_for_row(row: dict) -> str:
+    """Stable key used in series.values and candidates[].keyword."""
+    return query_for_row(row)
 
 
 class TrendsClient:
@@ -130,6 +165,27 @@ class TrendsClient:
         self._warmed = True
         time.sleep(REQUEST_DELAY_S)
 
+    def suggest(self, term: str) -> list[dict]:
+        """Return Trends autocomplete topics for a search string.
+
+        Each item has mid, title, type — pick the person/office that matches
+        the race and store ``mid`` in trends_races.json.
+        """
+        self.warm()
+        url = (
+            AUTOCOMPLETE_API
+            + urllib.parse.quote(term)
+            + "?"
+            + urllib.parse.urlencode({"hl": "en-US"})
+        )
+        payload = self._strip_xssi(
+            self._get(url, referer="https://trends.google.com/trends/explore")
+        )
+        topics = payload.get("default", {}).get("topics")
+        if topics is None and isinstance(payload.get("topics"), list):
+            topics = payload["topics"]
+        return list(topics or [])
+
     def interest_over_time(
         self,
         keywords: list[str],
@@ -138,11 +194,23 @@ class TrendsClient:
         start: date,
         end: date,
     ) -> list[dict]:
-        """Return daily [{date, values: {keyword: int|None}}] for the window."""
+        """Return daily [{date, values: {keyword: int|None}}] for the window.
+
+        ``keywords`` may be raw search strings or entity mids (``/m/...``,
+        ``/g/...``). Google's explore endpoint promotes mids to ENTITY type.
+        """
         if not keywords:
             return []
         if len(keywords) > 5:
             raise ValueError("Google Trends compares at most 5 keywords at once")
+
+        entity_flags = [is_entity_mid(k) for k in keywords]
+        if any(entity_flags) and not all(entity_flags):
+            print(
+                "  warning: mixing entity mids and raw search terms in one "
+                "comparison; prefer all entity or all keyword",
+                file=sys.stderr,
+            )
 
         self.warm()
         time_range = format_trends_time(start, end)
@@ -230,15 +298,46 @@ def fetch_race(client: TrendsClient, race: dict) -> dict:
     window_days = int(race.get("window_days", 30))
     start, end = window_bounds(election_date, window_days)
     keyword_rows = race["keywords"]
-    keywords = [row["keyword"] for row in keyword_rows]
+    queries = [query_for_row(row) for row in keyword_rows]
+    series_keys = [series_key_for_row(row) for row in keyword_rows]
     geo = race.get("geo") or ""
 
+    display = []
+    for row, query in zip(keyword_rows, queries):
+        label = row.get("label") or row.get("topic_title") or query
+        kind = "entity" if is_entity_mid(query) else "keyword"
+        display.append(f"{label}[{kind}]")
+
     print(
-        f"Fetching {race['id']}: {', '.join(keywords)} "
+        f"Fetching {race['id']}: {', '.join(display)} "
         f"geo={geo or 'WORLD'} {start}→{end}"
     )
-    series = client.interest_over_time(keywords, geo=geo, start=start, end=end)
+    series = client.interest_over_time(queries, geo=geo, start=start, end=end)
+    # Remap API keys → stable series keys (identical unless schema evolves).
+    if series_keys != queries:
+        for point in series:
+            remapped: dict[str, int | None] = {}
+            for query, key in zip(queries, series_keys):
+                remapped[key] = point["values"].get(query)
+            point["values"] = remapped
     print(f"  {len(series)} daily points")
+
+    candidates = []
+    for row, key, query in zip(keyword_rows, series_keys, queries):
+        candidate = {
+            "keyword": key,
+            "label": row.get("label") or row.get("topic_title") or key,
+            "query_mode": "entity" if is_entity_mid(query) else "search_term",
+        }
+        if row.get("mid"):
+            candidate["mid"] = row["mid"]
+        elif is_entity_mid(query):
+            candidate["mid"] = query
+        if row.get("topic_title"):
+            candidate["topic_title"] = row["topic_title"]
+        if row.get("topic_type"):
+            candidate["topic_type"] = row["topic_type"]
+        candidates.append(candidate)
 
     return {
         "id": race["id"],
@@ -250,18 +349,48 @@ def fetch_race(client: TrendsClient, race: dict) -> dict:
         "window_days": window_days,
         "start_date": start.isoformat(),
         "end_date": end.isoformat(),
-        "candidates": [
-            {
-                "keyword": row["keyword"],
-                "label": row.get("label") or row["keyword"],
-            }
-            for row in keyword_rows
-        ],
+        "candidates": candidates,
         "series": series,
     }
 
 
-def main() -> int:
+def run_suggest(terms: list[str]) -> int:
+    client = TrendsClient()
+    for idx, term in enumerate(terms):
+        if idx:
+            time.sleep(REQUEST_DELAY_S)
+        print(f"Suggestions for {term!r}:")
+        try:
+            topics = client.suggest(term)
+        except Exception as exc:  # noqa: BLE001
+            print(f"  ERROR: {exc}", file=sys.stderr)
+            return 1
+        if not topics:
+            print("  (none)")
+            continue
+        for topic in topics:
+            mid = topic.get("mid", "")
+            title = topic.get("title", "")
+            topic_type = topic.get("type", "")
+            print(f"  {mid}\t{title}\t({topic_type})")
+    return 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--suggest",
+        metavar="TERM",
+        action="append",
+        default=[],
+        help="Print Trends autocomplete topics (person/entity mids) and exit. "
+        "Repeatable.",
+    )
+    args = parser.parse_args(argv)
+
+    if args.suggest:
+        return run_suggest(args.suggest)
+
     races_config = load_json(CONFIG_PATH)
     if not isinstance(races_config, list) or not races_config:
         print(f"No races configured in {CONFIG_PATH}", file=sys.stderr)

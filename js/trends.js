@@ -121,10 +121,13 @@ function buildChart(race) {
   const legend = candidates
     .map((candidate, cIdx) => {
       const color = SERIES_COLORS[cIdx % SERIES_COLORS.length];
+      const typeHint = candidate.topic_type
+        ? ` <span class="trends-legend-type">${escapeHtml(candidate.topic_type)}</span>`
+        : "";
       return `
         <span class="trends-legend-item">
           <span class="trends-swatch" style="background:${color}"></span>
-          ${escapeHtml(candidate.label || candidate.keyword)}
+          ${escapeHtml(candidate.label || candidate.keyword)}${typeHint}
         </span>
       `;
     })
@@ -140,6 +143,16 @@ function buildChart(race) {
       <div class="trends-legend">${legend}</div>
     </div>
   `;
+}
+
+function footnoteForRace(race) {
+  const usesEntities = (race.candidates || []).some(
+    (c) => c.query_mode === "entity" || c.mid
+  );
+  const basis = usesEntities
+    ? "Google Trends person topics (0–100, relative within this comparison)"
+    : "Google Trends search interest (0–100, relative within this comparison)";
+  return `${basis}. Daily series for the ${race.window_days || 30} days through election day.`;
 }
 
 function renderRaceCard(race) {
@@ -158,7 +171,7 @@ function renderRaceCard(race) {
         <p class="trends-card-meta">${escapeHtml(subtitle)}</p>
       </header>
       ${buildChart(race)}
-      <p class="trends-footnote">Google Trends interest (0–100, relative within this comparison). Daily series for the ${escapeHtml(String(race.window_days || 30))} days through election day.</p>
+      <p class="trends-footnote">${escapeHtml(footnoteForRace(race))}</p>
     </article>
   `;
 }
@@ -177,7 +190,7 @@ export async function renderTrends(container) {
 
   container.innerHTML = `
     <div class="trends-intro">
-      <p>Search interest from Google Trends for recent races. Values are relative within each head-to-head comparison (peak = 100).</p>
+      <p>Search interest from Google Trends for recent races. Where possible, comparisons use Google’s person topics (not raw name strings) so each series maps to one candidate. Values are relative within each head-to-head comparison (peak = 100).</p>
     </div>
     <div class="trends-list">
       ${races.map(renderRaceCard).join("")}

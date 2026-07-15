@@ -9,12 +9,16 @@
     "window_days": 30,
     "keywords": [
       {
-        "keyword": "John Hickenlooper",
-        "label": "Hickenlooper"
+        "mid": "/m/04g_1z",
+        "label": "Hickenlooper",
+        "topic_title": "John Hickenlooper",
+        "topic_type": "United States Senator"
       },
       {
-        "keyword": "Julie Gonzales",
-        "label": "Gonzales"
+        "mid": "/g/11h24f3x_y",
+        "label": "Gonzales",
+        "topic_title": "Julie Gonzales",
+        "topic_type": "Colorado State Senator"
       }
     ]
   }

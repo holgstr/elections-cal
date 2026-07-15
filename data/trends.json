@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T13:25:54Z",
+  "generated_at": "2026-07-15T13:37:44Z",
   "source": "google_trends",
   "races": [
     {
@@ -14,230 +14,238 @@
       "end_date": "2026-06-30",
       "candidates": [
         {
-          "keyword": "John Hickenlooper",
-          "label": "Hickenlooper"
+          "keyword": "/m/04g_1z",
+          "label": "Hickenlooper",
+          "query_mode": "entity",
+          "mid": "/m/04g_1z",
+          "topic_title": "John Hickenlooper",
+          "topic_type": "United States Senator"
         },
         {
-          "keyword": "Julie Gonzales",
-          "label": "Gonzales"
+          "keyword": "/g/11h24f3x_y",
+          "label": "Gonzales",
+          "query_mode": "entity",
+          "mid": "/g/11h24f3x_y",
+          "topic_title": "Julie Gonzales",
+          "topic_type": "Colorado State Senator"
         }
       ],
       "series": [
         {
           "date": "2026-05-31",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-01",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 5,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-02",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-03",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-04",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 4,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-05",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-06",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-07",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-08",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-09",
           "values": {
-            "John Hickenlooper": 4,
-            "Julie Gonzales": 5
+            "/m/04g_1z": 6,
+            "/g/11h24f3x_y": 5
           }
         },
         {
           "date": "2026-06-10",
           "values": {
-            "John Hickenlooper": 5,
-            "Julie Gonzales": 12
+            "/m/04g_1z": 10,
+            "/g/11h24f3x_y": 12
           }
         },
         {
           "date": "2026-06-11",
           "values": {
-            "John Hickenlooper": 11,
-            "Julie Gonzales": 17
+            "/m/04g_1z": 15,
+            "/g/11h24f3x_y": 17
           }
         },
         {
           "date": "2026-06-12",
           "values": {
-            "John Hickenlooper": 9,
-            "Julie Gonzales": 19
+            "/m/04g_1z": 15,
+            "/g/11h24f3x_y": 18
           }
         },
         {
           "date": "2026-06-13",
           "values": {
-            "John Hickenlooper": 11,
-            "Julie Gonzales": 17
+            "/m/04g_1z": 18,
+            "/g/11h24f3x_y": 16
           }
         },
         {
           "date": "2026-06-14",
           "values": {
-            "John Hickenlooper": 14,
-            "Julie Gonzales": 23
+            "/m/04g_1z": 19,
+            "/g/11h24f3x_y": 21
           }
         },
         {
           "date": "2026-06-15",
           "values": {
-            "John Hickenlooper": 7,
-            "Julie Gonzales": 15
+            "/m/04g_1z": 11,
+            "/g/11h24f3x_y": 14
           }
         },
         {
           "date": "2026-06-16",
           "values": {
-            "John Hickenlooper": 15,
-            "Julie Gonzales": 17
+            "/m/04g_1z": 25,
+            "/g/11h24f3x_y": 19
           }
         },
         {
           "date": "2026-06-17",
           "values": {
-            "John Hickenlooper": 10,
-            "Julie Gonzales": 15
+            "/m/04g_1z": 13,
+            "/g/11h24f3x_y": 16
           }
         },
         {
           "date": "2026-06-18",
           "values": {
-            "John Hickenlooper": 11,
-            "Julie Gonzales": 12
+            "/m/04g_1z": 14,
+            "/g/11h24f3x_y": 13
           }
         },
         {
           "date": "2026-06-19",
           "values": {
-            "John Hickenlooper": 10,
-            "Julie Gonzales": 14
+            "/m/04g_1z": 14,
+            "/g/11h24f3x_y": 13
           }
         },
         {
           "date": "2026-06-20",
           "values": {
-            "John Hickenlooper": 8,
-            "Julie Gonzales": 15
+            "/m/04g_1z": 13,
+            "/g/11h24f3x_y": 16
           }
         },
         {
           "date": "2026-06-21",
           "values": {
-            "John Hickenlooper": 11,
-            "Julie Gonzales": 19
+            "/m/04g_1z": 23,
+            "/g/11h24f3x_y": 19
           }
         },
         {
           "date": "2026-06-22",
           "values": {
-            "John Hickenlooper": 18,
-            "Julie Gonzales": 21
+            "/m/04g_1z": 21,
+            "/g/11h24f3x_y": 20
           }
         },
         {
           "date": "2026-06-23",
           "values": {
-            "John Hickenlooper": 18,
-            "Julie Gonzales": 17
+            "/m/04g_1z": 23,
+            "/g/11h24f3x_y": 18
           }
         },
         {
           "date": "2026-06-24",
           "values": {
-            "John Hickenlooper": 13,
-            "Julie Gonzales": 22
+            "/m/04g_1z": 18,
+            "/g/11h24f3x_y": 22
           }
         },
         {
           "date": "2026-06-25",
           "values": {
-            "John Hickenlooper": 12,
-            "Julie Gonzales": 17
+            "/m/04g_1z": 19,
+            "/g/11h24f3x_y": 17
           }
         },
         {
           "date": "2026-06-26",
           "values": {
-            "John Hickenlooper": 13,
-            "Julie Gonzales": 21
+            "/m/04g_1z": 19,
+            "/g/11h24f3x_y": 21
           }
         },
         {
           "date": "2026-06-27",
           "values": {
-            "John Hickenlooper": 17,
-            "Julie Gonzales": 23
+            "/m/04g_1z": 23,
+            "/g/11h24f3x_y": 21
           }
         },
         {
           "date": "2026-06-28",
           "values": {
-            "John Hickenlooper": 22,
-            "Julie Gonzales": 31
+            "/m/04g_1z": 28,
+            "/g/11h24f3x_y": 27
           }
         },
         {
           "date": "2026-06-29",
           "values": {
-            "John Hickenlooper": 33,
-            "Julie Gonzales": 49
+            "/m/04g_1z": 43,
+            "/g/11h24f3x_y": 50
           }
         },
         {
           "date": "2026-06-30",
           "values": {
-            "John Hickenlooper": 60,
-            "Julie Gonzales": 100
+            "/m/04g_1z": 90,
+            "/g/11h24f3x_y": 100
           }
         }
       ]

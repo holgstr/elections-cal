@@ -871,6 +871,11 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   flex-shrink: 0;
 }
 
+.trends-legend-type {
+  color: var(--muted, #6b7280);
+  font-size: 0.72rem;
+}
+
 .trends-footnote {
   margin: 0;
   font-size: 0.72rem;
