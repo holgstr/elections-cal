@@ -559,7 +559,7 @@ def fetch_race(client: TrendsClient, race: dict) -> dict:
             candidate["resolve_note"] = plan["resolve_note"]
         candidates.append(candidate)
 
-    return {
+    out = {
         "id": race["id"],
         "title": race["title"],
         "election_date": election_date.isoformat(),
@@ -572,6 +572,10 @@ def fetch_race(client: TrendsClient, race: dict) -> dict:
         "candidates": candidates,
         "series": series,
     }
+    # Optional curated race result (official / preliminary / current vote shares).
+    if isinstance(race.get("result"), dict):
+        out["result"] = race["result"]
+    return out
 
 
 def run_suggest(terms: list[str]) -> int:

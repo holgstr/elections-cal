@@ -781,31 +781,22 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
 }
 
 /* Trends tab */
-.trends-intro {
-  margin: 0 0 0.85rem;
+.trends-splits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: 0.55rem 1.1rem;
+  margin: 0 0 0.65rem;
 }
 
-.trends-intro p {
-  margin: 0;
-  font-size: 0.88rem;
-  color: var(--muted);
-  line-height: 1.45;
-}
-
-.trends-intro p.trends-intro-note {
-  margin-top: 0.45rem;
-  font-size: 0.8rem;
-}
-
-.trends-share {
+.trends-split {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  margin: 0 0 0.65rem;
+  margin: 0;
   padding: 0;
 }
 
-.trends-share-heading {
+.trends-split-heading {
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--muted);
@@ -839,12 +830,6 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
 .trends-share-sep {
   color: var(--muted);
   margin: 0 0.1rem;
-}
-
-.trends-share-note {
-  font-size: 0.72rem;
-  color: var(--muted);
-  line-height: 1.35;
 }
 
 .trends-toolbar {
@@ -1013,18 +998,6 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   border-radius: 2px;
   flex-shrink: 0;
   margin-top: 0.15rem;
-}
-
-.trends-legend-type {
-  color: var(--muted, #6b7280);
-  font-size: 0.72rem;
-}
-
-.trends-footnote {
-  margin: 0;
-  font-size: 0.72rem;
-  color: var(--muted);
-  line-height: 1.4;
 }
 
 .trends-empty {

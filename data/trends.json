@@ -252,7 +252,22 @@
             "/g/11h24f3x_y": 100
           }
         }
-      ]
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-09",
+        "source": "Decision Desk HQ",
+        "candidates": [
+          {
+            "label": "Hickenlooper",
+            "pct": 52.8
+          },
+          {
+            "label": "Gonzales",
+            "pct": 47.2
+          }
+        ]
+      }
     },
     {
       "id": "co-dem-governor-primary-2026",
@@ -504,7 +519,22 @@
             "/m/05b60qf": 66
           }
         }
-      ]
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-09",
+        "source": "Decision Desk HQ",
+        "candidates": [
+          {
+            "label": "Weiser",
+            "pct": 56.9
+          },
+          {
+            "label": "Bennet",
+            "pct": 43.1
+          }
+        ]
+      }
     },
     {
       "id": "co-cd1-dem-primary-2026",
@@ -756,7 +786,26 @@
             "/g/11yfncdnr2": 100
           }
         }
-      ]
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-09",
+        "source": "Associated Press / NBC News",
+        "candidates": [
+          {
+            "label": "DeGette",
+            "pct": 39.8
+          },
+          {
+            "label": "Kiros",
+            "pct": 53.2
+          },
+          {
+            "label": "James",
+            "pct": 7.0
+          }
+        ]
+      }
     }
   ]
 }
