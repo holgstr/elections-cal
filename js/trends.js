@@ -355,9 +355,26 @@ function searchShareValueByDate(candidateSeries, race, label) {
   return byDate;
 }
 
+/** Half-life (days) for exponential recency weights on daily search leads. */
+const LEAD_DAY_WEIGHT_HALF_LIFE = 7;
+
 /**
- * One point per race: share of tracked pre-election days the vote winner led
- * on relative search interest (x) vs two-way result margin in pp (y).
+ * Exponential weight by days behind the newest date in the window.
+ * Newest day = 1; weight halves every LEAD_DAY_WEIGHT_HALF_LIFE days back.
+ */
+function leadDayRecencyWeight(date, newestDate) {
+  const msPerDay = 86400000;
+  const newestMs = Date.parse(`${newestDate}T00:00:00Z`);
+  const dateMs = Date.parse(`${date}T00:00:00Z`);
+  if (!Number.isFinite(newestMs) || !Number.isFinite(dateMs)) return 0;
+  const daysBack = Math.max(0, (newestMs - dateMs) / msPerDay);
+  return Math.pow(2, -daysBack / LEAD_DAY_WEIGHT_HALF_LIFE);
+}
+
+/**
+ * One point per race: exponentially weighted share of pre-election days the
+ * vote winner led on relative search interest (x; recent days count more) vs
+ * two-way result margin in pp (y).
  */
 function buildLeadDaysMarginPoints(races) {
   const points = [];
@@ -387,22 +404,36 @@ function buildLeadDaysMarginPoints(races) {
       race,
       loser.label
     );
-    const dates = new Set([...winnerByDate.keys(), ...loserByDate.keys()]);
+    const dates = [...new Set([...winnerByDate.keys(), ...loserByDate.keys()])]
+      .filter((date) => {
+        const w = winnerByDate.get(date) ?? 0;
+        const l = loserByDate.get(date) ?? 0;
+        return Math.max(0, w) + Math.max(0, l) > 0;
+      })
+      .sort();
     const shareDays = searchShareDays(race);
-    if (!dates.size || shareDays < 1) continue;
+    if (!dates.length || shareDays < 1) continue;
 
+    const newestDate = dates[dates.length - 1];
+    let weightLed = 0;
+    let weightTotal = 0;
     let daysWinnerLed = 0;
     for (const date of dates) {
       const w = winnerByDate.get(date) ?? 0;
       const l = loserByDate.get(date) ?? 0;
-      const total = Math.max(0, w) + Math.max(0, l);
-      if (total <= 0) continue;
+      const weight = leadDayRecencyWeight(date, newestDate);
+      if (!(weight > 0)) continue;
+      weightTotal += weight;
       // Relative share that day: winner ahead iff raw interest is higher.
-      if (w > l) daysWinnerLed += 1;
+      if (w > l) {
+        weightLed += weight;
+        daysWinnerLed += 1;
+      }
     }
+    if (!(weightTotal > 0)) continue;
 
-    const leadShare = (daysWinnerLed / shareDays) * 100;
-    const predicted = daysWinnerLed > shareDays / 2;
+    const leadShare = (weightLed / weightTotal) * 100;
+    const predicted = leadShare > 50;
     points.push({
       raceId: race.id,
       raceLabel: raceGivenNamesTitle(race),
@@ -416,9 +447,9 @@ function buildLeadDaysMarginPoints(races) {
       x: leadShare,
       y: margin,
       resultStatus: race.result?.status || null,
-      tipXLabel: "Winner led",
+      tipXLabel: "Winner led (exp)",
       tipYLabel: "Margin",
-      formatX: (value) => `${formatAxisTick(value)}% of days`,
+      formatX: (value) => `${formatAxisTick(value)}% exp-wt`,
       formatY: (value) => `${formatAxisTick(value)} pp`,
     });
   }
@@ -948,11 +979,11 @@ function buildLeadDaysMarginPanel(races) {
     <section class="trends-correlation" aria-label="Daily search lead versus result margin">
       <header class="trends-card-header">
         <h3 class="trends-card-title">Daily search lead vs margin</h3>
-        <p class="trends-card-meta">Each point is one race: share of the ${shareDays} pre-election days the eventual winner led on relative search interest, versus that winner’s two-way margin (pp) against the runner-up among tracked candidates. Green = led on a majority of days; red = did not.</p>
+        <p class="trends-card-meta">Each point is one race: exponentially weighted share of the ${shareDays} pre-election days the eventual winner led on relative search interest (recent days count more; half-life ${LEAD_DAY_WEIGHT_HALF_LIFE}d), versus that winner’s two-way margin (pp) against the runner-up among tracked candidates. Green = weighted lead share over 50%; red = not.</p>
       </header>
       <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root="lead-margin">
         ${buildScatterSvg(points, {
-          xLabel: `% of days winner led (${shareDays}d)`,
+          xLabel: `Exp-weighted % days winner led (${shareDays}d)`,
           yLabel: "Two-way margin (pp)",
           xDomainOpts: { hardMin: 0, hardMax: 100, minSpan: 20 },
           yDomainOpts: { hardMin: 0, hardMax: 100, minSpan: 5 },
