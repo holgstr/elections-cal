@@ -9,12 +9,68 @@
     "window_days": 30,
     "keywords": [
       {
-        "keyword": "John Hickenlooper",
-        "label": "Hickenlooper"
+        "name": "John Hickenlooper",
+        "mid": "/m/04g_1z",
+        "label": "Hickenlooper",
+        "topic_title": "John Hickenlooper",
+        "topic_type": "United States Senator"
       },
       {
-        "keyword": "Julie Gonzales",
-        "label": "Gonzales"
+        "name": "Julie Gonzales",
+        "mid": "/g/11h24f3x_y",
+        "label": "Gonzales",
+        "topic_title": "Julie Gonzales",
+        "topic_type": "Colorado State Senator"
+      }
+    ]
+  },
+  {
+    "id": "co-dem-governor-primary-2026",
+    "title": "Colorado Democratic Governor Primary",
+    "election_date": "2026-06-30",
+    "country_code": "US",
+    "state_code": "CO",
+    "geo": "US-CO",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Phil Weiser",
+        "mid": "/g/11dfq2lv22",
+        "label": "Weiser",
+        "topic_title": "Philip J. Weiser",
+        "topic_type": "Colorado Attorney General"
+      },
+      {
+        "name": "Michael Bennet",
+        "mid": "/m/05b60qf",
+        "label": "Bennet",
+        "topic_title": "Michael Bennet",
+        "topic_type": "United States Senator"
+      }
+    ]
+  },
+  {
+    "id": "co-cd1-dem-primary-2026",
+    "title": "Colorado CD-1 Democratic Primary",
+    "election_date": "2026-06-30",
+    "country_code": "US",
+    "state_code": "CO",
+    "geo": "US-CO",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Diana DeGette",
+        "mid": "/m/024z95",
+        "label": "DeGette",
+        "topic_title": "Diana DeGette",
+        "topic_type": "United States Representative"
+      },
+      {
+        "name": "Melat Kiros",
+        "mid": "/g/11yfncdnr2",
+        "label": "Kiros",
+        "topic_title": "Melat Kiros",
+        "topic_type": "Politician"
       }
     ]
   }

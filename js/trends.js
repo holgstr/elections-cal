@@ -10,13 +10,24 @@ const SERIES_COLORS = [
   "#f1948a",
 ];
 
+const CHART = {
+  width: 640,
+  height: 260,
+  pad: { top: 16, right: 16, bottom: 36, left: 36 },
+};
+
 let trendsData = null;
+let selectedRaceId = null;
 
 export async function loadTrendsData(fetcher = fetchJson) {
   try {
     trendsData = await fetcher("data/trends.json");
   } catch {
     trendsData = { races: [], generated_at: null };
+  }
+  const races = trendsData?.races || [];
+  if (!races.some((race) => race.id === selectedRaceId)) {
+    selectedRaceId = races[0]?.id ?? null;
   }
   return trendsData;
 }
@@ -61,21 +72,72 @@ function linePath(points) {
     .join(" ");
 }
 
-function buildChart(race) {
+function midStatusLabel(candidate) {
+  if (candidate.mid) {
+    const source =
+      candidate.resolve_source === "autocomplete"
+        ? "auto"
+        : candidate.resolve_source === "config"
+          ? "pinned"
+          : candidate.resolve_source || "mid";
+    return `mid ${candidate.mid} (${source})`;
+  }
+  if (candidate.query_mode === "search_term") {
+    return "no mid · search term";
+  }
+  return "no mid";
+}
+
+function candidateDisplayName(candidate) {
+  const parts = [candidate.label || candidate.name || candidate.keyword];
+  if (candidate.topic_type) parts.push(candidate.topic_type);
+  parts.push(midStatusLabel(candidate));
+  return parts.join(" · ");
+}
+
+function footnoteForRace(race) {
+  const candidates = race.candidates || [];
+  const entityCount = candidates.filter((c) => c.query_mode === "entity" && c.mid).length;
+  const basis =
+    entityCount === candidates.length && candidates.length
+      ? "Google Trends person topics (0–100, relative within this comparison)"
+      : entityCount > 0
+        ? "Mixed Topics/search terms (0–100, relative within this comparison)"
+        : "Google Trends search interest (0–100, relative within this comparison)";
+  return `${basis}. Daily series for the ${race.window_days || 30} days through election day.`;
+}
+
+function buildChartModel(race) {
   const series = race.series || [];
   const candidates = race.candidates || [];
-  if (!series.length || !candidates.length) {
-    return `<p class="trends-empty">No search-interest series for this race yet.</p>`;
-  }
-
-  const width = 640;
-  const height = 240;
-  const pad = { top: 16, right: 16, bottom: 36, left: 36 };
+  const { width, height, pad } = CHART;
   const plotW = width - pad.left - pad.right;
   const plotH = height - pad.top - pad.bottom;
   const n = series.length;
   const xAt = (i) => pad.left + (n === 1 ? plotW / 2 : (i / (n - 1)) * plotW);
   const yAt = (value) => pad.top + plotH - (Math.max(0, Math.min(100, value)) / 100) * plotH;
+
+  const candidateSeries = candidates.map((candidate, cIdx) => {
+    const color = SERIES_COLORS[cIdx % SERIES_COLORS.length];
+    const points = series.map((point, i) => {
+      const raw = point.values?.[candidate.keyword];
+      const value = typeof raw === "number" ? raw : 0;
+      return {
+        date: point.date,
+        value,
+        x: xAt(i),
+        y: yAt(value),
+      };
+    });
+    return { candidate, color, points };
+  });
+
+  return { width, height, pad, plotW, plotH, xAt, yAt, series, candidateSeries };
+}
+
+function buildChartSvg(model) {
+  const { width, height, pad, series, candidateSeries, yAt } = model;
+  const n = series.length;
 
   const yTicks = [0, 25, 50, 75, 100];
   const grid = yTicks
@@ -91,20 +153,14 @@ function buildChart(race) {
   const xLabelIndexes = new Set([0, Math.floor((n - 1) / 2), n - 1].filter((i) => i >= 0));
   const xLabels = [...xLabelIndexes]
     .map((i) => {
-      const x = xAt(i);
+      const x = model.xAt(i);
       return `<text class="trends-axis-label" x="${x}" y="${height - 10}" text-anchor="middle">${escapeHtml(formatShortDate(series[i].date))}</text>`;
     })
     .join("");
 
-  const paths = candidates
-    .map((candidate, cIdx) => {
-      const color = SERIES_COLORS[cIdx % SERIES_COLORS.length];
-      const points = series.map((point, i) => {
-        const raw = point.values?.[candidate.keyword];
-        const value = typeof raw === "number" ? raw : 0;
-        return { x: xAt(i), y: yAt(value), value };
-      });
-      return `
+  const paths = candidateSeries
+    .map(
+      ({ color, points }) => `
         <path
           class="trends-line"
           d="${linePath(points)}"
@@ -114,32 +170,141 @@ function buildChart(race) {
           stroke-linecap="round"
           stroke-linejoin="round"
         />
-      `;
-    })
-    .join("");
-
-  const legend = candidates
-    .map((candidate, cIdx) => {
-      const color = SERIES_COLORS[cIdx % SERIES_COLORS.length];
-      return `
-        <span class="trends-legend-item">
-          <span class="trends-swatch" style="background:${color}"></span>
-          ${escapeHtml(candidate.label || candidate.keyword)}
-        </span>
-      `;
-    })
+      `
+    )
     .join("");
 
   return `
-    <div class="trends-chart-wrap" role="img" aria-label="Google Trends interest over time for ${escapeHtml(race.title)}">
-      <svg class="trends-chart" viewBox="0 0 ${width} ${height}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
-        ${grid}
-        ${paths}
-        ${xLabels}
-      </svg>
-      <div class="trends-legend">${legend}</div>
-    </div>
+    <svg class="trends-chart" viewBox="0 0 ${width} ${height}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+      ${grid}
+      ${paths}
+      ${xLabels}
+      <line class="trends-hover-line" x1="0" y1="${pad.top}" x2="0" y2="${height - pad.bottom}" hidden />
+      <g class="trends-hover-dots"></g>
+      <rect
+        class="trends-hover-capture"
+        x="${pad.left}"
+        y="${pad.top}"
+        width="${model.plotW}"
+        height="${model.plotH}"
+        fill="transparent"
+      />
+    </svg>
   `;
+}
+
+function buildLegend(candidateSeries) {
+  return candidateSeries
+    .map(
+      ({ candidate, color }) => `
+        <span class="trends-legend-item">
+          <span class="trends-swatch" style="background:${color}"></span>
+          <span class="trends-legend-text">${escapeHtml(candidateDisplayName(candidate))}</span>
+        </span>
+      `
+    )
+    .join("");
+}
+
+function nearestIndex(model, clientX, svg) {
+  const rect = svg.getBoundingClientRect();
+  if (!rect.width) return 0;
+  const svgX = ((clientX - rect.left) / rect.width) * model.width;
+  let best = 0;
+  let bestDist = Infinity;
+  for (let i = 0; i < model.series.length; i++) {
+    const dist = Math.abs(model.xAt(i) - svgX);
+    if (dist < bestDist) {
+      bestDist = dist;
+      best = i;
+    }
+  }
+  return best;
+}
+
+function updateHover(wrap, model, index) {
+  const svg = wrap.querySelector(".trends-chart");
+  const tooltip = wrap.querySelector(".trends-tooltip");
+  const hoverLine = svg?.querySelector(".trends-hover-line");
+  const dots = svg?.querySelector(".trends-hover-dots");
+  if (!svg || !tooltip || !hoverLine || !dots) return;
+
+  const point = model.series[index];
+  if (!point) {
+    clearHover(wrap);
+    return;
+  }
+
+  const x = model.xAt(index);
+  hoverLine.setAttribute("x1", String(x));
+  hoverLine.setAttribute("x2", String(x));
+  hoverLine.hidden = false;
+
+  dots.innerHTML = model.candidateSeries
+    .map(({ color, points }) => {
+      const pt = points[index];
+      return `<circle cx="${pt.x}" cy="${pt.y}" r="4" fill="${color}" stroke="#fff" stroke-width="1.5" />`;
+    })
+    .join("");
+
+  const rows = model.candidateSeries
+    .map(({ candidate, color, points }) => {
+      const value = points[index]?.value ?? 0;
+      return `
+        <div class="trends-tooltip-row">
+          <span class="trends-tooltip-swatch" style="background:${color}"></span>
+          <span class="trends-tooltip-label">${escapeHtml(candidate.label || candidate.name || "Candidate")}</span>
+          <span class="trends-tooltip-value">${value}</span>
+        </div>
+      `;
+    })
+    .join("");
+
+  tooltip.innerHTML = `
+    <div class="trends-tooltip-date">${escapeHtml(formatLongDate(point.date))}</div>
+    ${rows}
+  `;
+  tooltip.hidden = false;
+
+  const plotLeft = model.pad.left;
+  const plotRight = model.width - model.pad.right;
+  const preferRight = x < (plotLeft + plotRight) / 2;
+  const leftPct = (x / model.width) * 100;
+  tooltip.style.left = `${leftPct}%`;
+  tooltip.style.transform = preferRight
+    ? "translate(12px, -50%)"
+    : "translate(calc(-100% - 12px), -50%)";
+  tooltip.style.top = "42%";
+}
+
+function clearHover(wrap) {
+  const svg = wrap.querySelector(".trends-chart");
+  const tooltip = wrap.querySelector(".trends-tooltip");
+  const hoverLine = svg?.querySelector(".trends-hover-line");
+  const dots = svg?.querySelector(".trends-hover-dots");
+  if (hoverLine) hoverLine.hidden = true;
+  if (dots) dots.innerHTML = "";
+  if (tooltip) {
+    tooltip.hidden = true;
+    tooltip.innerHTML = "";
+  }
+}
+
+function wireChartInteractions(wrap, model) {
+  const svg = wrap.querySelector(".trends-chart");
+  const capture = svg?.querySelector(".trends-hover-capture");
+  if (!svg || !capture || !model.series.length) return;
+
+  const onMove = (event) => {
+    const index = nearestIndex(model, event.clientX, svg);
+    updateHover(wrap, model, index);
+  };
+  const onLeave = () => clearHover(wrap);
+
+  capture.addEventListener("pointermove", onMove);
+  capture.addEventListener("pointerdown", onMove);
+  capture.addEventListener("pointerleave", onLeave);
+  capture.addEventListener("blur", onLeave);
 }
 
 function renderRaceCard(race) {
@@ -151,16 +316,57 @@ function renderRaceCard(race) {
     .filter(Boolean)
     .join(" · ");
 
+  const model = buildChartModel(race);
+  if (!model.series.length || !model.candidateSeries.length) {
+    return `
+      <article class="trends-card" data-race-id="${escapeHtml(race.id)}">
+        <header class="trends-card-header">
+          <h3 class="trends-card-title">${escapeHtml(race.title)}</h3>
+          <p class="trends-card-meta">${escapeHtml(subtitle)}</p>
+        </header>
+        <p class="trends-empty">No search-interest series for this race yet.</p>
+      </article>
+    `;
+  }
+
   return `
-    <article class="trends-card">
+    <article class="trends-card" data-race-id="${escapeHtml(race.id)}">
       <header class="trends-card-header">
         <h3 class="trends-card-title">${escapeHtml(race.title)}</h3>
         <p class="trends-card-meta">${escapeHtml(subtitle)}</p>
       </header>
-      ${buildChart(race)}
-      <p class="trends-footnote">Google Trends interest (0–100, relative within this comparison). Daily series for the ${escapeHtml(String(race.window_days || 30))} days through election day.</p>
+      <div class="trends-chart-wrap" data-chart-root>
+        ${buildChartSvg(model)}
+        <div class="trends-tooltip" hidden></div>
+        <div class="trends-legend">${buildLegend(model.candidateSeries)}</div>
+      </div>
+      <p class="trends-footnote">${escapeHtml(footnoteForRace(race))}</p>
     </article>
   `;
+}
+
+function raceOptionLabel(race) {
+  const location = locationLine(race);
+  return location ? `${race.title} (${location})` : race.title;
+}
+
+function bindInteractions(container, races) {
+  const select = container.querySelector("[data-trends-race-select]");
+  if (select) {
+    select.addEventListener("change", () => {
+      selectedRaceId = select.value;
+      renderTrends(container);
+    });
+  }
+
+  for (const race of races) {
+    const card = container.querySelector(`[data-race-id="${CSS.escape(race.id)}"]`);
+    const wrap = card?.querySelector("[data-chart-root]");
+    if (!wrap) continue;
+    const model = buildChartModel(race);
+    if (!model.series.length) continue;
+    wireChartInteractions(wrap, model);
+  }
 }
 
 export async function renderTrends(container) {
@@ -175,14 +381,37 @@ export async function renderTrends(container) {
     return;
   }
 
+  if (!races.some((race) => race.id === selectedRaceId)) {
+    selectedRaceId = races[0].id;
+  }
+  const activeRace = races.find((race) => race.id === selectedRaceId) || races[0];
+
+  const options = races
+    .map(
+      (race) => `
+        <option value="${escapeHtml(race.id)}"${race.id === activeRace.id ? " selected" : ""}>
+          ${escapeHtml(raceOptionLabel(race))}
+        </option>
+      `
+    )
+    .join("");
+
   container.innerHTML = `
     <div class="trends-intro">
-      <p>Search interest from Google Trends for recent races. Values are relative within each head-to-head comparison (peak = 100).</p>
+      <p>Search interest from Google Trends for recent races. Where possible, comparisons use Google’s person topics (not raw name strings) so each series maps to one candidate. Values are relative within each head-to-head comparison (peak = 100). Hover a chart to compare both candidates on that day.</p>
+    </div>
+    <div class="trends-toolbar">
+      <label class="trends-race-label" for="trends-race-select">Race</label>
+      <select id="trends-race-select" class="trends-race-select" data-trends-race-select>
+        ${options}
+      </select>
     </div>
     <div class="trends-list">
-      ${races.map(renderRaceCard).join("")}
+      ${renderRaceCard(activeRace)}
     </div>
   `;
+
+  bindInteractions(container, [activeRace]);
 }
 
 export function trendsFooterText() {

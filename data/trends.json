@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T13:25:54Z",
+  "generated_at": "2026-07-15T15:39:25Z",
   "source": "google_trends",
   "races": [
     {
@@ -14,230 +14,746 @@
       "end_date": "2026-06-30",
       "candidates": [
         {
-          "keyword": "John Hickenlooper",
-          "label": "Hickenlooper"
+          "keyword": "/m/04g_1z",
+          "label": "Hickenlooper",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "John Hickenlooper",
+          "mid": "/m/04g_1z",
+          "topic_title": "John Hickenlooper",
+          "topic_type": "United States Senator"
         },
         {
-          "keyword": "Julie Gonzales",
-          "label": "Gonzales"
+          "keyword": "/g/11h24f3x_y",
+          "label": "Gonzales",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Julie Gonzales",
+          "mid": "/g/11h24f3x_y",
+          "topic_title": "Julie Gonzales",
+          "topic_type": "Colorado State Senator"
         }
       ],
       "series": [
         {
           "date": "2026-05-31",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-01",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 5,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-02",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-03",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-04",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 4,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-05",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-06",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-07",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-08",
           "values": {
-            "John Hickenlooper": 0,
-            "Julie Gonzales": 0
+            "/m/04g_1z": 0,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-09",
           "values": {
-            "John Hickenlooper": 4,
-            "Julie Gonzales": 5
+            "/m/04g_1z": 6,
+            "/g/11h24f3x_y": 5
           }
         },
         {
           "date": "2026-06-10",
           "values": {
-            "John Hickenlooper": 5,
-            "Julie Gonzales": 12
+            "/m/04g_1z": 10,
+            "/g/11h24f3x_y": 12
           }
         },
         {
           "date": "2026-06-11",
           "values": {
-            "John Hickenlooper": 11,
-            "Julie Gonzales": 17
+            "/m/04g_1z": 15,
+            "/g/11h24f3x_y": 17
           }
         },
         {
           "date": "2026-06-12",
           "values": {
-            "John Hickenlooper": 9,
-            "Julie Gonzales": 19
+            "/m/04g_1z": 15,
+            "/g/11h24f3x_y": 18
           }
         },
         {
           "date": "2026-06-13",
           "values": {
-            "John Hickenlooper": 11,
-            "Julie Gonzales": 17
+            "/m/04g_1z": 18,
+            "/g/11h24f3x_y": 16
           }
         },
         {
           "date": "2026-06-14",
           "values": {
-            "John Hickenlooper": 14,
-            "Julie Gonzales": 23
+            "/m/04g_1z": 19,
+            "/g/11h24f3x_y": 21
           }
         },
         {
           "date": "2026-06-15",
           "values": {
-            "John Hickenlooper": 7,
-            "Julie Gonzales": 15
+            "/m/04g_1z": 11,
+            "/g/11h24f3x_y": 14
           }
         },
         {
           "date": "2026-06-16",
           "values": {
-            "John Hickenlooper": 15,
-            "Julie Gonzales": 17
+            "/m/04g_1z": 25,
+            "/g/11h24f3x_y": 19
           }
         },
         {
           "date": "2026-06-17",
           "values": {
-            "John Hickenlooper": 10,
-            "Julie Gonzales": 15
+            "/m/04g_1z": 13,
+            "/g/11h24f3x_y": 16
           }
         },
         {
           "date": "2026-06-18",
           "values": {
-            "John Hickenlooper": 11,
-            "Julie Gonzales": 12
+            "/m/04g_1z": 14,
+            "/g/11h24f3x_y": 13
           }
         },
         {
           "date": "2026-06-19",
           "values": {
-            "John Hickenlooper": 10,
-            "Julie Gonzales": 14
+            "/m/04g_1z": 14,
+            "/g/11h24f3x_y": 13
           }
         },
         {
           "date": "2026-06-20",
           "values": {
-            "John Hickenlooper": 8,
-            "Julie Gonzales": 15
+            "/m/04g_1z": 13,
+            "/g/11h24f3x_y": 16
           }
         },
         {
           "date": "2026-06-21",
           "values": {
-            "John Hickenlooper": 11,
-            "Julie Gonzales": 19
+            "/m/04g_1z": 23,
+            "/g/11h24f3x_y": 19
           }
         },
         {
           "date": "2026-06-22",
           "values": {
-            "John Hickenlooper": 18,
-            "Julie Gonzales": 21
+            "/m/04g_1z": 21,
+            "/g/11h24f3x_y": 20
           }
         },
         {
           "date": "2026-06-23",
           "values": {
-            "John Hickenlooper": 18,
-            "Julie Gonzales": 17
+            "/m/04g_1z": 23,
+            "/g/11h24f3x_y": 18
           }
         },
         {
           "date": "2026-06-24",
           "values": {
-            "John Hickenlooper": 13,
-            "Julie Gonzales": 22
+            "/m/04g_1z": 18,
+            "/g/11h24f3x_y": 22
           }
         },
         {
           "date": "2026-06-25",
           "values": {
-            "John Hickenlooper": 12,
-            "Julie Gonzales": 17
+            "/m/04g_1z": 19,
+            "/g/11h24f3x_y": 17
           }
         },
         {
           "date": "2026-06-26",
           "values": {
-            "John Hickenlooper": 13,
-            "Julie Gonzales": 21
+            "/m/04g_1z": 19,
+            "/g/11h24f3x_y": 21
           }
         },
         {
           "date": "2026-06-27",
           "values": {
-            "John Hickenlooper": 17,
-            "Julie Gonzales": 23
+            "/m/04g_1z": 23,
+            "/g/11h24f3x_y": 21
           }
         },
         {
           "date": "2026-06-28",
           "values": {
-            "John Hickenlooper": 22,
-            "Julie Gonzales": 31
+            "/m/04g_1z": 28,
+            "/g/11h24f3x_y": 27
           }
         },
         {
           "date": "2026-06-29",
           "values": {
-            "John Hickenlooper": 33,
-            "Julie Gonzales": 49
+            "/m/04g_1z": 43,
+            "/g/11h24f3x_y": 50
           }
         },
         {
           "date": "2026-06-30",
           "values": {
-            "John Hickenlooper": 60,
-            "Julie Gonzales": 100
+            "/m/04g_1z": 90,
+            "/g/11h24f3x_y": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "co-dem-governor-primary-2026",
+      "title": "Colorado Democratic Governor Primary",
+      "election_date": "2026-06-30",
+      "country_code": "US",
+      "state_code": "CO",
+      "geo": "US-CO",
+      "window_days": 30,
+      "start_date": "2026-05-31",
+      "end_date": "2026-06-30",
+      "candidates": [
+        {
+          "keyword": "/g/11dfq2lv22",
+          "label": "Weiser",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Phil Weiser",
+          "mid": "/g/11dfq2lv22",
+          "topic_title": "Philip J. Weiser",
+          "topic_type": "Colorado Attorney General"
+        },
+        {
+          "keyword": "/m/05b60qf",
+          "label": "Bennet",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Michael Bennet",
+          "mid": "/m/05b60qf",
+          "topic_title": "Michael Bennet",
+          "topic_type": "United States Senator"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-31",
+          "values": {
+            "/g/11dfq2lv22": 3,
+            "/m/05b60qf": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "/g/11dfq2lv22": 2,
+            "/m/05b60qf": 3
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "/g/11dfq2lv22": 0,
+            "/m/05b60qf": 3
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "/g/11dfq2lv22": 0,
+            "/m/05b60qf": 3
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "/g/11dfq2lv22": 0,
+            "/m/05b60qf": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "/g/11dfq2lv22": 10,
+            "/m/05b60qf": 6
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "/g/11dfq2lv22": 5,
+            "/m/05b60qf": 4
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "/g/11dfq2lv22": 3,
+            "/m/05b60qf": 5
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "/g/11dfq2lv22": 4,
+            "/m/05b60qf": 3
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "/g/11dfq2lv22": 5,
+            "/m/05b60qf": 3
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "/g/11dfq2lv22": 10,
+            "/m/05b60qf": 7
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "/g/11dfq2lv22": 13,
+            "/m/05b60qf": 11
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "/g/11dfq2lv22": 14,
+            "/m/05b60qf": 12
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "/g/11dfq2lv22": 14,
+            "/m/05b60qf": 12
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "/g/11dfq2lv22": 22,
+            "/m/05b60qf": 13
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "/g/11dfq2lv22": 15,
+            "/m/05b60qf": 7
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "/g/11dfq2lv22": 19,
+            "/m/05b60qf": 13
+          }
+        },
+        {
+          "date": "2026-06-17",
+          "values": {
+            "/g/11dfq2lv22": 14,
+            "/m/05b60qf": 11
+          }
+        },
+        {
+          "date": "2026-06-18",
+          "values": {
+            "/g/11dfq2lv22": 13,
+            "/m/05b60qf": 7
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "/g/11dfq2lv22": 14,
+            "/m/05b60qf": 11
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "/g/11dfq2lv22": 13,
+            "/m/05b60qf": 10
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/g/11dfq2lv22": 16,
+            "/m/05b60qf": 9
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/g/11dfq2lv22": 18,
+            "/m/05b60qf": 15
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/g/11dfq2lv22": 20,
+            "/m/05b60qf": 13
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "/g/11dfq2lv22": 17,
+            "/m/05b60qf": 11
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "/g/11dfq2lv22": 19,
+            "/m/05b60qf": 12
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "/g/11dfq2lv22": 18,
+            "/m/05b60qf": 11
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "/g/11dfq2lv22": 22,
+            "/m/05b60qf": 14
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "/g/11dfq2lv22": 33,
+            "/m/05b60qf": 17
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "/g/11dfq2lv22": 45,
+            "/m/05b60qf": 24
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "/g/11dfq2lv22": 100,
+            "/m/05b60qf": 66
+          }
+        }
+      ]
+    },
+    {
+      "id": "co-cd1-dem-primary-2026",
+      "title": "Colorado CD-1 Democratic Primary",
+      "election_date": "2026-06-30",
+      "country_code": "US",
+      "state_code": "CO",
+      "geo": "US-CO",
+      "window_days": 30,
+      "start_date": "2026-05-31",
+      "end_date": "2026-06-30",
+      "candidates": [
+        {
+          "keyword": "/m/024z95",
+          "label": "DeGette",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Diana DeGette",
+          "mid": "/m/024z95",
+          "topic_title": "Diana DeGette",
+          "topic_type": "United States Representative"
+        },
+        {
+          "keyword": "/g/11yfncdnr2",
+          "label": "Kiros",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Melat Kiros",
+          "mid": "/g/11yfncdnr2",
+          "topic_title": "Melat Kiros",
+          "topic_type": "Politician"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-31",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 11
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "/m/024z95": 9,
+            "/g/11yfncdnr2": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 0
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 0
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 0
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 12
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "/m/024z95": 13,
+            "/g/11yfncdnr2": 18
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "/m/024z95": 13,
+            "/g/11yfncdnr2": 14
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 15
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "/m/024z95": 10,
+            "/g/11yfncdnr2": 27
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "/m/024z95": 12,
+            "/g/11yfncdnr2": 21
+          }
+        },
+        {
+          "date": "2026-06-17",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 0
+          }
+        },
+        {
+          "date": "2026-06-18",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 14
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 23
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 27
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 16
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/m/024z95": 0,
+            "/g/11yfncdnr2": 22
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "/m/024z95": 13,
+            "/g/11yfncdnr2": 29
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "/m/024z95": 17,
+            "/g/11yfncdnr2": 31
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "/m/024z95": 13,
+            "/g/11yfncdnr2": 40
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "/m/024z95": 21,
+            "/g/11yfncdnr2": 31
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "/m/024z95": 29,
+            "/g/11yfncdnr2": 55
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "/m/024z95": 25,
+            "/g/11yfncdnr2": 52
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "/m/024z95": 59,
+            "/g/11yfncdnr2": 100
           }
         }
       ]
