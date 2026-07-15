@@ -160,13 +160,36 @@ function resultPctForCandidate(result, candidate) {
   return typeof hit?.pct === "number" ? hit.pct : null;
 }
 
+/** Days used for relative search share: pre-election only (not race day). */
+function searchShareDays(race) {
+  const windowDays = race?.window_days || 30;
+  return Math.max(1, windowDays - 1);
+}
+
+/**
+ * Points for search-share area: the shareDays before election day
+ * (election day itself is omitted).
+ */
+function pointsForSearchShare(points, electionDate, shareDays) {
+  const all = points || [];
+  if (!electionDate) {
+    return shareDays > 0 ? all.slice(-shareDays) : all;
+  }
+  const before = all.filter((point) => point.date && point.date < electionDate);
+  if (before.length <= shareDays) return before;
+  return before.slice(-shareDays);
+}
+
 /**
  * Relative share of displayed search interest (area under each series),
- * normalized so integer percents sum to 100.
+ * normalized so integer percents sum to 100. Uses pre-election days only.
  */
-function computeRelativeShares(candidateSeries) {
+function computeRelativeShares(candidateSeries, race) {
+  const electionDate = race?.election_date || null;
+  const shareDays = searchShareDays(race);
   const rows = (candidateSeries || []).map(({ candidate, color, points }) => {
-    const sum = (points || []).reduce((acc, point) => {
+    const sharePoints = pointsForSearchShare(points, electionDate, shareDays);
+    const sum = sharePoints.reduce((acc, point) => {
       const value = typeof point.value === "number" ? point.value : 0;
       return acc + Math.max(0, value);
     }, 0);
@@ -209,10 +232,10 @@ function buildShareItems(rows) {
 }
 
 function buildShareSummary(candidateSeries, race) {
-  const shares = computeRelativeShares(candidateSeries);
+  const shares = computeRelativeShares(candidateSeries, race);
   if (!shares.length) return "";
   const total = shares.reduce((acc, row) => acc + row.sum, 0);
-  const days = race?.window_days || 30;
+  const days = searchShareDays(race);
 
   let searchBlock;
   if (total <= 0) {
@@ -480,6 +503,7 @@ function renderRaceCard(race) {
     `;
   }
 
+  const shareDays = searchShareDays(race);
   return `
     <article class="trends-card" data-race-id="${escapeHtml(race.id)}">
       <header class="trends-card-header">
@@ -492,6 +516,7 @@ function renderRaceCard(race) {
         <div class="trends-tooltip" hidden></div>
         <div class="trends-legend">${buildLegend(model.candidateSeries)}</div>
       </div>
+      <p class="trends-share-footnote">Search share excludes election day (${shareDays}d prior).</p>
     </article>
   `;
 }
