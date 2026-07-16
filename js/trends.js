@@ -494,7 +494,14 @@ function isRaceExcluded(race) {
 
 /** Races shown in the Trends dropdown (excludes clear non-deciding primaries). */
 function visibleRaces(races) {
-  return (races || []).filter((race) => !isRaceExcluded(race));
+  return (races || [])
+    .filter((race) => !isRaceExcluded(race))
+    .slice()
+    .sort((a, b) =>
+      raceOptionLabel(a).localeCompare(raceOptionLabel(b), undefined, {
+        sensitivity: "base",
+      })
+    );
 }
 
 /**
