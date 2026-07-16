@@ -147,6 +147,18 @@ function candidateDisplayName(candidate) {
   return candidateShortName(candidate);
 }
 
+/**
+ * Parenthetical after the legend name: exact Knowledge Graph type, or "raw"
+ * when the series is a search-term comparison (not an entity mid).
+ */
+function candidateLegendType(candidate) {
+  const mid = (candidate?.mid || "").trim();
+  const usingEntity = candidate?.query_mode === "entity" && mid;
+  if (!usingEntity) return { text: "raw", isRaw: true };
+  const topicType = (candidate?.topic_type || "").trim();
+  return { text: topicType || "Topic", isRaw: false };
+}
+
 function formatVotePct(pct) {
   if (typeof pct !== "number" || !Number.isFinite(pct)) return "—";
   const rounded = Math.round(pct * 10) / 10;
@@ -700,14 +712,21 @@ function buildChartSvg(model) {
 
 function buildLegend(candidateSeries) {
   return candidateSeries
-    .map(
-      ({ candidate, color }) => `
+    .map(({ candidate, color }) => {
+      const type = candidateLegendType(candidate);
+      const typeClass = type.isRaw
+        ? "trends-legend-type trends-legend-type-raw"
+        : "trends-legend-type";
+      return `
         <span class="trends-legend-item">
           <span class="trends-swatch" style="background:${color}"></span>
-          <span class="trends-legend-text">${escapeHtml(candidateDisplayName(candidate))}</span>
+          <span class="trends-legend-text">
+            ${escapeHtml(candidateDisplayName(candidate))}
+            (<span class="${typeClass}">${escapeHtml(type.text)}</span>)
+          </span>
         </span>
-      `
-    )
+      `;
+    })
     .join("");
 }
 

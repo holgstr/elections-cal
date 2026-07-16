@@ -1064,6 +1064,15 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   overflow-wrap: anywhere;
 }
 
+.trends-legend-type {
+  color: var(--muted);
+}
+
+.trends-legend-type-raw {
+  color: #c62828;
+  font-weight: 600;
+}
+
 .trends-swatch {
   width: 0.7rem;
   height: 0.7rem;
