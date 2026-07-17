@@ -2,6 +2,7 @@ const POLYMARKET_API = "https://gamma-api.polymarket.com/events";
 const MIN_POLYMARKET_PCT = 3;
 const MIN_DE_STATE_POLYMARKET_PCT = 10;
 const MIN_NATIONAL_PARTY_POLYMARKET_PCT = 10;
+const LIVE_ODDS_TIMEOUT_MS = 4000;
 const GOVERNOR_PARTY_ORDER = ["Republican", "Democrat"];
 const GOVERNOR_PARTY_LABELS = {
   Republican: "Republican",
@@ -40,6 +41,7 @@ let mayoralInfo = {};
 let mayoralWindowMonths = 12;
 let nationalElectionInfo = {};
 let nationalElectionWindowMonths = 12;
+let marketOddsBySlug = {};
 const oddsCache = new Map();
 
 let popoverEl = null;
@@ -58,6 +60,15 @@ async function loadCuratedInfo(fetchJson, path, apply) {
     delete data._window_months;
   } catch {
     apply({}, null);
+  }
+}
+
+async function loadMarketOdds(fetchJson) {
+  try {
+    const data = await fetchJson("data/market_odds.json");
+    marketOddsBySlug = data.by_slug || {};
+  } catch {
+    marketOddsBySlug = {};
   }
 }
 
@@ -94,6 +105,7 @@ export async function loadPrimaryInfo(fetchJson) {
       nationalElectionInfo = data;
     }),
     loadOddsChanges(fetchJson),
+    loadMarketOdds(fetchJson),
   ]);
 }
 
@@ -327,112 +339,110 @@ function isIncludedPolymarketMarket(market) {
   return isActivePolymarketMarket(market) && !isPlaceholderMarketName(name);
 }
 
-async function fetchPolymarketOdds(slug, incumbentSurname = null) {
-  const cacheKey = incumbentSurname ? `${slug}:${incumbentSurname}` : slug;
-  if (oddsCache.has(cacheKey)) return oddsCache.get(cacheKey);
-
-  const promise = (async () => {
-    const res = await fetch(`${POLYMARKET_API}?slug=${encodeURIComponent(slug)}`);
-    if (!res.ok) throw new Error("Polymarket fetch failed");
-    const data = await res.json();
-    const markets = data[0]?.markets || [];
-
-    const candidates = markets
-      .map((market) => {
-        if (!isIncludedPolymarketMarket(market)) return null;
-        const name = market.groupItemTitle;
-        const pct = parseOutcomePrice(market.outcomePrices);
-        if (pct == null) return null;
-        const candidateName = surname(name);
-        return {
-          name: candidateName,
-          pct,
-          incumbent: isIncumbent(candidateName, incumbentSurname),
-        };
-      })
-      .filter(Boolean)
-      .filter((c) => c.pct > MIN_POLYMARKET_PCT)
-      .sort((a, b) => b.pct - a.pct);
-
-    return { candidates, hasMarket: true };
-  })();
-
-  oddsCache.set(cacheKey, promise);
-  return promise;
+function snapshotPricesForSlug(slug) {
+  const entry = marketOddsBySlug[slug];
+  if (!entry?.prices || typeof entry.prices !== "object") return null;
+  return entry.prices;
 }
 
-async function fetchNomineeSurname(slug, incumbentSurname = null) {
-  const cacheKey = `nominee:${slug}:${incumbentSurname || ""}`;
-  if (oddsCache.has(cacheKey)) return oddsCache.get(cacheKey);
-
-  const promise = (async () => {
-    const res = await fetch(`${POLYMARKET_API}?slug=${encodeURIComponent(slug)}`);
-    if (!res.ok) throw new Error("Polymarket fetch failed");
-    const data = await res.json();
-    const markets = data[0]?.markets || [];
-
-    const candidates = markets
-      .map((market) => {
-        if (!isIncludedPolymarketMarket(market)) return null;
-        const name = market.groupItemTitle;
-        const pct = parseOutcomePrice(market.outcomePrices);
-        if (pct == null) return null;
-        const candidateName = surname(name);
-        return {
-          name: candidateName,
-          pct,
-          incumbent: isIncumbent(candidateName, incumbentSurname),
-        };
-      })
-      .filter(Boolean)
-      .sort((a, b) => b.pct - a.pct);
-
-    return candidates[0] ?? null;
-  })();
-
-  oddsCache.set(cacheKey, promise);
-  return promise;
+function candidatesFromPriceMap(
+  prices,
+  { incumbentSurname = null, minPct = null, useSurname = true } = {}
+) {
+  return Object.entries(prices)
+    .map(([name, pct]) => {
+      if (isPlaceholderMarketName(name)) return null;
+      const value = Number(pct);
+      if (Number.isNaN(value)) return null;
+      const candidateName = useSurname ? surname(name) : name;
+      return {
+        name: candidateName,
+        pct: value,
+        incumbent: isIncumbent(candidateName, incumbentSurname),
+      };
+    })
+    .filter(Boolean)
+    .filter((candidate) => (minPct == null ? true : candidate.pct > minPct))
+    .sort((a, b) => b.pct - a.pct);
 }
 
-async function fetchPolymarketPartyOdds(slug, minPct) {
-  const cacheKey = `party:${slug}:${minPct}`;
-  if (oddsCache.has(cacheKey)) return oddsCache.get(cacheKey);
-
-  const promise = (async () => {
-    const res = await fetch(`${POLYMARKET_API}?slug=${encodeURIComponent(slug)}`);
-    if (!res.ok) throw new Error("Polymarket fetch failed");
-    const data = await res.json();
-    const markets = data[0]?.markets || [];
-
-    const candidates = markets
-      .map((market) => {
-        if (!isIncludedPolymarketMarket(market)) return null;
-        const name = market.groupItemTitle;
-        const pct = parseOutcomePrice(market.outcomePrices);
-        if (pct == null) return null;
-        return { name, pct };
-      })
-      .filter(Boolean)
-      .filter((c) => c.pct > minPct)
-      .sort((a, b) => b.pct - a.pct);
-
-    return { candidates, hasMarket: true };
-  })();
-
-  oddsCache.set(cacheKey, promise);
-  return promise;
+function candidateOddsFromPrices(prices, incumbentSurname = null) {
+  return {
+    candidates: candidatesFromPriceMap(prices, {
+      incumbentSurname,
+      minPct: MIN_POLYMARKET_PCT,
+      useSurname: true,
+    }),
+    hasMarket: true,
+  };
 }
 
-async function fetchPolymarketBinaryOdds(slug, minPct) {
-  const cacheKey = `binary:${slug}:${minPct}`;
-  if (oddsCache.has(cacheKey)) return oddsCache.get(cacheKey);
+function partyOddsFromPrices(prices, minPct) {
+  return {
+    candidates: candidatesFromPriceMap(prices, {
+      minPct,
+      useSurname: false,
+    }),
+    hasMarket: true,
+  };
+}
 
-  const promise = (async () => {
-    const res = await fetch(`${POLYMARKET_API}?slug=${encodeURIComponent(slug)}`);
+function binaryOddsFromPrices(prices, minPct) {
+  return {
+    candidates: candidatesFromPriceMap(prices, {
+      minPct,
+      useSurname: false,
+    }),
+    hasMarket: true,
+  };
+}
+
+function governorOddsFromPrices(prices) {
+  const parties = {};
+  for (const party of GOVERNOR_PARTY_ORDER) {
+    const pct = Number(prices[party]);
+    if (!Number.isNaN(pct)) parties[party] = pct;
+  }
+  return { parties, hasMarket: true };
+}
+
+function nomineeFromPrices(prices, incumbentSurname = null) {
+  const candidates = candidatesFromPriceMap(prices, {
+    incumbentSurname,
+    useSurname: true,
+  });
+  return candidates[0] ?? null;
+}
+
+async function fetchGammaMarkets(slug) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), LIVE_ODDS_TIMEOUT_MS);
+  try {
+    const res = await fetch(`${POLYMARKET_API}?slug=${encodeURIComponent(slug)}`, {
+      signal: controller.signal,
+    });
     if (!res.ok) throw new Error("Polymarket fetch failed");
     const data = await res.json();
-    const market = (data[0]?.markets || []).find(isActivePolymarketMarket);
-    if (!market) return { candidates: [], hasMarket: false };
+    return data[0]?.markets || [];
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+function rememberSnapshotPrices(slug, prices) {
+  if (!slug || !prices || !Object.keys(prices).length) return;
+  const existing = marketOddsBySlug[slug] || {};
+  marketOddsBySlug[slug] = {
+    ...existing,
+    odds_format: existing.odds_format || "candidates",
+    prices,
+  };
+}
+
+function pricesFromGammaMarkets(markets, { binary = false } = {}) {
+  if (binary) {
+    const market = (markets || []).find(isActivePolymarketMarket);
+    if (!market) return null;
 
     let outcomes = market.outcomes;
     let prices = market.outcomePrices;
@@ -440,50 +450,126 @@ async function fetchPolymarketBinaryOdds(slug, minPct) {
       outcomes = typeof outcomes === "string" ? JSON.parse(outcomes) : outcomes;
       prices = typeof prices === "string" ? JSON.parse(prices) : prices;
     } catch {
-      return { candidates: [], hasMarket: true };
+      return null;
     }
 
-    const candidates = (outcomes || [])
-      .map((name, index) => {
-        const pct = parseFloat(prices?.[index]) * 100;
-        if (Number.isNaN(pct)) return null;
-        return { name, pct };
-      })
-      .filter(Boolean)
-      .filter((candidate) => candidate.pct > minPct)
-      .sort((a, b) => b.pct - a.pct);
+    const mapped = {};
+    (outcomes || []).forEach((name, index) => {
+      const pct = parseFloat(prices?.[index]) * 100;
+      if (!name || Number.isNaN(pct)) return;
+      mapped[name] = pct;
+    });
+    return Object.keys(mapped).length ? mapped : null;
+  }
 
-    return { candidates, hasMarket: true };
+  const mapped = {};
+  for (const market of markets || []) {
+    if (!isIncludedPolymarketMarket(market)) continue;
+    const name = market.groupItemTitle;
+    const pct = parseOutcomePrice(market.outcomePrices);
+    if (pct == null) continue;
+    mapped[name] = pct;
+  }
+  return Object.keys(mapped).length ? mapped : null;
+}
+
+async function resolveOddsWithSnapshot({
+  slug,
+  cacheKey,
+  fromPrices,
+  liveFetcher,
+}) {
+  if (oddsCache.has(cacheKey)) return oddsCache.get(cacheKey);
+
+  const promise = (async () => {
+    const snapshotPrices = snapshotPricesForSlug(slug);
+    if (snapshotPrices) {
+      const snapshotResult = fromPrices(snapshotPrices);
+      liveFetcher()
+        .then((livePrices) => {
+          if (!livePrices) return;
+          rememberSnapshotPrices(slug, livePrices);
+          oddsCache.set(cacheKey, Promise.resolve(fromPrices(livePrices)));
+        })
+        .catch(() => {
+          // Snapshot remains the source of truth when Polymarket is unreachable.
+        });
+      return snapshotResult;
+    }
+
+    const livePrices = await liveFetcher();
+    if (!livePrices) throw new Error("Polymarket fetch failed");
+    rememberSnapshotPrices(slug, livePrices);
+    return fromPrices(livePrices);
   })();
 
   oddsCache.set(cacheKey, promise);
   return promise;
 }
 
+async function fetchPolymarketOdds(slug, incumbentSurname = null) {
+  const cacheKey = incumbentSurname ? `${slug}:${incumbentSurname}` : slug;
+  return resolveOddsWithSnapshot({
+    slug,
+    cacheKey,
+    fromPrices: (prices) => candidateOddsFromPrices(prices, incumbentSurname),
+    liveFetcher: async () => {
+      const markets = await fetchGammaMarkets(slug);
+      return pricesFromGammaMarkets(markets);
+    },
+  });
+}
+
+async function fetchNomineeSurname(slug, incumbentSurname = null) {
+  const cacheKey = `nominee:${slug}:${incumbentSurname || ""}`;
+  return resolveOddsWithSnapshot({
+    slug,
+    cacheKey,
+    fromPrices: (prices) => nomineeFromPrices(prices, incumbentSurname),
+    liveFetcher: async () => {
+      const markets = await fetchGammaMarkets(slug);
+      return pricesFromGammaMarkets(markets);
+    },
+  });
+}
+
+async function fetchPolymarketPartyOdds(slug, minPct) {
+  const cacheKey = `party:${slug}:${minPct}`;
+  return resolveOddsWithSnapshot({
+    slug,
+    cacheKey,
+    fromPrices: (prices) => partyOddsFromPrices(prices, minPct),
+    liveFetcher: async () => {
+      const markets = await fetchGammaMarkets(slug);
+      return pricesFromGammaMarkets(markets);
+    },
+  });
+}
+
+async function fetchPolymarketBinaryOdds(slug, minPct) {
+  const cacheKey = `binary:${slug}:${minPct}`;
+  return resolveOddsWithSnapshot({
+    slug,
+    cacheKey,
+    fromPrices: (prices) => binaryOddsFromPrices(prices, minPct),
+    liveFetcher: async () => {
+      const markets = await fetchGammaMarkets(slug);
+      return pricesFromGammaMarkets(markets, { binary: true });
+    },
+  });
+}
+
 async function fetchGovernorOdds(slug) {
   const cacheKey = `governor:${slug}`;
-  if (oddsCache.has(cacheKey)) return oddsCache.get(cacheKey);
-
-  const promise = (async () => {
-    const res = await fetch(`${POLYMARKET_API}?slug=${encodeURIComponent(slug)}`);
-    if (!res.ok) throw new Error("Polymarket fetch failed");
-    const data = await res.json();
-    const markets = data[0]?.markets || [];
-    const parties = {};
-
-    for (const market of markets) {
-      if (!isActivePolymarketMarket(market)) continue;
-      const party = market.groupItemTitle;
-      const pct = parseOutcomePrice(market.outcomePrices);
-      if (!GOVERNOR_PARTY_ORDER.includes(party) || pct == null) continue;
-      parties[party] = pct;
-    }
-
-    return { parties, hasMarket: true };
-  })();
-
-  oddsCache.set(cacheKey, promise);
-  return promise;
+  return resolveOddsWithSnapshot({
+    slug,
+    cacheKey,
+    fromPrices: governorOddsFromPrices,
+    liveFetcher: async () => {
+      const markets = await fetchGammaMarkets(slug);
+      return pricesFromGammaMarkets(markets);
+    },
+  });
 }
 
 async function loadPartySection(config) {

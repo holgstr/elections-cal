@@ -115,7 +115,7 @@ The frontend mirrors the same nationality stripping and canonical contest titles
 
 ## Primary info popover
 
-Interactive primary labels (`.office-tag--interactive`) show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/us_primary_info.json` for US primaries within the **next 3 months** (`scripts/generate_us_primary_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set.
+Interactive primary labels (`.office-tag--interactive`) show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/us_primary_info.json` for US primaries within the **next 3 months** (`scripts/generate_us_primary_info.py`). Polymarket odds come from the daily snapshot in `data/market_odds.json` when a `polymarket_slug` is set.
 
 Regenerate after updating `data/config/us_primary_markets.json` (slugs, incumbents, primary types):
 
@@ -137,7 +137,7 @@ python3 scripts/generate_us_primary_info.py
 
 ## Presidential info popover
 
-Interactive presidential labels use the same `.office-tag--interactive` popover as US primaries. Metadata is generated into `data/curated/presidential_info.json` for presidential elections within the **next 12 months** (`scripts/generate_presidential_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set in `data/config/presidential_markets.json`.
+Interactive presidential labels use the same `.office-tag--interactive` popover as US primaries. Metadata is generated into `data/curated/presidential_info.json` for presidential elections within the **next 12 months** (`scripts/generate_presidential_info.py`). Polymarket odds come from the daily snapshot in `data/market_odds.json` when a `polymarket_slug` is set in `data/config/presidential_markets.json`.
 
 Regenerate after updating presidential market slugs:
 
@@ -156,7 +156,7 @@ python3 scripts/generate_presidential_info.py
 
 ## German state info popover
 
-Interactive German state labels (`.office-tag--interactive`) show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/de_state_info.json` for German state elections within the **next 12 months** (`scripts/generate_de_state_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set in `data/config/de_state_markets.json`.
+Interactive German state labels (`.office-tag--interactive`) show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/de_state_info.json` for German state elections within the **next 12 months** (`scripts/generate_de_state_info.py`). Polymarket odds come from the daily snapshot in `data/market_odds.json` when a `polymarket_slug` is set in `data/config/de_state_markets.json`.
 
 Regenerate after updating German state market slugs:
 
@@ -175,7 +175,7 @@ python3 scripts/generate_de_state_info.py
 
 ## US governor info popover
 
-Interactive `Governor` labels in US midterm state sections show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/us_governor_info.json` for gubernatorial general elections within the **next 12 months** (`scripts/generate_us_governor_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set in `data/config/us_governor_markets.json`.
+Interactive `Governor` labels in US midterm state sections show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/us_governor_info.json` for gubernatorial general elections within the **next 12 months** (`scripts/generate_us_governor_info.py`). Polymarket odds come from the daily snapshot in `data/market_odds.json` when a `polymarket_slug` is set in `data/config/us_governor_markets.json`.
 
 Regenerate after updating governor market slugs:
 
@@ -199,7 +199,7 @@ python3 scripts/generate_us_governor_info.py
 
 ### Curated fields
 
-- `polymarket_slug` — live odds source (required for interactivity)
+- `polymarket_slug` — odds source slug (required for interactivity; prices are served from `data/market_odds.json`)
 - `odds_format` — `party` (default) or `candidates` for individual-candidate markets
 - `nominee_slugs` — optional Polymarket slugs for Republican/Democrat primary-winner markets (generated automatically)
 - `incumbents` — optional per-party incumbent surnames for party-format markets
@@ -218,7 +218,7 @@ python3 scripts/generate_us_governor_info.py
 
 ## US Senate info popover
 
-Interactive `Senate` labels in US midterm state sections show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/us_senate_info.json` for Senate general elections within the **next 12 months** (`scripts/generate_us_senate_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set in `data/config/us_senate_markets.json`.
+Interactive `Senate` labels in US midterm state sections show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/us_senate_info.json` for Senate general elections within the **next 12 months** (`scripts/generate_us_senate_info.py`). Polymarket odds come from the daily snapshot in `data/market_odds.json` when a `polymarket_slug` is set in `data/config/us_senate_markets.json`.
 
 Regenerate after updating Senate market slugs:
 
@@ -230,7 +230,7 @@ Display rules match the US governor popover (party labels with nominee surnames 
 
 ## National election info popover
 
-Interactive national legislative labels (`.office-tag--interactive`) show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/national_election_info.json` for national/federal legislative elections within the **next 12 months** (`scripts/generate_national_election_info.py`). Polymarket odds are fetched live from slugs in `data/config/national_election_markets.json`.
+Interactive national legislative labels (`.office-tag--interactive`) show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/national_election_info.json` for national/federal legislative elections within the **next 12 months** (`scripts/generate_national_election_info.py`). Polymarket odds come from the daily snapshot in `data/market_odds.json` using slugs from `data/config/national_election_markets.json`.
 
 Regenerate after updating national election market slugs:
 
@@ -278,7 +278,7 @@ Re-assess when adding new markets: `python3 scripts/assess_polymarket_competitiv
 
 ## Mayoral info popover
 
-Interactive `Mayor` labels show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/mayoral_info.json` for mayoral elections within the **next 12 months** (`scripts/generate_mayoral_info.py`). Polymarket odds are fetched live when a `polymarket_slug` is set in `data/config/mayoral_markets.json`.
+Interactive `Mayor` labels show a popover on hover (desktop) or tap (mobile). Metadata is generated into `data/curated/mayoral_info.json` for mayoral elections within the **next 12 months** (`scripts/generate_mayoral_info.py`). Polymarket odds come from the daily snapshot in `data/market_odds.json` when a `polymarket_slug` is set in `data/config/mayoral_markets.json`.
 
 Regenerate after updating mayoral market slugs:
 

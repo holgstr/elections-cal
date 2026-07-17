@@ -32,10 +32,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet data/market_prices/state.json data/market_suggestions.json data/market_odds_changes.json; then
+          if git diff --quiet data/market_prices/state.json data/market_suggestions.json data/market_odds_changes.json data/market_odds.json; then
             echo "No market price changes."
           else
-            git add data/market_prices/state.json data/market_suggestions.json data/market_odds_changes.json
+            git add data/market_prices/state.json data/market_suggestions.json data/market_odds_changes.json data/market_odds.json
             git commit -m "chore: refresh Polymarket market prices"
             REV=$(git rev-parse --short HEAD)
             printf '{\n  "rev": "%s"\n}\n' "$REV" > data/site-rev.json
