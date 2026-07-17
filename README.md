@@ -74,7 +74,7 @@ A separate workflow runs daily at 07:00 UTC:
 
 1. Regenerates Polymarket info files
 2. Runs `scripts/fetch_market_prices.py` to pull odds from Polymarket and detect ≥5pp moves since the last signaled price
-3. Commits `data/market_prices/state.json` and `data/market_suggestions.json` if changed
+3. Commits `data/market_prices/state.json`, `data/market_suggestions.json`, `data/market_odds_changes.json`, and `data/market_odds.json` if changed (popovers read the daily odds snapshot so visitors never need direct Polymarket access)
 
 Another workflow refreshes Google Trends interest weekly (Mondays 08:30 UTC):
 

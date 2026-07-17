@@ -11,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fetch_market_prices import (  # noqa: E402
     CHANGE_WINDOW_DAYS,
     ODDS_CHANGE_THRESHOLD_PP,
+    build_market_odds,
     compute_window_changes,
 )
 from market_registry import TrackedMarket  # noqa: E402
@@ -72,7 +73,48 @@ def test_live_price_recalculation_math() -> None:
     assert CHANGE_WINDOW_DAYS == 2
 
 
+def test_build_market_odds_from_snapshot() -> None:
+    market = TrackedMarket(
+        market_id="test:market",
+        slug="test-market",
+        category="de_state",
+        odds_format="party",
+        min_pct=10,
+        country_code="DE",
+        state_code="BE",
+        city_code=None,
+        contest="Abgeordnetenhaus",
+        market_label=None,
+        party=None,
+    )
+    snapshot = {
+        "date": "2026-07-17",
+        "markets": {
+            "test:market": {
+                "slug": "test-market",
+                "prices": {"CDU": 28.0, "AfD": 13.9},
+            }
+        },
+    }
+    errors: list[str] = []
+    output = build_market_odds(
+        [market],
+        snapshot,
+        "2026-07-17",
+        errors,
+        nominee_slugs=set(),
+        fetch_missing_nominees=False,
+    )
+
+    assert output["generated_at"] == "2026-07-17"
+    assert output["markets"] == 1
+    assert output["by_slug"]["test-market"]["odds_format"] == "party"
+    assert output["by_slug"]["test-market"]["prices"]["CDU"] == 28.0
+    assert errors == []
+
+
 if __name__ == "__main__":
     test_compute_window_changes_uses_reference_price()
     test_live_price_recalculation_math()
+    test_build_market_odds_from_snapshot()
     print("ok")
