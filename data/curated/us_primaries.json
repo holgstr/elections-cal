@@ -1518,6 +1518,24 @@
     "country_code": "US",
     "state": "Arizona",
     "state_code": "AZ",
+    "title": "Democratic AZ-04 Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "AZ-04"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-07-21",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Arizona",
+    "state_code": "AZ",
     "title": "Democratic Governor Primary",
     "type": "primary",
     "level": "state",
@@ -1528,6 +1546,24 @@
       "Governor"
     ],
     "party": "Democratic"
+  },
+  {
+    "date": "2026-07-21",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Arizona",
+    "state_code": "AZ",
+    "title": "Republican AZ-05 Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "AZ-05"
+    ],
+    "party": "Republican"
   },
   {
     "date": "2026-07-21",

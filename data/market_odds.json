@@ -1874,6 +1874,22 @@
         "Democrat": 3.55,
         "Republican": 94.15
       }
+    },
+    "az-04-democratic-primary-winner-20260630171843790": {
+      "odds_format": "candidates",
+      "prices": {
+        "Kai Newkirk": 6.7,
+        "Greg Stanton": 92.6
+      }
+    },
+    "az-05-republican-primary-winner": {
+      "odds_format": "candidates",
+      "prices": {
+        "Mark Lamb": 86.35,
+        "Jay Feely": 0.05,
+        "Travis Grantham": 0.05,
+        "Daniel Keenan": 13.0
+      }
     }
   }
 }

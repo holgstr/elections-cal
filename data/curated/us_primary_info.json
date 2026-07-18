@@ -22,6 +22,32 @@
     }
   },
   "AZ": {
+    "AZ-04": {
+      "primary_format": "party",
+      "primary_type": "semi-closed",
+      "primary_type_label": "Semi-closed primary",
+      "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
+      "parties": {
+        "Democratic": {
+          "polymarket_slug": "az-04-democratic-primary-winner-20260630171843790"
+        }
+      }
+    },
+    "AZ-05": {
+      "primary_format": "party",
+      "primary_type": "semi-closed",
+      "primary_type_label": "Semi-closed primary",
+      "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
+      "parties": {
+        "Republican": {
+          "polymarket_slug": "az-05-republican-primary-winner"
+        }
+      }
+    },
     "Governor": {
       "primary_format": "party",
       "primary_type": "semi-closed",

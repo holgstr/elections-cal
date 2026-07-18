@@ -69,6 +69,24 @@ SENATE_2026 = {
 
 PARTIES = ("Democratic", "Republican")
 
+# Notable House district primaries tracked on the calendar (with Polymarket odds).
+HOUSE_DISTRICT_PRIMARIES: list[dict[str, str]] = [
+    {
+        "state_code": "AZ",
+        "state": "Arizona",
+        "office": "AZ-04",
+        "party": "Democratic",
+        "date": "2026-07-21",
+    },
+    {
+        "state_code": "AZ",
+        "state": "Arizona",
+        "office": "AZ-05",
+        "party": "Republican",
+        "date": "2026-07-21",
+    },
+]
+
 
 def load_governor_states() -> dict[str, str]:
     states: dict[str, str] = {}
@@ -176,6 +194,17 @@ def main() -> None:
                         office="Governor",
                     )
                 )
+
+    for race in HOUSE_DISTRICT_PRIMARIES:
+        entries.append(
+            primary_entry(
+                date=race["date"],
+                state=race["state"],
+                state_code=race["state_code"],
+                party=race["party"],
+                office=race["office"],
+            )
+        )
 
     entries.sort(key=lambda item: (item["date"], item["state"], item["title"]))
     OUTPUT.write_text(json.dumps(entries, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
