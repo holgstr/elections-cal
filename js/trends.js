@@ -148,7 +148,24 @@ function linePath(points) {
     .join(" ");
 }
 
+/**
+ * Legend label: the human name tied to the Trends query (full name), not the
+ * short surname used in race titles / share bars.
+ * For search-term series that is the query string; for entities, topic title.
+ */
 function candidateDisplayName(candidate) {
+  const mid = (candidate?.mid || "").trim();
+  const usingEntity = candidate?.query_mode === "entity" && mid;
+  if (usingEntity) {
+    const topicTitle = (candidate?.topic_title || "").trim();
+    if (topicTitle) return topicTitle;
+  }
+  const name = (candidate?.name || "").trim();
+  if (name) return name;
+  const keyword = (candidate?.keyword || "").trim();
+  if (keyword && !keyword.startsWith("/m/") && !keyword.startsWith("/g/")) {
+    return keyword;
+  }
   return candidateShortName(candidate);
 }
 
