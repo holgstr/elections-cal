@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T17:22:13Z",
+  "generated_at": "2026-07-18T17:43:31Z",
   "source": "google_trends",
   "races": [
     {
@@ -9847,18 +9847,20 @@
       "end_date": "2026-07-18",
       "candidates": [
         {
-          "keyword": "Abdul El-Sayed",
+          "keyword": "/g/11c0q_hl_8",
           "label": "El-Sayed",
-          "query_mode": "search_term",
-          "resolve_source": "search_term",
+          "query_mode": "entity",
+          "resolve_source": "config",
           "name": "Abdul El-Sayed",
-          "resolve_note": "no confident political entity (top='Abdul El-Sayed' / 'Topic')"
+          "mid": "/g/11c0q_hl_8",
+          "topic_title": "Abdul El-Sayed",
+          "topic_type": "Politician"
         },
         {
-          "keyword": "Haley Stevens",
+          "keyword": "/g/11fjw095g8",
           "label": "Stevens",
-          "query_mode": "search_term",
-          "resolve_source": "race_fallback",
+          "query_mode": "entity",
+          "resolve_source": "config",
           "name": "Haley Stevens",
           "mid": "/g/11fjw095g8",
           "topic_title": "Haley Stevens",
@@ -9869,218 +9871,218 @@
         {
           "date": "2026-06-18",
           "values": {
-            "Abdul El-Sayed": 0,
-            "Haley Stevens": 0
+            "/g/11c0q_hl_8": 10,
+            "/g/11fjw095g8": 10
           }
         },
         {
           "date": "2026-06-19",
           "values": {
-            "Abdul El-Sayed": 0,
-            "Haley Stevens": 0
+            "/g/11c0q_hl_8": 13,
+            "/g/11fjw095g8": 0
           }
         },
         {
           "date": "2026-06-20",
           "values": {
-            "Abdul El-Sayed": 0,
-            "Haley Stevens": 12
+            "/g/11c0q_hl_8": 13,
+            "/g/11fjw095g8": 0
           }
         },
         {
           "date": "2026-06-21",
           "values": {
-            "Abdul El-Sayed": 0,
-            "Haley Stevens": 0
+            "/g/11c0q_hl_8": 10,
+            "/g/11fjw095g8": 13
           }
         },
         {
           "date": "2026-06-22",
           "values": {
-            "Abdul El-Sayed": 0,
-            "Haley Stevens": 0
+            "/g/11c0q_hl_8": 7,
+            "/g/11fjw095g8": 8
           }
         },
         {
           "date": "2026-06-23",
           "values": {
-            "Abdul El-Sayed": 15,
-            "Haley Stevens": 0
+            "/g/11c0q_hl_8": 18,
+            "/g/11fjw095g8": 9
           }
         },
         {
           "date": "2026-06-24",
           "values": {
-            "Abdul El-Sayed": 10,
-            "Haley Stevens": 22
+            "/g/11c0q_hl_8": 15,
+            "/g/11fjw095g8": 17
           }
         },
         {
           "date": "2026-06-25",
           "values": {
-            "Abdul El-Sayed": 32,
-            "Haley Stevens": 16
+            "/g/11c0q_hl_8": 26,
+            "/g/11fjw095g8": 12
           }
         },
         {
           "date": "2026-06-26",
           "values": {
-            "Abdul El-Sayed": 23,
-            "Haley Stevens": 18
+            "/g/11c0q_hl_8": 26,
+            "/g/11fjw095g8": 14
           }
         },
         {
           "date": "2026-06-27",
           "values": {
-            "Abdul El-Sayed": 34,
-            "Haley Stevens": 22
+            "/g/11c0q_hl_8": 36,
+            "/g/11fjw095g8": 19
           }
         },
         {
           "date": "2026-06-28",
           "values": {
-            "Abdul El-Sayed": 16,
-            "Haley Stevens": 28
+            "/g/11c0q_hl_8": 30,
+            "/g/11fjw095g8": 21
           }
         },
         {
           "date": "2026-06-29",
           "values": {
-            "Abdul El-Sayed": 20,
-            "Haley Stevens": 20
+            "/g/11c0q_hl_8": 26,
+            "/g/11fjw095g8": 15
           }
         },
         {
           "date": "2026-06-30",
           "values": {
-            "Abdul El-Sayed": 31,
-            "Haley Stevens": 26
+            "/g/11c0q_hl_8": 31,
+            "/g/11fjw095g8": 23
           }
         },
         {
           "date": "2026-07-01",
           "values": {
-            "Abdul El-Sayed": 31,
-            "Haley Stevens": 28
+            "/g/11c0q_hl_8": 32,
+            "/g/11fjw095g8": 22
           }
         },
         {
           "date": "2026-07-02",
           "values": {
-            "Abdul El-Sayed": 34,
-            "Haley Stevens": 29
+            "/g/11c0q_hl_8": 38,
+            "/g/11fjw095g8": 23
           }
         },
         {
           "date": "2026-07-03",
           "values": {
-            "Abdul El-Sayed": 26,
-            "Haley Stevens": 18
+            "/g/11c0q_hl_8": 40,
+            "/g/11fjw095g8": 11
           }
         },
         {
           "date": "2026-07-04",
           "values": {
-            "Abdul El-Sayed": 34,
-            "Haley Stevens": 19
+            "/g/11c0q_hl_8": 37,
+            "/g/11fjw095g8": 14
           }
         },
         {
           "date": "2026-07-05",
           "values": {
-            "Abdul El-Sayed": 46,
-            "Haley Stevens": 49
+            "/g/11c0q_hl_8": 60,
+            "/g/11fjw095g8": 37
           }
         },
         {
           "date": "2026-07-06",
           "values": {
-            "Abdul El-Sayed": 50,
-            "Haley Stevens": 56
+            "/g/11c0q_hl_8": 65,
+            "/g/11fjw095g8": 42
           }
         },
         {
           "date": "2026-07-07",
           "values": {
-            "Abdul El-Sayed": 53,
-            "Haley Stevens": 65
+            "/g/11c0q_hl_8": 68,
+            "/g/11fjw095g8": 49
           }
         },
         {
           "date": "2026-07-08",
           "values": {
-            "Abdul El-Sayed": 73,
-            "Haley Stevens": 100
+            "/g/11c0q_hl_8": 100,
+            "/g/11fjw095g8": 76
           }
         },
         {
           "date": "2026-07-09",
           "values": {
-            "Abdul El-Sayed": 49,
-            "Haley Stevens": 70
+            "/g/11c0q_hl_8": 66,
+            "/g/11fjw095g8": 60
           }
         },
         {
           "date": "2026-07-10",
           "values": {
-            "Abdul El-Sayed": 39,
-            "Haley Stevens": 45
+            "/g/11c0q_hl_8": 50,
+            "/g/11fjw095g8": 34
           }
         },
         {
           "date": "2026-07-11",
           "values": {
-            "Abdul El-Sayed": 31,
-            "Haley Stevens": 33
+            "/g/11c0q_hl_8": 40,
+            "/g/11fjw095g8": 26
           }
         },
         {
           "date": "2026-07-12",
           "values": {
-            "Abdul El-Sayed": 36,
-            "Haley Stevens": 33
+            "/g/11c0q_hl_8": 43,
+            "/g/11fjw095g8": 26
           }
         },
         {
           "date": "2026-07-13",
           "values": {
-            "Abdul El-Sayed": 46,
-            "Haley Stevens": 36
+            "/g/11c0q_hl_8": 48,
+            "/g/11fjw095g8": 28
           }
         },
         {
           "date": "2026-07-14",
           "values": {
-            "Abdul El-Sayed": 54,
-            "Haley Stevens": 46
+            "/g/11c0q_hl_8": 57,
+            "/g/11fjw095g8": 34
           }
         },
         {
           "date": "2026-07-15",
           "values": {
-            "Abdul El-Sayed": 36,
-            "Haley Stevens": 63
+            "/g/11c0q_hl_8": 49,
+            "/g/11fjw095g8": 48
           }
         },
         {
           "date": "2026-07-16",
           "values": {
-            "Abdul El-Sayed": 35,
-            "Haley Stevens": 67
+            "/g/11c0q_hl_8": 49,
+            "/g/11fjw095g8": 54
           }
         },
         {
           "date": "2026-07-17",
           "values": {
-            "Abdul El-Sayed": 43,
-            "Haley Stevens": 74
+            "/g/11c0q_hl_8": 54,
+            "/g/11fjw095g8": 55
           }
         },
         {
           "date": "2026-07-18",
           "values": {
-            "Abdul El-Sayed": 45,
-            "Haley Stevens": 67
+            "/g/11c0q_hl_8": 58,
+            "/g/11fjw095g8": 52
           }
         }
       ],
