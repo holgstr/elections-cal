@@ -24,6 +24,7 @@ const SCATTER = {
 
 let trendsData = null;
 let selectedRaceId = null;
+let selectedWatchlistRaceId = null;
 
 export async function loadTrendsData(fetcher = fetchJson) {
   try {
@@ -31,9 +32,13 @@ export async function loadTrendsData(fetcher = fetchJson) {
   } catch {
     trendsData = { races: [], generated_at: null };
   }
-  const races = visibleRaces(trendsData?.races);
+  const races = comparisonRaces(trendsData?.races);
   if (!races.some((race) => race.id === selectedRaceId)) {
     selectedRaceId = races[0]?.id ?? null;
+  }
+  const watched = watchlistRaces(trendsData?.races);
+  if (!watched.some((race) => race.id === selectedWatchlistRaceId)) {
+    selectedWatchlistRaceId = watched[0]?.id ?? null;
   }
   return trendsData;
 }
@@ -205,18 +210,26 @@ function resultPctForCandidate(result, candidate) {
 }
 
 /** Days used for relative search share: pre-election only (not race day). */
+function isTrailingWindow(race) {
+  return String(race?.window_mode || "").toLowerCase() === "trailing";
+}
+
 function searchShareDays(race) {
   const windowDays = race?.window_days || 30;
+  // Trailing windows already end on "today" (not election day), so use the
+  // full window. Election-anchored charts omit election day itself.
+  if (isTrailingWindow(race)) return Math.max(1, windowDays);
   return Math.max(1, windowDays - 1);
 }
 
 /**
- * Points for search-share area: the shareDays before election day
- * (election day itself is omitted).
+ * Points for search-share area.
+ * Election-anchored: the shareDays before election day (election day omitted).
+ * Trailing: the last shareDays points in the series.
  */
-function pointsForSearchShare(points, electionDate, shareDays) {
+function pointsForSearchShare(points, electionDate, shareDays, race = null) {
   const all = points || [];
-  if (!electionDate) {
+  if (isTrailingWindow(race) || !electionDate) {
     return shareDays > 0 ? all.slice(-shareDays) : all;
   }
   const before = all.filter((point) => point.date && point.date < electionDate);
@@ -232,7 +245,7 @@ function computeRelativeShares(candidateSeries, race) {
   const electionDate = race?.election_date || null;
   const shareDays = searchShareDays(race);
   const rows = (candidateSeries || []).map(({ candidate, color, points }) => {
-    const sharePoints = pointsForSearchShare(points, electionDate, shareDays);
+    const sharePoints = pointsForSearchShare(points, electionDate, shareDays, race);
     const sum = sharePoints.reduce((acc, point) => {
       const value = typeof point.value === "number" ? point.value : 0;
       return acc + Math.max(0, value);
@@ -492,6 +505,11 @@ function isRaceExcluded(race) {
   return Boolean(race?.exclude && typeof race.exclude === "object");
 }
 
+/** Current races of interest shown in the watchlist dropdown. */
+function isWatchlistRace(race) {
+  return Boolean(race?.watchlist);
+}
+
 /** Races shown in the Trends dropdown (excludes clear non-deciding primaries). */
 function visibleRaces(races) {
   return (races || [])
@@ -502,6 +520,27 @@ function visibleRaces(races) {
         sensitivity: "base",
       })
     );
+}
+
+/** Historical / completed races for the comparison dropdown + scatter plots. */
+function comparisonRaces(races) {
+  return visibleRaces(races).filter((race) => !isWatchlistRace(race));
+}
+
+/** Watchlist races sorted by soonest election day. */
+function watchlistRaces(races) {
+  return (races || [])
+    .filter((race) => isWatchlistRace(race) && !isRaceExcluded(race))
+    .slice()
+    .sort((a, b) => {
+      const dateCmp = String(a.election_date || "").localeCompare(
+        String(b.election_date || "")
+      );
+      if (dateCmp) return dateCmp;
+      return raceOptionLabel(a).localeCompare(raceOptionLabel(b), undefined, {
+        sensitivity: "base",
+      });
+    });
 }
 
 /**
@@ -839,10 +878,16 @@ function wireChartInteractions(wrap, model) {
 }
 
 function renderRaceCard(race) {
+  const trailing = isTrailingWindow(race);
+  const windowLabel = race.window_days
+    ? trailing
+      ? `Last ${race.window_days} days`
+      : `${race.window_days}-day run-up`
+    : null;
   const subtitle = [
     locationLine(race),
     race.election_date ? `Race day ${formatLongDate(race.election_date)}` : null,
-    race.window_days ? `${race.window_days}-day run-up` : null,
+    windowLabel,
   ]
     .filter(Boolean)
     .join(" · ");
@@ -861,6 +906,9 @@ function renderRaceCard(race) {
   }
 
   const shareDays = searchShareDays(race);
+  const footnote = trailing
+    ? `Search share over the last ${shareDays} days.`
+    : `Search share excludes election day (${shareDays}d prior).`;
   return `
     <article class="trends-card" data-race-id="${escapeHtml(race.id)}">
       <header class="trends-card-header">
@@ -873,7 +921,7 @@ function renderRaceCard(race) {
         <div class="trends-tooltip" hidden></div>
         <div class="trends-legend">${buildLegend(model.candidateSeries)}</div>
       </div>
-      <p class="trends-share-footnote">Search share excludes election day (${shareDays}d prior).</p>
+      <p class="trends-share-footnote">${escapeHtml(footnote)}</p>
     </article>
   `;
 }
@@ -1157,7 +1205,27 @@ function raceOptionLabel(race) {
   return tag || race.title || race.id || "Race";
 }
 
+function raceSelectOptions(races, selectedId) {
+  return races
+    .map(
+      (race) => `
+        <option value="${escapeHtml(race.id)}"${race.id === selectedId ? " selected" : ""}>
+          ${escapeHtml(raceOptionLabel(race))}
+        </option>
+      `
+    )
+    .join("");
+}
+
 function bindInteractions(container, races) {
+  const watchSelect = container.querySelector("[data-trends-watchlist-select]");
+  if (watchSelect) {
+    watchSelect.addEventListener("change", () => {
+      selectedWatchlistRaceId = watchSelect.value;
+      renderTrends(container);
+    });
+  }
+
   const select = container.querySelector("[data-trends-race-select]");
   if (select) {
     select.addEventListener("change", () => {
@@ -1180,8 +1248,9 @@ export async function renderTrends(container) {
   if (!container) return;
 
   const allRaces = trendsData?.races || [];
-  const races = visibleRaces(allRaces);
-  if (!races.length) {
+  const races = comparisonRaces(allRaces);
+  const watched = watchlistRaces(allRaces);
+  if (!races.length && !watched.length) {
     const updated = trendsData?.generated_at
       ? `Last checked ${trendsData.generated_at}. `
       : "";
@@ -1189,41 +1258,59 @@ export async function renderTrends(container) {
     return;
   }
 
-  if (!races.some((race) => race.id === selectedRaceId)) {
+  if (races.length && !races.some((race) => race.id === selectedRaceId)) {
     selectedRaceId = races[0].id;
   }
-  const activeRace = races.find((race) => race.id === selectedRaceId) || races[0];
+  if (watched.length && !watched.some((race) => race.id === selectedWatchlistRaceId)) {
+    selectedWatchlistRaceId = watched[0].id;
+  }
 
-  const options = races
-    .map(
-      (race) => `
-        <option value="${escapeHtml(race.id)}"${race.id === activeRace.id ? " selected" : ""}>
-          ${escapeHtml(raceOptionLabel(race))}
-        </option>
-      `
-    )
-    .join("");
+  const activeRace = races.find((race) => race.id === selectedRaceId) || races[0] || null;
+  const activeWatch =
+    watched.find((race) => race.id === selectedWatchlistRaceId) || watched[0] || null;
 
-  container.innerHTML = `
-    <div class="trends-toolbar">
-      <label class="trends-race-label" for="trends-race-select">Race</label>
-      <select id="trends-race-select" class="trends-race-select" data-trends-race-select>
-        ${options}
-      </select>
+  const watchlistBlock = activeWatch
+    ? `
+    <div class="trends-section">
+      <div class="trends-toolbar">
+        <label class="trends-race-label" for="trends-watchlist-select">Current races</label>
+        <select id="trends-watchlist-select" class="trends-race-select" data-trends-watchlist-select>
+          ${raceSelectOptions(watched, activeWatch.id)}
+        </select>
+      </div>
+      <div class="trends-list">
+        ${renderRaceCard(activeWatch)}
+      </div>
     </div>
-    <div class="trends-list">
-      ${renderRaceCard(activeRace)}
-      ${buildCorrelationPanel(races)}
-      ${buildLeadDaysMarginPanel(races)}
-    </div>
-  `;
+  `
+    : "";
 
-  bindInteractions(container, [activeRace]);
-  wireScatterInteractions(container, races);
+  const comparisonBlock = activeRace
+    ? `
+    <div class="trends-section">
+      <div class="trends-toolbar">
+        <label class="trends-race-label" for="trends-race-select">Race comparison</label>
+        <select id="trends-race-select" class="trends-race-select" data-trends-race-select>
+          ${raceSelectOptions(races, activeRace.id)}
+        </select>
+      </div>
+      <div class="trends-list">
+        ${renderRaceCard(activeRace)}
+        ${buildCorrelationPanel(races)}
+        ${buildLeadDaysMarginPanel(races)}
+      </div>
+    </div>
+  `
+    : "";
+
+  container.innerHTML = `${watchlistBlock}${comparisonBlock}`;
+
+  bindInteractions(container, [activeWatch, activeRace].filter(Boolean));
+  if (races.length) wireScatterInteractions(container, races);
 }
 
 export function trendsFooterText() {
   if (!trendsData?.generated_at) return "";
-  const count = visibleRaces(trendsData.races).length;
+  const count = comparisonRaces(trendsData.races).length + watchlistRaces(trendsData.races).length;
   return `Trends updated ${trendsData.generated_at} · ${count} race${count === 1 ? "" : "s"}`;
 }

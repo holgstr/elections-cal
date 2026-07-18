@@ -101,8 +101,22 @@ def parse_iso_date(value: str) -> date:
     return date.fromisoformat(value)
 
 
-def window_bounds(election_date: date, window_days: int) -> tuple[date, date]:
-    """Inclusive window ending on election day: (election - days) .. election."""
+def window_bounds(
+    election_date: date,
+    window_days: int,
+    window_mode: str = "election",
+    today: date | None = None,
+) -> tuple[date, date]:
+    """Return inclusive (start, end) for a Trends fetch window.
+
+    ``election`` (default): ends on election day — (election - days) .. election.
+    ``trailing``: last ``window_days`` ending today (or election day if sooner).
+    """
+    mode = (window_mode or "election").strip().lower()
+    if mode == "trailing":
+        end = min(today or date.today(), election_date)
+        start = end - timedelta(days=window_days)
+        return start, end
     end = election_date
     start = election_date - timedelta(days=window_days)
     return start, end
@@ -508,7 +522,8 @@ def apply_race_query_mode(plans: list[dict]) -> list[dict]:
 def fetch_race(client: TrendsClient, race: dict) -> dict:
     election_date = parse_iso_date(race["election_date"])
     window_days = int(race.get("window_days", 30))
-    start, end = window_bounds(election_date, window_days)
+    window_mode = str(race.get("window_mode") or "election").strip().lower()
+    start, end = window_bounds(election_date, window_days, window_mode)
     keyword_rows = race["keywords"]
     geo = race.get("geo") or ""
 
@@ -529,7 +544,7 @@ def fetch_race(client: TrendsClient, race: dict) -> dict:
 
     print(
         f"Fetching {race['id']}: {', '.join(display)} "
-        f"geo={geo or 'WORLD'} {start}→{end}"
+        f"geo={geo or 'WORLD'} mode={window_mode} {start}→{end}"
     )
     series = client.interest_over_time(queries, geo=geo, start=start, end=end)
     if series_keys != queries:
@@ -567,6 +582,7 @@ def fetch_race(client: TrendsClient, race: dict) -> dict:
         "state_code": race.get("state_code"),
         "geo": geo,
         "window_days": window_days,
+        "window_mode": window_mode,
         "start_date": start.isoformat(),
         "end_date": end.isoformat(),
         "candidates": candidates,
@@ -578,6 +594,9 @@ def fetch_race(client: TrendsClient, race: dict) -> dict:
     # Optional exclusion: primary that clearly does not decide the office winner.
     if isinstance(race.get("exclude"), dict):
         out["exclude"] = race["exclude"]
+    # Watchlist races appear in the Trends "current races" dropdown.
+    if race.get("watchlist"):
+        out["watchlist"] = True
     return out
 
 
@@ -618,6 +637,14 @@ def main(argv: list[str] | None = None) -> int:
         help="Print Trends autocomplete topics (person/entity mids) and exit. "
         "Repeatable.",
     )
+    parser.add_argument(
+        "--only",
+        metavar="ID",
+        action="append",
+        default=[],
+        help="Fetch only these race ids (repeatable). Merges into existing "
+        "data/trends.json when present; otherwise writes only these races.",
+    )
     args = parser.parse_args(argv)
 
     if args.suggest:
@@ -627,6 +654,20 @@ def main(argv: list[str] | None = None) -> int:
     if not isinstance(races_config, list) or not races_config:
         print(f"No races configured in {CONFIG_PATH}", file=sys.stderr)
         return 1
+
+    only_ids = {race_id.strip() for race_id in args.only if race_id and race_id.strip()}
+    if only_ids:
+        races_config = [race for race in races_config if race.get("id") in only_ids]
+        missing = only_ids - {race.get("id") for race in races_config}
+        if missing:
+            print(
+                f"Unknown race id(s) in --only: {', '.join(sorted(missing))}",
+                file=sys.stderr,
+            )
+            return 1
+        if not races_config:
+            print("No races matched --only.", file=sys.stderr)
+            return 1
 
     client = TrendsClient()
     races: list[dict] = []
@@ -645,6 +686,35 @@ def main(argv: list[str] | None = None) -> int:
     if not races:
         print("No Trends data fetched.", file=sys.stderr)
         return 1
+
+    if only_ids and OUTPUT_PATH.exists():
+        try:
+            existing = load_json(OUTPUT_PATH)
+        except Exception:  # noqa: BLE001
+            existing = {}
+        prior = existing.get("races") if isinstance(existing, dict) else None
+        if isinstance(prior, list):
+            by_id = {
+                race.get("id"): race
+                for race in prior
+                if isinstance(race, dict) and race.get("id")
+            }
+            for race in races:
+                by_id[race["id"]] = race
+            # Preserve prior order; append newly added ids at the end.
+            ordered: list[dict] = []
+            seen: set[str] = set()
+            for race in prior:
+                race_id = race.get("id") if isinstance(race, dict) else None
+                if not race_id or race_id in seen:
+                    continue
+                ordered.append(by_id[race_id])
+                seen.add(race_id)
+            for race in races:
+                if race["id"] not in seen:
+                    ordered.append(race)
+                    seen.add(race["id"])
+            races = ordered
 
     payload = {
         "generated_at": datetime.now(timezone.utc)

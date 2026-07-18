@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T23:57:22Z",
+  "generated_at": "2026-07-18T17:22:13Z",
   "source": "google_trends",
   "races": [
     {
@@ -9032,6 +9032,1059 @@
           }
         ]
       }
+    },
+    {
+      "id": "wi-dem-governor-primary-2026",
+      "title": "Wisconsin Democratic Governor Primary",
+      "election_date": "2026-08-11",
+      "country_code": "US",
+      "state_code": "WI",
+      "geo": "US-WI",
+      "window_days": 30,
+      "window_mode": "trailing",
+      "start_date": "2026-06-18",
+      "end_date": "2026-07-18",
+      "candidates": [
+        {
+          "keyword": "/g/11jnpqr8dw",
+          "label": "Hong",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Francesca Hong",
+          "mid": "/g/11jnpqr8dw",
+          "topic_title": "Francesca Hong",
+          "topic_type": "Member of Wisconsin State Assembly"
+        },
+        {
+          "keyword": "/g/11c2q3zj0w",
+          "label": "Crowley",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "David Crowley",
+          "mid": "/g/11c2q3zj0w",
+          "topic_title": "David Crowley",
+          "topic_type": "Milwaukee County Executive"
+        },
+        {
+          "keyword": "/m/0l8lszd",
+          "label": "Barnes",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Mandela Barnes",
+          "mid": "/m/0l8lszd",
+          "topic_title": "Mandela Barnes",
+          "topic_type": "Former Lieutenant Governor of Wisconsin"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-06-18",
+          "values": {
+            "/g/11jnpqr8dw": 24,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/g/11jnpqr8dw": 28,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "/g/11jnpqr8dw": 26,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 31,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "/g/11jnpqr8dw": 25,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "/g/11jnpqr8dw": 59,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "/g/11jnpqr8dw": 66,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-07-01",
+          "values": {
+            "/g/11jnpqr8dw": 48,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-07-02",
+          "values": {
+            "/g/11jnpqr8dw": 34,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-07-04",
+          "values": {
+            "/g/11jnpqr8dw": 29,
+            "/g/11c2q3zj0w": 6,
+            "/m/0l8lszd": 9
+          }
+        },
+        {
+          "date": "2026-07-05",
+          "values": {
+            "/g/11jnpqr8dw": 25,
+            "/g/11c2q3zj0w": 5,
+            "/m/0l8lszd": 10
+          }
+        },
+        {
+          "date": "2026-07-06",
+          "values": {
+            "/g/11jnpqr8dw": 35,
+            "/g/11c2q3zj0w": 4,
+            "/m/0l8lszd": 10
+          }
+        },
+        {
+          "date": "2026-07-07",
+          "values": {
+            "/g/11jnpqr8dw": 37,
+            "/g/11c2q3zj0w": 6,
+            "/m/0l8lszd": 8
+          }
+        },
+        {
+          "date": "2026-07-08",
+          "values": {
+            "/g/11jnpqr8dw": 41,
+            "/g/11c2q3zj0w": 28,
+            "/m/0l8lszd": 18
+          }
+        },
+        {
+          "date": "2026-07-09",
+          "values": {
+            "/g/11jnpqr8dw": 43,
+            "/g/11c2q3zj0w": 20,
+            "/m/0l8lszd": 27
+          }
+        },
+        {
+          "date": "2026-07-10",
+          "values": {
+            "/g/11jnpqr8dw": 34,
+            "/g/11c2q3zj0w": 6,
+            "/m/0l8lszd": 18
+          }
+        },
+        {
+          "date": "2026-07-11",
+          "values": {
+            "/g/11jnpqr8dw": 26,
+            "/g/11c2q3zj0w": 4,
+            "/m/0l8lszd": 13
+          }
+        },
+        {
+          "date": "2026-07-12",
+          "values": {
+            "/g/11jnpqr8dw": 24,
+            "/g/11c2q3zj0w": 3,
+            "/m/0l8lszd": 12
+          }
+        },
+        {
+          "date": "2026-07-13",
+          "values": {
+            "/g/11jnpqr8dw": 30,
+            "/g/11c2q3zj0w": 4,
+            "/m/0l8lszd": 16
+          }
+        },
+        {
+          "date": "2026-07-14",
+          "values": {
+            "/g/11jnpqr8dw": 38,
+            "/g/11c2q3zj0w": 5,
+            "/m/0l8lszd": 21
+          }
+        },
+        {
+          "date": "2026-07-15",
+          "values": {
+            "/g/11jnpqr8dw": 34,
+            "/g/11c2q3zj0w": 4,
+            "/m/0l8lszd": 18
+          }
+        },
+        {
+          "date": "2026-07-16",
+          "values": {
+            "/g/11jnpqr8dw": 45,
+            "/g/11c2q3zj0w": 4,
+            "/m/0l8lszd": 19
+          }
+        },
+        {
+          "date": "2026-07-17",
+          "values": {
+            "/g/11jnpqr8dw": 70,
+            "/g/11c2q3zj0w": 46,
+            "/m/0l8lszd": 40
+          }
+        },
+        {
+          "date": "2026-07-18",
+          "values": {
+            "/g/11jnpqr8dw": 84,
+            "/g/11c2q3zj0w": 100,
+            "/m/0l8lszd": 36
+          }
+        }
+      ],
+      "watchlist": true
+    },
+    {
+      "id": "az-cd4-dem-primary-2026",
+      "title": "Arizona CD-4 Democratic Primary",
+      "election_date": "2026-07-21",
+      "country_code": "US",
+      "state_code": "AZ",
+      "geo": "US-AZ",
+      "window_days": 30,
+      "window_mode": "trailing",
+      "start_date": "2026-06-18",
+      "end_date": "2026-07-18",
+      "candidates": [
+        {
+          "keyword": "/m/0hgrxqb",
+          "label": "Stanton",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Greg Stanton",
+          "mid": "/m/0hgrxqb",
+          "topic_title": "Greg Stanton",
+          "topic_type": "United States Representative"
+        },
+        {
+          "keyword": "/g/11f0z7tgql",
+          "label": "Newkirk",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Kai Newkirk",
+          "mid": "/g/11f0z7tgql",
+          "topic_title": "Kai Newkirk",
+          "topic_type": "Activist"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-06-18",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-07-01",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 100
+          }
+        },
+        {
+          "date": "2026-07-02",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-07-04",
+          "values": {
+            "/m/0hgrxqb": 18,
+            "/g/11f0z7tgql": 25
+          }
+        },
+        {
+          "date": "2026-07-05",
+          "values": {
+            "/m/0hgrxqb": 26,
+            "/g/11f0z7tgql": 30
+          }
+        },
+        {
+          "date": "2026-07-06",
+          "values": {
+            "/m/0hgrxqb": 19,
+            "/g/11f0z7tgql": 32
+          }
+        },
+        {
+          "date": "2026-07-07",
+          "values": {
+            "/m/0hgrxqb": 39,
+            "/g/11f0z7tgql": 48
+          }
+        },
+        {
+          "date": "2026-07-08",
+          "values": {
+            "/m/0hgrxqb": 39,
+            "/g/11f0z7tgql": 50
+          }
+        },
+        {
+          "date": "2026-07-09",
+          "values": {
+            "/m/0hgrxqb": 31,
+            "/g/11f0z7tgql": 54
+          }
+        },
+        {
+          "date": "2026-07-10",
+          "values": {
+            "/m/0hgrxqb": 30,
+            "/g/11f0z7tgql": 36
+          }
+        },
+        {
+          "date": "2026-07-11",
+          "values": {
+            "/m/0hgrxqb": 34,
+            "/g/11f0z7tgql": 42
+          }
+        },
+        {
+          "date": "2026-07-12",
+          "values": {
+            "/m/0hgrxqb": 40,
+            "/g/11f0z7tgql": 43
+          }
+        },
+        {
+          "date": "2026-07-13",
+          "values": {
+            "/m/0hgrxqb": 43,
+            "/g/11f0z7tgql": 45
+          }
+        },
+        {
+          "date": "2026-07-14",
+          "values": {
+            "/m/0hgrxqb": 59,
+            "/g/11f0z7tgql": 64
+          }
+        },
+        {
+          "date": "2026-07-15",
+          "values": {
+            "/m/0hgrxqb": 32,
+            "/g/11f0z7tgql": 31
+          }
+        },
+        {
+          "date": "2026-07-16",
+          "values": {
+            "/m/0hgrxqb": 36,
+            "/g/11f0z7tgql": 27
+          }
+        },
+        {
+          "date": "2026-07-17",
+          "values": {
+            "/m/0hgrxqb": 44,
+            "/g/11f0z7tgql": 39
+          }
+        },
+        {
+          "date": "2026-07-18",
+          "values": {
+            "/m/0hgrxqb": 28,
+            "/g/11f0z7tgql": 35
+          }
+        }
+      ],
+      "watchlist": true
+    },
+    {
+      "id": "az-cd5-gop-primary-2026",
+      "title": "Arizona CD-5 Republican Primary",
+      "election_date": "2026-07-21",
+      "country_code": "US",
+      "state_code": "AZ",
+      "geo": "US-AZ",
+      "window_days": 30,
+      "window_mode": "trailing",
+      "start_date": "2026-06-18",
+      "end_date": "2026-07-18",
+      "candidates": [
+        {
+          "keyword": "Mark Lamb",
+          "label": "Lamb",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Mark Lamb",
+          "mid": "/g/11j9cvygs9",
+          "topic_title": "Mark Lamb",
+          "topic_type": "Sheriff"
+        },
+        {
+          "keyword": "Daniel Keenan",
+          "label": "Keenan",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Daniel Keenan",
+          "resolve_note": "no confident political entity (top='Dan Savage' / 'American author')"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-06-18",
+          "values": {
+            "Mark Lamb": 100,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "Mark Lamb": 93,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "Mark Lamb": 58,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "Mark Lamb": 86,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-07-01",
+          "values": {
+            "Mark Lamb": 71,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-07-02",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-07-04",
+          "values": {
+            "Mark Lamb": 17,
+            "Daniel Keenan": 19
+          }
+        },
+        {
+          "date": "2026-07-05",
+          "values": {
+            "Mark Lamb": 22,
+            "Daniel Keenan": 23
+          }
+        },
+        {
+          "date": "2026-07-06",
+          "values": {
+            "Mark Lamb": 19,
+            "Daniel Keenan": 26
+          }
+        },
+        {
+          "date": "2026-07-07",
+          "values": {
+            "Mark Lamb": 31,
+            "Daniel Keenan": 21
+          }
+        },
+        {
+          "date": "2026-07-08",
+          "values": {
+            "Mark Lamb": 37,
+            "Daniel Keenan": 18
+          }
+        },
+        {
+          "date": "2026-07-09",
+          "values": {
+            "Mark Lamb": 29,
+            "Daniel Keenan": 16
+          }
+        },
+        {
+          "date": "2026-07-10",
+          "values": {
+            "Mark Lamb": 35,
+            "Daniel Keenan": 17
+          }
+        },
+        {
+          "date": "2026-07-11",
+          "values": {
+            "Mark Lamb": 30,
+            "Daniel Keenan": 18
+          }
+        },
+        {
+          "date": "2026-07-12",
+          "values": {
+            "Mark Lamb": 32,
+            "Daniel Keenan": 15
+          }
+        },
+        {
+          "date": "2026-07-13",
+          "values": {
+            "Mark Lamb": 38,
+            "Daniel Keenan": 17
+          }
+        },
+        {
+          "date": "2026-07-14",
+          "values": {
+            "Mark Lamb": 41,
+            "Daniel Keenan": 26
+          }
+        },
+        {
+          "date": "2026-07-15",
+          "values": {
+            "Mark Lamb": 33,
+            "Daniel Keenan": 11
+          }
+        },
+        {
+          "date": "2026-07-16",
+          "values": {
+            "Mark Lamb": 42,
+            "Daniel Keenan": 13
+          }
+        },
+        {
+          "date": "2026-07-17",
+          "values": {
+            "Mark Lamb": 45,
+            "Daniel Keenan": 17
+          }
+        },
+        {
+          "date": "2026-07-18",
+          "values": {
+            "Mark Lamb": 44,
+            "Daniel Keenan": 12
+          }
+        }
+      ],
+      "watchlist": true
+    },
+    {
+      "id": "mi-dem-senate-primary-2026",
+      "title": "Michigan Democratic Senate Primary",
+      "election_date": "2026-08-04",
+      "country_code": "US",
+      "state_code": "MI",
+      "geo": "US-MI",
+      "window_days": 30,
+      "window_mode": "trailing",
+      "start_date": "2026-06-18",
+      "end_date": "2026-07-18",
+      "candidates": [
+        {
+          "keyword": "Abdul El-Sayed",
+          "label": "El-Sayed",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Abdul El-Sayed",
+          "resolve_note": "no confident political entity (top='Abdul El-Sayed' / 'Topic')"
+        },
+        {
+          "keyword": "Haley Stevens",
+          "label": "Stevens",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Haley Stevens",
+          "mid": "/g/11fjw095g8",
+          "topic_title": "Haley Stevens",
+          "topic_type": "United States Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-06-18",
+          "values": {
+            "Abdul El-Sayed": 0,
+            "Haley Stevens": 0
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "Abdul El-Sayed": 0,
+            "Haley Stevens": 0
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "Abdul El-Sayed": 0,
+            "Haley Stevens": 12
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "Abdul El-Sayed": 0,
+            "Haley Stevens": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "Abdul El-Sayed": 0,
+            "Haley Stevens": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "Abdul El-Sayed": 15,
+            "Haley Stevens": 0
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "Abdul El-Sayed": 10,
+            "Haley Stevens": 22
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "Abdul El-Sayed": 32,
+            "Haley Stevens": 16
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "Abdul El-Sayed": 23,
+            "Haley Stevens": 18
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "Abdul El-Sayed": 34,
+            "Haley Stevens": 22
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "Abdul El-Sayed": 16,
+            "Haley Stevens": 28
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "Abdul El-Sayed": 20,
+            "Haley Stevens": 20
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "Abdul El-Sayed": 31,
+            "Haley Stevens": 26
+          }
+        },
+        {
+          "date": "2026-07-01",
+          "values": {
+            "Abdul El-Sayed": 31,
+            "Haley Stevens": 28
+          }
+        },
+        {
+          "date": "2026-07-02",
+          "values": {
+            "Abdul El-Sayed": 34,
+            "Haley Stevens": 29
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "values": {
+            "Abdul El-Sayed": 26,
+            "Haley Stevens": 18
+          }
+        },
+        {
+          "date": "2026-07-04",
+          "values": {
+            "Abdul El-Sayed": 34,
+            "Haley Stevens": 19
+          }
+        },
+        {
+          "date": "2026-07-05",
+          "values": {
+            "Abdul El-Sayed": 46,
+            "Haley Stevens": 49
+          }
+        },
+        {
+          "date": "2026-07-06",
+          "values": {
+            "Abdul El-Sayed": 50,
+            "Haley Stevens": 56
+          }
+        },
+        {
+          "date": "2026-07-07",
+          "values": {
+            "Abdul El-Sayed": 53,
+            "Haley Stevens": 65
+          }
+        },
+        {
+          "date": "2026-07-08",
+          "values": {
+            "Abdul El-Sayed": 73,
+            "Haley Stevens": 100
+          }
+        },
+        {
+          "date": "2026-07-09",
+          "values": {
+            "Abdul El-Sayed": 49,
+            "Haley Stevens": 70
+          }
+        },
+        {
+          "date": "2026-07-10",
+          "values": {
+            "Abdul El-Sayed": 39,
+            "Haley Stevens": 45
+          }
+        },
+        {
+          "date": "2026-07-11",
+          "values": {
+            "Abdul El-Sayed": 31,
+            "Haley Stevens": 33
+          }
+        },
+        {
+          "date": "2026-07-12",
+          "values": {
+            "Abdul El-Sayed": 36,
+            "Haley Stevens": 33
+          }
+        },
+        {
+          "date": "2026-07-13",
+          "values": {
+            "Abdul El-Sayed": 46,
+            "Haley Stevens": 36
+          }
+        },
+        {
+          "date": "2026-07-14",
+          "values": {
+            "Abdul El-Sayed": 54,
+            "Haley Stevens": 46
+          }
+        },
+        {
+          "date": "2026-07-15",
+          "values": {
+            "Abdul El-Sayed": 36,
+            "Haley Stevens": 63
+          }
+        },
+        {
+          "date": "2026-07-16",
+          "values": {
+            "Abdul El-Sayed": 35,
+            "Haley Stevens": 67
+          }
+        },
+        {
+          "date": "2026-07-17",
+          "values": {
+            "Abdul El-Sayed": 43,
+            "Haley Stevens": 74
+          }
+        },
+        {
+          "date": "2026-07-18",
+          "values": {
+            "Abdul El-Sayed": 45,
+            "Haley Stevens": 67
+          }
+        }
+      ],
+      "watchlist": true
     }
   ]
 }
