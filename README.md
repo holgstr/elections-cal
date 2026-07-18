@@ -95,8 +95,14 @@ python3 scripts/fetch_google_trends.py --suggest "Julie Gonzales"
 python3 scripts/fetch_google_trends.py
 ```
 
-For a new race, either pin `mid` after `--suggest`, or omit `mid` and let the pipeline auto-resolve when confidence is high. Max 5 candidates per race. The Trends tab shows a race dropdown labeled by candidate names (e.g. `Hickenlooper - Gonzales (CO US Senate 26)`), each candidate’s Knowledge Graph type in parentheses in the legend (e.g. `Hickenlooper (United States Senator)`, or red `raw` for search-term fallback), a relative search-share summary (area under the displayed curves, rescaled to 100%), and day-level hover values.
+For a new race, either pin `mid` after `--suggest`, or omit `mid` and let the pipeline auto-resolve when confidence is high. Max 5 candidates per race. Set `"watchlist": true` and `"window_mode": "trailing"` for current races of interest (last N days ending today); those appear in a separate **Current races** dropdown above the historical race-comparison chart. The comparison dropdown is labeled by candidate names (e.g. `Hickenlooper - Gonzales (CO US Senate 26)`), with each candidate’s Knowledge Graph type in parentheses in the legend (e.g. `Hickenlooper (United States Senator)`, or red `raw` for search-term fallback), a relative search-share summary (area under the displayed curves, rescaled to 100%), and day-level hover values.
 
 Entity `title` / `type` come from Trends autocomplete (`--suggest`); curated rows store them as `topic_title` / `topic_type` in `data/config/trends_races.json`, and the weekly fetch writes them through to `data/trends.json`.
 
-Daily 0–100 values can differ from a live Google Trends page even with the “same” window: the site uses a custom range ending on election day (not “Past 30 days” from today), Colorado geo, and Topics/mids when available. Google also re-samples over time.
+Daily 0–100 values can differ from a live Google Trends page even with the “same” window: completed races use a custom range ending on election day (not “Past 30 days” from today), while watchlist races use a trailing window ending today; geo follows each race’s state, and Topics/mids are used when available. Google also re-samples over time.
+
+Fetch a subset while iterating (merges into existing `data/trends.json`):
+
+```bash
+python3 scripts/fetch_google_trends.py --only az-cd4-dem-primary-2026 --only mi-dem-senate-primary-2026
+```
