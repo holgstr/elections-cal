@@ -39,7 +39,9 @@
   },
   "polymarket_slugs": {
     "AZ": {
-      "Governor": { "Republican": "arizona-governor-republican-primary-winner" }
+      "Governor": { "Republican": "arizona-governor-republican-primary-winner" },
+      "AZ-04": { "Democratic": "az-04-democratic-primary-winner-20260630171843790" },
+      "AZ-05": { "Republican": "az-05-republican-primary-winner" }
     },
     "KS": {
       "Governor": {

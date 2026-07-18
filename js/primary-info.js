@@ -246,9 +246,20 @@ export function getNationalElectionInfo(
   return nationalElectionInfo[countryCode][matchedLabel];
 }
 
+const HOUSE_DISTRICT_RE = /^[A-Z]{2}-\d{2}$/;
+
 export function labelToOffice(label) {
-  const match = label.match(/^(?:(?:Democratic|Republican)\s+)?(Governor|Senate)\s+Primary(?:\s+Runoff)?$/i);
-  return match ? match[1] : null;
+  const trimmed = label?.trim() || "";
+  if (HOUSE_DISTRICT_RE.test(trimmed)) return trimmed;
+
+  const match = trimmed.match(
+    /^(?:(?:Democratic|Republican)\s+)?(Governor|Senate|[A-Z]{2}-\d{2})\s+Primary(?:\s+Runoff)?$/i
+  );
+  if (!match) return null;
+
+  const office = match[1];
+  if (HOUSE_DISTRICT_RE.test(office.toUpperCase())) return office.toUpperCase();
+  return office;
 }
 
 export function hasPrimaryInfo(stateCode, label, electionDate) {

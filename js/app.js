@@ -317,11 +317,36 @@ const OFFICE_PRIMARY_LABEL = {
 
 const OFFICE_ORDER = ["Governor", "Senate"];
 const MIDTERM_OFFICE_ORDER = ["Governor", "State Legislature", "Senate"];
+const HOUSE_DISTRICT_RE = /^[A-Z]{2}-\d{2}$/;
 
 const PARTY_ORDER = ["Democratic", "Republican"];
 
 function mergeKey(election) {
   return `${election.date}|${election.country_code}|${election.state_code || election.city_code || ""}`;
+}
+
+function isHouseDistrictOffice(office) {
+  return HOUSE_DISTRICT_RE.test(office || "");
+}
+
+function orderedPrimaryOffices(partiesByOffice) {
+  const known = OFFICE_ORDER.filter((office) => partiesByOffice.has(office));
+  const rest = [...partiesByOffice.keys()]
+    .filter((office) => !OFFICE_ORDER.includes(office))
+    .sort((a, b) => a.localeCompare(b));
+  return [...known, ...rest];
+}
+
+function primaryOfficeLabel(office, parties) {
+  if (isHouseDistrictOffice(office)) return office;
+
+  const hasBothMajorParties =
+    parties.has("Democratic") && parties.has("Republican");
+  if (hasBothMajorParties) {
+    return OFFICE_PRIMARY_LABEL[office] || `${office} Primary`;
+  }
+
+  return null;
 }
 
 function compactPrimaryLabels(items) {
@@ -338,14 +363,13 @@ function compactPrimaryLabels(items) {
     }
   }
 
-  for (const office of OFFICE_ORDER) {
+  for (const office of orderedPrimaryOffices(partiesByOffice)) {
     const parties = partiesByOffice.get(office);
     if (!parties) continue;
 
-    const hasBothMajorParties =
-      parties.has("Democratic") && parties.has("Republican");
-    if (hasBothMajorParties) {
-      labels.push(OFFICE_PRIMARY_LABEL[office] || `${office} Primary`);
+    const sharedLabel = primaryOfficeLabel(office, parties);
+    if (sharedLabel) {
+      labels.push(sharedLabel);
       continue;
     }
 
@@ -357,6 +381,10 @@ function compactPrimaryLabels(items) {
 
   for (const item of [...runoffs].sort((a, b) => a.title.localeCompare(b.title))) {
     const office = (item.offices || [])[0];
+    if (isHouseDistrictOffice(office)) {
+      labels.push(`${office} Primary Runoff`);
+      continue;
+    }
     const officeName = office === "Governor" ? "Governor" : office || "Primary";
     labels.push(`${item.party} ${officeName} Primary Runoff`);
   }
@@ -508,8 +536,17 @@ function stateOfficeLabels(election) {
     election.type === "runoff"
   ) {
     const labels = [];
-    for (const office of OFFICE_ORDER) {
-      if (!offices.includes(office)) continue;
+    const ordered = [
+      ...OFFICE_ORDER.filter((office) => offices.includes(office)),
+      ...offices
+        .filter((office) => !OFFICE_ORDER.includes(office))
+        .sort((a, b) => a.localeCompare(b)),
+    ];
+    for (const office of ordered) {
+      if (isHouseDistrictOffice(office)) {
+        labels.push(office);
+        continue;
+      }
       labels.push(OFFICE_PRIMARY_LABEL[office] || `${office} Primary`);
     }
     if (labels.length) return labels;
