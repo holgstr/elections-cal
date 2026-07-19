@@ -2,10 +2,10 @@ name: Update Google Trends
 
 on:
   schedule:
-    # Shared with update-market-prices: 08:00 UTC and 20:00 UTC daily
-    # (20:00 UTC ≈ 23:00 Europe/Tallinn in EEST / 22:00 in EET; Actions cron is UTC-only)
-    - cron: "0 8 * * *"
-    - cron: "0 20 * * *"
+    # Shared with update-market-prices: 07:00 UTC and 19:00 UTC daily
+    # (19:00 UTC ≈ 22:00 Europe/Tallinn in EEST / 21:00 in EET; Actions cron is UTC-only)
+    - cron: "0 7 * * *"
+    - cron: "0 19 * * *"
   workflow_dispatch:
 
 permissions:
