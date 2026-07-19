@@ -2,8 +2,10 @@ name: Update Google Trends
 
 on:
   schedule:
-    # Weekly — Trends historical windows change slowly for past races.
-    - cron: "30 8 * * 1"
+    # Shared with update-market-prices: 08:00 UTC and 20:00 UTC daily
+    # (20:00 UTC ≈ 23:00 Europe/Tallinn in EEST / 22:00 in EET; Actions cron is UTC-only)
+    - cron: "0 8 * * *"
+    - cron: "0 20 * * *"
   workflow_dispatch:
 
 permissions:

@@ -70,18 +70,20 @@ The GitHub Actions workflow runs every Monday at 06:00 UTC:
 2. Commits updated `data/elections.json`, `data/meta.json`, and curated info JSON if changed
 3. A push to `main` (including data refresh commits) triggers GitHub Pages deployment
 
-A separate workflow runs daily at 07:00 UTC:
+Polymarket odds and Google Trends share the same twice-daily schedule — **08:00 UTC** and **20:00 UTC** (~23:00 Europe/Tallinn in EEST / 22:00 in EET; GitHub Actions cron is UTC-only).
+
+Market prices workflow:
 
 1. Regenerates Polymarket info files
 2. Runs `scripts/fetch_market_prices.py` to pull odds from Polymarket and detect ≥5pp moves since the last signaled price
 3. Commits `data/market_prices/state.json`, `data/market_suggestions.json`, `data/market_odds_changes.json`, and `data/market_odds.json` if changed (popovers read the daily odds snapshot so visitors never need direct Polymarket access)
 
-Another workflow refreshes Google Trends interest weekly (Mondays 08:30 UTC):
+Google Trends workflow:
 
 1. Runs `scripts/fetch_google_trends.py` for races listed in `data/config/trends_races.json`
 2. Commits `data/trends.json` when the series change
 
-Prefer Google Trends **person/topic entities** (Knowledge Graph mids like `/m/04g_1z`) when a confident political match exists. The weekly fetch pipeline:
+Prefer Google Trends **person/topic entities** (Knowledge Graph mids like `/m/04g_1z`) when a confident political match exists. The fetch pipeline:
 
 1. Uses a curated `"mid"` from config when present (stable pin).
 2. Otherwise calls Trends autocomplete on `"name"` / `"keyword"` and auto-adopts the top hit only if it looks like a political office/person.
