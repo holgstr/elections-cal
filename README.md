@@ -70,13 +70,13 @@ The GitHub Actions workflow runs every Monday at 06:00 UTC:
 2. Commits updated `data/elections.json`, `data/meta.json`, and curated info JSON if changed
 3. A push to `main` (including data refresh commits) triggers GitHub Pages deployment
 
-A separate workflow runs daily at 07:00 UTC:
+A separate workflow runs daily at 07:00 UTC and again at 20:00 UTC (~23:00 Europe/Tallinn in EEST / 22:00 in EET — GitHub Actions cron is UTC-only):
 
 1. Regenerates Polymarket info files
 2. Runs `scripts/fetch_market_prices.py` to pull odds from Polymarket and detect ≥5pp moves since the last signaled price
 3. Commits `data/market_prices/state.json`, `data/market_suggestions.json`, `data/market_odds_changes.json`, and `data/market_odds.json` if changed (popovers read the daily odds snapshot so visitors never need direct Polymarket access)
 
-Another workflow refreshes Google Trends interest weekly (Mondays 08:30 UTC):
+Another workflow refreshes Google Trends interest weekly (Mondays 08:30 UTC) and daily at 20:00 UTC (same Estonia evening target):
 
 1. Runs `scripts/fetch_google_trends.py` for races listed in `data/config/trends_races.json`
 2. Commits `data/trends.json` when the series change
