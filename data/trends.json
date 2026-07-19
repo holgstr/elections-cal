@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T20:39:38Z",
+  "generated_at": "2026-07-19T20:42:36Z",
   "source": "google_trends",
   "races": [
     {
@@ -8850,301 +8850,6 @@
       }
     },
     {
-      "id": "wi-dem-governor-primary-2026",
-      "title": "Wisconsin Democratic Governor Primary",
-      "election_date": "2026-08-11",
-      "country_code": "US",
-      "state_code": "WI",
-      "geo": "US-WI",
-      "window_days": 30,
-      "window_mode": "trailing",
-      "start_date": "2026-06-18",
-      "end_date": "2026-07-18",
-      "candidates": [
-        {
-          "keyword": "/g/11jnpqr8dw",
-          "label": "Hong",
-          "query_mode": "entity",
-          "resolve_source": "config",
-          "name": "Francesca Hong",
-          "mid": "/g/11jnpqr8dw",
-          "topic_title": "Francesca Hong",
-          "topic_type": "Member of Wisconsin State Assembly"
-        },
-        {
-          "keyword": "/g/11c2q3zj0w",
-          "label": "Crowley",
-          "query_mode": "entity",
-          "resolve_source": "config",
-          "name": "David Crowley",
-          "mid": "/g/11c2q3zj0w",
-          "topic_title": "David Crowley",
-          "topic_type": "Milwaukee County Executive"
-        },
-        {
-          "keyword": "/m/0l8lszd",
-          "label": "Barnes",
-          "query_mode": "entity",
-          "resolve_source": "config",
-          "name": "Mandela Barnes",
-          "mid": "/m/0l8lszd",
-          "topic_title": "Mandela Barnes",
-          "topic_type": "Former Lieutenant Governor of Wisconsin"
-        }
-      ],
-      "series": [
-        {
-          "date": "2026-06-18",
-          "values": {
-            "/g/11jnpqr8dw": 24,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-06-19",
-          "values": {
-            "/g/11jnpqr8dw": 0,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-06-20",
-          "values": {
-            "/g/11jnpqr8dw": 0,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-06-21",
-          "values": {
-            "/g/11jnpqr8dw": 28,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-06-22",
-          "values": {
-            "/g/11jnpqr8dw": 0,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-06-23",
-          "values": {
-            "/g/11jnpqr8dw": 0,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-06-24",
-          "values": {
-            "/g/11jnpqr8dw": 0,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-06-25",
-          "values": {
-            "/g/11jnpqr8dw": 26,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-06-26",
-          "values": {
-            "/g/11jnpqr8dw": 0,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-06-27",
-          "values": {
-            "/g/11jnpqr8dw": 0,
-            "/g/11c2q3zj0w": 31,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-06-28",
-          "values": {
-            "/g/11jnpqr8dw": 25,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-06-29",
-          "values": {
-            "/g/11jnpqr8dw": 59,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-06-30",
-          "values": {
-            "/g/11jnpqr8dw": 66,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-07-01",
-          "values": {
-            "/g/11jnpqr8dw": 48,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-07-02",
-          "values": {
-            "/g/11jnpqr8dw": 34,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-07-03",
-          "values": {
-            "/g/11jnpqr8dw": 0,
-            "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
-          }
-        },
-        {
-          "date": "2026-07-04",
-          "values": {
-            "/g/11jnpqr8dw": 29,
-            "/g/11c2q3zj0w": 6,
-            "/m/0l8lszd": 9
-          }
-        },
-        {
-          "date": "2026-07-05",
-          "values": {
-            "/g/11jnpqr8dw": 25,
-            "/g/11c2q3zj0w": 5,
-            "/m/0l8lszd": 10
-          }
-        },
-        {
-          "date": "2026-07-06",
-          "values": {
-            "/g/11jnpqr8dw": 35,
-            "/g/11c2q3zj0w": 4,
-            "/m/0l8lszd": 10
-          }
-        },
-        {
-          "date": "2026-07-07",
-          "values": {
-            "/g/11jnpqr8dw": 37,
-            "/g/11c2q3zj0w": 6,
-            "/m/0l8lszd": 8
-          }
-        },
-        {
-          "date": "2026-07-08",
-          "values": {
-            "/g/11jnpqr8dw": 41,
-            "/g/11c2q3zj0w": 28,
-            "/m/0l8lszd": 18
-          }
-        },
-        {
-          "date": "2026-07-09",
-          "values": {
-            "/g/11jnpqr8dw": 43,
-            "/g/11c2q3zj0w": 20,
-            "/m/0l8lszd": 27
-          }
-        },
-        {
-          "date": "2026-07-10",
-          "values": {
-            "/g/11jnpqr8dw": 34,
-            "/g/11c2q3zj0w": 6,
-            "/m/0l8lszd": 18
-          }
-        },
-        {
-          "date": "2026-07-11",
-          "values": {
-            "/g/11jnpqr8dw": 26,
-            "/g/11c2q3zj0w": 4,
-            "/m/0l8lszd": 13
-          }
-        },
-        {
-          "date": "2026-07-12",
-          "values": {
-            "/g/11jnpqr8dw": 24,
-            "/g/11c2q3zj0w": 3,
-            "/m/0l8lszd": 12
-          }
-        },
-        {
-          "date": "2026-07-13",
-          "values": {
-            "/g/11jnpqr8dw": 30,
-            "/g/11c2q3zj0w": 4,
-            "/m/0l8lszd": 16
-          }
-        },
-        {
-          "date": "2026-07-14",
-          "values": {
-            "/g/11jnpqr8dw": 38,
-            "/g/11c2q3zj0w": 5,
-            "/m/0l8lszd": 21
-          }
-        },
-        {
-          "date": "2026-07-15",
-          "values": {
-            "/g/11jnpqr8dw": 34,
-            "/g/11c2q3zj0w": 4,
-            "/m/0l8lszd": 18
-          }
-        },
-        {
-          "date": "2026-07-16",
-          "values": {
-            "/g/11jnpqr8dw": 45,
-            "/g/11c2q3zj0w": 4,
-            "/m/0l8lszd": 19
-          }
-        },
-        {
-          "date": "2026-07-17",
-          "values": {
-            "/g/11jnpqr8dw": 70,
-            "/g/11c2q3zj0w": 46,
-            "/m/0l8lszd": 40
-          }
-        },
-        {
-          "date": "2026-07-18",
-          "values": {
-            "/g/11jnpqr8dw": 84,
-            "/g/11c2q3zj0w": 100,
-            "/m/0l8lszd": 36
-          }
-        }
-      ],
-      "watchlist": true
-    },
-    {
       "id": "az-cd4-dem-primary-2026",
       "title": "Arizona CD-4 Democratic Primary",
       "election_date": "2026-07-21",
@@ -9391,8 +9096,8 @@
         {
           "date": "2026-07-19",
           "values": {
-            "/m/0hgrxqb": 44,
-            "/g/11f0z7tgql": 49
+            "/m/0hgrxqb": 41,
+            "/g/11f0z7tgql": 40
           }
         }
       ],
@@ -9643,7 +9348,7 @@
         {
           "date": "2026-07-19",
           "values": {
-            "Mark Lamb": 26,
+            "Mark Lamb": 28,
             "Daniel Keenan": 9
           }
         }
@@ -9659,8 +9364,8 @@
       "geo": "US-MI",
       "window_days": 30,
       "window_mode": "trailing",
-      "start_date": "2026-06-18",
-      "end_date": "2026-07-18",
+      "start_date": "2026-06-19",
+      "end_date": "2026-07-19",
       "candidates": [
         {
           "keyword": "/g/11c0q_hl_8",
@@ -9685,229 +9390,519 @@
       ],
       "series": [
         {
-          "date": "2026-06-18",
-          "values": {
-            "/g/11c0q_hl_8": 10,
-            "/g/11fjw095g8": 10
-          }
-        },
-        {
           "date": "2026-06-19",
           "values": {
-            "/g/11c0q_hl_8": 13,
-            "/g/11fjw095g8": 0
+            "/g/11c0q_hl_8": 11,
+            "/g/11fjw095g8": 9
           }
         },
         {
           "date": "2026-06-20",
           "values": {
-            "/g/11c0q_hl_8": 13,
-            "/g/11fjw095g8": 0
+            "/g/11c0q_hl_8": 14,
+            "/g/11fjw095g8": 13
           }
         },
         {
           "date": "2026-06-21",
           "values": {
             "/g/11c0q_hl_8": 10,
-            "/g/11fjw095g8": 13
+            "/g/11fjw095g8": 0
           }
         },
         {
           "date": "2026-06-22",
           "values": {
             "/g/11c0q_hl_8": 7,
-            "/g/11fjw095g8": 8
+            "/g/11fjw095g8": 0
           }
         },
         {
           "date": "2026-06-23",
           "values": {
-            "/g/11c0q_hl_8": 18,
-            "/g/11fjw095g8": 9
+            "/g/11c0q_hl_8": 15,
+            "/g/11fjw095g8": 11
           }
         },
         {
           "date": "2026-06-24",
           "values": {
-            "/g/11c0q_hl_8": 15,
-            "/g/11fjw095g8": 17
+            "/g/11c0q_hl_8": 13,
+            "/g/11fjw095g8": 15
           }
         },
         {
           "date": "2026-06-25",
           "values": {
-            "/g/11c0q_hl_8": 26,
-            "/g/11fjw095g8": 12
+            "/g/11c0q_hl_8": 25,
+            "/g/11fjw095g8": 11
           }
         },
         {
           "date": "2026-06-26",
           "values": {
-            "/g/11c0q_hl_8": 26,
-            "/g/11fjw095g8": 14
+            "/g/11c0q_hl_8": 23,
+            "/g/11fjw095g8": 13
           }
         },
         {
           "date": "2026-06-27",
           "values": {
-            "/g/11c0q_hl_8": 36,
-            "/g/11fjw095g8": 19
+            "/g/11c0q_hl_8": 33,
+            "/g/11fjw095g8": 20
           }
         },
         {
           "date": "2026-06-28",
           "values": {
-            "/g/11c0q_hl_8": 30,
-            "/g/11fjw095g8": 21
+            "/g/11c0q_hl_8": 29,
+            "/g/11fjw095g8": 16
           }
         },
         {
           "date": "2026-06-29",
           "values": {
-            "/g/11c0q_hl_8": 26,
-            "/g/11fjw095g8": 15
+            "/g/11c0q_hl_8": 27,
+            "/g/11fjw095g8": 14
           }
         },
         {
           "date": "2026-06-30",
           "values": {
-            "/g/11c0q_hl_8": 31,
-            "/g/11fjw095g8": 23
+            "/g/11c0q_hl_8": 29,
+            "/g/11fjw095g8": 25
           }
         },
         {
           "date": "2026-07-01",
           "values": {
-            "/g/11c0q_hl_8": 32,
-            "/g/11fjw095g8": 22
+            "/g/11c0q_hl_8": 30,
+            "/g/11fjw095g8": 24
           }
         },
         {
           "date": "2026-07-02",
           "values": {
-            "/g/11c0q_hl_8": 38,
-            "/g/11fjw095g8": 23
+            "/g/11c0q_hl_8": 39,
+            "/g/11fjw095g8": 21
           }
         },
         {
           "date": "2026-07-03",
           "values": {
-            "/g/11c0q_hl_8": 40,
-            "/g/11fjw095g8": 11
+            "/g/11c0q_hl_8": 39,
+            "/g/11fjw095g8": 13
           }
         },
         {
           "date": "2026-07-04",
           "values": {
-            "/g/11c0q_hl_8": 37,
-            "/g/11fjw095g8": 14
+            "/g/11c0q_hl_8": 41,
+            "/g/11fjw095g8": 22
           }
         },
         {
           "date": "2026-07-05",
           "values": {
-            "/g/11c0q_hl_8": 60,
-            "/g/11fjw095g8": 37
+            "/g/11c0q_hl_8": 59,
+            "/g/11fjw095g8": 36
           }
         },
         {
           "date": "2026-07-06",
           "values": {
             "/g/11c0q_hl_8": 65,
-            "/g/11fjw095g8": 42
+            "/g/11fjw095g8": 40
           }
         },
         {
           "date": "2026-07-07",
           "values": {
-            "/g/11c0q_hl_8": 68,
-            "/g/11fjw095g8": 49
+            "/g/11c0q_hl_8": 66,
+            "/g/11fjw095g8": 47
           }
         },
         {
           "date": "2026-07-08",
           "values": {
             "/g/11c0q_hl_8": 100,
-            "/g/11fjw095g8": 76
+            "/g/11fjw095g8": 79
           }
         },
         {
           "date": "2026-07-09",
           "values": {
-            "/g/11c0q_hl_8": 66,
-            "/g/11fjw095g8": 60
+            "/g/11c0q_hl_8": 62,
+            "/g/11fjw095g8": 58
           }
         },
         {
           "date": "2026-07-10",
           "values": {
-            "/g/11c0q_hl_8": 50,
-            "/g/11fjw095g8": 34
+            "/g/11c0q_hl_8": 47,
+            "/g/11fjw095g8": 33
           }
         },
         {
           "date": "2026-07-11",
           "values": {
-            "/g/11c0q_hl_8": 40,
-            "/g/11fjw095g8": 26
+            "/g/11c0q_hl_8": 39,
+            "/g/11fjw095g8": 25
           }
         },
         {
           "date": "2026-07-12",
           "values": {
-            "/g/11c0q_hl_8": 43,
+            "/g/11c0q_hl_8": 42,
             "/g/11fjw095g8": 26
           }
         },
         {
           "date": "2026-07-13",
           "values": {
-            "/g/11c0q_hl_8": 48,
-            "/g/11fjw095g8": 28
+            "/g/11c0q_hl_8": 47,
+            "/g/11fjw095g8": 27
           }
         },
         {
           "date": "2026-07-14",
           "values": {
-            "/g/11c0q_hl_8": 57,
-            "/g/11fjw095g8": 34
+            "/g/11c0q_hl_8": 56,
+            "/g/11fjw095g8": 33
           }
         },
         {
           "date": "2026-07-15",
           "values": {
-            "/g/11c0q_hl_8": 49,
-            "/g/11fjw095g8": 48
+            "/g/11c0q_hl_8": 48,
+            "/g/11fjw095g8": 47
           }
         },
         {
           "date": "2026-07-16",
           "values": {
-            "/g/11c0q_hl_8": 49,
-            "/g/11fjw095g8": 54
+            "/g/11c0q_hl_8": 48,
+            "/g/11fjw095g8": 52
           }
         },
         {
           "date": "2026-07-17",
           "values": {
-            "/g/11c0q_hl_8": 54,
-            "/g/11fjw095g8": 55
+            "/g/11c0q_hl_8": 55,
+            "/g/11fjw095g8": 56
           }
         },
         {
           "date": "2026-07-18",
           "values": {
-            "/g/11c0q_hl_8": 58,
-            "/g/11fjw095g8": 52
+            "/g/11c0q_hl_8": 59,
+            "/g/11fjw095g8": 51
+          }
+        },
+        {
+          "date": "2026-07-19",
+          "values": {
+            "/g/11c0q_hl_8": 69,
+            "/g/11fjw095g8": 41
+          }
+        }
+      ],
+      "watchlist": true
+    },
+    {
+      "id": "wi-dem-governor-primary-2026",
+      "title": "Wisconsin Democratic Governor Primary",
+      "election_date": "2026-08-11",
+      "country_code": "US",
+      "state_code": "WI",
+      "geo": "US-WI",
+      "window_days": 30,
+      "window_mode": "trailing",
+      "start_date": "2026-06-19",
+      "end_date": "2026-07-19",
+      "candidates": [
+        {
+          "keyword": "/g/11jnpqr8dw",
+          "label": "Hong",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Francesca Hong",
+          "mid": "/g/11jnpqr8dw",
+          "topic_title": "Francesca Hong",
+          "topic_type": "Member of Wisconsin State Assembly"
+        },
+        {
+          "keyword": "/g/11c2q3zj0w",
+          "label": "Crowley",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "David Crowley",
+          "mid": "/g/11c2q3zj0w",
+          "topic_title": "David Crowley",
+          "topic_type": "Milwaukee County Executive"
+        },
+        {
+          "keyword": "/m/0l8lszd",
+          "label": "Barnes",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Mandela Barnes",
+          "mid": "/m/0l8lszd",
+          "topic_title": "Mandela Barnes",
+          "topic_type": "Former Lieutenant Governor of Wisconsin"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-06-19",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/g/11jnpqr8dw": 21,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "/g/11jnpqr8dw": 21,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "/g/11jnpqr8dw": 19,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "/g/11jnpqr8dw": 41,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "/g/11jnpqr8dw": 53,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-07-01",
+          "values": {
+            "/g/11jnpqr8dw": 38,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-07-02",
+          "values": {
+            "/g/11jnpqr8dw": 28,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "values": {
+            "/g/11jnpqr8dw": 0,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-07-04",
+          "values": {
+            "/g/11jnpqr8dw": 29,
+            "/g/11c2q3zj0w": 0,
+            "/m/0l8lszd": 0
+          }
+        },
+        {
+          "date": "2026-07-05",
+          "values": {
+            "/g/11jnpqr8dw": 18,
+            "/g/11c2q3zj0w": 4,
+            "/m/0l8lszd": 8
+          }
+        },
+        {
+          "date": "2026-07-06",
+          "values": {
+            "/g/11jnpqr8dw": 27,
+            "/g/11c2q3zj0w": 3,
+            "/m/0l8lszd": 8
+          }
+        },
+        {
+          "date": "2026-07-07",
+          "values": {
+            "/g/11jnpqr8dw": 27,
+            "/g/11c2q3zj0w": 4,
+            "/m/0l8lszd": 6
+          }
+        },
+        {
+          "date": "2026-07-08",
+          "values": {
+            "/g/11jnpqr8dw": 31,
+            "/g/11c2q3zj0w": 21,
+            "/m/0l8lszd": 13
+          }
+        },
+        {
+          "date": "2026-07-09",
+          "values": {
+            "/g/11jnpqr8dw": 33,
+            "/g/11c2q3zj0w": 15,
+            "/m/0l8lszd": 21
+          }
+        },
+        {
+          "date": "2026-07-10",
+          "values": {
+            "/g/11jnpqr8dw": 26,
+            "/g/11c2q3zj0w": 5,
+            "/m/0l8lszd": 14
+          }
+        },
+        {
+          "date": "2026-07-11",
+          "values": {
+            "/g/11jnpqr8dw": 19,
+            "/g/11c2q3zj0w": 3,
+            "/m/0l8lszd": 10
+          }
+        },
+        {
+          "date": "2026-07-12",
+          "values": {
+            "/g/11jnpqr8dw": 18,
+            "/g/11c2q3zj0w": 2,
+            "/m/0l8lszd": 9
+          }
+        },
+        {
+          "date": "2026-07-13",
+          "values": {
+            "/g/11jnpqr8dw": 23,
+            "/g/11c2q3zj0w": 3,
+            "/m/0l8lszd": 12
+          }
+        },
+        {
+          "date": "2026-07-14",
+          "values": {
+            "/g/11jnpqr8dw": 29,
+            "/g/11c2q3zj0w": 3,
+            "/m/0l8lszd": 16
+          }
+        },
+        {
+          "date": "2026-07-15",
+          "values": {
+            "/g/11jnpqr8dw": 26,
+            "/g/11c2q3zj0w": 3,
+            "/m/0l8lszd": 14
+          }
+        },
+        {
+          "date": "2026-07-16",
+          "values": {
+            "/g/11jnpqr8dw": 33,
+            "/g/11c2q3zj0w": 3,
+            "/m/0l8lszd": 15
+          }
+        },
+        {
+          "date": "2026-07-17",
+          "values": {
+            "/g/11jnpqr8dw": 56,
+            "/g/11c2q3zj0w": 36,
+            "/m/0l8lszd": 31
+          }
+        },
+        {
+          "date": "2026-07-18",
+          "values": {
+            "/g/11jnpqr8dw": 71,
+            "/g/11c2q3zj0w": 100,
+            "/m/0l8lszd": 32
+          }
+        },
+        {
+          "date": "2026-07-19",
+          "values": {
+            "/g/11jnpqr8dw": 59,
+            "/g/11c2q3zj0w": 67,
+            "/m/0l8lszd": 32
           }
         }
       ],
       "watchlist": true
     }
-  ],
-  "errors": [
-    "mi-dem-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/explore?hl=en-US&tz=360&req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22%2Fg%2F11c0q_hl_8%22%2C%22geo%22%3A%22US-MI%22%2C%22time%22%3A%222026-06-19+2026-07-19%22%7D%2C%7B%22keyword%22%3A%22%2Fg%2F11fjw095g8%22%2C%22geo%22%3A%22US-MI%22%2C%22time%22%3A%222026-06-19+2026-07-19%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"><meta name=\"viewport\" content=\"initial-scale=1\"><title>https://trends.google.com/trends/api/explore?hl=en-US&amp;tz=360&amp;req=%7B%22comparisonItem%22%3A%5",
-    "wi-dem-governor-primary-2026: HTTP 429 for https://trends.google.com/trends/api/explore?hl=en-US&tz=360&req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22%2Fg%2F11jnpqr8dw%22%2C%22geo%22%3A%22US-WI%22%2C%22time%22%3A%222026-06-19+2026-07-19%22%7D%2C%7B%22keyword%22%3A%22%2Fg%2F11c2q3zj0w%22%2C%22geo%22%3A%22US-WI%22%2C%22time%22%3A%222026-06-19+2026-07-19%22%7D%2C%7B%22keyword%22%3A%22%2Fm%2F0l8lszd%22%2C%22geo%22%3A%22US-WI%22%2C%22time%22%3A%222026-06-19+2026-07-19%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"><meta name=\"viewport\" content=\"initial-scale=1\"><title>https://trends.google.com/trends/api/explore?hl=en-US&amp;tz=360&amp;req=%7B%22comparisonItem%22%3A%5",
-    "retained prior series for mi-dem-senate-primary-2026, wi-dem-governor-primary-2026 after HTTP 429 on this run"
   ]
 }
