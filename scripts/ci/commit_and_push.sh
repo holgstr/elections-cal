@@ -7,11 +7,20 @@
 #
 # --bump-site-rev writes data/site-rev.json pointing at the data commit SHA,
 # then commits it separately (same pattern the workflows used inline).
+#
+# When GITHUB_OUTPUT is set (Actions), writes pushed=true|false for follow-up steps.
 set -euo pipefail
 
 usage() {
   echo "Usage: $0 [--bump-site-rev] --message <msg> -- <path> [path...]" >&2
   exit 2
+}
+
+emit_output() {
+  local key="$1" value="$2"
+  if [[ -n "${GITHUB_OUTPUT:-}" ]]; then
+    echo "${key}=${value}" >> "$GITHUB_OUTPUT"
+  fi
 }
 
 BUMP_SITE_REV=0
@@ -58,12 +67,14 @@ if [[ "$branch" == "HEAD" ]]; then
   exit 1
 fi
 
-if git diff --quiet -- "${PATHS[@]}" && git diff --cached --quiet -- "${PATHS[@]}"; then
+# Stage first so new untracked files (e.g. sidecars) count as changes.
+git add -- "${PATHS[@]}"
+if git diff --cached --quiet -- "${PATHS[@]}"; then
   echo "No changes."
+  emit_output pushed false
   exit 0
 fi
 
-git add -- "${PATHS[@]}"
 git commit -m "$MESSAGE"
 
 write_site_rev_commit() {
@@ -93,6 +104,7 @@ remote_branch="${REMOTE_REF#*/}"
 for attempt in $(seq 1 "$MAX_ATTEMPTS"); do
   if git push "$remote" "HEAD:refs/heads/${remote_branch}"; then
     echo "Pushed successfully."
+    emit_output pushed true
     exit 0
   fi
 

@@ -71,13 +71,16 @@ body::before {
   top: 0.35rem;
   right: 0;
   margin: 0;
+  max-width: min(46vw, 11.5rem);
   font-size: 0.58rem;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.15;
   letter-spacing: 0.01em;
   color: var(--muted);
   opacity: 0.72;
   font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
   pointer-events: none;
   user-select: none;
 }

@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: bot-main-pushes
@@ -35,6 +36,7 @@ jobs:
         run: python3 scripts/fetch_market_prices.py
 
       - name: Commit price updates
+        id: commit
         if: github.ref == 'refs/heads/main'
         run: |
           bash scripts/ci/commit_and_push.sh --bump-site-rev \
@@ -44,3 +46,10 @@ jobs:
             data/market_odds_changes.json \
             data/market_odds.json \
             data/data_updated.json
+
+      # GITHUB_TOKEN pushes do not start other workflows; dispatch deploy explicitly.
+      - name: Deploy site to GitHub Pages
+        if: github.ref == 'refs/heads/main' && steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/ci/trigger_pages_deploy.sh main
