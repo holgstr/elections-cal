@@ -85,6 +85,13 @@ HOUSE_DISTRICT_PRIMARIES: list[dict[str, str]] = [
         "party": "Republican",
         "date": "2026-07-21",
     },
+    {
+        "state_code": "MO",
+        "state": "Missouri",
+        "office": "MO-01",
+        "party": "Democratic",
+        "date": "2026-08-04",
+    },
 ]
 
 
