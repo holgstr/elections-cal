@@ -68,20 +68,22 @@ The GitHub Actions workflow runs every Monday at 06:00 UTC:
 
 1. Runs `scripts/build_elections.py` and regenerates Polymarket info files (`us_primary_info.json`, `presidential_info.json`, `de_state_info.json`, `us_governor_info.json`, `mayoral_info.json`)
 2. Commits updated `data/elections.json`, `data/meta.json`, and curated info JSON if changed
-3. A push to `main` (including data refresh commits) triggers GitHub Pages deployment
+3. A push to `main` from a non-bot actor triggers GitHub Pages deployment
 
-Polymarket odds and Google Trends refresh twice daily. Markets run at **07:00 / 19:00 UTC**; Trends at **07:15 / 19:15 UTC** (~22:00–22:15 Europe/Tallinn in EEST; GitHub Actions cron is UTC-only). Bot commits share a concurrency group and rebase/retry on push so a moved `main` during a long fetch does not drop the refresh.
+Polymarket odds and Google Trends refresh twice daily. Markets run at **07:00 / 19:00 UTC**; Trends at **07:15 / 19:15 UTC** (~22:00–22:15 Europe/Tallinn in EEST; GitHub Actions cron is UTC-only). Bot commits share a concurrency group and rebase/retry on push so a moved `main` during a long fetch does not drop the refresh. After a successful odds or Trends push, those workflows explicitly `workflow_dispatch` the Pages deploy (GITHUB_TOKEN pushes do not start other workflows on their own), so the live site and top-right UTC stamp stay current.
 
 Market prices workflow:
 
 1. Regenerates Polymarket info files
 2. Runs `scripts/fetch_market_prices.py` to pull odds from Polymarket and detect ≥5pp moves since the last signaled price
-3. Commits `data/market_prices/state.json`, `data/market_suggestions.json`, `data/market_odds_changes.json`, and `data/market_odds.json` if changed (popovers read the daily odds snapshot so visitors never need direct Polymarket access)
+3. Commits `data/market_prices/state.json`, `data/market_suggestions.json`, `data/market_odds_changes.json`, `data/market_odds.json`, and `data/data_updated.json` if changed (popovers read the daily odds snapshot so visitors never need direct Polymarket access)
+4. Dispatches GitHub Pages deployment when the push lands
 
 Google Trends workflow:
 
 1. Runs `scripts/fetch_google_trends.py` for races listed in `data/config/trends_races.json`
-2. Commits `data/trends.json` when the series change
+2. Commits `data/trends.json` and `data/data_updated.json` when the series change
+3. Dispatches GitHub Pages deployment when the push lands
 
 Prefer Google Trends **person/topic entities** (Knowledge Graph mids like `/m/04g_1z`) when a confident political match exists. The fetch pipeline:
 

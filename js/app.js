@@ -130,17 +130,22 @@ function parseGeneratedAt(value) {
 function formatDataUpdatedStamp(stamp) {
   const dateOnly = /^\d{4}-\d{2}-\d{2}$/.test(stamp.raw);
   if (dateOnly) {
-    return stamp.date.toLocaleDateString(undefined, {
+    const day = stamp.date.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
+      timeZone: "UTC",
     });
+    return `${day} UTC`;
   }
-  return stamp.date.toLocaleString(undefined, {
+  const formatted = stamp.date.toLocaleString("en-US", {
     month: "short",
     day: "numeric",
-    hour: "2-digit",
+    hour: "numeric",
     minute: "2-digit",
+    hour12: true,
+    timeZone: "UTC",
   });
+  return `${formatted} UTC`;
 }
 
 async function updateDataUpdatedStamp() {
