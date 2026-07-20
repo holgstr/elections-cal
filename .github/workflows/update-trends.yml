@@ -30,4 +30,5 @@ jobs:
         run: |
           bash scripts/ci/commit_and_push.sh --bump-site-rev \
             --message "chore: refresh Google Trends race interest" -- \
-            data/trends.json
+            data/trends.json \
+            data/data_updated.json
