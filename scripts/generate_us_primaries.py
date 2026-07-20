@@ -94,6 +94,18 @@ HOUSE_DISTRICT_PRIMARIES: list[dict[str, str]] = [
     },
 ]
 
+# Special / replacement primaries beyond the regular statewide calendar.
+# Labels match a normal party primary ({Party} {Office} Primary).
+SPECIAL_PRIMARIES: list[dict[str, str]] = [
+    {
+        "state_code": "SC",
+        "state": "South Carolina",
+        "office": "Senate",
+        "party": "Republican",
+        "date": "2026-08-11",
+    },
+]
+
 
 def load_governor_states() -> dict[str, str]:
     states: dict[str, str] = {}
@@ -203,6 +215,17 @@ def main() -> None:
                 )
 
     for race in HOUSE_DISTRICT_PRIMARIES:
+        entries.append(
+            primary_entry(
+                date=race["date"],
+                state=race["state"],
+                state_code=race["state_code"],
+                party=race["party"],
+                office=race["office"],
+            )
+        )
+
+    for race in SPECIAL_PRIMARIES:
         entries.append(
             primary_entry(
                 date=race["date"],

@@ -1437,6 +1437,40 @@
     ]
   },
   {
+    "id": "sc-special-gop-senate-primary-2026",
+    "title": "South Carolina Special Republican Senate Primary",
+    "election_date": "2026-08-11",
+    "country_code": "US",
+    "state_code": "SC",
+    "geo": "US-SC",
+    "window_days": 30,
+    "window_mode": "trailing",
+    "watchlist": true,
+    "keywords": [
+      {
+        "name": "Darline Graham",
+        "label": "Graham",
+        "mid": "/g/11b64bp3p9",
+        "topic_title": "Darline Graham",
+        "topic_type": "United States Senator"
+      },
+      {
+        "name": "Russell Fry",
+        "label": "Fry",
+        "mid": "/g/11c503wrrz",
+        "topic_title": "Russell Fry",
+        "topic_type": "United States Representative"
+      },
+      {
+        "name": "Ralph Norman",
+        "label": "Norman",
+        "mid": "/m/0f9kbx",
+        "topic_title": "Ralph Norman",
+        "topic_type": "United States Representative"
+      }
+    ]
+  },
+  {
     "id": "nj-governor-2025",
     "title": "New Jersey Governor",
     "election_date": "2025-11-04",
