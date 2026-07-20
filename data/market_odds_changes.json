@@ -5,18 +5,18 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
-    "mexico-legislative-election-winner": {
-      "PRI": {
-        "change_pp": 7.55,
+    "latvian-parliamentary-election-winner": {
+      "AS": {
+        "change_pp": 4.05,
         "direction": "up",
         "reference_date": "2026-07-18",
-        "reference_pct": 4.4,
+        "reference_pct": 34.75,
         "window": "2d"
       }
     },
     "new-hampshire-governor-winner-2026": {
       "Democrat": {
-        "change_pp": 5.95,
+        "change_pp": 4.75,
         "direction": "down",
         "reference_date": "2026-07-18",
         "reference_pct": 25.65,
@@ -32,7 +32,7 @@
         "window": "2d"
       },
       "Republican": {
-        "change_pp": 8.0,
+        "change_pp": 9.0,
         "direction": "up",
         "reference_date": "2026-07-18",
         "reference_pct": 30.0,
@@ -41,7 +41,7 @@
     },
     "who-will-advance-from-the-alaska-governor-primary": {
       "Treg Taylor": {
-        "change_pp": 9.0,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-07-18",
         "reference_pct": 12.5,
@@ -50,7 +50,7 @@
     },
     "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
       "Earl D. \"Skip\" Southworth": {
-        "change_pp": 4.95,
+        "change_pp": 4.2,
         "direction": "up",
         "reference_date": "2026-07-18",
         "reference_pct": 5.0,
@@ -77,7 +77,7 @@
     },
     "rhode-island-governor-republican-primary-winner": {
       "Elaine Pelino": {
-        "change_pp": 8.0,
+        "change_pp": 11.0,
         "direction": "down",
         "reference_date": "2026-07-18",
         "reference_pct": 69.0,
@@ -102,7 +102,7 @@
     },
     "tennessee-democratic-senate-primary-winner": {
       "Marquita Bradshaw": {
-        "change_pp": 5.6,
+        "change_pp": 5.75,
         "direction": "up",
         "reference_date": "2026-07-18",
         "reference_pct": 89.5,
@@ -111,14 +111,14 @@
     },
     "wisconsin-governor-democratic-primary-winner": {
       "Mandela Barnes": {
-        "change_pp": 5.4,
+        "change_pp": 8.0,
         "direction": "down",
         "reference_date": "2026-07-18",
         "reference_pct": 13.0,
         "window": "2d"
       },
       "David Crowley": {
-        "change_pp": 6.35,
+        "change_pp": 6.3,
         "direction": "up",
         "reference_date": "2026-07-18",
         "reference_pct": 17.1,
@@ -127,18 +127,18 @@
     }
   },
   "by_market_id": {
-    "national:MX:Chamber of Deputies:party_winner": {
-      "PRI": {
-        "change_pp": 7.55,
+    "national:LV:Parliament:party_winner": {
+      "AS": {
+        "change_pp": 4.05,
         "direction": "up",
         "reference_date": "2026-07-18",
-        "reference_pct": 4.4,
+        "reference_pct": 34.75,
         "window": "2d"
       }
     },
     "us-governor:NH": {
       "Democrat": {
-        "change_pp": 5.95,
+        "change_pp": 4.75,
         "direction": "down",
         "reference_date": "2026-07-18",
         "reference_pct": 25.65,
@@ -154,7 +154,7 @@
         "window": "2d"
       },
       "Republican": {
-        "change_pp": 8.0,
+        "change_pp": 9.0,
         "direction": "up",
         "reference_date": "2026-07-18",
         "reference_pct": 30.0,
@@ -163,7 +163,7 @@
     },
     "us-primary:AK:Governor": {
       "Treg Taylor": {
-        "change_pp": 9.0,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-07-18",
         "reference_pct": 12.5,
@@ -172,7 +172,7 @@
     },
     "us-primary:AK:Senate": {
       "Earl D. \"Skip\" Southworth": {
-        "change_pp": 4.95,
+        "change_pp": 4.2,
         "direction": "up",
         "reference_date": "2026-07-18",
         "reference_pct": 5.0,
@@ -199,7 +199,7 @@
     },
     "us-primary:RI:Governor:Republican": {
       "Elaine Pelino": {
-        "change_pp": 8.0,
+        "change_pp": 11.0,
         "direction": "down",
         "reference_date": "2026-07-18",
         "reference_pct": 69.0,
@@ -224,7 +224,7 @@
     },
     "us-primary:TN:Senate:Democratic": {
       "Marquita Bradshaw": {
-        "change_pp": 5.6,
+        "change_pp": 5.75,
         "direction": "up",
         "reference_date": "2026-07-18",
         "reference_pct": 89.5,
@@ -233,14 +233,14 @@
     },
     "us-primary:WI:Governor:Democratic": {
       "Mandela Barnes": {
-        "change_pp": 5.4,
+        "change_pp": 8.0,
         "direction": "down",
         "reference_date": "2026-07-18",
         "reference_pct": 13.0,
         "window": "2d"
       },
       "David Crowley": {
-        "change_pp": 6.35,
+        "change_pp": 6.3,
         "direction": "up",
         "reference_date": "2026-07-18",
         "reference_pct": 17.1,
