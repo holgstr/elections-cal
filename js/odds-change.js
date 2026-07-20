@@ -131,6 +131,31 @@ export function roundExclusiveOdds(pcts) {
   return rounded;
 }
 
+/**
+ * Round only outcomes that have real percentages. Null/undefined entries stay
+ * null so incumbent-only rows (no market) do not render a fake 0%.
+ */
+export function displayPercentsForOutcomes(pcts) {
+  const values = pcts || [];
+  const indexed = [];
+  values.forEach((pct, index) => {
+    if (pct == null || Number.isNaN(Number(pct))) return;
+    indexed.push({ index, pct: Number(pct) });
+  });
+
+  const rounded = roundExclusiveOdds(indexed.map((entry) => entry.pct));
+  const display = values.map(() => null);
+  indexed.forEach((entry, i) => {
+    display[entry.index] = rounded[i];
+  });
+  return display;
+}
+
+/** Always wrap pct + change in a fixed two-column grid so rows align. */
+export function renderOddsValues(pctHtml, changeHtml) {
+  return `<span class="primary-popover__odds-values">${pctHtml}${changeHtml}</span>`;
+}
+
 export function formatOddsPctWithChange(
   pct,
   slug,
@@ -148,5 +173,5 @@ export function formatOddsPctWithChange(
   const pctHtml = `<span class="primary-popover__pct">${formatPercent(shown)}</span>`;
   const changeHtml = renderOddsChangeBadge(change);
 
-  return `<span class="primary-popover__odds-values">${pctHtml}${changeHtml}</span>`;
+  return renderOddsValues(pctHtml, changeHtml);
 }

@@ -10,9 +10,13 @@ const GOVERNOR_PARTY_LABELS = {
 };
 
 const v = globalThis.__ECAL_V__ ?? "4";
-const { formatOddsPctWithChange, loadOddsChanges, roundExclusiveOdds } = await import(
-  `./odds-change.js?v=${v}`
-);
+const {
+  displayPercentsForOutcomes,
+  formatOddsPctWithChange,
+  loadOddsChanges,
+  renderOddsChangeBadge,
+  renderOddsValues,
+} = await import(`./odds-change.js?v=${v}`);
 const { formatDisplayName } = await import(`./display-name.js?v=${v}`);
 
 const NAME_SUFFIXES = new Set(["jr", "jr.", "sr", "sr.", "ii", "iii", "iv"]);
@@ -309,7 +313,8 @@ function formatOddsPct(
   if (pct == null && displayPct == null) return "";
   const shown = displayPct ?? Math.round(pct);
   if (!slug || name == null) {
-    return `<span class="primary-popover__pct">${formatDisplayPercent(shown)}</span>`;
+    const pctHtml = `<span class="primary-popover__pct">${formatDisplayPercent(shown)}</span>`;
+    return renderOddsValues(pctHtml, renderOddsChangeBadge(null));
   }
   return formatOddsPctWithChange(
     pct,
@@ -628,7 +633,9 @@ function renderCandidateRows(section, { slug = null, oddsFormat = "candidates" }
     return "";
   }
 
-  const displayPcts = roundExclusiveOdds(section.candidates.map((candidate) => candidate.pct));
+  const displayPcts = displayPercentsForOutcomes(
+    section.candidates.map((candidate) => candidate.pct)
+  );
 
   return `<ul class="primary-popover__candidates">${section.candidates
     .map((candidate, index) => {
@@ -863,7 +870,7 @@ function renderGovernorPartyRows(section, nominees = {}, slug = null) {
     return "";
   }
 
-  const displayPcts = roundExclusiveOdds(parties.map((party) => section.parties[party]));
+  const displayPcts = displayPercentsForOutcomes(parties.map((party) => section.parties[party]));
 
   const partyBlocks = parties
     .map((party, index) => {

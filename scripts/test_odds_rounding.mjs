@@ -1,4 +1,4 @@
-import { roundExclusiveOdds } from "../js/odds-change.js";
+import { displayPercentsForOutcomes, roundExclusiveOdds } from "../js/odds-change.js";
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -26,6 +26,22 @@ assert(sum(advance) > 100, "multi-advance markets may sum above 100");
 assert(
   JSON.stringify(advance) === JSON.stringify([95, 76, 67, 39, 37]),
   `advance rounding mismatch: ${advance}`
+);
+
+const mixed = displayPercentsForOutcomes([99.5, null, 0.5]);
+assert(mixed[1] === null, `incumbent-only rows must stay null, got ${mixed}`);
+assert(mixed[0] === 100 && mixed[2] === 0, `mixed market rows expected [100, null, 0], got ${mixed}`);
+
+const bothMarkets = displayPercentsForOutcomes([93.15, 6.65]);
+assert(
+  JSON.stringify(bothMarkets) === JSON.stringify([93, 7]),
+  `paired market rows expected [93, 7], got ${bothMarkets}`
+);
+
+const allNull = displayPercentsForOutcomes([null, undefined]);
+assert(
+  allNull.every((value) => value == null),
+  `all-null outcomes must stay null, got ${allNull}`
 );
 
 console.log("test_odds_rounding: ok");
