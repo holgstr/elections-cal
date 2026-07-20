@@ -3,7 +3,7 @@ const v = globalThis.__ECAL_V__ ?? "4";
 const { flagUrl, flagAlt } = await import(`./flags.js?v=${v}`);
 const { fetchJson } = await import(`./fetch-json.js?v=${v}`);
 const { fetchSuggestionOdds, matchSuggestionPrice } = await import(`./primary-info.js?v=${v}`);
-const { adjustChangeForLivePrice, roundExclusiveOdds } = await import(`./odds-change.js?v=${v}`);
+const { adjustChangeForLivePrice, displayPercentsForOutcomes } = await import(`./odds-change.js?v=${v}`);
 const { formatDisplayName } = await import(`./display-name.js?v=${v}`);
 
 const US_STATE_NAMES = {
@@ -208,7 +208,7 @@ function renderPriceRow(price) {
 }
 
 function withDisplayPercents(prices) {
-  const displayPcts = roundExclusiveOdds(prices.map((price) => price.current_pct));
+  const displayPcts = displayPercentsForOutcomes(prices.map((price) => price.current_pct));
   return prices.map((price, index) => ({
     ...price,
     display_pct: displayPcts[index],
