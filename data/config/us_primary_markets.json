@@ -21,7 +21,8 @@
     "MA": { "type": "semi-closed", "note_key": "semi-closed" },
     "NH": { "type": "semi-closed", "note_key": "semi-closed" },
     "RI": { "type": "semi-closed", "note_key": "semi-closed" },
-    "DE": { "type": "closed", "note_key": "closed" }
+    "DE": { "type": "closed", "note_key": "closed" },
+    "MO": { "type": "open", "note_key": "open" }
   },
   "type_notes": {
     "semi-closed": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
@@ -146,6 +147,9 @@
         "Republican": "delaware-republican-senate-primary-winner",
         "Democratic": "delaware-democratic-senate-primary-winner"
       }
+    },
+    "MO": {
+      "MO-01": { "Democratic": "mo-01-democratic-primary-winner" }
     },
     "WA": {
       "Governor": { "_slug": "washington-governor-election-winner" }

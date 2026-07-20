@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T20:42:36Z",
+  "generated_at": "2026-07-20T03:17:08Z",
   "source": "google_trends",
   "races": [
     {
@@ -9899,6 +9899,260 @@
             "/g/11jnpqr8dw": 59,
             "/g/11c2q3zj0w": 67,
             "/m/0l8lszd": 32
+          }
+        }
+      ],
+      "watchlist": true
+    },
+    {
+      "id": "mo-cd1-dem-primary-2026",
+      "title": "Missouri CD-1 Democratic Primary",
+      "election_date": "2026-08-04",
+      "country_code": "US",
+      "state_code": "MO",
+      "geo": "US-MO",
+      "window_days": 30,
+      "window_mode": "trailing",
+      "start_date": "2026-06-20",
+      "end_date": "2026-07-20",
+      "candidates": [
+        {
+          "keyword": "/g/11g234cdqy",
+          "label": "Bell",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Wesley Bell",
+          "mid": "/g/11g234cdqy",
+          "topic_title": "Wesley Bell",
+          "topic_type": "United States Representative"
+        },
+        {
+          "keyword": "/g/11cntkcbkt",
+          "label": "Bush",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Cori Bush",
+          "mid": "/g/11cntkcbkt",
+          "topic_title": "Cori Bush",
+          "topic_type": "Nurse and former United States Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-06-20",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 91
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-07-01",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 84
+          }
+        },
+        {
+          "date": "2026-07-02",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-07-04",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-07-05",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
+          }
+        },
+        {
+          "date": "2026-07-06",
+          "values": {
+            "/g/11g234cdqy": 29,
+            "/g/11cntkcbkt": 15
+          }
+        },
+        {
+          "date": "2026-07-07",
+          "values": {
+            "/g/11g234cdqy": 40,
+            "/g/11cntkcbkt": 27
+          }
+        },
+        {
+          "date": "2026-07-08",
+          "values": {
+            "/g/11g234cdqy": 35,
+            "/g/11cntkcbkt": 47
+          }
+        },
+        {
+          "date": "2026-07-09",
+          "values": {
+            "/g/11g234cdqy": 48,
+            "/g/11cntkcbkt": 69
+          }
+        },
+        {
+          "date": "2026-07-10",
+          "values": {
+            "/g/11g234cdqy": 51,
+            "/g/11cntkcbkt": 68
+          }
+        },
+        {
+          "date": "2026-07-11",
+          "values": {
+            "/g/11g234cdqy": 41,
+            "/g/11cntkcbkt": 51
+          }
+        },
+        {
+          "date": "2026-07-12",
+          "values": {
+            "/g/11g234cdqy": 26,
+            "/g/11cntkcbkt": 46
+          }
+        },
+        {
+          "date": "2026-07-13",
+          "values": {
+            "/g/11g234cdqy": 30,
+            "/g/11cntkcbkt": 62
+          }
+        },
+        {
+          "date": "2026-07-14",
+          "values": {
+            "/g/11g234cdqy": 49,
+            "/g/11cntkcbkt": 75
+          }
+        },
+        {
+          "date": "2026-07-15",
+          "values": {
+            "/g/11g234cdqy": 38,
+            "/g/11cntkcbkt": 62
+          }
+        },
+        {
+          "date": "2026-07-16",
+          "values": {
+            "/g/11g234cdqy": 49,
+            "/g/11cntkcbkt": 100
+          }
+        },
+        {
+          "date": "2026-07-17",
+          "values": {
+            "/g/11g234cdqy": 51,
+            "/g/11cntkcbkt": 83
+          }
+        },
+        {
+          "date": "2026-07-18",
+          "values": {
+            "/g/11g234cdqy": 38,
+            "/g/11cntkcbkt": 67
+          }
+        },
+        {
+          "date": "2026-07-19",
+          "values": {
+            "/g/11g234cdqy": 31,
+            "/g/11cntkcbkt": 48
+          }
+        },
+        {
+          "date": "2026-07-20",
+          "values": {
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 46
           }
         }
       ],

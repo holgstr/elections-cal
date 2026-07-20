@@ -1732,6 +1732,24 @@
     "date_precision": "exact",
     "country": "United States",
     "country_code": "US",
+    "state": "Missouri",
+    "state_code": "MO",
+    "title": "Democratic MO-01 Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "MO-01"
+    ],
+    "party": "Democratic"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
     "state": "Virginia",
     "state_code": "VA",
     "title": "Democratic Senate Primary",

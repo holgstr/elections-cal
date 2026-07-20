@@ -1349,6 +1349,33 @@
     ]
   },
   {
+    "id": "mo-cd1-dem-primary-2026",
+    "title": "Missouri CD-1 Democratic Primary",
+    "election_date": "2026-08-04",
+    "country_code": "US",
+    "state_code": "MO",
+    "geo": "US-MO",
+    "window_days": 30,
+    "window_mode": "trailing",
+    "watchlist": true,
+    "keywords": [
+      {
+        "name": "Wesley Bell",
+        "label": "Bell",
+        "mid": "/g/11g234cdqy",
+        "topic_title": "Wesley Bell",
+        "topic_type": "United States Representative"
+      },
+      {
+        "name": "Cori Bush",
+        "label": "Bush",
+        "mid": "/g/11cntkcbkt",
+        "topic_title": "Cori Bush",
+        "topic_type": "Nurse and former United States Representative"
+      }
+    ]
+  },
+  {
     "id": "mi-dem-senate-primary-2026",
     "title": "Michigan Democratic Senate Primary",
     "election_date": "2026-08-04",

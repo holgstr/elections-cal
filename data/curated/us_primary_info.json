@@ -267,6 +267,21 @@
       }
     }
   },
+  "MO": {
+    "MO-01": {
+      "primary_format": "party",
+      "primary_type": "open",
+      "primary_type_label": "Open primary",
+      "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
+      "parties": {
+        "Democratic": {
+          "polymarket_slug": "mo-01-democratic-primary-winner"
+        }
+      }
+    }
+  },
   "NH": {
     "Governor": {
       "primary_format": "party",
