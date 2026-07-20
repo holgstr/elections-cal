@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T20:49:34Z",
+  "generated_at": "2026-07-20T23:54:12Z",
   "source": "google_trends",
   "races": [
     {
@@ -10187,10 +10187,301 @@
           }
         ]
       }
+    },
+    {
+      "id": "sc-special-gop-senate-primary-2026",
+      "title": "South Carolina Special Republican Senate Primary",
+      "election_date": "2026-08-11",
+      "country_code": "US",
+      "state_code": "SC",
+      "geo": "US-SC",
+      "window_days": 30,
+      "window_mode": "trailing",
+      "start_date": "2026-06-20",
+      "end_date": "2026-07-20",
+      "candidates": [
+        {
+          "keyword": "/g/11b64bp3p9",
+          "label": "Graham",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Darline Graham",
+          "mid": "/g/11b64bp3p9",
+          "topic_title": "Darline Graham",
+          "topic_type": "United States Senator"
+        },
+        {
+          "keyword": "/g/11c503wrrz",
+          "label": "Fry",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Russell Fry",
+          "mid": "/g/11c503wrrz",
+          "topic_title": "Russell Fry",
+          "topic_type": "United States Representative"
+        },
+        {
+          "keyword": "/m/0f9kbx",
+          "label": "Norman",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Ralph Norman",
+          "mid": "/m/0f9kbx",
+          "topic_title": "Ralph Norman",
+          "topic_type": "United States Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-06-20",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-07-01",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-07-02",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-07-04",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-07-05",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-07-06",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-07-07",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-07-08",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 1,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-07-09",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-07-10",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 1,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-07-11",
+          "values": {
+            "/g/11b64bp3p9": 0,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-07-12",
+          "values": {
+            "/g/11b64bp3p9": 17,
+            "/g/11c503wrrz": 4,
+            "/m/0f9kbx": 5
+          }
+        },
+        {
+          "date": "2026-07-13",
+          "values": {
+            "/g/11b64bp3p9": 100,
+            "/g/11c503wrrz": 5,
+            "/m/0f9kbx": 5
+          }
+        },
+        {
+          "date": "2026-07-14",
+          "values": {
+            "/g/11b64bp3p9": 44,
+            "/g/11c503wrrz": 6,
+            "/m/0f9kbx": 3
+          }
+        },
+        {
+          "date": "2026-07-15",
+          "values": {
+            "/g/11b64bp3p9": 15,
+            "/g/11c503wrrz": 5,
+            "/m/0f9kbx": 3
+          }
+        },
+        {
+          "date": "2026-07-16",
+          "values": {
+            "/g/11b64bp3p9": 5,
+            "/g/11c503wrrz": 3,
+            "/m/0f9kbx": 2
+          }
+        },
+        {
+          "date": "2026-07-17",
+          "values": {
+            "/g/11b64bp3p9": 9,
+            "/g/11c503wrrz": 2,
+            "/m/0f9kbx": 2
+          }
+        },
+        {
+          "date": "2026-07-18",
+          "values": {
+            "/g/11b64bp3p9": 7,
+            "/g/11c503wrrz": 2,
+            "/m/0f9kbx": 12
+          }
+        },
+        {
+          "date": "2026-07-19",
+          "values": {
+            "/g/11b64bp3p9": 5,
+            "/g/11c503wrrz": 1,
+            "/m/0f9kbx": 11
+          }
+        },
+        {
+          "date": "2026-07-20",
+          "values": {
+            "/g/11b64bp3p9": 12,
+            "/g/11c503wrrz": 8,
+            "/m/0f9kbx": 4
+          }
+        }
+      ],
+      "watchlist": true
     }
-  ],
-  "errors": [
-    "az-cd4-dem-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-20+2026-07-20%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-AZ%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0hgrxqb%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-AZ%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11f0z7tgql%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAal_bHRJOmSAH7PZLkw8KqeNWokTlCrb3: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"dFjEAHyxNT4Z_gP4c5x79A\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
-    "az-cd5-gop-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-20+2026-07-20%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-AZ%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22BROAD%22%2C%22value%22%3A%22Mark+Lamb%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-AZ%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22BROAD%22%2C%22value%22%3A%22Daniel+Keenan%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAal_bLi-Gfg9fJB7ddHCOf-5kYfSFmtix: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"GB91wvs7bzwjnWhy1TTbNg\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222"
   ]
 }
