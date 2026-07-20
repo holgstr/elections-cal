@@ -2,7 +2,7 @@ name: Update market prices
 
 on:
   schedule:
-    # Shared with update-trends: 07:00 UTC and 19:00 UTC daily
+    # Shared cadence with update-trends (Trends is staggered +15m).
     # (19:00 UTC ≈ 22:00 Europe/Tallinn in EEST / 21:00 in EET; Actions cron is UTC-only)
     - cron: "0 7 * * *"
     - cron: "0 19 * * *"
@@ -10,6 +10,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: bot-main-pushes
+  cancel-in-progress: false
 
 jobs:
   update-prices:
@@ -33,16 +37,9 @@ jobs:
       - name: Commit price updates
         if: github.ref == 'refs/heads/main'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet data/market_prices/state.json data/market_suggestions.json data/market_odds_changes.json data/market_odds.json; then
-            echo "No market price changes."
-          else
-            git add data/market_prices/state.json data/market_suggestions.json data/market_odds_changes.json data/market_odds.json
-            git commit -m "chore: refresh Polymarket market prices"
-            REV=$(git rev-parse --short HEAD)
-            printf '{\n  "rev": "%s"\n}\n' "$REV" > data/site-rev.json
-            git add data/site-rev.json
-            git commit -m "chore: bump site revision for cache busting"
-            git push
-          fi
+          bash scripts/ci/commit_and_push.sh --bump-site-rev \
+            --message "chore: refresh Polymarket market prices" -- \
+            data/market_prices/state.json \
+            data/market_suggestions.json \
+            data/market_odds_changes.json \
+            data/market_odds.json

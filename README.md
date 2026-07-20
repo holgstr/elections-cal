@@ -70,7 +70,7 @@ The GitHub Actions workflow runs every Monday at 06:00 UTC:
 2. Commits updated `data/elections.json`, `data/meta.json`, and curated info JSON if changed
 3. A push to `main` (including data refresh commits) triggers GitHub Pages deployment
 
-Polymarket odds and Google Trends share the same twice-daily schedule — **07:00 UTC** and **19:00 UTC** (~22:00 Europe/Tallinn in EEST / 21:00 in EET; GitHub Actions cron is UTC-only).
+Polymarket odds and Google Trends refresh twice daily. Markets run at **07:00 / 19:00 UTC**; Trends at **07:15 / 19:15 UTC** (~22:00–22:15 Europe/Tallinn in EEST; GitHub Actions cron is UTC-only). Bot commits share a concurrency group and rebase/retry on push so a moved `main` during a long fetch does not drop the refresh.
 
 Market prices workflow:
 
