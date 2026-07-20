@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: bot-main-pushes
+  cancel-in-progress: false
+
 jobs:
   update-site-rev:
     runs-on: ubuntu-latest
@@ -22,12 +26,6 @@ jobs:
 
       - name: Commit site revision
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet data/site-rev.json; then
-            echo "Site revision already up to date."
-          else
-            git add data/site-rev.json
-            git commit -m "chore: bump site revision for cache busting"
-            git push
-          fi
+          bash scripts/ci/commit_and_push.sh \
+            --message "chore: bump site revision for cache busting" -- \
+            data/site-rev.json
