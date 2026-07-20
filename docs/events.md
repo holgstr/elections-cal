@@ -129,7 +129,7 @@ python3 scripts/generate_us_primary_info.py
 |------|--------|
 | Party labels | **Republican** in red, **Democratic** in blue |
 | Candidate names | Surname only |
-| Polymarket odds | Show only candidates above **3%**; display rounded percentage |
+| Polymarket odds | Show only candidates above **3%**; display rounded percentages that never sum above 100% for winner markets (multi-advance markets may still sum higher) |
 | No market | If no `polymarket_slug`, list the party `incumbent` surname only (no percentage) when the incumbent is running |
 | Empty party | Omit a party block when there are no candidates to show and no load error |
 | Combined-ballot primaries | Top-two (California) and top-four (Alaska) use a single candidate list (no party headers) from one Polymarket market when linked |
@@ -150,7 +150,7 @@ python3 scripts/generate_presidential_info.py
 | Rule | Detail |
 |------|--------|
 | Candidate names | Surname only |
-| Polymarket odds | Show only candidates above **3%**; display rounded percentage |
+| Polymarket odds | Show only candidates above **3%**; display rounded percentages that never sum above 100% for winner markets (multi-advance markets may still sum higher) |
 | No market | Label stays non-interactive (no popover) |
 | Rolling window | Popovers only appear for presidential elections whose date falls within the next 12 months |
 
@@ -169,7 +169,7 @@ python3 scripts/generate_de_state_info.py
 | Rule | Detail |
 |------|--------|
 | Party names | Use Polymarket party abbreviations (e.g. CDU, AfD, Grüne) |
-| Polymarket odds | Show only parties above **10%**; display rounded percentage |
+| Polymarket odds | Show only parties above **10%**; display rounded percentages that never sum above 100% for winner markets |
 | No market | Label stays non-interactive (no popover) |
 | Rolling window | Popovers only appear for elections whose date falls within the next 12 months |
 
@@ -191,7 +191,7 @@ python3 scripts/generate_us_governor_info.py
 | Nominee names | Shown on the line below the party label in default text; resolved from linked primary-winner Polymarket markets (`nominee_slugs`); fall back to configured incumbent surname when no market is available |
 | No nominee yet | Show **TBD** on the candidate line when neither a primary winner nor incumbent is known |
 | Incumbent | Append `(Inc.)` to the surname when the configured incumbent is running |
-| Polymarket odds (party format) | Always show Republican and Democratic win odds when available; display rounded percentage on the same line as the nominee (or TBD) |
+| Polymarket odds (party format) | Always show Republican and Democratic win odds when available; display rounded percentages that never sum above 100% on the same line as the nominee (or TBD) |
 | Candidate odds | For races without a simple Republican vs. Democratic market (`odds_format: "candidates"`), show individual candidates with the same rules as primaries: surname only, above **3%**, rounded percentage |
 | Auto-detect | When a party-format market has no Republican/Democratic outcomes, fall back to individual candidate odds |
 | No market | Label stays non-interactive (no popover) |
@@ -270,8 +270,8 @@ Re-assess when adding new markets: `python3 scripts/assess_polymarket_competitiv
 |------|--------|
 | Candidate names | Surname only (PM / presidential-style markets) |
 | Party names | Use Polymarket abbreviations as shown |
-| Polymarket odds (candidates) | Show only above **3%**; display rounded percentage |
-| Polymarket odds (parties) | Show only above **10%**; display rounded percentage |
+| Polymarket odds (candidates) | Show only above **3%**; display rounded percentages that never sum above 100% for winner markets |
+| Polymarket odds (parties) | Show only above **10%**; display rounded percentages that never sum above 100% for winner markets |
 | Multiple markets | Stack market blocks with sub-labels when both are linked |
 | No market | Label stays non-interactive (no popover) |
 | Rolling window | Popovers only appear for elections whose date falls within the next 12 months |
@@ -291,7 +291,7 @@ python3 scripts/generate_mayoral_info.py
 | Rule | Detail |
 |------|--------|
 | Candidate names | Surname only |
-| Polymarket odds | Show only candidates above **3%**; display rounded percentage |
+| Polymarket odds | Show only candidates above **3%**; display rounded percentages that never sum above 100% for winner markets (multi-advance markets may still sum higher) |
 | Incumbent | Append `(Inc.)` when configured |
 | No market | Label stays non-interactive (no popover) |
 | Rolling window | Popovers only appear for elections whose date falls within the next 12 months |

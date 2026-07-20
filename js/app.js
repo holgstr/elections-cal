@@ -916,15 +916,21 @@ function renderAlignedOfficeCells(
     }
   }
 
-  const cells = columns
-    .map((office) => {
-      const label = labelsByOffice.get(office);
-      const content = label
-        ? renderOfficeTag(label, stateCode, electionDate, countryCode, cityCode, alternateLabels)
-        : "";
-      return `<div class="state-office-cell">${content}</div>`;
-    })
-    .join("");
+  // House-district-only rows (e.g. MO-01) have no Governor/Senate cells.
+  // Skip empty column placeholders so the race tag sits on the same row as
+  // the state name, matching standard office-tag spacing.
+  const hasColumnLabels = labelsByOffice.size > 0;
+  const cells = hasColumnLabels
+    ? columns
+        .map((office) => {
+          const label = labelsByOffice.get(office);
+          const content = label
+            ? renderOfficeTag(label, stateCode, electionDate, countryCode, cityCode, alternateLabels)
+            : "";
+          return `<div class="state-office-cell">${content}</div>`;
+        })
+        .join("")
+    : "";
 
   const extras = extraLabels.length
     ? `<div class="state-offices-extra">${extraLabels

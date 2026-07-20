@@ -3,7 +3,7 @@ const v = globalThis.__ECAL_V__ ?? "4";
 const { flagUrl, flagAlt } = await import(`./flags.js?v=${v}`);
 const { fetchJson } = await import(`./fetch-json.js?v=${v}`);
 const { fetchSuggestionOdds, matchSuggestionPrice } = await import(`./primary-info.js?v=${v}`);
-const { adjustChangeForLivePrice } = await import(`./odds-change.js?v=${v}`);
+const { adjustChangeForLivePrice, roundExclusiveOdds } = await import(`./odds-change.js?v=${v}`);
 const { formatDisplayName } = await import(`./display-name.js?v=${v}`);
 
 const US_STATE_NAMES = {
@@ -201,9 +201,18 @@ function renderChangeArrow(change) {
 
 function renderPriceRow(price) {
   const change = price.change_pp ? price : null;
-  const pct = `<span class="price-current">${Math.round(price.current_pct)}%</span>`;
+  const shownPct = price.display_pct ?? Math.round(price.current_pct);
+  const pct = `<span class="price-current">${shownPct}%</span>`;
   const changeHtml = change ? renderChangeArrow(change) : `<span class="price-change price-change--placeholder" aria-hidden="true">--</span>`;
   return `<li class="price-row${change ? " price-row--changed" : ""}"><span class="price-name">${escapeHtml(formatDisplayName(price.name))}</span>${pct}${changeHtml}</li>`;
+}
+
+function withDisplayPercents(prices) {
+  const displayPcts = roundExclusiveOdds(prices.map((price) => price.current_pct));
+  return prices.map((price, index) => ({
+    ...price,
+    display_pct: displayPcts[index],
+  }));
 }
 
 function mergeLivePrices(item, liveCandidates) {
@@ -256,7 +265,7 @@ async function refreshSuggestionPrices(container, items) {
         const liveCandidates = await fetchSuggestionOdds(item);
         if (!liveCandidates.length) return;
 
-        const prices = mergeLivePrices(item, liveCandidates);
+        const prices = withDisplayPercents(mergeLivePrices(item, liveCandidates));
         const priceList = card.querySelector(".price-list");
         if (!priceList) return;
 
@@ -290,7 +299,7 @@ function renderSuggestionCard(item) {
         </div>
         <div class="card-labels">${renderContestLabelTag(item)}</div>
         <ul class="price-list" aria-label="Market probabilities">
-          ${item.prices.map(renderPriceRow).join("")}
+          ${withDisplayPercents(item.prices).map(renderPriceRow).join("")}
         </ul>
       </div>
       ${pseudo.date ? `<time class="card-time" datetime="${pseudo.date}">${full}</time>` : ""}
