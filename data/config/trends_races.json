@@ -1435,5 +1435,85 @@
         "topic_type": "Former Lieutenant Governor of Wisconsin"
       }
     ]
+  },
+  {
+    "id": "nj-governor-2025",
+    "title": "New Jersey Governor",
+    "election_date": "2025-11-04",
+    "country_code": "US",
+    "state_code": "NJ",
+    "geo": "US-NJ",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Mikie Sherrill",
+        "label": "Sherrill",
+        "mid": "/g/11f3r4x6x5",
+        "topic_title": "Mikie Sherrill",
+        "topic_type": "Governor of New Jersey"
+      },
+      {
+        "name": "Jack Ciattarelli",
+        "label": "Ciattarelli",
+        "mid": "/m/0h_9f1f",
+        "topic_title": "Jack Ciattarelli",
+        "topic_type": "Former New Jersey State Representative"
+      }
+    ],
+    "result": {
+      "status": "official",
+      "as_of": "2025-12-03",
+      "source": "New Jersey Division of Elections",
+      "candidates": [
+        {
+          "label": "Sherrill",
+          "pct": 56.9
+        },
+        {
+          "label": "Ciattarelli",
+          "pct": 42.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "va-governor-2025",
+    "title": "Virginia Governor",
+    "election_date": "2025-11-04",
+    "country_code": "US",
+    "state_code": "VA",
+    "geo": "US-VA",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Abigail Spanberger",
+        "label": "Spanberger",
+        "mid": "/g/11fgm1ffs7",
+        "topic_title": "Abigail Spanberger",
+        "topic_type": "Governor of Virginia"
+      },
+      {
+        "name": "Winsome Earle-Sears",
+        "label": "Earle-Sears",
+        "mid": "/m/06bzcd",
+        "topic_title": "Winsome Earle-Sears",
+        "topic_type": "Businesswoman and former Lieutenant Governor of Virginia"
+      }
+    ],
+    "result": {
+      "status": "official",
+      "as_of": "2025-11-24",
+      "source": "Virginia Department of Elections",
+      "candidates": [
+        {
+          "label": "Spanberger",
+          "pct": 57.6
+        },
+        {
+          "label": "Earle-Sears",
+          "pct": 42.2
+        }
+      ]
+    }
   }
 ]
