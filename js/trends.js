@@ -25,12 +25,14 @@ const SCATTER = {
 let trendsData = null;
 let selectedRaceId = null;
 let selectedWatchlistRaceId = null;
-/** Scatter subset: "all" | "DEM" | "GOP" */
-let scatterPartyFilter = "all";
-/** Scatter subset: "all" | "R1" | "R2" */
-let scatterRoundFilter = "all";
-/** Scatter subset: "all" | "Senate" | "House" | "Gov" */
-let scatterOfficeFilter = "all";
+/** Shared Trends subset: "all" | "DEM" | "GOP" */
+let trendsPartyFilter = "all";
+/** Shared Trends subset: "all" | "R1" | "R2" */
+let trendsRoundFilter = "all";
+/** Shared Trends subset: "all" | "Senate" | "House" | "Gov" */
+let trendsOfficeFilter = "all";
+/** Shared Trends subset: "all" | "Primary" | "General" */
+let trendsStageFilter = "all";
 
 export async function loadTrendsData(fetcher = fetchJson) {
   try {
@@ -146,6 +148,14 @@ function raceOfficeTag(race) {
     return "Gov";
   }
   return null;
+}
+
+/** Election stage: "Primary" (incl. primary runoffs) or "General". */
+function raceStageTag(race) {
+  const id = race?.id || "";
+  const title = race?.title || "";
+  if (/primary/i.test(id) || /\bprimary\b/i.test(title)) return "Primary";
+  return "General";
 }
 
 function candidateShortName(candidate) {
@@ -564,23 +574,29 @@ function comparisonRaces(races) {
   return visibleRaces(races).filter((race) => !isWatchlistRace(race));
 }
 
-/** Apply party / round / office subset filters to scatter-plot races. */
-function filterScatterRaces(races) {
+/**
+ * Apply party / round / office / stage subset filters to Trends races
+ * (dropdowns and scatter plots).
+ */
+function filterTrendRaces(races) {
   return (races || []).filter((race) => {
-    if (scatterPartyFilter !== "all" && racePartyTag(race) !== scatterPartyFilter) {
+    if (trendsPartyFilter !== "all" && racePartyTag(race) !== trendsPartyFilter) {
       return false;
     }
-    if (scatterRoundFilter !== "all" && raceRoundTag(race) !== scatterRoundFilter) {
+    if (trendsRoundFilter !== "all" && raceRoundTag(race) !== trendsRoundFilter) {
       return false;
     }
-    if (scatterOfficeFilter !== "all" && raceOfficeTag(race) !== scatterOfficeFilter) {
+    if (trendsOfficeFilter !== "all" && raceOfficeTag(race) !== trendsOfficeFilter) {
+      return false;
+    }
+    if (trendsStageFilter !== "all" && raceStageTag(race) !== trendsStageFilter) {
       return false;
     }
     return true;
   });
 }
 
-function buildScatterFilterGroup(ariaLabel, attr, options, selected) {
+function buildTrendsFilterGroup(ariaLabel, attr, options, selected) {
   const buttons = options
     .map(([value, label]) => {
       const active = value === selected ? " is-active" : "";
@@ -588,7 +604,7 @@ function buildScatterFilterGroup(ariaLabel, attr, options, selected) {
       return `
         <button
           type="button"
-          class="trends-scatter-filter-btn${active}"
+          class="trends-filter-btn${active}"
           data-${attr}="${escapeHtml(value)}"
           aria-pressed="${pressed}"
         >${escapeHtml(label)}</button>
@@ -596,46 +612,56 @@ function buildScatterFilterGroup(ariaLabel, attr, options, selected) {
     })
     .join("");
   return `
-    <div class="trends-scatter-filter-group" role="group" aria-label="${escapeHtml(ariaLabel)}">
+    <div class="trends-filter-group" role="group" aria-label="${escapeHtml(ariaLabel)}">
       ${buttons}
     </div>
   `;
 }
 
-/** Compact Dem/GOP + R1/R2 + Senate/House/Gov controls for both scatter plots. */
-function buildScatterFilters() {
+/** Compact Dem/GOP + R1/R2 + Senate/House/Gov + Primary/General controls. */
+function buildTrendsFilters() {
   return `
-    <div class="trends-scatter-filters" aria-label="Subset scatter plots">
-      ${buildScatterFilterGroup(
+    <div class="trends-filters" aria-label="Filter races">
+      ${buildTrendsFilterGroup(
         "Party",
-        "scatter-party",
+        "trends-party",
         [
           ["all", "All"],
           ["DEM", "Dem"],
           ["GOP", "GOP"],
         ],
-        scatterPartyFilter
+        trendsPartyFilter
       )}
-      ${buildScatterFilterGroup(
+      ${buildTrendsFilterGroup(
         "Round",
-        "scatter-round",
+        "trends-round",
         [
           ["all", "All"],
           ["R1", "R1"],
           ["R2", "R2"],
         ],
-        scatterRoundFilter
+        trendsRoundFilter
       )}
-      ${buildScatterFilterGroup(
+      ${buildTrendsFilterGroup(
         "Office",
-        "scatter-office",
+        "trends-office",
         [
           ["all", "All"],
           ["Senate", "Senate"],
           ["House", "House"],
           ["Gov", "Gov"],
         ],
-        scatterOfficeFilter
+        trendsOfficeFilter
+      )}
+      ${buildTrendsFilterGroup(
+        "Election stage",
+        "trends-stage",
+        [
+          ["all", "All"],
+          ["Primary", "Primary"],
+          ["General", "General"],
+        ],
+        trendsStageFilter
       )}
     </div>
   `;
@@ -1331,28 +1357,36 @@ function raceSelectOptions(races, selectedId) {
     .join("");
 }
 
-function bindScatterFilterInteractions(container) {
-  for (const btn of container.querySelectorAll("[data-scatter-party]")) {
+function bindTrendsFilterInteractions(container) {
+  for (const btn of container.querySelectorAll("[data-trends-party]")) {
     btn.addEventListener("click", () => {
-      const next = btn.getAttribute("data-scatter-party");
-      if (!next || next === scatterPartyFilter) return;
-      scatterPartyFilter = next;
+      const next = btn.getAttribute("data-trends-party");
+      if (!next || next === trendsPartyFilter) return;
+      trendsPartyFilter = next;
       renderTrends(container);
     });
   }
-  for (const btn of container.querySelectorAll("[data-scatter-round]")) {
+  for (const btn of container.querySelectorAll("[data-trends-round]")) {
     btn.addEventListener("click", () => {
-      const next = btn.getAttribute("data-scatter-round");
-      if (!next || next === scatterRoundFilter) return;
-      scatterRoundFilter = next;
+      const next = btn.getAttribute("data-trends-round");
+      if (!next || next === trendsRoundFilter) return;
+      trendsRoundFilter = next;
       renderTrends(container);
     });
   }
-  for (const btn of container.querySelectorAll("[data-scatter-office]")) {
+  for (const btn of container.querySelectorAll("[data-trends-office]")) {
     btn.addEventListener("click", () => {
-      const next = btn.getAttribute("data-scatter-office");
-      if (!next || next === scatterOfficeFilter) return;
-      scatterOfficeFilter = next;
+      const next = btn.getAttribute("data-trends-office");
+      if (!next || next === trendsOfficeFilter) return;
+      trendsOfficeFilter = next;
+      renderTrends(container);
+    });
+  }
+  for (const btn of container.querySelectorAll("[data-trends-stage]")) {
+    btn.addEventListener("click", () => {
+      const next = btn.getAttribute("data-trends-stage");
+      if (!next || next === trendsStageFilter) return;
+      trendsStageFilter = next;
       renderTrends(container);
     });
   }
@@ -1375,7 +1409,7 @@ function bindInteractions(container, races) {
     });
   }
 
-  bindScatterFilterInteractions(container);
+  bindTrendsFilterInteractions(container);
 
   for (const race of races) {
     const card = container.querySelector(`[data-race-id="${CSS.escape(race.id)}"]`);
@@ -1391,9 +1425,11 @@ export async function renderTrends(container) {
   if (!container) return;
 
   const allRaces = trendsData?.races || [];
-  const races = comparisonRaces(allRaces);
-  const watched = watchlistRaces(allRaces);
-  if (!races.length && !watched.length) {
+  const allComparison = comparisonRaces(allRaces);
+  const allWatched = watchlistRaces(allRaces);
+  const races = filterTrendRaces(allComparison);
+  const watched = filterTrendRaces(allWatched);
+  if (!allComparison.length && !allWatched.length) {
     const updated = trendsData?.generated_at
       ? `Last checked ${trendsData.generated_at}. `
       : "";
@@ -1404,13 +1440,21 @@ export async function renderTrends(container) {
   if (races.length && !races.some((race) => race.id === selectedRaceId)) {
     selectedRaceId = races[0].id;
   }
+  if (!races.length) selectedRaceId = null;
   if (watched.length && !watched.some((race) => race.id === selectedWatchlistRaceId)) {
     selectedWatchlistRaceId = watched[0].id;
   }
+  if (!watched.length) selectedWatchlistRaceId = null;
 
   const activeRace = races.find((race) => race.id === selectedRaceId) || races[0] || null;
   const activeWatch =
     watched.find((race) => race.id === selectedWatchlistRaceId) || watched[0] || null;
+
+  const filtersBlock = `
+    <div class="trends-section trends-filters-section">
+      ${buildTrendsFilters()}
+    </div>
+  `;
 
   const watchlistBlock = activeWatch
     ? `
@@ -1426,9 +1470,14 @@ export async function renderTrends(container) {
       </div>
     </div>
   `
-    : "";
+    : allWatched.length
+      ? `
+    <div class="trends-section">
+      <p class="trends-empty">No current races match these filters.</p>
+    </div>
+  `
+      : "";
 
-  const scatterRaces = filterScatterRaces(races);
   const comparisonBlock = activeRace
     ? `
     <div class="trends-section">
@@ -1440,18 +1489,27 @@ export async function renderTrends(container) {
       </div>
       <div class="trends-list">
         ${renderRaceCard(activeRace)}
-        ${buildScatterFilters()}
-        ${buildCorrelationPanel(scatterRaces)}
-        ${buildLeadDaysMarginPanel(scatterRaces)}
+        ${buildCorrelationPanel(races)}
+        ${buildLeadDaysMarginPanel(races)}
       </div>
     </div>
   `
-    : "";
+    : allComparison.length
+      ? `
+    <div class="trends-section">
+      <p class="trends-empty">No comparison races match these filters.</p>
+      <div class="trends-list">
+        ${buildCorrelationPanel([])}
+        ${buildLeadDaysMarginPanel([])}
+      </div>
+    </div>
+  `
+      : "";
 
-  container.innerHTML = `${watchlistBlock}${comparisonBlock}`;
+  container.innerHTML = `${filtersBlock}${watchlistBlock}${comparisonBlock}`;
 
   bindInteractions(container, [activeWatch, activeRace].filter(Boolean));
-  if (scatterRaces.length) wireScatterInteractions(container, scatterRaces);
+  if (races.length) wireScatterInteractions(container, races);
 }
 
 export function trendsFooterText() {
