@@ -307,46 +307,6 @@ function renderSuggestionCard(item) {
   `;
 }
 
-const STATE_MARKET_CATEGORIES = new Set([
-  "us_primary",
-  "us_governor",
-  "us_senate",
-  "de_state",
-]);
-
-function isStateSuggestion(item, election) {
-  if (election) {
-    if (election.level === "state") return true;
-    if (
-      election.sections?.length &&
-      !election.sections.some((section) => section.level === "federal")
-    ) {
-      return true;
-    }
-    return false;
-  }
-
-  return Boolean(
-    item.state_code || STATE_MARKET_CATEGORIES.has(item.category)
-  );
-}
-
-function isLocalSuggestion(item, election) {
-  if (election) return election.level === "local";
-  return Boolean(item.city_code || item.category === "mayoral");
-}
-
-export function filterSuggestions(items, { hideStates = false, hideLocal = false } = {}) {
-  if (!hideStates && !hideLocal) return items;
-
-  return items.filter((item) => {
-    const election = findElectionForSuggestion(item);
-    if (hideStates && isStateSuggestion(item, election)) return false;
-    if (hideLocal && isLocalSuggestion(item, election)) return false;
-    return true;
-  });
-}
-
 function maxChangePp(item) {
   if (item.max_change_pp != null) return item.max_change_pp;
   const changes = item.changes || item.prices?.filter((price) => price.change_pp) || [];
@@ -372,22 +332,14 @@ export async function loadSuggestionsData(fetcher = fetchJson) {
   return suggestions;
 }
 
-export async function renderSuggestions(
-  container,
-  { hideStates = false, hideLocal = false } = {}
-) {
+export async function renderSuggestions(container) {
   if (!container) return;
 
-  const allItems = suggestionsData?.suggestions || [];
-  const items = filterSuggestions(allItems, { hideStates, hideLocal });
+  const items = suggestionsData?.suggestions || [];
   if (!items.length) {
     const updated = suggestionsData?.generated_at
       ? `Last checked ${suggestionsData.generated_at}. `
       : "";
-    if (allItems.length && (hideStates || hideLocal)) {
-      container.innerHTML = `<p class="empty">${updated}No races match your filters.</p>`;
-      return;
-    }
     container.innerHTML = `<p class="empty">${updated}No races with ≥${suggestionsData?.threshold_pp ?? 4}pp market moves in the last 48 hours right now.</p>`;
     return;
   }
@@ -399,13 +351,8 @@ export async function renderSuggestions(
   await refreshSuggestionPrices(container, items);
 }
 
-export function suggestionsFooterText(
-  { hideStates = false, hideLocal = false } = {}
-) {
+export function suggestionsFooterText() {
   if (!suggestionsData?.generated_at) return "";
-  const count = filterSuggestions(suggestionsData.suggestions || [], {
-    hideStates,
-    hideLocal,
-  }).length;
+  const count = (suggestionsData.suggestions || []).length;
   return `Market prices updated ${suggestionsData.generated_at} · ${count} race${count === 1 ? "" : "s"} with ≥${suggestionsData.threshold_pp ?? 4}pp moves (48h)`;
 }

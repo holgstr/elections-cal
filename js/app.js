@@ -100,8 +100,6 @@ let allElections = [];
 let activeGroup = "all";
 let activeTab = "calendar";
 let searchQuery = "";
-let hideStates = false;
-let hideLocal = false;
 
 async function loadData() {
   const tasks = [
@@ -121,17 +119,13 @@ async function loadData() {
   await updateFooter(meta);
 }
 
-function suggestionFilters() {
-  return { hideStates, hideLocal };
-}
-
 async function updateFooter(meta) {
   const footer = document.getElementById("footer-meta");
   if (!footer) return;
 
   if (activeTab === "suggestions") {
     const { suggestionsFooterText } = await loadSuggestionsModule();
-    footer.textContent = suggestionsFooterText(suggestionFilters());
+    footer.textContent = suggestionsFooterText();
     return;
   }
 
@@ -191,16 +185,6 @@ function bindEvents() {
     render();
   });
 
-  document.getElementById("toggle-states").addEventListener("change", (e) => {
-    hideStates = !e.target.checked;
-    renderActiveTab();
-  });
-
-  document.getElementById("toggle-local").addEventListener("change", (e) => {
-    hideLocal = !e.target.checked;
-    renderActiveTab();
-  });
-
   for (const button of document.querySelectorAll(".tab-btn")) {
     button.addEventListener("click", () => {
       setActiveTab(button.dataset.tab);
@@ -225,9 +209,7 @@ function setActiveTab(tab) {
   }
 
   const toolbar = document.getElementById("calendar-toolbar");
-  if (toolbar) toolbar.hidden = tab === "trends";
-  const searchWrap = toolbar?.querySelector(".search-wrap");
-  if (searchWrap) searchWrap.hidden = tab !== "calendar";
+  if (toolbar) toolbar.hidden = tab !== "calendar";
 
   renderActiveTab();
 
@@ -240,7 +222,7 @@ async function renderActiveTab() {
   if (activeTab === "suggestions") {
     const { loadSuggestionsData, renderSuggestions } = await loadSuggestionsModule();
     await loadSuggestionsData(fetchJson);
-    await renderSuggestions(document.getElementById("suggestions"), suggestionFilters());
+    await renderSuggestions(document.getElementById("suggestions"));
     await updateFooter();
     return;
   }
@@ -282,18 +264,6 @@ function electionHaystack(election) {
 
 function filterElections() {
   return allElections.filter((election) => {
-    if (hideStates) {
-      if (election.level === "state") return false;
-      if (
-        election.sections?.length &&
-        !election.sections.some((section) => section.level === "federal")
-      ) {
-        return false;
-      }
-    }
-
-    if (hideLocal && election.level === "local") return false;
-
     if (activeGroup !== "all") {
       if (activeGroup === "US" || activeGroup === "DE") {
         if (election.country_code !== activeGroup) return false;
@@ -773,8 +743,7 @@ function resolveCardDisplay(election) {
 
 function visibleSections(election) {
   if (!election.sections?.length) return [];
-  if (!hideStates) return election.sections;
-  return election.sections.filter((section) => section.level !== "state");
+  return election.sections;
 }
 
 function getDisplayElections() {
