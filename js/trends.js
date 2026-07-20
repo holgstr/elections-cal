@@ -25,6 +25,10 @@ const SCATTER = {
 let trendsData = null;
 let selectedRaceId = null;
 let selectedWatchlistRaceId = null;
+/** Scatter subset: "all" | "DEM" | "GOP" */
+let scatterPartyFilter = "all";
+/** Scatter subset: "all" | "R1" | "R2" */
+let scatterRoundFilter = "all";
 
 export async function loadTrendsData(fetcher = fetchJson) {
   try {
@@ -542,6 +546,69 @@ function visibleRaces(races) {
 /** Historical / completed races for the comparison dropdown + scatter plots. */
 function comparisonRaces(races) {
   return visibleRaces(races).filter((race) => !isWatchlistRace(race));
+}
+
+/** Apply party / round subset filters to scatter-plot races. */
+function filterScatterRaces(races) {
+  return (races || []).filter((race) => {
+    if (scatterPartyFilter !== "all" && racePartyTag(race) !== scatterPartyFilter) {
+      return false;
+    }
+    if (scatterRoundFilter !== "all" && raceRoundTag(race) !== scatterRoundFilter) {
+      return false;
+    }
+    return true;
+  });
+}
+
+function buildScatterFilterGroup(ariaLabel, attr, options, selected) {
+  const buttons = options
+    .map(([value, label]) => {
+      const active = value === selected ? " is-active" : "";
+      const pressed = value === selected ? "true" : "false";
+      return `
+        <button
+          type="button"
+          class="trends-scatter-filter-btn${active}"
+          data-${attr}="${escapeHtml(value)}"
+          aria-pressed="${pressed}"
+        >${escapeHtml(label)}</button>
+      `;
+    })
+    .join("");
+  return `
+    <div class="trends-scatter-filter-group" role="group" aria-label="${escapeHtml(ariaLabel)}">
+      ${buttons}
+    </div>
+  `;
+}
+
+/** Compact Dem/GOP + R1/R2 controls shared by both scatter plots. */
+function buildScatterFilters() {
+  return `
+    <div class="trends-scatter-filters" aria-label="Subset scatter plots">
+      ${buildScatterFilterGroup(
+        "Party",
+        "scatter-party",
+        [
+          ["all", "All"],
+          ["DEM", "Dem"],
+          ["GOP", "GOP"],
+        ],
+        scatterPartyFilter
+      )}
+      ${buildScatterFilterGroup(
+        "Round",
+        "scatter-round",
+        [
+          ["all", "All"],
+          ["R1", "R1"],
+          ["R2", "R2"],
+        ],
+        scatterRoundFilter
+      )}
+    </div>
+  `;
 }
 
 /** Watchlist races sorted by soonest election day. */
@@ -1234,6 +1301,25 @@ function raceSelectOptions(races, selectedId) {
     .join("");
 }
 
+function bindScatterFilterInteractions(container) {
+  for (const btn of container.querySelectorAll("[data-scatter-party]")) {
+    btn.addEventListener("click", () => {
+      const next = btn.getAttribute("data-scatter-party");
+      if (!next || next === scatterPartyFilter) return;
+      scatterPartyFilter = next;
+      renderTrends(container);
+    });
+  }
+  for (const btn of container.querySelectorAll("[data-scatter-round]")) {
+    btn.addEventListener("click", () => {
+      const next = btn.getAttribute("data-scatter-round");
+      if (!next || next === scatterRoundFilter) return;
+      scatterRoundFilter = next;
+      renderTrends(container);
+    });
+  }
+}
+
 function bindInteractions(container, races) {
   const watchSelect = container.querySelector("[data-trends-watchlist-select]");
   if (watchSelect) {
@@ -1250,6 +1336,8 @@ function bindInteractions(container, races) {
       renderTrends(container);
     });
   }
+
+  bindScatterFilterInteractions(container);
 
   for (const race of races) {
     const card = container.querySelector(`[data-race-id="${CSS.escape(race.id)}"]`);
@@ -1302,6 +1390,7 @@ export async function renderTrends(container) {
   `
     : "";
 
+  const scatterRaces = filterScatterRaces(races);
   const comparisonBlock = activeRace
     ? `
     <div class="trends-section">
@@ -1313,8 +1402,9 @@ export async function renderTrends(container) {
       </div>
       <div class="trends-list">
         ${renderRaceCard(activeRace)}
-        ${buildCorrelationPanel(races)}
-        ${buildLeadDaysMarginPanel(races)}
+        ${buildScatterFilters()}
+        ${buildCorrelationPanel(scatterRaces)}
+        ${buildLeadDaysMarginPanel(scatterRaces)}
       </div>
     </div>
   `
@@ -1323,7 +1413,7 @@ export async function renderTrends(container) {
   container.innerHTML = `${watchlistBlock}${comparisonBlock}`;
 
   bindInteractions(container, [activeWatch, activeRace].filter(Boolean));
-  if (races.length) wireScatterInteractions(container, races);
+  if (scatterRaces.length) wireScatterInteractions(container, scatterRaces);
 }
 
 export function trendsFooterText() {
