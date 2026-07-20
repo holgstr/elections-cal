@@ -19,6 +19,7 @@ STATE_PATH = PRICES_DIR / "state.json"
 SUGGESTIONS_PATH = ROOT / "data" / "market_suggestions.json"
 ODDS_CHANGES_PATH = ROOT / "data" / "market_odds_changes.json"
 ODDS_PATH = ROOT / "data" / "market_odds.json"
+DATA_UPDATED_PATH = ROOT / "data" / "data_updated.json"
 ELECTIONS_PATH = ROOT / "data" / "elections.json"
 CURATED_DIR = ROOT / "data" / "curated"
 NOMINEE_INFO_FILES = (
@@ -49,6 +50,28 @@ def save_json(path: Path, data: dict | list) -> None:
     with path.open("w", encoding="utf-8") as fh:
         json.dump(data, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
+
+
+def utc_now_iso() -> str:
+    return (
+        datetime.now(timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
+
+
+def update_data_updated(**fields: str) -> None:
+    payload: dict = {}
+    if DATA_UPDATED_PATH.exists():
+        try:
+            existing = load_json(DATA_UPDATED_PATH)
+            if isinstance(existing, dict):
+                payload = existing
+        except (OSError, json.JSONDecodeError):
+            payload = {}
+    payload.update(fields)
+    save_json(DATA_UPDATED_PATH, payload)
 
 
 def parse_outcome_price(outcome_prices) -> float | None:
@@ -833,6 +856,7 @@ def main() -> None:
 
     market_odds = build_market_odds(markets, today_snapshot, today, errors)
     save_json(ODDS_PATH, market_odds)
+    update_data_updated(odds_generated_at=utc_now_iso())
 
     print(f"Fetched {fetched}/{len(markets)} markets for {today}")
     print(f"Popover odds slugs: {market_odds['markets']}")

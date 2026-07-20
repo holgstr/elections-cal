@@ -42,4 +42,5 @@ jobs:
             data/market_prices/state.json \
             data/market_suggestions.json \
             data/market_odds_changes.json \
-            data/market_odds.json
+            data/market_odds.json \
+            data/data_updated.json

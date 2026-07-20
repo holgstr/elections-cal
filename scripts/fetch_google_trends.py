@@ -39,6 +39,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data" / "config" / "trends_races.json"
 OUTPUT_PATH = ROOT / "data" / "trends.json"
+DATA_UPDATED_PATH = ROOT / "data" / "data_updated.json"
 
 TRENDS_HOME = "https://trends.google.com/trends/?geo=US"
 EXPLORE_API = "https://trends.google.com/trends/api/explore"
@@ -95,6 +96,19 @@ def save_json(path: Path, data: dict | list) -> None:
     with path.open("w", encoding="utf-8") as fh:
         json.dump(data, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
+
+
+def update_data_updated(**fields: str) -> None:
+    payload: dict = {}
+    if DATA_UPDATED_PATH.exists():
+        try:
+            existing = load_json(DATA_UPDATED_PATH)
+            if isinstance(existing, dict):
+                payload = existing
+        except (OSError, json.JSONDecodeError):
+            payload = {}
+    payload.update(fields)
+    save_json(DATA_UPDATED_PATH, payload)
 
 
 def parse_iso_date(value: str) -> date:
@@ -728,6 +742,7 @@ def main(argv: list[str] | None = None) -> int:
         payload["errors"] = errors
 
     save_json(OUTPUT_PATH, payload)
+    update_data_updated(trends_generated_at=payload["generated_at"])
     print(f"Wrote {OUTPUT_PATH} ({len(races)} race(s))")
     return 0 if not errors else 0  # still succeed if at least one race landed
 

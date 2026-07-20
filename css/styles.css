@@ -58,7 +58,28 @@ body::before {
   z-index: 10;
   padding: 1rem 0 0.85rem;
   margin-bottom: 0.5rem;
-  background: var(--bg);
+  /* Match body::before so sticky cover doesn’t flash a flat solid vs the page wash */
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 90% 55% at 50% -10%, rgba(91, 159, 212, 0.12), transparent),
+    radial-gradient(ellipse 50% 35% at 100% 0%, rgba(232, 168, 56, 0.06), transparent);
+  background-attachment: fixed;
+}
+
+.data-updated {
+  position: absolute;
+  top: 0.35rem;
+  right: 0;
+  margin: 0;
+  font-size: 0.58rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  opacity: 0.72;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  user-select: none;
 }
 
 .site-title {
@@ -146,15 +167,17 @@ body::before {
   color: var(--text);
   position: sticky;
   top: 5.5rem;
-  background: rgba(15, 18, 25, 0.92);
-  backdrop-filter: blur(6px);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 90% 55% at 50% -10%, rgba(91, 159, 212, 0.12), transparent),
+    radial-gradient(ellipse 50% 35% at 100% 0%, rgba(232, 168, 56, 0.06), transparent);
+  background-attachment: fixed;
   padding: 0.25rem 0;
   z-index: 5;
 }
 
 #timeline .month-heading {
   background: transparent;
-  backdrop-filter: none;
 }
 
 .cards {

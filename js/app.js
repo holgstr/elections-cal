@@ -106,6 +106,7 @@ async function loadData() {
     fetchJson("data/meta.json"),
     fetchJson("data/elections.json"),
     loadPrimaryInfo(fetchJson),
+    updateDataUpdatedStamp(),
   ];
 
   if (activeTab === "suggestions") {
@@ -117,6 +118,53 @@ async function loadData() {
   const [meta, elections] = await Promise.all(tasks);
   allElections = elections;
   await updateFooter(meta);
+}
+
+function parseGeneratedAt(value) {
+  if (!value || typeof value !== "string") return null;
+  const iso = /^\d{4}-\d{2}-\d{2}$/.test(value) ? `${value}T00:00:00Z` : value;
+  const date = new Date(iso);
+  return Number.isNaN(date.getTime()) ? null : { raw: value, date };
+}
+
+function formatDataUpdatedStamp(stamp) {
+  const dateOnly = /^\d{4}-\d{2}-\d{2}$/.test(stamp.raw);
+  if (dateOnly) {
+    return stamp.date.toLocaleDateString(undefined, {
+      month: "short",
+      day: "numeric",
+    });
+  }
+  return stamp.date.toLocaleString(undefined, {
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
+async function updateDataUpdatedStamp() {
+  const el = document.getElementById("data-updated");
+  if (!el) return;
+
+  try {
+    const meta = await fetchJson("data/data_updated.json").catch(() => null);
+    const stamps = [meta?.odds_generated_at, meta?.trends_generated_at]
+      .map(parseGeneratedAt)
+      .filter(Boolean);
+    if (!stamps.length) {
+      el.textContent = "";
+      el.removeAttribute("datetime");
+      return;
+    }
+    stamps.sort((a, b) => b.date - a.date);
+    const latest = stamps[0];
+    el.dateTime = latest.date.toISOString();
+    el.textContent = formatDataUpdatedStamp(latest);
+  } catch {
+    el.textContent = "";
+    el.removeAttribute("datetime");
+  }
 }
 
 async function updateFooter(meta) {
