@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T11:15:01Z",
+  "generated_at": "2026-07-20T14:16:54Z",
   "source": "google_trends",
   "races": [
     {
@@ -8303,15 +8303,542 @@
         }
       ],
       "watchlist": true
+    },
+    {
+      "id": "nj-governor-2025",
+      "title": "New Jersey Governor",
+      "election_date": "2025-11-04",
+      "country_code": "US",
+      "state_code": "NJ",
+      "geo": "US-NJ",
+      "window_days": 30,
+      "window_mode": "election",
+      "start_date": "2025-10-05",
+      "end_date": "2025-11-04",
+      "candidates": [
+        {
+          "keyword": "/g/11f3r4x6x5",
+          "label": "Sherrill",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Mikie Sherrill",
+          "mid": "/g/11f3r4x6x5",
+          "topic_title": "Mikie Sherrill",
+          "topic_type": "Governor of New Jersey"
+        },
+        {
+          "keyword": "/m/0h_9f1f",
+          "label": "Ciattarelli",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Jack Ciattarelli",
+          "mid": "/m/0h_9f1f",
+          "topic_title": "Jack Ciattarelli",
+          "topic_type": "Former New Jersey State Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2025-10-05",
+          "values": {
+            "/g/11f3r4x6x5": 9,
+            "/m/0h_9f1f": 5
+          }
+        },
+        {
+          "date": "2025-10-06",
+          "values": {
+            "/g/11f3r4x6x5": 10,
+            "/m/0h_9f1f": 8
+          }
+        },
+        {
+          "date": "2025-10-07",
+          "values": {
+            "/g/11f3r4x6x5": 11,
+            "/m/0h_9f1f": 10
+          }
+        },
+        {
+          "date": "2025-10-08",
+          "values": {
+            "/g/11f3r4x6x5": 14,
+            "/m/0h_9f1f": 18
+          }
+        },
+        {
+          "date": "2025-10-09",
+          "values": {
+            "/g/11f3r4x6x5": 22,
+            "/m/0h_9f1f": 29
+          }
+        },
+        {
+          "date": "2025-10-10",
+          "values": {
+            "/g/11f3r4x6x5": 12,
+            "/m/0h_9f1f": 19
+          }
+        },
+        {
+          "date": "2025-10-11",
+          "values": {
+            "/g/11f3r4x6x5": 11,
+            "/m/0h_9f1f": 13
+          }
+        },
+        {
+          "date": "2025-10-12",
+          "values": {
+            "/g/11f3r4x6x5": 9,
+            "/m/0h_9f1f": 11
+          }
+        },
+        {
+          "date": "2025-10-13",
+          "values": {
+            "/g/11f3r4x6x5": 10,
+            "/m/0h_9f1f": 11
+          }
+        },
+        {
+          "date": "2025-10-14",
+          "values": {
+            "/g/11f3r4x6x5": 11,
+            "/m/0h_9f1f": 11
+          }
+        },
+        {
+          "date": "2025-10-15",
+          "values": {
+            "/g/11f3r4x6x5": 11,
+            "/m/0h_9f1f": 11
+          }
+        },
+        {
+          "date": "2025-10-16",
+          "values": {
+            "/g/11f3r4x6x5": 13,
+            "/m/0h_9f1f": 11
+          }
+        },
+        {
+          "date": "2025-10-17",
+          "values": {
+            "/g/11f3r4x6x5": 10,
+            "/m/0h_9f1f": 11
+          }
+        },
+        {
+          "date": "2025-10-18",
+          "values": {
+            "/g/11f3r4x6x5": 11,
+            "/m/0h_9f1f": 10
+          }
+        },
+        {
+          "date": "2025-10-19",
+          "values": {
+            "/g/11f3r4x6x5": 12,
+            "/m/0h_9f1f": 11
+          }
+        },
+        {
+          "date": "2025-10-20",
+          "values": {
+            "/g/11f3r4x6x5": 10,
+            "/m/0h_9f1f": 9
+          }
+        },
+        {
+          "date": "2025-10-21",
+          "values": {
+            "/g/11f3r4x6x5": 12,
+            "/m/0h_9f1f": 13
+          }
+        },
+        {
+          "date": "2025-10-22",
+          "values": {
+            "/g/11f3r4x6x5": 13,
+            "/m/0h_9f1f": 13
+          }
+        },
+        {
+          "date": "2025-10-23",
+          "values": {
+            "/g/11f3r4x6x5": 12,
+            "/m/0h_9f1f": 13
+          }
+        },
+        {
+          "date": "2025-10-24",
+          "values": {
+            "/g/11f3r4x6x5": 13,
+            "/m/0h_9f1f": 15
+          }
+        },
+        {
+          "date": "2025-10-25",
+          "values": {
+            "/g/11f3r4x6x5": 15,
+            "/m/0h_9f1f": 16
+          }
+        },
+        {
+          "date": "2025-10-26",
+          "values": {
+            "/g/11f3r4x6x5": 15,
+            "/m/0h_9f1f": 17
+          }
+        },
+        {
+          "date": "2025-10-27",
+          "values": {
+            "/g/11f3r4x6x5": 18,
+            "/m/0h_9f1f": 19
+          }
+        },
+        {
+          "date": "2025-10-28",
+          "values": {
+            "/g/11f3r4x6x5": 18,
+            "/m/0h_9f1f": 20
+          }
+        },
+        {
+          "date": "2025-10-29",
+          "values": {
+            "/g/11f3r4x6x5": 19,
+            "/m/0h_9f1f": 19
+          }
+        },
+        {
+          "date": "2025-10-30",
+          "values": {
+            "/g/11f3r4x6x5": 21,
+            "/m/0h_9f1f": 22
+          }
+        },
+        {
+          "date": "2025-10-31",
+          "values": {
+            "/g/11f3r4x6x5": 22,
+            "/m/0h_9f1f": 22
+          }
+        },
+        {
+          "date": "2025-11-01",
+          "values": {
+            "/g/11f3r4x6x5": 26,
+            "/m/0h_9f1f": 23
+          }
+        },
+        {
+          "date": "2025-11-02",
+          "values": {
+            "/g/11f3r4x6x5": 29,
+            "/m/0h_9f1f": 26
+          }
+        },
+        {
+          "date": "2025-11-03",
+          "values": {
+            "/g/11f3r4x6x5": 37,
+            "/m/0h_9f1f": 39
+          }
+        },
+        {
+          "date": "2025-11-04",
+          "values": {
+            "/g/11f3r4x6x5": 100,
+            "/m/0h_9f1f": 92
+          }
+        }
+      ],
+      "result": {
+        "status": "official",
+        "as_of": "2025-12-03",
+        "source": "New Jersey Division of Elections",
+        "candidates": [
+          {
+            "label": "Sherrill",
+            "pct": 56.9
+          },
+          {
+            "label": "Ciattarelli",
+            "pct": 42.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "va-governor-2025",
+      "title": "Virginia Governor",
+      "election_date": "2025-11-04",
+      "country_code": "US",
+      "state_code": "VA",
+      "geo": "US-VA",
+      "window_days": 30,
+      "window_mode": "election",
+      "start_date": "2025-10-05",
+      "end_date": "2025-11-04",
+      "candidates": [
+        {
+          "keyword": "/g/11fgm1ffs7",
+          "label": "Spanberger",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Abigail Spanberger",
+          "mid": "/g/11fgm1ffs7",
+          "topic_title": "Abigail Spanberger",
+          "topic_type": "Governor of Virginia"
+        },
+        {
+          "keyword": "/m/06bzcd",
+          "label": "Earle-Sears",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Winsome Earle-Sears",
+          "mid": "/m/06bzcd",
+          "topic_title": "Winsome Earle-Sears",
+          "topic_type": "Businesswoman and former Lieutenant Governor of Virginia"
+        }
+      ],
+      "series": [
+        {
+          "date": "2025-10-05",
+          "values": {
+            "/g/11fgm1ffs7": 9,
+            "/m/06bzcd": 7
+          }
+        },
+        {
+          "date": "2025-10-06",
+          "values": {
+            "/g/11fgm1ffs7": 11,
+            "/m/06bzcd": 9
+          }
+        },
+        {
+          "date": "2025-10-07",
+          "values": {
+            "/g/11fgm1ffs7": 11,
+            "/m/06bzcd": 8
+          }
+        },
+        {
+          "date": "2025-10-08",
+          "values": {
+            "/g/11fgm1ffs7": 10,
+            "/m/06bzcd": 8
+          }
+        },
+        {
+          "date": "2025-10-09",
+          "values": {
+            "/g/11fgm1ffs7": 23,
+            "/m/06bzcd": 17
+          }
+        },
+        {
+          "date": "2025-10-10",
+          "values": {
+            "/g/11fgm1ffs7": 46,
+            "/m/06bzcd": 39
+          }
+        },
+        {
+          "date": "2025-10-11",
+          "values": {
+            "/g/11fgm1ffs7": 20,
+            "/m/06bzcd": 16
+          }
+        },
+        {
+          "date": "2025-10-12",
+          "values": {
+            "/g/11fgm1ffs7": 18,
+            "/m/06bzcd": 12
+          }
+        },
+        {
+          "date": "2025-10-13",
+          "values": {
+            "/g/11fgm1ffs7": 16,
+            "/m/06bzcd": 12
+          }
+        },
+        {
+          "date": "2025-10-14",
+          "values": {
+            "/g/11fgm1ffs7": 13,
+            "/m/06bzcd": 12
+          }
+        },
+        {
+          "date": "2025-10-15",
+          "values": {
+            "/g/11fgm1ffs7": 14,
+            "/m/06bzcd": 11
+          }
+        },
+        {
+          "date": "2025-10-16",
+          "values": {
+            "/g/11fgm1ffs7": 11,
+            "/m/06bzcd": 9
+          }
+        },
+        {
+          "date": "2025-10-17",
+          "values": {
+            "/g/11fgm1ffs7": 11,
+            "/m/06bzcd": 10
+          }
+        },
+        {
+          "date": "2025-10-18",
+          "values": {
+            "/g/11fgm1ffs7": 10,
+            "/m/06bzcd": 8
+          }
+        },
+        {
+          "date": "2025-10-19",
+          "values": {
+            "/g/11fgm1ffs7": 11,
+            "/m/06bzcd": 10
+          }
+        },
+        {
+          "date": "2025-10-20",
+          "values": {
+            "/g/11fgm1ffs7": 11,
+            "/m/06bzcd": 10
+          }
+        },
+        {
+          "date": "2025-10-21",
+          "values": {
+            "/g/11fgm1ffs7": 16,
+            "/m/06bzcd": 12
+          }
+        },
+        {
+          "date": "2025-10-22",
+          "values": {
+            "/g/11fgm1ffs7": 14,
+            "/m/06bzcd": 10
+          }
+        },
+        {
+          "date": "2025-10-23",
+          "values": {
+            "/g/11fgm1ffs7": 12,
+            "/m/06bzcd": 8
+          }
+        },
+        {
+          "date": "2025-10-24",
+          "values": {
+            "/g/11fgm1ffs7": 13,
+            "/m/06bzcd": 9
+          }
+        },
+        {
+          "date": "2025-10-25",
+          "values": {
+            "/g/11fgm1ffs7": 12,
+            "/m/06bzcd": 10
+          }
+        },
+        {
+          "date": "2025-10-26",
+          "values": {
+            "/g/11fgm1ffs7": 13,
+            "/m/06bzcd": 8
+          }
+        },
+        {
+          "date": "2025-10-27",
+          "values": {
+            "/g/11fgm1ffs7": 15,
+            "/m/06bzcd": 9
+          }
+        },
+        {
+          "date": "2025-10-28",
+          "values": {
+            "/g/11fgm1ffs7": 16,
+            "/m/06bzcd": 10
+          }
+        },
+        {
+          "date": "2025-10-29",
+          "values": {
+            "/g/11fgm1ffs7": 17,
+            "/m/06bzcd": 15
+          }
+        },
+        {
+          "date": "2025-10-30",
+          "values": {
+            "/g/11fgm1ffs7": 19,
+            "/m/06bzcd": 17
+          }
+        },
+        {
+          "date": "2025-10-31",
+          "values": {
+            "/g/11fgm1ffs7": 17,
+            "/m/06bzcd": 15
+          }
+        },
+        {
+          "date": "2025-11-01",
+          "values": {
+            "/g/11fgm1ffs7": 22,
+            "/m/06bzcd": 17
+          }
+        },
+        {
+          "date": "2025-11-02",
+          "values": {
+            "/g/11fgm1ffs7": 23,
+            "/m/06bzcd": 16
+          }
+        },
+        {
+          "date": "2025-11-03",
+          "values": {
+            "/g/11fgm1ffs7": 36,
+            "/m/06bzcd": 26
+          }
+        },
+        {
+          "date": "2025-11-04",
+          "values": {
+            "/g/11fgm1ffs7": 100,
+            "/m/06bzcd": 72
+          }
+        }
+      ],
+      "result": {
+        "status": "official",
+        "as_of": "2025-11-24",
+        "source": "Virginia Department of Elections",
+        "candidates": [
+          {
+            "label": "Spanberger",
+            "pct": 57.6
+          },
+          {
+            "label": "Earle-Sears",
+            "pct": 42.2
+          }
+        ]
+      }
     }
-  ],
-  "errors": [
-    "co-gop-governor-primary-2026: HTTP 429 for https://trends.google.com/trends/api/explore?hl=en-US&tz=360&req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22Victor+Marx%22%2C%22geo%22%3A%22US-CO%22%2C%22time%22%3A%222026-05-31+2026-06-30%22%7D%2C%7B%22keyword%22%3A%22Barb+Kirkmeyer%22%2C%22geo%22%3A%22US-CO%22%2C%22time%22%3A%222026-05-31+2026-06-30%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"><meta name=\"viewport\" content=\"initial-scale=1\"><title>https://trends.google.com/trends/api/explore?hl=en-US&amp;tz=360&amp;req=%7B%22comparisonItem%22%3A%5",
-    "ia-gop-governor-primary-2026: HTTP 429 for https://trends.google.com/trends/api/explore?hl=en-US&tz=360&req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22Zach+Lahn%22%2C%22geo%22%3A%22US-IA%22%2C%22time%22%3A%222026-05-03+2026-06-02%22%7D%2C%7B%22keyword%22%3A%22Randy+Feenstra%22%2C%22geo%22%3A%22US-IA%22%2C%22time%22%3A%222026-05-03+2026-06-02%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"><meta name=\"viewport\" content=\"initial-scale=1\"><title>https://trends.google.com/trends/api/explore?hl=en-US&amp;tz=360&amp;req=%7B%22comparisonItem%22%3A%5",
-    "or-gop-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/explore?hl=en-US&tz=360&req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22%2Fg%2F11c67w253_%22%2C%22geo%22%3A%22US-OR%22%2C%22time%22%3A%222026-04-19+2026-05-19%22%7D%2C%7B%22keyword%22%3A%22%2Fg%2F11c742x6jt%22%2C%22geo%22%3A%22US-OR%22%2C%22time%22%3A%222026-04-19+2026-05-19%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"><meta name=\"viewport\" content=\"initial-scale=1\"><title>https://trends.google.com/trends/api/explore?hl=en-US&amp;tz=360&amp;req=%7B%22comparisonItem%22%3A%5",
-    "nj-gop-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/explore?hl=en-US&tz=360&req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22Justin+Murphy%22%2C%22geo%22%3A%22US-NJ%22%2C%22time%22%3A%222026-05-03+2026-06-02%22%7D%2C%7B%22keyword%22%3A%22Richard+Tabor%22%2C%22geo%22%3A%22US-NJ%22%2C%22time%22%3A%222026-05-03+2026-06-02%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"><meta name=\"viewport\" content=\"initial-scale=1\"><title>https://trends.google.com/trends/api/explore?hl=en-US&amp;tz=360&amp;req=%7B%22comparisonItem%22%3A%5",
-    "ga-gop-governor-primary-runoff-2026: HTTP 429 for https://trends.google.com/trends/api/explore?hl=en-US&tz=360&req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22Rick+Jackson%22%2C%22geo%22%3A%22US-GA%22%2C%22time%22%3A%222026-05-17+2026-06-16%22%7D%2C%7B%22keyword%22%3A%22Burt+Jones%22%2C%22geo%22%3A%22US-GA%22%2C%22time%22%3A%222026-05-17+2026-06-16%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"><meta name=\"viewport\" content=\"initial-scale=1\"><title>https://trends.google.com/trends/api/explore?hl=en-US&amp;tz=360&amp;req=%7B%22comparisonItem%22%3A%5",
-    "co-dem-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/explore?hl=en-US&tz=360&req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22%2Fm%2F04g_1z%22%2C%22geo%22%3A%22US-CO%22%2C%22time%22%3A%222026-05-31+2026-06-30%22%7D%2C%7B%22keyword%22%3A%22%2Fg%2F11h24f3x_y%22%2C%22geo%22%3A%22US-CO%22%2C%22time%22%3A%222026-05-31+2026-06-30%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"><meta name=\"viewport\" content=\"initial-scale=1\"><title>https://trends.google.com/trends/api/explore?hl=en-US&amp;tz=360&amp;req=%7B%22comparisonItem%22%3A%5",
-    "ky-dem-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-04-19+2026-05-19%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-KY%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11j4r74hy5%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-KY%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11fy131s3_%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAal9UJkraFRyZdYJmmJQr5Y6YDFlRhp6N: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"qkLKAYxFRNy3fYBUgE0NxA\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222"
   ]
 }

@@ -29,6 +29,8 @@ let selectedWatchlistRaceId = null;
 let scatterPartyFilter = "all";
 /** Scatter subset: "all" | "R1" | "R2" */
 let scatterRoundFilter = "all";
+/** Scatter subset: "all" | "Senate" | "House" | "Gov" */
+let scatterOfficeFilter = "all";
 
 export async function loadTrendsData(fetcher = fetchJson) {
   try {
@@ -130,6 +132,20 @@ function raceRoundTag(race) {
   const title = race?.title || "";
   if (/runoff/i.test(id) || /runoff/i.test(title)) return "R2";
   return "R1";
+}
+
+/** Office label: "Senate" | "House" | "Gov", or null when unknown. */
+function raceOfficeTag(race) {
+  const id = race?.id || "";
+  const title = race?.title || "";
+  if (/\bCD[-\s]?\d+\b/i.test(title) || /-cd\d+-/.test(id) || /\bhouse\b/i.test(title)) {
+    return "House";
+  }
+  if (/\bsenate\b/i.test(title) || /-senate-/.test(id)) return "Senate";
+  if (/\bgovernor\b/i.test(title) || /-governor-/.test(id) || /-gov-/.test(id)) {
+    return "Gov";
+  }
+  return null;
 }
 
 function candidateShortName(candidate) {
@@ -548,13 +564,16 @@ function comparisonRaces(races) {
   return visibleRaces(races).filter((race) => !isWatchlistRace(race));
 }
 
-/** Apply party / round subset filters to scatter-plot races. */
+/** Apply party / round / office subset filters to scatter-plot races. */
 function filterScatterRaces(races) {
   return (races || []).filter((race) => {
     if (scatterPartyFilter !== "all" && racePartyTag(race) !== scatterPartyFilter) {
       return false;
     }
     if (scatterRoundFilter !== "all" && raceRoundTag(race) !== scatterRoundFilter) {
+      return false;
+    }
+    if (scatterOfficeFilter !== "all" && raceOfficeTag(race) !== scatterOfficeFilter) {
       return false;
     }
     return true;
@@ -583,7 +602,7 @@ function buildScatterFilterGroup(ariaLabel, attr, options, selected) {
   `;
 }
 
-/** Compact Dem/GOP + R1/R2 controls shared by both scatter plots. */
+/** Compact Dem/GOP + R1/R2 + Senate/House/Gov controls for both scatter plots. */
 function buildScatterFilters() {
   return `
     <div class="trends-scatter-filters" aria-label="Subset scatter plots">
@@ -606,6 +625,17 @@ function buildScatterFilters() {
           ["R2", "R2"],
         ],
         scatterRoundFilter
+      )}
+      ${buildScatterFilterGroup(
+        "Office",
+        "scatter-office",
+        [
+          ["all", "All"],
+          ["Senate", "Senate"],
+          ["House", "House"],
+          ["Gov", "Gov"],
+        ],
+        scatterOfficeFilter
       )}
     </div>
   `;
@@ -1315,6 +1345,14 @@ function bindScatterFilterInteractions(container) {
       const next = btn.getAttribute("data-scatter-round");
       if (!next || next === scatterRoundFilter) return;
       scatterRoundFilter = next;
+      renderTrends(container);
+    });
+  }
+  for (const btn of container.querySelectorAll("[data-scatter-office]")) {
+    btn.addEventListener("click", () => {
+      const next = btn.getAttribute("data-scatter-office");
+      if (!next || next === scatterOfficeFilter) return;
+      scatterOfficeFilter = next;
       renderTrends(container);
     });
   }
