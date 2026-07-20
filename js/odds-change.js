@@ -90,12 +90,62 @@ export function renderOddsChangeBadge(change) {
   return `<span class="price-change ${cls}" aria-label="${directionLabel} ${Math.round(change.change_pp)} percentage points">${arrow} ${Math.round(change.change_pp)}%</span>`;
 }
 
-export function formatOddsPctWithChange(pct, slug, name, oddsFormat, formatPercent, matchName) {
-  if (pct == null) return "";
+/** Above this, prices are treated as multi-advance (may legitimately sum well over 100). */
+export const MAX_EXCLUSIVE_ODDS_SUM = 125;
+
+/**
+ * Round mutually exclusive outcome percentages so displayed integers never sum
+ * above 100. Multi-advance markets (sum > MAX_EXCLUSIVE_ODDS_SUM) round independently.
+ */
+export function roundExclusiveOdds(pcts) {
+  const values = (pcts || []).map((pct) => {
+    const n = Number(pct);
+    return Number.isFinite(n) ? Math.max(0, n) : 0;
+  });
+  if (!values.length) return [];
+
+  const total = values.reduce((sum, pct) => sum + pct, 0);
+  if (total <= 0) return values.map(() => 0);
+
+  // Top-two / top-four "who advances" markets: leave independent rounding.
+  if (total > MAX_EXCLUSIVE_ODDS_SUM) {
+    return values.map((pct) => Math.round(pct));
+  }
+
+  const target = total > 100 ? 100 : Math.round(total);
+  const scaled = total > 100 ? values.map((pct) => (pct / total) * 100) : values;
+  const floors = scaled.map((pct) => Math.floor(pct));
+  let remaining = target - floors.reduce((sum, pct) => sum + pct, 0);
+
+  const byFraction = scaled
+    .map((pct, index) => ({ index, fraction: pct - Math.floor(pct) }))
+    .sort((a, b) => b.fraction - a.fraction || a.index - b.index);
+
+  const rounded = [...floors];
+  for (const { index } of byFraction) {
+    if (remaining <= 0) break;
+    rounded[index] += 1;
+    remaining -= 1;
+  }
+
+  return rounded;
+}
+
+export function formatOddsPctWithChange(
+  pct,
+  slug,
+  name,
+  oddsFormat,
+  formatPercent,
+  matchName,
+  displayPct = null
+) {
+  if (pct == null && displayPct == null) return "";
 
   const staticChange = lookupOddsChange(slug, name, oddsFormat, matchName);
   const change = adjustChangeForLivePrice(staticChange, null, pct, 0);
-  const pctHtml = `<span class="primary-popover__pct">${formatPercent(pct)}</span>`;
+  const shown = displayPct ?? pct;
+  const pctHtml = `<span class="primary-popover__pct">${formatPercent(shown)}</span>`;
   const changeHtml = renderOddsChangeBadge(change);
 
   return `<span class="primary-popover__odds-values">${pctHtml}${changeHtml}</span>`;
