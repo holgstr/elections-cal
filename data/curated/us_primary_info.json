@@ -350,6 +350,21 @@
       }
     }
   },
+  "SC": {
+    "Senate": {
+      "primary_format": "party",
+      "primary_type": "open",
+      "primary_type_label": "Open primary",
+      "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: 50%+1; else top-two runoff (FPTP).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
+      "parties": {
+        "Republican": {
+          "polymarket_slug": "south-carolina-republican-senate-special-primary-winner-20260712135206676"
+        }
+      }
+    }
+  },
   "SD": {
     "Governor": {
       "primary_format": "party",
