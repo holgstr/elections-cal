@@ -7,17 +7,26 @@
   "by_slug": {
     "mexico-legislative-election-winner": {
       "PRI": {
-        "change_pp": 17.65,
+        "change_pp": 16.75,
         "direction": "down",
         "reference_date": "2026-07-19",
         "reference_pct": 23.5,
         "window": "2d"
       },
       "Morena": {
-        "change_pp": 7.55,
+        "change_pp": 8.9,
         "direction": "up",
         "reference_date": "2026-07-19",
         "reference_pct": 77.3,
+        "window": "2d"
+      }
+    },
+    "alaska-governor-election-winner": {
+      "Bernadette Wilson": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-07-19",
+        "reference_pct": 22.5,
         "window": "2d"
       }
     },
@@ -48,8 +57,8 @@
     },
     "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
       "Earl D. \"Skip\" Southworth": {
-        "change_pp": 9.4,
-        "direction": "down",
+        "change_pp": 4.2,
+        "direction": "up",
         "reference_date": "2026-07-19",
         "reference_pct": 18.05,
         "window": "2d"
@@ -57,7 +66,7 @@
     },
     "connecticut-governor-republican-primary-winner": {
       "Betsy McCaughey": {
-        "change_pp": 16.2,
+        "change_pp": 17.25,
         "direction": "down",
         "reference_date": "2026-07-19",
         "reference_pct": 17.6,
@@ -73,41 +82,25 @@
         "window": "2d"
       }
     },
-    "massachusetts-democratic-senate-primary-winner": {
-      "Ed Markey": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-07-19",
-        "reference_pct": 69.5,
-        "window": "2d"
-      },
-      "Seth Moulton": {
+    "kansas-governor-republican-primary-winner": {
+      "Ty Masterson": {
         "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-07-19",
-        "reference_pct": 29.5,
-        "window": "2d"
-      }
-    },
-    "michigan-governor-republican-primary-winner": {
-      "Perry Johnson": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-07-19",
-        "reference_pct": 20.5,
+        "reference_pct": 73.5,
         "window": "2d"
       }
     },
     "michigan-democratic-senate-primary-winner": {
       "Haley Stevens": {
-        "change_pp": 13.25,
+        "change_pp": 17.35,
         "direction": "down",
         "reference_date": "2026-07-19",
         "reference_pct": 33.95,
         "window": "2d"
       },
       "Abdul El-Sayed": {
-        "change_pp": 14.5,
+        "change_pp": 17.5,
         "direction": "up",
         "reference_date": "2026-07-19",
         "reference_pct": 66.0,
@@ -115,11 +108,29 @@
       }
     },
     "minnesota-governor-republican-primary-winner": {
-      "Lisa Demuth": {
-        "change_pp": 4.5,
+      "Mike Lindell": {
+        "change_pp": 9.0,
+        "direction": "down",
+        "reference_date": "2026-07-19",
+        "reference_pct": 42.0,
+        "window": "2d"
+      }
+    },
+    "minnesota-democratic-senate-primary-winner": {
+      "Peggy Flanagan": {
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-07-19",
-        "reference_pct": 53.0,
+        "reference_pct": 75.5,
+        "window": "2d"
+      }
+    },
+    "new-hampshire-republican-senate-primary-winner-296": {
+      "Scott Brown": {
+        "change_pp": 4.2,
+        "direction": "up",
+        "reference_date": "2026-07-19",
+        "reference_pct": 1.85,
         "window": "2d"
       }
     },
@@ -134,17 +145,33 @@
     },
     "tennessee-governor-democratic-primary-winner": {
       "Carnita Atwater": {
-        "change_pp": 4.0,
+        "change_pp": 6.7,
         "direction": "down",
         "reference_date": "2026-07-19",
         "reference_pct": 9.0,
         "window": "2d"
       },
       "Jerri Green": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-07-19",
         "reference_pct": 89.0,
+        "window": "2d"
+      }
+    },
+    "wisconsin-governor-democratic-primary-winner": {
+      "David Crowley": {
+        "change_pp": 10.6,
+        "direction": "down",
+        "reference_date": "2026-07-19",
+        "reference_pct": 24.05,
+        "window": "2d"
+      },
+      "Francesca Hong": {
+        "change_pp": 4.75,
+        "direction": "up",
+        "reference_date": "2026-07-19",
+        "reference_pct": 67.75,
         "window": "2d"
       }
     }
@@ -152,17 +179,26 @@
   "by_market_id": {
     "national:MX:Chamber of Deputies:party_winner": {
       "PRI": {
-        "change_pp": 17.65,
+        "change_pp": 16.75,
         "direction": "down",
         "reference_date": "2026-07-19",
         "reference_pct": 23.5,
         "window": "2d"
       },
       "Morena": {
-        "change_pp": 7.55,
+        "change_pp": 8.9,
         "direction": "up",
         "reference_date": "2026-07-19",
         "reference_pct": 77.3,
+        "window": "2d"
+      }
+    },
+    "us-governor:AK": {
+      "Bernadette Wilson": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-07-19",
+        "reference_pct": 22.5,
         "window": "2d"
       }
     },
@@ -193,8 +229,8 @@
     },
     "us-primary:AK:Senate": {
       "Earl D. \"Skip\" Southworth": {
-        "change_pp": 9.4,
-        "direction": "down",
+        "change_pp": 4.2,
+        "direction": "up",
         "reference_date": "2026-07-19",
         "reference_pct": 18.05,
         "window": "2d"
@@ -202,7 +238,7 @@
     },
     "us-primary:CT:Governor:Republican": {
       "Betsy McCaughey": {
-        "change_pp": 16.2,
+        "change_pp": 17.25,
         "direction": "down",
         "reference_date": "2026-07-19",
         "reference_pct": 17.6,
@@ -218,41 +254,25 @@
         "window": "2d"
       }
     },
-    "us-primary:MA:Senate:Democratic": {
-      "Ed Markey": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-07-19",
-        "reference_pct": 69.5,
-        "window": "2d"
-      },
-      "Seth Moulton": {
+    "us-primary:KS:Governor:Republican": {
+      "Ty Masterson": {
         "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-07-19",
-        "reference_pct": 29.5,
-        "window": "2d"
-      }
-    },
-    "us-primary:MI:Governor:Republican": {
-      "Perry Johnson": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-07-19",
-        "reference_pct": 20.5,
+        "reference_pct": 73.5,
         "window": "2d"
       }
     },
     "us-primary:MI:Senate:Democratic": {
       "Haley Stevens": {
-        "change_pp": 13.25,
+        "change_pp": 17.35,
         "direction": "down",
         "reference_date": "2026-07-19",
         "reference_pct": 33.95,
         "window": "2d"
       },
       "Abdul El-Sayed": {
-        "change_pp": 14.5,
+        "change_pp": 17.5,
         "direction": "up",
         "reference_date": "2026-07-19",
         "reference_pct": 66.0,
@@ -260,11 +280,29 @@
       }
     },
     "us-primary:MN:Governor:Republican": {
-      "Lisa Demuth": {
-        "change_pp": 4.5,
+      "Mike Lindell": {
+        "change_pp": 9.0,
+        "direction": "down",
+        "reference_date": "2026-07-19",
+        "reference_pct": 42.0,
+        "window": "2d"
+      }
+    },
+    "us-primary:MN:Senate:Democratic": {
+      "Peggy Flanagan": {
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-07-19",
-        "reference_pct": 53.0,
+        "reference_pct": 75.5,
+        "window": "2d"
+      }
+    },
+    "us-primary:NH:Senate:Republican": {
+      "Scott Brown": {
+        "change_pp": 4.2,
+        "direction": "up",
+        "reference_date": "2026-07-19",
+        "reference_pct": 1.85,
         "window": "2d"
       }
     },
@@ -279,17 +317,33 @@
     },
     "us-primary:TN:Governor:Democratic": {
       "Carnita Atwater": {
-        "change_pp": 4.0,
+        "change_pp": 6.7,
         "direction": "down",
         "reference_date": "2026-07-19",
         "reference_pct": 9.0,
         "window": "2d"
       },
       "Jerri Green": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-07-19",
         "reference_pct": 89.0,
+        "window": "2d"
+      }
+    },
+    "us-primary:WI:Governor:Democratic": {
+      "David Crowley": {
+        "change_pp": 10.6,
+        "direction": "down",
+        "reference_date": "2026-07-19",
+        "reference_pct": 24.05,
+        "window": "2d"
+      },
+      "Francesca Hong": {
+        "change_pp": 4.75,
+        "direction": "up",
+        "reference_date": "2026-07-19",
+        "reference_pct": 67.75,
         "window": "2d"
       }
     }
