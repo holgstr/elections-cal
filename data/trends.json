@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T22:39:25Z",
+  "generated_at": "2026-07-21T23:45:28Z",
   "source": "google_trends",
   "races": [
     {
@@ -10758,6 +10758,319 @@
           {
             "label": "Earle-Sears",
             "pct": 42.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "sc-gop-governor-primary-2026",
+      "title": "South Carolina Republican Governor Primary",
+      "election_date": "2026-06-09",
+      "country_code": "US",
+      "state_code": "SC",
+      "geo": "US-SC",
+      "window_days": 30,
+      "window_mode": "election",
+      "start_date": "2026-05-10",
+      "end_date": "2026-06-09",
+      "candidates": [
+        {
+          "keyword": "/g/11gtg871q4",
+          "label": "Evette",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Pamela Evette",
+          "mid": "/g/11gtg871q4",
+          "topic_title": "Pamela Evette",
+          "topic_type": "Lieutenant Governor of South Carolina"
+        },
+        {
+          "keyword": "/m/0gw_nyv",
+          "label": "Wilson",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Alan Wilson",
+          "mid": "/m/0gw_nyv",
+          "topic_title": "Alan Wilson",
+          "topic_type": "Attorney General of South Carolina"
+        },
+        {
+          "keyword": "/m/0f9kbx",
+          "label": "Norman",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Ralph Norman",
+          "mid": "/m/0f9kbx",
+          "topic_title": "Ralph Norman",
+          "topic_type": "United States Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-10",
+          "values": {
+            "/g/11gtg871q4": 22,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 20,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "/g/11gtg871q4": 16,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "/g/11gtg871q4": 17,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 20
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 19
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "/g/11gtg871q4": 18,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 26
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "/g/11gtg871q4": 17,
+            "/m/0gw_nyv": 19,
+            "/m/0f9kbx": 39
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "/g/11gtg871q4": 31,
+            "/m/0gw_nyv": 24,
+            "/m/0f9kbx": 39
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "/g/11gtg871q4": 29,
+            "/m/0gw_nyv": 19,
+            "/m/0f9kbx": 35
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "/g/11gtg871q4": 29,
+            "/m/0gw_nyv": 24,
+            "/m/0f9kbx": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "/g/11gtg871q4": 52,
+            "/m/0gw_nyv": 23,
+            "/m/0f9kbx": 24
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "/g/11gtg871q4": 37,
+            "/m/0gw_nyv": 25,
+            "/m/0f9kbx": 24
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "/g/11gtg871q4": 46,
+            "/m/0gw_nyv": 26,
+            "/m/0f9kbx": 32
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "/g/11gtg871q4": 52,
+            "/m/0gw_nyv": 18,
+            "/m/0f9kbx": 28
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "/g/11gtg871q4": 24,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 18
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "/g/11gtg871q4": 23,
+            "/m/0gw_nyv": 28,
+            "/m/0f9kbx": 19
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "/g/11gtg871q4": 26,
+            "/m/0gw_nyv": 37,
+            "/m/0f9kbx": 24
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "/g/11gtg871q4": 39,
+            "/m/0gw_nyv": 0,
+            "/m/0f9kbx": 19
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "/g/11gtg871q4": 0,
+            "/m/0gw_nyv": 19,
+            "/m/0f9kbx": 18
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "/g/11gtg871q4": 39,
+            "/m/0gw_nyv": 44,
+            "/m/0f9kbx": 36
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "/g/11gtg871q4": 100,
+            "/m/0gw_nyv": 85,
+            "/m/0f9kbx": 73
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Evette",
+            "pct": 28.9
+          },
+          {
+            "label": "Wilson",
+            "pct": 26.1
+          },
+          {
+            "label": "Norman",
+            "pct": 17.1
           }
         ]
       }

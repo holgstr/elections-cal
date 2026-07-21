@@ -977,6 +977,57 @@
     }
   },
   {
+    "id": "sc-gop-governor-primary-2026",
+    "title": "South Carolina Republican Governor Primary",
+    "election_date": "2026-06-09",
+    "country_code": "US",
+    "state_code": "SC",
+    "geo": "US-SC",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Pamela Evette",
+        "label": "Evette",
+        "mid": "/g/11gtg871q4",
+        "topic_title": "Pamela Evette",
+        "topic_type": "Lieutenant Governor of South Carolina"
+      },
+      {
+        "name": "Alan Wilson",
+        "label": "Wilson",
+        "mid": "/m/0gw_nyv",
+        "topic_title": "Alan Wilson",
+        "topic_type": "Attorney General of South Carolina"
+      },
+      {
+        "name": "Ralph Norman",
+        "label": "Norman",
+        "mid": "/m/0f9kbx",
+        "topic_title": "Ralph Norman",
+        "topic_type": "United States Representative"
+      }
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-07-15",
+      "source": "Decision Desk HQ / Associated Press / state election agencies",
+      "candidates": [
+        {
+          "label": "Evette",
+          "pct": 28.9
+        },
+        {
+          "label": "Wilson",
+          "pct": 26.1
+        },
+        {
+          "label": "Norman",
+          "pct": 17.1
+        }
+      ]
+    }
+  },
+  {
     "id": "ky-gop-senate-primary-2026",
     "title": "Kentucky Republican Senate Primary",
     "election_date": "2026-05-19",
