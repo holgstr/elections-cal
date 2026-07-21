@@ -22,7 +22,8 @@
     "NH": { "type": "semi-closed", "note_key": "semi-closed" },
     "RI": { "type": "semi-closed", "note_key": "semi-closed" },
     "DE": { "type": "closed", "note_key": "closed" },
-    "MO": { "type": "open", "note_key": "open" }
+    "MO": { "type": "open", "note_key": "open" },
+    "SC": { "type": "open", "note_key": "open" }
   },
   "type_notes": {
     "semi-closed": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
@@ -150,6 +151,11 @@
     },
     "MO": {
       "MO-01": { "Democratic": "mo-01-democratic-primary-winner" }
+    },
+    "SC": {
+      "Senate": {
+        "Republican": "south-carolina-republican-senate-special-primary-winner-20260712135206676"
+      }
     },
     "WA": {
       "Governor": { "_slug": "washington-governor-election-winner" }
