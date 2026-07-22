@@ -1,7 +1,1062 @@
 {
-  "generated_at": "2026-07-22T16:16:17Z",
+  "generated_at": "2026-07-22T20:36:19Z",
   "source": "google_trends",
   "races": [
+    {
+      "id": "co-gop-governor-primary-2026",
+      "title": "Colorado Republican Governor Primary",
+      "election_date": "2026-06-30",
+      "country_code": "US",
+      "state_code": "CO",
+      "geo": "US-CO",
+      "window_days": 30,
+      "window_mode": "election",
+      "start_date": "2026-05-31",
+      "end_date": "2026-06-30",
+      "candidates": [
+        {
+          "keyword": "Victor Marx",
+          "label": "Marx",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Victor Marx",
+          "resolve_note": "no confident political entity (top='The Victor Marx Story' / '2012 film')"
+        },
+        {
+          "keyword": "Barb Kirkmeyer",
+          "label": "Kirkmeyer",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Barb Kirkmeyer",
+          "mid": "/g/11c51whhyt",
+          "topic_title": "Barbara Kirkmeyer",
+          "topic_type": "Colorado State Senator"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Victor Marx": 44,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Victor Marx": 30,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Victor Marx": 30,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-03",
+          "values": {
+            "Victor Marx": 57,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-04",
+          "values": {
+            "Victor Marx": 35,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-05",
+          "values": {
+            "Victor Marx": 15,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-06",
+          "values": {
+            "Victor Marx": 19,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-07",
+          "values": {
+            "Victor Marx": 28,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "Victor Marx": 38,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-09",
+          "values": {
+            "Victor Marx": 54,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-10",
+          "values": {
+            "Victor Marx": 51,
+            "Barb Kirkmeyer": 14
+          }
+        },
+        {
+          "date": "2026-06-11",
+          "values": {
+            "Victor Marx": 57,
+            "Barb Kirkmeyer": 17
+          }
+        },
+        {
+          "date": "2026-06-12",
+          "values": {
+            "Victor Marx": 49,
+            "Barb Kirkmeyer": 14
+          }
+        },
+        {
+          "date": "2026-06-13",
+          "values": {
+            "Victor Marx": 41,
+            "Barb Kirkmeyer": 19
+          }
+        },
+        {
+          "date": "2026-06-14",
+          "values": {
+            "Victor Marx": 46,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "values": {
+            "Victor Marx": 34,
+            "Barb Kirkmeyer": 12
+          }
+        },
+        {
+          "date": "2026-06-16",
+          "values": {
+            "Victor Marx": 32,
+            "Barb Kirkmeyer": 22
+          }
+        },
+        {
+          "date": "2026-06-17",
+          "values": {
+            "Victor Marx": 46,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-18",
+          "values": {
+            "Victor Marx": 89,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-19",
+          "values": {
+            "Victor Marx": 39,
+            "Barb Kirkmeyer": 26
+          }
+        },
+        {
+          "date": "2026-06-20",
+          "values": {
+            "Victor Marx": 24,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-21",
+          "values": {
+            "Victor Marx": 47,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "Victor Marx": 33,
+            "Barb Kirkmeyer": 19
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "Victor Marx": 34,
+            "Barb Kirkmeyer": 18
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "Victor Marx": 51,
+            "Barb Kirkmeyer": 20
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "Victor Marx": 40,
+            "Barb Kirkmeyer": 17
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "Victor Marx": 28,
+            "Barb Kirkmeyer": 15
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "Victor Marx": 59,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "Victor Marx": 49,
+            "Barb Kirkmeyer": 0
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "Victor Marx": 69,
+            "Barb Kirkmeyer": 44
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "Victor Marx": 100,
+            "Barb Kirkmeyer": 58
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Marx",
+            "pct": 39.9
+          },
+          {
+            "label": "Kirkmeyer",
+            "pct": 39.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "ia-gop-governor-primary-2026",
+      "title": "Iowa Republican Governor Primary",
+      "election_date": "2026-06-02",
+      "country_code": "US",
+      "state_code": "IA",
+      "geo": "US-IA",
+      "window_days": 30,
+      "window_mode": "election",
+      "start_date": "2026-05-03",
+      "end_date": "2026-06-02",
+      "candidates": [
+        {
+          "keyword": "Zach Lahn",
+          "label": "Lahn",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Zach Lahn",
+          "resolve_note": "no confident political entity (top='Zach Lahn' / 'Topic')"
+        },
+        {
+          "keyword": "Randy Feenstra",
+          "label": "Feenstra",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Randy Feenstra",
+          "mid": "/m/05p06tx",
+          "topic_title": "Randy Feenstra",
+          "topic_type": "United States Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-03",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "Zach Lahn": 21,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "Zach Lahn": 18,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "Zach Lahn": 21,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "Zach Lahn": 21,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "Zach Lahn": 21,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "Zach Lahn": 23,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "Zach Lahn": 23,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "Zach Lahn": 24,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "Zach Lahn": 20,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "Zach Lahn": 26,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "Zach Lahn": 0,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "Zach Lahn": 22,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "Zach Lahn": 27,
+            "Randy Feenstra": 26
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "Zach Lahn": 48,
+            "Randy Feenstra": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Zach Lahn": 56,
+            "Randy Feenstra": 18
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Zach Lahn": 53,
+            "Randy Feenstra": 30
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Zach Lahn": 100,
+            "Randy Feenstra": 44
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Lahn",
+            "pct": 37.8
+          },
+          {
+            "label": "Feenstra",
+            "pct": 37.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "or-gop-senate-primary-2026",
+      "title": "Oregon Republican Senate Primary",
+      "election_date": "2026-05-19",
+      "country_code": "US",
+      "state_code": "OR",
+      "geo": "US-OR",
+      "window_days": 30,
+      "window_mode": "election",
+      "start_date": "2026-04-19",
+      "end_date": "2026-05-19",
+      "candidates": [
+        {
+          "keyword": "/g/11c67w253_",
+          "label": "Smith",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "David Brock Smith",
+          "mid": "/g/11c67w253_",
+          "topic_title": "David Brock Smith",
+          "topic_type": "Oregon State Senator"
+        },
+        {
+          "keyword": "/g/11c742x6jt",
+          "label": "Perkins",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Jo Rae Perkins",
+          "mid": "/g/11c742x6jt",
+          "topic_title": "Jo Rae Perkins",
+          "topic_type": "Politician"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-04-19",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-20",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-21",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-22",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-23",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-24",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-25",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-26",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-27",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-28",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-29",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-04-30",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-01",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-02",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-03",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "/g/11c67w253_": 0,
+            "/g/11c742x6jt": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "/g/11c67w253_": 77,
+            "/g/11c742x6jt": 100
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Smith",
+            "pct": 29.0
+          },
+          {
+            "label": "Perkins",
+            "pct": 27.0
+          }
+        ]
+      },
+      "exclude": {
+        "reason": "Oregon is safely Democratic statewide; the GOP primary does not determine the Senate winner."
+      }
+    },
+    {
+      "id": "nj-gop-senate-primary-2026",
+      "title": "New Jersey Republican Senate Primary",
+      "election_date": "2026-06-02",
+      "country_code": "US",
+      "state_code": "NJ",
+      "geo": "US-NJ",
+      "window_days": 30,
+      "window_mode": "election",
+      "start_date": "2026-05-03",
+      "end_date": "2026-06-02",
+      "candidates": [
+        {
+          "keyword": "Justin Murphy",
+          "label": "Murphy",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Justin Murphy",
+          "resolve_note": "no confident political entity (top='Dear Evan Hansen: THE NOVEL' / 'Novel')"
+        },
+        {
+          "keyword": "Richard Tabor",
+          "label": "Tabor",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Richard Tabor",
+          "mid": "/g/11y_zv_lk5",
+          "topic_title": "Richard Tabor",
+          "topic_type": "Politician",
+          "resolve_note": "score=15"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-05-03",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-20",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-21",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-22",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-23",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-24",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 24
+          }
+        },
+        {
+          "date": "2026-05-25",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-26",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-27",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-28",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-29",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-30",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 0
+          }
+        },
+        {
+          "date": "2026-05-31",
+          "values": {
+            "Justin Murphy": 24,
+            "Richard Tabor": 22
+          }
+        },
+        {
+          "date": "2026-06-01",
+          "values": {
+            "Justin Murphy": 0,
+            "Richard Tabor": 31
+          }
+        },
+        {
+          "date": "2026-06-02",
+          "values": {
+            "Justin Murphy": 100,
+            "Richard Tabor": 85
+          }
+        }
+      ]
+    },
     {
       "id": "ga-gop-governor-primary-runoff-2026",
       "title": "Georgia Republican Governor Primary Runoff",
@@ -37,85 +1092,85 @@
         {
           "date": "2026-05-17",
           "values": {
-            "Rick Jackson": 20,
-            "Burt Jones": 12
+            "Rick Jackson": 23,
+            "Burt Jones": 15
           }
         },
         {
           "date": "2026-05-18",
           "values": {
-            "Rick Jackson": 25,
-            "Burt Jones": 19
+            "Rick Jackson": 26,
+            "Burt Jones": 20
           }
         },
         {
           "date": "2026-05-19",
           "values": {
-            "Rick Jackson": 58,
-            "Burt Jones": 69
+            "Rick Jackson": 59,
+            "Burt Jones": 72
           }
         },
         {
           "date": "2026-05-20",
           "values": {
-            "Rick Jackson": 87,
+            "Rick Jackson": 89,
             "Burt Jones": 100
           }
         },
         {
           "date": "2026-05-21",
           "values": {
-            "Rick Jackson": 19,
-            "Burt Jones": 23
+            "Rick Jackson": 21,
+            "Burt Jones": 20
           }
         },
         {
           "date": "2026-05-22",
           "values": {
-            "Rick Jackson": 22,
-            "Burt Jones": 13
+            "Rick Jackson": 23,
+            "Burt Jones": 11
           }
         },
         {
           "date": "2026-05-23",
           "values": {
-            "Rick Jackson": 13,
-            "Burt Jones": 13
+            "Rick Jackson": 15,
+            "Burt Jones": 14
           }
         },
         {
           "date": "2026-05-24",
           "values": {
             "Rick Jackson": 11,
-            "Burt Jones": 12
+            "Burt Jones": 14
           }
         },
         {
           "date": "2026-05-25",
           "values": {
-            "Rick Jackson": 16,
-            "Burt Jones": 11
+            "Rick Jackson": 11,
+            "Burt Jones": 7
           }
         },
         {
           "date": "2026-05-26",
           "values": {
-            "Rick Jackson": 17,
+            "Rick Jackson": 19,
             "Burt Jones": 8
           }
         },
         {
           "date": "2026-05-27",
           "values": {
-            "Rick Jackson": 22,
-            "Burt Jones": 13
+            "Rick Jackson": 24,
+            "Burt Jones": 14
           }
         },
         {
           "date": "2026-05-28",
           "values": {
             "Rick Jackson": 16,
-            "Burt Jones": 9
+            "Burt Jones": 10
           }
         },
         {
@@ -129,125 +1184,125 @@
           "date": "2026-05-30",
           "values": {
             "Rick Jackson": 15,
-            "Burt Jones": 6
+            "Burt Jones": 8
           }
         },
         {
           "date": "2026-05-31",
           "values": {
-            "Rick Jackson": 17,
+            "Rick Jackson": 18,
             "Burt Jones": 13
           }
         },
         {
           "date": "2026-06-01",
           "values": {
-            "Rick Jackson": 18,
-            "Burt Jones": 9
+            "Rick Jackson": 17,
+            "Burt Jones": 10
           }
         },
         {
           "date": "2026-06-02",
           "values": {
-            "Rick Jackson": 19,
-            "Burt Jones": 9
+            "Rick Jackson": 25,
+            "Burt Jones": 11
           }
         },
         {
           "date": "2026-06-03",
           "values": {
-            "Rick Jackson": 23,
-            "Burt Jones": 11
+            "Rick Jackson": 24,
+            "Burt Jones": 13
           }
         },
         {
           "date": "2026-06-04",
           "values": {
-            "Rick Jackson": 19,
-            "Burt Jones": 7
+            "Rick Jackson": 21,
+            "Burt Jones": 8
           }
         },
         {
           "date": "2026-06-05",
           "values": {
             "Rick Jackson": 24,
-            "Burt Jones": 9
-          }
-        },
-        {
-          "date": "2026-06-06",
-          "values": {
-            "Rick Jackson": 24,
-            "Burt Jones": 14
-          }
-        },
-        {
-          "date": "2026-06-07",
-          "values": {
-            "Rick Jackson": 21,
             "Burt Jones": 10
           }
         },
         {
-          "date": "2026-06-08",
+          "date": "2026-06-06",
           "values": {
             "Rick Jackson": 26,
             "Burt Jones": 15
           }
         },
         {
+          "date": "2026-06-07",
+          "values": {
+            "Rick Jackson": 25,
+            "Burt Jones": 13
+          }
+        },
+        {
+          "date": "2026-06-08",
+          "values": {
+            "Rick Jackson": 28,
+            "Burt Jones": 15
+          }
+        },
+        {
           "date": "2026-06-09",
           "values": {
-            "Rick Jackson": 29,
-            "Burt Jones": 15
+            "Rick Jackson": 35,
+            "Burt Jones": 17
           }
         },
         {
           "date": "2026-06-10",
           "values": {
-            "Rick Jackson": 37,
+            "Rick Jackson": 38,
             "Burt Jones": 14
           }
         },
         {
           "date": "2026-06-11",
           "values": {
-            "Rick Jackson": 40,
-            "Burt Jones": 21
+            "Rick Jackson": 39,
+            "Burt Jones": 18
           }
         },
         {
           "date": "2026-06-12",
           "values": {
-            "Rick Jackson": 33,
-            "Burt Jones": 16
+            "Rick Jackson": 36,
+            "Burt Jones": 15
           }
         },
         {
           "date": "2026-06-13",
           "values": {
             "Rick Jackson": 28,
-            "Burt Jones": 12
+            "Burt Jones": 11
           }
         },
         {
           "date": "2026-06-14",
           "values": {
-            "Rick Jackson": 41,
-            "Burt Jones": 21
+            "Rick Jackson": 38,
+            "Burt Jones": 23
           }
         },
         {
           "date": "2026-06-15",
           "values": {
             "Rick Jackson": 34,
-            "Burt Jones": 35
+            "Burt Jones": 36
           }
         },
         {
           "date": "2026-06-16",
           "values": {
-            "Rick Jackson": 68,
+            "Rick Jackson": 71,
             "Burt Jones": 55
           }
         }
@@ -312,14 +1367,14 @@
         {
           "date": "2026-06-01",
           "values": {
-            "/m/04g_1z": 4,
+            "/m/04g_1z": 3,
             "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-02",
           "values": {
-            "/m/04g_1z": 0,
+            "/m/04g_1z": 4,
             "/g/11h24f3x_y": 0
           }
         },
@@ -333,7 +1388,7 @@
         {
           "date": "2026-06-04",
           "values": {
-            "/m/04g_1z": 4,
+            "/m/04g_1z": 0,
             "/g/11h24f3x_y": 0
           }
         },
@@ -347,7 +1402,7 @@
         {
           "date": "2026-06-06",
           "values": {
-            "/m/04g_1z": 6,
+            "/m/04g_1z": 0,
             "/g/11h24f3x_y": 0
           }
         },
@@ -368,35 +1423,35 @@
         {
           "date": "2026-06-09",
           "values": {
-            "/m/04g_1z": 7,
-            "/g/11h24f3x_y": 4
+            "/m/04g_1z": 4,
+            "/g/11h24f3x_y": 0
           }
         },
         {
           "date": "2026-06-10",
           "values": {
-            "/m/04g_1z": 7,
-            "/g/11h24f3x_y": 13
+            "/m/04g_1z": 10,
+            "/g/11h24f3x_y": 12
           }
         },
         {
           "date": "2026-06-11",
           "values": {
-            "/m/04g_1z": 16,
-            "/g/11h24f3x_y": 17
+            "/m/04g_1z": 15,
+            "/g/11h24f3x_y": 18
           }
         },
         {
           "date": "2026-06-12",
           "values": {
-            "/m/04g_1z": 16,
+            "/m/04g_1z": 15,
             "/g/11h24f3x_y": 19
           }
         },
         {
           "date": "2026-06-13",
           "values": {
-            "/m/04g_1z": 20,
+            "/m/04g_1z": 18,
             "/g/11h24f3x_y": 16
           }
         },
@@ -404,55 +1459,55 @@
           "date": "2026-06-14",
           "values": {
             "/m/04g_1z": 19,
-            "/g/11h24f3x_y": 23
+            "/g/11h24f3x_y": 22
           }
         },
         {
           "date": "2026-06-15",
           "values": {
-            "/m/04g_1z": 12,
-            "/g/11h24f3x_y": 14
+            "/m/04g_1z": 11,
+            "/g/11h24f3x_y": 13
           }
         },
         {
           "date": "2026-06-16",
           "values": {
             "/m/04g_1z": 23,
-            "/g/11h24f3x_y": 20
+            "/g/11h24f3x_y": 18
           }
         },
         {
           "date": "2026-06-17",
           "values": {
-            "/m/04g_1z": 11,
-            "/g/11h24f3x_y": 15
+            "/m/04g_1z": 12,
+            "/g/11h24f3x_y": 14
           }
         },
         {
           "date": "2026-06-18",
           "values": {
-            "/m/04g_1z": 13,
+            "/m/04g_1z": 14,
             "/g/11h24f3x_y": 13
           }
         },
         {
           "date": "2026-06-19",
           "values": {
-            "/m/04g_1z": 16,
-            "/g/11h24f3x_y": 15
+            "/m/04g_1z": 14,
+            "/g/11h24f3x_y": 14
           }
         },
         {
           "date": "2026-06-20",
           "values": {
-            "/m/04g_1z": 20,
+            "/m/04g_1z": 14,
             "/g/11h24f3x_y": 17
           }
         },
         {
           "date": "2026-06-21",
           "values": {
-            "/m/04g_1z": 24,
+            "/m/04g_1z": 21,
             "/g/11h24f3x_y": 18
           }
         },
@@ -460,62 +1515,62 @@
           "date": "2026-06-22",
           "values": {
             "/m/04g_1z": 22,
-            "/g/11h24f3x_y": 21
+            "/g/11h24f3x_y": 20
           }
         },
         {
           "date": "2026-06-23",
           "values": {
-            "/m/04g_1z": 23,
-            "/g/11h24f3x_y": 19
+            "/m/04g_1z": 21,
+            "/g/11h24f3x_y": 21
           }
         },
         {
           "date": "2026-06-24",
           "values": {
             "/m/04g_1z": 17,
-            "/g/11h24f3x_y": 21
+            "/g/11h24f3x_y": 20
           }
         },
         {
           "date": "2026-06-25",
           "values": {
-            "/m/04g_1z": 21,
-            "/g/11h24f3x_y": 18
+            "/m/04g_1z": 20,
+            "/g/11h24f3x_y": 19
           }
         },
         {
           "date": "2026-06-26",
           "values": {
             "/m/04g_1z": 20,
-            "/g/11h24f3x_y": 22
+            "/g/11h24f3x_y": 21
           }
         },
         {
           "date": "2026-06-27",
           "values": {
-            "/m/04g_1z": 24,
-            "/g/11h24f3x_y": 23
+            "/m/04g_1z": 25,
+            "/g/11h24f3x_y": 22
           }
         },
         {
           "date": "2026-06-28",
           "values": {
-            "/m/04g_1z": 30,
-            "/g/11h24f3x_y": 28
+            "/m/04g_1z": 31,
+            "/g/11h24f3x_y": 29
           }
         },
         {
           "date": "2026-06-29",
           "values": {
             "/m/04g_1z": 44,
-            "/g/11h24f3x_y": 48
+            "/g/11h24f3x_y": 50
           }
         },
         {
           "date": "2026-06-30",
           "values": {
-            "/m/04g_1z": 92,
+            "/m/04g_1z": 95,
             "/g/11h24f3x_y": 100
           }
         }
@@ -567,225 +1622,7 @@
           "topic_type": "Former President of the West Virginia Senate"
         }
       ],
-      "series": [
-        {
-          "date": "2026-04-12",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-13",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-14",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-15",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-16",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-17",
-          "values": {
-            "Rachel Fetty Anderson": 100,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-18",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-19",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-20",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-21",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-22",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-23",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-24",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-25",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-26",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-27",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-28",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-29",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-04-30",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-05-01",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-05-02",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-05-03",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-05-04",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-05-05",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-05-06",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-05-07",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-05-08",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-05-09",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-05-10",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-05-11",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        },
-        {
-          "date": "2026-05-12",
-          "values": {
-            "Rachel Fetty Anderson": 0,
-            "Jeff Kessler": 0
-          }
-        }
-      ],
+      "series": [],
       "result": {
         "status": "preliminary",
         "as_of": "2026-07-15",
@@ -849,14 +1686,14 @@
         {
           "date": "2026-02-02",
           "values": {
-            "/g/11f0rj_mb_": 13,
+            "/g/11f0rj_mb_": 12,
             "/g/11j90m9942": 7
           }
         },
         {
           "date": "2026-02-03",
           "values": {
-            "/g/11f0rj_mb_": 17,
+            "/g/11f0rj_mb_": 16,
             "/g/11j90m9942": 7
           }
         },
@@ -871,21 +1708,21 @@
           "date": "2026-02-05",
           "values": {
             "/g/11f0rj_mb_": 10,
-            "/g/11j90m9942": 6
+            "/g/11j90m9942": 5
           }
         },
         {
           "date": "2026-02-06",
           "values": {
-            "/g/11f0rj_mb_": 12,
-            "/g/11j90m9942": 7
+            "/g/11f0rj_mb_": 11,
+            "/g/11j90m9942": 5
           }
         },
         {
           "date": "2026-02-07",
           "values": {
             "/g/11f0rj_mb_": 9,
-            "/g/11j90m9942": 7
+            "/g/11j90m9942": 8
           }
         },
         {
@@ -912,8 +1749,8 @@
         {
           "date": "2026-02-11",
           "values": {
-            "/g/11f0rj_mb_": 9,
-            "/g/11j90m9942": 10
+            "/g/11f0rj_mb_": 7,
+            "/g/11j90m9942": 9
           }
         },
         {
@@ -926,14 +1763,14 @@
         {
           "date": "2026-02-13",
           "values": {
-            "/g/11f0rj_mb_": 7,
+            "/g/11f0rj_mb_": 8,
             "/g/11j90m9942": 12
           }
         },
         {
           "date": "2026-02-14",
           "values": {
-            "/g/11f0rj_mb_": 9,
+            "/g/11f0rj_mb_": 8,
             "/g/11j90m9942": 8
           }
         },
@@ -962,14 +1799,14 @@
           "date": "2026-02-18",
           "values": {
             "/g/11f0rj_mb_": 100,
-            "/g/11j90m9942": 43
+            "/g/11j90m9942": 42
           }
         },
         {
           "date": "2026-02-19",
           "values": {
             "/g/11f0rj_mb_": 61,
-            "/g/11j90m9942": 35
+            "/g/11j90m9942": 34
           }
         },
         {
@@ -989,14 +1826,14 @@
         {
           "date": "2026-02-22",
           "values": {
-            "/g/11f0rj_mb_": 39,
+            "/g/11f0rj_mb_": 38,
             "/g/11j90m9942": 25
           }
         },
         {
           "date": "2026-02-23",
           "values": {
-            "/g/11f0rj_mb_": 35,
+            "/g/11f0rj_mb_": 34,
             "/g/11j90m9942": 26
           }
         },
@@ -1017,15 +1854,15 @@
         {
           "date": "2026-02-26",
           "values": {
-            "/g/11f0rj_mb_": 40,
-            "/g/11j90m9942": 38
+            "/g/11f0rj_mb_": 38,
+            "/g/11j90m9942": 37
           }
         },
         {
           "date": "2026-02-27",
           "values": {
             "/g/11f0rj_mb_": 45,
-            "/g/11j90m9942": 42
+            "/g/11j90m9942": 41
           }
         },
         {
@@ -1039,14 +1876,14 @@
           "date": "2026-03-01",
           "values": {
             "/g/11f0rj_mb_": 27,
-            "/g/11j90m9942": 24
+            "/g/11j90m9942": 25
           }
         },
         {
           "date": "2026-03-02",
           "values": {
             "/g/11f0rj_mb_": 26,
-            "/g/11j90m9942": 24
+            "/g/11j90m9942": 23
           }
         },
         {
@@ -1227,14 +2064,14 @@
         {
           "date": "2026-06-10",
           "values": {
-            "Dan Cox": 0,
+            "Dan Cox": 41,
             "Ed Hale": 0
           }
         },
         {
           "date": "2026-06-11",
           "values": {
-            "Dan Cox": 0,
+            "Dan Cox": 34,
             "Ed Hale": 0
           }
         },
@@ -1262,8 +2099,8 @@
         {
           "date": "2026-06-15",
           "values": {
-            "Dan Cox": 51,
-            "Ed Hale": 36
+            "Dan Cox": 0,
+            "Ed Hale": 0
           }
         },
         {
@@ -1318,7 +2155,7 @@
         {
           "date": "2026-06-23",
           "values": {
-            "Dan Cox": 81,
+            "Dan Cox": 88,
             "Ed Hale": 100
           }
         }
@@ -1407,7 +2244,7 @@
         {
           "date": "2026-04-23",
           "values": {
-            "/g/11j08255yz": 0,
+            "/g/11j08255yz": 46,
             "/g/11rtsl0b24": 0
           }
         },
@@ -1499,20 +2336,20 @@
           "date": "2026-05-06",
           "values": {
             "/g/11j08255yz": 0,
-            "/g/11rtsl0b24": 100
+            "/g/11rtsl0b24": 91
           }
         },
         {
           "date": "2026-05-07",
           "values": {
             "/g/11j08255yz": 0,
-            "/g/11rtsl0b24": 51
+            "/g/11rtsl0b24": 61
           }
         },
         {
           "date": "2026-05-08",
           "values": {
-            "/g/11j08255yz": 0,
+            "/g/11j08255yz": 54,
             "/g/11rtsl0b24": 0
           }
         },
@@ -1520,13 +2357,13 @@
           "date": "2026-05-09",
           "values": {
             "/g/11j08255yz": 0,
-            "/g/11rtsl0b24": 79
+            "/g/11rtsl0b24": 91
           }
         },
         {
           "date": "2026-05-10",
           "values": {
-            "/g/11j08255yz": 0,
+            "/g/11j08255yz": 53,
             "/g/11rtsl0b24": 0
           }
         },
@@ -1582,15 +2419,15 @@
         {
           "date": "2026-05-18",
           "values": {
-            "/g/11j08255yz": 67,
+            "/g/11j08255yz": 0,
             "/g/11rtsl0b24": 0
           }
         },
         {
           "date": "2026-05-19",
           "values": {
-            "/g/11j08255yz": 99,
-            "/g/11rtsl0b24": 76
+            "/g/11j08255yz": 100,
+            "/g/11rtsl0b24": 83
           }
         }
       ],
@@ -1651,48 +2488,48 @@
           "date": "2026-02-15",
           "values": {
             "/g/11c292ky_p": 0,
-            "/g/11c5m7lxtk": 7
+            "/g/11c5m7lxtk": 8
           }
         },
         {
           "date": "2026-02-16",
           "values": {
             "/g/11c292ky_p": 5,
-            "/g/11c5m7lxtk": 5
+            "/g/11c5m7lxtk": 0
           }
         },
         {
           "date": "2026-02-17",
           "values": {
-            "/g/11c292ky_p": 5,
+            "/g/11c292ky_p": 9,
             "/g/11c5m7lxtk": 7
           }
         },
         {
           "date": "2026-02-18",
           "values": {
-            "/g/11c292ky_p": 0,
-            "/g/11c5m7lxtk": 6
+            "/g/11c292ky_p": 4,
+            "/g/11c5m7lxtk": 0
           }
         },
         {
           "date": "2026-02-19",
           "values": {
-            "/g/11c292ky_p": 8,
-            "/g/11c5m7lxtk": 6
+            "/g/11c292ky_p": 7,
+            "/g/11c5m7lxtk": 5
           }
         },
         {
           "date": "2026-02-20",
           "values": {
-            "/g/11c292ky_p": 7,
-            "/g/11c5m7lxtk": 8
+            "/g/11c292ky_p": 8,
+            "/g/11c5m7lxtk": 7
           }
         },
         {
           "date": "2026-02-21",
           "values": {
-            "/g/11c292ky_p": 7,
+            "/g/11c292ky_p": 6,
             "/g/11c5m7lxtk": 7
           }
         },
@@ -1700,13 +2537,13 @@
           "date": "2026-02-22",
           "values": {
             "/g/11c292ky_p": 6,
-            "/g/11c5m7lxtk": 5
+            "/g/11c5m7lxtk": 0
           }
         },
         {
           "date": "2026-02-23",
           "values": {
-            "/g/11c292ky_p": 6,
+            "/g/11c292ky_p": 8,
             "/g/11c5m7lxtk": 6
           }
         },
@@ -1720,7 +2557,7 @@
         {
           "date": "2026-02-25",
           "values": {
-            "/g/11c292ky_p": 5,
+            "/g/11c292ky_p": 8,
             "/g/11c5m7lxtk": 7
           }
         },
@@ -1728,35 +2565,35 @@
           "date": "2026-02-26",
           "values": {
             "/g/11c292ky_p": 13,
-            "/g/11c5m7lxtk": 11
+            "/g/11c5m7lxtk": 8
           }
         },
         {
           "date": "2026-02-27",
           "values": {
-            "/g/11c292ky_p": 11,
+            "/g/11c292ky_p": 10,
             "/g/11c5m7lxtk": 10
           }
         },
         {
           "date": "2026-02-28",
           "values": {
-            "/g/11c292ky_p": 9,
-            "/g/11c5m7lxtk": 15
+            "/g/11c292ky_p": 8,
+            "/g/11c5m7lxtk": 16
           }
         },
         {
           "date": "2026-03-01",
           "values": {
-            "/g/11c292ky_p": 10,
-            "/g/11c5m7lxtk": 9
+            "/g/11c292ky_p": 8,
+            "/g/11c5m7lxtk": 10
           }
         },
         {
           "date": "2026-03-02",
           "values": {
             "/g/11c292ky_p": 7,
-            "/g/11c5m7lxtk": 7
+            "/g/11c5m7lxtk": 6
           }
         },
         {
@@ -1769,8 +2606,8 @@
         {
           "date": "2026-03-04",
           "values": {
-            "/g/11c292ky_p": 10,
-            "/g/11c5m7lxtk": 12
+            "/g/11c292ky_p": 9,
+            "/g/11c5m7lxtk": 11
           }
         },
         {
@@ -1784,84 +2621,84 @@
           "date": "2026-03-06",
           "values": {
             "/g/11c292ky_p": 8,
-            "/g/11c5m7lxtk": 9
+            "/g/11c5m7lxtk": 8
           }
         },
         {
           "date": "2026-03-07",
           "values": {
-            "/g/11c292ky_p": 14,
-            "/g/11c5m7lxtk": 11
+            "/g/11c292ky_p": 15,
+            "/g/11c5m7lxtk": 12
           }
         },
         {
           "date": "2026-03-08",
           "values": {
-            "/g/11c292ky_p": 10,
-            "/g/11c5m7lxtk": 8
+            "/g/11c292ky_p": 11,
+            "/g/11c5m7lxtk": 11
           }
         },
         {
           "date": "2026-03-09",
           "values": {
-            "/g/11c292ky_p": 8,
-            "/g/11c5m7lxtk": 10
+            "/g/11c292ky_p": 9,
+            "/g/11c5m7lxtk": 11
           }
         },
         {
           "date": "2026-03-10",
           "values": {
             "/g/11c292ky_p": 16,
-            "/g/11c5m7lxtk": 14
+            "/g/11c5m7lxtk": 13
           }
         },
         {
           "date": "2026-03-11",
           "values": {
-            "/g/11c292ky_p": 12,
-            "/g/11c5m7lxtk": 8
+            "/g/11c292ky_p": 15,
+            "/g/11c5m7lxtk": 9
           }
         },
         {
           "date": "2026-03-12",
           "values": {
             "/g/11c292ky_p": 15,
-            "/g/11c5m7lxtk": 16
+            "/g/11c5m7lxtk": 15
           }
         },
         {
           "date": "2026-03-13",
           "values": {
-            "/g/11c292ky_p": 17,
-            "/g/11c5m7lxtk": 14
+            "/g/11c292ky_p": 13,
+            "/g/11c5m7lxtk": 13
           }
         },
         {
           "date": "2026-03-14",
           "values": {
-            "/g/11c292ky_p": 19,
-            "/g/11c5m7lxtk": 17
+            "/g/11c292ky_p": 18,
+            "/g/11c5m7lxtk": 19
           }
         },
         {
           "date": "2026-03-15",
           "values": {
-            "/g/11c292ky_p": 25,
-            "/g/11c5m7lxtk": 23
+            "/g/11c292ky_p": 24,
+            "/g/11c5m7lxtk": 21
           }
         },
         {
           "date": "2026-03-16",
           "values": {
-            "/g/11c292ky_p": 43,
-            "/g/11c5m7lxtk": 36
+            "/g/11c292ky_p": 41,
+            "/g/11c5m7lxtk": 38
           }
         },
         {
           "date": "2026-03-17",
           "values": {
             "/g/11c292ky_p": 100,
-            "/g/11c5m7lxtk": 76
+            "/g/11c5m7lxtk": 75
           }
         }
       ],
@@ -1914,7 +2751,7 @@
         {
           "date": "2026-05-17",
           "values": {
-            "Everett Wess": 21,
+            "Everett Wess": 0,
             "Dakarai Larriett": 0
           }
         },
@@ -1928,14 +2765,14 @@
         {
           "date": "2026-05-19",
           "values": {
-            "Everett Wess": 97,
-            "Dakarai Larriett": 100
+            "Everett Wess": 100,
+            "Dakarai Larriett": 92
           }
         },
         {
           "date": "2026-05-20",
           "values": {
-            "Everett Wess": 0,
+            "Everett Wess": 16,
             "Dakarai Larriett": 0
           }
         },
@@ -2117,14 +2954,14 @@
         {
           "date": "2026-06-15",
           "values": {
-            "Everett Wess": 17,
+            "Everett Wess": 0,
             "Dakarai Larriett": 0
           }
         },
         {
           "date": "2026-06-16",
           "values": {
-            "Everett Wess": 62,
+            "Everett Wess": 59,
             "Dakarai Larriett": 69
           }
         }
@@ -2359,7 +3196,7 @@
           "date": "2026-05-28",
           "values": {
             "Gregg Hull": 0,
-            "Doug Turner": 72
+            "Doug Turner": 0
           }
         },
         {
@@ -2387,14 +3224,14 @@
           "date": "2026-06-01",
           "values": {
             "Gregg Hull": 0,
-            "Doug Turner": 86
+            "Doug Turner": 100
           }
         },
         {
           "date": "2026-06-02",
           "values": {
             "Gregg Hull": 0,
-            "Doug Turner": 100
+            "Doug Turner": 0
           }
         }
       ],
@@ -2551,7 +3388,7 @@
           "date": "2026-05-17",
           "values": {
             "Alani Bankhead": 0,
-            "Reilly Neill": 85
+            "Reilly Neill": 0
           }
         },
         {
@@ -2627,14 +3464,14 @@
         {
           "date": "2026-05-28",
           "values": {
-            "Alani Bankhead": 66,
+            "Alani Bankhead": 0,
             "Reilly Neill": 0
           }
         },
         {
           "date": "2026-05-29",
           "values": {
-            "Alani Bankhead": 0,
+            "Alani Bankhead": 94,
             "Reilly Neill": 0
           }
         },
@@ -2642,7 +3479,7 @@
           "date": "2026-05-30",
           "values": {
             "Alani Bankhead": 0,
-            "Reilly Neill": 83
+            "Reilly Neill": 0
           }
         },
         {
@@ -2655,15 +3492,15 @@
         {
           "date": "2026-06-01",
           "values": {
-            "Alani Bankhead": 78,
+            "Alani Bankhead": 77,
             "Reilly Neill": 0
           }
         },
         {
           "date": "2026-06-02",
           "values": {
-            "Alani Bankhead": 100,
-            "Reilly Neill": 89
+            "Alani Bankhead": 92,
+            "Reilly Neill": 100
           }
         }
       ],
@@ -2748,7 +3585,7 @@
         {
           "date": "2026-04-23",
           "values": {
-            "/g/11j4r74hy5": 15,
+            "/g/11j4r74hy5": 0,
             "/g/11fy131s3_": 0
           }
         },
@@ -2909,7 +3746,7 @@
         {
           "date": "2026-05-16",
           "values": {
-            "/g/11j4r74hy5": 0,
+            "/g/11j4r74hy5": 19,
             "/g/11fy131s3_": 0
           }
         },
@@ -2923,15 +3760,15 @@
         {
           "date": "2026-05-18",
           "values": {
-            "/g/11j4r74hy5": 26,
-            "/g/11fy131s3_": 0
+            "/g/11j4r74hy5": 19,
+            "/g/11fy131s3_": 30
           }
         },
         {
           "date": "2026-05-19",
           "values": {
             "/g/11j4r74hy5": 100,
-            "/g/11fy131s3_": 79
+            "/g/11fy131s3_": 72
           }
         }
       ],
@@ -2988,14 +3825,14 @@
         {
           "date": "2026-05-17",
           "values": {
-            "/g/11nnr438zm": 0,
-            "/m/0275fzv": 19
+            "/g/11nnr438zm": 13,
+            "/m/0275fzv": 0
           }
         },
         {
           "date": "2026-05-18",
           "values": {
-            "/g/11nnr438zm": 27,
+            "/g/11nnr438zm": 28,
             "/m/0275fzv": 29
           }
         },
@@ -3003,35 +3840,35 @@
           "date": "2026-05-19",
           "values": {
             "/g/11nnr438zm": 100,
-            "/m/0275fzv": 76
+            "/m/0275fzv": 72
           }
         },
         {
           "date": "2026-05-20",
           "values": {
-            "/g/11nnr438zm": 74,
-            "/m/0275fzv": 48
+            "/g/11nnr438zm": 71,
+            "/m/0275fzv": 47
           }
         },
         {
           "date": "2026-05-21",
           "values": {
             "/g/11nnr438zm": 0,
-            "/m/0275fzv": 12
+            "/m/0275fzv": 15
           }
         },
         {
           "date": "2026-05-22",
           "values": {
-            "/g/11nnr438zm": 0,
+            "/g/11nnr438zm": 12,
             "/m/0275fzv": 0
           }
         },
         {
           "date": "2026-05-23",
           "values": {
-            "/g/11nnr438zm": 20,
-            "/m/0275fzv": 16
+            "/g/11nnr438zm": 13,
+            "/m/0275fzv": 0
           }
         },
         {
@@ -3058,8 +3895,8 @@
         {
           "date": "2026-05-27",
           "values": {
-            "/g/11nnr438zm": 12,
-            "/m/0275fzv": 13
+            "/g/11nnr438zm": 0,
+            "/m/0275fzv": 0
           }
         },
         {
@@ -3100,7 +3937,7 @@
         {
           "date": "2026-06-02",
           "values": {
-            "/g/11nnr438zm": 0,
+            "/g/11nnr438zm": 12,
             "/m/0275fzv": 0
           }
         },
@@ -3108,7 +3945,7 @@
           "date": "2026-06-03",
           "values": {
             "/g/11nnr438zm": 0,
-            "/m/0275fzv": 16
+            "/m/0275fzv": 0
           }
         },
         {
@@ -3122,13 +3959,13 @@
           "date": "2026-06-05",
           "values": {
             "/g/11nnr438zm": 0,
-            "/m/0275fzv": 14
+            "/m/0275fzv": 0
           }
         },
         {
           "date": "2026-06-06",
           "values": {
-            "/g/11nnr438zm": 14,
+            "/g/11nnr438zm": 0,
             "/m/0275fzv": 0
           }
         },
@@ -3142,42 +3979,42 @@
         {
           "date": "2026-06-08",
           "values": {
-            "/g/11nnr438zm": 18,
-            "/m/0275fzv": 22
+            "/g/11nnr438zm": 15,
+            "/m/0275fzv": 25
           }
         },
         {
           "date": "2026-06-09",
           "values": {
-            "/g/11nnr438zm": 18,
-            "/m/0275fzv": 17
+            "/g/11nnr438zm": 16,
+            "/m/0275fzv": 19
           }
         },
         {
           "date": "2026-06-10",
           "values": {
-            "/g/11nnr438zm": 26,
+            "/g/11nnr438zm": 15,
             "/m/0275fzv": 14
           }
         },
         {
           "date": "2026-06-11",
           "values": {
-            "/g/11nnr438zm": 0,
-            "/m/0275fzv": 20
+            "/g/11nnr438zm": 12,
+            "/m/0275fzv": 15
           }
         },
         {
           "date": "2026-06-12",
           "values": {
-            "/g/11nnr438zm": 23,
-            "/m/0275fzv": 17
+            "/g/11nnr438zm": 16,
+            "/m/0275fzv": 12
           }
         },
         {
           "date": "2026-06-13",
           "values": {
-            "/g/11nnr438zm": 19,
+            "/g/11nnr438zm": 15,
             "/m/0275fzv": 0
           }
         },
@@ -3191,15 +4028,15 @@
         {
           "date": "2026-06-15",
           "values": {
-            "/g/11nnr438zm": 19,
-            "/m/0275fzv": 14
+            "/g/11nnr438zm": 17,
+            "/m/0275fzv": 21
           }
         },
         {
           "date": "2026-06-16",
           "values": {
-            "/g/11nnr438zm": 59,
-            "/m/0275fzv": 71
+            "/g/11nnr438zm": 62,
+            "/m/0275fzv": 65
           }
         }
       ],
@@ -3263,36 +4100,36 @@
         {
           "date": "2026-05-18",
           "values": {
-            "/g/11fkw7vjdf": 20,
-            "/g/11xgjv2tbv": 23
+            "/g/11fkw7vjdf": 28,
+            "/g/11xgjv2tbv": 25
           }
         },
         {
           "date": "2026-05-19",
           "values": {
-            "/g/11fkw7vjdf": 55,
-            "/g/11xgjv2tbv": 75
+            "/g/11fkw7vjdf": 60,
+            "/g/11xgjv2tbv": 70
           }
         },
         {
           "date": "2026-05-20",
           "values": {
             "/g/11fkw7vjdf": 50,
-            "/g/11xgjv2tbv": 79
+            "/g/11xgjv2tbv": 62
           }
         },
         {
           "date": "2026-05-21",
           "values": {
             "/g/11fkw7vjdf": 0,
-            "/g/11xgjv2tbv": 26
+            "/g/11xgjv2tbv": 23
           }
         },
         {
           "date": "2026-05-22",
           "values": {
-            "/g/11fkw7vjdf": 16,
-            "/g/11xgjv2tbv": 18
+            "/g/11fkw7vjdf": 0,
+            "/g/11xgjv2tbv": 0
           }
         },
         {
@@ -3319,7 +4156,7 @@
         {
           "date": "2026-05-26",
           "values": {
-            "/g/11fkw7vjdf": 16,
+            "/g/11fkw7vjdf": 0,
             "/g/11xgjv2tbv": 0
           }
         },
@@ -3362,7 +4199,7 @@
           "date": "2026-06-01",
           "values": {
             "/g/11fkw7vjdf": 0,
-            "/g/11xgjv2tbv": 12
+            "/g/11xgjv2tbv": 0
           }
         },
         {
@@ -3376,14 +4213,14 @@
           "date": "2026-06-03",
           "values": {
             "/g/11fkw7vjdf": 0,
-            "/g/11xgjv2tbv": 17
+            "/g/11xgjv2tbv": 0
           }
         },
         {
           "date": "2026-06-04",
           "values": {
             "/g/11fkw7vjdf": 0,
-            "/g/11xgjv2tbv": 17
+            "/g/11xgjv2tbv": 14
           }
         },
         {
@@ -3404,14 +4241,14 @@
           "date": "2026-06-07",
           "values": {
             "/g/11fkw7vjdf": 0,
-            "/g/11xgjv2tbv": 0
+            "/g/11xgjv2tbv": 18
           }
         },
         {
           "date": "2026-06-08",
           "values": {
-            "/g/11fkw7vjdf": 30,
-            "/g/11xgjv2tbv": 20
+            "/g/11fkw7vjdf": 22,
+            "/g/11xgjv2tbv": 19
           }
         },
         {
@@ -3424,49 +4261,49 @@
         {
           "date": "2026-06-10",
           "values": {
-            "/g/11fkw7vjdf": 0,
+            "/g/11fkw7vjdf": 15,
             "/g/11xgjv2tbv": 0
           }
         },
         {
           "date": "2026-06-11",
           "values": {
-            "/g/11fkw7vjdf": 15,
-            "/g/11xgjv2tbv": 25
+            "/g/11fkw7vjdf": 19,
+            "/g/11xgjv2tbv": 0
           }
         },
         {
           "date": "2026-06-12",
           "values": {
-            "/g/11fkw7vjdf": 27,
-            "/g/11xgjv2tbv": 23
+            "/g/11fkw7vjdf": 29,
+            "/g/11xgjv2tbv": 15
           }
         },
         {
           "date": "2026-06-13",
           "values": {
-            "/g/11fkw7vjdf": 21,
-            "/g/11xgjv2tbv": 28
+            "/g/11fkw7vjdf": 27,
+            "/g/11xgjv2tbv": 20
           }
         },
         {
           "date": "2026-06-14",
           "values": {
-            "/g/11fkw7vjdf": 23,
-            "/g/11xgjv2tbv": 32
+            "/g/11fkw7vjdf": 29,
+            "/g/11xgjv2tbv": 30
           }
         },
         {
           "date": "2026-06-15",
           "values": {
-            "/g/11fkw7vjdf": 29,
-            "/g/11xgjv2tbv": 42
+            "/g/11fkw7vjdf": 22,
+            "/g/11xgjv2tbv": 43
           }
         },
         {
           "date": "2026-06-16",
           "values": {
-            "/g/11fkw7vjdf": 64,
+            "/g/11fkw7vjdf": 58,
             "/g/11xgjv2tbv": 100
           }
         }
@@ -3648,7 +4485,7 @@
         {
           "date": "2026-05-28",
           "values": {
-            "Hannah Pingree": 93,
+            "Hannah Pingree": 0,
             "Nirav Shah": 0
           }
         },
@@ -3719,7 +4556,7 @@
           "date": "2026-06-07",
           "values": {
             "Hannah Pingree": 0,
-            "Nirav Shah": 0
+            "Nirav Shah": 45
           }
         },
         {
@@ -3733,7 +4570,7 @@
           "date": "2026-06-09",
           "values": {
             "Hannah Pingree": 100,
-            "Nirav Shah": 87
+            "Nirav Shah": 76
           }
         }
       ],
@@ -3902,15 +4739,15 @@
         {
           "date": "2026-06-13",
           "values": {
-            "/g/11qq9ggdyw": 18,
-            "/m/04z_dt3": 20
+            "/g/11qq9ggdyw": 0,
+            "/m/04z_dt3": 23
           }
         },
         {
           "date": "2026-06-14",
           "values": {
-            "/g/11qq9ggdyw": 14,
-            "/m/04z_dt3": 14
+            "/g/11qq9ggdyw": 12,
+            "/m/04z_dt3": 0
           }
         },
         {
@@ -3924,41 +4761,41 @@
           "date": "2026-06-16",
           "values": {
             "/g/11qq9ggdyw": 0,
-            "/m/04z_dt3": 14
+            "/m/04z_dt3": 11
           }
         },
         {
           "date": "2026-06-17",
           "values": {
             "/g/11qq9ggdyw": 0,
-            "/m/04z_dt3": 11
+            "/m/04z_dt3": 0
           }
         },
         {
           "date": "2026-06-18",
           "values": {
-            "/g/11qq9ggdyw": 12,
+            "/g/11qq9ggdyw": 15,
             "/m/04z_dt3": 0
           }
         },
         {
           "date": "2026-06-19",
           "values": {
-            "/g/11qq9ggdyw": 18,
-            "/m/04z_dt3": 14
+            "/g/11qq9ggdyw": 21,
+            "/m/04z_dt3": 17
           }
         },
         {
           "date": "2026-06-20",
           "values": {
-            "/g/11qq9ggdyw": 27,
-            "/m/04z_dt3": 0
+            "/g/11qq9ggdyw": 24,
+            "/m/04z_dt3": 15
           }
         },
         {
           "date": "2026-06-21",
           "values": {
-            "/g/11qq9ggdyw": 13,
+            "/g/11qq9ggdyw": 0,
             "/m/04z_dt3": 0
           }
         },
@@ -3972,21 +4809,21 @@
         {
           "date": "2026-06-23",
           "values": {
-            "/g/11qq9ggdyw": 28,
+            "/g/11qq9ggdyw": 27,
             "/m/04z_dt3": 0
           }
         },
         {
           "date": "2026-06-24",
           "values": {
-            "/g/11qq9ggdyw": 15,
+            "/g/11qq9ggdyw": 12,
             "/m/04z_dt3": 11
           }
         },
         {
           "date": "2026-06-25",
           "values": {
-            "/g/11qq9ggdyw": 26,
+            "/g/11qq9ggdyw": 25,
             "/m/04z_dt3": 0
           }
         },
@@ -3994,14 +4831,14 @@
           "date": "2026-06-26",
           "values": {
             "/g/11qq9ggdyw": 33,
-            "/m/04z_dt3": 13
+            "/m/04z_dt3": 0
           }
         },
         {
           "date": "2026-06-27",
           "values": {
             "/g/11qq9ggdyw": 100,
-            "/m/04z_dt3": 70
+            "/m/04z_dt3": 73
           }
         }
       ],
@@ -4058,7 +4895,7 @@
         {
           "date": "2026-05-31",
           "values": {
-            "/g/11dfq2lv22": 0,
+            "/g/11dfq2lv22": 2,
             "/m/05b60qf": 0
           }
         },
@@ -4066,27 +4903,27 @@
           "date": "2026-06-01",
           "values": {
             "/g/11dfq2lv22": 0,
-            "/m/05b60qf": 0
+            "/m/05b60qf": 3
           }
         },
         {
           "date": "2026-06-02",
           "values": {
             "/g/11dfq2lv22": 0,
-            "/m/05b60qf": 3
+            "/m/05b60qf": 0
           }
         },
         {
           "date": "2026-06-03",
           "values": {
-            "/g/11dfq2lv22": 0,
-            "/m/05b60qf": 0
+            "/g/11dfq2lv22": 3,
+            "/m/05b60qf": 4
           }
         },
         {
           "date": "2026-06-04",
           "values": {
-            "/g/11dfq2lv22": 3,
+            "/g/11dfq2lv22": 0,
             "/m/05b60qf": 0
           }
         },
@@ -4094,13 +4931,13 @@
           "date": "2026-06-05",
           "values": {
             "/g/11dfq2lv22": 10,
-            "/m/05b60qf": 8
+            "/m/05b60qf": 7
           }
         },
         {
           "date": "2026-06-06",
           "values": {
-            "/g/11dfq2lv22": 3,
+            "/g/11dfq2lv22": 4,
             "/m/05b60qf": 4
           }
         },
@@ -4108,27 +4945,27 @@
           "date": "2026-06-07",
           "values": {
             "/g/11dfq2lv22": 0,
-            "/m/05b60qf": 3
+            "/m/05b60qf": 0
           }
         },
         {
           "date": "2026-06-08",
           "values": {
             "/g/11dfq2lv22": 3,
-            "/m/05b60qf": 4
+            "/m/05b60qf": 0
           }
         },
         {
           "date": "2026-06-09",
           "values": {
-            "/g/11dfq2lv22": 4,
-            "/m/05b60qf": 0
+            "/g/11dfq2lv22": 6,
+            "/m/05b60qf": 3
           }
         },
         {
           "date": "2026-06-10",
           "values": {
-            "/g/11dfq2lv22": 11,
+            "/g/11dfq2lv22": 10,
             "/m/05b60qf": 7
           }
         },
@@ -4142,22 +4979,22 @@
         {
           "date": "2026-06-12",
           "values": {
-            "/g/11dfq2lv22": 14,
-            "/m/05b60qf": 12
+            "/g/11dfq2lv22": 15,
+            "/m/05b60qf": 13
           }
         },
         {
           "date": "2026-06-13",
           "values": {
-            "/g/11dfq2lv22": 15,
-            "/m/05b60qf": 12
+            "/g/11dfq2lv22": 13,
+            "/m/05b60qf": 13
           }
         },
         {
           "date": "2026-06-14",
           "values": {
             "/g/11dfq2lv22": 19,
-            "/m/05b60qf": 15
+            "/m/05b60qf": 13
           }
         },
         {
@@ -4170,7 +5007,7 @@
         {
           "date": "2026-06-16",
           "values": {
-            "/g/11dfq2lv22": 20,
+            "/g/11dfq2lv22": 19,
             "/m/05b60qf": 13
           }
         },
@@ -4178,14 +5015,14 @@
           "date": "2026-06-17",
           "values": {
             "/g/11dfq2lv22": 15,
-            "/m/05b60qf": 11
+            "/m/05b60qf": 10
           }
         },
         {
           "date": "2026-06-18",
           "values": {
-            "/g/11dfq2lv22": 12,
-            "/m/05b60qf": 10
+            "/g/11dfq2lv22": 10,
+            "/m/05b60qf": 8
           }
         },
         {
@@ -4205,57 +5042,57 @@
         {
           "date": "2026-06-21",
           "values": {
-            "/g/11dfq2lv22": 14,
+            "/g/11dfq2lv22": 15,
             "/m/05b60qf": 10
           }
         },
         {
           "date": "2026-06-22",
           "values": {
-            "/g/11dfq2lv22": 18,
-            "/m/05b60qf": 15
+            "/g/11dfq2lv22": 17,
+            "/m/05b60qf": 14
           }
         },
         {
           "date": "2026-06-23",
           "values": {
-            "/g/11dfq2lv22": 19,
-            "/m/05b60qf": 15
+            "/g/11dfq2lv22": 20,
+            "/m/05b60qf": 13
           }
         },
         {
           "date": "2026-06-24",
           "values": {
             "/g/11dfq2lv22": 17,
-            "/m/05b60qf": 11
+            "/m/05b60qf": 12
           }
         },
         {
           "date": "2026-06-25",
           "values": {
-            "/g/11dfq2lv22": 18,
-            "/m/05b60qf": 13
+            "/g/11dfq2lv22": 19,
+            "/m/05b60qf": 14
           }
         },
         {
           "date": "2026-06-26",
           "values": {
-            "/g/11dfq2lv22": 15,
-            "/m/05b60qf": 11
+            "/g/11dfq2lv22": 17,
+            "/m/05b60qf": 12
           }
         },
         {
           "date": "2026-06-27",
           "values": {
-            "/g/11dfq2lv22": 24,
-            "/m/05b60qf": 12
+            "/g/11dfq2lv22": 22,
+            "/m/05b60qf": 16
           }
         },
         {
           "date": "2026-06-28",
           "values": {
-            "/g/11dfq2lv22": 34,
-            "/m/05b60qf": 19
+            "/g/11dfq2lv22": 35,
+            "/m/05b60qf": 20
           }
         },
         {
@@ -4269,7 +5106,7 @@
           "date": "2026-06-30",
           "values": {
             "/g/11dfq2lv22": 100,
-            "/m/05b60qf": 64
+            "/m/05b60qf": 65
           }
         }
       ],
@@ -4332,7 +5169,7 @@
           "date": "2026-02-16",
           "values": {
             "Don Tracy": 0,
-            "Jeannie Evans": 0
+            "Jeannie Evans": 26
           }
         },
         {
@@ -4457,7 +5294,7 @@
         {
           "date": "2026-03-06",
           "values": {
-            "Don Tracy": 0,
+            "Don Tracy": 23,
             "Jeannie Evans": 0
           }
         },
@@ -4471,7 +5308,7 @@
         {
           "date": "2026-03-08",
           "values": {
-            "Don Tracy": 26,
+            "Don Tracy": 0,
             "Jeannie Evans": 0
           }
         },
@@ -4485,7 +5322,7 @@
         {
           "date": "2026-03-10",
           "values": {
-            "Don Tracy": 0,
+            "Don Tracy": 30,
             "Jeannie Evans": 0
           }
         },
@@ -4499,7 +5336,7 @@
         {
           "date": "2026-03-12",
           "values": {
-            "Don Tracy": 0,
+            "Don Tracy": 24,
             "Jeannie Evans": 0
           }
         },
@@ -4521,21 +5358,21 @@
           "date": "2026-03-15",
           "values": {
             "Don Tracy": 0,
-            "Jeannie Evans": 0
+            "Jeannie Evans": 37
           }
         },
         {
           "date": "2026-03-16",
           "values": {
-            "Don Tracy": 40,
-            "Jeannie Evans": 19
+            "Don Tracy": 25,
+            "Jeannie Evans": 28
           }
         },
         {
           "date": "2026-03-17",
           "values": {
             "Don Tracy": 100,
-            "Jeannie Evans": 51
+            "Jeannie Evans": 61
           }
         }
       ],
@@ -4606,7 +5443,7 @@
         {
           "date": "2026-05-14",
           "values": {
-            "Bobby Charles": 55,
+            "Bobby Charles": 50,
             "Ben Midgley": 0
           }
         },
@@ -4704,7 +5541,7 @@
         {
           "date": "2026-05-28",
           "values": {
-            "Bobby Charles": 51,
+            "Bobby Charles": 50,
             "Ben Midgley": 0
           }
         },
@@ -4739,14 +5576,14 @@
         {
           "date": "2026-06-02",
           "values": {
-            "Bobby Charles": 0,
+            "Bobby Charles": 42,
             "Ben Midgley": 0
           }
         },
         {
           "date": "2026-06-03",
           "values": {
-            "Bobby Charles": 51,
+            "Bobby Charles": 0,
             "Ben Midgley": 0
           }
         },
@@ -4767,14 +5604,14 @@
         {
           "date": "2026-06-06",
           "values": {
-            "Bobby Charles": 51,
-            "Ben Midgley": 54
+            "Bobby Charles": 0,
+            "Ben Midgley": 0
           }
         },
         {
           "date": "2026-06-07",
           "values": {
-            "Bobby Charles": 57,
+            "Bobby Charles": 0,
             "Ben Midgley": 0
           }
         },
@@ -4782,7 +5619,7 @@
           "date": "2026-06-08",
           "values": {
             "Bobby Charles": 0,
-            "Ben Midgley": 42
+            "Ben Midgley": 0
           }
         },
         {
@@ -4838,7 +5675,7 @@
         {
           "date": "2026-02-16",
           "values": {
-            "/g/11fhr107ff": 0,
+            "/g/11fhr107ff": 14,
             "/g/11gbhcd1_4": 0
           }
         },
@@ -4986,14 +5823,14 @@
           "date": "2026-03-09",
           "values": {
             "/g/11fhr107ff": 0,
-            "/g/11gbhcd1_4": 0
+            "/g/11gbhcd1_4": 16
           }
         },
         {
           "date": "2026-03-10",
           "values": {
-            "/g/11fhr107ff": 0,
-            "/g/11gbhcd1_4": 13
+            "/g/11fhr107ff": 14,
+            "/g/11gbhcd1_4": 15
           }
         },
         {
@@ -5006,42 +5843,42 @@
         {
           "date": "2026-03-12",
           "values": {
-            "/g/11fhr107ff": 0,
+            "/g/11fhr107ff": 18,
             "/g/11gbhcd1_4": 0
           }
         },
         {
           "date": "2026-03-13",
           "values": {
-            "/g/11fhr107ff": 16,
+            "/g/11fhr107ff": 15,
             "/g/11gbhcd1_4": 0
           }
         },
         {
           "date": "2026-03-14",
           "values": {
-            "/g/11fhr107ff": 16,
+            "/g/11fhr107ff": 0,
             "/g/11gbhcd1_4": 0
           }
         },
         {
           "date": "2026-03-15",
           "values": {
-            "/g/11fhr107ff": 0,
-            "/g/11gbhcd1_4": 0
+            "/g/11fhr107ff": 21,
+            "/g/11gbhcd1_4": 18
           }
         },
         {
           "date": "2026-03-16",
           "values": {
-            "/g/11fhr107ff": 18,
-            "/g/11gbhcd1_4": 37
+            "/g/11fhr107ff": 0,
+            "/g/11gbhcd1_4": 31
           }
         },
         {
           "date": "2026-03-17",
           "values": {
-            "/g/11fhr107ff": 93,
+            "/g/11fhr107ff": 94,
             "/g/11gbhcd1_4": 100
           }
         }
@@ -5102,7 +5939,7 @@
         {
           "date": "2026-05-03",
           "values": {
-            "/g/11hdt4_x7y": 0,
+            "/g/11hdt4_x7y": 11,
             "/m/0j_4vjz": 0
           }
         },
@@ -5123,29 +5960,29 @@
         {
           "date": "2026-05-06",
           "values": {
-            "/g/11hdt4_x7y": 15,
-            "/m/0j_4vjz": 11
+            "/g/11hdt4_x7y": 9,
+            "/m/0j_4vjz": 14
           }
         },
         {
           "date": "2026-05-07",
           "values": {
-            "/g/11hdt4_x7y": 8,
-            "/m/0j_4vjz": 9
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
           }
         },
         {
           "date": "2026-05-08",
           "values": {
-            "/g/11hdt4_x7y": 11,
+            "/g/11hdt4_x7y": 12,
             "/m/0j_4vjz": 0
           }
         },
         {
           "date": "2026-05-09",
           "values": {
-            "/g/11hdt4_x7y": 9,
-            "/m/0j_4vjz": 11
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 0
           }
         },
         {
@@ -5159,41 +5996,41 @@
           "date": "2026-05-11",
           "values": {
             "/g/11hdt4_x7y": 0,
-            "/m/0j_4vjz": 0
+            "/m/0j_4vjz": 10
           }
         },
         {
           "date": "2026-05-12",
           "values": {
-            "/g/11hdt4_x7y": 8,
-            "/m/0j_4vjz": 0
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 8
           }
         },
         {
           "date": "2026-05-13",
           "values": {
-            "/g/11hdt4_x7y": 12,
-            "/m/0j_4vjz": 0
+            "/g/11hdt4_x7y": 0,
+            "/m/0j_4vjz": 9
           }
         },
         {
           "date": "2026-05-14",
           "values": {
             "/g/11hdt4_x7y": 0,
-            "/m/0j_4vjz": 0
+            "/m/0j_4vjz": 9
           }
         },
         {
           "date": "2026-05-15",
           "values": {
             "/g/11hdt4_x7y": 0,
-            "/m/0j_4vjz": 10
+            "/m/0j_4vjz": 13
           }
         },
         {
           "date": "2026-05-16",
           "values": {
-            "/g/11hdt4_x7y": 10,
+            "/g/11hdt4_x7y": 0,
             "/m/0j_4vjz": 0
           }
         },
@@ -5208,7 +6045,7 @@
           "date": "2026-05-18",
           "values": {
             "/g/11hdt4_x7y": 0,
-            "/m/0j_4vjz": 8
+            "/m/0j_4vjz": 0
           }
         },
         {
@@ -5222,27 +6059,27 @@
           "date": "2026-05-20",
           "values": {
             "/g/11hdt4_x7y": 0,
-            "/m/0j_4vjz": 19
+            "/m/0j_4vjz": 0
           }
         },
         {
           "date": "2026-05-21",
+          "values": {
+            "/g/11hdt4_x7y": 11,
+            "/m/0j_4vjz": 11
+          }
+        },
+        {
+          "date": "2026-05-22",
           "values": {
             "/g/11hdt4_x7y": 10,
             "/m/0j_4vjz": 9
           }
         },
         {
-          "date": "2026-05-22",
-          "values": {
-            "/g/11hdt4_x7y": 9,
-            "/m/0j_4vjz": 0
-          }
-        },
-        {
           "date": "2026-05-23",
           "values": {
-            "/g/11hdt4_x7y": 11,
+            "/g/11hdt4_x7y": 18,
             "/m/0j_4vjz": 0
           }
         },
@@ -5250,21 +6087,21 @@
           "date": "2026-05-24",
           "values": {
             "/g/11hdt4_x7y": 0,
-            "/m/0j_4vjz": 0
+            "/m/0j_4vjz": 10
           }
         },
         {
           "date": "2026-05-25",
           "values": {
             "/g/11hdt4_x7y": 0,
-            "/m/0j_4vjz": 0
+            "/m/0j_4vjz": 9
           }
         },
         {
           "date": "2026-05-26",
           "values": {
-            "/g/11hdt4_x7y": 9,
-            "/m/0j_4vjz": 10
+            "/g/11hdt4_x7y": 10,
+            "/m/0j_4vjz": 16
           }
         },
         {
@@ -5277,43 +6114,43 @@
         {
           "date": "2026-05-28",
           "values": {
-            "/g/11hdt4_x7y": 0,
+            "/g/11hdt4_x7y": 9,
             "/m/0j_4vjz": 0
           }
         },
         {
           "date": "2026-05-29",
           "values": {
-            "/g/11hdt4_x7y": 12,
+            "/g/11hdt4_x7y": 8,
             "/m/0j_4vjz": 0
           }
         },
         {
           "date": "2026-05-30",
           "values": {
-            "/g/11hdt4_x7y": 0,
+            "/g/11hdt4_x7y": 13,
             "/m/0j_4vjz": 0
           }
         },
         {
           "date": "2026-05-31",
           "values": {
-            "/g/11hdt4_x7y": 11,
-            "/m/0j_4vjz": 9
+            "/g/11hdt4_x7y": 9,
+            "/m/0j_4vjz": 14
           }
         },
         {
           "date": "2026-06-01",
           "values": {
-            "/g/11hdt4_x7y": 23,
-            "/m/0j_4vjz": 17
+            "/g/11hdt4_x7y": 25,
+            "/m/0j_4vjz": 14
           }
         },
         {
           "date": "2026-06-02",
           "values": {
             "/g/11hdt4_x7y": 100,
-            "/m/0j_4vjz": 83
+            "/m/0j_4vjz": 81
           }
         }
       ],
@@ -5371,13 +6208,13 @@
           "date": "2026-04-26",
           "values": {
             "/m/0fpglz1": 0,
-            "/m/01xcqs": 0
+            "/m/01xcqs": 3
           }
         },
         {
           "date": "2026-04-27",
           "values": {
-            "/m/0fpglz1": 7,
+            "/m/0fpglz1": 8,
             "/m/01xcqs": 5
           }
         },
@@ -5391,7 +6228,7 @@
         {
           "date": "2026-04-29",
           "values": {
-            "/m/0fpglz1": 7,
+            "/m/0fpglz1": 5,
             "/m/01xcqs": 3
           }
         },
@@ -5399,35 +6236,35 @@
           "date": "2026-04-30",
           "values": {
             "/m/0fpglz1": 9,
-            "/m/01xcqs": 7
+            "/m/01xcqs": 8
           }
         },
         {
           "date": "2026-05-01",
           "values": {
             "/m/0fpglz1": 10,
-            "/m/01xcqs": 7
+            "/m/01xcqs": 8
           }
         },
         {
           "date": "2026-05-02",
           "values": {
-            "/m/0fpglz1": 10,
-            "/m/01xcqs": 8
+            "/m/0fpglz1": 12,
+            "/m/01xcqs": 7
           }
         },
         {
           "date": "2026-05-03",
           "values": {
-            "/m/0fpglz1": 16,
-            "/m/01xcqs": 12
+            "/m/0fpglz1": 17,
+            "/m/01xcqs": 13
           }
         },
         {
           "date": "2026-05-04",
           "values": {
             "/m/0fpglz1": 11,
-            "/m/01xcqs": 6
+            "/m/01xcqs": 8
           }
         },
         {
@@ -5440,42 +6277,42 @@
         {
           "date": "2026-05-06",
           "values": {
-            "/m/0fpglz1": 10,
-            "/m/01xcqs": 11
+            "/m/0fpglz1": 11,
+            "/m/01xcqs": 10
           }
         },
         {
           "date": "2026-05-07",
           "values": {
             "/m/0fpglz1": 11,
-            "/m/01xcqs": 8
+            "/m/01xcqs": 9
           }
         },
         {
           "date": "2026-05-08",
           "values": {
             "/m/0fpglz1": 9,
-            "/m/01xcqs": 7
+            "/m/01xcqs": 10
           }
         },
         {
           "date": "2026-05-09",
           "values": {
-            "/m/0fpglz1": 11,
-            "/m/01xcqs": 8
+            "/m/0fpglz1": 10,
+            "/m/01xcqs": 9
           }
         },
         {
           "date": "2026-05-10",
           "values": {
-            "/m/0fpglz1": 8,
+            "/m/0fpglz1": 7,
             "/m/01xcqs": 7
           }
         },
         {
           "date": "2026-05-11",
           "values": {
-            "/m/0fpglz1": 13,
+            "/m/0fpglz1": 11,
             "/m/01xcqs": 6
           }
         },
@@ -5483,21 +6320,21 @@
           "date": "2026-05-12",
           "values": {
             "/m/0fpglz1": 13,
-            "/m/01xcqs": 9
+            "/m/01xcqs": 10
           }
         },
         {
           "date": "2026-05-13",
           "values": {
-            "/m/0fpglz1": 13,
-            "/m/01xcqs": 15
+            "/m/0fpglz1": 14,
+            "/m/01xcqs": 14
           }
         },
         {
           "date": "2026-05-14",
           "values": {
-            "/m/0fpglz1": 15,
-            "/m/01xcqs": 11
+            "/m/0fpglz1": 14,
+            "/m/01xcqs": 10
           }
         },
         {
@@ -5510,63 +6347,63 @@
         {
           "date": "2026-05-16",
           "values": {
-            "/m/0fpglz1": 19,
-            "/m/01xcqs": 12
+            "/m/0fpglz1": 18,
+            "/m/01xcqs": 13
           }
         },
         {
           "date": "2026-05-17",
           "values": {
             "/m/0fpglz1": 19,
-            "/m/01xcqs": 16
+            "/m/01xcqs": 18
           }
         },
         {
           "date": "2026-05-18",
           "values": {
             "/m/0fpglz1": 28,
-            "/m/01xcqs": 28
+            "/m/01xcqs": 25
           }
         },
         {
           "date": "2026-05-19",
           "values": {
-            "/m/0fpglz1": 100,
-            "/m/01xcqs": 56
+            "/m/0fpglz1": 98,
+            "/m/01xcqs": 55
           }
         },
         {
           "date": "2026-05-20",
           "values": {
-            "/m/0fpglz1": 79,
-            "/m/01xcqs": 60
+            "/m/0fpglz1": 78,
+            "/m/01xcqs": 59
           }
         },
         {
           "date": "2026-05-21",
           "values": {
-            "/m/0fpglz1": 40,
-            "/m/01xcqs": 28
+            "/m/0fpglz1": 38,
+            "/m/01xcqs": 27
           }
         },
         {
           "date": "2026-05-22",
           "values": {
-            "/m/0fpglz1": 40,
+            "/m/0fpglz1": 41,
             "/m/01xcqs": 28
           }
         },
         {
           "date": "2026-05-23",
           "values": {
-            "/m/0fpglz1": 26,
-            "/m/01xcqs": 18
+            "/m/0fpglz1": 25,
+            "/m/01xcqs": 17
           }
         },
         {
           "date": "2026-05-24",
           "values": {
-            "/m/0fpglz1": 26,
+            "/m/0fpglz1": 25,
             "/m/01xcqs": 19
           }
         },
@@ -5580,8 +6417,8 @@
         {
           "date": "2026-05-26",
           "values": {
-            "/m/0fpglz1": 99,
-            "/m/01xcqs": 79
+            "/m/0fpglz1": 100,
+            "/m/01xcqs": 80
           }
         }
       ],
@@ -5638,35 +6475,35 @@
         {
           "date": "2026-05-10",
           "values": {
-            "/m/01_pdg": 26,
-            "/g/11ftgy_k_h": 19
+            "/m/01_pdg": 19,
+            "/g/11ftgy_k_h": 18
           }
         },
         {
           "date": "2026-05-11",
           "values": {
-            "/m/01_pdg": 18,
-            "/g/11ftgy_k_h": 12
+            "/m/01_pdg": 0,
+            "/g/11ftgy_k_h": 13
           }
         },
         {
           "date": "2026-05-12",
           "values": {
-            "/m/01_pdg": 21,
+            "/m/01_pdg": 27,
             "/g/11ftgy_k_h": 0
           }
         },
         {
           "date": "2026-05-13",
           "values": {
-            "/m/01_pdg": 23,
-            "/g/11ftgy_k_h": 21
+            "/m/01_pdg": 24,
+            "/g/11ftgy_k_h": 19
           }
         },
         {
           "date": "2026-05-14",
           "values": {
-            "/m/01_pdg": 16,
+            "/m/01_pdg": 11,
             "/g/11ftgy_k_h": 0
           }
         },
@@ -5687,21 +6524,21 @@
         {
           "date": "2026-05-17",
           "values": {
-            "/m/01_pdg": 38,
+            "/m/01_pdg": 46,
             "/g/11ftgy_k_h": 0
           }
         },
         {
           "date": "2026-05-18",
           "values": {
-            "/m/01_pdg": 21,
-            "/g/11ftgy_k_h": 12
+            "/m/01_pdg": 22,
+            "/g/11ftgy_k_h": 14
           }
         },
         {
           "date": "2026-05-19",
           "values": {
-            "/m/01_pdg": 32,
+            "/m/01_pdg": 23,
             "/g/11ftgy_k_h": 0
           }
         },
@@ -5709,147 +6546,147 @@
           "date": "2026-05-20",
           "values": {
             "/m/01_pdg": 28,
-            "/g/11ftgy_k_h": 0
+            "/g/11ftgy_k_h": 13
           }
         },
         {
           "date": "2026-05-21",
           "values": {
-            "/m/01_pdg": 19,
+            "/m/01_pdg": 21,
             "/g/11ftgy_k_h": 0
           }
         },
         {
           "date": "2026-05-22",
           "values": {
-            "/m/01_pdg": 30,
-            "/g/11ftgy_k_h": 0
+            "/m/01_pdg": 27,
+            "/g/11ftgy_k_h": 11
           }
         },
         {
           "date": "2026-05-23",
           "values": {
             "/m/01_pdg": 0,
-            "/g/11ftgy_k_h": 26
+            "/g/11ftgy_k_h": 28
           }
         },
         {
           "date": "2026-05-24",
           "values": {
-            "/m/01_pdg": 18,
-            "/g/11ftgy_k_h": 13
+            "/m/01_pdg": 0,
+            "/g/11ftgy_k_h": 14
           }
         },
         {
           "date": "2026-05-25",
           "values": {
-            "/m/01_pdg": 33,
-            "/g/11ftgy_k_h": 28
+            "/m/01_pdg": 37,
+            "/g/11ftgy_k_h": 26
           }
         },
         {
           "date": "2026-05-26",
           "values": {
-            "/m/01_pdg": 37,
-            "/g/11ftgy_k_h": 40
+            "/m/01_pdg": 39,
+            "/g/11ftgy_k_h": 35
           }
         },
         {
           "date": "2026-05-27",
           "values": {
-            "/m/01_pdg": 38,
-            "/g/11ftgy_k_h": 38
+            "/m/01_pdg": 33,
+            "/g/11ftgy_k_h": 35
           }
         },
         {
           "date": "2026-05-28",
           "values": {
-            "/m/01_pdg": 45,
-            "/g/11ftgy_k_h": 29
+            "/m/01_pdg": 37,
+            "/g/11ftgy_k_h": 28
           }
         },
         {
           "date": "2026-05-29",
           "values": {
-            "/m/01_pdg": 37,
-            "/g/11ftgy_k_h": 22
+            "/m/01_pdg": 39,
+            "/g/11ftgy_k_h": 25
           }
         },
         {
           "date": "2026-05-30",
           "values": {
-            "/m/01_pdg": 20,
-            "/g/11ftgy_k_h": 20
+            "/m/01_pdg": 23,
+            "/g/11ftgy_k_h": 35
           }
         },
         {
           "date": "2026-05-31",
           "values": {
-            "/m/01_pdg": 12,
-            "/g/11ftgy_k_h": 21
+            "/m/01_pdg": 22,
+            "/g/11ftgy_k_h": 20
           }
         },
         {
           "date": "2026-06-01",
           "values": {
             "/m/01_pdg": 35,
-            "/g/11ftgy_k_h": 27
+            "/g/11ftgy_k_h": 26
           }
         },
         {
           "date": "2026-06-02",
           "values": {
-            "/m/01_pdg": 37,
-            "/g/11ftgy_k_h": 27
+            "/m/01_pdg": 38,
+            "/g/11ftgy_k_h": 29
           }
         },
         {
           "date": "2026-06-03",
           "values": {
-            "/m/01_pdg": 26,
-            "/g/11ftgy_k_h": 31
+            "/m/01_pdg": 27,
+            "/g/11ftgy_k_h": 26
           }
         },
         {
           "date": "2026-06-04",
           "values": {
-            "/m/01_pdg": 36,
-            "/g/11ftgy_k_h": 23
+            "/m/01_pdg": 31,
+            "/g/11ftgy_k_h": 19
           }
         },
         {
           "date": "2026-06-05",
           "values": {
-            "/m/01_pdg": 34,
-            "/g/11ftgy_k_h": 27
+            "/m/01_pdg": 31,
+            "/g/11ftgy_k_h": 33
           }
         },
         {
           "date": "2026-06-06",
           "values": {
-            "/m/01_pdg": 16,
-            "/g/11ftgy_k_h": 17
+            "/m/01_pdg": 0,
+            "/g/11ftgy_k_h": 22
           }
         },
         {
           "date": "2026-06-07",
           "values": {
-            "/m/01_pdg": 25,
-            "/g/11ftgy_k_h": 30
+            "/m/01_pdg": 24,
+            "/g/11ftgy_k_h": 35
           }
         },
         {
           "date": "2026-06-08",
           "values": {
-            "/m/01_pdg": 44,
-            "/g/11ftgy_k_h": 25
+            "/m/01_pdg": 46,
+            "/g/11ftgy_k_h": 32
           }
         },
         {
           "date": "2026-06-09",
           "values": {
             "/m/01_pdg": 100,
-            "/g/11ftgy_k_h": 62
+            "/g/11ftgy_k_h": 57
           }
         }
       ],
@@ -5941,7 +6778,7 @@
           "date": "2026-05-13",
           "values": {
             "/g/11gtg871q4": 0,
-            "/m/0gw_nyv": 0,
+            "/m/0gw_nyv": 17,
             "/m/0f9kbx": 0
           }
         },
@@ -5966,7 +6803,7 @@
           "values": {
             "/g/11gtg871q4": 0,
             "/m/0gw_nyv": 0,
-            "/m/0f9kbx": 0
+            "/m/0f9kbx": 18
           }
         },
         {
@@ -5981,7 +6818,7 @@
           "date": "2026-05-18",
           "values": {
             "/g/11gtg871q4": 0,
-            "/m/0gw_nyv": 16,
+            "/m/0gw_nyv": 0,
             "/m/0f9kbx": 0
           }
         },
@@ -5998,7 +6835,7 @@
           "values": {
             "/g/11gtg871q4": 0,
             "/m/0gw_nyv": 0,
-            "/m/0f9kbx": 0
+            "/m/0f9kbx": 17
           }
         },
         {
@@ -6014,7 +6851,7 @@
           "values": {
             "/g/11gtg871q4": 0,
             "/m/0gw_nyv": 0,
-            "/m/0f9kbx": 24
+            "/m/0f9kbx": 23
           }
         },
         {
@@ -6028,9 +6865,9 @@
         {
           "date": "2026-05-24",
           "values": {
-            "/g/11gtg871q4": 19,
+            "/g/11gtg871q4": 0,
             "/m/0gw_nyv": 0,
-            "/m/0f9kbx": 17
+            "/m/0f9kbx": 0
           }
         },
         {
@@ -6038,127 +6875,127 @@
           "values": {
             "/g/11gtg871q4": 0,
             "/m/0gw_nyv": 0,
-            "/m/0f9kbx": 17
+            "/m/0f9kbx": 0
           }
         },
         {
           "date": "2026-05-26",
           "values": {
-            "/g/11gtg871q4": 17,
-            "/m/0gw_nyv": 0,
-            "/m/0f9kbx": 35
+            "/g/11gtg871q4": 16,
+            "/m/0gw_nyv": 22,
+            "/m/0f9kbx": 38
           }
         },
         {
           "date": "2026-05-27",
           "values": {
-            "/g/11gtg871q4": 33,
-            "/m/0gw_nyv": 37,
-            "/m/0f9kbx": 27
+            "/g/11gtg871q4": 26,
+            "/m/0gw_nyv": 25,
+            "/m/0f9kbx": 22
           }
         },
         {
           "date": "2026-05-28",
           "values": {
-            "/g/11gtg871q4": 21,
-            "/m/0gw_nyv": 18,
-            "/m/0f9kbx": 32
+            "/g/11gtg871q4": 24,
+            "/m/0gw_nyv": 17,
+            "/m/0f9kbx": 33
           }
         },
         {
           "date": "2026-05-29",
           "values": {
             "/g/11gtg871q4": 24,
-            "/m/0gw_nyv": 23,
-            "/m/0f9kbx": 20
+            "/m/0gw_nyv": 21,
+            "/m/0f9kbx": 22
           }
         },
         {
           "date": "2026-05-30",
           "values": {
-            "/g/11gtg871q4": 37,
+            "/g/11gtg871q4": 53,
             "/m/0gw_nyv": 24,
-            "/m/0f9kbx": 20
+            "/m/0f9kbx": 22
           }
         },
         {
           "date": "2026-05-31",
           "values": {
-            "/g/11gtg871q4": 34,
-            "/m/0gw_nyv": 23,
-            "/m/0f9kbx": 22
+            "/g/11gtg871q4": 39,
+            "/m/0gw_nyv": 21,
+            "/m/0f9kbx": 29
           }
         },
         {
           "date": "2026-06-01",
           "values": {
-            "/g/11gtg871q4": 41,
-            "/m/0gw_nyv": 23,
-            "/m/0f9kbx": 36
+            "/g/11gtg871q4": 52,
+            "/m/0gw_nyv": 22,
+            "/m/0f9kbx": 35
           }
         },
         {
           "date": "2026-06-02",
           "values": {
-            "/g/11gtg871q4": 30,
+            "/g/11gtg871q4": 37,
             "/m/0gw_nyv": 0,
-            "/m/0f9kbx": 29
+            "/m/0f9kbx": 17
           }
         },
         {
           "date": "2026-06-03",
           "values": {
-            "/g/11gtg871q4": 24,
-            "/m/0gw_nyv": 17,
-            "/m/0f9kbx": 20
+            "/g/11gtg871q4": 37,
+            "/m/0gw_nyv": 19,
+            "/m/0f9kbx": 0
           }
         },
         {
           "date": "2026-06-04",
           "values": {
             "/g/11gtg871q4": 22,
-            "/m/0gw_nyv": 25,
-            "/m/0f9kbx": 19
+            "/m/0gw_nyv": 36,
+            "/m/0f9kbx": 0
           }
         },
         {
           "date": "2026-06-05",
           "values": {
-            "/g/11gtg871q4": 33,
-            "/m/0gw_nyv": 0,
-            "/m/0f9kbx": 25
+            "/g/11gtg871q4": 31,
+            "/m/0gw_nyv": 21,
+            "/m/0f9kbx": 18
           }
         },
         {
           "date": "2026-06-06",
           "values": {
-            "/g/11gtg871q4": 32,
-            "/m/0gw_nyv": 0,
+            "/g/11gtg871q4": 36,
+            "/m/0gw_nyv": 19,
             "/m/0f9kbx": 0
           }
         },
         {
           "date": "2026-06-07",
           "values": {
-            "/g/11gtg871q4": 18,
+            "/g/11gtg871q4": 27,
             "/m/0gw_nyv": 25,
-            "/m/0f9kbx": 20
+            "/m/0f9kbx": 23
           }
         },
         {
           "date": "2026-06-08",
           "values": {
-            "/g/11gtg871q4": 35,
-            "/m/0gw_nyv": 27,
-            "/m/0f9kbx": 37
+            "/g/11gtg871q4": 40,
+            "/m/0gw_nyv": 38,
+            "/m/0f9kbx": 34
           }
         },
         {
           "date": "2026-06-09",
           "values": {
             "/g/11gtg871q4": 100,
-            "/m/0gw_nyv": 83,
-            "/m/0f9kbx": 71
+            "/m/0gw_nyv": 88,
+            "/m/0f9kbx": 72
           }
         }
       ],
@@ -6233,21 +7070,21 @@
         {
           "date": "2026-04-21",
           "values": {
-            "/m/0ddc6r6": 9,
+            "/m/0ddc6r6": 0,
             "/g/11h4vgvwh_": 0
           }
         },
         {
           "date": "2026-04-22",
           "values": {
-            "/m/0ddc6r6": 0,
+            "/m/0ddc6r6": 10,
             "/g/11h4vgvwh_": 0
           }
         },
         {
           "date": "2026-04-23",
           "values": {
-            "/m/0ddc6r6": 18,
+            "/m/0ddc6r6": 15,
             "/g/11h4vgvwh_": 0
           }
         },
@@ -6261,14 +7098,14 @@
         {
           "date": "2026-04-25",
           "values": {
-            "/m/0ddc6r6": 0,
+            "/m/0ddc6r6": 10,
             "/g/11h4vgvwh_": 0
           }
         },
         {
           "date": "2026-04-26",
           "values": {
-            "/m/0ddc6r6": 10,
+            "/m/0ddc6r6": 14,
             "/g/11h4vgvwh_": 0
           }
         },
@@ -6311,21 +7148,21 @@
           "date": "2026-05-02",
           "values": {
             "/m/0ddc6r6": 11,
-            "/g/11h4vgvwh_": 10
+            "/g/11h4vgvwh_": 11
           }
         },
         {
           "date": "2026-05-03",
           "values": {
-            "/m/0ddc6r6": 0,
-            "/g/11h4vgvwh_": 12
+            "/m/0ddc6r6": 10,
+            "/g/11h4vgvwh_": 0
           }
         },
         {
           "date": "2026-05-04",
           "values": {
-            "/m/0ddc6r6": 18,
-            "/g/11h4vgvwh_": 0
+            "/m/0ddc6r6": 12,
+            "/g/11h4vgvwh_": 10
           }
         },
         {
@@ -6338,21 +7175,21 @@
         {
           "date": "2026-05-06",
           "values": {
-            "/m/0ddc6r6": 20,
+            "/m/0ddc6r6": 21,
             "/g/11h4vgvwh_": 0
           }
         },
         {
           "date": "2026-05-07",
           "values": {
-            "/m/0ddc6r6": 16,
+            "/m/0ddc6r6": 11,
             "/g/11h4vgvwh_": 0
           }
         },
         {
           "date": "2026-05-08",
           "values": {
-            "/m/0ddc6r6": 14,
+            "/m/0ddc6r6": 16,
             "/g/11h4vgvwh_": 0
           }
         },
@@ -6366,42 +7203,42 @@
         {
           "date": "2026-05-10",
           "values": {
-            "/m/0ddc6r6": 25,
+            "/m/0ddc6r6": 21,
             "/g/11h4vgvwh_": 0
           }
         },
         {
           "date": "2026-05-11",
           "values": {
-            "/m/0ddc6r6": 24,
+            "/m/0ddc6r6": 25,
             "/g/11h4vgvwh_": 0
           }
         },
         {
           "date": "2026-05-12",
           "values": {
-            "/m/0ddc6r6": 14,
-            "/g/11h4vgvwh_": 9
+            "/m/0ddc6r6": 20,
+            "/g/11h4vgvwh_": 0
           }
         },
         {
           "date": "2026-05-13",
           "values": {
-            "/m/0ddc6r6": 19,
+            "/m/0ddc6r6": 20,
             "/g/11h4vgvwh_": 0
           }
         },
         {
           "date": "2026-05-14",
           "values": {
-            "/m/0ddc6r6": 16,
+            "/m/0ddc6r6": 18,
             "/g/11h4vgvwh_": 9
           }
         },
         {
           "date": "2026-05-15",
           "values": {
-            "/m/0ddc6r6": 16,
+            "/m/0ddc6r6": 24,
             "/g/11h4vgvwh_": 0
           }
         },
@@ -6415,22 +7252,22 @@
         {
           "date": "2026-05-17",
           "values": {
-            "/m/0ddc6r6": 22,
+            "/m/0ddc6r6": 21,
             "/g/11h4vgvwh_": 0
           }
         },
         {
           "date": "2026-05-18",
           "values": {
-            "/m/0ddc6r6": 22,
-            "/g/11h4vgvwh_": 15
+            "/m/0ddc6r6": 28,
+            "/g/11h4vgvwh_": 13
           }
         },
         {
           "date": "2026-05-19",
           "values": {
             "/m/0ddc6r6": 100,
-            "/g/11h4vgvwh_": 56
+            "/g/11h4vgvwh_": 54
           }
         }
       ],
@@ -6495,7 +7332,7 @@
           "date": "2026-06-01",
           "values": {
             "/m/024z95": 0,
-            "/g/11yfncdnr2": 0
+            "/g/11yfncdnr2": 10
           }
         },
         {
@@ -6523,7 +7360,7 @@
           "date": "2026-06-05",
           "values": {
             "/m/024z95": 0,
-            "/g/11yfncdnr2": 0
+            "/g/11yfncdnr2": 9
           }
         },
         {
@@ -6557,7 +7394,7 @@
         {
           "date": "2026-06-10",
           "values": {
-            "/m/024z95": 0,
+            "/m/024z95": 8,
             "/g/11yfncdnr2": 0
           }
         },
@@ -6565,14 +7402,14 @@
           "date": "2026-06-11",
           "values": {
             "/m/024z95": 0,
-            "/g/11yfncdnr2": 0
+            "/g/11yfncdnr2": 8
           }
         },
         {
           "date": "2026-06-12",
           "values": {
             "/m/024z95": 0,
-            "/g/11yfncdnr2": 13
+            "/g/11yfncdnr2": 16
           }
         },
         {
@@ -6586,28 +7423,28 @@
           "date": "2026-06-14",
           "values": {
             "/m/024z95": 0,
-            "/g/11yfncdnr2": 13
+            "/g/11yfncdnr2": 12
           }
         },
         {
           "date": "2026-06-15",
           "values": {
-            "/m/024z95": 0,
-            "/g/11yfncdnr2": 22
+            "/m/024z95": 8,
+            "/g/11yfncdnr2": 15
           }
         },
         {
           "date": "2026-06-16",
           "values": {
-            "/m/024z95": 12,
-            "/g/11yfncdnr2": 15
+            "/m/024z95": 11,
+            "/g/11yfncdnr2": 17
           }
         },
         {
           "date": "2026-06-17",
           "values": {
             "/m/024z95": 0,
-            "/g/11yfncdnr2": 0
+            "/g/11yfncdnr2": 12
           }
         },
         {
@@ -6621,27 +7458,27 @@
           "date": "2026-06-19",
           "values": {
             "/m/024z95": 0,
-            "/g/11yfncdnr2": 19
+            "/g/11yfncdnr2": 0
           }
         },
         {
           "date": "2026-06-20",
           "values": {
-            "/m/024z95": 13,
-            "/g/11yfncdnr2": 17
+            "/m/024z95": 11,
+            "/g/11yfncdnr2": 21
           }
         },
         {
           "date": "2026-06-21",
           "values": {
             "/m/024z95": 0,
-            "/g/11yfncdnr2": 18
+            "/g/11yfncdnr2": 14
           }
         },
         {
           "date": "2026-06-22",
           "values": {
-            "/m/024z95": 0,
+            "/m/024z95": 12,
             "/g/11yfncdnr2": 10
           }
         },
@@ -6649,55 +7486,55 @@
           "date": "2026-06-23",
           "values": {
             "/m/024z95": 0,
-            "/g/11yfncdnr2": 18
+            "/g/11yfncdnr2": 17
           }
         },
         {
           "date": "2026-06-24",
           "values": {
-            "/m/024z95": 0,
-            "/g/11yfncdnr2": 25
+            "/m/024z95": 15,
+            "/g/11yfncdnr2": 26
           }
         },
         {
           "date": "2026-06-25",
           "values": {
-            "/m/024z95": 15,
-            "/g/11yfncdnr2": 32
+            "/m/024z95": 17,
+            "/g/11yfncdnr2": 31
           }
         },
         {
           "date": "2026-06-26",
           "values": {
-            "/m/024z95": 11,
-            "/g/11yfncdnr2": 38
+            "/m/024z95": 13,
+            "/g/11yfncdnr2": 31
           }
         },
         {
           "date": "2026-06-27",
           "values": {
-            "/m/024z95": 26,
-            "/g/11yfncdnr2": 42
+            "/m/024z95": 17,
+            "/g/11yfncdnr2": 38
           }
         },
         {
           "date": "2026-06-28",
           "values": {
-            "/m/024z95": 27,
-            "/g/11yfncdnr2": 44
+            "/m/024z95": 23,
+            "/g/11yfncdnr2": 48
           }
         },
         {
           "date": "2026-06-29",
           "values": {
-            "/m/024z95": 22,
+            "/m/024z95": 21,
             "/g/11yfncdnr2": 45
           }
         },
         {
           "date": "2026-06-30",
           "values": {
-            "/m/024z95": 54,
+            "/m/024z95": 58,
             "/g/11yfncdnr2": 100
           }
         }
@@ -6785,15 +7622,15 @@
         {
           "date": "2026-05-28",
           "values": {
-            "Adriano Espaillat": 0,
+            "Adriano Espaillat": 12,
             "Darializa Avila Chevalier": 0
           }
         },
         {
           "date": "2026-05-29",
           "values": {
-            "Adriano Espaillat": 21,
-            "Darializa Avila Chevalier": 27
+            "Adriano Espaillat": 20,
+            "Darializa Avila Chevalier": 30
           }
         },
         {
@@ -6807,7 +7644,7 @@
           "date": "2026-05-31",
           "values": {
             "Adriano Espaillat": 0,
-            "Darializa Avila Chevalier": 19
+            "Darializa Avila Chevalier": 15
           }
         },
         {
@@ -6835,13 +7672,13 @@
           "date": "2026-06-04",
           "values": {
             "Adriano Espaillat": 0,
-            "Darializa Avila Chevalier": 0
+            "Darializa Avila Chevalier": 11
           }
         },
         {
           "date": "2026-06-05",
           "values": {
-            "Adriano Espaillat": 14,
+            "Adriano Espaillat": 0,
             "Darializa Avila Chevalier": 0
           }
         },
@@ -6849,14 +7686,14 @@
           "date": "2026-06-06",
           "values": {
             "Adriano Espaillat": 0,
-            "Darializa Avila Chevalier": 16
+            "Darializa Avila Chevalier": 14
           }
         },
         {
           "date": "2026-06-07",
           "values": {
-            "Adriano Espaillat": 22,
-            "Darializa Avila Chevalier": 18
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 0
           }
         },
         {
@@ -6898,14 +7735,14 @@
           "date": "2026-06-13",
           "values": {
             "Adriano Espaillat": 0,
-            "Darializa Avila Chevalier": 13
+            "Darializa Avila Chevalier": 0
           }
         },
         {
           "date": "2026-06-14",
           "values": {
             "Adriano Espaillat": 0,
-            "Darializa Avila Chevalier": 0
+            "Darializa Avila Chevalier": 14
           }
         },
         {
@@ -6919,7 +7756,7 @@
           "date": "2026-06-16",
           "values": {
             "Adriano Espaillat": 13,
-            "Darializa Avila Chevalier": 13
+            "Darializa Avila Chevalier": 11
           }
         },
         {
@@ -6932,42 +7769,42 @@
         {
           "date": "2026-06-18",
           "values": {
-            "Adriano Espaillat": 15,
-            "Darializa Avila Chevalier": 22
+            "Adriano Espaillat": 14,
+            "Darializa Avila Chevalier": 25
           }
         },
         {
           "date": "2026-06-19",
           "values": {
             "Adriano Espaillat": 0,
-            "Darializa Avila Chevalier": 21
+            "Darializa Avila Chevalier": 27
           }
         },
         {
           "date": "2026-06-20",
           "values": {
             "Adriano Espaillat": 0,
-            "Darializa Avila Chevalier": 20
+            "Darializa Avila Chevalier": 24
           }
         },
         {
           "date": "2026-06-21",
           "values": {
-            "Adriano Espaillat": 14,
-            "Darializa Avila Chevalier": 31
+            "Adriano Espaillat": 0,
+            "Darializa Avila Chevalier": 30
           }
         },
         {
           "date": "2026-06-22",
           "values": {
-            "Adriano Espaillat": 0,
+            "Adriano Espaillat": 11,
             "Darializa Avila Chevalier": 32
           }
         },
         {
           "date": "2026-06-23",
           "values": {
-            "Adriano Espaillat": 38,
+            "Adriano Espaillat": 33,
             "Darializa Avila Chevalier": 100
           }
         }
@@ -7025,15 +7862,15 @@
         {
           "date": "2026-05-24",
           "values": {
-            "/g/11j0y32d4c": 12,
+            "/g/11j0y32d4c": 0,
             "/m/06_vl6m": 0
           }
         },
         {
           "date": "2026-05-25",
           "values": {
-            "/g/11j0y32d4c": 10,
-            "/m/06_vl6m": 0
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 14
           }
         },
         {
@@ -7047,133 +7884,133 @@
           "date": "2026-05-27",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 9
+            "/m/06_vl6m": 14
           }
         },
         {
           "date": "2026-05-28",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 9
+            "/m/06_vl6m": 0
           }
         },
         {
           "date": "2026-05-29",
           "values": {
-            "/g/11j0y32d4c": 9,
+            "/g/11j0y32d4c": 0,
             "/m/06_vl6m": 0
           }
         },
         {
           "date": "2026-05-30",
           "values": {
-            "/g/11j0y32d4c": 11,
+            "/g/11j0y32d4c": 0,
             "/m/06_vl6m": 0
           }
         },
         {
           "date": "2026-05-31",
           "values": {
-            "/g/11j0y32d4c": 12,
-            "/m/06_vl6m": 13
+            "/g/11j0y32d4c": 16,
+            "/m/06_vl6m": 10
           }
         },
         {
           "date": "2026-06-01",
           "values": {
-            "/g/11j0y32d4c": 9,
+            "/g/11j0y32d4c": 12,
             "/m/06_vl6m": 8
           }
         },
         {
           "date": "2026-06-02",
           "values": {
-            "/g/11j0y32d4c": 10,
-            "/m/06_vl6m": 0
+            "/g/11j0y32d4c": 11,
+            "/m/06_vl6m": 18
           }
         },
         {
           "date": "2026-06-03",
           "values": {
-            "/g/11j0y32d4c": 11,
-            "/m/06_vl6m": 7
+            "/g/11j0y32d4c": 9,
+            "/m/06_vl6m": 0
           }
         },
         {
           "date": "2026-06-04",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 13
+            "/m/06_vl6m": 11
           }
         },
         {
           "date": "2026-06-05",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 11
+            "/m/06_vl6m": 0
           }
         },
         {
           "date": "2026-06-06",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 0
+            "/m/06_vl6m": 11
           }
         },
         {
           "date": "2026-06-07",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 10
+            "/m/06_vl6m": 0
           }
         },
         {
           "date": "2026-06-08",
           "values": {
-            "/g/11j0y32d4c": 8,
-            "/m/06_vl6m": 0
+            "/g/11j0y32d4c": 0,
+            "/m/06_vl6m": 11
           }
         },
         {
           "date": "2026-06-09",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 9
+            "/m/06_vl6m": 8
           }
         },
         {
           "date": "2026-06-10",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 10
+            "/m/06_vl6m": 14
           }
         },
         {
           "date": "2026-06-11",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 15
+            "/m/06_vl6m": 13
           }
         },
         {
           "date": "2026-06-12",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 12
+            "/m/06_vl6m": 13
           }
         },
         {
           "date": "2026-06-13",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 7
+            "/m/06_vl6m": 11
           }
         },
         {
           "date": "2026-06-14",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 11
+            "/m/06_vl6m": 13
           }
         },
         {
@@ -7186,14 +8023,14 @@
         {
           "date": "2026-06-16",
           "values": {
-            "/g/11j0y32d4c": 12,
+            "/g/11j0y32d4c": 13,
             "/m/06_vl6m": 20
           }
         },
         {
           "date": "2026-06-17",
           "values": {
-            "/g/11j0y32d4c": 13,
+            "/g/11j0y32d4c": 12,
             "/m/06_vl6m": 11
           }
         },
@@ -7201,41 +8038,41 @@
           "date": "2026-06-18",
           "values": {
             "/g/11j0y32d4c": 0,
-            "/m/06_vl6m": 13
+            "/m/06_vl6m": 0
           }
         },
         {
           "date": "2026-06-19",
           "values": {
-            "/g/11j0y32d4c": 12,
-            "/m/06_vl6m": 9
+            "/g/11j0y32d4c": 9,
+            "/m/06_vl6m": 13
           }
         },
         {
           "date": "2026-06-20",
           "values": {
             "/g/11j0y32d4c": 11,
-            "/m/06_vl6m": 21
+            "/m/06_vl6m": 14
           }
         },
         {
           "date": "2026-06-21",
           "values": {
             "/g/11j0y32d4c": 18,
-            "/m/06_vl6m": 18
+            "/m/06_vl6m": 22
           }
         },
         {
           "date": "2026-06-22",
           "values": {
             "/g/11j0y32d4c": 28,
-            "/m/06_vl6m": 17
+            "/m/06_vl6m": 18
           }
         },
         {
           "date": "2026-06-23",
           "values": {
-            "/g/11j0y32d4c": 94,
+            "/g/11j0y32d4c": 98,
             "/m/06_vl6m": 100
           }
         }
@@ -7328,7 +8165,7 @@
         {
           "date": "2026-05-29",
           "values": {
-            "/g/11s7hw_w7f": 12,
+            "/g/11s7hw_w7f": 0,
             "/m/0y4_7sl": 0
           }
         },
@@ -7356,7 +8193,7 @@
         {
           "date": "2026-06-02",
           "values": {
-            "/g/11s7hw_w7f": 0,
+            "/g/11s7hw_w7f": 15,
             "/m/0y4_7sl": 0
           }
         },
@@ -7370,14 +8207,14 @@
         {
           "date": "2026-06-04",
           "values": {
-            "/g/11s7hw_w7f": 0,
+            "/g/11s7hw_w7f": 12,
             "/m/0y4_7sl": 0
           }
         },
         {
           "date": "2026-06-05",
           "values": {
-            "/g/11s7hw_w7f": 0,
+            "/g/11s7hw_w7f": 13,
             "/m/0y4_7sl": 0
           }
         },
@@ -7391,7 +8228,7 @@
         {
           "date": "2026-06-07",
           "values": {
-            "/g/11s7hw_w7f": 16,
+            "/g/11s7hw_w7f": 13,
             "/m/0y4_7sl": 0
           }
         },
@@ -7433,7 +8270,7 @@
         {
           "date": "2026-06-13",
           "values": {
-            "/g/11s7hw_w7f": 12,
+            "/g/11s7hw_w7f": 0,
             "/m/0y4_7sl": 0
           }
         },
@@ -7447,7 +8284,7 @@
         {
           "date": "2026-06-15",
           "values": {
-            "/g/11s7hw_w7f": 0,
+            "/g/11s7hw_w7f": 14,
             "/m/0y4_7sl": 0
           }
         },
@@ -7461,50 +8298,50 @@
         {
           "date": "2026-06-17",
           "values": {
-            "/g/11s7hw_w7f": 21,
-            "/m/0y4_7sl": 0
+            "/g/11s7hw_w7f": 20,
+            "/m/0y4_7sl": 10
           }
         },
         {
           "date": "2026-06-18",
           "values": {
-            "/g/11s7hw_w7f": 12,
+            "/g/11s7hw_w7f": 19,
             "/m/0y4_7sl": 0
           }
         },
         {
           "date": "2026-06-19",
           "values": {
-            "/g/11s7hw_w7f": 25,
-            "/m/0y4_7sl": 12
+            "/g/11s7hw_w7f": 21,
+            "/m/0y4_7sl": 15
           }
         },
         {
           "date": "2026-06-20",
           "values": {
-            "/g/11s7hw_w7f": 27,
+            "/g/11s7hw_w7f": 24,
             "/m/0y4_7sl": 0
           }
         },
         {
           "date": "2026-06-21",
           "values": {
-            "/g/11s7hw_w7f": 43,
-            "/m/0y4_7sl": 14
+            "/g/11s7hw_w7f": 32,
+            "/m/0y4_7sl": 16
           }
         },
         {
           "date": "2026-06-22",
           "values": {
-            "/g/11s7hw_w7f": 36,
-            "/m/0y4_7sl": 22
+            "/g/11s7hw_w7f": 32,
+            "/m/0y4_7sl": 18
           }
         },
         {
           "date": "2026-06-23",
           "values": {
             "/g/11s7hw_w7f": 100,
-            "/m/0y4_7sl": 46
+            "/m/0y4_7sl": 38
           }
         }
       ],
@@ -7618,7 +8455,7 @@
           "date": "2026-06-01",
           "values": {
             "/g/11yzlxyyjs": 0,
-            "/g/11gbdn161x": 0
+            "/g/11gbdn161x": 41
           }
         },
         {
@@ -7632,7 +8469,7 @@
           "date": "2026-06-03",
           "values": {
             "/g/11yzlxyyjs": 0,
-            "/g/11gbdn161x": 0
+            "/g/11gbdn161x": 35
           }
         },
         {
@@ -7659,7 +8496,7 @@
         {
           "date": "2026-06-07",
           "values": {
-            "/g/11yzlxyyjs": 0,
+            "/g/11yzlxyyjs": 44,
             "/g/11gbdn161x": 0
           }
         },
@@ -7680,7 +8517,7 @@
         {
           "date": "2026-06-10",
           "values": {
-            "/g/11yzlxyyjs": 35,
+            "/g/11yzlxyyjs": 38,
             "/g/11gbdn161x": 0
           }
         },
@@ -7694,7 +8531,7 @@
         {
           "date": "2026-06-12",
           "values": {
-            "/g/11yzlxyyjs": 35,
+            "/g/11yzlxyyjs": 0,
             "/g/11gbdn161x": 0
           }
         },
@@ -7709,7 +8546,7 @@
           "date": "2026-06-14",
           "values": {
             "/g/11yzlxyyjs": 0,
-            "/g/11gbdn161x": 0
+            "/g/11gbdn161x": 35
           }
         },
         {
@@ -7722,7 +8559,7 @@
         {
           "date": "2026-06-16",
           "values": {
-            "/g/11yzlxyyjs": 39,
+            "/g/11yzlxyyjs": 49,
             "/g/11gbdn161x": 0
           }
         },
@@ -7765,14 +8602,14 @@
           "date": "2026-06-22",
           "values": {
             "/g/11yzlxyyjs": 0,
-            "/g/11gbdn161x": 0
+            "/g/11gbdn161x": 39
           }
         },
         {
           "date": "2026-06-23",
           "values": {
             "/g/11yzlxyyjs": 100,
-            "/g/11gbdn161x": 38
+            "/g/11gbdn161x": 80
           }
         }
       ],
@@ -7893,7 +8730,7 @@
           "date": "2026-02-10",
           "values": {
             "/m/0_v4hj_": 0,
-            "/g/11fk40sjyz": 39
+            "/g/11fk40sjyz": 32
           }
         },
         {
@@ -7907,7 +8744,7 @@
           "date": "2026-02-12",
           "values": {
             "/m/0_v4hj_": 0,
-            "/g/11fk40sjyz": 0
+            "/g/11fk40sjyz": 35
           }
         },
         {
@@ -7942,21 +8779,21 @@
           "date": "2026-02-17",
           "values": {
             "/m/0_v4hj_": 0,
-            "/g/11fk40sjyz": 59
+            "/g/11fk40sjyz": 45
           }
         },
         {
           "date": "2026-02-18",
           "values": {
             "/m/0_v4hj_": 0,
-            "/g/11fk40sjyz": 0
+            "/g/11fk40sjyz": 47
           }
         },
         {
           "date": "2026-02-19",
           "values": {
             "/m/0_v4hj_": 0,
-            "/g/11fk40sjyz": 46
+            "/g/11fk40sjyz": 40
           }
         },
         {
@@ -7970,49 +8807,49 @@
           "date": "2026-02-21",
           "values": {
             "/m/0_v4hj_": 0,
-            "/g/11fk40sjyz": 40
+            "/g/11fk40sjyz": 0
           }
         },
         {
           "date": "2026-02-22",
           "values": {
             "/m/0_v4hj_": 0,
-            "/g/11fk40sjyz": 38
+            "/g/11fk40sjyz": 45
           }
         },
         {
           "date": "2026-02-23",
           "values": {
             "/m/0_v4hj_": 0,
-            "/g/11fk40sjyz": 78
+            "/g/11fk40sjyz": 73
           }
         },
         {
           "date": "2026-02-24",
           "values": {
             "/m/0_v4hj_": 0,
-            "/g/11fk40sjyz": 52
+            "/g/11fk40sjyz": 60
           }
         },
         {
           "date": "2026-02-25",
           "values": {
-            "/m/0_v4hj_": 0,
-            "/g/11fk40sjyz": 36
+            "/m/0_v4hj_": 39,
+            "/g/11fk40sjyz": 41
           }
         },
         {
           "date": "2026-02-26",
           "values": {
             "/m/0_v4hj_": 0,
-            "/g/11fk40sjyz": 57
+            "/g/11fk40sjyz": 76
           }
         },
         {
           "date": "2026-02-27",
           "values": {
             "/m/0_v4hj_": 0,
-            "/g/11fk40sjyz": 0
+            "/g/11fk40sjyz": 44
           }
         },
         {
@@ -8039,7 +8876,7 @@
         {
           "date": "2026-03-03",
           "values": {
-            "/m/0_v4hj_": 0,
+            "/m/0_v4hj_": 34,
             "/g/11fk40sjyz": 100
           }
         }
@@ -8111,8 +8948,8 @@
         {
           "date": "2026-04-21",
           "values": {
-            "/m/0h_cb6v": 2,
-            "/g/11v5fs6qy0": 0
+            "/m/0h_cb6v": 0,
+            "/g/11v5fs6qy0": 2
           }
         },
         {
@@ -8132,7 +8969,7 @@
         {
           "date": "2026-04-24",
           "values": {
-            "/m/0h_cb6v": 0,
+            "/m/0h_cb6v": 3,
             "/g/11v5fs6qy0": 0
           }
         },
@@ -8153,7 +8990,7 @@
         {
           "date": "2026-04-27",
           "values": {
-            "/m/0h_cb6v": 0,
+            "/m/0h_cb6v": 2,
             "/g/11v5fs6qy0": 0
           }
         },
@@ -8175,13 +9012,13 @@
           "date": "2026-04-30",
           "values": {
             "/m/0h_cb6v": 0,
-            "/g/11v5fs6qy0": 3
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-01",
           "values": {
-            "/m/0h_cb6v": 3,
+            "/m/0h_cb6v": 4,
             "/g/11v5fs6qy0": 0
           }
         },
@@ -8189,7 +9026,7 @@
           "date": "2026-05-02",
           "values": {
             "/m/0h_cb6v": 0,
-            "/g/11v5fs6qy0": 3
+            "/g/11v5fs6qy0": 0
           }
         },
         {
@@ -8210,13 +9047,13 @@
           "date": "2026-05-05",
           "values": {
             "/m/0h_cb6v": 2,
-            "/g/11v5fs6qy0": 3
+            "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-06",
           "values": {
-            "/m/0h_cb6v": 5,
+            "/m/0h_cb6v": 4,
             "/g/11v5fs6qy0": 0
           }
         },
@@ -8224,91 +9061,91 @@
           "date": "2026-05-07",
           "values": {
             "/m/0h_cb6v": 5,
-            "/g/11v5fs6qy0": 0
+            "/g/11v5fs6qy0": 2
           }
         },
         {
           "date": "2026-05-08",
-          "values": {
-            "/m/0h_cb6v": 4,
-            "/g/11v5fs6qy0": 3
-          }
-        },
-        {
-          "date": "2026-05-09",
-          "values": {
-            "/m/0h_cb6v": 4,
-            "/g/11v5fs6qy0": 0
-          }
-        },
-        {
-          "date": "2026-05-10",
-          "values": {
-            "/m/0h_cb6v": 4,
-            "/g/11v5fs6qy0": 4
-          }
-        },
-        {
-          "date": "2026-05-11",
-          "values": {
-            "/m/0h_cb6v": 4,
-            "/g/11v5fs6qy0": 0
-          }
-        },
-        {
-          "date": "2026-05-12",
           "values": {
             "/m/0h_cb6v": 5,
             "/g/11v5fs6qy0": 0
           }
         },
         {
+          "date": "2026-05-09",
+          "values": {
+            "/m/0h_cb6v": 3,
+            "/g/11v5fs6qy0": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "/m/0h_cb6v": 5,
+            "/g/11v5fs6qy0": 3
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "/m/0h_cb6v": 3,
+            "/g/11v5fs6qy0": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "/m/0h_cb6v": 4,
+            "/g/11v5fs6qy0": 0
+          }
+        },
+        {
           "date": "2026-05-13",
           "values": {
-            "/m/0h_cb6v": 8,
+            "/m/0h_cb6v": 7,
             "/g/11v5fs6qy0": 0
           }
         },
         {
           "date": "2026-05-14",
           "values": {
-            "/m/0h_cb6v": 12,
-            "/g/11v5fs6qy0": 3
+            "/m/0h_cb6v": 11,
+            "/g/11v5fs6qy0": 4
           }
         },
         {
           "date": "2026-05-15",
           "values": {
-            "/m/0h_cb6v": 12,
-            "/g/11v5fs6qy0": 5
+            "/m/0h_cb6v": 10,
+            "/g/11v5fs6qy0": 4
           }
         },
         {
           "date": "2026-05-16",
           "values": {
             "/m/0h_cb6v": 13,
-            "/g/11v5fs6qy0": 5
+            "/g/11v5fs6qy0": 3
           }
         },
         {
           "date": "2026-05-17",
           "values": {
-            "/m/0h_cb6v": 18,
-            "/g/11v5fs6qy0": 7
+            "/m/0h_cb6v": 17,
+            "/g/11v5fs6qy0": 6
           }
         },
         {
           "date": "2026-05-18",
           "values": {
-            "/m/0h_cb6v": 29,
-            "/g/11v5fs6qy0": 12
+            "/m/0h_cb6v": 28,
+            "/g/11v5fs6qy0": 13
           }
         },
         {
           "date": "2026-05-19",
           "values": {
             "/m/0h_cb6v": 100,
-            "/g/11v5fs6qy0": 29
+            "/g/11v5fs6qy0": 27
           }
         }
       ],
@@ -8327,6 +9164,512 @@
           }
         ]
       }
+    },
+    {
+      "id": "az-cd4-dem-primary-2026",
+      "title": "Arizona CD-4 Democratic Primary",
+      "election_date": "2026-07-21",
+      "country_code": "US",
+      "state_code": "AZ",
+      "geo": "US-AZ",
+      "window_days": 30,
+      "window_mode": "trailing",
+      "start_date": "2026-06-21",
+      "end_date": "2026-07-21",
+      "candidates": [
+        {
+          "keyword": "/m/0hgrxqb",
+          "label": "Stanton",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Greg Stanton",
+          "mid": "/m/0hgrxqb",
+          "topic_title": "Greg Stanton",
+          "topic_type": "United States Representative"
+        },
+        {
+          "keyword": "/g/11f0z7tgql",
+          "label": "Newkirk",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Kai Newkirk",
+          "mid": "/g/11f0z7tgql",
+          "topic_title": "Kai Newkirk",
+          "topic_type": "Activist"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-07-01",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-07-02",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-07-04",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-07-05",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-07-06",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-07-07",
+          "values": {
+            "/m/0hgrxqb": 0,
+            "/g/11f0z7tgql": 0
+          }
+        },
+        {
+          "date": "2026-07-08",
+          "values": {
+            "/m/0hgrxqb": 23,
+            "/g/11f0z7tgql": 32
+          }
+        },
+        {
+          "date": "2026-07-09",
+          "values": {
+            "/m/0hgrxqb": 20,
+            "/g/11f0z7tgql": 34
+          }
+        },
+        {
+          "date": "2026-07-10",
+          "values": {
+            "/m/0hgrxqb": 20,
+            "/g/11f0z7tgql": 27
+          }
+        },
+        {
+          "date": "2026-07-11",
+          "values": {
+            "/m/0hgrxqb": 21,
+            "/g/11f0z7tgql": 27
+          }
+        },
+        {
+          "date": "2026-07-12",
+          "values": {
+            "/m/0hgrxqb": 25,
+            "/g/11f0z7tgql": 27
+          }
+        },
+        {
+          "date": "2026-07-13",
+          "values": {
+            "/m/0hgrxqb": 28,
+            "/g/11f0z7tgql": 31
+          }
+        },
+        {
+          "date": "2026-07-14",
+          "values": {
+            "/m/0hgrxqb": 38,
+            "/g/11f0z7tgql": 40
+          }
+        },
+        {
+          "date": "2026-07-15",
+          "values": {
+            "/m/0hgrxqb": 22,
+            "/g/11f0z7tgql": 21
+          }
+        },
+        {
+          "date": "2026-07-16",
+          "values": {
+            "/m/0hgrxqb": 23,
+            "/g/11f0z7tgql": 18
+          }
+        },
+        {
+          "date": "2026-07-17",
+          "values": {
+            "/m/0hgrxqb": 27,
+            "/g/11f0z7tgql": 26
+          }
+        },
+        {
+          "date": "2026-07-18",
+          "values": {
+            "/m/0hgrxqb": 21,
+            "/g/11f0z7tgql": 26
+          }
+        },
+        {
+          "date": "2026-07-19",
+          "values": {
+            "/m/0hgrxqb": 25,
+            "/g/11f0z7tgql": 20
+          }
+        },
+        {
+          "date": "2026-07-20",
+          "values": {
+            "/m/0hgrxqb": 25,
+            "/g/11f0z7tgql": 28
+          }
+        },
+        {
+          "date": "2026-07-21",
+          "values": {
+            "/m/0hgrxqb": 76,
+            "/g/11f0z7tgql": 100
+          }
+        }
+      ],
+      "watchlist": true
+    },
+    {
+      "id": "az-cd5-gop-primary-2026",
+      "title": "Arizona CD-5 Republican Primary",
+      "election_date": "2026-07-21",
+      "country_code": "US",
+      "state_code": "AZ",
+      "geo": "US-AZ",
+      "window_days": 30,
+      "window_mode": "trailing",
+      "start_date": "2026-06-21",
+      "end_date": "2026-07-21",
+      "candidates": [
+        {
+          "keyword": "Mark Lamb",
+          "label": "Lamb",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Mark Lamb",
+          "mid": "/g/11j9cvygs9",
+          "topic_title": "Mark Lamb",
+          "topic_type": "Sheriff"
+        },
+        {
+          "keyword": "Daniel Keenan",
+          "label": "Keenan",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Daniel Keenan",
+          "resolve_note": "no confident political entity (top='Dan Savage' / 'American author')"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-06-21",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "Mark Lamb": 80,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-07-01",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-07-02",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-07-04",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-07-05",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-07-06",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-07-07",
+          "values": {
+            "Mark Lamb": 0,
+            "Daniel Keenan": 0
+          }
+        },
+        {
+          "date": "2026-07-08",
+          "values": {
+            "Mark Lamb": 34,
+            "Daniel Keenan": 16
+          }
+        },
+        {
+          "date": "2026-07-09",
+          "values": {
+            "Mark Lamb": 26,
+            "Daniel Keenan": 13
+          }
+        },
+        {
+          "date": "2026-07-10",
+          "values": {
+            "Mark Lamb": 31,
+            "Daniel Keenan": 14
+          }
+        },
+        {
+          "date": "2026-07-11",
+          "values": {
+            "Mark Lamb": 25,
+            "Daniel Keenan": 15
+          }
+        },
+        {
+          "date": "2026-07-12",
+          "values": {
+            "Mark Lamb": 30,
+            "Daniel Keenan": 14
+          }
+        },
+        {
+          "date": "2026-07-13",
+          "values": {
+            "Mark Lamb": 35,
+            "Daniel Keenan": 16
+          }
+        },
+        {
+          "date": "2026-07-14",
+          "values": {
+            "Mark Lamb": 35,
+            "Daniel Keenan": 23
+          }
+        },
+        {
+          "date": "2026-07-15",
+          "values": {
+            "Mark Lamb": 29,
+            "Daniel Keenan": 12
+          }
+        },
+        {
+          "date": "2026-07-16",
+          "values": {
+            "Mark Lamb": 37,
+            "Daniel Keenan": 10
+          }
+        },
+        {
+          "date": "2026-07-17",
+          "values": {
+            "Mark Lamb": 42,
+            "Daniel Keenan": 14
+          }
+        },
+        {
+          "date": "2026-07-18",
+          "values": {
+            "Mark Lamb": 36,
+            "Daniel Keenan": 16
+          }
+        },
+        {
+          "date": "2026-07-19",
+          "values": {
+            "Mark Lamb": 32,
+            "Daniel Keenan": 16
+          }
+        },
+        {
+          "date": "2026-07-20",
+          "values": {
+            "Mark Lamb": 45,
+            "Daniel Keenan": 22
+          }
+        },
+        {
+          "date": "2026-07-21",
+          "values": {
+            "Mark Lamb": 100,
+            "Daniel Keenan": 59
+          }
+        }
+      ],
+      "watchlist": true
     },
     {
       "id": "mo-cd1-dem-primary-2026",
@@ -8463,7 +9806,7 @@
         {
           "date": "2026-07-06",
           "values": {
-            "/g/11g234cdqy": 85,
+            "/g/11g234cdqy": 0,
             "/g/11cntkcbkt": 0
           }
         },
@@ -8477,49 +9820,49 @@
         {
           "date": "2026-07-08",
           "values": {
-            "/g/11g234cdqy": 39,
-            "/g/11cntkcbkt": 53
+            "/g/11g234cdqy": 36,
+            "/g/11cntkcbkt": 48
           }
         },
         {
           "date": "2026-07-09",
           "values": {
             "/g/11g234cdqy": 49,
-            "/g/11cntkcbkt": 75
+            "/g/11cntkcbkt": 76
           }
         },
         {
           "date": "2026-07-10",
           "values": {
-            "/g/11g234cdqy": 52,
-            "/g/11cntkcbkt": 72
+            "/g/11g234cdqy": 53,
+            "/g/11cntkcbkt": 74
           }
         },
         {
           "date": "2026-07-11",
           "values": {
-            "/g/11g234cdqy": 39,
-            "/g/11cntkcbkt": 56
+            "/g/11g234cdqy": 38,
+            "/g/11cntkcbkt": 52
           }
         },
         {
           "date": "2026-07-12",
           "values": {
-            "/g/11g234cdqy": 29,
-            "/g/11cntkcbkt": 49
+            "/g/11g234cdqy": 30,
+            "/g/11cntkcbkt": 47
           }
         },
         {
           "date": "2026-07-13",
           "values": {
-            "/g/11g234cdqy": 33,
+            "/g/11g234cdqy": 32,
             "/g/11cntkcbkt": 62
           }
         },
         {
           "date": "2026-07-14",
           "values": {
-            "/g/11g234cdqy": 49,
+            "/g/11g234cdqy": 53,
             "/g/11cntkcbkt": 79
           }
         },
@@ -8527,56 +9870,310 @@
           "date": "2026-07-15",
           "values": {
             "/g/11g234cdqy": 42,
-            "/g/11cntkcbkt": 65
+            "/g/11cntkcbkt": 66
           }
         },
         {
           "date": "2026-07-16",
           "values": {
-            "/g/11g234cdqy": 52,
+            "/g/11g234cdqy": 49,
             "/g/11cntkcbkt": 100
           }
         },
         {
           "date": "2026-07-17",
           "values": {
-            "/g/11g234cdqy": 53,
+            "/g/11g234cdqy": 50,
             "/g/11cntkcbkt": 87
           }
         },
         {
           "date": "2026-07-18",
           "values": {
-            "/g/11g234cdqy": 36,
-            "/g/11cntkcbkt": 67
+            "/g/11g234cdqy": 33,
+            "/g/11cntkcbkt": 71
           }
         },
         {
           "date": "2026-07-19",
           "values": {
-            "/g/11g234cdqy": 35,
-            "/g/11cntkcbkt": 50
+            "/g/11g234cdqy": 36,
+            "/g/11cntkcbkt": 47
           }
         },
         {
           "date": "2026-07-20",
           "values": {
-            "/g/11g234cdqy": 42,
-            "/g/11cntkcbkt": 65
+            "/g/11g234cdqy": 41,
+            "/g/11cntkcbkt": 63
           }
         },
         {
           "date": "2026-07-21",
           "values": {
-            "/g/11g234cdqy": 54,
-            "/g/11cntkcbkt": 71
+            "/g/11g234cdqy": 50,
+            "/g/11cntkcbkt": 66
           }
         },
         {
           "date": "2026-07-22",
           "values": {
-            "/g/11g234cdqy": 75,
-            "/g/11cntkcbkt": 89
+            "/g/11g234cdqy": 53,
+            "/g/11cntkcbkt": 77
+          }
+        }
+      ],
+      "watchlist": true
+    },
+    {
+      "id": "mi-cd13-dem-primary-2026",
+      "title": "Michigan CD-13 Democratic Primary",
+      "election_date": "2026-08-04",
+      "country_code": "US",
+      "state_code": "MI",
+      "geo": "US-MI",
+      "window_days": 30,
+      "window_mode": "trailing",
+      "start_date": "2026-06-22",
+      "end_date": "2026-07-22",
+      "candidates": [
+        {
+          "keyword": "/g/11f0zyktlx",
+          "label": "McKinney",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Donavan McKinney",
+          "mid": "/g/11f0zyktlx",
+          "topic_title": "Donavan McKinney",
+          "topic_type": "Michigan State Representative"
+        },
+        {
+          "keyword": "/m/0806mr9",
+          "label": "Thanedar",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Shri Thanedar",
+          "mid": "/m/0806mr9",
+          "topic_title": "Shri Thanedar",
+          "topic_type": "United States Representative"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 77
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 82
+          }
+        },
+        {
+          "date": "2026-07-01",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 100
+          }
+        },
+        {
+          "date": "2026-07-02",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 86
+          }
+        },
+        {
+          "date": "2026-07-04",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
+          }
+        },
+        {
+          "date": "2026-07-05",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
+          }
+        },
+        {
+          "date": "2026-07-06",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
+          }
+        },
+        {
+          "date": "2026-07-07",
+          "values": {
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
+          }
+        },
+        {
+          "date": "2026-07-08",
+          "values": {
+            "/g/11f0zyktlx": 34,
+            "/m/0806mr9": 40
+          }
+        },
+        {
+          "date": "2026-07-09",
+          "values": {
+            "/g/11f0zyktlx": 24,
+            "/m/0806mr9": 33
+          }
+        },
+        {
+          "date": "2026-07-10",
+          "values": {
+            "/g/11f0zyktlx": 23,
+            "/m/0806mr9": 36
+          }
+        },
+        {
+          "date": "2026-07-11",
+          "values": {
+            "/g/11f0zyktlx": 16,
+            "/m/0806mr9": 19
+          }
+        },
+        {
+          "date": "2026-07-12",
+          "values": {
+            "/g/11f0zyktlx": 18,
+            "/m/0806mr9": 49
+          }
+        },
+        {
+          "date": "2026-07-13",
+          "values": {
+            "/g/11f0zyktlx": 29,
+            "/m/0806mr9": 45
+          }
+        },
+        {
+          "date": "2026-07-14",
+          "values": {
+            "/g/11f0zyktlx": 30,
+            "/m/0806mr9": 32
+          }
+        },
+        {
+          "date": "2026-07-15",
+          "values": {
+            "/g/11f0zyktlx": 21,
+            "/m/0806mr9": 44
+          }
+        },
+        {
+          "date": "2026-07-16",
+          "values": {
+            "/g/11f0zyktlx": 29,
+            "/m/0806mr9": 46
+          }
+        },
+        {
+          "date": "2026-07-17",
+          "values": {
+            "/g/11f0zyktlx": 26,
+            "/m/0806mr9": 47
+          }
+        },
+        {
+          "date": "2026-07-18",
+          "values": {
+            "/g/11f0zyktlx": 25,
+            "/m/0806mr9": 38
+          }
+        },
+        {
+          "date": "2026-07-19",
+          "values": {
+            "/g/11f0zyktlx": 31,
+            "/m/0806mr9": 27
+          }
+        },
+        {
+          "date": "2026-07-20",
+          "values": {
+            "/g/11f0zyktlx": 38,
+            "/m/0806mr9": 54
+          }
+        },
+        {
+          "date": "2026-07-21",
+          "values": {
+            "/g/11f0zyktlx": 32,
+            "/m/0806mr9": 52
+          }
+        },
+        {
+          "date": "2026-07-22",
+          "values": {
+            "/g/11f0zyktlx": 29,
+            "/m/0806mr9": 39
           }
         }
       ],
@@ -8619,7 +10216,7 @@
         {
           "date": "2026-06-22",
           "values": {
-            "/g/11c0q_hl_8": 10,
+            "/g/11c0q_hl_8": 9,
             "/g/11fjw095g8": 7
           }
         },
@@ -8627,13 +10224,13 @@
           "date": "2026-06-23",
           "values": {
             "/g/11c0q_hl_8": 16,
-            "/g/11fjw095g8": 0
+            "/g/11fjw095g8": 10
           }
         },
         {
           "date": "2026-06-24",
           "values": {
-            "/g/11c0q_hl_8": 16,
+            "/g/11c0q_hl_8": 14,
             "/g/11fjw095g8": 15
           }
         },
@@ -8641,27 +10238,27 @@
           "date": "2026-06-25",
           "values": {
             "/g/11c0q_hl_8": 26,
-            "/g/11fjw095g8": 11
+            "/g/11fjw095g8": 13
           }
         },
         {
           "date": "2026-06-26",
           "values": {
-            "/g/11c0q_hl_8": 26,
+            "/g/11c0q_hl_8": 25,
             "/g/11fjw095g8": 13
           }
         },
         {
           "date": "2026-06-27",
           "values": {
-            "/g/11c0q_hl_8": 33,
+            "/g/11c0q_hl_8": 37,
             "/g/11fjw095g8": 18
           }
         },
         {
           "date": "2026-06-28",
           "values": {
-            "/g/11c0q_hl_8": 29,
+            "/g/11c0q_hl_8": 27,
             "/g/11fjw095g8": 19
           }
         },
@@ -8669,42 +10266,42 @@
           "date": "2026-06-29",
           "values": {
             "/g/11c0q_hl_8": 24,
-            "/g/11fjw095g8": 15
+            "/g/11fjw095g8": 11
           }
         },
         {
           "date": "2026-06-30",
           "values": {
-            "/g/11c0q_hl_8": 30,
-            "/g/11fjw095g8": 23
+            "/g/11c0q_hl_8": 27,
+            "/g/11fjw095g8": 18
           }
         },
         {
           "date": "2026-07-01",
           "values": {
-            "/g/11c0q_hl_8": 33,
-            "/g/11fjw095g8": 22
+            "/g/11c0q_hl_8": 29,
+            "/g/11fjw095g8": 21
           }
         },
         {
           "date": "2026-07-02",
           "values": {
-            "/g/11c0q_hl_8": 34,
+            "/g/11c0q_hl_8": 39,
             "/g/11fjw095g8": 17
           }
         },
         {
           "date": "2026-07-03",
           "values": {
-            "/g/11c0q_hl_8": 43,
-            "/g/11fjw095g8": 15
+            "/g/11c0q_hl_8": 41,
+            "/g/11fjw095g8": 12
           }
         },
         {
           "date": "2026-07-04",
           "values": {
-            "/g/11c0q_hl_8": 42,
-            "/g/11fjw095g8": 21
+            "/g/11c0q_hl_8": 43,
+            "/g/11fjw095g8": 19
           }
         },
         {
@@ -8717,120 +10314,120 @@
         {
           "date": "2026-07-06",
           "values": {
-            "/g/11c0q_hl_8": 59,
-            "/g/11fjw095g8": 34
+            "/g/11c0q_hl_8": 61,
+            "/g/11fjw095g8": 37
           }
         },
         {
           "date": "2026-07-07",
           "values": {
             "/g/11c0q_hl_8": 69,
-            "/g/11fjw095g8": 58
+            "/g/11fjw095g8": 53
           }
         },
         {
           "date": "2026-07-08",
           "values": {
-            "/g/11c0q_hl_8": 99,
+            "/g/11c0q_hl_8": 100,
             "/g/11fjw095g8": 77
           }
         },
         {
           "date": "2026-07-09",
           "values": {
-            "/g/11c0q_hl_8": 64,
-            "/g/11fjw095g8": 61
+            "/g/11c0q_hl_8": 67,
+            "/g/11fjw095g8": 58
           }
         },
         {
           "date": "2026-07-10",
           "values": {
-            "/g/11c0q_hl_8": 49,
-            "/g/11fjw095g8": 34
+            "/g/11c0q_hl_8": 47,
+            "/g/11fjw095g8": 33
           }
         },
         {
           "date": "2026-07-11",
           "values": {
-            "/g/11c0q_hl_8": 40,
-            "/g/11fjw095g8": 26
+            "/g/11c0q_hl_8": 39,
+            "/g/11fjw095g8": 25
           }
         },
         {
           "date": "2026-07-12",
           "values": {
             "/g/11c0q_hl_8": 43,
-            "/g/11fjw095g8": 27
+            "/g/11fjw095g8": 26
           }
         },
         {
           "date": "2026-07-13",
           "values": {
             "/g/11c0q_hl_8": 48,
-            "/g/11fjw095g8": 28
+            "/g/11fjw095g8": 27
           }
         },
         {
           "date": "2026-07-14",
           "values": {
-            "/g/11c0q_hl_8": 57,
+            "/g/11c0q_hl_8": 56,
             "/g/11fjw095g8": 34
           }
         },
         {
           "date": "2026-07-15",
           "values": {
-            "/g/11c0q_hl_8": 50,
-            "/g/11fjw095g8": 48
+            "/g/11c0q_hl_8": 48,
+            "/g/11fjw095g8": 47
           }
         },
         {
           "date": "2026-07-16",
           "values": {
-            "/g/11c0q_hl_8": 50,
-            "/g/11fjw095g8": 54
+            "/g/11c0q_hl_8": 49,
+            "/g/11fjw095g8": 53
           }
         },
         {
           "date": "2026-07-17",
           "values": {
-            "/g/11c0q_hl_8": 57,
+            "/g/11c0q_hl_8": 56,
             "/g/11fjw095g8": 58
           }
         },
         {
           "date": "2026-07-18",
           "values": {
-            "/g/11c0q_hl_8": 62,
-            "/g/11fjw095g8": 52
+            "/g/11c0q_hl_8": 60,
+            "/g/11fjw095g8": 51
           }
         },
         {
           "date": "2026-07-19",
           "values": {
-            "/g/11c0q_hl_8": 78,
-            "/g/11fjw095g8": 47
+            "/g/11c0q_hl_8": 75,
+            "/g/11fjw095g8": 46
           }
         },
         {
           "date": "2026-07-20",
           "values": {
-            "/g/11c0q_hl_8": 100,
-            "/g/11fjw095g8": 57
+            "/g/11c0q_hl_8": 95,
+            "/g/11fjw095g8": 54
           }
         },
         {
           "date": "2026-07-21",
           "values": {
-            "/g/11c0q_hl_8": 67,
-            "/g/11fjw095g8": 47
+            "/g/11c0q_hl_8": 68,
+            "/g/11fjw095g8": 49
           }
         },
         {
           "date": "2026-07-22",
           "values": {
-            "/g/11c0q_hl_8": 51,
-            "/g/11fjw095g8": 42
+            "/g/11c0q_hl_8": 46,
+            "/g/11fjw095g8": 38
           }
         }
       ],
@@ -8891,7 +10488,7 @@
         {
           "date": "2026-06-23",
           "values": {
-            "/g/11jnpqr8dw": 0,
+            "/g/11jnpqr8dw": 30,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -8899,7 +10496,7 @@
         {
           "date": "2026-06-24",
           "values": {
-            "/g/11jnpqr8dw": 16,
+            "/g/11jnpqr8dw": 0,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -8907,7 +10504,7 @@
         {
           "date": "2026-06-25",
           "values": {
-            "/g/11jnpqr8dw": 25,
+            "/g/11jnpqr8dw": 24,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -8915,7 +10512,7 @@
         {
           "date": "2026-06-26",
           "values": {
-            "/g/11jnpqr8dw": 0,
+            "/g/11jnpqr8dw": 20,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -8939,7 +10536,7 @@
         {
           "date": "2026-06-29",
           "values": {
-            "/g/11jnpqr8dw": 35,
+            "/g/11jnpqr8dw": 30,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -8947,15 +10544,15 @@
         {
           "date": "2026-06-30",
           "values": {
-            "/g/11jnpqr8dw": 47,
-            "/g/11c2q3zj0w": 18,
+            "/g/11jnpqr8dw": 54,
+            "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
         },
         {
           "date": "2026-07-01",
           "values": {
-            "/g/11jnpqr8dw": 36,
+            "/g/11jnpqr8dw": 45,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -8963,7 +10560,7 @@
         {
           "date": "2026-07-02",
           "values": {
-            "/g/11jnpqr8dw": 27,
+            "/g/11jnpqr8dw": 41,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -8971,7 +10568,7 @@
         {
           "date": "2026-07-03",
           "values": {
-            "/g/11jnpqr8dw": 23,
+            "/g/11jnpqr8dw": 0,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -8979,7 +10576,7 @@
         {
           "date": "2026-07-04",
           "values": {
-            "/g/11jnpqr8dw": 29,
+            "/g/11jnpqr8dw": 0,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -8987,7 +10584,7 @@
         {
           "date": "2026-07-05",
           "values": {
-            "/g/11jnpqr8dw": 18,
+            "/g/11jnpqr8dw": 0,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -8995,7 +10592,7 @@
         {
           "date": "2026-07-06",
           "values": {
-            "/g/11jnpqr8dw": 0,
+            "/g/11jnpqr8dw": 17,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -9003,7 +10600,7 @@
         {
           "date": "2026-07-07",
           "values": {
-            "/g/11jnpqr8dw": 31,
+            "/g/11jnpqr8dw": 21,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -9011,7 +10608,7 @@
         {
           "date": "2026-07-08",
           "values": {
-            "/g/11jnpqr8dw": 32,
+            "/g/11jnpqr8dw": 31,
             "/g/11c2q3zj0w": 21,
             "/m/0l8lszd": 14
           }
@@ -9019,15 +10616,15 @@
         {
           "date": "2026-07-09",
           "values": {
-            "/g/11jnpqr8dw": 34,
-            "/g/11c2q3zj0w": 15,
+            "/g/11jnpqr8dw": 33,
+            "/g/11c2q3zj0w": 14,
             "/m/0l8lszd": 21
           }
         },
         {
           "date": "2026-07-10",
           "values": {
-            "/g/11jnpqr8dw": 27,
+            "/g/11jnpqr8dw": 26,
             "/g/11c2q3zj0w": 5,
             "/m/0l8lszd": 14
           }
@@ -9037,37 +10634,37 @@
           "values": {
             "/g/11jnpqr8dw": 20,
             "/g/11c2q3zj0w": 3,
-            "/m/0l8lszd": 11
+            "/m/0l8lszd": 9
           }
         },
         {
           "date": "2026-07-12",
           "values": {
-            "/g/11jnpqr8dw": 19,
+            "/g/11jnpqr8dw": 18,
             "/g/11c2q3zj0w": 2,
-            "/m/0l8lszd": 9
+            "/m/0l8lszd": 10
           }
         },
         {
           "date": "2026-07-13",
           "values": {
-            "/g/11jnpqr8dw": 24,
+            "/g/11jnpqr8dw": 23,
             "/g/11c2q3zj0w": 3,
-            "/m/0l8lszd": 13
+            "/m/0l8lszd": 12
           }
         },
         {
           "date": "2026-07-14",
           "values": {
             "/g/11jnpqr8dw": 29,
-            "/g/11c2q3zj0w": 4,
-            "/m/0l8lszd": 16
+            "/g/11c2q3zj0w": 3,
+            "/m/0l8lszd": 15
           }
         },
         {
           "date": "2026-07-15",
           "values": {
-            "/g/11jnpqr8dw": 26,
+            "/g/11jnpqr8dw": 25,
             "/g/11c2q3zj0w": 3,
             "/m/0l8lszd": 14
           }
@@ -9075,7 +10672,7 @@
         {
           "date": "2026-07-16",
           "values": {
-            "/g/11jnpqr8dw": 35,
+            "/g/11jnpqr8dw": 34,
             "/g/11c2q3zj0w": 3,
             "/m/0l8lszd": 15
           }
@@ -9083,15 +10680,15 @@
         {
           "date": "2026-07-17",
           "values": {
-            "/g/11jnpqr8dw": 57,
-            "/g/11c2q3zj0w": 37,
-            "/m/0l8lszd": 32
+            "/g/11jnpqr8dw": 56,
+            "/g/11c2q3zj0w": 36,
+            "/m/0l8lszd": 31
           }
         },
         {
           "date": "2026-07-18",
           "values": {
-            "/g/11jnpqr8dw": 73,
+            "/g/11jnpqr8dw": 72,
             "/g/11c2q3zj0w": 100,
             "/m/0l8lszd": 33
           }
@@ -9099,15 +10696,15 @@
         {
           "date": "2026-07-19",
           "values": {
-            "/g/11jnpqr8dw": 63,
-            "/g/11c2q3zj0w": 73,
-            "/m/0l8lszd": 31
+            "/g/11jnpqr8dw": 65,
+            "/g/11c2q3zj0w": 72,
+            "/m/0l8lszd": 30
           }
         },
         {
           "date": "2026-07-20",
           "values": {
-            "/g/11jnpqr8dw": 56,
+            "/g/11jnpqr8dw": 54,
             "/g/11c2q3zj0w": 38,
             "/m/0l8lszd": 20
           }
@@ -9116,16 +10713,16 @@
           "date": "2026-07-21",
           "values": {
             "/g/11jnpqr8dw": 58,
-            "/g/11c2q3zj0w": 28,
-            "/m/0l8lszd": 19
+            "/g/11c2q3zj0w": 27,
+            "/m/0l8lszd": 18
           }
         },
         {
           "date": "2026-07-22",
           "values": {
-            "/g/11jnpqr8dw": 65,
-            "/g/11c2q3zj0w": 19,
-            "/m/0l8lszd": 25
+            "/g/11jnpqr8dw": 58,
+            "/g/11c2q3zj0w": 25,
+            "/m/0l8lszd": 18
           }
         }
       ],
@@ -9395,10 +10992,10 @@
         {
           "date": "2026-07-15",
           "values": {
-            "/g/11b64bp3p9": 16,
+            "/g/11b64bp3p9": 15,
             "/g/11c503wrrz": 5,
             "/m/0f9kbx": 4,
-            "/m/0c3x3rz": 2
+            "/m/0c3x3rz": 3
           }
         },
         {
@@ -9406,7 +11003,7 @@
           "values": {
             "/g/11b64bp3p9": 5,
             "/g/11c503wrrz": 3,
-            "/m/0f9kbx": 2,
+            "/m/0f9kbx": 3,
             "/m/0c3x3rz": 6
           }
         },
@@ -9416,13 +11013,13 @@
             "/g/11b64bp3p9": 9,
             "/g/11c503wrrz": 2,
             "/m/0f9kbx": 2,
-            "/m/0c3x3rz": 14
+            "/m/0c3x3rz": 15
           }
         },
         {
           "date": "2026-07-18",
           "values": {
-            "/g/11b64bp3p9": 6,
+            "/g/11b64bp3p9": 7,
             "/g/11c503wrrz": 2,
             "/m/0f9kbx": 11,
             "/m/0c3x3rz": 3
@@ -9434,7 +11031,7 @@
             "/g/11b64bp3p9": 5,
             "/g/11c503wrrz": 1,
             "/m/0f9kbx": 10,
-            "/m/0c3x3rz": 4
+            "/m/0c3x3rz": 5
           }
         },
         {
@@ -9449,7 +11046,7 @@
         {
           "date": "2026-07-21",
           "values": {
-            "/g/11b64bp3p9": 19,
+            "/g/11b64bp3p9": 20,
             "/g/11c503wrrz": 6,
             "/m/0f9kbx": 5,
             "/m/0c3x3rz": 4
@@ -9459,9 +11056,9 @@
           "date": "2026-07-22",
           "values": {
             "/g/11b64bp3p9": 6,
-            "/g/11c503wrrz": 2,
+            "/g/11c503wrrz": 3,
             "/m/0f9kbx": 3,
-            "/m/0c3x3rz": 30
+            "/m/0c3x3rz": 26
           }
         }
       ],
@@ -9512,7 +11109,7 @@
           "date": "2025-10-06",
           "values": {
             "/g/11f3r4x6x5": 10,
-            "/m/0h_9f1f": 8
+            "/m/0h_9f1f": 9
           }
         },
         {
@@ -9526,21 +11123,21 @@
           "date": "2025-10-08",
           "values": {
             "/g/11f3r4x6x5": 14,
-            "/m/0h_9f1f": 19
+            "/m/0h_9f1f": 18
           }
         },
         {
           "date": "2025-10-09",
           "values": {
             "/g/11f3r4x6x5": 22,
-            "/m/0h_9f1f": 28
+            "/m/0h_9f1f": 29
           }
         },
         {
           "date": "2025-10-10",
           "values": {
-            "/g/11f3r4x6x5": 13,
-            "/m/0h_9f1f": 19
+            "/g/11f3r4x6x5": 12,
+            "/m/0h_9f1f": 20
           }
         },
         {
@@ -9553,8 +11150,8 @@
         {
           "date": "2025-10-12",
           "values": {
-            "/g/11f3r4x6x5": 8,
-            "/m/0h_9f1f": 8
+            "/g/11f3r4x6x5": 9,
+            "/m/0h_9f1f": 11
           }
         },
         {
@@ -9568,7 +11165,7 @@
           "date": "2025-10-14",
           "values": {
             "/g/11f3r4x6x5": 10,
-            "/m/0h_9f1f": 11
+            "/m/0h_9f1f": 12
           }
         },
         {
@@ -9582,13 +11179,13 @@
           "date": "2025-10-16",
           "values": {
             "/g/11f3r4x6x5": 13,
-            "/m/0h_9f1f": 12
+            "/m/0h_9f1f": 11
           }
         },
         {
           "date": "2025-10-17",
           "values": {
-            "/g/11f3r4x6x5": 11,
+            "/g/11f3r4x6x5": 10,
             "/m/0h_9f1f": 11
           }
         },
@@ -9602,7 +11199,7 @@
         {
           "date": "2025-10-19",
           "values": {
-            "/g/11f3r4x6x5": 11,
+            "/g/11f3r4x6x5": 12,
             "/m/0h_9f1f": 11
           }
         },
@@ -9624,7 +11221,7 @@
           "date": "2025-10-22",
           "values": {
             "/g/11f3r4x6x5": 13,
-            "/m/0h_9f1f": 14
+            "/m/0h_9f1f": 13
           }
         },
         {
@@ -9637,22 +11234,22 @@
         {
           "date": "2025-10-24",
           "values": {
-            "/g/11f3r4x6x5": 14,
+            "/g/11f3r4x6x5": 13,
             "/m/0h_9f1f": 14
           }
         },
         {
           "date": "2025-10-25",
           "values": {
-            "/g/11f3r4x6x5": 15,
-            "/m/0h_9f1f": 16
+            "/g/11f3r4x6x5": 14,
+            "/m/0h_9f1f": 15
           }
         },
         {
           "date": "2025-10-26",
           "values": {
-            "/g/11f3r4x6x5": 15,
-            "/m/0h_9f1f": 18
+            "/g/11f3r4x6x5": 16,
+            "/m/0h_9f1f": 17
           }
         },
         {
@@ -9665,14 +11262,14 @@
         {
           "date": "2025-10-28",
           "values": {
-            "/g/11f3r4x6x5": 19,
+            "/g/11f3r4x6x5": 18,
             "/m/0h_9f1f": 20
           }
         },
         {
           "date": "2025-10-29",
           "values": {
-            "/g/11f3r4x6x5": 19,
+            "/g/11f3r4x6x5": 18,
             "/m/0h_9f1f": 20
           }
         },
@@ -9686,14 +11283,14 @@
         {
           "date": "2025-10-31",
           "values": {
-            "/g/11f3r4x6x5": 21,
-            "/m/0h_9f1f": 23
+            "/g/11f3r4x6x5": 20,
+            "/m/0h_9f1f": 22
           }
         },
         {
           "date": "2025-11-01",
           "values": {
-            "/g/11f3r4x6x5": 26,
+            "/g/11f3r4x6x5": 25,
             "/m/0h_9f1f": 23
           }
         },
@@ -9715,7 +11312,7 @@
           "date": "2025-11-04",
           "values": {
             "/g/11f3r4x6x5": 100,
-            "/m/0h_9f1f": 92
+            "/m/0h_9f1f": 91
           }
         }
       ],
@@ -9772,7 +11369,7 @@
         {
           "date": "2025-10-05",
           "values": {
-            "/g/11fgm1ffs7": 9,
+            "/g/11fgm1ffs7": 8,
             "/m/06bzcd": 7
           }
         },
@@ -9787,20 +11384,20 @@
           "date": "2025-10-07",
           "values": {
             "/g/11fgm1ffs7": 11,
-            "/m/06bzcd": 7
+            "/m/06bzcd": 8
           }
         },
         {
           "date": "2025-10-08",
           "values": {
             "/g/11fgm1ffs7": 10,
-            "/m/06bzcd": 8
+            "/m/06bzcd": 7
           }
         },
         {
           "date": "2025-10-09",
           "values": {
-            "/g/11fgm1ffs7": 23,
+            "/g/11fgm1ffs7": 22,
             "/m/06bzcd": 17
           }
         },
@@ -9814,14 +11411,14 @@
         {
           "date": "2025-10-11",
           "values": {
-            "/g/11fgm1ffs7": 20,
+            "/g/11fgm1ffs7": 21,
             "/m/06bzcd": 17
           }
         },
         {
           "date": "2025-10-12",
           "values": {
-            "/g/11fgm1ffs7": 17,
+            "/g/11fgm1ffs7": 18,
             "/m/06bzcd": 12
           }
         },
@@ -9836,7 +11433,7 @@
           "date": "2025-10-14",
           "values": {
             "/g/11fgm1ffs7": 14,
-            "/m/06bzcd": 12
+            "/m/06bzcd": 13
           }
         },
         {
@@ -9849,15 +11446,15 @@
         {
           "date": "2025-10-16",
           "values": {
-            "/g/11fgm1ffs7": 11,
+            "/g/11fgm1ffs7": 10,
             "/m/06bzcd": 9
           }
         },
         {
           "date": "2025-10-17",
           "values": {
-            "/g/11fgm1ffs7": 11,
-            "/m/06bzcd": 10
+            "/g/11fgm1ffs7": 10,
+            "/m/06bzcd": 9
           }
         },
         {
@@ -9870,7 +11467,7 @@
         {
           "date": "2025-10-19",
           "values": {
-            "/g/11fgm1ffs7": 11,
+            "/g/11fgm1ffs7": 10,
             "/m/06bzcd": 10
           }
         },
@@ -9884,7 +11481,7 @@
         {
           "date": "2025-10-21",
           "values": {
-            "/g/11fgm1ffs7": 16,
+            "/g/11fgm1ffs7": 17,
             "/m/06bzcd": 13
           }
         },
@@ -9892,14 +11489,14 @@
           "date": "2025-10-22",
           "values": {
             "/g/11fgm1ffs7": 14,
-            "/m/06bzcd": 10
+            "/m/06bzcd": 9
           }
         },
         {
           "date": "2025-10-23",
           "values": {
-            "/g/11fgm1ffs7": 13,
-            "/m/06bzcd": 8
+            "/g/11fgm1ffs7": 12,
+            "/m/06bzcd": 7
           }
         },
         {
@@ -9919,7 +11516,7 @@
         {
           "date": "2025-10-26",
           "values": {
-            "/g/11fgm1ffs7": 13,
+            "/g/11fgm1ffs7": 14,
             "/m/06bzcd": 8
           }
         },
@@ -9941,7 +11538,7 @@
           "date": "2025-10-29",
           "values": {
             "/g/11fgm1ffs7": 18,
-            "/m/06bzcd": 15
+            "/m/06bzcd": 14
           }
         },
         {
@@ -9955,14 +11552,14 @@
           "date": "2025-10-31",
           "values": {
             "/g/11fgm1ffs7": 17,
-            "/m/06bzcd": 16
+            "/m/06bzcd": 15
           }
         },
         {
           "date": "2025-11-01",
           "values": {
             "/g/11fgm1ffs7": 23,
-            "/m/06bzcd": 17
+            "/m/06bzcd": 16
           }
         },
         {
@@ -9975,8 +11572,8 @@
         {
           "date": "2025-11-03",
           "values": {
-            "/g/11fgm1ffs7": 36,
-            "/m/06bzcd": 27
+            "/g/11fgm1ffs7": 35,
+            "/m/06bzcd": 26
           }
         },
         {
@@ -10002,260 +11599,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "mi-cd13-dem-primary-2026",
-      "title": "Michigan CD-13 Democratic Primary",
-      "election_date": "2026-08-04",
-      "country_code": "US",
-      "state_code": "MI",
-      "geo": "US-MI",
-      "window_days": 30,
-      "window_mode": "trailing",
-      "start_date": "2026-06-22",
-      "end_date": "2026-07-22",
-      "candidates": [
-        {
-          "keyword": "/g/11f0zyktlx",
-          "label": "McKinney",
-          "query_mode": "entity",
-          "resolve_source": "config",
-          "name": "Donavan McKinney",
-          "mid": "/g/11f0zyktlx",
-          "topic_title": "Donavan McKinney",
-          "topic_type": "Michigan State Representative"
-        },
-        {
-          "keyword": "/m/0806mr9",
-          "label": "Thanedar",
-          "query_mode": "entity",
-          "resolve_source": "config",
-          "name": "Shri Thanedar",
-          "mid": "/m/0806mr9",
-          "topic_title": "Shri Thanedar",
-          "topic_type": "United States Representative"
-        }
-      ],
-      "series": [
-        {
-          "date": "2026-06-22",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-06-23",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-06-24",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-06-25",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-06-26",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-06-27",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-06-28",
-          "values": {
-            "/g/11f0zyktlx": 84,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-06-29",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-06-30",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-07-01",
-          "values": {
-            "/g/11f0zyktlx": 74,
-            "/m/0806mr9": 100
-          }
-        },
-        {
-          "date": "2026-07-02",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-07-03",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-07-04",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-07-05",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-07-06",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-07-07",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
-          "date": "2026-07-08",
-          "values": {
-            "/g/11f0zyktlx": 32,
-            "/m/0806mr9": 34
-          }
-        },
-        {
-          "date": "2026-07-09",
-          "values": {
-            "/g/11f0zyktlx": 23,
-            "/m/0806mr9": 33
-          }
-        },
-        {
-          "date": "2026-07-10",
-          "values": {
-            "/g/11f0zyktlx": 21,
-            "/m/0806mr9": 34
-          }
-        },
-        {
-          "date": "2026-07-11",
-          "values": {
-            "/g/11f0zyktlx": 16,
-            "/m/0806mr9": 18
-          }
-        },
-        {
-          "date": "2026-07-12",
-          "values": {
-            "/g/11f0zyktlx": 18,
-            "/m/0806mr9": 44
-          }
-        },
-        {
-          "date": "2026-07-13",
-          "values": {
-            "/g/11f0zyktlx": 25,
-            "/m/0806mr9": 42
-          }
-        },
-        {
-          "date": "2026-07-14",
-          "values": {
-            "/g/11f0zyktlx": 26,
-            "/m/0806mr9": 30
-          }
-        },
-        {
-          "date": "2026-07-15",
-          "values": {
-            "/g/11f0zyktlx": 20,
-            "/m/0806mr9": 38
-          }
-        },
-        {
-          "date": "2026-07-16",
-          "values": {
-            "/g/11f0zyktlx": 21,
-            "/m/0806mr9": 42
-          }
-        },
-        {
-          "date": "2026-07-17",
-          "values": {
-            "/g/11f0zyktlx": 25,
-            "/m/0806mr9": 45
-          }
-        },
-        {
-          "date": "2026-07-18",
-          "values": {
-            "/g/11f0zyktlx": 27,
-            "/m/0806mr9": 38
-          }
-        },
-        {
-          "date": "2026-07-19",
-          "values": {
-            "/g/11f0zyktlx": 24,
-            "/m/0806mr9": 27
-          }
-        },
-        {
-          "date": "2026-07-20",
-          "values": {
-            "/g/11f0zyktlx": 38,
-            "/m/0806mr9": 49
-          }
-        },
-        {
-          "date": "2026-07-21",
-          "values": {
-            "/g/11f0zyktlx": 29,
-            "/m/0806mr9": 47
-          }
-        },
-        {
-          "date": "2026-07-22",
-          "values": {
-            "/g/11f0zyktlx": 25,
-            "/m/0806mr9": 32
-          }
-        }
-      ],
-      "watchlist": true
     }
   ]
 }
