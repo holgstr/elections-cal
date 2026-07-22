@@ -60,7 +60,8 @@
       "Senate": {
         "Republican": "michigan-republican-senate-primary-winner-954",
         "Democratic": "michigan-democratic-senate-primary-winner"
-      }
+      },
+      "MI-13": { "Democratic": "mi-13-democratic-primary-winner" }
     },
     "VA": {
       "Senate": {

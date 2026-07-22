@@ -7,7 +7,7 @@
   "by_slug": {
     "brazil-chamber-of-deputies-election-winner": {
       "PL": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-07-20",
         "reference_pct": 71.5,
@@ -16,7 +16,7 @@
     },
     "mexico-legislative-election-winner": {
       "Morena": {
-        "change_pp": 7.15,
+        "change_pp": 8.9,
         "direction": "up",
         "reference_date": "2026-07-20",
         "reference_pct": 79.05,
@@ -43,23 +43,32 @@
     },
     "vermont-governor-winner-2026": {
       "Democrat": {
-        "change_pp": 8.8,
+        "change_pp": 7.6,
         "direction": "up",
         "reference_date": "2026-07-20",
         "reference_pct": 9.25,
         "window": "2d"
       },
       "Republican": {
-        "change_pp": 8.0,
+        "change_pp": 7.5,
         "direction": "down",
         "reference_date": "2026-07-20",
         "reference_pct": 90.5,
         "window": "2d"
       }
     },
+    "who-will-advance-from-the-alaska-governor-primary": {
+      "Treg Taylor": {
+        "change_pp": 6.0,
+        "direction": "down",
+        "reference_date": "2026-07-20",
+        "reference_pct": 21.0,
+        "window": "2d"
+      }
+    },
     "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
       "Earl D. \"Skip\" Southworth": {
-        "change_pp": 12.1,
+        "change_pp": 12.55,
         "direction": "up",
         "reference_date": "2026-07-20",
         "reference_pct": 2.95,
@@ -75,44 +84,92 @@
         "window": "2d"
       }
     },
+    "michigan-governor-republican-primary-winner": {
+      "Perry Johnson": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-07-20",
+        "reference_pct": 17.5,
+        "window": "2d"
+      }
+    },
     "minnesota-governor-republican-primary-winner": {
       "Lisa Demuth": {
-        "change_pp": 5.0,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-07-20",
         "reference_pct": 56.5,
         "window": "2d"
       }
     },
+    "mo-01-democratic-primary-winner": {
+      "Wesley Bell": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-07-20",
+        "reference_pct": 49.0,
+        "window": "2d"
+      }
+    },
     "tennessee-governor-democratic-primary-winner": {
       "Carnita Atwater": {
-        "change_pp": 5.5,
+        "change_pp": 6.3,
         "direction": "down",
         "reference_date": "2026-07-20",
         "reference_pct": 8.5,
+        "window": "2d"
+      },
+      "Jerri Green": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-07-20",
+        "reference_pct": 89.5,
         "window": "2d"
       }
     },
     "wisconsin-governor-democratic-primary-winner": {
       "Mandela Barnes": {
-        "change_pp": 6.55,
+        "change_pp": 4.1,
         "direction": "up",
         "reference_date": "2026-07-20",
         "reference_pct": 6.3,
         "window": "2d"
       },
       "David Crowley": {
-        "change_pp": 7.9,
+        "change_pp": 5.8,
         "direction": "down",
         "reference_date": "2026-07-20",
         "reference_pct": 19.0,
         "window": "2d"
       },
       "Francesca Hong": {
-        "change_pp": 8.45,
+        "change_pp": 7.4,
         "direction": "up",
         "reference_date": "2026-07-20",
         "reference_pct": 68.55,
+        "window": "2d"
+      }
+    },
+    "wyoming-governor-republican-primary-winner": {
+      "Eric Barlow": {
+        "change_pp": 10.3,
+        "direction": "up",
+        "reference_date": "2026-07-20",
+        "reference_pct": 21.3,
+        "window": "2d"
+      },
+      "Brent Bien": {
+        "change_pp": 4.05,
+        "direction": "down",
+        "reference_date": "2026-07-20",
+        "reference_pct": 4.2,
+        "window": "2d"
+      },
+      "Megan Degenfelder": {
+        "change_pp": 13.35,
+        "direction": "down",
+        "reference_date": "2026-07-20",
+        "reference_pct": 74.05,
         "window": "2d"
       }
     }
@@ -120,7 +177,7 @@
   "by_market_id": {
     "national:BR:National Congress:party_winner": {
       "PL": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-07-20",
         "reference_pct": 71.5,
@@ -129,7 +186,7 @@
     },
     "national:MX:Chamber of Deputies:party_winner": {
       "Morena": {
-        "change_pp": 7.15,
+        "change_pp": 8.9,
         "direction": "up",
         "reference_date": "2026-07-20",
         "reference_pct": 79.05,
@@ -156,23 +213,32 @@
     },
     "us-governor:VT": {
       "Democrat": {
-        "change_pp": 8.8,
+        "change_pp": 7.6,
         "direction": "up",
         "reference_date": "2026-07-20",
         "reference_pct": 9.25,
         "window": "2d"
       },
       "Republican": {
-        "change_pp": 8.0,
+        "change_pp": 7.5,
         "direction": "down",
         "reference_date": "2026-07-20",
         "reference_pct": 90.5,
         "window": "2d"
       }
     },
+    "us-primary:AK:Governor": {
+      "Treg Taylor": {
+        "change_pp": 6.0,
+        "direction": "down",
+        "reference_date": "2026-07-20",
+        "reference_pct": 21.0,
+        "window": "2d"
+      }
+    },
     "us-primary:AK:Senate": {
       "Earl D. \"Skip\" Southworth": {
-        "change_pp": 12.1,
+        "change_pp": 12.55,
         "direction": "up",
         "reference_date": "2026-07-20",
         "reference_pct": 2.95,
@@ -188,44 +254,92 @@
         "window": "2d"
       }
     },
+    "us-primary:MI:Governor:Republican": {
+      "Perry Johnson": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-07-20",
+        "reference_pct": 17.5,
+        "window": "2d"
+      }
+    },
     "us-primary:MN:Governor:Republican": {
       "Lisa Demuth": {
-        "change_pp": 5.0,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-07-20",
         "reference_pct": 56.5,
         "window": "2d"
       }
     },
+    "us-primary:MO:MO-01:Democratic": {
+      "Wesley Bell": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-07-20",
+        "reference_pct": 49.0,
+        "window": "2d"
+      }
+    },
     "us-primary:TN:Governor:Democratic": {
       "Carnita Atwater": {
-        "change_pp": 5.5,
+        "change_pp": 6.3,
         "direction": "down",
         "reference_date": "2026-07-20",
         "reference_pct": 8.5,
+        "window": "2d"
+      },
+      "Jerri Green": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-07-20",
+        "reference_pct": 89.5,
         "window": "2d"
       }
     },
     "us-primary:WI:Governor:Democratic": {
       "Mandela Barnes": {
-        "change_pp": 6.55,
+        "change_pp": 4.1,
         "direction": "up",
         "reference_date": "2026-07-20",
         "reference_pct": 6.3,
         "window": "2d"
       },
       "David Crowley": {
-        "change_pp": 7.9,
+        "change_pp": 5.8,
         "direction": "down",
         "reference_date": "2026-07-20",
         "reference_pct": 19.0,
         "window": "2d"
       },
       "Francesca Hong": {
-        "change_pp": 8.45,
+        "change_pp": 7.4,
         "direction": "up",
         "reference_date": "2026-07-20",
         "reference_pct": 68.55,
+        "window": "2d"
+      }
+    },
+    "us-primary:WY:Governor:Republican": {
+      "Eric Barlow": {
+        "change_pp": 10.3,
+        "direction": "up",
+        "reference_date": "2026-07-20",
+        "reference_pct": 21.3,
+        "window": "2d"
+      },
+      "Brent Bien": {
+        "change_pp": 4.05,
+        "direction": "down",
+        "reference_date": "2026-07-20",
+        "reference_pct": 4.2,
+        "window": "2d"
+      },
+      "Megan Degenfelder": {
+        "change_pp": 13.35,
+        "direction": "down",
+        "reference_date": "2026-07-20",
+        "reference_pct": 74.05,
         "window": "2d"
       }
     }

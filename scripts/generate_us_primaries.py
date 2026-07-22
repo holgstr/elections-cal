@@ -92,6 +92,13 @@ HOUSE_DISTRICT_PRIMARIES: list[dict[str, str]] = [
         "party": "Democratic",
         "date": "2026-08-04",
     },
+    {
+        "state_code": "MI",
+        "state": "Michigan",
+        "office": "MI-13",
+        "party": "Democratic",
+        "date": "2026-08-04",
+    },
 ]
 
 # Special / replacement primaries beyond the regular statewide calendar.
