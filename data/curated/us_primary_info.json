@@ -21,50 +21,6 @@
       "polymarket_slug": "vote-winner-in-alaska-senate-primary-final-round-20260630164517313"
     }
   },
-  "AZ": {
-    "AZ-04": {
-      "primary_format": "party",
-      "primary_type": "semi-closed",
-      "primary_type_label": "Semi-closed primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Democratic": {
-          "polymarket_slug": "az-04-democratic-primary-winner-20260630171843790"
-        }
-      }
-    },
-    "AZ-05": {
-      "primary_format": "party",
-      "primary_type": "semi-closed",
-      "primary_type_label": "Semi-closed primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Republican": {
-          "polymarket_slug": "az-05-republican-primary-winner"
-        }
-      }
-    },
-    "Governor": {
-      "primary_format": "party",
-      "primary_type": "semi-closed",
-      "primary_type_label": "Semi-closed primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Republican": {
-          "polymarket_slug": "arizona-governor-republican-primary-winner"
-        },
-        "Democratic": {
-          "incumbent": "Hobbs"
-        }
-      }
-    }
-  },
   "CT": {
     "Governor": {
       "primary_format": "party",
@@ -213,6 +169,19 @@
         },
         "Democratic": {
           "polymarket_slug": "michigan-governor-democratic-primary-winner"
+        }
+      }
+    },
+    "MI-13": {
+      "primary_format": "party",
+      "primary_type": "open",
+      "primary_type_label": "Open primary",
+      "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
+      "winner_note": "Winner: FPTP (most votes wins).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
+      "parties": {
+        "Democratic": {
+          "polymarket_slug": "mi-13-democratic-primary-winner"
         }
       }
     },

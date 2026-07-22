@@ -1427,6 +1427,33 @@
     ]
   },
   {
+    "id": "mi-cd13-dem-primary-2026",
+    "title": "Michigan CD-13 Democratic Primary",
+    "election_date": "2026-08-04",
+    "country_code": "US",
+    "state_code": "MI",
+    "geo": "US-MI",
+    "window_days": 30,
+    "window_mode": "trailing",
+    "watchlist": true,
+    "keywords": [
+      {
+        "name": "Donavan McKinney",
+        "label": "McKinney",
+        "mid": "/g/11f0zyktlx",
+        "topic_title": "Donavan McKinney",
+        "topic_type": "Michigan State Representative"
+      },
+      {
+        "name": "Shri Thanedar",
+        "label": "Thanedar",
+        "mid": "/m/0806mr9",
+        "topic_title": "Shri Thanedar",
+        "topic_type": "United States Representative"
+      }
+    ]
+  },
+  {
     "id": "mi-dem-senate-primary-2026",
     "title": "Michigan Democratic Senate Primary",
     "election_date": "2026-08-04",

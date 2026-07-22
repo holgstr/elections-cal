@@ -214,6 +214,25 @@
     "country_code": "US",
     "state": "Michigan",
     "state_code": "MI",
+    "title": "Democratic MI-13 Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "MI-13"
+    ],
+    "party": "Democratic",
+    "source": "curated"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Michigan",
+    "state_code": "MI",
     "title": "Democratic Senate Primary",
     "type": "primary",
     "level": "state",
