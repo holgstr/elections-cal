@@ -1349,6 +1349,57 @@
     }
   },
   {
+    "id": "az-cd1-dem-primary-2026",
+    "title": "Arizona CD-1 Democratic Primary",
+    "election_date": "2026-07-21",
+    "country_code": "US",
+    "state_code": "AZ",
+    "geo": "US-AZ",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Amish Shah",
+        "label": "Shah",
+        "mid": "/g/11h32y4sl2",
+        "topic_title": "Amish Shah",
+        "topic_type": "Former Arizona State Representative"
+      },
+      {
+        "name": "Marlene Galán-Woods",
+        "label": "Galán-Woods",
+        "mid": "/g/11b6qd3511",
+        "topic_title": "Marlene Galan Woods",
+        "topic_type": "Politician"
+      },
+      {
+        "name": "Jonathan Treble",
+        "label": "Treble",
+        "mid": "/g/11pdfxj2r5",
+        "topic_title": "Jonathan Treble",
+        "topic_type": "Politician"
+      }
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-07-23",
+      "source": "Associated Press / NBC News",
+      "candidates": [
+        {
+          "label": "Shah",
+          "pct": 39.5
+        },
+        {
+          "label": "Galán-Woods",
+          "pct": 34.3
+        },
+        {
+          "label": "Treble",
+          "pct": 17.7
+        }
+      ]
+    }
+  },
+  {
     "id": "az-cd4-dem-primary-2026",
     "title": "Arizona CD-4 Democratic Primary",
     "election_date": "2026-07-21",

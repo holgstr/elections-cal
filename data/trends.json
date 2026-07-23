@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T02:05:32Z",
+  "generated_at": "2026-07-23T13:28:01Z",
   "source": "google_trends",
   "races": [
     {
@@ -11881,6 +11881,319 @@
         }
       ],
       "watchlist": true
+    },
+    {
+      "id": "az-cd1-dem-primary-2026",
+      "title": "Arizona CD-1 Democratic Primary",
+      "election_date": "2026-07-21",
+      "country_code": "US",
+      "state_code": "AZ",
+      "geo": "US-AZ",
+      "window_days": 30,
+      "window_mode": "election",
+      "start_date": "2026-06-21",
+      "end_date": "2026-07-21",
+      "candidates": [
+        {
+          "keyword": "/g/11h32y4sl2",
+          "label": "Shah",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Amish Shah",
+          "mid": "/g/11h32y4sl2",
+          "topic_title": "Amish Shah",
+          "topic_type": "Former Arizona State Representative"
+        },
+        {
+          "keyword": "/g/11b6qd3511",
+          "label": "Galán-Woods",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Marlene Galán-Woods",
+          "mid": "/g/11b6qd3511",
+          "topic_title": "Marlene Galan Woods",
+          "topic_type": "Politician"
+        },
+        {
+          "keyword": "/g/11pdfxj2r5",
+          "label": "Treble",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Jonathan Treble",
+          "mid": "/g/11pdfxj2r5",
+          "topic_title": "Jonathan Treble",
+          "topic_type": "Politician"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-06-21",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-06-22",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-06-23",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-06-24",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-06-25",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-06-26",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 73,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-06-27",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 100,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-06-28",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-06-29",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-07-01",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-07-02",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-07-04",
+          "values": {
+            "/g/11h32y4sl2": 66,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-07-05",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-07-06",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-07-07",
+          "values": {
+            "/g/11h32y4sl2": 0,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-07-08",
+          "values": {
+            "/g/11h32y4sl2": 88,
+            "/g/11b6qd3511": 0,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-07-09",
+          "values": {
+            "/g/11h32y4sl2": 56,
+            "/g/11b6qd3511": 25,
+            "/g/11pdfxj2r5": 17
+          }
+        },
+        {
+          "date": "2026-07-10",
+          "values": {
+            "/g/11h32y4sl2": 71,
+            "/g/11b6qd3511": 27,
+            "/g/11pdfxj2r5": 19
+          }
+        },
+        {
+          "date": "2026-07-11",
+          "values": {
+            "/g/11h32y4sl2": 61,
+            "/g/11b6qd3511": 30,
+            "/g/11pdfxj2r5": 17
+          }
+        },
+        {
+          "date": "2026-07-12",
+          "values": {
+            "/g/11h32y4sl2": 60,
+            "/g/11b6qd3511": 27,
+            "/g/11pdfxj2r5": 20
+          }
+        },
+        {
+          "date": "2026-07-13",
+          "values": {
+            "/g/11h32y4sl2": 53,
+            "/g/11b6qd3511": 27,
+            "/g/11pdfxj2r5": 22
+          }
+        },
+        {
+          "date": "2026-07-14",
+          "values": {
+            "/g/11h32y4sl2": 57,
+            "/g/11b6qd3511": 40,
+            "/g/11pdfxj2r5": 32
+          }
+        },
+        {
+          "date": "2026-07-15",
+          "values": {
+            "/g/11h32y4sl2": 32,
+            "/g/11b6qd3511": 28,
+            "/g/11pdfxj2r5": 14
+          }
+        },
+        {
+          "date": "2026-07-16",
+          "values": {
+            "/g/11h32y4sl2": 32,
+            "/g/11b6qd3511": 20,
+            "/g/11pdfxj2r5": 8
+          }
+        },
+        {
+          "date": "2026-07-17",
+          "values": {
+            "/g/11h32y4sl2": 34,
+            "/g/11b6qd3511": 43,
+            "/g/11pdfxj2r5": 9
+          }
+        },
+        {
+          "date": "2026-07-18",
+          "values": {
+            "/g/11h32y4sl2": 49,
+            "/g/11b6qd3511": 51,
+            "/g/11pdfxj2r5": 12
+          }
+        },
+        {
+          "date": "2026-07-19",
+          "values": {
+            "/g/11h32y4sl2": 40,
+            "/g/11b6qd3511": 37,
+            "/g/11pdfxj2r5": 0
+          }
+        },
+        {
+          "date": "2026-07-20",
+          "values": {
+            "/g/11h32y4sl2": 48,
+            "/g/11b6qd3511": 54,
+            "/g/11pdfxj2r5": 18
+          }
+        },
+        {
+          "date": "2026-07-21",
+          "values": {
+            "/g/11h32y4sl2": 91,
+            "/g/11b6qd3511": 96,
+            "/g/11pdfxj2r5": 46
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-23",
+        "source": "Associated Press / NBC News",
+        "candidates": [
+          {
+            "label": "Shah",
+            "pct": 39.5
+          },
+          {
+            "label": "Galán-Woods",
+            "pct": 34.3
+          },
+          {
+            "label": "Treble",
+            "pct": 17.7
+          }
+        ]
+      }
     }
   ]
 }
