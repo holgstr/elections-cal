@@ -1356,8 +1356,6 @@
     "state_code": "AZ",
     "geo": "US-AZ",
     "window_days": 30,
-    "window_mode": "trailing",
-    "watchlist": true,
     "keywords": [
       {
         "name": "Greg Stanton",
@@ -1373,7 +1371,22 @@
         "topic_title": "Kai Newkirk",
         "topic_type": "Activist"
       }
-    ]
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-07-23",
+      "source": "Associated Press / NBC News",
+      "candidates": [
+        {
+          "label": "Stanton",
+          "pct": 63.5
+        },
+        {
+          "label": "Newkirk",
+          "pct": 36.5
+        }
+      ]
+    }
   },
   {
     "id": "az-cd5-gop-primary-2026",
@@ -1383,8 +1396,6 @@
     "state_code": "AZ",
     "geo": "US-AZ",
     "window_days": 30,
-    "window_mode": "trailing",
-    "watchlist": true,
     "keywords": [
       {
         "name": "Mark Lamb",
@@ -1397,7 +1408,22 @@
         "name": "Daniel Keenan",
         "label": "Keenan"
       }
-    ]
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-07-23",
+      "source": "Associated Press / NBC News",
+      "candidates": [
+        {
+          "label": "Lamb",
+          "pct": 58.3
+        },
+        {
+          "label": "Keenan",
+          "pct": 41.7
+        }
+      ]
+    }
   },
   {
     "id": "mo-cd1-dem-primary-2026",
@@ -1477,6 +1503,33 @@
         "mid": "/g/11fjw095g8",
         "topic_title": "Haley Stevens",
         "topic_type": "United States Representative"
+      }
+    ]
+  },
+  {
+    "id": "ks-dem-governor-primary-2026",
+    "title": "Kansas Democratic Governor Primary",
+    "election_date": "2026-08-04",
+    "country_code": "US",
+    "state_code": "KS",
+    "geo": "US-KS",
+    "window_days": 30,
+    "window_mode": "trailing",
+    "watchlist": true,
+    "keywords": [
+      {
+        "name": "Cindy Holscher",
+        "label": "Holscher",
+        "mid": "/g/11c1pmpn3f",
+        "topic_title": "Cindy Holscher",
+        "topic_type": "Kansas State Senator"
+      },
+      {
+        "name": "Ethan Corson",
+        "label": "Corson",
+        "mid": "/g/11g715qngv",
+        "topic_title": "Ethan Corson",
+        "topic_type": "Kansas State Senator"
       }
     ]
   },
