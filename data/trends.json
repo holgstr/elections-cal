@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T13:28:01Z",
+  "generated_at": "2026-07-23T14:32:17Z",
   "source": "google_trends",
   "races": [
     {
@@ -12191,6 +12191,319 @@
           {
             "label": "Treble",
             "pct": 17.7
+          }
+        ]
+      }
+    },
+    {
+      "id": "pa-cd3-dem-primary-2026",
+      "title": "Pennsylvania CD-3 Democratic Primary",
+      "election_date": "2026-05-19",
+      "country_code": "US",
+      "state_code": "PA",
+      "geo": "US-PA",
+      "window_days": 30,
+      "window_mode": "election",
+      "start_date": "2026-04-19",
+      "end_date": "2026-05-19",
+      "candidates": [
+        {
+          "keyword": "/g/11f5d68d6_",
+          "label": "Rabb",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Chris Rabb",
+          "mid": "/g/11f5d68d6_",
+          "topic_title": "Chris Rabb",
+          "topic_type": "Pennsylvania State Representative"
+        },
+        {
+          "keyword": "/g/11cssjzj6_",
+          "label": "Street",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Sharif Street",
+          "mid": "/g/11cssjzj6_",
+          "topic_title": "Sharif Street",
+          "topic_type": "Pennsylvania State Senator"
+        },
+        {
+          "keyword": "/g/11h20xq_hk",
+          "label": "Stanford",
+          "query_mode": "entity",
+          "resolve_source": "config",
+          "name": "Ala Stanford",
+          "mid": "/g/11h20xq_hk",
+          "topic_title": "Ala Stanford",
+          "topic_type": "American pediatric surgeon"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-04-19",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-04-20",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-04-21",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-04-22",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-04-23",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-04-24",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-04-25",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-04-26",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-04-27",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 10
+          }
+        },
+        {
+          "date": "2026-04-28",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-04-29",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 17
+          }
+        },
+        {
+          "date": "2026-04-30",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 15
+          }
+        },
+        {
+          "date": "2026-05-01",
+          "values": {
+            "/g/11f5d68d6_": 12,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-02",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-03",
+          "values": {
+            "/g/11f5d68d6_": 18,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "/g/11f5d68d6_": 11,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "/g/11f5d68d6_": 9,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "/g/11f5d68d6_": 10,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "/g/11f5d68d6_": 12,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "/g/11f5d68d6_": 14,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "/g/11f5d68d6_": 12,
+            "/g/11cssjzj6_": 10,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "/g/11f5d68d6_": 12,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "/g/11f5d68d6_": 20,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "/g/11f5d68d6_": 0,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "/g/11f5d68d6_": 17,
+            "/g/11cssjzj6_": 0,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "/g/11f5d68d6_": 34,
+            "/g/11cssjzj6_": 15,
+            "/g/11h20xq_hk": 0
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "/g/11f5d68d6_": 100,
+            "/g/11cssjzj6_": 47,
+            "/g/11h20xq_hk": 32
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-06",
+        "source": "Decision Desk HQ / Associated Press / NBC News",
+        "candidates": [
+          {
+            "label": "Rabb",
+            "pct": 44.6
+          },
+          {
+            "label": "Street",
+            "pct": 29.3
+          },
+          {
+            "label": "Stanford",
+            "pct": 24.0
           }
         ]
       }

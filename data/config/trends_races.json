@@ -1349,6 +1349,57 @@
     }
   },
   {
+    "id": "pa-cd3-dem-primary-2026",
+    "title": "Pennsylvania CD-3 Democratic Primary",
+    "election_date": "2026-05-19",
+    "country_code": "US",
+    "state_code": "PA",
+    "geo": "US-PA",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Chris Rabb",
+        "label": "Rabb",
+        "mid": "/g/11f5d68d6_",
+        "topic_title": "Chris Rabb",
+        "topic_type": "Pennsylvania State Representative"
+      },
+      {
+        "name": "Sharif Street",
+        "label": "Street",
+        "mid": "/g/11cssjzj6_",
+        "topic_title": "Sharif Street",
+        "topic_type": "Pennsylvania State Senator"
+      },
+      {
+        "name": "Ala Stanford",
+        "label": "Stanford",
+        "mid": "/g/11h20xq_hk",
+        "topic_title": "Ala Stanford",
+        "topic_type": "American pediatric surgeon"
+      }
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-07-06",
+      "source": "Decision Desk HQ / Associated Press / NBC News",
+      "candidates": [
+        {
+          "label": "Rabb",
+          "pct": 44.6
+        },
+        {
+          "label": "Street",
+          "pct": 29.3
+        },
+        {
+          "label": "Stanford",
+          "pct": 24.0
+        }
+      ]
+    }
+  },
+  {
     "id": "az-cd1-dem-primary-2026",
     "title": "Arizona CD-1 Democratic Primary",
     "election_date": "2026-07-21",
