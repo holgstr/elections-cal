@@ -7,6 +7,66 @@
   "markets_fetched": 129,
   "suggestions": [
     {
+      "market_id": "us-primary:MI:Senate:Democratic",
+      "slug": "michigan-democratic-senate-primary-winner",
+      "category": "us_primary",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "MI",
+      "city_code": null,
+      "contest": "Democratic Senate Primary",
+      "market_label": "Democratic Senate Primary",
+      "party": "Democratic",
+      "election_date": "2026-08-04",
+      "election_title": "Democratic Senate Primary",
+      "max_change_pp": 10.5,
+      "changes": [
+        {
+          "name": "Haley Stevens",
+          "current_pct": 32.4,
+          "change_pp": 10.15,
+          "direction": "up",
+          "since_date": "2026-07-22",
+          "reference_pct": 22.25,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Abdul El-Sayed",
+          "current_pct": 67.5,
+          "change_pp": 10.5,
+          "direction": "down",
+          "since_date": "2026-07-22",
+          "reference_pct": 78.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Abdul El-Sayed",
+          "current_pct": 67.5,
+          "change_pp": 10.5,
+          "direction": "down",
+          "since_date": "2026-07-22",
+          "reference_pct": 78.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Haley Stevens",
+          "current_pct": 32.4,
+          "change_pp": 10.15,
+          "direction": "up",
+          "since_date": "2026-07-22",
+          "reference_pct": 22.25,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
       "market_id": "us-primary:RI:Governor:Democratic",
       "slug": "rhode-island-governor-democratic-primary-winner",
       "category": "us_primary",
@@ -20,12 +80,12 @@
       "party": "Democratic",
       "election_date": "2026-09-09",
       "election_title": "Democratic Governor Primary",
-      "max_change_pp": 9.85,
+      "max_change_pp": 8.35,
       "changes": [
         {
           "name": "Helena Foulkes",
-          "current_pct": 85.7,
-          "change_pp": 9.85,
+          "current_pct": 87.2,
+          "change_pp": 8.35,
           "direction": "down",
           "since_date": "2026-07-22",
           "reference_pct": 95.55,
@@ -34,8 +94,8 @@
         },
         {
           "name": "Dan McKee",
-          "current_pct": 11.45,
-          "change_pp": 6.25,
+          "current_pct": 13.05,
+          "change_pp": 7.85,
           "direction": "up",
           "since_date": "2026-07-22",
           "reference_pct": 5.2,
@@ -46,8 +106,8 @@
       "prices": [
         {
           "name": "Helena Foulkes",
-          "current_pct": 85.7,
-          "change_pp": 9.85,
+          "current_pct": 87.2,
+          "change_pp": 8.35,
           "direction": "down",
           "since_date": "2026-07-22",
           "reference_pct": 95.55,
@@ -56,8 +116,8 @@
         },
         {
           "name": "Dan McKee",
-          "current_pct": 11.45,
-          "change_pp": 6.25,
+          "current_pct": 13.05,
+          "change_pp": 7.85,
           "direction": "up",
           "since_date": "2026-07-22",
           "reference_pct": 5.2,
@@ -80,12 +140,12 @@
       "party": null,
       "election_date": "2026-09-20",
       "election_title": "State",
-      "max_change_pp": 8.4,
+      "max_change_pp": 8.3,
       "changes": [
         {
           "name": "AfD",
-          "current_pct": 21.45,
-          "change_pp": 8.4,
+          "current_pct": 21.35,
+          "change_pp": 8.3,
           "direction": "up",
           "since_date": "2026-07-22",
           "reference_pct": 13.05,
@@ -94,8 +154,8 @@
         },
         {
           "name": "Linke",
-          "current_pct": 33.5,
-          "change_pp": 5.0,
+          "current_pct": 33.0,
+          "change_pp": 5.5,
           "direction": "down",
           "since_date": "2026-07-22",
           "reference_pct": 38.5,
@@ -106,8 +166,8 @@
       "prices": [
         {
           "name": "Linke",
-          "current_pct": 33.5,
-          "change_pp": 5.0,
+          "current_pct": 33.0,
+          "change_pp": 5.5,
           "direction": "down",
           "since_date": "2026-07-22",
           "reference_pct": 38.5,
@@ -120,8 +180,8 @@
         },
         {
           "name": "AfD",
-          "current_pct": 21.45,
-          "change_pp": 8.4,
+          "current_pct": 21.35,
+          "change_pp": 8.3,
           "direction": "up",
           "since_date": "2026-07-22",
           "reference_pct": 13.05,
@@ -130,55 +190,7 @@
         },
         {
           "name": "Grüne",
-          "current_pct": 13.95
-        }
-      ]
-    },
-    {
-      "market_id": "us-primary:AK:Senate",
-      "slug": "vote-winner-in-alaska-senate-primary-final-round-20260630164517313",
-      "category": "us_primary",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "AK",
-      "city_code": null,
-      "contest": "Senate Primary",
-      "market_label": "Senate Primary",
-      "party": null,
-      "election_date": "2026-08-18",
-      "election_title": "Democratic Senate Primary",
-      "max_change_pp": 7.9,
-      "changes": [
-        {
-          "name": "Earl D. \"Skip\" Southworth",
-          "current_pct": 4.55,
-          "change_pp": 7.9,
-          "direction": "down",
-          "since_date": "2026-07-22",
-          "reference_pct": 12.45,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Mary Peltola",
-          "current_pct": 65.5
-        },
-        {
-          "name": "Sen. Dan S. Sullivan",
-          "current_pct": 32.9
-        },
-        {
-          "name": "Earl D. \"Skip\" Southworth",
-          "current_pct": 4.55,
-          "change_pp": 7.9,
-          "direction": "down",
-          "since_date": "2026-07-22",
-          "reference_pct": 12.45,
-          "change_days": 2,
-          "window": "2d"
+          "current_pct": 14.05
         }
       ]
     },
@@ -212,7 +224,7 @@
       "prices": [
         {
           "name": "Darline Graham Nordone",
-          "current_pct": 69.65
+          "current_pct": 70.1
         },
         {
           "name": "Ralph Norman",
@@ -244,15 +256,25 @@
       "party": "Democratic",
       "election_date": "2026-08-04",
       "election_title": "Democratic MO-01 Primary",
-      "max_change_pp": 6.5,
+      "max_change_pp": 7.0,
       "changes": [
         {
           "name": "Wesley Bell",
-          "current_pct": 38.0,
-          "change_pp": 6.5,
+          "current_pct": 37.5,
+          "change_pp": 7.0,
           "direction": "down",
           "since_date": "2026-07-22",
           "reference_pct": 44.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Cori Bush",
+          "current_pct": 61.5,
+          "change_pp": 4.5,
+          "direction": "up",
+          "since_date": "2026-07-22",
+          "reference_pct": 57.0,
           "change_days": 2,
           "window": "2d"
         }
@@ -260,75 +282,21 @@
       "prices": [
         {
           "name": "Cori Bush",
-          "current_pct": 59.5
+          "current_pct": 61.5,
+          "change_pp": 4.5,
+          "direction": "up",
+          "since_date": "2026-07-22",
+          "reference_pct": 57.0,
+          "change_days": 2,
+          "window": "2d"
         },
         {
           "name": "Wesley Bell",
-          "current_pct": 38.0,
-          "change_pp": 6.5,
+          "current_pct": 37.5,
+          "change_pp": 7.0,
           "direction": "down",
           "since_date": "2026-07-22",
           "reference_pct": 44.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "us-senate:SC",
-      "slug": "south-carolina-senate-election-winner",
-      "category": "us_senate",
-      "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "SC",
-      "city_code": null,
-      "contest": "Senate",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-08-11",
-      "election_title": "Republican Senate Primary",
-      "max_change_pp": 6.5,
-      "changes": [
-        {
-          "name": "Democrat",
-          "current_pct": 11.0,
-          "change_pp": 6.5,
-          "direction": "down",
-          "since_date": "2026-07-22",
-          "reference_pct": 17.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Republican",
-          "current_pct": 90.0,
-          "change_pp": 6.5,
-          "direction": "up",
-          "since_date": "2026-07-22",
-          "reference_pct": 83.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Republican",
-          "current_pct": 90.0,
-          "change_pp": 6.5,
-          "direction": "up",
-          "since_date": "2026-07-22",
-          "reference_pct": 83.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Democrat",
-          "current_pct": 11.0,
-          "change_pp": 6.5,
-          "direction": "down",
-          "since_date": "2026-07-22",
-          "reference_pct": 17.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -379,6 +347,66 @@
       ]
     },
     {
+      "market_id": "us-senate:SC",
+      "slug": "south-carolina-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "SC",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-08-11",
+      "election_title": "Republican Senate Primary",
+      "max_change_pp": 6.0,
+      "changes": [
+        {
+          "name": "Democrat",
+          "current_pct": 11.5,
+          "change_pp": 6.0,
+          "direction": "down",
+          "since_date": "2026-07-22",
+          "reference_pct": 17.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Republican",
+          "current_pct": 89.5,
+          "change_pp": 6.0,
+          "direction": "up",
+          "since_date": "2026-07-22",
+          "reference_pct": 83.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Republican",
+          "current_pct": 89.5,
+          "change_pp": 6.0,
+          "direction": "up",
+          "since_date": "2026-07-22",
+          "reference_pct": 83.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Democrat",
+          "current_pct": 11.5,
+          "change_pp": 6.0,
+          "direction": "down",
+          "since_date": "2026-07-22",
+          "reference_pct": 17.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
       "market_id": "us-primary:KS:Senate:Democratic",
       "slug": "kansas-democratic-senate-primary-winner",
       "category": "us_primary",
@@ -423,6 +451,138 @@
       ]
     },
     {
+      "market_id": "us-primary:WY:Governor:Republican",
+      "slug": "wyoming-governor-republican-primary-winner",
+      "category": "us_primary",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "WY",
+      "city_code": null,
+      "contest": "Republican Governor Primary",
+      "market_label": "Republican Governor Primary",
+      "party": "Republican",
+      "election_date": "2026-08-18",
+      "election_title": "Democratic Governor Primary",
+      "max_change_pp": 4.6,
+      "changes": [
+        {
+          "name": "Megan Degenfelder",
+          "current_pct": 65.45,
+          "change_pp": 4.6,
+          "direction": "up",
+          "since_date": "2026-07-22",
+          "reference_pct": 60.85,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Megan Degenfelder",
+          "current_pct": 65.45,
+          "change_pp": 4.6,
+          "direction": "up",
+          "since_date": "2026-07-22",
+          "reference_pct": 60.85,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Eric Barlow",
+          "current_pct": 31.05
+        }
+      ]
+    },
+    {
+      "market_id": "us-primary:MI:MI-13:Democratic",
+      "slug": "mi-13-democratic-primary-winner",
+      "category": "us_primary",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "MI",
+      "city_code": null,
+      "contest": "Democratic MI-13 Primary",
+      "market_label": "Democratic MI-13 Primary",
+      "party": "Democratic",
+      "election_date": "2026-08-04",
+      "election_title": "Democratic MI-13 Primary",
+      "max_change_pp": 4.5,
+      "changes": [
+        {
+          "name": "Donavan McKinney",
+          "current_pct": 80.5,
+          "change_pp": 4.5,
+          "direction": "up",
+          "since_date": "2026-07-22",
+          "reference_pct": 76.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Donavan McKinney",
+          "current_pct": 80.5,
+          "change_pp": 4.5,
+          "direction": "up",
+          "since_date": "2026-07-22",
+          "reference_pct": 76.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Shri Thanedar",
+          "current_pct": 20.5
+        }
+      ]
+    },
+    {
+      "market_id": "us-primary:TN:Governor:Democratic",
+      "slug": "tennessee-governor-democratic-primary-winner",
+      "category": "us_primary",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "TN",
+      "city_code": null,
+      "contest": "Democratic Governor Primary",
+      "market_label": "Democratic Governor Primary",
+      "party": "Democratic",
+      "election_date": "2026-08-06",
+      "election_title": "Democratic Governor Primary",
+      "max_change_pp": 4.3,
+      "changes": [
+        {
+          "name": "Carnita Atwater",
+          "current_pct": 6.5,
+          "change_pp": 4.3,
+          "direction": "up",
+          "since_date": "2026-07-22",
+          "reference_pct": 2.2,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Jerri Green",
+          "current_pct": 93.0
+        },
+        {
+          "name": "Carnita Atwater",
+          "current_pct": 6.5,
+          "change_pp": 4.3,
+          "direction": "up",
+          "since_date": "2026-07-22",
+          "reference_pct": 2.2,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
       "market_id": "us-primary:MA:Senate:Democratic",
       "slug": "massachusetts-democratic-senate-primary-winner",
       "category": "us_primary",
@@ -436,12 +596,12 @@
       "party": "Democratic",
       "election_date": "2026-09-01",
       "election_title": "Democratic Senate Primary",
-      "max_change_pp": 5.0,
+      "max_change_pp": 4.0,
       "changes": [
         {
           "name": "Seth Moulton",
-          "current_pct": 26.5,
-          "change_pp": 5.0,
+          "current_pct": 27.5,
+          "change_pp": 4.0,
           "direction": "down",
           "since_date": "2026-07-22",
           "reference_pct": 31.5,
@@ -456,161 +616,13 @@
         },
         {
           "name": "Seth Moulton",
-          "current_pct": 26.5,
-          "change_pp": 5.0,
+          "current_pct": 27.5,
+          "change_pp": 4.0,
           "direction": "down",
           "since_date": "2026-07-22",
           "reference_pct": 31.5,
           "change_days": 2,
           "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "us-primary:MN:Governor:Republican",
-      "slug": "minnesota-governor-republican-primary-winner",
-      "category": "us_primary",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "MN",
-      "city_code": null,
-      "contest": "Republican Governor Primary",
-      "market_label": "Republican Governor Primary",
-      "party": "Republican",
-      "election_date": "2026-08-11",
-      "election_title": "Democratic Governor Primary",
-      "max_change_pp": 5.0,
-      "changes": [
-        {
-          "name": "Lisa Demuth",
-          "current_pct": 43.5,
-          "change_pp": 4.5,
-          "direction": "down",
-          "since_date": "2026-07-22",
-          "reference_pct": 48.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Mike Lindell",
-          "current_pct": 52.5,
-          "change_pp": 5.0,
-          "direction": "up",
-          "since_date": "2026-07-22",
-          "reference_pct": 47.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Mike Lindell",
-          "current_pct": 52.5,
-          "change_pp": 5.0,
-          "direction": "up",
-          "since_date": "2026-07-22",
-          "reference_pct": 47.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Lisa Demuth",
-          "current_pct": 43.5,
-          "change_pp": 4.5,
-          "direction": "down",
-          "since_date": "2026-07-22",
-          "reference_pct": 48.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "us-primary:VT:Governor:Democratic",
-      "slug": "vermont-governor-democratic-primary-winner",
-      "category": "us_primary",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "VT",
-      "city_code": null,
-      "contest": "Democratic Governor Primary",
-      "market_label": "Democratic Governor Primary",
-      "party": "Democratic",
-      "election_date": "2026-08-11",
-      "election_title": "Democratic Governor Primary",
-      "max_change_pp": 4.0,
-      "changes": [
-        {
-          "name": "Aly Richards",
-          "current_pct": 73.0,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-07-22",
-          "reference_pct": 69.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Aly Richards",
-          "current_pct": 73.0,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-07-22",
-          "reference_pct": 69.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Amanda Janoo",
-          "current_pct": 25.25
-        }
-      ]
-    },
-    {
-      "market_id": "us-senate:IA",
-      "slug": "iowa-senate-election-winner",
-      "category": "us_senate",
-      "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "IA",
-      "city_code": null,
-      "contest": "Senate",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
-      "max_change_pp": 4.0,
-      "changes": [
-        {
-          "name": "Republican",
-          "current_pct": 57.0,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-07-22",
-          "reference_pct": 61.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Republican",
-          "current_pct": 57.0,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-07-22",
-          "reference_pct": 61.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Democrat",
-          "current_pct": 42.0
         }
       ]
     }

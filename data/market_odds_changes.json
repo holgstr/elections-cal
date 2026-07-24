@@ -7,26 +7,17 @@
   "by_slug": {
     "berlin-state-election-winner": {
       "AfD": {
-        "change_pp": 8.4,
+        "change_pp": 8.3,
         "direction": "up",
         "reference_date": "2026-07-22",
         "reference_pct": 13.05,
         "window": "2d"
       },
       "Linke": {
-        "change_pp": 5.0,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-07-22",
         "reference_pct": 38.5,
-        "window": "2d"
-      }
-    },
-    "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
-      "Earl D. \"Skip\" Southworth": {
-        "change_pp": 7.9,
-        "direction": "down",
-        "reference_date": "2026-07-22",
-        "reference_pct": 12.45,
         "window": "2d"
       }
     },
@@ -41,48 +32,64 @@
     },
     "massachusetts-democratic-senate-primary-winner": {
       "Seth Moulton": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-07-22",
         "reference_pct": 31.5,
         "window": "2d"
       }
     },
-    "minnesota-governor-republican-primary-winner": {
-      "Lisa Demuth": {
+    "mi-13-democratic-primary-winner": {
+      "Donavan McKinney": {
         "change_pp": 4.5,
-        "direction": "down",
-        "reference_date": "2026-07-22",
-        "reference_pct": 48.0,
-        "window": "2d"
-      },
-      "Mike Lindell": {
-        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-07-22",
-        "reference_pct": 47.5,
+        "reference_pct": 76.0,
+        "window": "2d"
+      }
+    },
+    "michigan-democratic-senate-primary-winner": {
+      "Haley Stevens": {
+        "change_pp": 10.15,
+        "direction": "up",
+        "reference_date": "2026-07-22",
+        "reference_pct": 22.25,
+        "window": "2d"
+      },
+      "Abdul El-Sayed": {
+        "change_pp": 10.5,
+        "direction": "down",
+        "reference_date": "2026-07-22",
+        "reference_pct": 78.0,
         "window": "2d"
       }
     },
     "mo-01-democratic-primary-winner": {
       "Wesley Bell": {
-        "change_pp": 6.5,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-07-22",
         "reference_pct": 44.5,
+        "window": "2d"
+      },
+      "Cori Bush": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-07-22",
+        "reference_pct": 57.0,
         "window": "2d"
       }
     },
     "rhode-island-governor-democratic-primary-winner": {
       "Helena Foulkes": {
-        "change_pp": 9.85,
+        "change_pp": 8.35,
         "direction": "down",
         "reference_date": "2026-07-22",
         "reference_pct": 95.55,
         "window": "2d"
       },
       "Dan McKee": {
-        "change_pp": 6.25,
+        "change_pp": 7.85,
         "direction": "up",
         "reference_date": "2026-07-22",
         "reference_pct": 5.2,
@@ -98,21 +105,21 @@
         "window": "2d"
       }
     },
-    "vermont-governor-democratic-primary-winner": {
-      "Aly Richards": {
-        "change_pp": 4.0,
+    "tennessee-governor-democratic-primary-winner": {
+      "Carnita Atwater": {
+        "change_pp": 4.3,
         "direction": "up",
         "reference_date": "2026-07-22",
-        "reference_pct": 69.0,
+        "reference_pct": 2.2,
         "window": "2d"
       }
     },
-    "iowa-senate-election-winner": {
-      "Republican": {
-        "change_pp": 4.0,
-        "direction": "down",
+    "wyoming-governor-republican-primary-winner": {
+      "Megan Degenfelder": {
+        "change_pp": 4.6,
+        "direction": "up",
         "reference_date": "2026-07-22",
-        "reference_pct": 61.0,
+        "reference_pct": 60.85,
         "window": "2d"
       }
     },
@@ -127,14 +134,14 @@
     },
     "south-carolina-senate-election-winner": {
       "Democrat": {
-        "change_pp": 6.5,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-07-22",
         "reference_pct": 17.5,
         "window": "2d"
       },
       "Republican": {
-        "change_pp": 6.5,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-07-22",
         "reference_pct": 83.5,
@@ -145,26 +152,17 @@
   "by_market_id": {
     "de-state:BE": {
       "AfD": {
-        "change_pp": 8.4,
+        "change_pp": 8.3,
         "direction": "up",
         "reference_date": "2026-07-22",
         "reference_pct": 13.05,
         "window": "2d"
       },
       "Linke": {
-        "change_pp": 5.0,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-07-22",
         "reference_pct": 38.5,
-        "window": "2d"
-      }
-    },
-    "us-primary:AK:Senate": {
-      "Earl D. \"Skip\" Southworth": {
-        "change_pp": 7.9,
-        "direction": "down",
-        "reference_date": "2026-07-22",
-        "reference_pct": 12.45,
         "window": "2d"
       }
     },
@@ -179,48 +177,64 @@
     },
     "us-primary:MA:Senate:Democratic": {
       "Seth Moulton": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-07-22",
         "reference_pct": 31.5,
         "window": "2d"
       }
     },
-    "us-primary:MN:Governor:Republican": {
-      "Lisa Demuth": {
+    "us-primary:MI:MI-13:Democratic": {
+      "Donavan McKinney": {
         "change_pp": 4.5,
-        "direction": "down",
-        "reference_date": "2026-07-22",
-        "reference_pct": 48.0,
-        "window": "2d"
-      },
-      "Mike Lindell": {
-        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-07-22",
-        "reference_pct": 47.5,
+        "reference_pct": 76.0,
+        "window": "2d"
+      }
+    },
+    "us-primary:MI:Senate:Democratic": {
+      "Haley Stevens": {
+        "change_pp": 10.15,
+        "direction": "up",
+        "reference_date": "2026-07-22",
+        "reference_pct": 22.25,
+        "window": "2d"
+      },
+      "Abdul El-Sayed": {
+        "change_pp": 10.5,
+        "direction": "down",
+        "reference_date": "2026-07-22",
+        "reference_pct": 78.0,
         "window": "2d"
       }
     },
     "us-primary:MO:MO-01:Democratic": {
       "Wesley Bell": {
-        "change_pp": 6.5,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-07-22",
         "reference_pct": 44.5,
+        "window": "2d"
+      },
+      "Cori Bush": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-07-22",
+        "reference_pct": 57.0,
         "window": "2d"
       }
     },
     "us-primary:RI:Governor:Democratic": {
       "Helena Foulkes": {
-        "change_pp": 9.85,
+        "change_pp": 8.35,
         "direction": "down",
         "reference_date": "2026-07-22",
         "reference_pct": 95.55,
         "window": "2d"
       },
       "Dan McKee": {
-        "change_pp": 6.25,
+        "change_pp": 7.85,
         "direction": "up",
         "reference_date": "2026-07-22",
         "reference_pct": 5.2,
@@ -236,21 +250,21 @@
         "window": "2d"
       }
     },
-    "us-primary:VT:Governor:Democratic": {
-      "Aly Richards": {
-        "change_pp": 4.0,
+    "us-primary:TN:Governor:Democratic": {
+      "Carnita Atwater": {
+        "change_pp": 4.3,
         "direction": "up",
         "reference_date": "2026-07-22",
-        "reference_pct": 69.0,
+        "reference_pct": 2.2,
         "window": "2d"
       }
     },
-    "us-senate:IA": {
-      "Republican": {
-        "change_pp": 4.0,
-        "direction": "down",
+    "us-primary:WY:Governor:Republican": {
+      "Megan Degenfelder": {
+        "change_pp": 4.6,
+        "direction": "up",
         "reference_date": "2026-07-22",
-        "reference_pct": 61.0,
+        "reference_pct": 60.85,
         "window": "2d"
       }
     },
@@ -265,14 +279,14 @@
     },
     "us-senate:SC": {
       "Democrat": {
-        "change_pp": 6.5,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-07-22",
         "reference_pct": 17.5,
         "window": "2d"
       },
       "Republican": {
-        "change_pp": 6.5,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-07-22",
         "reference_pct": 83.5,
