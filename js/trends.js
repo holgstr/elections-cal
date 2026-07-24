@@ -953,7 +953,7 @@ function updateHover(wrap, model, index) {
   dots.innerHTML = model.candidateSeries
     .map(({ color, points }) => {
       const pt = points[index];
-      return `<circle cx="${pt.x}" cy="${pt.y}" r="4" fill="${color}" stroke="#fff" stroke-width="1.5" />`;
+      return `<circle cx="${pt.x}" cy="${pt.y}" r="4" fill="${color}" stroke="var(--surface)" stroke-width="1.5" />`;
     })
     .join("");
 
@@ -1127,7 +1127,7 @@ function buildScatterSvg(
           class="trends-scatter-dot${selected}"
           data-scatter-index="${index}"
           fill="${point.color}"
-          stroke="#fff"
+          stroke="var(--surface)"
           stroke-width="1.5"
       `;
       // R1 = circle; R2 (runoff) = square.
