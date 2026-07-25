@@ -49,8 +49,10 @@ USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 )
-REQUEST_DELAY_S = 1.5
+REQUEST_DELAY_S = 2.0
 MAX_RETRIES = 4
+# Extra backoff for rate limits; full refreshes otherwise drop races from the UI.
+RATE_LIMIT_BACKOFF_S = 8.0
 TZ_OFFSET_MINUTES = 360  # US Mountain (MST) as used for CO races
 # Autocomplete must look like a political office/person to auto-adopt a mid.
 ENTITY_SCORE_THRESHOLD = 10
@@ -246,7 +248,12 @@ class TrendsClient:
                 last_error = exc
                 # 429 / 5xx: back off; Google Trends is sensitive in CI.
                 if exc.code in {429, 500, 502, 503, 504} and attempt < MAX_RETRIES:
-                    sleep_s = REQUEST_DELAY_S * (2 ** (attempt - 1))
+                    base = (
+                        RATE_LIMIT_BACKOFF_S
+                        if exc.code == 429
+                        else REQUEST_DELAY_S
+                    )
+                    sleep_s = base * (2 ** (attempt - 1))
                     print(
                         f"  retry {attempt}/{MAX_RETRIES} after HTTP {exc.code} "
                         f"(sleep {sleep_s:.1f}s)",
@@ -641,6 +648,85 @@ def run_suggest(terms: list[str]) -> int:
     return 0
 
 
+def load_prior_races(path: Path) -> list[dict]:
+    """Load previously written race payloads from trends.json, if any."""
+    if not path.exists():
+        return []
+    try:
+        existing = load_json(path)
+    except (OSError, json.JSONDecodeError):
+        return []
+    prior = existing.get("races") if isinstance(existing, dict) else None
+    if not isinstance(prior, list):
+        return []
+    return [
+        race
+        for race in prior
+        if isinstance(race, dict) and isinstance(race.get("id"), str) and race["id"]
+    ]
+
+
+def merge_trends_races(
+    *,
+    prior_races: list[dict],
+    fetched_races: list[dict],
+    failed_ids: set[str],
+    requested_ids: list[str],
+    partial_update: bool,
+) -> tuple[list[dict], list[str]]:
+    """Combine new fetches with prior race data.
+
+    On a full refresh, keep prior payloads only for races that failed this run
+    (so rate limits do not wipe Current races / comparison charts). On
+    ``--only`` updates, overlay successful fetches onto the existing file and
+    leave unrequested races untouched.
+
+    Returns ``(merged_races, preserved_ids)``.
+    """
+    prior_by_id = {
+        race["id"]: race
+        for race in prior_races
+        if isinstance(race.get("id"), str) and race["id"]
+    }
+    fetched_by_id = {
+        race["id"]: race
+        for race in fetched_races
+        if isinstance(race.get("id"), str) and race["id"]
+    }
+    preserved: list[str] = []
+
+    if partial_update:
+        ordered: list[dict] = []
+        seen: set[str] = set()
+        for race in prior_races:
+            race_id = race.get("id")
+            if not isinstance(race_id, str) or not race_id or race_id in seen:
+                continue
+            if race_id in fetched_by_id:
+                ordered.append(fetched_by_id[race_id])
+            else:
+                ordered.append(race)
+                if race_id in failed_ids:
+                    preserved.append(race_id)
+            seen.add(race_id)
+        for race in fetched_races:
+            race_id = race.get("id")
+            if not isinstance(race_id, str) or not race_id or race_id in seen:
+                continue
+            ordered.append(race)
+            seen.add(race_id)
+        return ordered, preserved
+
+    ordered = []
+    for race_id in requested_ids:
+        if race_id in fetched_by_id:
+            ordered.append(fetched_by_id[race_id])
+        elif race_id in failed_ids and race_id in prior_by_id:
+            ordered.append(prior_by_id[race_id])
+            preserved.append(race_id)
+    return ordered, preserved
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -686,6 +772,12 @@ def main(argv: list[str] | None = None) -> int:
     client = TrendsClient()
     races: list[dict] = []
     errors: list[str] = []
+    failed_ids: set[str] = set()
+    requested_ids = [
+        race["id"]
+        for race in races_config
+        if isinstance(race.get("id"), str) and race["id"]
+    ]
 
     for idx, race in enumerate(races_config):
         if idx:
@@ -693,42 +785,31 @@ def main(argv: list[str] | None = None) -> int:
         try:
             races.append(fetch_race(client, race))
         except Exception as exc:  # noqa: BLE001 — keep other races if one fails
-            message = f"{race.get('id', '?')}: {exc}"
+            race_id = race.get("id", "?")
+            message = f"{race_id}: {exc}"
             print(f"ERROR {message}", file=sys.stderr)
             errors.append(message)
+            if isinstance(race_id, str) and race_id:
+                failed_ids.add(race_id)
+
+    prior_races = load_prior_races(OUTPUT_PATH)
+    races, preserved_ids = merge_trends_races(
+        prior_races=prior_races,
+        fetched_races=races,
+        failed_ids=failed_ids,
+        requested_ids=requested_ids,
+        partial_update=bool(only_ids),
+    )
+    if preserved_ids:
+        print(
+            f"Preserved prior Trends data for {len(preserved_ids)} failed race(s): "
+            f"{', '.join(preserved_ids)}",
+            file=sys.stderr,
+        )
 
     if not races:
         print("No Trends data fetched.", file=sys.stderr)
         return 1
-
-    if only_ids and OUTPUT_PATH.exists():
-        try:
-            existing = load_json(OUTPUT_PATH)
-        except Exception:  # noqa: BLE001
-            existing = {}
-        prior = existing.get("races") if isinstance(existing, dict) else None
-        if isinstance(prior, list):
-            by_id = {
-                race.get("id"): race
-                for race in prior
-                if isinstance(race, dict) and race.get("id")
-            }
-            for race in races:
-                by_id[race["id"]] = race
-            # Preserve prior order; append newly added ids at the end.
-            ordered: list[dict] = []
-            seen: set[str] = set()
-            for race in prior:
-                race_id = race.get("id") if isinstance(race, dict) else None
-                if not race_id or race_id in seen:
-                    continue
-                ordered.append(by_id[race_id])
-                seen.add(race_id)
-            for race in races:
-                if race["id"] not in seen:
-                    ordered.append(race)
-                    seen.add(race["id"])
-            races = ordered
 
     payload = {
         "generated_at": datetime.now(timezone.utc)
