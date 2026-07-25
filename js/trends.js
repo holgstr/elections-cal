@@ -75,40 +75,11 @@ function formatShortDate(isoDate) {
   return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
 
-/** Format a Trends stale `data_as_of` timestamp for display. */
-function formatStaleAsOf(value) {
-  if (!value) return "";
-  const raw = String(value);
-  const hasTime = raw.includes("T");
-  const d = new Date(hasTime ? raw : `${raw}T12:00:00`);
-  if (Number.isNaN(d.getTime())) return "";
-  if (hasTime) {
-    return d.toLocaleString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-      hour: "numeric",
-      minute: "2-digit",
-      timeZone: "UTC",
-      timeZoneName: "short",
-    });
-  }
-  return d.toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  });
-}
-
 /** Notice when this race is showing a previous successful Trends update. */
 function staleNotice(race) {
   const stale = race?.stale;
   if (!stale || typeof stale !== "object") return "";
-  const asOf = formatStaleAsOf(stale.data_as_of);
-  const text = asOf
-    ? `Showing previous update from ${asOf} — latest refresh failed.`
-    : "Showing previous update — latest refresh failed.";
-  return `<p class="trends-stale-notice" role="status">${escapeHtml(text)}</p>`;
+  return `<p class="trends-stale-notice" role="status">Last fetch failed</p>`;
 }
 
 function locationLine(race) {
