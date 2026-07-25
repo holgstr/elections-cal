@@ -5,6 +5,10 @@ Uses Google Trends' undocumented but stable explore/widgetdata endpoints
 via urllib + cookies (stdlib only). Suitable for periodic GitHub Actions
 runs. Writes data/trends.json for the Trends tab.
 
+Scheduled refreshes fetch **watchlist** (Current) races only by default so
+historical comparison series are not re-queried. Use ``--all`` to refresh
+every configured race, or ``--only ID`` for an explicit subset.
+
 Prefer Google Knowledge Graph *person/topic entities* (mids like
 ``/m/04g_1z``) when a confident political person match exists. Entities
 disambiguate people (e.g. "John Hickenlooper" → United States Senator) and
@@ -715,6 +719,30 @@ def clear_race_stale(race: dict) -> dict:
     return out
 
 
+def is_watchlist_race(race: dict) -> bool:
+    """True for Current / trailing races that scheduled refreshes should update."""
+    return bool(race.get("watchlist"))
+
+
+def select_races_to_fetch(
+    races_config: list[dict],
+    *,
+    only_ids: set[str] | None = None,
+    include_historical: bool = False,
+) -> list[dict]:
+    """Pick which configured races to hit Google for.
+
+    Default (scheduled) runs fetch watchlist races only so historical comparison
+    series are not re-queried. Pass ``include_historical=True`` (``--all``) for a
+    full refresh, or ``only_ids`` for an explicit subset.
+    """
+    if only_ids:
+        return [race for race in races_config if race.get("id") in only_ids]
+    if include_historical:
+        return list(races_config)
+    return [race for race in races_config if is_watchlist_race(race)]
+
+
 def merge_trends_races(
     *,
     prior_races: list[dict],
@@ -726,10 +754,11 @@ def merge_trends_races(
 ) -> tuple[list[dict], list[str]]:
     """Combine new fetches with prior race data.
 
-    On a full refresh, keep prior payloads only for races that failed this run
-    (so rate limits do not wipe Current races / comparison charts). On
-    ``--only`` updates, overlay successful fetches onto the existing file and
-    leave unrequested races untouched.
+    On a full refresh (``--all``), keep prior payloads only for races that failed
+    this run (so rate limits do not wipe Current races / comparison charts). On
+    watchlist-only or ``--only`` updates, overlay successful fetches onto the
+    existing file and leave unrequested races (including historical comparison
+    series) untouched.
 
     Preserved races are marked ``stale`` so the UI can say this race is showing
     the previous update. Fresh fetches clear any prior stale marker.
@@ -805,6 +834,12 @@ def main(argv: list[str] | None = None) -> int:
         help="Fetch only these race ids (repeatable). Merges into existing "
         "data/trends.json when present; otherwise writes only these races.",
     )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Also refetch historical / comparison races (default: watchlist "
+        "Current races only; historical series stay as last written).",
+    )
     args = parser.parse_args(argv)
 
     if args.suggest:
@@ -817,17 +852,43 @@ def main(argv: list[str] | None = None) -> int:
 
     only_ids = {race_id.strip() for race_id in args.only if race_id and race_id.strip()}
     if only_ids:
-        races_config = [race for race in races_config if race.get("id") in only_ids]
-        missing = only_ids - {race.get("id") for race in races_config}
+        missing = only_ids - {
+            race.get("id") for race in races_config if isinstance(race.get("id"), str)
+        }
         if missing:
             print(
                 f"Unknown race id(s) in --only: {', '.join(sorted(missing))}",
                 file=sys.stderr,
             )
             return 1
-        if not races_config:
+
+    to_fetch = select_races_to_fetch(
+        races_config,
+        only_ids=only_ids or None,
+        include_historical=bool(args.all) and not only_ids,
+    )
+    if not to_fetch:
+        if only_ids:
             print("No races matched --only.", file=sys.stderr)
             return 1
+        print(
+            "No watchlist races configured; skipping Trends fetch "
+            "(historical series left unchanged). Use --all to refetch everything.",
+            file=sys.stderr,
+        )
+        return 0
+
+    skipped = len(races_config) - len(to_fetch)
+    if skipped and not only_ids and not args.all:
+        print(
+            f"Fetching {len(to_fetch)} watchlist race(s); "
+            f"leaving {skipped} historical race(s) unchanged.",
+            file=sys.stderr,
+        )
+
+    # Watchlist-only / --only must merge into prior so historical comparison
+    # series (and unrequested races) are not dropped from trends.json.
+    partial_update = bool(only_ids) or not args.all
 
     client = TrendsClient()
     races: list[dict] = []
@@ -835,11 +896,11 @@ def main(argv: list[str] | None = None) -> int:
     failed_ids: set[str] = set()
     requested_ids = [
         race["id"]
-        for race in races_config
+        for race in to_fetch
         if isinstance(race.get("id"), str) and race["id"]
     ]
 
-    for idx, race in enumerate(races_config):
+    for idx, race in enumerate(to_fetch):
         if idx:
             time.sleep(REQUEST_DELAY_S)
         try:
@@ -858,7 +919,7 @@ def main(argv: list[str] | None = None) -> int:
         fetched_races=races,
         failed_ids=failed_ids,
         requested_ids=requested_ids,
-        partial_update=bool(only_ids),
+        partial_update=partial_update,
         prior_generated_at=prior_generated_at,
     )
     if preserved_ids:
