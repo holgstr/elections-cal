@@ -648,22 +648,71 @@ def run_suggest(terms: list[str]) -> int:
     return 0
 
 
-def load_prior_races(path: Path) -> list[dict]:
-    """Load previously written race payloads from trends.json, if any."""
+def load_prior_trends(path: Path) -> tuple[list[dict], str | None]:
+    """Load prior race payloads and generated_at from trends.json, if any."""
     if not path.exists():
-        return []
+        return [], None
     try:
         existing = load_json(path)
     except (OSError, json.JSONDecodeError):
-        return []
-    prior = existing.get("races") if isinstance(existing, dict) else None
-    if not isinstance(prior, list):
-        return []
-    return [
-        race
-        for race in prior
-        if isinstance(race, dict) and isinstance(race.get("id"), str) and race["id"]
-    ]
+        return [], None
+    if not isinstance(existing, dict):
+        return [], None
+    prior = existing.get("races")
+    races = (
+        [
+            race
+            for race in prior
+            if isinstance(race, dict) and isinstance(race.get("id"), str) and race["id"]
+        ]
+        if isinstance(prior, list)
+        else []
+    )
+    generated_at = existing.get("generated_at")
+    if not isinstance(generated_at, str) or not generated_at:
+        generated_at = None
+    return races, generated_at
+
+
+def load_prior_races(path: Path) -> list[dict]:
+    """Load previously written race payloads from trends.json, if any."""
+    races, _generated_at = load_prior_trends(path)
+    return races
+
+
+def _prior_data_as_of(race: dict, prior_generated_at: str | None) -> str | None:
+    """Timestamp of the last successful fetch for a preserved race."""
+    existing = race.get("stale")
+    if isinstance(existing, dict):
+        as_of = existing.get("data_as_of")
+        if isinstance(as_of, str) and as_of:
+            return as_of
+    if isinstance(prior_generated_at, str) and prior_generated_at:
+        return prior_generated_at
+    end_date = race.get("end_date")
+    if isinstance(end_date, str) and end_date:
+        return f"{end_date}T00:00:00Z"
+    return None
+
+
+def mark_race_stale(race: dict, *, prior_generated_at: str | None) -> dict:
+    """Copy a race and flag it as showing a previous successful update."""
+    out = dict(race)
+    as_of = _prior_data_as_of(race, prior_generated_at)
+    stale: dict[str, str] = {"reason": "fetch_failed"}
+    if as_of:
+        stale["data_as_of"] = as_of
+    out["stale"] = stale
+    return out
+
+
+def clear_race_stale(race: dict) -> dict:
+    """Copy a freshly fetched race without a stale marker."""
+    if "stale" not in race:
+        return race
+    out = dict(race)
+    out.pop("stale", None)
+    return out
 
 
 def merge_trends_races(
@@ -673,6 +722,7 @@ def merge_trends_races(
     failed_ids: set[str],
     requested_ids: list[str],
     partial_update: bool,
+    prior_generated_at: str | None = None,
 ) -> tuple[list[dict], list[str]]:
     """Combine new fetches with prior race data.
 
@@ -680,6 +730,9 @@ def merge_trends_races(
     (so rate limits do not wipe Current races / comparison charts). On
     ``--only`` updates, overlay successful fetches onto the existing file and
     leave unrequested races untouched.
+
+    Preserved races are marked ``stale`` so the UI can say this race is showing
+    the previous update. Fresh fetches clear any prior stale marker.
 
     Returns ``(merged_races, preserved_ids)``.
     """
@@ -689,7 +742,7 @@ def merge_trends_races(
         if isinstance(race.get("id"), str) and race["id"]
     }
     fetched_by_id = {
-        race["id"]: race
+        race["id"]: clear_race_stale(race)
         for race in fetched_races
         if isinstance(race.get("id"), str) and race["id"]
     }
@@ -704,16 +757,19 @@ def merge_trends_races(
                 continue
             if race_id in fetched_by_id:
                 ordered.append(fetched_by_id[race_id])
+            elif race_id in failed_ids:
+                ordered.append(
+                    mark_race_stale(race, prior_generated_at=prior_generated_at)
+                )
+                preserved.append(race_id)
             else:
                 ordered.append(race)
-                if race_id in failed_ids:
-                    preserved.append(race_id)
             seen.add(race_id)
         for race in fetched_races:
             race_id = race.get("id")
             if not isinstance(race_id, str) or not race_id or race_id in seen:
                 continue
-            ordered.append(race)
+            ordered.append(fetched_by_id[race_id])
             seen.add(race_id)
         return ordered, preserved
 
@@ -722,7 +778,11 @@ def merge_trends_races(
         if race_id in fetched_by_id:
             ordered.append(fetched_by_id[race_id])
         elif race_id in failed_ids and race_id in prior_by_id:
-            ordered.append(prior_by_id[race_id])
+            ordered.append(
+                mark_race_stale(
+                    prior_by_id[race_id], prior_generated_at=prior_generated_at
+                )
+            )
             preserved.append(race_id)
     return ordered, preserved
 
@@ -792,13 +852,14 @@ def main(argv: list[str] | None = None) -> int:
             if isinstance(race_id, str) and race_id:
                 failed_ids.add(race_id)
 
-    prior_races = load_prior_races(OUTPUT_PATH)
+    prior_races, prior_generated_at = load_prior_trends(OUTPUT_PATH)
     races, preserved_ids = merge_trends_races(
         prior_races=prior_races,
         fetched_races=races,
         failed_ids=failed_ids,
         requested_ids=requested_ids,
         partial_update=bool(only_ids),
+        prior_generated_at=prior_generated_at,
     )
     if preserved_ids:
         print(

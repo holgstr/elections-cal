@@ -532,6 +532,10 @@
             "pct": 37.0
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -803,6 +807,10 @@
       },
       "exclude": {
         "reason": "Oregon is safely Democratic statewide; the GOP primary does not determine the Senate winner."
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -1055,7 +1063,11 @@
             "Richard Tabor": 90
           }
         }
-      ]
+      ],
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
+      }
     },
     {
       "id": "ga-gop-governor-primary-runoff-2026",
@@ -1321,6 +1333,10 @@
             "pct": 47.3
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -1589,6 +1605,10 @@
             "pct": 47.2
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -1640,6 +1660,10 @@
       },
       "exclude": {
         "reason": "West Virginia is safely Republican statewide; the Democratic primary does not determine the Senate winner."
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -1908,6 +1932,10 @@
             "pct": 46.2
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -2177,6 +2205,10 @@
       },
       "exclude": {
         "reason": "Maryland is safely Democratic statewide; the GOP primary does not determine the governor's race."
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -2448,6 +2480,10 @@
       },
       "exclude": {
         "reason": "Oregon is safely Democratic statewide; the GOP primary does not determine the governor's race."
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -2716,6 +2752,10 @@
             "pct": 32.7
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -2983,6 +3023,10 @@
       },
       "exclude": {
         "reason": "Alabama is safely Republican statewide; the Democratic primary does not determine the Senate winner."
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -3252,6 +3296,10 @@
       },
       "exclude": {
         "reason": "New Mexico is safely Democratic statewide; the GOP primary does not determine the governor's race."
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -3518,6 +3566,10 @@
             "pct": 33.0
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -3786,6 +3838,10 @@
             "pct": 35.9
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -4054,6 +4110,10 @@
             "pct": 44.5
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -4322,6 +4382,10 @@
             "pct": 44.0
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -4588,6 +4652,10 @@
             "pct": 43.8
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -4856,6 +4924,10 @@
             "pct": 43.1
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -5124,6 +5196,10 @@
             "pct": 43.1
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -5378,6 +5454,10 @@
       ],
       "exclude": {
         "reason": "Illinois is safely Democratic statewide; the GOP primary does not determine the Senate winner."
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -5629,7 +5709,11 @@
             "Ben Midgley": 0
           }
         }
-      ]
+      ],
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
+      }
     },
     {
       "id": "il-gop-governor-primary-2026",
@@ -5900,6 +5984,10 @@
       },
       "exclude": {
         "reason": "Illinois is safely Democratic statewide; the GOP primary does not determine the governor's race."
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -6168,6 +6256,10 @@
             "pct": 37.4
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -6704,6 +6796,10 @@
             "pct": 28.9
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -7017,6 +7113,10 @@
             "pct": 17.1
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -7285,6 +7385,10 @@
             "pct": 30.8
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -7557,6 +7661,10 @@
             "pct": 7.0
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -7823,6 +7931,10 @@
             "pct": 45.9
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -8091,6 +8203,10 @@
             "pct": 34.0
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -8359,6 +8475,10 @@
             "pct": 35.8
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -8627,6 +8747,10 @@
             "pct": 40.2
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -8895,6 +9019,10 @@
             "pct": 40.7
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -9163,6 +9291,10 @@
             "pct": 45.0
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -9476,6 +9608,10 @@
             "pct": 24.0
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -9789,6 +9925,10 @@
             "pct": 17.7
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -10057,6 +10197,10 @@
             "pct": 36.5
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -10323,6 +10467,10 @@
             "pct": 41.7
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     },
     {
@@ -11634,7 +11782,11 @@
           }
         }
       ],
-      "watchlist": true
+      "watchlist": true,
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
+      }
     },
     {
       "id": "sc-special-gop-senate-primary-2026",
@@ -11970,7 +12122,11 @@
           }
         }
       ],
-      "watchlist": true
+      "watchlist": true,
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
+      }
     },
     {
       "id": "mn-dem-senate-primary-2026",
@@ -13014,6 +13170,10 @@
             "pct": 42.2
           }
         ]
+      },
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-24T20:45:22Z"
       }
     }
   ],
