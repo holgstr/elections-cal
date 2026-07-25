@@ -75,6 +75,42 @@ function formatShortDate(isoDate) {
   return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
 
+/** Format a Trends stale `data_as_of` timestamp for display. */
+function formatStaleAsOf(value) {
+  if (!value) return "";
+  const raw = String(value);
+  const hasTime = raw.includes("T");
+  const d = new Date(hasTime ? raw : `${raw}T12:00:00`);
+  if (Number.isNaN(d.getTime())) return "";
+  if (hasTime) {
+    return d.toLocaleString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      timeZone: "UTC",
+      timeZoneName: "short",
+    });
+  }
+  return d.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+/** Notice when this race is showing a previous successful Trends update. */
+function staleNotice(race) {
+  const stale = race?.stale;
+  if (!stale || typeof stale !== "object") return "";
+  const asOf = formatStaleAsOf(stale.data_as_of);
+  const text = asOf
+    ? `Showing previous update from ${asOf} — latest refresh failed.`
+    : "Showing previous update — latest refresh failed.";
+  return `<p class="trends-stale-notice" role="status">${escapeHtml(text)}</p>`;
+}
+
 function locationLine(race) {
   const parts = [];
   if (race.state_code === "CO") parts.push("Colorado");
@@ -1039,6 +1075,7 @@ function renderRaceCard(race) {
         <header class="trends-card-header">
           <h3 class="trends-card-title">${escapeHtml(race.title)}</h3>
           <p class="trends-card-meta">${escapeHtml(subtitle)}</p>
+          ${staleNotice(race)}
         </header>
         <p class="trends-empty">No search-interest series for this race yet.</p>
       </article>
@@ -1054,6 +1091,7 @@ function renderRaceCard(race) {
       <header class="trends-card-header">
         <h3 class="trends-card-title">${escapeHtml(race.title)}</h3>
         <p class="trends-card-meta">${escapeHtml(subtitle)}</p>
+        ${staleNotice(race)}
       </header>
       ${buildShareSummary(model.candidateSeries, race)}
       <div class="trends-chart-wrap" data-chart-root>
