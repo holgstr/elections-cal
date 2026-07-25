@@ -8,7 +8,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from fetch_google_trends import merge_trends_races  # noqa: E402
+from fetch_google_trends import (  # noqa: E402
+    is_watchlist_race,
+    merge_trends_races,
+    select_races_to_fetch,
+)
 
 
 def _race(race_id: str, *, tag: str, stale: dict | None = None) -> dict:
@@ -130,6 +134,50 @@ def test_fresh_fetch_clears_prior_stale_marker() -> None:
     assert "stale" not in merged[0]
 
 
+def test_watchlist_only_partial_update_keeps_historical() -> None:
+    """Scheduled runs fetch watchlist races but must not drop historical series."""
+    prior = [
+        _race("hist-a", tag="old"),
+        _race("current", tag="old"),
+        _race("hist-b", tag="old"),
+    ]
+    fetched = [_race("current", tag="new")]
+    merged, preserved = merge_trends_races(
+        prior_races=prior,
+        fetched_races=fetched,
+        failed_ids=set(),
+        requested_ids=["current"],
+        partial_update=True,
+        prior_generated_at="2026-07-24T20:45:22Z",
+    )
+    assert [r["id"] for r in merged] == ["hist-a", "current", "hist-b"]
+    assert merged[0]["title"] == "hist-a:old"
+    assert "stale" not in merged[0]
+    assert merged[1]["title"] == "current:new"
+    assert "stale" not in merged[1]
+    assert merged[2]["title"] == "hist-b:old"
+    assert preserved == []
+
+
+def test_select_races_to_fetch_default_is_watchlist_only() -> None:
+    config = [
+        {"id": "hist", "title": "Old"},
+        {"id": "cur", "title": "Now", "watchlist": True},
+        {"id": "also", "title": "Also", "watchlist": True},
+    ]
+    assert [r["id"] for r in select_races_to_fetch(config)] == ["cur", "also"]
+    assert [r["id"] for r in select_races_to_fetch(config, include_historical=True)] == [
+        "hist",
+        "cur",
+        "also",
+    ]
+    assert [
+        r["id"] for r in select_races_to_fetch(config, only_ids={"hist", "also"})
+    ] == ["hist", "also"]
+    assert is_watchlist_race(config[1])
+    assert not is_watchlist_race(config[0])
+
+
 def main() -> int:
     test_full_refresh_preserves_failed_prior_races()
     test_full_refresh_keeps_earlier_stale_timestamp()
@@ -137,6 +185,8 @@ def main() -> int:
     test_full_refresh_omits_failed_race_without_prior()
     test_partial_update_overlays_and_keeps_others()
     test_fresh_fetch_clears_prior_stale_marker()
+    test_watchlist_only_partial_update_keeps_historical()
+    test_select_races_to_fetch_default_is_watchlist_only()
     print("ok")
     return 0
 

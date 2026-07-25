@@ -24,6 +24,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Fetch Google Trends interest
+        # Default: watchlist (Current) races only; historical series stay as last written.
+        # Use `python3 scripts/fetch_google_trends.py --all` manually to refresh comparison races.
         run: python3 scripts/fetch_google_trends.py
 
       - name: Commit Trends updates
