@@ -26,11 +26,11 @@
         Election Calendar
       </h1>
       <nav class="tab-bar" aria-label="Sections">
-        <button type="button" class="tab-btn is-active" data-tab="calendar" aria-selected="true">Calendar</button>
+        <button type="button" class="tab-btn is-active" data-tab="trends" aria-selected="true">Trends</button>
+        <button type="button" class="tab-btn" data-tab="calendar" aria-selected="false">Calendar</button>
         <button type="button" class="tab-btn" data-tab="suggestions" aria-selected="false">Market moves</button>
-        <button type="button" class="tab-btn" data-tab="trends" aria-selected="false">Trends</button>
       </nav>
-      <div class="toolbar" id="calendar-toolbar" aria-label="Filter elections">
+      <div class="toolbar" id="calendar-toolbar" aria-label="Filter elections" hidden>
         <label class="search-wrap">
           <span class="sr-only">Search</span>
           <input type="search" id="search" placeholder="Search country, state, office…" autocomplete="off" enterkeyhint="search" />
@@ -39,14 +39,14 @@
     </header>
 
     <main>
-      <section class="timeline tab-panel is-active" id="timeline" data-panel="calendar" aria-live="polite">
+      <section class="timeline tab-panel is-active" id="trends" data-panel="trends" aria-live="polite">
+        <p class="loading">Loading Trends…</p>
+      </section>
+      <section class="timeline tab-panel" id="timeline" data-panel="calendar" aria-live="polite" hidden>
         <p class="loading">Loading elections…</p>
       </section>
       <section class="timeline tab-panel" id="suggestions" data-panel="suggestions" aria-live="polite" hidden>
         <p class="loading">Loading market moves…</p>
-      </section>
-      <section class="timeline tab-panel" id="trends" data-panel="trends" aria-live="polite" hidden>
-        <p class="loading">Loading Trends…</p>
       </section>
     </main>
 

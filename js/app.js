@@ -98,7 +98,7 @@ function electionCommentLabel(comment) {
 
 let allElections = [];
 let activeGroup = "all";
-let activeTab = "calendar";
+let activeTab = "trends";
 let searchQuery = "";
 
 async function loadData() {
