@@ -136,6 +136,54 @@
     ]
   },
   {
+    "id": "ga-gop-governor-primary-2026",
+    "title": "Georgia Republican Governor Primary",
+    "election_date": "2026-05-19",
+    "country_code": "US",
+    "state_code": "GA",
+    "geo": "US-GA",
+    "window_days": 30,
+    "keywords": [
+      {
+        "name": "Burt Jones",
+        "label": "Jones",
+        "mid": "/m/0130rk4g",
+        "topic_title": "Burt Jones",
+        "topic_type": "Lieutenant Governor of Georgia"
+      },
+      {
+        "name": "Rick Jackson",
+        "label": "Jackson"
+      },
+      {
+        "name": "Brad Raffensperger",
+        "label": "Raffensperger",
+        "mid": "/g/11gjhfrhts",
+        "topic_title": "Brad Raffensperger",
+        "topic_type": "Georgia Secretary of State"
+      }
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-07-15",
+      "source": "Decision Desk HQ / Associated Press / state election agencies",
+      "candidates": [
+        {
+          "label": "Jones",
+          "pct": 38.4
+        },
+        {
+          "label": "Jackson",
+          "pct": 32.5
+        },
+        {
+          "label": "Raffensperger",
+          "pct": 15.0
+        }
+      ]
+    }
+  },
+  {
     "id": "ga-gop-governor-primary-runoff-2026",
     "title": "Georgia Republican Governor Primary Runoff",
     "election_date": "2026-06-16",

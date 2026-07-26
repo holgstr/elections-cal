@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T20:16:35Z",
+  "generated_at": "2026-07-26T00:51:26Z",
   "source": "google_trends",
   "races": [
     {
@@ -9505,10 +9505,10 @@
         },
         {
           "keyword": "/g/11b6qd3511",
-          "label": "Galán-Woods",
+          "label": "Gal\u00e1n-Woods",
           "query_mode": "entity",
           "resolve_source": "config",
-          "name": "Marlene Galán-Woods",
+          "name": "Marlene Gal\u00e1n-Woods",
           "mid": "/g/11b6qd3511",
           "topic_title": "Marlene Galan Woods",
           "topic_type": "Politician"
@@ -9784,7 +9784,7 @@
             "pct": 39.5
           },
           {
-            "label": "Galán-Woods",
+            "label": "Gal\u00e1n-Woods",
             "pct": 34.3
           },
           {
@@ -13015,6 +13015,317 @@
           {
             "label": "Earle-Sears",
             "pct": 42.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "ga-gop-governor-primary-2026",
+      "title": "Georgia Republican Governor Primary",
+      "election_date": "2026-05-19",
+      "country_code": "US",
+      "state_code": "GA",
+      "geo": "US-GA",
+      "window_days": 30,
+      "window_mode": "election",
+      "start_date": "2026-04-19",
+      "end_date": "2026-05-19",
+      "candidates": [
+        {
+          "keyword": "Burt Jones",
+          "label": "Jones",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Burt Jones",
+          "mid": "/m/0130rk4g",
+          "topic_title": "Burt Jones",
+          "topic_type": "Lieutenant Governor of Georgia"
+        },
+        {
+          "keyword": "Rick Jackson",
+          "label": "Jackson",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "Rick Jackson",
+          "resolve_note": "no confident political entity (top='Read Riordan' / 'Book by Rick Riordan')"
+        },
+        {
+          "keyword": "Brad Raffensperger",
+          "label": "Raffensperger",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Brad Raffensperger",
+          "mid": "/g/11gjhfrhts",
+          "topic_title": "Brad Raffensperger",
+          "topic_type": "Georgia Secretary of State"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-04-19",
+          "values": {
+            "Burt Jones": 12,
+            "Rick Jackson": 25,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-04-20",
+          "values": {
+            "Burt Jones": 14,
+            "Rick Jackson": 13,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-04-21",
+          "values": {
+            "Burt Jones": 0,
+            "Rick Jackson": 13,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-04-22",
+          "values": {
+            "Burt Jones": 15,
+            "Rick Jackson": 15,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-04-23",
+          "values": {
+            "Burt Jones": 15,
+            "Rick Jackson": 12,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-04-24",
+          "values": {
+            "Burt Jones": 16,
+            "Rick Jackson": 20,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-04-25",
+          "values": {
+            "Burt Jones": 13,
+            "Rick Jackson": 15,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-04-26",
+          "values": {
+            "Burt Jones": 17,
+            "Rick Jackson": 21,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-04-27",
+          "values": {
+            "Burt Jones": 24,
+            "Rick Jackson": 21,
+            "Brad Raffensperger": 7
+          }
+        },
+        {
+          "date": "2026-04-28",
+          "values": {
+            "Burt Jones": 27,
+            "Rick Jackson": 24,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-04-29",
+          "values": {
+            "Burt Jones": 19,
+            "Rick Jackson": 26,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-04-30",
+          "values": {
+            "Burt Jones": 27,
+            "Rick Jackson": 35,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-01",
+          "values": {
+            "Burt Jones": 21,
+            "Rick Jackson": 25,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-02",
+          "values": {
+            "Burt Jones": 22,
+            "Rick Jackson": 32,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-03",
+          "values": {
+            "Burt Jones": 13,
+            "Rick Jackson": 28,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "values": {
+            "Burt Jones": 18,
+            "Rick Jackson": 25,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-05",
+          "values": {
+            "Burt Jones": 16,
+            "Rick Jackson": 31,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-06",
+          "values": {
+            "Burt Jones": 14,
+            "Rick Jackson": 27,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-07",
+          "values": {
+            "Burt Jones": 20,
+            "Rick Jackson": 20,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-08",
+          "values": {
+            "Burt Jones": 23,
+            "Rick Jackson": 26,
+            "Brad Raffensperger": 9
+          }
+        },
+        {
+          "date": "2026-05-09",
+          "values": {
+            "Burt Jones": 25,
+            "Rick Jackson": 23,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-10",
+          "values": {
+            "Burt Jones": 15,
+            "Rick Jackson": 19,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-11",
+          "values": {
+            "Burt Jones": 14,
+            "Rick Jackson": 27,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-12",
+          "values": {
+            "Burt Jones": 21,
+            "Rick Jackson": 22,
+            "Brad Raffensperger": 8
+          }
+        },
+        {
+          "date": "2026-05-13",
+          "values": {
+            "Burt Jones": 18,
+            "Rick Jackson": 21,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-14",
+          "values": {
+            "Burt Jones": 16,
+            "Rick Jackson": 29,
+            "Brad Raffensperger": 8
+          }
+        },
+        {
+          "date": "2026-05-15",
+          "values": {
+            "Burt Jones": 25,
+            "Rick Jackson": 39,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-16",
+          "values": {
+            "Burt Jones": 14,
+            "Rick Jackson": 21,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-17",
+          "values": {
+            "Burt Jones": 21,
+            "Rick Jackson": 28,
+            "Brad Raffensperger": 0
+          }
+        },
+        {
+          "date": "2026-05-18",
+          "values": {
+            "Burt Jones": 29,
+            "Rick Jackson": 37,
+            "Brad Raffensperger": 7
+          }
+        },
+        {
+          "date": "2026-05-19",
+          "values": {
+            "Burt Jones": 100,
+            "Rick Jackson": 87,
+            "Brad Raffensperger": 29
+          }
+        }
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-07-15",
+        "source": "Decision Desk HQ / Associated Press / state election agencies",
+        "candidates": [
+          {
+            "label": "Jones",
+            "pct": 38.4
+          },
+          {
+            "label": "Jackson",
+            "pct": 32.5
+          },
+          {
+            "label": "Raffensperger",
+            "pct": 15.0
           }
         ]
       }
