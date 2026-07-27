@@ -14,32 +14,34 @@
         "window": "2d"
       }
     },
+    "vermont-governor-winner-2026": {
+      "Democrat": {
+        "change_pp": 7.5,
+        "direction": "down",
+        "reference_date": "2026-07-25",
+        "reference_pct": 17.6,
+        "window": "2d"
+      }
+    },
     "who-will-advance-from-the-alaska-governor-primary": {
       "Bill Walker": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-07-25",
         "reference_pct": 32.0,
-        "window": "2d"
-      },
-      "Dave Bronson": {
-        "change_pp": 4.5,
-        "direction": "up",
-        "reference_date": "2026-07-25",
-        "reference_pct": 36.5,
         "window": "2d"
       }
     },
     "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
       "Mary Peltola": {
-        "change_pp": 14.0,
+        "change_pp": 15.0,
         "direction": "up",
         "reference_date": "2026-07-25",
         "reference_pct": 65.5,
         "window": "2d"
       },
       "Sen. Dan S. Sullivan": {
-        "change_pp": 15.65,
+        "change_pp": 15.45,
         "direction": "down",
         "reference_date": "2026-07-25",
         "reference_pct": 32.9,
@@ -55,16 +57,34 @@
         "window": "2d"
       }
     },
+    "kansas-governor-republican-primary-winner": {
+      "Ty Masterson": {
+        "change_pp": 6.0,
+        "direction": "down",
+        "reference_date": "2026-07-25",
+        "reference_pct": 83.5,
+        "window": "2d"
+      }
+    },
+    "massachusetts-democratic-senate-primary-winner": {
+      "Ed Markey": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-07-25",
+        "reference_pct": 66.0,
+        "window": "2d"
+      }
+    },
     "mi-13-democratic-primary-winner": {
       "Shri Thanedar": {
-        "change_pp": 7.0,
+        "change_pp": 6.5,
         "direction": "down",
         "reference_date": "2026-07-25",
         "reference_pct": 19.5,
         "window": "2d"
       },
       "Donavan McKinney": {
-        "change_pp": 6.0,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-07-25",
         "reference_pct": 81.5,
@@ -73,7 +93,7 @@
     },
     "minnesota-democratic-senate-primary-winner": {
       "Peggy Flanagan": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-07-25",
         "reference_pct": 77.0,
@@ -82,14 +102,14 @@
     },
     "mo-01-democratic-primary-winner": {
       "Wesley Bell": {
-        "change_pp": 8.5,
+        "change_pp": 12.0,
         "direction": "up",
         "reference_date": "2026-07-25",
         "reference_pct": 39.5,
         "window": "2d"
       },
       "Cori Bush": {
-        "change_pp": 8.0,
+        "change_pp": 13.0,
         "direction": "down",
         "reference_date": "2026-07-25",
         "reference_pct": 60.5,
@@ -98,7 +118,7 @@
     },
     "tennessee-democratic-senate-primary-winner": {
       "Maria Brewer": {
-        "change_pp": 4.05,
+        "change_pp": 4.55,
         "direction": "up",
         "reference_date": "2026-07-25",
         "reference_pct": 0.9,
@@ -106,8 +126,15 @@
       }
     },
     "wyoming-governor-republican-primary-winner": {
+      "Brent Bien": {
+        "change_pp": 4.2,
+        "direction": "up",
+        "reference_date": "2026-07-25",
+        "reference_pct": 3.05,
+        "window": "2d"
+      },
       "Megan Degenfelder": {
-        "change_pp": 8.05,
+        "change_pp": 6.85,
         "direction": "down",
         "reference_date": "2026-07-25",
         "reference_pct": 64.6,
@@ -125,32 +152,34 @@
         "window": "2d"
       }
     },
+    "us-governor:VT": {
+      "Democrat": {
+        "change_pp": 7.5,
+        "direction": "down",
+        "reference_date": "2026-07-25",
+        "reference_pct": 17.6,
+        "window": "2d"
+      }
+    },
     "us-primary:AK:Governor": {
       "Bill Walker": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-07-25",
         "reference_pct": 32.0,
-        "window": "2d"
-      },
-      "Dave Bronson": {
-        "change_pp": 4.5,
-        "direction": "up",
-        "reference_date": "2026-07-25",
-        "reference_pct": 36.5,
         "window": "2d"
       }
     },
     "us-primary:AK:Senate": {
       "Mary Peltola": {
-        "change_pp": 14.0,
+        "change_pp": 15.0,
         "direction": "up",
         "reference_date": "2026-07-25",
         "reference_pct": 65.5,
         "window": "2d"
       },
       "Sen. Dan S. Sullivan": {
-        "change_pp": 15.65,
+        "change_pp": 15.45,
         "direction": "down",
         "reference_date": "2026-07-25",
         "reference_pct": 32.9,
@@ -166,16 +195,34 @@
         "window": "2d"
       }
     },
+    "us-primary:KS:Governor:Republican": {
+      "Ty Masterson": {
+        "change_pp": 6.0,
+        "direction": "down",
+        "reference_date": "2026-07-25",
+        "reference_pct": 83.5,
+        "window": "2d"
+      }
+    },
+    "us-primary:MA:Senate:Democratic": {
+      "Ed Markey": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-07-25",
+        "reference_pct": 66.0,
+        "window": "2d"
+      }
+    },
     "us-primary:MI:MI-13:Democratic": {
       "Shri Thanedar": {
-        "change_pp": 7.0,
+        "change_pp": 6.5,
         "direction": "down",
         "reference_date": "2026-07-25",
         "reference_pct": 19.5,
         "window": "2d"
       },
       "Donavan McKinney": {
-        "change_pp": 6.0,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-07-25",
         "reference_pct": 81.5,
@@ -184,7 +231,7 @@
     },
     "us-primary:MN:Senate:Democratic": {
       "Peggy Flanagan": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-07-25",
         "reference_pct": 77.0,
@@ -193,14 +240,14 @@
     },
     "us-primary:MO:MO-01:Democratic": {
       "Wesley Bell": {
-        "change_pp": 8.5,
+        "change_pp": 12.0,
         "direction": "up",
         "reference_date": "2026-07-25",
         "reference_pct": 39.5,
         "window": "2d"
       },
       "Cori Bush": {
-        "change_pp": 8.0,
+        "change_pp": 13.0,
         "direction": "down",
         "reference_date": "2026-07-25",
         "reference_pct": 60.5,
@@ -209,7 +256,7 @@
     },
     "us-primary:TN:Senate:Democratic": {
       "Maria Brewer": {
-        "change_pp": 4.05,
+        "change_pp": 4.55,
         "direction": "up",
         "reference_date": "2026-07-25",
         "reference_pct": 0.9,
@@ -217,8 +264,15 @@
       }
     },
     "us-primary:WY:Governor:Republican": {
+      "Brent Bien": {
+        "change_pp": 4.2,
+        "direction": "up",
+        "reference_date": "2026-07-25",
+        "reference_pct": 3.05,
+        "window": "2d"
+      },
       "Megan Degenfelder": {
-        "change_pp": 8.05,
+        "change_pp": 6.85,
         "direction": "down",
         "reference_date": "2026-07-25",
         "reference_pct": 64.6,
