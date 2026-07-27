@@ -46,6 +46,8 @@ OUTPUT_PATH = ROOT / "data" / "trends.json"
 DATA_UPDATED_PATH = ROOT / "data" / "data_updated.json"
 
 TRENDS_HOME = "https://trends.google.com/trends/?geo=US"
+# Explore HTML sets NID even when it responds 429; prefer it for cookie warm-up.
+TRENDS_EXPLORE_PAGE = "https://trends.google.com/trends/explore?geo=US&q=test"
 EXPLORE_API = "https://trends.google.com/trends/api/explore"
 MULTILINE_API = "https://trends.google.com/trends/api/widgetdata/multiline"
 AUTOCOMPLETE_API = "https://trends.google.com/trends/api/autocomplete/"
@@ -53,10 +55,14 @@ USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 )
-REQUEST_DELAY_S = 2.0
-MAX_RETRIES = 4
+REQUEST_DELAY_S = 2.5
+MAX_RETRIES = 5
 # Extra backoff for rate limits; full refreshes otherwise drop races from the UI.
-RATE_LIMIT_BACKOFF_S = 8.0
+RATE_LIMIT_BACKOFF_S = 12.0
+# After a race exhausts 429 retries, cool down before the next race / pass.
+RATE_LIMIT_COOLDOWN_S = 45.0
+# Re-run explore+multiline (fresh token + cookies) this many times on 429.
+INTEREST_ATTEMPTS = 3
 TZ_OFFSET_MINUTES = 360  # US Mountain (MST) as used for CO races
 # Autocomplete must look like a political office/person to auto-adopt a mid.
 ENTITY_SCORE_THRESHOLD = 10
@@ -231,6 +237,14 @@ class TrendsClient:
         )
         self._warmed = False
 
+    def reset(self) -> None:
+        """Drop cookies and force a fresh warm-up (used after rate limits)."""
+        self._jar = http.cookiejar.CookieJar()
+        self._opener = urllib.request.build_opener(
+            urllib.request.HTTPCookieProcessor(self._jar)
+        )
+        self._warmed = False
+
     def _headers(self, referer: str | None = None) -> dict[str, str]:
         headers = {
             "User-Agent": USER_AGENT,
@@ -241,8 +255,15 @@ class TrendsClient:
             headers["Referer"] = referer
         return headers
 
-    def _get(self, url: str, *, referer: str | None = None) -> bytes:
+    def _get(
+        self,
+        url: str,
+        *,
+        referer: str | None = None,
+        accept_statuses: set[int] | None = None,
+    ) -> bytes:
         last_error: Exception | None = None
+        accepted = accept_statuses or set()
         for attempt in range(1, MAX_RETRIES + 1):
             try:
                 request = urllib.request.Request(url, headers=self._headers(referer))
@@ -250,6 +271,10 @@ class TrendsClient:
                     return response.read()
             except urllib.error.HTTPError as exc:
                 last_error = exc
+                # CookieJar still extracts Set-Cookie from error responses.
+                if exc.code in accepted:
+                    body = exc.read() if exc.fp else b""
+                    return body
                 # 429 / 5xx: back off; Google Trends is sensitive in CI.
                 if exc.code in {429, 500, 502, 503, 504} and attempt < MAX_RETRIES:
                     base = (
@@ -293,7 +318,10 @@ class TrendsClient:
     def warm(self) -> None:
         if self._warmed:
             return
-        self._get(TRENDS_HOME)
+        # Explore page often 429s on datacenter IPs while still setting NID.
+        self._get(TRENDS_EXPLORE_PAGE, accept_statuses={429})
+        if not any(cookie.name == "NID" for cookie in self._jar):
+            self._get(TRENDS_HOME, accept_statuses={429})
         self._warmed = True
         time.sleep(REQUEST_DELAY_S)
 
@@ -344,6 +372,35 @@ class TrendsClient:
                 file=sys.stderr,
             )
 
+        last_error: Exception | None = None
+        for attempt in range(1, INTEREST_ATTEMPTS + 1):
+            try:
+                return self._interest_over_time_once(
+                    keywords, geo=geo, start=start, end=end
+                )
+            except Exception as exc:  # noqa: BLE001
+                last_error = exc
+                if not _is_rate_limited(exc) or attempt >= INTEREST_ATTEMPTS:
+                    raise
+                sleep_s = RATE_LIMIT_COOLDOWN_S * attempt
+                print(
+                    f"  rate limited on interest fetch "
+                    f"(attempt {attempt}/{INTEREST_ATTEMPTS}); "
+                    f"refreshing session, sleep {sleep_s:.0f}s",
+                    file=sys.stderr,
+                )
+                time.sleep(sleep_s)
+                self.reset()
+        raise RuntimeError(f"Interest fetch failed: {last_error}")
+
+    def _interest_over_time_once(
+        self,
+        keywords: list[str],
+        *,
+        geo: str,
+        start: date,
+        end: date,
+    ) -> list[dict]:
         self.warm()
         time_range = format_trends_time(start, end)
         explore_req = {
@@ -407,6 +464,11 @@ class TrendsClient:
                     values[keyword] = int(raw_values[idx])
             series.append({"date": point_date.isoformat(), "values": values})
         return series
+
+
+def _is_rate_limited(exc: BaseException) -> bool:
+    text = str(exc)
+    return "HTTP 429" in text or "429" in text[:80]
 
 
 def _parse_trends_date(formatted: str | None, unix_time: str | int | None) -> date | None:
@@ -552,7 +614,7 @@ def fetch_race(client: TrendsClient, race: dict) -> dict:
     keyword_rows = race["keywords"]
     geo = race.get("geo") or ""
 
-    print(f"Resolving topics for {race['id']}…")
+    print(f"Resolving topics for {race['id']}…", flush=True)
     plans = apply_race_query_mode(resolve_candidate_queries(client, keyword_rows))
     queries = [plan["query"] for plan in plans]
     series_keys = [plan["series_key"] for plan in plans]
@@ -569,7 +631,8 @@ def fetch_race(client: TrendsClient, race: dict) -> dict:
 
     print(
         f"Fetching {race['id']}: {', '.join(display)} "
-        f"geo={geo or 'WORLD'} mode={window_mode} {start}→{end}"
+        f"geo={geo or 'WORLD'} mode={window_mode} {start}→{end}",
+        flush=True,
     )
     series = client.interest_over_time(queries, geo=geo, start=start, end=end)
     if series_keys != queries:
@@ -743,6 +806,24 @@ def select_races_to_fetch(
     return [race for race in races_config if is_watchlist_race(race)]
 
 
+def order_races_for_fetch(
+    races: list[dict], prior_races: list[dict]
+) -> list[dict]:
+    """Fetch previously stale races first so rate limits hit fresher ones last."""
+    stale_ids = {
+        race["id"]
+        for race in prior_races
+        if isinstance(race.get("id"), str)
+        and race["id"]
+        and isinstance(race.get("stale"), dict)
+    }
+    if not stale_ids:
+        return list(races)
+    first = [race for race in races if race.get("id") in stale_ids]
+    rest = [race for race in races if race.get("id") not in stale_ids]
+    return first + rest
+
+
 def merge_trends_races(
     *,
     prior_races: list[dict],
@@ -890,30 +971,85 @@ def main(argv: list[str] | None = None) -> int:
     # series (and unrequested races) are not dropped from trends.json.
     partial_update = bool(only_ids) or not args.all
 
+    prior_races, prior_generated_at = load_prior_trends(OUTPUT_PATH)
+    to_fetch = order_races_for_fetch(to_fetch, prior_races)
+    if any(
+        isinstance(race.get("stale"), dict)
+        for race in prior_races
+        if race.get("id") in {r.get("id") for r in to_fetch}
+    ):
+        print(
+            "Prioritizing previously stale race(s) so rate limits hit fresher "
+            "series last.",
+            file=sys.stderr,
+        )
+
     client = TrendsClient()
     races: list[dict] = []
     errors: list[str] = []
     failed_ids: set[str] = set()
+    failed_configs: list[dict] = []
     requested_ids = [
         race["id"]
         for race in to_fetch
         if isinstance(race.get("id"), str) and race["id"]
     ]
 
-    for idx, race in enumerate(to_fetch):
-        if idx:
-            time.sleep(REQUEST_DELAY_S)
+    def _fetch_one(race: dict) -> bool:
+        """Fetch one race; return True on success."""
+        race_id = race.get("id", "?")
         try:
             races.append(fetch_race(client, race))
+            if isinstance(race_id, str) and race_id in failed_ids:
+                failed_ids.discard(race_id)
+            return True
         except Exception as exc:  # noqa: BLE001 — keep other races if one fails
-            race_id = race.get("id", "?")
             message = f"{race_id}: {exc}"
             print(f"ERROR {message}", file=sys.stderr)
             errors.append(message)
             if isinstance(race_id, str) and race_id:
                 failed_ids.add(race_id)
+            if _is_rate_limited(exc):
+                print(
+                    f"  cooling down {RATE_LIMIT_COOLDOWN_S:.0f}s after rate limit…",
+                    file=sys.stderr,
+                )
+                time.sleep(RATE_LIMIT_COOLDOWN_S)
+                client.reset()
+            return False
 
-    prior_races, prior_generated_at = load_prior_trends(OUTPUT_PATH)
+    for idx, race in enumerate(to_fetch):
+        if idx:
+            time.sleep(REQUEST_DELAY_S)
+        if not _fetch_one(race):
+            failed_configs.append(race)
+
+    if failed_configs:
+        print(
+            f"Retrying {len(failed_configs)} failed race(s) after "
+            f"{RATE_LIMIT_COOLDOWN_S:.0f}s cooldown…",
+            file=sys.stderr,
+        )
+        time.sleep(RATE_LIMIT_COOLDOWN_S)
+        client.reset()
+        still_failed: list[dict] = []
+        for idx, race in enumerate(failed_configs):
+            if idx:
+                time.sleep(REQUEST_DELAY_S)
+            if not _fetch_one(race):
+                still_failed.append(race)
+        failed_configs = still_failed
+
+    # Drop errors for races that succeeded on a later pass.
+    if failed_ids:
+        errors = [
+            message
+            for message in errors
+            if message.split(":", 1)[0] in failed_ids
+        ]
+    else:
+        errors = []
+
     races, preserved_ids = merge_trends_races(
         prior_races=prior_races,
         fetched_races=races,

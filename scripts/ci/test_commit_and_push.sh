@@ -62,3 +62,61 @@ grep -q 'from-main' "$work_a/data/other.txt"
 test -f "$work_a/data/site-rev.json"
 
 echo "OK: commit_and_push rebased over a moved main and pushed."
+
+# --- Second scenario: data_updated.json key merge on rebase ---
+TMP2="$(mktemp -d)"
+trap 'rm -rf "$TMP" "$TMP2"' EXIT
+
+remote_repo2="$TMP2/remote.git"
+work_c="$TMP2/work-c"
+work_d="$TMP2/work-d"
+
+git init --bare "$remote_repo2" >/dev/null
+git -C "$remote_repo2" symbolic-ref HEAD refs/heads/main
+git clone "$remote_repo2" "$work_c" >/dev/null
+git -C "$work_c" checkout -B main >/dev/null
+
+mkdir -p "$work_c/data"
+echo '{"rev":"seed"}' > "$work_c/data/site-rev.json"
+printf '{\n  "odds_generated_at": "2026-07-27T10:00:00Z",\n  "trends_generated_at": "2026-07-27T09:00:00Z"\n}\n' \
+  > "$work_c/data/data_updated.json"
+echo 'trends-v1' > "$work_c/data/trends.json"
+git -C "$work_c" add data/site-rev.json data/data_updated.json data/trends.json
+git -C "$work_c" \
+  -c user.name=test -c user.email=test@example.com \
+  commit -m "seed" >/dev/null
+git -C "$work_c" push -u origin main >/dev/null
+
+git clone "$remote_repo2" "$work_d" >/dev/null
+git -C "$work_d" checkout main >/dev/null
+
+# Markets bot updates odds timestamp on main while Trends is mid-fetch.
+printf '{\n  "odds_generated_at": "2026-07-27T11:00:00Z",\n  "trends_generated_at": "2026-07-27T09:00:00Z"\n}\n' \
+  > "$work_c/data/data_updated.json"
+git -C "$work_c" add data/data_updated.json
+git -C "$work_c" \
+  -c user.name=test -c user.email=test@example.com \
+  commit -m "chore: refresh Polymarket market prices" >/dev/null
+git -C "$work_c" push origin main >/dev/null
+
+# Trends bot updates trends timestamp + payload from a stale checkout.
+printf '{\n  "odds_generated_at": "2026-07-27T10:00:00Z",\n  "trends_generated_at": "2026-07-27T11:30:00Z"\n}\n' \
+  > "$work_d/data/data_updated.json"
+echo 'trends-v2' > "$work_d/data/trends.json"
+(
+  cd "$work_d"
+  GIT_AUTHOR_NAME=bot GIT_AUTHOR_EMAIL=bot@example.com \
+    MAX_ATTEMPTS=4 REMOTE_REF=origin/main \
+    bash "$SCRIPT" --bump-site-rev --message "chore: refresh Google Trends race interest" -- \
+      data/trends.json data/data_updated.json
+)
+
+git -C "$work_c" pull --ff-only origin main >/dev/null
+grep -q 'trends-v2' "$work_c/data/trends.json"
+python3 - "$work_c/data/data_updated.json" <<'PY'
+import json, sys
+payload = json.load(open(sys.argv[1], encoding="utf-8"))
+assert payload["odds_generated_at"] == "2026-07-27T11:00:00Z", payload
+assert payload["trends_generated_at"] == "2026-07-27T11:30:00Z", payload
+print("OK: data_updated.json conflict merged both timestamps.")
+PY

@@ -11,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fetch_google_trends import (  # noqa: E402
     is_watchlist_race,
     merge_trends_races,
+    order_races_for_fetch,
     select_races_to_fetch,
 )
 
@@ -178,6 +179,26 @@ def test_select_races_to_fetch_default_is_watchlist_only() -> None:
     assert not is_watchlist_race(config[0])
 
 
+def test_order_races_for_fetch_puts_stale_first() -> None:
+    races = [
+        {"id": "fresh-a"},
+        {"id": "stale-b"},
+        {"id": "fresh-c"},
+        {"id": "stale-d"},
+    ]
+    prior = [
+        _race("stale-b", tag="old", stale={"reason": "fetch_failed"}),
+        _race("fresh-c", tag="old"),
+        _race("stale-d", tag="old", stale={"reason": "fetch_failed"}),
+    ]
+    assert [r["id"] for r in order_races_for_fetch(races, prior)] == [
+        "stale-b",
+        "stale-d",
+        "fresh-a",
+        "fresh-c",
+    ]
+
+
 def main() -> int:
     test_full_refresh_preserves_failed_prior_races()
     test_full_refresh_keeps_earlier_stale_timestamp()
@@ -187,6 +208,7 @@ def main() -> int:
     test_fresh_fetch_clears_prior_stale_marker()
     test_watchlist_only_partial_update_keeps_historical()
     test_select_races_to_fetch_default_is_watchlist_only()
+    test_order_races_for_fetch_puts_stale_first()
     print("ok")
     return 0
 
