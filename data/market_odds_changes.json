@@ -5,18 +5,18 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
-    "iowa-governor-winner-2026": {
-      "Democrat": {
-        "change_pp": 4.5,
+    "alaska-governor-election-winner": {
+      "Jonathan Kreiss-Tomkins": {
+        "change_pp": 4.2,
         "direction": "up",
         "reference_date": "2026-07-26",
-        "reference_pct": 65.0,
+        "reference_pct": 13.15,
         "window": "2d"
       }
     },
     "vermont-governor-winner-2026": {
       "Democrat": {
-        "change_pp": 7.6,
+        "change_pp": 7.7,
         "direction": "down",
         "reference_date": "2026-07-26",
         "reference_pct": 17.6,
@@ -25,7 +25,7 @@
     },
     "who-will-advance-from-the-alaska-governor-primary": {
       "Bernadette Wilson": {
-        "change_pp": 6.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-07-26",
         "reference_pct": 75.5,
@@ -34,48 +34,30 @@
     },
     "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
       "Mary Peltola": {
-        "change_pp": 13.5,
+        "change_pp": 16.5,
         "direction": "up",
         "reference_date": "2026-07-26",
         "reference_pct": 65.0,
         "window": "2d"
       },
       "Sen. Dan S. Sullivan": {
-        "change_pp": 20.25,
+        "change_pp": 20.35,
         "direction": "down",
         "reference_date": "2026-07-26",
         "reference_pct": 32.75,
         "window": "2d"
       }
     },
-    "connecticut-governor-republican-primary-winner": {
-      "Erin Stewart": {
-        "change_pp": 6.65,
-        "direction": "up",
-        "reference_date": "2026-07-26",
-        "reference_pct": 0.85,
-        "window": "2d"
-      }
-    },
-    "massachusetts-democratic-senate-primary-winner": {
-      "Ed Markey": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-07-26",
-        "reference_pct": 68.5,
-        "window": "2d"
-      }
-    },
     "michigan-democratic-senate-primary-winner": {
       "Haley Stevens": {
-        "change_pp": 6.9,
+        "change_pp": 13.1,
         "direction": "down",
         "reference_date": "2026-07-26",
         "reference_pct": 36.85,
         "window": "2d"
       },
       "Abdul El-Sayed": {
-        "change_pp": 7.0,
+        "change_pp": 13.0,
         "direction": "up",
         "reference_date": "2026-07-26",
         "reference_pct": 64.5,
@@ -83,8 +65,15 @@
       }
     },
     "minnesota-governor-republican-primary-winner": {
+      "Lisa Demuth": {
+        "change_pp": 6.5,
+        "direction": "down",
+        "reference_date": "2026-07-26",
+        "reference_pct": 43.0,
+        "window": "2d"
+      },
       "Mike Lindell": {
-        "change_pp": 7.5,
+        "change_pp": 12.0,
         "direction": "up",
         "reference_date": "2026-07-26",
         "reference_pct": 51.5,
@@ -93,52 +82,50 @@
     },
     "mo-01-democratic-primary-winner": {
       "Wesley Bell": {
-        "change_pp": 20.5,
+        "change_pp": 17.5,
         "direction": "up",
         "reference_date": "2026-07-26",
         "reference_pct": 42.5,
         "window": "2d"
       },
       "Cori Bush": {
-        "change_pp": 21.0,
+        "change_pp": 18.0,
         "direction": "down",
         "reference_date": "2026-07-26",
         "reference_pct": 58.5,
         "window": "2d"
       }
     },
-    "rhode-island-governor-democratic-primary-winner": {
-      "Dan McKee": {
-        "change_pp": 5.7,
-        "direction": "up",
-        "reference_date": "2026-07-26",
-        "reference_pct": 12.9,
-        "window": "2d"
-      }
-    },
-    "alaska-senate-election-winner": {
-      "Dan Sullivan": {
-        "change_pp": 4.0,
+    "wisconsin-governor-democratic-primary-winner": {
+      "Mandela Barnes": {
+        "change_pp": 4.55,
         "direction": "down",
         "reference_date": "2026-07-26",
-        "reference_pct": 43.5,
+        "reference_pct": 7.05,
+        "window": "2d"
+      },
+      "Francesca Hong": {
+        "change_pp": 7.3,
+        "direction": "up",
+        "reference_date": "2026-07-26",
+        "reference_pct": 83.05,
         "window": "2d"
       }
     }
   },
   "by_market_id": {
-    "us-governor:IA": {
-      "Democrat": {
-        "change_pp": 4.5,
+    "us-governor:AK": {
+      "Jonathan Kreiss-Tomkins": {
+        "change_pp": 4.2,
         "direction": "up",
         "reference_date": "2026-07-26",
-        "reference_pct": 65.0,
+        "reference_pct": 13.15,
         "window": "2d"
       }
     },
     "us-governor:VT": {
       "Democrat": {
-        "change_pp": 7.6,
+        "change_pp": 7.7,
         "direction": "down",
         "reference_date": "2026-07-26",
         "reference_pct": 17.6,
@@ -147,7 +134,7 @@
     },
     "us-primary:AK:Governor": {
       "Bernadette Wilson": {
-        "change_pp": 6.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-07-26",
         "reference_pct": 75.5,
@@ -156,48 +143,30 @@
     },
     "us-primary:AK:Senate": {
       "Mary Peltola": {
-        "change_pp": 13.5,
+        "change_pp": 16.5,
         "direction": "up",
         "reference_date": "2026-07-26",
         "reference_pct": 65.0,
         "window": "2d"
       },
       "Sen. Dan S. Sullivan": {
-        "change_pp": 20.25,
+        "change_pp": 20.35,
         "direction": "down",
         "reference_date": "2026-07-26",
         "reference_pct": 32.75,
         "window": "2d"
       }
     },
-    "us-primary:CT:Governor:Republican": {
-      "Erin Stewart": {
-        "change_pp": 6.65,
-        "direction": "up",
-        "reference_date": "2026-07-26",
-        "reference_pct": 0.85,
-        "window": "2d"
-      }
-    },
-    "us-primary:MA:Senate:Democratic": {
-      "Ed Markey": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-07-26",
-        "reference_pct": 68.5,
-        "window": "2d"
-      }
-    },
     "us-primary:MI:Senate:Democratic": {
       "Haley Stevens": {
-        "change_pp": 6.9,
+        "change_pp": 13.1,
         "direction": "down",
         "reference_date": "2026-07-26",
         "reference_pct": 36.85,
         "window": "2d"
       },
       "Abdul El-Sayed": {
-        "change_pp": 7.0,
+        "change_pp": 13.0,
         "direction": "up",
         "reference_date": "2026-07-26",
         "reference_pct": 64.5,
@@ -205,8 +174,15 @@
       }
     },
     "us-primary:MN:Governor:Republican": {
+      "Lisa Demuth": {
+        "change_pp": 6.5,
+        "direction": "down",
+        "reference_date": "2026-07-26",
+        "reference_pct": 43.0,
+        "window": "2d"
+      },
       "Mike Lindell": {
-        "change_pp": 7.5,
+        "change_pp": 12.0,
         "direction": "up",
         "reference_date": "2026-07-26",
         "reference_pct": 51.5,
@@ -215,35 +191,33 @@
     },
     "us-primary:MO:MO-01:Democratic": {
       "Wesley Bell": {
-        "change_pp": 20.5,
+        "change_pp": 17.5,
         "direction": "up",
         "reference_date": "2026-07-26",
         "reference_pct": 42.5,
         "window": "2d"
       },
       "Cori Bush": {
-        "change_pp": 21.0,
+        "change_pp": 18.0,
         "direction": "down",
         "reference_date": "2026-07-26",
         "reference_pct": 58.5,
         "window": "2d"
       }
     },
-    "us-primary:RI:Governor:Democratic": {
-      "Dan McKee": {
-        "change_pp": 5.7,
-        "direction": "up",
-        "reference_date": "2026-07-26",
-        "reference_pct": 12.9,
-        "window": "2d"
-      }
-    },
-    "us-senate:AK": {
-      "Dan Sullivan": {
-        "change_pp": 4.0,
+    "us-primary:WI:Governor:Democratic": {
+      "Mandela Barnes": {
+        "change_pp": 4.55,
         "direction": "down",
         "reference_date": "2026-07-26",
-        "reference_pct": 43.5,
+        "reference_pct": 7.05,
+        "window": "2d"
+      },
+      "Francesca Hong": {
+        "change_pp": 7.3,
+        "direction": "up",
+        "reference_date": "2026-07-26",
+        "reference_pct": 83.05,
         "window": "2d"
       }
     }
