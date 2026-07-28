@@ -75,6 +75,45 @@ function formatShortDate(isoDate) {
   return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
 
+/** Per-race last Trends scrape time (fresh fetch, else stale data_as_of). */
+export function raceUpdatedAt(race) {
+  if (typeof race?.fetched_at === "string" && race.fetched_at) {
+    return race.fetched_at;
+  }
+  const asOf = race?.stale?.data_as_of;
+  if (typeof asOf === "string" && asOf) return asOf;
+  return null;
+}
+
+/**
+ * Match the site-header #data-updated stamp (UTC date + time).
+ * e.g. "Jul 28, 2:42 PM UTC" or "Jul 28 UTC" for date-only values.
+ */
+export function formatRaceUpdatedStamp(raw) {
+  if (!raw || typeof raw !== "string") return "";
+  const iso = /^\d{4}-\d{2}-\d{2}$/.test(raw) ? `${raw}T00:00:00Z` : raw;
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "";
+  const dateOnly = /^\d{4}-\d{2}-\d{2}$/.test(raw);
+  if (dateOnly) {
+    const day = date.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      timeZone: "UTC",
+    });
+    return `${day} UTC`;
+  }
+  const formatted = date.toLocaleString("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+    timeZone: "UTC",
+  });
+  return `${formatted} UTC`;
+}
+
 /** Notice when this race is showing a previous successful Trends update. */
 function staleNotice(race) {
   const stale = race?.stale;
@@ -1031,10 +1070,12 @@ function renderRaceCard(race) {
       ? `Last ${race.window_days} days`
       : `${race.window_days}-day run-up`
     : null;
+  const updatedLabel = formatRaceUpdatedStamp(raceUpdatedAt(race));
   const subtitle = [
     locationLine(race),
     race.election_date ? `Race day ${formatLongDate(race.election_date)}` : null,
     windowLabel,
+    updatedLabel || null,
   ]
     .filter(Boolean)
     .join(" · ");
