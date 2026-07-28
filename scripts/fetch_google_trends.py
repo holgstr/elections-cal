@@ -971,8 +971,9 @@ def main(argv: list[str] | None = None) -> int:
         type=int,
         default=None,
         metavar="N",
-        help="Fetch at most N races this run after stale/oldest ordering "
-        f"(scheduled CI uses {DEFAULT_MAX_RACES}). Omit for no cap.",
+        help="Fetch at most N races this run after stale/oldest ordering. "
+        f"Watchlist-only runs default to {DEFAULT_MAX_RACES}; pass 0 for no "
+        "cap. Ignored with --only.",
     )
     parser.add_argument(
         "--stop-on-rate-limit",
