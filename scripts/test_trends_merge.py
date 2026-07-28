@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from fetch_google_trends import (  # noqa: E402
     is_watchlist_race,
+    limit_races_for_fetch,
     merge_trends_races,
     order_races_for_fetch,
     select_races_to_fetch,
@@ -179,24 +180,47 @@ def test_select_races_to_fetch_default_is_watchlist_only() -> None:
     assert not is_watchlist_race(config[0])
 
 
-def test_order_races_for_fetch_puts_stale_first() -> None:
+def test_order_races_for_fetch_puts_stale_and_oldest_first() -> None:
     races = [
         {"id": "fresh-a"},
         {"id": "stale-b"},
         {"id": "fresh-c"},
         {"id": "stale-d"},
+        {"id": "never-fetched"},
     ]
     prior = [
-        _race("stale-b", tag="old", stale={"reason": "fetch_failed"}),
-        _race("fresh-c", tag="old"),
-        _race("stale-d", tag="old", stale={"reason": "fetch_failed"}),
+        {
+            **_race("stale-b", tag="old", stale={"reason": "fetch_failed"}),
+            "fetched_at": "2026-07-20T12:00:00Z",
+        },
+        {**_race("fresh-c", tag="old"), "fetched_at": "2026-07-28T08:00:00Z"},
+        {
+            **_race(
+                "stale-d",
+                tag="old",
+                stale={
+                    "reason": "fetch_failed",
+                    "data_as_of": "2026-07-19T12:00:00Z",
+                },
+            ),
+            "fetched_at": "2026-07-19T12:00:00Z",
+        },
+        {**_race("fresh-a", tag="old"), "fetched_at": "2026-07-27T08:00:00Z"},
     ]
     assert [r["id"] for r in order_races_for_fetch(races, prior)] == [
-        "stale-b",
         "stale-d",
+        "stale-b",
+        "never-fetched",
         "fresh-a",
         "fresh-c",
     ]
+
+
+def test_limit_races_for_fetch() -> None:
+    races = [{"id": "a"}, {"id": "b"}, {"id": "c"}]
+    assert [r["id"] for r in limit_races_for_fetch(races, 2)] == ["a", "b"]
+    assert [r["id"] for r in limit_races_for_fetch(races, None)] == ["a", "b", "c"]
+    assert [r["id"] for r in limit_races_for_fetch(races, 0)] == ["a", "b", "c"]
 
 
 def main() -> int:
@@ -208,7 +232,8 @@ def main() -> int:
     test_fresh_fetch_clears_prior_stale_marker()
     test_watchlist_only_partial_update_keeps_historical()
     test_select_races_to_fetch_default_is_watchlist_only()
-    test_order_races_for_fetch_puts_stale_first()
+    test_order_races_for_fetch_puts_stale_and_oldest_first()
+    test_limit_races_for_fetch()
     print("ok")
     return 0
 

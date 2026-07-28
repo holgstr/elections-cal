@@ -9,6 +9,10 @@ Scheduled refreshes fetch **watchlist** (Current) races only by default so
 historical comparison series are not re-queried. Use ``--all`` to refresh
 every configured race, or ``--only ID`` for an explicit subset.
 
+To stay under Google rate limits, CI uses ``--max-races`` so each run only
+refreshes a small oldest/stale-first batch; more frequent crons rotate through
+the watchlist instead of hammering every race in one job.
+
 Prefer Google Knowledge Graph *person/topic entities* (mids like
 ``/m/04g_1z``) when a confident political person match exists. Entities
 disambiguate people (e.g. "John Hickenlooper" → United States Senator) and
@@ -56,6 +60,8 @@ USER_AGENT = (
     "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 )
 REQUEST_DELAY_S = 2.5
+# Pause between races on scheduled batch runs (gentler than REQUEST_DELAY_S).
+INTER_RACE_DELAY_S = 15.0
 MAX_RETRIES = 5
 # Extra backoff for rate limits; full refreshes otherwise drop races from the UI.
 RATE_LIMIT_BACKOFF_S = 12.0
@@ -63,6 +69,8 @@ RATE_LIMIT_BACKOFF_S = 12.0
 RATE_LIMIT_COOLDOWN_S = 45.0
 # Re-run explore+multiline (fresh token + cookies) this many times on 429.
 INTEREST_ATTEMPTS = 3
+# Default CI batch size: small enough to usually finish before sustained 429s.
+DEFAULT_MAX_RACES = 2
 TZ_OFFSET_MINUTES = 360  # US Mountain (MST) as used for CO races
 # Autocomplete must look like a political office/person to auto-adopt a mid.
 ENTITY_SCORE_THRESHOLD = 10
@@ -685,6 +693,12 @@ def fetch_race(client: TrendsClient, race: dict) -> dict:
     # Watchlist races appear in the Trends "current races" dropdown.
     if race.get("watchlist"):
         out["watchlist"] = True
+    out["fetched_at"] = (
+        datetime.now(timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
     return out
 
 
@@ -806,22 +820,53 @@ def select_races_to_fetch(
     return [race for race in races_config if is_watchlist_race(race)]
 
 
+def _race_freshness_sort_key(
+    race_id: str, prior_by_id: dict[str, dict]
+) -> tuple[int, str, str]:
+    """Sort key: stale first, then oldest fetched_at / data_as_of, then id.
+
+    Missing timestamps sort as oldest so brand-new watchlist races are tried
+    before ones that already have a successful ``fetched_at``.
+    """
+    prior = prior_by_id.get(race_id) or {}
+    stale = prior.get("stale")
+    is_stale = 0 if isinstance(stale, dict) else 1
+    stamp = ""
+    if isinstance(stale, dict):
+        as_of = stale.get("data_as_of")
+        if isinstance(as_of, str) and as_of:
+            stamp = as_of
+    if not stamp:
+        fetched_at = prior.get("fetched_at")
+        if isinstance(fetched_at, str) and fetched_at:
+            stamp = fetched_at
+    return (is_stale, stamp, race_id)
+
+
 def order_races_for_fetch(
     races: list[dict], prior_races: list[dict]
 ) -> list[dict]:
-    """Fetch previously stale races first so rate limits hit fresher ones last."""
-    stale_ids = {
-        race["id"]
+    """Fetch stale / oldest races first so rate limits hit fresher ones last."""
+    prior_by_id = {
+        race["id"]: race
         for race in prior_races
-        if isinstance(race.get("id"), str)
-        and race["id"]
-        and isinstance(race.get("stale"), dict)
+        if isinstance(race.get("id"), str) and race["id"]
     }
-    if not stale_ids:
+    return sorted(
+        races,
+        key=lambda race: _race_freshness_sort_key(
+            str(race.get("id") or ""), prior_by_id
+        ),
+    )
+
+
+def limit_races_for_fetch(
+    races: list[dict], max_races: int | None
+) -> list[dict]:
+    """Cap how many races one run will hit (None / <=0 = no cap)."""
+    if max_races is None or max_races <= 0:
         return list(races)
-    first = [race for race in races if race.get("id") in stale_ids]
-    rest = [race for race in races if race.get("id") not in stale_ids]
-    return first + rest
+    return list(races[:max_races])
 
 
 def merge_trends_races(
@@ -921,6 +966,22 @@ def main(argv: list[str] | None = None) -> int:
         help="Also refetch historical / comparison races (default: watchlist "
         "Current races only; historical series stay as last written).",
     )
+    parser.add_argument(
+        "--max-races",
+        type=int,
+        default=None,
+        metavar="N",
+        help="Fetch at most N races this run after stale/oldest ordering. "
+        f"Watchlist-only runs default to {DEFAULT_MAX_RACES}; pass 0 for no "
+        "cap. Ignored with --only.",
+    )
+    parser.add_argument(
+        "--stop-on-rate-limit",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="After a race still fails with HTTP 429, skip the rest of this "
+        "batch so the next cron can retry (default: on).",
+    )
     args = parser.parse_args(argv)
 
     if args.suggest:
@@ -962,7 +1023,7 @@ def main(argv: list[str] | None = None) -> int:
     skipped = len(races_config) - len(to_fetch)
     if skipped and not only_ids and not args.all:
         print(
-            f"Fetching {len(to_fetch)} watchlist race(s); "
+            f"Selected {len(to_fetch)} watchlist race(s); "
             f"leaving {skipped} historical race(s) unchanged.",
             file=sys.stderr,
         )
@@ -973,6 +1034,20 @@ def main(argv: list[str] | None = None) -> int:
 
     prior_races, prior_generated_at = load_prior_trends(OUTPUT_PATH)
     to_fetch = order_races_for_fetch(to_fetch, prior_races)
+    max_races = args.max_races
+    if max_races is None and not only_ids and not args.all:
+        # Scheduled default path: small rotating batches.
+        max_races = DEFAULT_MAX_RACES
+    if only_ids:
+        max_races = None
+    eligible_count = len(to_fetch)
+    to_fetch = limit_races_for_fetch(to_fetch, max_races)
+    if max_races and eligible_count > len(to_fetch):
+        print(
+            f"Batching {len(to_fetch)} of {eligible_count} race(s) "
+            f"(--max-races {max_races}); remaining wait for a later run.",
+            file=sys.stderr,
+        )
     if any(
         isinstance(race.get("stale"), dict)
         for race in prior_races
@@ -989,42 +1064,58 @@ def main(argv: list[str] | None = None) -> int:
     errors: list[str] = []
     failed_ids: set[str] = set()
     failed_configs: list[dict] = []
-    requested_ids = [
-        race["id"]
-        for race in to_fetch
-        if isinstance(race.get("id"), str) and race["id"]
-    ]
+    attempted_ids: list[str] = []
+    stop_remaining = False
 
-    def _fetch_one(race: dict) -> bool:
-        """Fetch one race; return True on success."""
+    def _fetch_one(race: dict) -> tuple[bool, bool]:
+        """Fetch one race; return (success, hit_rate_limit)."""
         race_id = race.get("id", "?")
+        if isinstance(race_id, str) and race_id and race_id not in attempted_ids:
+            attempted_ids.append(race_id)
         try:
             races.append(fetch_race(client, race))
             if isinstance(race_id, str) and race_id in failed_ids:
                 failed_ids.discard(race_id)
-            return True
+            return True, False
         except Exception as exc:  # noqa: BLE001 — keep other races if one fails
             message = f"{race_id}: {exc}"
             print(f"ERROR {message}", file=sys.stderr)
             errors.append(message)
             if isinstance(race_id, str) and race_id:
                 failed_ids.add(race_id)
-            if _is_rate_limited(exc):
+            rate_limited = _is_rate_limited(exc)
+            if rate_limited:
                 print(
                     f"  cooling down {RATE_LIMIT_COOLDOWN_S:.0f}s after rate limit…",
                     file=sys.stderr,
                 )
                 time.sleep(RATE_LIMIT_COOLDOWN_S)
                 client.reset()
-            return False
+            return False, rate_limited
 
     for idx, race in enumerate(to_fetch):
+        if stop_remaining:
+            skipped_ids = [
+                r.get("id")
+                for r in to_fetch[idx:]
+                if isinstance(r.get("id"), str) and r.get("id")
+            ]
+            print(
+                "Stopping batch early after rate limit; deferring "
+                f"{len(skipped_ids)} race(s) to a later run: "
+                f"{', '.join(str(x) for x in skipped_ids)}",
+                file=sys.stderr,
+            )
+            break
         if idx:
-            time.sleep(REQUEST_DELAY_S)
-        if not _fetch_one(race):
+            time.sleep(INTER_RACE_DELAY_S)
+        ok, rate_limited = _fetch_one(race)
+        if not ok:
             failed_configs.append(race)
+            if rate_limited and args.stop_on_rate_limit:
+                stop_remaining = True
 
-    if failed_configs:
+    if failed_configs and not stop_remaining:
         print(
             f"Retrying {len(failed_configs)} failed race(s) after "
             f"{RATE_LIMIT_COOLDOWN_S:.0f}s cooldown…",
@@ -1035,10 +1126,30 @@ def main(argv: list[str] | None = None) -> int:
         still_failed: list[dict] = []
         for idx, race in enumerate(failed_configs):
             if idx:
-                time.sleep(REQUEST_DELAY_S)
-            if not _fetch_one(race):
+                time.sleep(INTER_RACE_DELAY_S)
+            ok, rate_limited = _fetch_one(race)
+            if not ok:
                 still_failed.append(race)
+                if rate_limited and args.stop_on_rate_limit:
+                    print(
+                        "Stopping retries after rate limit; remaining failures "
+                        "stay deferred.",
+                        file=sys.stderr,
+                    )
+                    # Keep already-recorded failures; do not attempt the rest.
+                    still_failed.extend(failed_configs[idx + 1 :])
+                    for deferred in failed_configs[idx + 1 :]:
+                        deferred_id = deferred.get("id")
+                        if isinstance(deferred_id, str) and deferred_id:
+                            failed_ids.add(deferred_id)
+                    break
         failed_configs = still_failed
+    elif failed_configs and stop_remaining:
+        print(
+            f"Skipping final retry pass ({len(failed_configs)} failed); "
+            "next scheduled run will prioritize stale races.",
+            file=sys.stderr,
+        )
 
     # Drop errors for races that succeeded on a later pass.
     if failed_ids:
@@ -1054,7 +1165,7 @@ def main(argv: list[str] | None = None) -> int:
         prior_races=prior_races,
         fetched_races=races,
         failed_ids=failed_ids,
-        requested_ids=requested_ids,
+        requested_ids=attempted_ids,
         partial_update=partial_update,
         prior_generated_at=prior_generated_at,
     )
