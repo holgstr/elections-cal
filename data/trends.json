@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T22:29:45Z",
+  "generated_at": "2026-07-28T13:05:11Z",
   "source": "google_trends",
   "races": [
     {
@@ -10580,7 +10580,11 @@
           }
         }
       ],
-      "watchlist": true
+      "watchlist": true,
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-27T22:29:45Z"
+      }
     },
     {
       "id": "mi-cd13-dem-primary-2026",
@@ -10834,7 +10838,11 @@
           }
         }
       ],
-      "watchlist": true
+      "watchlist": true,
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-27T22:29:45Z"
+      }
     },
     {
       "id": "mi-dem-senate-primary-2026",
@@ -11088,7 +11096,11 @@
           }
         }
       ],
-      "watchlist": true
+      "watchlist": true,
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-27T22:29:45Z"
+      }
     },
     {
       "id": "ks-dem-governor-primary-2026",
@@ -11342,7 +11354,11 @@
           }
         }
       ],
-      "watchlist": true
+      "watchlist": true,
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-27T22:29:45Z"
+      }
     },
     {
       "id": "wi-dem-governor-primary-2026",
@@ -11637,7 +11653,11 @@
           }
         }
       ],
-      "watchlist": true
+      "watchlist": true,
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-27T22:29:45Z"
+      }
     },
     {
       "id": "sc-special-gop-senate-primary-2026",
@@ -11973,7 +11993,11 @@
           }
         }
       ],
-      "watchlist": true
+      "watchlist": true,
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-27T22:29:45Z"
+      }
     },
     {
       "id": "mn-dem-senate-primary-2026",
@@ -12227,7 +12251,11 @@
           }
         }
       ],
-      "watchlist": true
+      "watchlist": true,
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-27T22:29:45Z"
+      }
     },
     {
       "id": "mn-gop-governor-primary-2026",
@@ -12481,7 +12509,11 @@
           }
         }
       ],
-      "watchlist": true
+      "watchlist": true,
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-07-27T22:29:45Z"
+      }
     },
     {
       "id": "nj-governor-2025",
@@ -13330,5 +13362,23 @@
         ]
       }
     }
+  ],
+  "errors": [
+    "mo-cd1-dem-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-MO%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11g234cdqy%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MO%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11cntkcbkt%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnN7KfrwRyiTg7Prcu0f3B93cRghQF7: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"UfY62mqo_n2p-cZ2Bbqoig\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "mi-cd13-dem-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-MI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11f0zyktlx%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0806mr9%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnQ0rIiino75epk74Femo0i_Cwxa-wh: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"qMbB-lMVdlgnJZ3_HMUriQ\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "mi-dem-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-MI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11c0q_hl_8%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11fjw095g8%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnTuZQPWdt_mfpE44xnpQiczXXXGlNq: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"JCNMhV4F8HK2CcSJjYYfNw\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "ks-dem-governor-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-KS%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11c1pmpn3f%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-KS%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11g715qngv%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnWnyMn42ipx5ORVd49m91Id6UMbMTS: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"8Vx-x-BnzcZRgS1r7zswog\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "wi-dem-governor-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-WI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11jnpqr8dw%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-WI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11c2q3zj0w%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-WI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0l8lszd%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnZh46UmBVsmkGPU93CGzH5xFMdOUWR: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"uDa64U7vDy1Yy_W4ztDORw\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "sc-special-gop-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11b64bp3p9%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11c503wrrz%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0f9kbx%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0c3x3rz%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnccy-xG_CAB_v1eGQbgVBDkBaO5C4j: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"ZTbN-CTaZSadfrMNB_GvMg\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "mn-dem-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-MN%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11fjb43ny7%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MN%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11bwn4snsq%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnfWWLaQQeSMw1xQPakREN_jg-hhZ-2: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"rStaAEQ8SnPBjvP20urOeg\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "mn-gop-governor-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-MN%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0t5wz49%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MN%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11gzs6y5kz%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamniP02fzflAvrg7w6oazrifiW9bv10b: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"Yb6exQxt3o9zI-CbHNbVTg\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "mo-cd1-dem-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-MO%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11g234cdqy%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MO%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11cntkcbkt%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnlUGuYEZolm6u5FkVqEzERhNi8YQ4G: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"BjtBVJAAHW86sDxLWY2Wug\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "mi-cd13-dem-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-MI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11f0zyktlx%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0806mr9%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnoNscREB-I_TAkiyGegzqGrHQgELPa: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"ExFd4G2nn24-ckF3k004ew\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "mi-dem-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-MI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11c0q_hl_8%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11fjw095g8%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnrHHBBRuHW1DnEAW4Pm1lOUkQmLGGe: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"qly7RO_zA5CSXHiCOQcWSg\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "ks-dem-governor-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-KS%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11c1pmpn3f%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-KS%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11g715qngv%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnuAgIFDwPww0vRyfU40OIOIxAo0U5P: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"xfZM4HDlPM2UQI3ZwIQC6A\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "wi-dem-governor-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-WI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11jnpqr8dw%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-WI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11c2q3zj0w%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-WI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0l8lszd%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnw6zTz01hp6Z_wMIDKEwIgSLqoXzxE: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"kQ0psxJjnUYeU47XWxp08Q\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "sc-special-gop-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11b64bp3p9%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11c503wrrz%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0f9kbx%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0c3x3rz%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamnz1pTLGtO_QHtSj2MPx9Zt2St6BuFR: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"YPN0JDPQldo3S2eSqUxPqg\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "mn-dem-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-MN%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11fjb43ny7%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MN%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11bwn4snsq%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamn2vcHPK3eMdB7Ks8oviRbM9dQPDp4Y: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"osHvoSKkd818lysoPZQ7oA\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222",
+    "mn-gop-governor-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-28+2026-07-28%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-MN%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0t5wz49%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MN%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11gzs6y5kz%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamn5o2CeXHG7gcesKtaQsF8ThFOOBkWm: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"EEgK1OH2FyzmGmlNnvYVcQ\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222"
   ]
 }
