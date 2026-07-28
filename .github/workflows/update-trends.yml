@@ -3,9 +3,9 @@ name: Update Google Trends
 on:
   schedule:
     # Small rotating batches (see --max-races) instead of one all-watchlist blast.
-    # Every 3h ≈ each of 8 Current races refreshed ~twice/day when fetches succeed.
+    # Every 2h × 2 races ≈ each of 8 Current races refreshed ~3×/day when fetches succeed.
     # :20 avoids the :00 market-price bot pushes; Actions cron is UTC-only.
-    - cron: "20 */3 * * *"
+    - cron: "20 */2 * * *"
   workflow_dispatch:
 
 permissions:
