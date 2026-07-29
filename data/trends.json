@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T23:19:34Z",
+  "generated_at": "2026-07-29T03:45:51Z",
   "source": "google_trends",
   "races": [
     {
@@ -10592,8 +10592,8 @@
       "geo": "US-MI",
       "window_days": 30,
       "window_mode": "trailing",
-      "start_date": "2026-06-28",
-      "end_date": "2026-07-28",
+      "start_date": "2026-06-29",
+      "end_date": "2026-07-29",
       "candidates": [
         {
           "keyword": "/g/11f0zyktlx",
@@ -10618,13 +10618,6 @@
       ],
       "series": [
         {
-          "date": "2026-06-28",
-          "values": {
-            "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
-          }
-        },
-        {
           "date": "2026-06-29",
           "values": {
             "/g/11f0zyktlx": 0,
@@ -10642,21 +10635,21 @@
           "date": "2026-07-01",
           "values": {
             "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 44
+            "/m/0806mr9": 53
           }
         },
         {
           "date": "2026-07-02",
           "values": {
             "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 0
+            "/m/0806mr9": 43
           }
         },
         {
           "date": "2026-07-03",
           "values": {
             "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 31
+            "/m/0806mr9": 0
           }
         },
         {
@@ -10705,7 +10698,7 @@
           "date": "2026-07-10",
           "values": {
             "/g/11f0zyktlx": 0,
-            "/m/0806mr9": 38
+            "/m/0806mr9": 0
           }
         },
         {
@@ -10732,111 +10725,118 @@
         {
           "date": "2026-07-14",
           "values": {
-            "/g/11f0zyktlx": 10,
-            "/m/0806mr9": 13
+            "/g/11f0zyktlx": 0,
+            "/m/0806mr9": 0
           }
         },
         {
           "date": "2026-07-15",
           "values": {
-            "/g/11f0zyktlx": 8,
-            "/m/0806mr9": 15
+            "/g/11f0zyktlx": 12,
+            "/m/0806mr9": 23
           }
         },
         {
           "date": "2026-07-16",
           "values": {
-            "/g/11f0zyktlx": 10,
-            "/m/0806mr9": 17
+            "/g/11f0zyktlx": 15,
+            "/m/0806mr9": 26
           }
         },
         {
           "date": "2026-07-17",
           "values": {
-            "/g/11f0zyktlx": 10,
-            "/m/0806mr9": 18
+            "/g/11f0zyktlx": 15,
+            "/m/0806mr9": 26
           }
         },
         {
           "date": "2026-07-18",
           "values": {
-            "/g/11f0zyktlx": 12,
-            "/m/0806mr9": 15
+            "/g/11f0zyktlx": 14,
+            "/m/0806mr9": 22
           }
         },
         {
           "date": "2026-07-19",
           "values": {
-            "/g/11f0zyktlx": 11,
-            "/m/0806mr9": 11
+            "/g/11f0zyktlx": 15,
+            "/m/0806mr9": 19
           }
         },
         {
           "date": "2026-07-20",
           "values": {
-            "/g/11f0zyktlx": 14,
-            "/m/0806mr9": 20
+            "/g/11f0zyktlx": 21,
+            "/m/0806mr9": 31
           }
         },
         {
           "date": "2026-07-21",
           "values": {
-            "/g/11f0zyktlx": 11,
-            "/m/0806mr9": 18
+            "/g/11f0zyktlx": 18,
+            "/m/0806mr9": 30
           }
         },
         {
           "date": "2026-07-22",
           "values": {
-            "/g/11f0zyktlx": 11,
-            "/m/0806mr9": 21
+            "/g/11f0zyktlx": 16,
+            "/m/0806mr9": 31
           }
         },
         {
           "date": "2026-07-23",
           "values": {
-            "/g/11f0zyktlx": 10,
-            "/m/0806mr9": 18
+            "/g/11f0zyktlx": 15,
+            "/m/0806mr9": 30
           }
         },
         {
           "date": "2026-07-24",
           "values": {
-            "/g/11f0zyktlx": 10,
-            "/m/0806mr9": 16
+            "/g/11f0zyktlx": 16,
+            "/m/0806mr9": 23
           }
         },
         {
           "date": "2026-07-25",
           "values": {
-            "/g/11f0zyktlx": 10,
-            "/m/0806mr9": 11
+            "/g/11f0zyktlx": 15,
+            "/m/0806mr9": 16
           }
         },
         {
           "date": "2026-07-26",
           "values": {
-            "/g/11f0zyktlx": 11,
-            "/m/0806mr9": 10
+            "/g/11f0zyktlx": 16,
+            "/m/0806mr9": 16
           }
         },
         {
           "date": "2026-07-27",
           "values": {
-            "/g/11f0zyktlx": 21,
-            "/m/0806mr9": 18
+            "/g/11f0zyktlx": 37,
+            "/m/0806mr9": 29
           }
         },
         {
           "date": "2026-07-28",
           "values": {
             "/g/11f0zyktlx": 100,
-            "/m/0806mr9": 25
+            "/m/0806mr9": 39
+          }
+        },
+        {
+          "date": "2026-07-29",
+          "values": {
+            "/g/11f0zyktlx": 29,
+            "/m/0806mr9": 39
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-07-28T16:24:21Z"
+      "fetched_at": "2026-07-29T03:45:51Z"
     },
     {
       "id": "mi-dem-senate-primary-2026",
@@ -11102,8 +11102,8 @@
       "geo": "US-KS",
       "window_days": 30,
       "window_mode": "trailing",
-      "start_date": "2026-06-28",
-      "end_date": "2026-07-28",
+      "start_date": "2026-06-29",
+      "end_date": "2026-07-29",
       "candidates": [
         {
           "keyword": "/g/11c1pmpn3f",
@@ -11128,13 +11128,6 @@
       ],
       "series": [
         {
-          "date": "2026-06-28",
-          "values": {
-            "/g/11c1pmpn3f": 0,
-            "/g/11g715qngv": 0
-          }
-        },
-        {
           "date": "2026-06-29",
           "values": {
             "/g/11c1pmpn3f": 0,
@@ -11152,7 +11145,7 @@
           "date": "2026-07-01",
           "values": {
             "/g/11c1pmpn3f": 0,
-            "/g/11g715qngv": 100
+            "/g/11g715qngv": 0
           }
         },
         {
@@ -11242,111 +11235,118 @@
         {
           "date": "2026-07-14",
           "values": {
-            "/g/11c1pmpn3f": 20,
-            "/g/11g715qngv": 16
+            "/g/11c1pmpn3f": 0,
+            "/g/11g715qngv": 0
           }
         },
         {
           "date": "2026-07-15",
           "values": {
-            "/g/11c1pmpn3f": 20,
-            "/g/11g715qngv": 19
+            "/g/11c1pmpn3f": 58,
+            "/g/11g715qngv": 49
           }
         },
         {
           "date": "2026-07-16",
           "values": {
-            "/g/11c1pmpn3f": 20,
-            "/g/11g715qngv": 17
+            "/g/11c1pmpn3f": 53,
+            "/g/11g715qngv": 51
           }
         },
         {
           "date": "2026-07-17",
           "values": {
-            "/g/11c1pmpn3f": 26,
-            "/g/11g715qngv": 22
+            "/g/11c1pmpn3f": 74,
+            "/g/11g715qngv": 57
           }
         },
         {
           "date": "2026-07-18",
           "values": {
-            "/g/11c1pmpn3f": 25,
-            "/g/11g715qngv": 20
+            "/g/11c1pmpn3f": 66,
+            "/g/11g715qngv": 55
           }
         },
         {
           "date": "2026-07-19",
           "values": {
-            "/g/11c1pmpn3f": 18,
-            "/g/11g715qngv": 15
+            "/g/11c1pmpn3f": 49,
+            "/g/11g715qngv": 41
           }
         },
         {
           "date": "2026-07-20",
           "values": {
-            "/g/11c1pmpn3f": 23,
-            "/g/11g715qngv": 23
+            "/g/11c1pmpn3f": 59,
+            "/g/11g715qngv": 58
           }
         },
         {
           "date": "2026-07-21",
           "values": {
-            "/g/11c1pmpn3f": 25,
-            "/g/11g715qngv": 26
+            "/g/11c1pmpn3f": 69,
+            "/g/11g715qngv": 83
           }
         },
         {
           "date": "2026-07-22",
           "values": {
-            "/g/11c1pmpn3f": 27,
-            "/g/11g715qngv": 26
+            "/g/11c1pmpn3f": 80,
+            "/g/11g715qngv": 76
           }
         },
         {
           "date": "2026-07-23",
           "values": {
-            "/g/11c1pmpn3f": 20,
-            "/g/11g715qngv": 17
+            "/g/11c1pmpn3f": 53,
+            "/g/11g715qngv": 46
           }
         },
         {
           "date": "2026-07-24",
           "values": {
-            "/g/11c1pmpn3f": 16,
-            "/g/11g715qngv": 15
+            "/g/11c1pmpn3f": 47,
+            "/g/11g715qngv": 41
           }
         },
         {
           "date": "2026-07-25",
           "values": {
-            "/g/11c1pmpn3f": 24,
-            "/g/11g715qngv": 21
+            "/g/11c1pmpn3f": 68,
+            "/g/11g715qngv": 59
           }
         },
         {
           "date": "2026-07-26",
           "values": {
-            "/g/11c1pmpn3f": 18,
-            "/g/11g715qngv": 17
+            "/g/11c1pmpn3f": 46,
+            "/g/11g715qngv": 42
           }
         },
         {
           "date": "2026-07-27",
           "values": {
-            "/g/11c1pmpn3f": 17,
-            "/g/11g715qngv": 27
+            "/g/11c1pmpn3f": 57,
+            "/g/11g715qngv": 100
           }
         },
         {
           "date": "2026-07-28",
           "values": {
-            "/g/11c1pmpn3f": 33,
-            "/g/11g715qngv": 32
+            "/g/11c1pmpn3f": 79,
+            "/g/11g715qngv": 77
+          }
+        },
+        {
+          "date": "2026-07-29",
+          "values": {
+            "/g/11c1pmpn3f": 82,
+            "/g/11g715qngv": 76
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-07-28T16:17:09Z"
+      "fetched_at": "2026-07-29T03:45:30Z"
     },
     {
       "id": "wi-dem-governor-primary-2026",
