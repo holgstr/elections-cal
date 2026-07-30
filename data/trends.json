@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T07:01:39Z",
+  "generated_at": "2026-07-30T10:40:44Z",
   "source": "google_trends",
   "races": [
     {
@@ -10337,8 +10337,8 @@
       "geo": "US-MO",
       "window_days": 30,
       "window_mode": "trailing",
-      "start_date": "2026-06-29",
-      "end_date": "2026-07-29",
+      "start_date": "2026-06-30",
+      "end_date": "2026-07-30",
       "candidates": [
         {
           "keyword": "/g/11g234cdqy",
@@ -10362,13 +10362,6 @@
         }
       ],
       "series": [
-        {
-          "date": "2026-06-29",
-          "values": {
-            "/g/11g234cdqy": 0,
-            "/g/11cntkcbkt": 0
-          }
-        },
         {
           "date": "2026-06-30",
           "values": {
@@ -10429,28 +10422,28 @@
           "date": "2026-07-08",
           "values": {
             "/g/11g234cdqy": 0,
-            "/g/11cntkcbkt": 70
+            "/g/11cntkcbkt": 0
           }
         },
         {
           "date": "2026-07-09",
           "values": {
             "/g/11g234cdqy": 0,
-            "/g/11cntkcbkt": 0
+            "/g/11cntkcbkt": 74
           }
         },
         {
           "date": "2026-07-10",
           "values": {
             "/g/11g234cdqy": 0,
-            "/g/11cntkcbkt": 0
+            "/g/11cntkcbkt": 72
           }
         },
         {
           "date": "2026-07-11",
           "values": {
             "/g/11g234cdqy": 0,
-            "/g/11cntkcbkt": 0
+            "/g/11cntkcbkt": 79
           }
         },
         {
@@ -10464,128 +10457,131 @@
           "date": "2026-07-13",
           "values": {
             "/g/11g234cdqy": 0,
-            "/g/11cntkcbkt": 70
+            "/g/11cntkcbkt": 0
           }
         },
         {
           "date": "2026-07-14",
           "values": {
             "/g/11g234cdqy": 0,
-            "/g/11cntkcbkt": 73
+            "/g/11cntkcbkt": 100
           }
         },
         {
           "date": "2026-07-15",
           "values": {
-            "/g/11g234cdqy": 40,
-            "/g/11cntkcbkt": 59
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 89
           }
         },
         {
           "date": "2026-07-16",
           "values": {
-            "/g/11g234cdqy": 43,
-            "/g/11cntkcbkt": 92
+            "/g/11g234cdqy": 38,
+            "/g/11cntkcbkt": 77
           }
         },
         {
           "date": "2026-07-17",
           "values": {
-            "/g/11g234cdqy": 48,
-            "/g/11cntkcbkt": 79
+            "/g/11g234cdqy": 40,
+            "/g/11cntkcbkt": 67
           }
         },
         {
           "date": "2026-07-18",
           "values": {
-            "/g/11g234cdqy": 31,
-            "/g/11cntkcbkt": 61
+            "/g/11g234cdqy": 25,
+            "/g/11cntkcbkt": 51
           }
         },
         {
           "date": "2026-07-19",
           "values": {
-            "/g/11g234cdqy": 32,
-            "/g/11cntkcbkt": 43
+            "/g/11g234cdqy": 30,
+            "/g/11cntkcbkt": 36
           }
         },
         {
           "date": "2026-07-20",
           "values": {
-            "/g/11g234cdqy": 36,
-            "/g/11cntkcbkt": 57
+            "/g/11g234cdqy": 30,
+            "/g/11cntkcbkt": 49
           }
         },
         {
           "date": "2026-07-21",
           "values": {
-            "/g/11g234cdqy": 47,
-            "/g/11cntkcbkt": 59
+            "/g/11g234cdqy": 39,
+            "/g/11cntkcbkt": 50
           }
         },
         {
           "date": "2026-07-22",
           "values": {
-            "/g/11g234cdqy": 51,
-            "/g/11cntkcbkt": 69
+            "/g/11g234cdqy": 43,
+            "/g/11cntkcbkt": 63
           }
         },
         {
           "date": "2026-07-23",
           "values": {
-            "/g/11g234cdqy": 64,
-            "/g/11cntkcbkt": 96
+            "/g/11g234cdqy": 56,
+            "/g/11cntkcbkt": 84
           }
         },
         {
           "date": "2026-07-24",
           "values": {
-            "/g/11g234cdqy": 81,
-            "/g/11cntkcbkt": 90
+            "/g/11g234cdqy": 71,
+            "/g/11cntkcbkt": 78
           }
         },
         {
           "date": "2026-07-25",
           "values": {
-            "/g/11g234cdqy": 87,
-            "/g/11cntkcbkt": 87
+            "/g/11g234cdqy": 74,
+            "/g/11cntkcbkt": 74
           }
         },
         {
           "date": "2026-07-26",
           "values": {
-            "/g/11g234cdqy": 67,
-            "/g/11cntkcbkt": 86
+            "/g/11g234cdqy": 60,
+            "/g/11cntkcbkt": 73
           }
         },
         {
           "date": "2026-07-27",
           "values": {
-            "/g/11g234cdqy": 61,
-            "/g/11cntkcbkt": 91
+            "/g/11g234cdqy": 52,
+            "/g/11cntkcbkt": 76
           }
         },
         {
           "date": "2026-07-28",
           "values": {
-            "/g/11g234cdqy": 77,
-            "/g/11cntkcbkt": 100
+            "/g/11g234cdqy": 67,
+            "/g/11cntkcbkt": 84
           }
         },
         {
           "date": "2026-07-29",
           "values": {
-            "/g/11g234cdqy": 75,
-            "/g/11cntkcbkt": 98
+            "/g/11g234cdqy": 71,
+            "/g/11cntkcbkt": 84
+          }
+        },
+        {
+          "date": "2026-07-30",
+          "values": {
+            "/g/11g234cdqy": 56,
+            "/g/11cntkcbkt": 79
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-07-29T19:49:53Z",
-      "stale": {
-        "reason": "fetch_failed",
-        "data_as_of": "2026-07-30T03:50:43Z"
-      }
+      "fetched_at": "2026-07-30T10:35:57Z"
     },
     {
       "id": "mi-cd13-dem-primary-2026",
@@ -11106,8 +11102,8 @@
       "geo": "US-KS",
       "window_days": 30,
       "window_mode": "trailing",
-      "start_date": "2026-06-29",
-      "end_date": "2026-07-29",
+      "start_date": "2026-06-30",
+      "end_date": "2026-07-30",
       "candidates": [
         {
           "keyword": "/g/11c1pmpn3f",
@@ -11131,13 +11127,6 @@
         }
       ],
       "series": [
-        {
-          "date": "2026-06-29",
-          "values": {
-            "/g/11c1pmpn3f": 0,
-            "/g/11g715qngv": 0
-          }
-        },
         {
           "date": "2026-06-30",
           "values": {
@@ -11225,7 +11214,7 @@
         {
           "date": "2026-07-12",
           "values": {
-            "/g/11c1pmpn3f": 100,
+            "/g/11c1pmpn3f": 0,
             "/g/11g715qngv": 0
           }
         },
@@ -11246,111 +11235,118 @@
         {
           "date": "2026-07-15",
           "values": {
-            "/g/11c1pmpn3f": 21,
-            "/g/11g715qngv": 18
+            "/g/11c1pmpn3f": 0,
+            "/g/11g715qngv": 0
           }
         },
         {
           "date": "2026-07-16",
           "values": {
-            "/g/11c1pmpn3f": 24,
-            "/g/11g715qngv": 13
+            "/g/11c1pmpn3f": 56,
+            "/g/11g715qngv": 47
           }
         },
         {
           "date": "2026-07-17",
           "values": {
-            "/g/11c1pmpn3f": 27,
-            "/g/11g715qngv": 21
+            "/g/11c1pmpn3f": 78,
+            "/g/11g715qngv": 64
           }
         },
         {
           "date": "2026-07-18",
           "values": {
-            "/g/11c1pmpn3f": 22,
-            "/g/11g715qngv": 20
+            "/g/11c1pmpn3f": 70,
+            "/g/11g715qngv": 54
           }
         },
         {
           "date": "2026-07-19",
           "values": {
-            "/g/11c1pmpn3f": 22,
-            "/g/11g715qngv": 20
+            "/g/11c1pmpn3f": 53,
+            "/g/11g715qngv": 39
           }
         },
         {
           "date": "2026-07-20",
           "values": {
-            "/g/11c1pmpn3f": 25,
-            "/g/11g715qngv": 22
+            "/g/11c1pmpn3f": 66,
+            "/g/11g715qngv": 60
           }
         },
         {
           "date": "2026-07-21",
           "values": {
-            "/g/11c1pmpn3f": 23,
-            "/g/11g715qngv": 26
+            "/g/11c1pmpn3f": 67,
+            "/g/11g715qngv": 73
           }
         },
         {
           "date": "2026-07-22",
           "values": {
-            "/g/11c1pmpn3f": 29,
-            "/g/11g715qngv": 30
+            "/g/11c1pmpn3f": 75,
+            "/g/11g715qngv": 80
           }
         },
         {
           "date": "2026-07-23",
           "values": {
-            "/g/11c1pmpn3f": 22,
-            "/g/11g715qngv": 17
+            "/g/11c1pmpn3f": 62,
+            "/g/11g715qngv": 48
           }
         },
         {
           "date": "2026-07-24",
           "values": {
-            "/g/11c1pmpn3f": 18,
-            "/g/11g715qngv": 15
+            "/g/11c1pmpn3f": 47,
+            "/g/11g715qngv": 37
           }
         },
         {
           "date": "2026-07-25",
           "values": {
-            "/g/11c1pmpn3f": 24,
-            "/g/11g715qngv": 25
+            "/g/11c1pmpn3f": 68,
+            "/g/11g715qngv": 58
           }
         },
         {
           "date": "2026-07-26",
           "values": {
-            "/g/11c1pmpn3f": 18,
-            "/g/11g715qngv": 18
+            "/g/11c1pmpn3f": 32,
+            "/g/11g715qngv": 47
           }
         },
         {
           "date": "2026-07-27",
           "values": {
-            "/g/11c1pmpn3f": 22,
-            "/g/11g715qngv": 37
+            "/g/11c1pmpn3f": 58,
+            "/g/11g715qngv": 100
           }
         },
         {
           "date": "2026-07-28",
           "values": {
-            "/g/11c1pmpn3f": 35,
-            "/g/11g715qngv": 31
+            "/g/11c1pmpn3f": 89,
+            "/g/11g715qngv": 74
           }
         },
         {
           "date": "2026-07-29",
           "values": {
-            "/g/11c1pmpn3f": 28,
-            "/g/11g715qngv": 24
+            "/g/11c1pmpn3f": 76,
+            "/g/11g715qngv": 65
+          }
+        },
+        {
+          "date": "2026-07-30",
+          "values": {
+            "/g/11c1pmpn3f": 36,
+            "/g/11g715qngv": 31
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-07-29T21:24:37Z"
+      "fetched_at": "2026-07-30T10:40:44Z"
     },
     {
       "id": "wi-dem-governor-primary-2026",
@@ -13636,8 +13632,5 @@
       "watchlist": true,
       "fetched_at": "2026-07-29T23:42:00Z"
     }
-  ],
-  "errors": [
-    "mo-cd1-dem-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-06-30+2026-07-30%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-MO%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11g234cdqy%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MO%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11cntkcbkt%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAamxHb0ClxSkUrIHQnsfAHoblcSdmk9NZ: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"iA9UT_9SBCMViw0qtTYY9Q\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222"
   ]
 }
