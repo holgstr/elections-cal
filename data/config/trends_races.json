@@ -1603,6 +1603,37 @@
     ]
   },
   {
+    "id": "mi-cd7-dem-primary-2026",
+    "title": "Michigan CD-7 Democratic Primary",
+    "election_date": "2026-08-04",
+    "country_code": "US",
+    "state_code": "MI",
+    "geo": "US-MI",
+    "window_days": 30,
+    "window_mode": "trailing",
+    "watchlist": true,
+    "keywords": [
+      {
+        "name": "Bridget Brink",
+        "label": "Brink",
+        "mid": "/g/11hdvdrphb",
+        "topic_title": "Bridget Brink",
+        "topic_type": "Former United States Ambassador to Slovakia"
+      },
+      {
+        "name": "William Lawrence",
+        "label": "Lawrence"
+      },
+      {
+        "name": "Matt Maasdam",
+        "label": "Maasdam",
+        "mid": "/g/11yfyjy_ql",
+        "topic_title": "Matt Maasdam",
+        "topic_type": "Politician"
+      }
+    ]
+  },
+  {
     "id": "mi-cd13-dem-primary-2026",
     "title": "Michigan CD-13 Democratic Primary",
     "election_date": "2026-08-04",

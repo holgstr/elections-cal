@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T23:18:51Z",
+  "generated_at": "2026-07-29T23:42:00Z",
   "source": "google_trends",
   "races": [
     {
@@ -13337,6 +13337,300 @@
           }
         ]
       }
+    },
+    {
+      "id": "mi-cd7-dem-primary-2026",
+      "title": "Michigan CD-7 Democratic Primary",
+      "election_date": "2026-08-04",
+      "country_code": "US",
+      "state_code": "MI",
+      "geo": "US-MI",
+      "window_days": 30,
+      "window_mode": "trailing",
+      "start_date": "2026-06-29",
+      "end_date": "2026-07-29",
+      "candidates": [
+        {
+          "keyword": "Bridget Brink",
+          "label": "Brink",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Bridget Brink",
+          "mid": "/g/11hdvdrphb",
+          "topic_title": "Bridget Brink",
+          "topic_type": "Former United States Ambassador to Slovakia"
+        },
+        {
+          "keyword": "William Lawrence",
+          "label": "Lawrence",
+          "query_mode": "search_term",
+          "resolve_source": "search_term",
+          "name": "William Lawrence",
+          "resolve_note": "no confident political entity (top='Matthew Lawrence' / 'American actor')"
+        },
+        {
+          "keyword": "Matt Maasdam",
+          "label": "Maasdam",
+          "query_mode": "search_term",
+          "resolve_source": "race_fallback",
+          "name": "Matt Maasdam",
+          "mid": "/g/11yfyjy_ql",
+          "topic_title": "Matt Maasdam",
+          "topic_type": "Politician"
+        }
+      ],
+      "series": [
+        {
+          "date": "2026-06-29",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-06-30",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-01",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-02",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-04",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-05",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-06",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-07",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-08",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-09",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-10",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-11",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-12",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-13",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-14",
+          "values": {
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
+            "Matt Maasdam": 0
+          }
+        },
+        {
+          "date": "2026-07-15",
+          "values": {
+            "Bridget Brink": 36,
+            "William Lawrence": 42,
+            "Matt Maasdam": 38
+          }
+        },
+        {
+          "date": "2026-07-16",
+          "values": {
+            "Bridget Brink": 42,
+            "William Lawrence": 44,
+            "Matt Maasdam": 56
+          }
+        },
+        {
+          "date": "2026-07-17",
+          "values": {
+            "Bridget Brink": 31,
+            "William Lawrence": 39,
+            "Matt Maasdam": 29
+          }
+        },
+        {
+          "date": "2026-07-18",
+          "values": {
+            "Bridget Brink": 27,
+            "William Lawrence": 47,
+            "Matt Maasdam": 19
+          }
+        },
+        {
+          "date": "2026-07-19",
+          "values": {
+            "Bridget Brink": 23,
+            "William Lawrence": 53,
+            "Matt Maasdam": 20
+          }
+        },
+        {
+          "date": "2026-07-20",
+          "values": {
+            "Bridget Brink": 45,
+            "William Lawrence": 81,
+            "Matt Maasdam": 42
+          }
+        },
+        {
+          "date": "2026-07-21",
+          "values": {
+            "Bridget Brink": 41,
+            "William Lawrence": 50,
+            "Matt Maasdam": 23
+          }
+        },
+        {
+          "date": "2026-07-22",
+          "values": {
+            "Bridget Brink": 33,
+            "William Lawrence": 45,
+            "Matt Maasdam": 32
+          }
+        },
+        {
+          "date": "2026-07-23",
+          "values": {
+            "Bridget Brink": 40,
+            "William Lawrence": 57,
+            "Matt Maasdam": 37
+          }
+        },
+        {
+          "date": "2026-07-24",
+          "values": {
+            "Bridget Brink": 34,
+            "William Lawrence": 46,
+            "Matt Maasdam": 30
+          }
+        },
+        {
+          "date": "2026-07-25",
+          "values": {
+            "Bridget Brink": 36,
+            "William Lawrence": 90,
+            "Matt Maasdam": 60
+          }
+        },
+        {
+          "date": "2026-07-26",
+          "values": {
+            "Bridget Brink": 50,
+            "William Lawrence": 87,
+            "Matt Maasdam": 45
+          }
+        },
+        {
+          "date": "2026-07-27",
+          "values": {
+            "Bridget Brink": 45,
+            "William Lawrence": 50,
+            "Matt Maasdam": 84
+          }
+        },
+        {
+          "date": "2026-07-28",
+          "values": {
+            "Bridget Brink": 48,
+            "William Lawrence": 66,
+            "Matt Maasdam": 92
+          }
+        },
+        {
+          "date": "2026-07-29",
+          "values": {
+            "Bridget Brink": 59,
+            "William Lawrence": 73,
+            "Matt Maasdam": 100
+          }
+        }
+      ],
+      "watchlist": true,
+      "fetched_at": "2026-07-29T23:42:00Z"
     }
   ]
 }
