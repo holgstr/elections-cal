@@ -334,21 +334,6 @@
       }
     }
   },
-  "SD": {
-    "Governor": {
-      "primary_format": "party",
-      "primary_type": "closed",
-      "primary_type_label": "Closed primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
-      "winner_note": "Winner: 35%+ avoids runoff; else top-two runoff (FPTP).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Republican": {
-          "polymarket_slug": "south-dakota-governor-republican-primary-winner"
-        }
-      }
-    }
-  },
   "TN": {
     "Governor": {
       "primary_format": "party",
