@@ -5,19 +5,12 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
-    "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt": {
-      "Yes": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-07-29",
-        "reference_pct": 40.5,
-        "window": "2d"
-      },
-      "No": {
+    "berlin-state-election-winner": {
+      "Linke": {
         "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-07-29",
-        "reference_pct": 59.5,
+        "reference_pct": 33.0,
         "window": "2d"
       }
     },
@@ -46,16 +39,32 @@
         "window": "2d"
       }
     },
+    "alaska-governor-election-winner": {
+      "Click Bishop": {
+        "change_pp": 6.45,
+        "direction": "up",
+        "reference_date": "2026-07-29",
+        "reference_pct": 0.85,
+        "window": "2d"
+      },
+      "Jonathan Kreiss-Tomkins": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-07-29",
+        "reference_pct": 15.95,
+        "window": "2d"
+      }
+    },
     "texas-governor-winner-2026": {
       "Democrat": {
-        "change_pp": 9.5,
+        "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 6.0,
         "window": "2d"
       },
       "Republican": {
-        "change_pp": 9.05,
+        "change_pp": 5.95,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 93.95,
@@ -64,17 +73,10 @@
     },
     "who-will-advance-from-the-alaska-governor-primary": {
       "Dave Bronson": {
-        "change_pp": 19.5,
+        "change_pp": 11.0,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 43.5,
-        "window": "2d"
-      },
-      "Bernadette Wilson": {
-        "change_pp": 5.5,
-        "direction": "up",
-        "reference_date": "2026-07-29",
-        "reference_pct": 80.5,
         "window": "2d"
       }
     },
@@ -87,7 +89,7 @@
         "window": "2d"
       },
       "Sen. Dan S. Sullivan": {
-        "change_pp": 8.65,
+        "change_pp": 8.75,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 11.65,
@@ -103,7 +105,7 @@
         "window": "2d"
       },
       "Cindy Holscher": {
-        "change_pp": 12.5,
+        "change_pp": 16.5,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 75.5,
@@ -119,32 +121,23 @@
         "window": "2d"
       },
       "Seth Moulton": {
-        "change_pp": 6.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 28.0,
         "window": "2d"
       }
     },
-    "mi-13-democratic-primary-winner": {
-      "Shri Thanedar": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-07-29",
-        "reference_pct": 14.5,
-        "window": "2d"
-      }
-    },
     "michigan-democratic-senate-primary-winner": {
       "Haley Stevens": {
-        "change_pp": 11.35,
+        "change_pp": 10.85,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 14.0,
         "window": "2d"
       },
       "Abdul El-Sayed": {
-        "change_pp": 10.2,
+        "change_pp": 9.95,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 86.5,
@@ -153,7 +146,7 @@
     },
     "minnesota-governor-republican-primary-winner": {
       "Lisa Demuth": {
-        "change_pp": 5.0,
+        "change_pp": 12.0,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 36.5,
@@ -167,16 +160,32 @@
         "window": "2d"
       }
     },
+    "mo-01-democratic-primary-winner": {
+      "Wesley Bell": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-07-29",
+        "reference_pct": 64.5,
+        "window": "2d"
+      },
+      "Cori Bush": {
+        "change_pp": 7.5,
+        "direction": "down",
+        "reference_date": "2026-07-29",
+        "reference_pct": 35.5,
+        "window": "2d"
+      }
+    },
     "south-carolina-republican-senate-special-primary-winner-20260712135206676": {
       "Ralph Norman": {
-        "change_pp": 17.5,
+        "change_pp": 21.5,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 21.0,
         "window": "2d"
       },
       "Darline Graham Nordone": {
-        "change_pp": 15.8,
+        "change_pp": 22.0,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 73.95,
@@ -185,14 +194,14 @@
     },
     "wyoming-governor-republican-primary-winner": {
       "Eric Barlow": {
-        "change_pp": 14.25,
+        "change_pp": 11.75,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 63.15,
         "window": "2d"
       },
       "Megan Degenfelder": {
-        "change_pp": 6.65,
+        "change_pp": 6.6,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 40.9,
@@ -201,14 +210,14 @@
     },
     "montana-senate-election-winner": {
       "Republican": {
-        "change_pp": 8.5,
+        "change_pp": 8.0,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 87.0,
         "window": "2d"
       },
       "Independent": {
-        "change_pp": 8.7,
+        "change_pp": 8.15,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 11.85,
@@ -217,19 +226,12 @@
     }
   },
   "by_market_id": {
-    "de-state:ST:AfD absolute majority": {
-      "Yes": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-07-29",
-        "reference_pct": 40.5,
-        "window": "2d"
-      },
-      "No": {
+    "de-state:BE": {
+      "Linke": {
         "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-07-29",
-        "reference_pct": 59.5,
+        "reference_pct": 33.0,
         "window": "2d"
       }
     },
@@ -258,16 +260,32 @@
         "window": "2d"
       }
     },
+    "us-governor:AK": {
+      "Click Bishop": {
+        "change_pp": 6.45,
+        "direction": "up",
+        "reference_date": "2026-07-29",
+        "reference_pct": 0.85,
+        "window": "2d"
+      },
+      "Jonathan Kreiss-Tomkins": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-07-29",
+        "reference_pct": 15.95,
+        "window": "2d"
+      }
+    },
     "us-governor:TX": {
       "Democrat": {
-        "change_pp": 9.5,
+        "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 6.0,
         "window": "2d"
       },
       "Republican": {
-        "change_pp": 9.05,
+        "change_pp": 5.95,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 93.95,
@@ -276,17 +294,10 @@
     },
     "us-primary:AK:Governor": {
       "Dave Bronson": {
-        "change_pp": 19.5,
+        "change_pp": 11.0,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 43.5,
-        "window": "2d"
-      },
-      "Bernadette Wilson": {
-        "change_pp": 5.5,
-        "direction": "up",
-        "reference_date": "2026-07-29",
-        "reference_pct": 80.5,
         "window": "2d"
       }
     },
@@ -299,7 +310,7 @@
         "window": "2d"
       },
       "Sen. Dan S. Sullivan": {
-        "change_pp": 8.65,
+        "change_pp": 8.75,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 11.65,
@@ -315,7 +326,7 @@
         "window": "2d"
       },
       "Cindy Holscher": {
-        "change_pp": 12.5,
+        "change_pp": 16.5,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 75.5,
@@ -331,32 +342,23 @@
         "window": "2d"
       },
       "Seth Moulton": {
-        "change_pp": 6.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 28.0,
         "window": "2d"
       }
     },
-    "us-primary:MI:MI-13:Democratic": {
-      "Shri Thanedar": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-07-29",
-        "reference_pct": 14.5,
-        "window": "2d"
-      }
-    },
     "us-primary:MI:Senate:Democratic": {
       "Haley Stevens": {
-        "change_pp": 11.35,
+        "change_pp": 10.85,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 14.0,
         "window": "2d"
       },
       "Abdul El-Sayed": {
-        "change_pp": 10.2,
+        "change_pp": 9.95,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 86.5,
@@ -365,7 +367,7 @@
     },
     "us-primary:MN:Governor:Republican": {
       "Lisa Demuth": {
-        "change_pp": 5.0,
+        "change_pp": 12.0,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 36.5,
@@ -379,16 +381,32 @@
         "window": "2d"
       }
     },
+    "us-primary:MO:MO-01:Democratic": {
+      "Wesley Bell": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-07-29",
+        "reference_pct": 64.5,
+        "window": "2d"
+      },
+      "Cori Bush": {
+        "change_pp": 7.5,
+        "direction": "down",
+        "reference_date": "2026-07-29",
+        "reference_pct": 35.5,
+        "window": "2d"
+      }
+    },
     "us-primary:SC:Senate:Republican": {
       "Ralph Norman": {
-        "change_pp": 17.5,
+        "change_pp": 21.5,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 21.0,
         "window": "2d"
       },
       "Darline Graham Nordone": {
-        "change_pp": 15.8,
+        "change_pp": 22.0,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 73.95,
@@ -397,14 +415,14 @@
     },
     "us-primary:WY:Governor:Republican": {
       "Eric Barlow": {
-        "change_pp": 14.25,
+        "change_pp": 11.75,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 63.15,
         "window": "2d"
       },
       "Megan Degenfelder": {
-        "change_pp": 6.65,
+        "change_pp": 6.6,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 40.9,
@@ -413,14 +431,14 @@
     },
     "us-senate:MT": {
       "Republican": {
-        "change_pp": 8.5,
+        "change_pp": 8.0,
         "direction": "down",
         "reference_date": "2026-07-29",
         "reference_pct": 87.0,
         "window": "2d"
       },
       "Independent": {
-        "change_pp": 8.7,
+        "change_pp": 8.15,
         "direction": "up",
         "reference_date": "2026-07-29",
         "reference_pct": 11.85,
