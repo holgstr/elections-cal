@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T14:03:30Z",
+  "generated_at": "2026-08-01T15:32:30Z",
   "source": "google_trends",
   "races": [
     {
@@ -10379,8 +10379,8 @@
         {
           "date": "2026-07-04",
           "values": {
-            "/g/11g234cdqy": 51,
-            "/g/11cntkcbkt": 49
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 0
           }
         },
         {
@@ -10408,7 +10408,7 @@
           "date": "2026-07-08",
           "values": {
             "/g/11g234cdqy": 0,
-            "/g/11cntkcbkt": 53
+            "/g/11cntkcbkt": 0
           }
         },
         {
@@ -10428,7 +10428,7 @@
         {
           "date": "2026-07-11",
           "values": {
-            "/g/11g234cdqy": 0,
+            "/g/11g234cdqy": 79,
             "/g/11cntkcbkt": 0
           }
         },
@@ -10443,28 +10443,28 @@
           "date": "2026-07-13",
           "values": {
             "/g/11g234cdqy": 0,
-            "/g/11cntkcbkt": 0
+            "/g/11cntkcbkt": 70
           }
         },
         {
           "date": "2026-07-14",
           "values": {
             "/g/11g234cdqy": 0,
-            "/g/11cntkcbkt": 45
+            "/g/11cntkcbkt": 61
           }
         },
         {
           "date": "2026-07-15",
           "values": {
             "/g/11g234cdqy": 0,
-            "/g/11cntkcbkt": 60
+            "/g/11cntkcbkt": 74
           }
         },
         {
           "date": "2026-07-16",
           "values": {
-            "/g/11g234cdqy": 53,
-            "/g/11cntkcbkt": 66
+            "/g/11g234cdqy": 0,
+            "/g/11cntkcbkt": 100
           }
         },
         {
@@ -10477,111 +10477,111 @@
         {
           "date": "2026-07-18",
           "values": {
-            "/g/11g234cdqy": 20,
-            "/g/11cntkcbkt": 38
+            "/g/11g234cdqy": 31,
+            "/g/11cntkcbkt": 55
           }
         },
         {
           "date": "2026-07-19",
           "values": {
-            "/g/11g234cdqy": 17,
-            "/g/11cntkcbkt": 29
+            "/g/11g234cdqy": 32,
+            "/g/11cntkcbkt": 37
           }
         },
         {
           "date": "2026-07-20",
           "values": {
-            "/g/11g234cdqy": 23,
-            "/g/11cntkcbkt": 36
+            "/g/11g234cdqy": 32,
+            "/g/11cntkcbkt": 51
           }
         },
         {
           "date": "2026-07-21",
           "values": {
-            "/g/11g234cdqy": 30,
-            "/g/11cntkcbkt": 38
+            "/g/11g234cdqy": 43,
+            "/g/11cntkcbkt": 52
           }
         },
         {
           "date": "2026-07-22",
           "values": {
-            "/g/11g234cdqy": 35,
-            "/g/11cntkcbkt": 46
+            "/g/11g234cdqy": 47,
+            "/g/11cntkcbkt": 66
           }
         },
         {
           "date": "2026-07-23",
           "values": {
-            "/g/11g234cdqy": 40,
-            "/g/11cntkcbkt": 64
+            "/g/11g234cdqy": 56,
+            "/g/11cntkcbkt": 84
           }
         },
         {
           "date": "2026-07-24",
           "values": {
-            "/g/11g234cdqy": 52,
-            "/g/11cntkcbkt": 56
+            "/g/11g234cdqy": 75,
+            "/g/11cntkcbkt": 80
           }
         },
         {
           "date": "2026-07-25",
           "values": {
-            "/g/11g234cdqy": 54,
-            "/g/11cntkcbkt": 55
+            "/g/11g234cdqy": 76,
+            "/g/11cntkcbkt": 77
           }
         },
         {
           "date": "2026-07-26",
           "values": {
-            "/g/11g234cdqy": 42,
-            "/g/11cntkcbkt": 59
+            "/g/11g234cdqy": 57,
+            "/g/11cntkcbkt": 77
           }
         },
         {
           "date": "2026-07-27",
           "values": {
-            "/g/11g234cdqy": 38,
-            "/g/11cntkcbkt": 56
+            "/g/11g234cdqy": 51,
+            "/g/11cntkcbkt": 78
           }
         },
         {
           "date": "2026-07-28",
           "values": {
-            "/g/11g234cdqy": 49,
-            "/g/11cntkcbkt": 64
+            "/g/11g234cdqy": 70,
+            "/g/11cntkcbkt": 89
           }
         },
         {
           "date": "2026-07-29",
           "values": {
-            "/g/11g234cdqy": 53,
-            "/g/11cntkcbkt": 62
+            "/g/11g234cdqy": 74,
+            "/g/11cntkcbkt": 85
           }
         },
         {
           "date": "2026-07-30",
           "values": {
-            "/g/11g234cdqy": 64,
-            "/g/11cntkcbkt": 70
+            "/g/11g234cdqy": 90,
+            "/g/11cntkcbkt": 97
           }
         },
         {
           "date": "2026-07-31",
           "values": {
-            "/g/11g234cdqy": 67,
-            "/g/11cntkcbkt": 66
+            "/g/11g234cdqy": 96,
+            "/g/11cntkcbkt": 87
           }
         },
         {
           "date": "2026-08-01",
           "values": {
-            "/g/11g234cdqy": 75,
-            "/g/11cntkcbkt": 100
+            "/g/11g234cdqy": 80,
+            "/g/11cntkcbkt": 97
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-01T03:55:33Z"
+      "fetched_at": "2026-08-01T15:32:09Z"
     },
     {
       "id": "mi-cd13-dem-primary-2026",
@@ -11180,7 +11180,7 @@
           "date": "2026-07-09",
           "values": {
             "/g/11c1pmpn3f": 0,
-            "/g/11g715qngv": 0
+            "/g/11g715qngv": 100
           }
         },
         {
@@ -11242,111 +11242,111 @@
         {
           "date": "2026-07-18",
           "values": {
-            "/g/11c1pmpn3f": 36,
-            "/g/11g715qngv": 27
+            "/g/11c1pmpn3f": 32,
+            "/g/11g715qngv": 25
           }
         },
         {
           "date": "2026-07-19",
           "values": {
-            "/g/11c1pmpn3f": 33,
-            "/g/11g715qngv": 21
+            "/g/11c1pmpn3f": 24,
+            "/g/11g715qngv": 18
           }
         },
         {
           "date": "2026-07-20",
+          "values": {
+            "/g/11c1pmpn3f": 33,
+            "/g/11g715qngv": 26
+          }
+        },
+        {
+          "date": "2026-07-21",
+          "values": {
+            "/g/11c1pmpn3f": 29,
+            "/g/11g715qngv": 32
+          }
+        },
+        {
+          "date": "2026-07-22",
           "values": {
             "/g/11c1pmpn3f": 32,
             "/g/11g715qngv": 34
           }
         },
         {
-          "date": "2026-07-21",
-          "values": {
-            "/g/11c1pmpn3f": 35,
-            "/g/11g715qngv": 37
-          }
-        },
-        {
-          "date": "2026-07-22",
-          "values": {
-            "/g/11c1pmpn3f": 38,
-            "/g/11g715qngv": 39
-          }
-        },
-        {
           "date": "2026-07-23",
           "values": {
-            "/g/11c1pmpn3f": 29,
-            "/g/11g715qngv": 26
+            "/g/11c1pmpn3f": 25,
+            "/g/11g715qngv": 19
           }
         },
         {
           "date": "2026-07-24",
           "values": {
-            "/g/11c1pmpn3f": 25,
-            "/g/11g715qngv": 23
+            "/g/11c1pmpn3f": 20,
+            "/g/11g715qngv": 18
           }
         },
         {
           "date": "2026-07-25",
           "values": {
-            "/g/11c1pmpn3f": 37,
-            "/g/11g715qngv": 29
+            "/g/11c1pmpn3f": 30,
+            "/g/11g715qngv": 26
           }
         },
         {
           "date": "2026-07-26",
           "values": {
-            "/g/11c1pmpn3f": 24,
-            "/g/11g715qngv": 23
+            "/g/11c1pmpn3f": 21,
+            "/g/11g715qngv": 20
           }
         },
         {
           "date": "2026-07-27",
           "values": {
-            "/g/11c1pmpn3f": 32,
-            "/g/11g715qngv": 51
+            "/g/11c1pmpn3f": 23,
+            "/g/11g715qngv": 43
           }
         },
         {
           "date": "2026-07-28",
           "values": {
-            "/g/11c1pmpn3f": 42,
-            "/g/11g715qngv": 44
+            "/g/11c1pmpn3f": 37,
+            "/g/11g715qngv": 37
           }
         },
         {
           "date": "2026-07-29",
           "values": {
-            "/g/11c1pmpn3f": 39,
-            "/g/11g715qngv": 32
+            "/g/11c1pmpn3f": 32,
+            "/g/11g715qngv": 27
           }
         },
         {
           "date": "2026-07-30",
           "values": {
-            "/g/11c1pmpn3f": 48,
-            "/g/11g715qngv": 39
+            "/g/11c1pmpn3f": 39,
+            "/g/11g715qngv": 33
           }
         },
         {
           "date": "2026-07-31",
           "values": {
-            "/g/11c1pmpn3f": 79,
-            "/g/11g715qngv": 63
+            "/g/11c1pmpn3f": 65,
+            "/g/11g715qngv": 51
           }
         },
         {
           "date": "2026-08-01",
           "values": {
-            "/g/11c1pmpn3f": 100,
-            "/g/11g715qngv": 68
+            "/g/11c1pmpn3f": 59,
+            "/g/11g715qngv": 45
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-01T06:46:05Z"
+      "fetched_at": "2026-08-01T15:32:30Z"
     },
     {
       "id": "wi-dem-governor-primary-2026",
