@@ -413,6 +413,15 @@
       "winner_note": "General winner: FPTP (top two advance).",
       "runoff_winner_note": "Winner: FPTP (most votes wins).",
       "polymarket_slug": "washington-governor-election-winner"
+    },
+    "WA-03": {
+      "primary_format": "top-two",
+      "primary_type": "top-two",
+      "primary_type_label": "Top-two primary",
+      "primary_type_note": "All candidates appear on one ballot; the top two advance to the general election.",
+      "winner_note": "General winner: FPTP (top two advance).",
+      "runoff_winner_note": "Winner: FPTP (most votes wins).",
+      "polymarket_slug": "wa-03-primary-first-place-20260706195611094"
     }
   },
   "WI": {

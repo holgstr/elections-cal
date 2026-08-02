@@ -1,23 +1,5 @@
 [
   {
-    "date": "2026-07-30",
-    "date_precision": "exact",
-    "country": "United Kingdom",
-    "country_code": "GB",
-    "city": "Manchester",
-    "city_code": "MAN",
-    "title": "Mayor",
-    "type": "general",
-    "level": "local",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Mayor"
-    ],
-    "source": "curated"
-  },
-  {
     "date": "2026-08-04",
     "date_precision": "exact",
     "country": "United States",
@@ -281,6 +263,24 @@
       "Governor"
     ],
     "party": "Republican",
+    "source": "curated"
+  },
+  {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Washington",
+    "state_code": "WA",
+    "title": "WA-03 Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "WA-03"
+    ],
     "source": "curated"
   },
   {

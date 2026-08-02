@@ -159,7 +159,8 @@
       }
     },
     "WA": {
-      "Governor": { "_slug": "washington-governor-election-winner" }
+      "Governor": { "_slug": "washington-governor-election-winner" },
+      "WA-03": { "_slug": "wa-03-primary-first-place-20260706195611094" }
     },
     "SD": {
       "Governor": {

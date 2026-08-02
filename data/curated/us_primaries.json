@@ -1836,6 +1836,23 @@
     "party": "Republican"
   },
   {
+    "date": "2026-08-04",
+    "date_precision": "exact",
+    "country": "United States",
+    "country_code": "US",
+    "state": "Washington",
+    "state_code": "WA",
+    "title": "WA-03 Primary",
+    "type": "primary",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "WA-03"
+    ]
+  },
+  {
     "date": "2026-08-06",
     "date_precision": "exact",
     "country": "United States",

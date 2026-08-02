@@ -379,10 +379,10 @@ function compactPrimaryLabels(items) {
 
   const partiesByOffice = new Map();
   for (const item of primaries) {
-    if (!item.party) continue;
     for (const office of item.offices || []) {
       if (!partiesByOffice.has(office)) partiesByOffice.set(office, new Set());
-      partiesByOffice.get(office).add(item.party);
+      // Top-two / nonpartisan house districts may omit party; still show the office label.
+      if (item.party) partiesByOffice.get(office).add(item.party);
     }
   }
 
