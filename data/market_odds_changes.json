@@ -5,23 +5,39 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
+    "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt": {
+      "Yes": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-07-31",
+        "reference_pct": 38.5,
+        "window": "2d"
+      },
+      "No": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-07-31",
+        "reference_pct": 61.5,
+        "window": "2d"
+      }
+    },
     "latvian-parliamentary-election-winner": {
       "AS": {
-        "change_pp": 8.85,
+        "change_pp": 11.35,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 43.45,
         "window": "2d"
       },
       "LPV": {
-        "change_pp": 14.5,
+        "change_pp": 16.5,
         "direction": "down",
         "reference_date": "2026-07-31",
         "reference_pct": 39.0,
         "window": "2d"
       },
       "SV": {
-        "change_pp": 6.9,
+        "change_pp": 6.55,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 4.95,
@@ -37,44 +53,37 @@
         "window": "2d"
       }
     },
-    "alaska-governor-election-winner": {
-      "Click Bishop": {
-        "change_pp": 5.3,
-        "direction": "down",
-        "reference_date": "2026-07-31",
-        "reference_pct": 7.3,
-        "window": "2d"
-      },
-      "Treg Taylor": {
-        "change_pp": 10.3,
-        "direction": "up",
-        "reference_date": "2026-07-31",
-        "reference_pct": 20.7,
-        "window": "2d"
-      },
-      "Jonathan Kreiss-Tomkins": {
-        "change_pp": 4.15,
-        "direction": "down",
-        "reference_date": "2026-07-31",
-        "reference_pct": 11.45,
-        "window": "2d"
-      }
-    },
     "tennessee-governor-winner-2026": {
       "Democrat": {
-        "change_pp": 5.25,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-07-31",
         "reference_pct": 8.25,
         "window": "2d"
       }
     },
+    "wisconsin-governor-winner-2026": {
+      "Democrat": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-07-31",
+        "reference_pct": 55.5,
+        "window": "2d"
+      }
+    },
     "who-will-advance-from-the-alaska-governor-primary": {
       "Dave Bronson": {
-        "change_pp": 9.0,
+        "change_pp": 10.0,
         "direction": "down",
         "reference_date": "2026-07-31",
         "reference_pct": 54.5,
+        "window": "2d"
+      },
+      "Treg Taylor": {
+        "change_pp": 9.5,
+        "direction": "up",
+        "reference_date": "2026-07-31",
+        "reference_pct": 16.0,
         "window": "2d"
       },
       "Bernadette Wilson": {
@@ -87,14 +96,14 @@
     },
     "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
       "Mary Peltola": {
-        "change_pp": 5.0,
+        "change_pp": 7.0,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 79.0,
         "window": "2d"
       },
       "Sen. Dan S. Sullivan": {
-        "change_pp": 7.4,
+        "change_pp": 11.7,
         "direction": "down",
         "reference_date": "2026-07-31",
         "reference_pct": 20.4,
@@ -103,30 +112,23 @@
     },
     "kansas-governor-democratic-primary-winner": {
       "Ethan Corson": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 8.0,
-        "window": "2d"
-      },
-      "Cindy Holscher": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-07-31",
-        "reference_pct": 92.0,
         "window": "2d"
       }
     },
     "kansas-governor-republican-primary-winner": {
       "Ty Masterson": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 84.0,
         "window": "2d"
       },
       "Philip Sarnecki": {
-        "change_pp": 4.1,
+        "change_pp": 4.15,
         "direction": "down",
         "reference_date": "2026-07-31",
         "reference_pct": 15.75,
@@ -144,21 +146,21 @@
     },
     "south-carolina-republican-senate-special-primary-winner-20260712135206676": {
       "Ralph Norman": {
-        "change_pp": 27.0,
+        "change_pp": 25.0,
         "direction": "down",
         "reference_date": "2026-07-31",
         "reference_pct": 42.5,
         "window": "2d"
       },
       "Russell Fry": {
-        "change_pp": 16.2,
+        "change_pp": 13.65,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 2.95,
         "window": "2d"
       },
       "Darline Graham Nordone": {
-        "change_pp": 10.15,
+        "change_pp": 11.3,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 51.95,
@@ -166,8 +168,15 @@
       }
     },
     "vermont-governor-democratic-primary-winner": {
+      "Aly Richards": {
+        "change_pp": 15.5,
+        "direction": "down",
+        "reference_date": "2026-07-31",
+        "reference_pct": 70.5,
+        "window": "2d"
+      },
       "Amanda Janoo": {
-        "change_pp": 4.35,
+        "change_pp": 7.75,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 25.1,
@@ -181,52 +190,43 @@
         "reference_date": "2026-07-31",
         "reference_pct": 40.5,
         "window": "2d"
-      },
-      "Mary Peltola": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-07-31",
-        "reference_pct": 60.5,
-        "window": "2d"
-      }
-    },
-    "montana-senate-election-winner": {
-      "Republican": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-07-31",
-        "reference_pct": 79.0,
-        "window": "2d"
-      }
-    },
-    "nebraska-senate-election-winner": {
-      "Republican": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-07-31",
-        "reference_pct": 71.0,
-        "window": "2d"
       }
     }
   },
   "by_market_id": {
+    "de-state:ST:AfD absolute majority": {
+      "Yes": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-07-31",
+        "reference_pct": 38.5,
+        "window": "2d"
+      },
+      "No": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-07-31",
+        "reference_pct": 61.5,
+        "window": "2d"
+      }
+    },
     "national:LV:Parliament:party_winner": {
       "AS": {
-        "change_pp": 8.85,
+        "change_pp": 11.35,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 43.45,
         "window": "2d"
       },
       "LPV": {
-        "change_pp": 14.5,
+        "change_pp": 16.5,
         "direction": "down",
         "reference_date": "2026-07-31",
         "reference_pct": 39.0,
         "window": "2d"
       },
       "SV": {
-        "change_pp": 6.9,
+        "change_pp": 6.55,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 4.95,
@@ -242,44 +242,37 @@
         "window": "2d"
       }
     },
-    "us-governor:AK": {
-      "Click Bishop": {
-        "change_pp": 5.3,
-        "direction": "down",
-        "reference_date": "2026-07-31",
-        "reference_pct": 7.3,
-        "window": "2d"
-      },
-      "Treg Taylor": {
-        "change_pp": 10.3,
-        "direction": "up",
-        "reference_date": "2026-07-31",
-        "reference_pct": 20.7,
-        "window": "2d"
-      },
-      "Jonathan Kreiss-Tomkins": {
-        "change_pp": 4.15,
-        "direction": "down",
-        "reference_date": "2026-07-31",
-        "reference_pct": 11.45,
-        "window": "2d"
-      }
-    },
     "us-governor:TN": {
       "Democrat": {
-        "change_pp": 5.25,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-07-31",
         "reference_pct": 8.25,
         "window": "2d"
       }
     },
+    "us-governor:WI": {
+      "Democrat": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-07-31",
+        "reference_pct": 55.5,
+        "window": "2d"
+      }
+    },
     "us-primary:AK:Governor": {
       "Dave Bronson": {
-        "change_pp": 9.0,
+        "change_pp": 10.0,
         "direction": "down",
         "reference_date": "2026-07-31",
         "reference_pct": 54.5,
+        "window": "2d"
+      },
+      "Treg Taylor": {
+        "change_pp": 9.5,
+        "direction": "up",
+        "reference_date": "2026-07-31",
+        "reference_pct": 16.0,
         "window": "2d"
       },
       "Bernadette Wilson": {
@@ -292,14 +285,14 @@
     },
     "us-primary:AK:Senate": {
       "Mary Peltola": {
-        "change_pp": 5.0,
+        "change_pp": 7.0,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 79.0,
         "window": "2d"
       },
       "Sen. Dan S. Sullivan": {
-        "change_pp": 7.4,
+        "change_pp": 11.7,
         "direction": "down",
         "reference_date": "2026-07-31",
         "reference_pct": 20.4,
@@ -308,30 +301,23 @@
     },
     "us-primary:KS:Governor:Democratic": {
       "Ethan Corson": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 8.0,
-        "window": "2d"
-      },
-      "Cindy Holscher": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-07-31",
-        "reference_pct": 92.0,
         "window": "2d"
       }
     },
     "us-primary:KS:Governor:Republican": {
       "Ty Masterson": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 84.0,
         "window": "2d"
       },
       "Philip Sarnecki": {
-        "change_pp": 4.1,
+        "change_pp": 4.15,
         "direction": "down",
         "reference_date": "2026-07-31",
         "reference_pct": 15.75,
@@ -349,21 +335,21 @@
     },
     "us-primary:SC:Senate:Republican": {
       "Ralph Norman": {
-        "change_pp": 27.0,
+        "change_pp": 25.0,
         "direction": "down",
         "reference_date": "2026-07-31",
         "reference_pct": 42.5,
         "window": "2d"
       },
       "Russell Fry": {
-        "change_pp": 16.2,
+        "change_pp": 13.65,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 2.95,
         "window": "2d"
       },
       "Darline Graham Nordone": {
-        "change_pp": 10.15,
+        "change_pp": 11.3,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 51.95,
@@ -371,8 +357,15 @@
       }
     },
     "us-primary:VT:Governor:Democratic": {
+      "Aly Richards": {
+        "change_pp": 15.5,
+        "direction": "down",
+        "reference_date": "2026-07-31",
+        "reference_pct": 70.5,
+        "window": "2d"
+      },
       "Amanda Janoo": {
-        "change_pp": 4.35,
+        "change_pp": 7.75,
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 25.1,
@@ -385,31 +378,6 @@
         "direction": "up",
         "reference_date": "2026-07-31",
         "reference_pct": 40.5,
-        "window": "2d"
-      },
-      "Mary Peltola": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-07-31",
-        "reference_pct": 60.5,
-        "window": "2d"
-      }
-    },
-    "us-senate:MT": {
-      "Republican": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-07-31",
-        "reference_pct": 79.0,
-        "window": "2d"
-      }
-    },
-    "us-senate:NE": {
-      "Republican": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-07-31",
-        "reference_pct": 71.0,
         "window": "2d"
       }
     }
