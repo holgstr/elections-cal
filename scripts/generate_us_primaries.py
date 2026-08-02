@@ -99,6 +99,12 @@ HOUSE_DISTRICT_PRIMARIES: list[dict[str, str]] = [
         "party": "Democratic",
         "date": "2026-08-04",
     },
+    {
+        "state_code": "WA",
+        "state": "Washington",
+        "office": "WA-03",
+        "date": "2026-08-04",
+    },
 ]
 
 # Special / replacement primaries beyond the regular statewide calendar.
@@ -128,24 +134,31 @@ def primary_entry(
     date: str,
     state: str,
     state_code: str,
-    party: str,
     office: str,
+    party: str | None = None,
 ) -> dict:
   office_label = "Governor" if office == "Governor" else office
-  return {
+  title = (
+      f"{party} {office_label} Primary"
+      if party
+      else f"{office_label} Primary"
+  )
+  entry = {
       "date": date,
       "date_precision": "exact",
       "country": "United States",
       "country_code": "US",
       "state": state,
       "state_code": state_code,
-      "title": f"{party} {office_label} Primary",
+      "title": title,
       "type": "primary",
       "level": "state",
       "groups": ["oecd"],
       "offices": [office],
-      "party": party,
   }
+  if party:
+      entry["party"] = party
+  return entry
 
 
 def runoff_entry(
@@ -227,7 +240,7 @@ def main() -> None:
                 date=race["date"],
                 state=race["state"],
                 state_code=race["state_code"],
-                party=race["party"],
+                party=race.get("party"),
                 office=race["office"],
             )
         )
