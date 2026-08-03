@@ -7,14 +7,14 @@
   "by_slug": {
     "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt": {
       "Yes": {
-        "change_pp": 6.5,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-08-01",
         "reference_pct": 35.5,
         "window": "2d"
       },
       "No": {
-        "change_pp": 6.5,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 64.5,
@@ -23,14 +23,14 @@
     },
     "latvian-parliamentary-election-winner": {
       "AS": {
-        "change_pp": 6.9,
+        "change_pp": 7.05,
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 50.25,
         "window": "2d"
       },
       "LPV": {
-        "change_pp": 12.0,
+        "change_pp": 10.0,
         "direction": "down",
         "reference_date": "2026-08-01",
         "reference_pct": 30.0,
@@ -46,9 +46,18 @@
         "window": "2d"
       }
     },
+    "alaska-governor-election-winner": {
+      "Treg Taylor": {
+        "change_pp": 4.15,
+        "direction": "up",
+        "reference_date": "2026-08-01",
+        "reference_pct": 21.3,
+        "window": "2d"
+      }
+    },
     "tennessee-governor-winner-2026": {
       "Democrat": {
-        "change_pp": 4.95,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-08-01",
         "reference_pct": 8.25,
@@ -56,15 +65,8 @@
       }
     },
     "wisconsin-governor-winner-2026": {
-      "Democrat": {
-        "change_pp": 6.5,
-        "direction": "down",
-        "reference_date": "2026-08-01",
-        "reference_pct": 55.5,
-        "window": "2d"
-      },
       "Republican": {
-        "change_pp": 6.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 45.0,
@@ -72,29 +74,15 @@
       }
     },
     "who-will-advance-from-the-alaska-governor-primary": {
-      "Bill Walker": {
-        "change_pp": 4.5,
-        "direction": "up",
-        "reference_date": "2026-08-01",
-        "reference_pct": 25.5,
-        "window": "2d"
-      },
       "Click Bishop": {
-        "change_pp": 5.5,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-01",
         "reference_pct": 40.5,
         "window": "2d"
       },
-      "Dave Bronson": {
-        "change_pp": 9.0,
-        "direction": "up",
-        "reference_date": "2026-08-01",
-        "reference_pct": 45.0,
-        "window": "2d"
-      },
       "Treg Taylor": {
-        "change_pp": 13.5,
+        "change_pp": 14.0,
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 16.0,
@@ -103,26 +91,26 @@
     },
     "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
       "Mary Peltola": {
-        "change_pp": 6.5,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 80.5,
+        "window": "2d"
+      },
+      "Sen. Dan S. Sullivan": {
+        "change_pp": 4.1,
+        "direction": "down",
+        "reference_date": "2026-08-01",
+        "reference_pct": 14.6,
         "window": "2d"
       }
     },
     "kansas-governor-democratic-primary-winner": {
       "Ethan Corson": {
-        "change_pp": 8.05,
+        "change_pp": 4.8,
         "direction": "down",
         "reference_date": "2026-08-01",
         "reference_pct": 13.0,
-        "window": "2d"
-      },
-      "Cindy Holscher": {
-        "change_pp": 7.5,
-        "direction": "up",
-        "reference_date": "2026-08-01",
-        "reference_pct": 86.0,
         "window": "2d"
       }
     },
@@ -142,28 +130,12 @@
         "window": "2d"
       }
     },
-    "mo-01-democratic-primary-winner": {
-      "Wesley Bell": {
-        "change_pp": 5.0,
+    "minnesota-governor-republican-primary-winner": {
+      "Lisa Demuth": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-01",
-        "reference_pct": 69.5,
-        "window": "2d"
-      },
-      "Cori Bush": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-08-01",
-        "reference_pct": 31.5,
-        "window": "2d"
-      }
-    },
-    "rhode-island-governor-democratic-primary-winner": {
-      "Helena Foulkes": {
-        "change_pp": 4.4,
-        "direction": "up",
-        "reference_date": "2026-08-01",
-        "reference_pct": 84.1,
+        "reference_pct": 26.0,
         "window": "2d"
       }
     },
@@ -185,7 +157,7 @@
     },
     "wyoming-governor-republican-primary-winner": {
       "Eric Barlow": {
-        "change_pp": 4.9,
+        "change_pp": 7.2,
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 51.6,
@@ -200,19 +172,28 @@
         "reference_pct": 40.5,
         "window": "2d"
       }
+    },
+    "georgia-senate-election-winner": {
+      "Republican": {
+        "change_pp": 5.9,
+        "direction": "down",
+        "reference_date": "2026-08-01",
+        "reference_pct": 10.15,
+        "window": "2d"
+      }
     }
   },
   "by_market_id": {
     "de-state:ST:AfD absolute majority": {
       "Yes": {
-        "change_pp": 6.5,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-08-01",
         "reference_pct": 35.5,
         "window": "2d"
       },
       "No": {
-        "change_pp": 6.5,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 64.5,
@@ -221,14 +202,14 @@
     },
     "national:LV:Parliament:party_winner": {
       "AS": {
-        "change_pp": 6.9,
+        "change_pp": 7.05,
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 50.25,
         "window": "2d"
       },
       "LPV": {
-        "change_pp": 12.0,
+        "change_pp": 10.0,
         "direction": "down",
         "reference_date": "2026-08-01",
         "reference_pct": 30.0,
@@ -244,9 +225,18 @@
         "window": "2d"
       }
     },
+    "us-governor:AK": {
+      "Treg Taylor": {
+        "change_pp": 4.15,
+        "direction": "up",
+        "reference_date": "2026-08-01",
+        "reference_pct": 21.3,
+        "window": "2d"
+      }
+    },
     "us-governor:TN": {
       "Democrat": {
-        "change_pp": 4.95,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-08-01",
         "reference_pct": 8.25,
@@ -254,15 +244,8 @@
       }
     },
     "us-governor:WI": {
-      "Democrat": {
-        "change_pp": 6.5,
-        "direction": "down",
-        "reference_date": "2026-08-01",
-        "reference_pct": 55.5,
-        "window": "2d"
-      },
       "Republican": {
-        "change_pp": 6.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 45.0,
@@ -270,29 +253,15 @@
       }
     },
     "us-primary:AK:Governor": {
-      "Bill Walker": {
-        "change_pp": 4.5,
-        "direction": "up",
-        "reference_date": "2026-08-01",
-        "reference_pct": 25.5,
-        "window": "2d"
-      },
       "Click Bishop": {
-        "change_pp": 5.5,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-01",
         "reference_pct": 40.5,
         "window": "2d"
       },
-      "Dave Bronson": {
-        "change_pp": 9.0,
-        "direction": "up",
-        "reference_date": "2026-08-01",
-        "reference_pct": 45.0,
-        "window": "2d"
-      },
       "Treg Taylor": {
-        "change_pp": 13.5,
+        "change_pp": 14.0,
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 16.0,
@@ -301,26 +270,26 @@
     },
     "us-primary:AK:Senate": {
       "Mary Peltola": {
-        "change_pp": 6.5,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 80.5,
+        "window": "2d"
+      },
+      "Sen. Dan S. Sullivan": {
+        "change_pp": 4.1,
+        "direction": "down",
+        "reference_date": "2026-08-01",
+        "reference_pct": 14.6,
         "window": "2d"
       }
     },
     "us-primary:KS:Governor:Democratic": {
       "Ethan Corson": {
-        "change_pp": 8.05,
+        "change_pp": 4.8,
         "direction": "down",
         "reference_date": "2026-08-01",
         "reference_pct": 13.0,
-        "window": "2d"
-      },
-      "Cindy Holscher": {
-        "change_pp": 7.5,
-        "direction": "up",
-        "reference_date": "2026-08-01",
-        "reference_pct": 86.0,
         "window": "2d"
       }
     },
@@ -340,28 +309,12 @@
         "window": "2d"
       }
     },
-    "us-primary:MO:MO-01:Democratic": {
-      "Wesley Bell": {
-        "change_pp": 5.0,
+    "us-primary:MN:Governor:Republican": {
+      "Lisa Demuth": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-01",
-        "reference_pct": 69.5,
-        "window": "2d"
-      },
-      "Cori Bush": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-08-01",
-        "reference_pct": 31.5,
-        "window": "2d"
-      }
-    },
-    "us-primary:RI:Governor:Democratic": {
-      "Helena Foulkes": {
-        "change_pp": 4.4,
-        "direction": "up",
-        "reference_date": "2026-08-01",
-        "reference_pct": 84.1,
+        "reference_pct": 26.0,
         "window": "2d"
       }
     },
@@ -383,7 +336,7 @@
     },
     "us-primary:WY:Governor:Republican": {
       "Eric Barlow": {
-        "change_pp": 4.9,
+        "change_pp": 7.2,
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 51.6,
@@ -396,6 +349,15 @@
         "direction": "up",
         "reference_date": "2026-08-01",
         "reference_pct": 40.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:GA": {
+      "Republican": {
+        "change_pp": 5.9,
+        "direction": "down",
+        "reference_date": "2026-08-01",
+        "reference_pct": 10.15,
         "window": "2d"
       }
     }
