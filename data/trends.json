@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T12:01:07Z",
+  "generated_at": "2026-08-03T15:32:59Z",
   "source": "google_trends",
   "races": [
     {
@@ -12204,8 +12204,8 @@
       "geo": "US-MN",
       "window_days": 30,
       "window_mode": "trailing",
-      "start_date": "2026-07-03",
-      "end_date": "2026-08-02",
+      "start_date": "2026-07-04",
+      "end_date": "2026-08-03",
       "candidates": [
         {
           "keyword": "/m/0t5wz49",
@@ -12230,23 +12230,16 @@
       ],
       "series": [
         {
-          "date": "2026-07-03",
+          "date": "2026-07-04",
           "values": {
             "/m/0t5wz49": 0,
             "/g/11gzs6y5kz": 0
           }
         },
         {
-          "date": "2026-07-04",
-          "values": {
-            "/m/0t5wz49": 0,
-            "/g/11gzs6y5kz": 26
-          }
-        },
-        {
           "date": "2026-07-05",
           "values": {
-            "/m/0t5wz49": 0,
+            "/m/0t5wz49": 37,
             "/g/11gzs6y5kz": 0
           }
         },
@@ -12260,7 +12253,7 @@
         {
           "date": "2026-07-07",
           "values": {
-            "/m/0t5wz49": 28,
+            "/m/0t5wz49": 0,
             "/g/11gzs6y5kz": 0
           }
         },
@@ -12268,14 +12261,14 @@
           "date": "2026-07-08",
           "values": {
             "/m/0t5wz49": 0,
-            "/g/11gzs6y5kz": 22
+            "/g/11gzs6y5kz": 0
           }
         },
         {
           "date": "2026-07-09",
           "values": {
             "/m/0t5wz49": 0,
-            "/g/11gzs6y5kz": 24
+            "/g/11gzs6y5kz": 0
           }
         },
         {
@@ -12303,55 +12296,55 @@
           "date": "2026-07-13",
           "values": {
             "/m/0t5wz49": 0,
-            "/g/11gzs6y5kz": 25
+            "/g/11gzs6y5kz": 0
           }
         },
         {
           "date": "2026-07-14",
           "values": {
             "/m/0t5wz49": 0,
-            "/g/11gzs6y5kz": 0
+            "/g/11gzs6y5kz": 23
           }
         },
         {
           "date": "2026-07-15",
           "values": {
-            "/m/0t5wz49": 97,
-            "/g/11gzs6y5kz": 28
+            "/m/0t5wz49": 100,
+            "/g/11gzs6y5kz": 29
           }
         },
         {
           "date": "2026-07-16",
           "values": {
-            "/m/0t5wz49": 81,
+            "/m/0t5wz49": 79,
             "/g/11gzs6y5kz": 0
           }
         },
         {
           "date": "2026-07-17",
           "values": {
-            "/m/0t5wz49": 69,
-            "/g/11gzs6y5kz": 38
+            "/m/0t5wz49": 62,
+            "/g/11gzs6y5kz": 37
           }
         },
         {
           "date": "2026-07-18",
           "values": {
-            "/m/0t5wz49": 82,
-            "/g/11gzs6y5kz": 0
+            "/m/0t5wz49": 84,
+            "/g/11gzs6y5kz": 31
           }
         },
         {
           "date": "2026-07-19",
           "values": {
-            "/m/0t5wz49": 100,
-            "/g/11gzs6y5kz": 21
+            "/m/0t5wz49": 0,
+            "/g/11gzs6y5kz": 0
           }
         },
         {
           "date": "2026-07-20",
           "values": {
-            "/m/0t5wz49": 43,
+            "/m/0t5wz49": 42,
             "/g/11gzs6y5kz": 24
           }
         },
@@ -12365,22 +12358,22 @@
         {
           "date": "2026-07-22",
           "values": {
-            "/m/0t5wz49": 43,
+            "/m/0t5wz49": 44,
             "/g/11gzs6y5kz": 24
           }
         },
         {
           "date": "2026-07-23",
           "values": {
-            "/m/0t5wz49": 48,
+            "/m/0t5wz49": 47,
             "/g/11gzs6y5kz": 21
           }
         },
         {
           "date": "2026-07-24",
           "values": {
-            "/m/0t5wz49": 33,
-            "/g/11gzs6y5kz": 25
+            "/m/0t5wz49": 34,
+            "/g/11gzs6y5kz": 24
           }
         },
         {
@@ -12401,7 +12394,7 @@
           "date": "2026-07-27",
           "values": {
             "/m/0t5wz49": 27,
-            "/g/11gzs6y5kz": 22
+            "/g/11gzs6y5kz": 23
           }
         },
         {
@@ -12414,41 +12407,48 @@
         {
           "date": "2026-07-29",
           "values": {
-            "/m/0t5wz49": 21,
-            "/g/11gzs6y5kz": 25
+            "/m/0t5wz49": 20,
+            "/g/11gzs6y5kz": 24
           }
         },
         {
           "date": "2026-07-30",
           "values": {
             "/m/0t5wz49": 26,
-            "/g/11gzs6y5kz": 25
+            "/g/11gzs6y5kz": 24
           }
         },
         {
           "date": "2026-07-31",
           "values": {
-            "/m/0t5wz49": 38,
-            "/g/11gzs6y5kz": 26
+            "/m/0t5wz49": 39,
+            "/g/11gzs6y5kz": 25
           }
         },
         {
           "date": "2026-08-01",
           "values": {
             "/m/0t5wz49": 57,
-            "/g/11gzs6y5kz": 25
+            "/g/11gzs6y5kz": 26
           }
         },
         {
           "date": "2026-08-02",
           "values": {
-            "/m/0t5wz49": 37,
+            "/m/0t5wz49": 40,
+            "/g/11gzs6y5kz": 18
+          }
+        },
+        {
+          "date": "2026-08-03",
+          "values": {
+            "/m/0t5wz49": 33,
             "/g/11gzs6y5kz": 17
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-02T19:39:16Z"
+      "fetched_at": "2026-08-03T15:32:59Z"
     },
     {
       "id": "nj-governor-2025",
@@ -13306,8 +13306,8 @@
       "geo": "US-MI",
       "window_days": 30,
       "window_mode": "trailing",
-      "start_date": "2026-07-03",
-      "end_date": "2026-08-02",
+      "start_date": "2026-07-04",
+      "end_date": "2026-08-03",
       "candidates": [
         {
           "keyword": "Bridget Brink",
@@ -13339,14 +13339,6 @@
         }
       ],
       "series": [
-        {
-          "date": "2026-07-03",
-          "values": {
-            "Bridget Brink": 0,
-            "William Lawrence": 0,
-            "Matt Maasdam": 0
-          }
-        },
         {
           "date": "2026-07-04",
           "values": {
@@ -13470,130 +13462,134 @@
         {
           "date": "2026-07-19",
           "values": {
-            "Bridget Brink": 31,
-            "William Lawrence": 46,
+            "Bridget Brink": 0,
+            "William Lawrence": 0,
             "Matt Maasdam": 0
           }
         },
         {
           "date": "2026-07-20",
           "values": {
-            "Bridget Brink": 38,
-            "William Lawrence": 84,
-            "Matt Maasdam": 41
+            "Bridget Brink": 31,
+            "William Lawrence": 58,
+            "Matt Maasdam": 28
           }
         },
         {
           "date": "2026-07-21",
           "values": {
-            "Bridget Brink": 43,
-            "William Lawrence": 49,
-            "Matt Maasdam": 19
+            "Bridget Brink": 29,
+            "William Lawrence": 38,
+            "Matt Maasdam": 15
           }
         },
         {
           "date": "2026-07-22",
           "values": {
-            "Bridget Brink": 37,
-            "William Lawrence": 44,
-            "Matt Maasdam": 28
+            "Bridget Brink": 25,
+            "William Lawrence": 33,
+            "Matt Maasdam": 18
           }
         },
         {
           "date": "2026-07-23",
           "values": {
-            "Bridget Brink": 47,
-            "William Lawrence": 62,
-            "Matt Maasdam": 40
+            "Bridget Brink": 26,
+            "William Lawrence": 44,
+            "Matt Maasdam": 28
           }
         },
         {
           "date": "2026-07-24",
           "values": {
-            "Bridget Brink": 35,
-            "William Lawrence": 50,
-            "Matt Maasdam": 27
+            "Bridget Brink": 24,
+            "William Lawrence": 34,
+            "Matt Maasdam": 16
           }
         },
         {
           "date": "2026-07-25",
           "values": {
-            "Bridget Brink": 40,
-            "William Lawrence": 89,
-            "Matt Maasdam": 54
+            "Bridget Brink": 24,
+            "William Lawrence": 60,
+            "Matt Maasdam": 41
           }
         },
         {
           "date": "2026-07-26",
           "values": {
-            "Bridget Brink": 54,
-            "William Lawrence": 90,
-            "Matt Maasdam": 54
+            "Bridget Brink": 37,
+            "William Lawrence": 64,
+            "Matt Maasdam": 38
           }
         },
         {
           "date": "2026-07-27",
           "values": {
-            "Bridget Brink": 44,
-            "William Lawrence": 53,
-            "Matt Maasdam": 78
+            "Bridget Brink": 33,
+            "William Lawrence": 37,
+            "Matt Maasdam": 56
           }
         },
         {
           "date": "2026-07-28",
           "values": {
-            "Bridget Brink": 53,
-            "William Lawrence": 72,
-            "Matt Maasdam": 98
+            "Bridget Brink": 39,
+            "William Lawrence": 51,
+            "Matt Maasdam": 70
           }
         },
         {
           "date": "2026-07-29",
           "values": {
-            "Bridget Brink": 60,
-            "William Lawrence": 77,
-            "Matt Maasdam": 100
+            "Bridget Brink": 49,
+            "William Lawrence": 60,
+            "Matt Maasdam": 76
           }
         },
         {
           "date": "2026-07-30",
           "values": {
-            "Bridget Brink": 54,
-            "William Lawrence": 75,
-            "Matt Maasdam": 82
+            "Bridget Brink": 36,
+            "William Lawrence": 56,
+            "Matt Maasdam": 59
           }
         },
         {
           "date": "2026-07-31",
           "values": {
-            "Bridget Brink": 51,
-            "William Lawrence": 92,
-            "Matt Maasdam": 83
+            "Bridget Brink": 35,
+            "William Lawrence": 66,
+            "Matt Maasdam": 60
           }
         },
         {
           "date": "2026-08-01",
           "values": {
-            "Bridget Brink": 57,
-            "William Lawrence": 70,
-            "Matt Maasdam": 74
+            "Bridget Brink": 44,
+            "William Lawrence": 56,
+            "Matt Maasdam": 50
           }
         },
         {
           "date": "2026-08-02",
           "values": {
-            "Bridget Brink": 47,
-            "William Lawrence": 74,
-            "Matt Maasdam": 67
+            "Bridget Brink": 35,
+            "William Lawrence": 57,
+            "Matt Maasdam": 59
+          }
+        },
+        {
+          "date": "2026-08-03",
+          "values": {
+            "Bridget Brink": 74,
+            "William Lawrence": 100,
+            "Matt Maasdam": 94
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-02T17:26:48Z",
-      "stale": {
-        "reason": "fetch_failed",
-        "data_as_of": "2026-08-03T04:07:51Z"
-      }
+      "fetched_at": "2026-08-03T15:32:27Z"
     },
     {
       "id": "wa-cd3-primary-2026",
@@ -13932,8 +13928,5 @@
       "watchlist": true,
       "fetched_at": "2026-08-02T23:31:21Z"
     }
-  ],
-  "errors": [
-    "mi-cd7-dem-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-07-04+2026-08-03%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-MI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22BROAD%22%2C%22value%22%3A%22Bridget+Brink%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22BROAD%22%2C%22value%22%3A%22William+Lawrence%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-MI%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22BROAD%22%2C%22value%22%3A%22Matt+Maasdam%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAanHTnwl1aZELYuz5srfV4zC3zaTYiU2O: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"2QQC1KX3Lmltqamoo4iIdw\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222"
   ]
 }
