@@ -1240,6 +1240,24 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
   pointer-events: none;
 }
 
+.trends-lm-line {
+  stroke: var(--text);
+  stroke-width: 1.75;
+  stroke-opacity: 0.72;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+
+.trends-lm-r2 {
+  fill: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+
 .trends-axis-title {
   fill: var(--muted);
   font-size: 11px;
