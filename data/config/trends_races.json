@@ -1076,68 +1076,6 @@
     }
   },
   {
-    "id": "sd-gop-governor-primary-2026",
-    "title": "South Dakota Republican Governor Primary",
-    "election_date": "2026-06-02",
-    "country_code": "US",
-    "state_code": "SD",
-    "geo": "US-SD",
-    "window_days": 30,
-    "keywords": [
-      {
-        "name": "Toby Doeden",
-        "label": "Doeden",
-        "mid": "/g/11xdvcdxyv",
-        "topic_title": "Toby Doeden",
-        "topic_type": "Business professional"
-      },
-      {
-        "name": "Larry Rhoden",
-        "label": "Rhoden",
-        "mid": "/m/0wxw0gy",
-        "topic_title": "Larry Rhoden",
-        "topic_type": "Governor of South Dakota"
-      },
-      {
-        "name": "Dusty Johnson",
-        "label": "Johnson",
-        "mid": "/g/11dyzlcnbr",
-        "topic_title": "Dusty Johnson",
-        "topic_type": "United States Representative"
-      },
-      {
-        "name": "Jon Hansen",
-        "label": "Hansen",
-        "mid": "/g/11hyj8c2x8",
-        "topic_title": "Jon Hansen",
-        "topic_type": "South Dakota State Representative"
-      }
-    ],
-    "result": {
-      "status": "preliminary",
-      "as_of": "2026-07-15",
-      "source": "Decision Desk HQ / Associated Press / state election agencies",
-      "candidates": [
-        {
-          "label": "Doeden",
-          "pct": 30.6
-        },
-        {
-          "label": "Rhoden",
-          "pct": 25.2
-        },
-        {
-          "label": "Johnson",
-          "pct": 23.4
-        },
-        {
-          "label": "Hansen",
-          "pct": 20.8
-        }
-      ]
-    }
-  },
-  {
     "id": "ky-gop-senate-primary-2026",
     "title": "Kentucky Republican Senate Primary",
     "election_date": "2026-05-19",
