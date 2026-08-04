@@ -1,4 +1,4 @@
-import { fitLinearModel, fitRootModel } from "../js/trends.js";
+import { fitLinearModel, fitPlateauModel } from "../js/trends.js";
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -63,34 +63,48 @@ assert(constantY, "constant y still fits");
 assertClose(constantY.slope, 0, 1e-9, "flat slope");
 assertClose(constantY.r2, 1, 1e-9, "constant y R² treated as 1");
 
-const rootPerfect = fitRootModel([
+assert(fitPlateauModel(null) === null, "plateau null points");
+assert(fitPlateauModel([]) === null, "plateau empty points");
+assert(fitPlateauModel([{ x: 1, y: 2 }]) === null, "plateau single point");
+
+// Rising through x=2 then flat at y=5 for x>=2: y = 1 + 2·min(x, 2)
+const plateauPerfect = fitPlateauModel([
   { x: 0, y: 1 },
-  { x: 4, y: 5 },
-  { x: 9, y: 7 },
-  { x: 16, y: 9 },
-]);
-assert(rootPerfect, "perfect root fit");
-assertClose(rootPerfect.slope, 2, 1e-9, "root slope on √x");
-assertClose(rootPerfect.intercept, 1, 1e-9, "root intercept");
-assertClose(rootPerfect.r2, 1, 1e-9, "root R²");
-assertClose(rootPerfect.predict(25), 11, 1e-9, "root predict at 25");
-
-assert(
-  fitRootModel([
-    { x: -1, y: 1 },
-    { x: -4, y: 2 },
-  ]) === null,
-  "negative x dropped for root"
-);
-
-const rootSkipsNeg = fitRootModel([
-  { x: -9, y: 99 },
   { x: 1, y: 3 },
+  { x: 2, y: 5 },
+  { x: 3, y: 5 },
   { x: 4, y: 5 },
-  { x: 9, y: 7 },
 ]);
-assert(rootSkipsNeg, "root ignores negatives");
-assert(rootSkipsNeg.n === 3, "root finite non-neg n");
-assertClose(rootSkipsNeg.r2, 1, 1e-9, "root skip-neg R²");
+assert(plateauPerfect, "perfect plateau fit");
+assertClose(plateauPerfect.slope, 2, 1e-9, "plateau rising slope");
+assertClose(plateauPerfect.intercept, 1, 1e-9, "plateau intercept");
+assertClose(plateauPerfect.breakpoint, 2, 1e-9, "plateau breakpoint");
+assertClose(plateauPerfect.r2, 1, 1e-9, "plateau R²");
+assertClose(plateauPerfect.predict(1.5), 4, 1e-9, "plateau predict below break");
+assertClose(plateauPerfect.predict(10), 5, 1e-9, "plateau predict above break");
+
+// Pure line should still fit (breakpoint lands at max x).
+const plateauAsLine = fitPlateauModel([
+  { x: 0, y: 1 },
+  { x: 1, y: 3 },
+  { x: 2, y: 5 },
+]);
+assert(plateauAsLine, "plateau on pure line");
+assertClose(plateauAsLine.r2, 1, 1e-9, "plateau-as-line R²");
+assertClose(plateauAsLine.predict(2), 5, 1e-9, "plateau-as-line predict");
+
+const plateauSkipsBad = fitPlateauModel([
+  { x: Number.NaN, y: 99 },
+  { x: 0, y: 1 },
+  { x: 1, y: 3 },
+  { x: 2, y: 5 },
+  { x: 4, y: null },
+  { x: 3, y: 5 },
+  { x: 4, y: 5 },
+]);
+assert(plateauSkipsBad, "plateau ignores non-finite");
+assert(plateauSkipsBad.n === 5, "plateau finite-only n");
+assertClose(plateauSkipsBad.breakpoint, 2, 1e-9, "plateau skip-bad breakpoint");
+assertClose(plateauSkipsBad.r2, 1, 1e-9, "plateau skip-bad R²");
 
 console.log("test_trends_lm_fit: ok");
