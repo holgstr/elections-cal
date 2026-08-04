@@ -22,6 +22,8 @@ const SCATTER = {
   pad: { top: 18, right: 18, bottom: 44, left: 48 },
 };
 
+let scatterClipSeq = 0;
+
 let trendsData = null;
 let selectedRaceId = null;
 let selectedWatchlistRaceId = null;
@@ -33,6 +35,61 @@ let trendsRoundFilter = "all";
 let trendsOfficeFilter = "all";
 /** Shared Trends subset: "all" | "Primary" | "General" */
 let trendsStageFilter = "all";
+/** Scatter overlay params: "off" | "LM" */
+let trendsParamsFilter = "off";
+
+/**
+ * Ordinary least-squares fit of y ~ x for scatter points.
+ * Uses only finite numeric x/y values (the races currently shown).
+ * @returns {{ slope: number, intercept: number, r2: number, n: number } | null}
+ */
+export function fitLinearModel(points) {
+  const rows = (points || []).filter(
+    (point) =>
+      typeof point?.x === "number" &&
+      Number.isFinite(point.x) &&
+      typeof point?.y === "number" &&
+      Number.isFinite(point.y)
+  );
+  const n = rows.length;
+  if (n < 2) return null;
+
+  let sumX = 0;
+  let sumY = 0;
+  let sumXX = 0;
+  let sumXY = 0;
+  for (const { x, y } of rows) {
+    sumX += x;
+    sumY += y;
+    sumXX += x * x;
+    sumXY += x * y;
+  }
+
+  const denom = n * sumXX - sumX * sumX;
+  if (!(Math.abs(denom) > 1e-12)) return null;
+
+  const slope = (n * sumXY - sumX * sumY) / denom;
+  const intercept = (sumY - slope * sumX) / n;
+
+  const meanY = sumY / n;
+  let ssTot = 0;
+  let ssRes = 0;
+  for (const { x, y } of rows) {
+    const fitted = slope * x + intercept;
+    ssTot += (y - meanY) ** 2;
+    ssRes += (y - fitted) ** 2;
+  }
+  if (!(ssTot > 1e-12)) {
+    return { slope, intercept, r2: 1, n };
+  }
+  const r2 = Math.max(0, Math.min(1, 1 - ssRes / ssTot));
+  return { slope, intercept, r2, n };
+}
+
+function formatR2(r2) {
+  if (typeof r2 !== "number" || !Number.isFinite(r2)) return "";
+  return r2.toFixed(2);
+}
 
 export async function loadTrendsData(fetcher = fetchJson) {
   try {
@@ -664,10 +721,19 @@ function buildTrendsFilterGroup(ariaLabel, attr, options, selected) {
   `;
 }
 
-/** Compact Dem/GOP + R1/R2 + Senate/House/Gov + Primary/General controls. */
+/** Compact Params + Dem/GOP + R1/R2 + Senate/House/Gov + Primary/General controls. */
 function buildTrendsFilters() {
   return `
     <div class="trends-filters" aria-label="Filter races">
+      ${buildTrendsFilterGroup(
+        "Params",
+        "trends-params",
+        [
+          ["off", "Off"],
+          ["LM", "LM"],
+        ],
+        trendsParamsFilter
+      )}
       ${buildTrendsFilterGroup(
         "Party",
         "trends-party",
@@ -1144,6 +1210,9 @@ function buildScatterSvg(
     pad.top +
     plotH -
     ((Math.max(yDomain.min, Math.min(yDomain.max, value)) - yDomain.min) / ySpan) * plotH;
+  // Unclamped mapping so the LM line can exit the plot box and be clipped.
+  const xToPx = (value) => pad.left + ((value - xDomain.min) / xSpan) * plotW;
+  const yToPx = (value) => pad.top + plotH - ((value - yDomain.min) / ySpan) * plotH;
 
   const xTicks = xDomain.ticks?.length ? xDomain.ticks : niceTicks(xDomain.min, xDomain.max);
   const yTicks = yDomain.ticks?.length ? yDomain.ticks : niceTicks(yDomain.min, yDomain.max);
@@ -1166,6 +1235,39 @@ function buildScatterSvg(
     })
     .join("");
   const grid = `${hGrid}${vGrid}`;
+
+  const showLm = trendsParamsFilter === "LM";
+  const lm = showLm ? fitLinearModel(points) : null;
+  const clipId = `trends-scatter-clip-${++scatterClipSeq}`;
+  let lmMarkup = "";
+  if (lm) {
+    const x0 = xDomain.min;
+    const x1 = xDomain.max;
+    const y0 = lm.slope * x0 + lm.intercept;
+    const y1 = lm.slope * x1 + lm.intercept;
+    lmMarkup = `
+      <defs>
+        <clipPath id="${clipId}">
+          <rect x="${pad.left}" y="${pad.top}" width="${plotW}" height="${plotH}" />
+        </clipPath>
+      </defs>
+      <g clip-path="url(#${clipId})">
+        <line
+          class="trends-lm-line"
+          x1="${xToPx(x0).toFixed(1)}"
+          y1="${yToPx(y0).toFixed(1)}"
+          x2="${xToPx(x1).toFixed(1)}"
+          y2="${yToPx(y1).toFixed(1)}"
+        />
+      </g>
+      <text
+        class="trends-lm-r2"
+        x="${width - pad.right}"
+        y="${pad.top + 14}"
+        text-anchor="end"
+      >R² = ${escapeHtml(formatR2(lm.r2))}</text>
+    `;
+  }
 
   const dots = points
     .map((point, index) => {
@@ -1223,6 +1325,7 @@ function buildScatterSvg(
   return `
     <svg class="trends-chart trends-scatter-chart" viewBox="0 0 ${width} ${height}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" data-scatter-root>
       ${grid}
+      ${lmMarkup}
       ${dots}
       ${labels}
       <text class="trends-axis-title" x="${pad.left + plotW / 2}" y="${height - 2}" text-anchor="middle">${escapeHtml(xLabel)}</text>
@@ -1251,7 +1354,7 @@ function buildCorrelationPanel(races) {
         <h3 class="trends-card-title">Search share vs result</h3>
         <details class="trends-card-explain">
           <summary>About this chart</summary>
-          <p class="trends-card-meta">Each point is one race’s tracked winner: search share vs result (rescaled to 100%). Circles = R1; squares = R2. Green = search share also picked the winner; red = miss. Omits primaries that clearly do not decide who wins the office.</p>
+          <p class="trends-card-meta">Each point is one race’s tracked winner: search share vs result (rescaled to 100%). Circles = R1; squares = R2. Green = search share also picked the winner; red = miss. Omits primaries that clearly do not decide who wins the office. With Params → LM, an OLS line is fit to the filtered points and R² is shown.</p>
         </details>
       </header>
       <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root="correlation">
@@ -1286,7 +1389,7 @@ function buildLeadDaysMarginPanel(races) {
         <h3 class="trends-card-title">Daily search lead vs margin</h3>
         <details class="trends-card-explain">
           <summary>About this chart</summary>
-          <p class="trends-card-meta">Each point is one race: exponentially weighted share of the ${shareDays} pre-election days the eventual winner led on relative search interest (recent days count more; half-life ${LEAD_DAY_WEIGHT_HALF_LIFE}d), versus that winner’s two-way margin (pp) against the runner-up among tracked candidates. Circles = R1; squares = R2. Green = weighted lead share over 50%; red = not.</p>
+          <p class="trends-card-meta">Each point is one race: exponentially weighted share of the ${shareDays} pre-election days the eventual winner led on relative search interest (recent days count more; half-life ${LEAD_DAY_WEIGHT_HALF_LIFE}d), versus that winner’s two-way margin (pp) against the runner-up among tracked candidates. Circles = R1; squares = R2. Green = weighted lead share over 50%; red = not. With Params → LM, an OLS line is fit to the filtered points and R² is shown.</p>
         </details>
       </header>
       <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root="lead-margin">
@@ -1408,6 +1511,14 @@ function raceSelectOptions(races, selectedId) {
 }
 
 function bindTrendsFilterInteractions(container) {
+  for (const btn of container.querySelectorAll("[data-trends-params]")) {
+    btn.addEventListener("click", () => {
+      const next = btn.getAttribute("data-trends-params");
+      if (!next || next === trendsParamsFilter) return;
+      trendsParamsFilter = next;
+      renderTrends(container);
+    });
+  }
   for (const btn of container.querySelectorAll("[data-trends-party]")) {
     btn.addEventListener("click", () => {
       const next = btn.getAttribute("data-trends-party");
