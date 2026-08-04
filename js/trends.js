@@ -35,7 +35,7 @@ let trendsRoundFilter = "all";
 let trendsOfficeFilter = "all";
 /** Shared Trends subset: "all" | "Primary" | "General" */
 let trendsStageFilter = "all";
-/** Scatter overlay params: "off" | "LM" | "Root" */
+/** Scatter overlay params: "off" | "LM" | "Plateau" */
 let trendsParamsFilter = "off";
 
 /**
@@ -95,11 +95,55 @@ export function fitLinearModel(points, { transformX } = {}) {
   return { slope, intercept, r2, n, predict };
 }
 
-/** OLS of y ~ a + b√x (non-negative x only). */
-export function fitRootModel(points) {
-  return fitLinearModel(points, {
-    transformX: (x) => (x < 0 ? Number.NaN : Math.sqrt(x)),
-  });
+/**
+ * Linear-then-flat fit: y = a + b·min(x, c), with breakpoint c estimated
+ * by grid search over observed x values (maximizing R²).
+ * Rising segment is ordinary linear; above c the prediction stays at a + b·c.
+ * @returns {{ slope: number, intercept: number, breakpoint: number, r2: number, n: number, predict: (x: number) => number } | null}
+ */
+export function fitPlateauModel(points) {
+  const xs = [];
+  for (const point of points || []) {
+    if (
+      typeof point?.x !== "number" ||
+      !Number.isFinite(point.x) ||
+      typeof point?.y !== "number" ||
+      !Number.isFinite(point.y)
+    ) {
+      continue;
+    }
+    xs.push(point.x);
+  }
+  if (xs.length < 2) return null;
+
+  const uniqueX = [...new Set(xs)].sort((a, b) => a - b);
+  // Need at least two distinct x so min(x, c) can vary for some c.
+  if (uniqueX.length < 2) return null;
+
+  let best = null;
+  // Candidates from the second-smallest unique x through max (c = min makes z constant).
+  for (let i = 1; i < uniqueX.length; i++) {
+    const breakpoint = uniqueX[i];
+    const fit = fitLinearModel(points, {
+      transformX: (x) => Math.min(x, breakpoint),
+    });
+    if (!fit) continue;
+    if (
+      !best ||
+      fit.r2 > best.r2 + 1e-15 ||
+      (Math.abs(fit.r2 - best.r2) <= 1e-15 && breakpoint < best.breakpoint)
+    ) {
+      best = {
+        slope: fit.slope,
+        intercept: fit.intercept,
+        breakpoint,
+        r2: fit.r2,
+        n: fit.n,
+        predict: fit.predict,
+      };
+    }
+  }
+  return best;
 }
 
 function formatR2(r2) {
@@ -109,7 +153,7 @@ function formatR2(r2) {
 
 function fitScatterOverlay(points) {
   if (trendsParamsFilter === "LM") return fitLinearModel(points);
-  if (trendsParamsFilter === "Root") return fitRootModel(points);
+  if (trendsParamsFilter === "Plateau") return fitPlateauModel(points);
   return null;
 }
 
@@ -794,7 +838,7 @@ function buildTrendsFilters() {
         [
           ["off", "Off"],
           ["LM", "LM"],
-          ["Root", "Root"],
+          ["Plateau", "Plateau"],
         ],
         trendsParamsFilter
       )}
@@ -1263,25 +1307,28 @@ function buildScatterSvg(
   const clipId = `trends-scatter-clip-${++scatterClipSeq}`;
   let fitMarkup = "";
   if (fit) {
-    const curved = trendsParamsFilter === "Root";
+    const plateau =
+      trendsParamsFilter === "Plateau" &&
+      typeof fit.breakpoint === "number" &&
+      Number.isFinite(fit.breakpoint);
     let geometry = "";
-    if (curved) {
-      const xStart = Math.max(0, xDomain.min);
-      const xEnd = Math.max(xStart, xDomain.max);
-      const steps = 48;
-      const coords = [];
-      for (let i = 0; i <= steps; i++) {
-        const x = xStart + ((xEnd - xStart) * i) / steps;
-        const y = fit.predict(x);
-        if (!Number.isFinite(y)) continue;
-        coords.push(`${xToPx(x).toFixed(1)},${yToPx(y).toFixed(1)}`);
-      }
-      if (coords.length >= 2) {
+    if (plateau) {
+      const x0 = xDomain.min;
+      const x1 = xDomain.max;
+      const bp = Math.min(Math.max(fit.breakpoint, x0), x1);
+      const coords = [
+        `${xToPx(x0).toFixed(1)},${yToPx(fit.predict(x0)).toFixed(1)}`,
+        `${xToPx(bp).toFixed(1)},${yToPx(fit.predict(bp)).toFixed(1)}`,
+        `${xToPx(x1).toFixed(1)},${yToPx(fit.predict(x1)).toFixed(1)}`,
+      ];
+      // Drop duplicate vertices when the kink is at a domain edge.
+      const deduped = coords.filter((pt, idx) => idx === 0 || pt !== coords[idx - 1]);
+      if (deduped.length >= 2) {
         geometry = `
         <polyline
           class="trends-lm-line"
           fill="none"
-          points="${coords.join(" ")}"
+          points="${deduped.join(" ")}"
         />`;
       }
     } else {
@@ -1403,7 +1450,7 @@ function buildCorrelationPanel(races) {
         <h3 class="trends-card-title">Search share vs result</h3>
         <details class="trends-card-explain">
           <summary>About this chart</summary>
-          <p class="trends-card-meta">Each point is one race’s tracked winner: search share vs result (rescaled to 100%). Circles = R1; squares = R2. Green = search share also picked the winner; red = miss. Omits primaries that clearly do not decide who wins the office. Params → LM fits y = a + bx; Root fits y = a + b√x. Both use the filtered points and show R².</p>
+          <p class="trends-card-meta">Each point is one race’s tracked winner: search share vs result (rescaled to 100%). Circles = R1; squares = R2. Green = search share also picked the winner; red = miss. Omits primaries that clearly do not decide who wins the office. Params → LM fits y = a + bx; Plateau fits a linear rise that stays flat after an estimated breakpoint. Both use the filtered points and show R².</p>
         </details>
       </header>
       <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root="correlation">
@@ -1438,7 +1485,7 @@ function buildLeadDaysMarginPanel(races) {
         <h3 class="trends-card-title">Daily search lead vs margin</h3>
         <details class="trends-card-explain">
           <summary>About this chart</summary>
-          <p class="trends-card-meta">Each point is one race: exponentially weighted share of the ${shareDays} pre-election days the eventual winner led on relative search interest (recent days count more; half-life ${LEAD_DAY_WEIGHT_HALF_LIFE}d), versus that winner’s two-way margin (pp) against the runner-up among tracked candidates. Circles = R1; squares = R2. Green = weighted lead share over 50%; red = not. Params → LM fits y = a + bx; Root fits y = a + b√x. Both use the filtered points and show R².</p>
+          <p class="trends-card-meta">Each point is one race: exponentially weighted share of the ${shareDays} pre-election days the eventual winner led on relative search interest (recent days count more; half-life ${LEAD_DAY_WEIGHT_HALF_LIFE}d), versus that winner’s two-way margin (pp) against the runner-up among tracked candidates. Circles = R1; squares = R2. Green = weighted lead share over 50%; red = not. Params → LM fits y = a + bx; Plateau fits a linear rise that stays flat after an estimated breakpoint. Both use the filtered points and show R².</p>
         </details>
       </header>
       <div class="trends-chart-wrap trends-scatter-wrap" data-scatter-chart-root="lead-margin">
