@@ -1241,10 +1241,12 @@ a.primary-popover__party-name.primary-popover__link:focus-visible {
 }
 
 .trends-lm-line {
+  fill: none;
   stroke: var(--text);
   stroke-width: 1.75;
   stroke-opacity: 0.72;
   stroke-linecap: round;
+  stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
   pointer-events: none;
 }

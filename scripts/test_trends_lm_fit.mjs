@@ -1,4 +1,4 @@
-import { fitLinearModel } from "../js/trends.js";
+import { fitLinearModel, fitRootModel } from "../js/trends.js";
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -31,6 +31,7 @@ assertClose(perfect.slope, 2, 1e-9, "perfect slope");
 assertClose(perfect.intercept, 1, 1e-9, "perfect intercept");
 assertClose(perfect.r2, 1, 1e-9, "perfect R²");
 assert(perfect.n === 3, "perfect n");
+assertClose(perfect.predict(3), 7, 1e-9, "perfect predict");
 
 const noisy = fitLinearModel([
   { x: 1, y: 2 },
@@ -61,5 +62,35 @@ const constantY = fitLinearModel([
 assert(constantY, "constant y still fits");
 assertClose(constantY.slope, 0, 1e-9, "flat slope");
 assertClose(constantY.r2, 1, 1e-9, "constant y R² treated as 1");
+
+const rootPerfect = fitRootModel([
+  { x: 0, y: 1 },
+  { x: 4, y: 5 },
+  { x: 9, y: 7 },
+  { x: 16, y: 9 },
+]);
+assert(rootPerfect, "perfect root fit");
+assertClose(rootPerfect.slope, 2, 1e-9, "root slope on √x");
+assertClose(rootPerfect.intercept, 1, 1e-9, "root intercept");
+assertClose(rootPerfect.r2, 1, 1e-9, "root R²");
+assertClose(rootPerfect.predict(25), 11, 1e-9, "root predict at 25");
+
+assert(
+  fitRootModel([
+    { x: -1, y: 1 },
+    { x: -4, y: 2 },
+  ]) === null,
+  "negative x dropped for root"
+);
+
+const rootSkipsNeg = fitRootModel([
+  { x: -9, y: 99 },
+  { x: 1, y: 3 },
+  { x: 4, y: 5 },
+  { x: 9, y: 7 },
+]);
+assert(rootSkipsNeg, "root ignores negatives");
+assert(rootSkipsNeg.n === 3, "root finite non-neg n");
+assertClose(rootSkipsNeg.r2, 1, 1e-9, "root skip-neg R²");
 
 console.log("test_trends_lm_fit: ok");
