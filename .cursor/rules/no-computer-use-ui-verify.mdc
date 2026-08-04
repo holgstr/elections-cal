@@ -1,0 +1,11 @@
+---
+description: Do not use computer-use for UI verification unless explicitly requested
+alwaysApply: true
+---
+
+# No computer-use UI verification
+
+- **Never** verify UI using computer use (browser/desktop automation, screenshots via computer-use agents, or similar) unless the user explicitly asks for it in the current request.
+- Do not launch `computerUse` / browser-driven visual QA as a default part of frontend work, testing, or PR verification.
+- Prefer code review, existing automated tests, static inspection, or asking the user when UI confirmation would help.
+- If the user later says to verify the UI with computer use, that request overrides this rule for that turn only.
