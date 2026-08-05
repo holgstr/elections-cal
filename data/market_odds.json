@@ -33,8 +33,8 @@
     "alabama-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 6.5,
-        "Republican": 92.8
+        "Democrat": 7.0,
+        "Republican": 92.7
       }
     },
     "alabama-republican-senate-primary-winner": {
@@ -50,28 +50,28 @@
     "alaska-governor-election-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Click Bishop": 9.05,
-        "David Bronson": 5.7,
+        "Click Bishop": 9.3,
+        "David Bronson": 7.8,
         "Adam Crum": 0.25,
-        "Nancy Dahlstrom": 0.75,
+        "Nancy Dahlstrom": 0.9,
         "Edna DeVries": 0.25,
-        "Matt Heilala": 0.45,
-        "Shelley Hughes": 0.6,
+        "Matt Heilala": 0.4,
+        "Shelley Hughes": 1.05,
         "James Parkin": 0.35,
-        "Treg Taylor": 19.45,
+        "Treg Taylor": 18.6,
         "Bernadette Wilson": 27.5,
         "Lisa Murkowski": 0.3,
         "Tom Begich": 26.5,
-        "Mary Peltola": 0.7,
-        "Jonathan Kreiss-Tomkins": 11.6,
-        "Hank Kroll": 0.25,
+        "Mary Peltola": 0.75,
+        "Jonathan Kreiss-Tomkins": 13.75,
+        "Hank Kroll": 2.3,
         "Bruce Walden": 0.15,
-        "Matt Claman": 0.95,
+        "Matt Claman": 1.0,
         "Lesil McGuire": 0.05,
         "Gregg Brelsford": 0.05,
         "Jessica Faircloth": 0.05,
         "Destry J. Payne Sr.": 0.05,
-        "Bill Walker": 4.8
+        "Bill Walker": 4.9
       }
     },
     "alaska-senate-election-winner": {
@@ -131,9 +131,9 @@
       "odds_format": "party",
       "prices": {
         "CDU": 28.5,
-        "AfD": 17.55,
-        "Grüne": 12.55,
-        "SPD": 4.5,
+        "AfD": 17.6,
+        "Grüne": 12.5,
+        "SPD": 4.35,
         "FDP": 0.05,
         "Linke": 38.5,
         "FW": 0.05,
@@ -164,16 +164,16 @@
       "odds_format": "candidates",
       "prices": {
         "Tarcisio de Freitas": 0.05,
-        "Luiz Inácio Lula da Silva": 65.5,
-        "Jair Bolsonaro": 0.4,
+        "Luiz Inácio Lula da Silva": 64.5,
+        "Jair Bolsonaro": 0.45,
         "Fernando Haddad": 0.15,
-        "Michelle Bolsonaro": 0.15,
+        "Michelle Bolsonaro": 0.55,
         "Eduardo Bolsonaro": 0.05,
         "Ratinho Júnior": 0.05,
-        "Renan Santos": 7.25,
-        "Flávio Bolsonaro": 26.05,
-        "Ronaldo Caiado": 1.35,
-        "Romeu Zema": 0.75,
+        "Renan Santos": 7.2,
+        "Flávio Bolsonaro": 25.45,
+        "Ronaldo Caiado": 1.75,
+        "Romeu Zema": 0.45,
         "Camilo Santana": 0.25,
         "Geraldo Alckmin": 0.25,
         "Eduardo Leite": 0.05,
@@ -189,8 +189,8 @@
         "Alex Padilla": 0.05,
         "Katie Porter": 0.05,
         "Antonio Villaraigosa": 0.05,
-        "Steve Hilton": 3.4,
-        "Xavier Becerra": 93.95,
+        "Steve Hilton": 3.15,
+        "Xavier Becerra": 94.25,
         "Stephen Cloobeck": 0.05,
         "Butch Ware": 0.05,
         "Betty Yee": 0.05,
@@ -220,7 +220,7 @@
         "Natasha Osben": 0.05,
         "Tony Mack": 0.05,
         "Andrew Pemberton": 0.05,
-        "Count Binface": 1.35,
+        "Count Binface": 1.1,
         "William Clouston": 0.05,
         "John Stevens": 0.05,
         "Pamela Walford": 0.05
@@ -271,7 +271,7 @@
       "odds_format": "party",
       "prices": {
         "Democrat": 93.85,
-        "Republican": 4.8
+        "Republican": 4.05
       }
     },
     "colorado-republican-senate-primary-winner": {
@@ -286,15 +286,15 @@
     "colorado-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 93.5,
-        "Republican": 5.5
+        "Democrat": 95.0,
+        "Republican": 4.5
       }
     },
     "connecticut-governor-democratic-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Josh Elliott": 1.7,
-        "Ned Lamont": 98.4
+        "Josh Elliott": 1.15,
+        "Ned Lamont": 98.5
       }
     },
     "connecticut-governor-republican-primary-winner": {
@@ -310,15 +310,15 @@
     "connecticut-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 92.5,
+        "Democrat": 93.5,
         "Republican": 5.5
       }
     },
     "delaware-democratic-senate-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Chris Coons": 95.7,
-        "Christopher Beardsley": 2.75
+        "Chris Coons": 95.6,
+        "Christopher Beardsley": 3.45
       }
     },
     "delaware-republican-senate-primary-winner": {
@@ -338,13 +338,13 @@
     "democratic-nominee-for-florida-governor": {
       "odds_format": "candidates",
       "prices": {
-        "David Jolly": 97.6,
-        "Jerry Demings": 0.8,
+        "David Jolly": 97.5,
+        "Jerry Demings": 0.85,
         "Shevrin Jones": 0.05,
         "Jason Pizzo": 0.1,
         "Fentrice Driskell": 0.05,
         "Daniella Levine Cava": 0.15,
-        "Gwen Graham": 0.1,
+        "Gwen Graham": 0.15,
         "Angie Nixon": 0.05
       }
     },
@@ -383,8 +383,8 @@
     "georgia-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 59.0,
-        "Republican": 41.0
+        "Keisha Lance Bottoms (D)": 59.0,
+        "Rick Jackson (R)": 41.0
       }
     },
     "georgia-republican-senate-primary-winner": {
@@ -404,8 +404,8 @@
     "georgia-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 91.5,
-        "Republican": 7.45
+        "Jon Ossoff (D)": 91.5,
+        "Mike Collins (R)": 9.1
       }
     },
     "greater-manchester-mayoral-election-winner-20260619154130299": {
@@ -431,7 +431,7 @@
       "odds_format": "party",
       "prices": {
         "Democrat": 93.5,
-        "Republican": 4.1
+        "Republican": 4.15
       }
     },
     "idaho-democratic-senate-primary-winner": {
@@ -455,8 +455,8 @@
     "idaho-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 3.4,
-        "Republican": 94.75
+        "Democrat": 2.45,
+        "Republican": 94.45
       }
     },
     "idaho-republican-senate-primary-winner": {
@@ -470,7 +470,7 @@
       "odds_format": "party",
       "prices": {
         "Democrat": 4.9,
-        "Republican": 93.35
+        "Republican": 93.15
       }
     },
     "illinois-governor-republican-primary-winner": {
@@ -529,8 +529,8 @@
     "iowa-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 67.0,
-        "Republican": 34.0
+        "Rob Sand (D)": 67.0,
+        "Zach Lahn (R)": 33.0
       }
     },
     "iowa-republican-senate-primary-winner": {
@@ -545,8 +545,8 @@
     "iowa-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Josh Turek (D)": 45.0,
-        "Ashley Hinson (R)": 56.0
+        "Josh Turek (D)": 44.5,
+        "Ashley Hinson (R)": 56.5
       }
     },
     "kansas-democratic-senate-primary-winner": {
@@ -590,7 +590,7 @@
     "kansas-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 24.5,
+        "Democrat": 23.0,
         "Republican": 76.5
       }
     },
@@ -635,14 +635,14 @@
     "latvian-parliamentary-election-winner": {
       "odds_format": "party",
       "prices": {
-        "JV": 1.65,
-        "ZZS": 0.6,
+        "JV": 1.25,
+        "ZZS": 0.25,
         "AS": 58.4,
-        "NA": 1.6,
-        "ST!": 0.2,
-        "LPV": 20.5,
+        "NA": 1.75,
+        "ST!": 0.25,
+        "LPV": 20.0,
         "PRO": 4.9,
-        "SV": 10.9,
+        "SV": 11.5,
         "S": 0.25
       }
     },
@@ -711,8 +711,8 @@
     "maine-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 67.5,
-        "Republican": 33.5
+        "Troy Jackson (D)": 67.5,
+        "Susan Collins (R)": 33.5
       }
     },
     "maryland-governor-republican-primary-winner": {
@@ -731,16 +731,16 @@
     "maryland-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 93.6,
-        "Republican": 4.75
+        "Democrat": 94.25,
+        "Republican": 4.8
       }
     },
     "massachusetts-democratic-senate-primary-winner": {
       "odds_format": "candidates",
       "prices": {
         "Ayanna Pressley": 0.05,
-        "Ed Markey": 79.5,
-        "Seth Moulton": 21.5,
+        "Ed Markey": 78.5,
+        "Seth Moulton": 18.0,
         "Alexander Rikleen": 0.05
       }
     },
@@ -748,7 +748,7 @@
       "odds_format": "candidates",
       "prices": {
         "Mike Kennealy": 0.2,
-        "Michael Minogue": 96.9,
+        "Michael Minogue": 96.35,
         "Brian Shortsleeve": 1.4
       }
     },
@@ -763,14 +763,14 @@
       "odds_format": "party",
       "prices": {
         "Democrat": 97.4,
-        "Republican": 2.75
+        "Republican": 3.05
       }
     },
     "mecklenburg-vorpommern-parliamentary-election-winner": {
       "odds_format": "party",
       "prices": {
         "CDU": 0.05,
-        "AfD": 83.5,
+        "AfD": 85.0,
         "Grüne": 0.05,
         "SPD": 16.0,
         "FDP": 0.05,
@@ -782,26 +782,26 @@
     "mexico-legislative-election-winner": {
       "odds_format": "party",
       "prices": {
-        "PAN": 2.35,
-        "PRI": 5.1,
+        "PAN": 2.4,
+        "PRI": 5.25,
         "PT": 0.15,
         "PVEM": 0.15,
-        "MC": 0.3,
-        "Morena": 91.9
+        "MC": 0.45,
+        "Morena": 92.8
       }
     },
     "michigan-democratic-senate-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Mallory McMorrow": 0.05,
-        "Haley Stevens": 0.45,
-        "Abdul El-Sayed": 99.6,
-        "Dana Nessel": 0.05,
-        "Rashida Tlaib": 0.05,
-        "Sarah Anthony": 0.05,
-        "Kristen McDonald Rivet": 0.05,
-        "Andy Levin": 0.05,
-        "Matt Sahr": 0.05
+        "Mallory McMorrow": 0.0,
+        "Haley Stevens": 0.0,
+        "Abdul El-Sayed": 100.0,
+        "Dana Nessel": 0.0,
+        "Rashida Tlaib": 0.0,
+        "Sarah Anthony": 0.0,
+        "Kristen McDonald Rivet": 0.0,
+        "Andy Levin": 0.0,
+        "Matt Sahr": 0.0
       }
     },
     "michigan-governor-democratic-primary-winner": {
@@ -833,8 +833,8 @@
       "odds_format": "party",
       "prices": {
         "Democrat": 84.0,
-        "Republican": 16.5,
-        "Independent": 1.25
+        "Republican": 15.5,
+        "Independent": 1.55
       }
     },
     "michigan-republican-senate-primary-winner-954": {
@@ -851,15 +851,15 @@
     "michigan-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 61.5,
-        "Republican": 39.5
+        "Abdul El-Sayed (D)": 60.0,
+        "Mike Rogers (R)": 41.0
       }
     },
     "minnesota-democratic-senate-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Peggy Flanagan": 78.0,
-        "Angie Craig": 20.5,
+        "Peggy Flanagan": 80.5,
+        "Angie Craig": 15.5,
         "Melisa López Franzen": 0.05,
         "Ilhan Omar": 0.05,
         "Keith Ellison": 0.05,
@@ -874,8 +874,8 @@
       "odds_format": "candidates",
       "prices": {
         "Tim Walz": 0.05,
-        "Bill Gates Jr.": 0.35,
-        "Amy Klobuchar": 99.35,
+        "Bill Gates Jr.": 0.55,
+        "Amy Klobuchar": 99.25,
         "Steve Simon": 0.05,
         "Kobey Layne": 0.05
       }
@@ -883,16 +883,16 @@
     "minnesota-governor-republican-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Lisa Demuth": 21.0,
+        "Lisa Demuth": 16.5,
         "Scott Jensen": 0.15,
         "Jeff Johnson": 0.05,
         "Patrick Knight": 0.05,
         "Brad Kohler": 0.05,
         "Chris Madel": 0.05,
         "Phil Parrish": 0.05,
-        "Kendall Qualls": 1.8,
+        "Kendall Qualls": 1.85,
         "Kristin Robbins": 0.05,
-        "Mike Lindell": 77.5
+        "Mike Lindell": 82.5
       }
     },
     "minnesota-governor-winner-2026": {
@@ -963,7 +963,7 @@
       "prices": {
         "Democrat": 0.75,
         "Republican": 81.5,
-        "Independent": 18.3
+        "Independent": 17.6
       }
     },
     "nebraska-democratic-senate-primary-winner": {
@@ -1003,8 +1003,8 @@
       "odds_format": "party",
       "prices": {
         "Democrat": 0.25,
-        "Republican": 73.0,
-        "Independent": 24.5
+        "Pete Ricketts (R)": 73.0,
+        "Independent": 25.5
       }
     },
     "nevada-governor-democratic-primary-winner": {
@@ -1017,54 +1017,54 @@
     "nevada-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 56.0,
-        "Republican": 45.0
+        "Aaron Ford (D)": 52.5,
+        "Joe Lombardo (R)": 47.5
       }
     },
     "new-hampshire-democratic-senate-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Karishma Manzur": 2.7,
-        "Chris Pappas": 95.95
+        "Karishma Manzur": 1.55,
+        "Chris Pappas": 96.3
       }
     },
     "new-hampshire-governor-democratic-primary-winner": {
       "odds_format": "candidates",
       "prices": {
         "John Kiper": 0.2,
-        "Tom Sherman": 0.25,
-        "Deaglan McEachern": 1.05,
+        "Tom Sherman": 0.5,
+        "Deaglan McEachern": 1.1,
         "Donovan Fenton": 0.5,
-        "Cinde Warmington": 98.25
+        "Cinde Warmington": 98.7
       }
     },
     "new-hampshire-governor-republican-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Kelly Ayotte": 96.75,
-        "Corey Lewandowski": 1.0
+        "Kelly Ayotte": 95.65,
+        "Corey Lewandowski": 0.7
       }
     },
     "new-hampshire-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 14.75,
-        "Republican": 79.5
+        "Democrat": 14.8,
+        "Republican": 81.5
       }
     },
     "new-hampshire-republican-senate-primary-winner-296": {
       "odds_format": "candidates",
       "prices": {
-        "John E. Sununu": 95.85,
-        "Scott Brown": 4.45,
-        "Chris Sununu": 0.3,
+        "John E. Sununu": 96.0,
+        "Scott Brown": 4.5,
+        "Chris Sununu": 0.6,
         "Dan Innis": 0.05
       }
     },
     "new-hampshire-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 83.5,
+        "Democrat": 84.5,
         "Republican": 16.5
       }
     },
@@ -1092,8 +1092,8 @@
     "new-jersey-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 94.0,
-        "Republican": 4.55
+        "Democrat": 94.5,
+        "Republican": 5.85
       }
     },
     "new-mexico-governor-democratic-primary-winner": {
@@ -1161,22 +1161,22 @@
       "odds_format": "candidates",
       "prices": {
         "Marine Le Pen": 29.85,
-        "Jordan Bardella": 3.45,
+        "Jordan Bardella": 3.35,
         "Éric Zemmour": 0.85,
         "Édouard Philippe": 25.5,
-        "David Lisnard": 2.25,
+        "David Lisnard": 2.65,
         "Xavier Bertrand": 0.15,
         "Laurent Wauquiez": 0.25,
         "François Ruffin": 0.25,
-        "Gabriel Attal": 3.95,
+        "Gabriel Attal": 3.85,
         "Bruno Retailleau": 2.55,
-        "François Hollande": 3.75,
+        "François Hollande": 3.4,
         "Raphaël Glucksmann": 1.9,
         "Jean-Luc Mélenchon": 13.5,
         "Marine Tondelier": 0.15,
         "Fabien Roussel": 0.15,
         "Olivier Faure": 0.25,
-        "Dominique de Villepin": 2.0,
+        "Dominique de Villepin": 2.6,
         "Ségolène Royal": 0.25,
         "François Asselineau": 0.15,
         "Clémentine Autain": 0.15,
@@ -1207,20 +1207,20 @@
       "odds_format": "candidates",
       "prices": {
         "Christopher Luxon": 44.0,
-        "Chris Hipkins": 45.0,
-        "Winston Peters": 2.05,
-        "Nicola Willis": 3.7,
-        "Chlöe Swarbrick": 1.6,
-        "David Seymour": 3.15,
+        "Chris Hipkins": 46.5,
+        "Winston Peters": 2.3,
+        "Nicola Willis": 3.3,
+        "Chlöe Swarbrick": 1.55,
+        "David Seymour": 3.2,
         "Carmel Sepuloni": 1.3
       }
     },
     "next-prime-minister-of-sweden": {
       "odds_format": "candidates",
       "prices": {
-        "Ulf Kristersson": 10.0,
-        "Magdalena Andersson": 85.5,
-        "Jimmie Åkesson": 2.05,
+        "Ulf Kristersson": 11.0,
+        "Magdalena Andersson": 84.5,
+        "Jimmie Åkesson": 2.1,
         "Ebba Busch": 0.25,
         "Anna-Karin Hatt": 0.15,
         "Nooshi Dadgostar": 0.15,
@@ -1233,9 +1233,9 @@
     "nigerian-presidential-election-winner-20260602162945585": {
       "odds_format": "candidates",
       "prices": {
-        "Rotimi Amaechi": 0.95,
-        "Rabiu Kwankwaso": 0.4,
-        "Peter Obi": 30.0,
+        "Rotimi Amaechi": 1.0,
+        "Rabiu Kwankwaso": 0.35,
+        "Peter Obi": 31.5,
         "Bola Tinubu": 68.5,
         "Omoyele Sowore": 0.25
       }
@@ -1265,8 +1265,8 @@
     "north-carolina-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Roy Cooper (D)": 90.0,
-        "Michael Whatley (R)": 11.0
+        "Roy Cooper (D)": 90.5,
+        "Michael Whatley (R)": 10.5
       }
     },
     "ohio-governor-democratic-primary-winner": {
@@ -1287,17 +1287,17 @@
     "ohio-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 44.0,
-        "Republican": 56.5
+        "Amy Acton (D)": 44.0,
+        "Vivek Ramaswamy (R)": 56.0
       }
     },
     "oklahoma-democratic-senate-primary-winner": {
       "odds_format": "candidates",
       "prices": {
         "Troy Green": 0.05,
-        "N’Kiyla “Jasmine” Thomas": 93.8,
+        "N’Kiyla “Jasmine” Thomas": 93.9,
         "Jim Priest": 3.8,
-        "Rebekah LaVann": 1.5
+        "Rebekah LaVann": 1.4
       }
     },
     "oklahoma-governor-democratic-primary-winner": {
@@ -1314,7 +1314,7 @@
         "Genter Drummond": 26.0,
         "Chip Keating": 0.05,
         "Leisa Mitchell Haynes": 0.05,
-        "Mike Mazzei": 71.45,
+        "Mike Mazzei": 70.25,
         "Charles McCall": 0.05,
         "Jake Merrick": 0.05,
         "Ryan Walters": 0.05,
@@ -1346,7 +1346,7 @@
     "oklahoma-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 4.15,
+        "Democrat": 4.2,
         "Republican": 94.0
       }
     },
@@ -1397,7 +1397,7 @@
     "oregon-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 97.15,
+        "Democrat": 96.6,
         "Republican": 3.4
       }
     },
@@ -1419,8 +1419,8 @@
     "republican-nominee-for-florida-governor": {
       "odds_format": "candidates",
       "prices": {
-        "Byron Donalds": 97.95,
-        "James Fishback": 2.05,
+        "Byron Donalds": 98.5,
+        "James Fishback": 1.65,
         "Wilton Simpson": 0.05,
         "Jay Collins": 0.15,
         "Casey DeSantis": 0.05,
@@ -1431,15 +1431,15 @@
     "rhode-island-democratic-senate-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Jack Reed": 95.35,
-        "Connor Burbridge": 4.2
+        "Jack Reed": 95.25,
+        "Connor Burbridge": 4.55
       }
     },
     "rhode-island-governor-democratic-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Helena Foulkes": 84.1,
-        "Dan McKee": 14.15,
+        "Helena Foulkes": 84.85,
+        "Dan McKee": 14.05,
         "Gregory Stevens": 0.05,
         "Joe Shekarchi": 0.05
       }
@@ -1447,8 +1447,8 @@
     "rhode-island-governor-republican-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Aaron Guckian": 28.3,
-        "Elaine Pelino": 63.5,
+        "Aaron Guckian": 27.95,
+        "Elaine Pelino": 61.5,
         "Robert Raimondo": 0.5,
         "Jessica de la Cruz": 0.15,
         "Ashley Kalus": 0.2
@@ -1458,29 +1458,29 @@
       "odds_format": "party",
       "prices": {
         "Democrat": 91.5,
-        "Republican": 4.7,
-        "Independent": 3.6
+        "Republican": 4.8,
+        "Independent": 3.45
       }
     },
     "rhode-island-republican-senate-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Allen Waters": 2.2,
+        "Allen Waters": 2.3,
         "Raymond McKay": 95.5
       }
     },
     "rhode-island-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 94.0,
-        "Republican": 4.3
+        "Democrat": 95.0,
+        "Republican": 4.5
       }
     },
     "sachsen-anhalt-parliamentary-election-winner": {
       "odds_format": "party",
       "prices": {
-        "CDU": 1.85,
-        "AfD": 98.2,
+        "CDU": 1.8,
+        "AfD": 98.25,
         "SPD": 0.05,
         "The Greens": 0.05,
         "The Left": 0.05,
@@ -1519,17 +1519,17 @@
         "Joe Wilson": 0.05,
         "Mark Lynch": 0.05,
         "Paul Dans": 0.05,
-        "Ralph Norman": 21.5,
+        "Ralph Norman": 22.5,
         "William Timmons": 0.05,
-        "Russell Fry": 16.2,
+        "Russell Fry": 15.4,
         "Sheri Biggs": 0.05,
         "Pamela Evette": 0.05,
         "André Bauer": 0.05,
         "Alan Wilson": 0.05,
         "Scott Bessent": 0.05,
         "Trey Gowdy": 0.05,
-        "Darline Graham Nordone": 60.35,
-        "Mark Sanford": 3.55
+        "Darline Graham Nordone": 61.45,
+        "Mark Sanford": 2.55
       }
     },
     "south-carolina-senate-election-winner": {
@@ -1552,7 +1552,7 @@
       "odds_format": "party",
       "prices": {
         "Democrat": 6.95,
-        "Republican": 93.25
+        "Republican": 93.3
       }
     },
     "south-dakota-republican-senate-primary-winner": {
@@ -1566,14 +1566,14 @@
     "south-dakota-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 3.0,
+        "Democrat": 2.95,
         "Republican": 94.05
       }
     },
     "sweden-parliamentary-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Swedish Social Democratic Party (S)": 98.25,
+        "Swedish Social Democratic Party (S)": 98.35,
         "Sweden Democrats (SD)": 0.65,
         "Moderate Party (M)": 0.5,
         "Centre Party (C)": 0.15,
@@ -1588,19 +1588,19 @@
       "odds_format": "candidates",
       "prices": {
         "Bill Hagerty": 0.05,
-        "Marquita Bradshaw": 87.1,
-        "Maria Brewer": 6.7,
-        "Kevin Lee McCants": 0.55,
-        "Civil Miller-Watkins": 1.1,
-        "Diana Onyeijaka": 4.35
+        "Marquita Bradshaw": 93.95,
+        "Maria Brewer": 6.55,
+        "Kevin Lee McCants": 0.35,
+        "Civil Miller-Watkins": 0.4,
+        "Diana Onyeijaka": 1.1
       }
     },
     "tennessee-governor-democratic-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Carnita Atwater": 1.4,
-        "Tim Cyr": 0.05,
-        "Jerri Green": 98.1,
+        "Carnita Atwater": 0.95,
+        "Tim Cyr": 0.4,
+        "Jerri Green": 98.0,
         "Adam Kurtz": 0.05,
         "Kevin Lee McCants": 0.05
       }
@@ -1608,15 +1608,15 @@
     "tennessee-governor-republican-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Marsha Blackburn": 93.65,
-        "Monty Fritts": 0.6,
-        "John Rose": 4.6
+        "Marsha Blackburn": 95.95,
+        "Monty Fritts": 0.4,
+        "John Rose": 3.3
       }
     },
     "tennessee-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 2.55,
+        "Democrat": 4.9,
         "Republican": 91.1
       }
     },
@@ -1624,7 +1624,7 @@
       "odds_format": "party",
       "prices": {
         "Democrat": 2.55,
-        "Republican": 94.3
+        "Republican": 94.1
       }
     },
     "texas-governor-democratic-primary-winner": {
@@ -1649,38 +1649,38 @@
       "odds_format": "party",
       "prices": {
         "Democrat": 11.0,
-        "Republican": 89.55
+        "Republican": 89.5
       }
     },
     "texas-senate-election-winner": {
       "odds_format": "candidates",
       "prices": {
         "James Talarico (D)": 48.5,
-        "Ken Paxton (R)": 51.5
+        "Ken Paxton (R)": 52.5
       }
     },
     "vermont-governor-democratic-primary-winner": {
       "odds_format": "candidates",
       "prices": {
         "Charity Clark": 0.05,
-        "Mike Pieciak": 0.2,
+        "Mike Pieciak": 0.05,
         "Esther Charlestin": 0.05,
-        "Aly Richards": 41.5,
-        "Amanda Janoo": 49.85
+        "Aly Richards": 69.5,
+        "Amanda Janoo": 31.9
       }
     },
     "vermont-governor-republican-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Phil Scott": 98.55,
+        "Phil Scott": 98.45,
         "John Rodgers": 0.65
       }
     },
     "vermont-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 10.25,
-        "Republican": 87.0
+        "Democrat": 10.15,
+        "Republican": 90.5
       }
     },
     "virginia-democratic-senate-primary-winner": {
@@ -1725,7 +1725,7 @@
         "Shirley Saucerman": 0.4,
         "Earl D. \"Skip\" Southworth": 0.2,
         "Dan J. Sullivan": 0.25,
-        "Sen. Dan S. Sullivan": 10.4
+        "Sen. Dan S. Sullivan": 10.25
       }
     },
     "washington-governor-election-winner": {
@@ -1757,31 +1757,31 @@
       "odds_format": "party",
       "prices": {
         "Democrat": 1.65,
-        "Republican": 94.7
+        "Republican": 95.05
       }
     },
     "who-will-advance-from-the-alaska-governor-primary": {
       "odds_format": "candidates",
       "prices": {
-        "Lesil McGuire": 2.35,
-        "Gregg Brelsford": 0.9,
-        "Jessica Faircloth": 1.75,
+        "Lesil McGuire": 2.15,
+        "Gregg Brelsford": 0.85,
+        "Jessica Faircloth": 1.7,
         "Destry J. Payne Sr.": 0.85,
-        "Bill Walker": 31.5,
-        "Click Bishop": 38.0,
-        "Dave Bronson": 42.0,
+        "Bill Walker": 25.5,
+        "Click Bishop": 42.0,
+        "Dave Bronson": 43.5,
         "Adam Crum": 3.5,
-        "Nancy Dahlstrom": 5.3,
+        "Nancy Dahlstrom": 3.55,
         "Edna DeVries": 0.9,
-        "Matt Heilala": 3.7,
-        "Shelley Hughes": 4.4,
-        "Hank Kroll": 1.45,
+        "Matt Heilala": 3.75,
+        "Shelley Hughes": 4.45,
+        "Hank Kroll": 1.5,
         "James Parkin": 0.15,
-        "Treg Taylor": 29.0,
+        "Treg Taylor": 28.0,
         "Bernadette Wilson": 77.5,
-        "Tom Begich": 96.3,
+        "Tom Begich": 97.65,
         "Matt Claman": 1.05,
-        "Bruce Walden": 1.6,
+        "Bruce Walden": 1.45,
         "Jonathan Kreiss-Tomkins": 80.0
       }
     },
@@ -1791,11 +1791,11 @@
         "Benjamin Netanyahu": 32.5,
         "Naftali Bennett": 6.5,
         "Yair Lapid": 0.15,
-        "Gadi Eizenkot": 51.05,
+        "Gadi Eizenkot": 50.65,
         "Benny Gantz": 0.15,
-        "Avigdor Lieberman": 4.75,
+        "Avigdor Lieberman": 5.05,
         "Yossi Cohen": 0.15,
-        "Yair Golan": 0.25,
+        "Yair Golan": 0.35,
         "Itamar Ben Gvir": 0.35,
         "Gideon Sa’ar": 0.25,
         "Yariv Levin": 0.25,
@@ -1805,29 +1805,29 @@
         "Israel Katz": 0.15,
         "Nir Barkat": 0.15,
         "Amir Ohana": 0.25,
-        "Gilad Erdan": 0.25
+        "Gilad Erdan": 1.05
       }
     },
     "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt": {
       "odds_format": "binary",
       "prices": {
-        "Yes": 28.5,
-        "No": 71.5
+        "Yes": 27.0,
+        "No": 73.0
       }
     },
     "wisconsin-governor-democratic-primary-winner": {
       "odds_format": "candidates",
       "prices": {
         "Mandela Barnes": 0.05,
-        "David Crowley": 14.45,
-        "Francesca Hong": 85.65,
+        "David Crowley": 10.15,
+        "Francesca Hong": 90.15,
         "Missy Hughes": 0.05,
         "Brett Hulsey": 0.05,
         "Sara Rodriguez": 0.05,
         "Zachary Roper": 0.05,
         "Kelda Roys": 0.05,
         "Tim Jacobson": 0.05,
-        "Joel Brennan": 0.15,
+        "Joel Brennan": 0.05,
         "Melissa Agard": 0.05,
         "Chris Larson": 0.05,
         "Tom Nelson": 0.05
@@ -1836,32 +1836,32 @@
     "wisconsin-governor-republican-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Andy Manske": 0.05,
-        "Josh Schoemann": 0.55,
+        "Andy Manske": 0.2,
+        "Josh Schoemann": 0.1,
         "Tom Tiffany": 99.4,
         "Tommy Thompson": 0.05,
         "Sean Duffy": 0.15,
         "Eric Hovde": 0.15,
-        "Rebecca Kleefisch": 0.15,
-        "Tim Michels": 0.45
+        "Rebecca Kleefisch": 0.25,
+        "Tim Michels": 0.5
       }
     },
     "wisconsin-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
         "Democrat": 44.5,
-        "Republican": 56.0
+        "Republican": 56.5
       }
     },
     "wyoming-governor-republican-primary-winner": {
       "odds_format": "candidates",
       "prices": {
-        "Eric Barlow": 59.95,
+        "Eric Barlow": 65.15,
         "Brent Bien": 0.45,
         "Joseph Kibler": 0.05,
         "Reid Rasner": 0.05,
         "Bo Biteman": 0.05,
-        "Megan Degenfelder": 40.7,
+        "Megan Degenfelder": 33.45,
         "Chuck Gray": 0.05,
         "Chip Neiman": 0.05,
         "Ogen Driskill": 0.05,
@@ -1876,15 +1876,15 @@
     "wyoming-governor-winner-2026": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 4.9,
-        "Republican": 93.55
+        "Democrat": 4.8,
+        "Republican": 93.6
       }
     },
     "wyoming-senate-election-winner": {
       "odds_format": "party",
       "prices": {
-        "Democrat": 2.35,
-        "Republican": 94.9
+        "Democrat": 2.2,
+        "Republican": 95.0
       }
     }
   }

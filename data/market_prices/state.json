@@ -49307,9 +49307,9 @@
           "slug": "berlin-state-election-winner",
           "prices": {
             "CDU": 28.5,
-            "AfD": 17.55,
-            "Grüne": 12.55,
-            "SPD": 4.5,
+            "AfD": 17.6,
+            "Grüne": 12.5,
+            "SPD": 4.35,
             "FDP": 0.05,
             "Linke": 38.5,
             "FW": 0.05,
@@ -49320,7 +49320,7 @@
           "slug": "mecklenburg-vorpommern-parliamentary-election-winner",
           "prices": {
             "CDU": 0.05,
-            "AfD": 83.5,
+            "AfD": 85.0,
             "Grüne": 0.05,
             "SPD": 16.0,
             "FDP": 0.05,
@@ -49332,8 +49332,8 @@
         "de-state:ST:Most seats": {
           "slug": "sachsen-anhalt-parliamentary-election-winner",
           "prices": {
-            "CDU": 1.85,
-            "AfD": 98.2,
+            "CDU": 1.8,
+            "AfD": 98.25,
             "SPD": 0.05,
             "The Greens": 0.05,
             "The Left": 0.05,
@@ -49351,7 +49351,7 @@
             "Natasha Osben": 0.05,
             "Tony Mack": 0.05,
             "Andrew Pemberton": 0.05,
-            "Count Binface": 1.35,
+            "Count Binface": 1.1,
             "William Clouston": 0.05,
             "John Stevens": 0.05,
             "Pamela Walford": 0.05
@@ -49383,11 +49383,11 @@
             "Benjamin Netanyahu": 32.5,
             "Naftali Bennett": 6.5,
             "Yair Lapid": 0.15,
-            "Gadi Eizenkot": 51.05,
+            "Gadi Eizenkot": 50.65,
             "Benny Gantz": 0.15,
-            "Avigdor Lieberman": 4.75,
+            "Avigdor Lieberman": 5.05,
             "Yossi Cohen": 0.15,
-            "Yair Golan": 0.25,
+            "Yair Golan": 0.35,
             "Itamar Ben Gvir": 0.35,
             "Gideon Sa’ar": 0.25,
             "Yariv Levin": 0.25,
@@ -49397,50 +49397,50 @@
             "Israel Katz": 0.15,
             "Nir Barkat": 0.15,
             "Amir Ohana": 0.25,
-            "Gilad Erdan": 0.25
+            "Gilad Erdan": 1.05
           }
         },
         "national:LV:Parliament:party_winner": {
           "slug": "latvian-parliamentary-election-winner",
           "prices": {
-            "JV": 1.65,
-            "ZZS": 0.6,
+            "JV": 1.25,
+            "ZZS": 0.25,
             "AS": 58.4,
-            "NA": 1.6,
-            "ST!": 0.2,
-            "LPV": 20.5,
+            "NA": 1.75,
+            "ST!": 0.25,
+            "LPV": 20.0,
             "PRO": 4.9,
-            "SV": 10.9,
+            "SV": 11.5,
             "S": 0.25
           }
         },
         "national:MX:Chamber of Deputies:party_winner": {
           "slug": "mexico-legislative-election-winner",
           "prices": {
-            "PAN": 2.35,
-            "PRI": 5.1,
+            "PAN": 2.4,
+            "PRI": 5.25,
             "PT": 0.15,
             "PVEM": 0.15,
-            "MC": 0.3,
-            "Morena": 91.9
+            "MC": 0.45,
+            "Morena": 92.8
           }
         },
         "national:NZ:Parliament:prime_minister": {
           "slug": "next-prime-minister-of-new-zealand-174",
           "prices": {
             "Christopher Luxon": 44.0,
-            "Chris Hipkins": 45.0,
-            "Winston Peters": 2.05,
-            "Nicola Willis": 3.7,
-            "Chlöe Swarbrick": 1.6,
-            "David Seymour": 3.15,
+            "Chris Hipkins": 46.5,
+            "Winston Peters": 2.3,
+            "Nicola Willis": 3.3,
+            "Chlöe Swarbrick": 1.55,
+            "David Seymour": 3.2,
             "Carmel Sepuloni": 1.3
           }
         },
         "national:SE:Riksdag:party_winner": {
           "slug": "sweden-parliamentary-election-winner",
           "prices": {
-            "Swedish Social Democratic Party (S)": 98.25,
+            "Swedish Social Democratic Party (S)": 98.35,
             "Sweden Democrats (SD)": 0.65,
             "Moderate Party (M)": 0.5,
             "Centre Party (C)": 0.15,
@@ -49454,9 +49454,9 @@
         "national:SE:Riksdag:prime_minister": {
           "slug": "next-prime-minister-of-sweden",
           "prices": {
-            "Ulf Kristersson": 10.0,
-            "Magdalena Andersson": 85.5,
-            "Jimmie Åkesson": 2.05,
+            "Ulf Kristersson": 11.0,
+            "Magdalena Andersson": 84.5,
+            "Jimmie Åkesson": 2.1,
             "Ebba Busch": 0.25,
             "Anna-Karin Hatt": 0.15,
             "Nooshi Dadgostar": 0.15,
@@ -49470,16 +49470,16 @@
           "slug": "brazil-presidential-election",
           "prices": {
             "Tarcisio de Freitas": 0.05,
-            "Luiz Inácio Lula da Silva": 65.5,
-            "Jair Bolsonaro": 0.4,
+            "Luiz Inácio Lula da Silva": 64.5,
+            "Jair Bolsonaro": 0.45,
             "Fernando Haddad": 0.15,
-            "Michelle Bolsonaro": 0.15,
+            "Michelle Bolsonaro": 0.55,
             "Eduardo Bolsonaro": 0.05,
             "Ratinho Júnior": 0.05,
-            "Renan Santos": 7.25,
-            "Flávio Bolsonaro": 26.05,
-            "Ronaldo Caiado": 1.35,
-            "Romeu Zema": 0.75,
+            "Renan Santos": 7.2,
+            "Flávio Bolsonaro": 25.45,
+            "Ronaldo Caiado": 1.75,
+            "Romeu Zema": 0.45,
             "Camilo Santana": 0.25,
             "Geraldo Alckmin": 0.25,
             "Eduardo Leite": 0.05,
@@ -49492,22 +49492,22 @@
           "slug": "next-french-presidential-election",
           "prices": {
             "Marine Le Pen": 29.85,
-            "Jordan Bardella": 3.45,
+            "Jordan Bardella": 3.35,
             "Éric Zemmour": 0.85,
             "Édouard Philippe": 25.5,
-            "David Lisnard": 2.25,
+            "David Lisnard": 2.65,
             "Xavier Bertrand": 0.15,
             "Laurent Wauquiez": 0.25,
             "François Ruffin": 0.25,
-            "Gabriel Attal": 3.95,
+            "Gabriel Attal": 3.85,
             "Bruno Retailleau": 2.55,
-            "François Hollande": 3.75,
+            "François Hollande": 3.4,
             "Raphaël Glucksmann": 1.9,
             "Jean-Luc Mélenchon": 13.5,
             "Marine Tondelier": 0.15,
             "Fabien Roussel": 0.15,
             "Olivier Faure": 0.25,
-            "Dominique de Villepin": 2.0,
+            "Dominique de Villepin": 2.6,
             "Ségolène Royal": 0.25,
             "François Asselineau": 0.15,
             "Clémentine Autain": 0.15,
@@ -49537,9 +49537,9 @@
         "presidential:NG": {
           "slug": "nigerian-presidential-election-winner-20260602162945585",
           "prices": {
-            "Rotimi Amaechi": 0.95,
-            "Rabiu Kwankwaso": 0.4,
-            "Peter Obi": 30.0,
+            "Rotimi Amaechi": 1.0,
+            "Rabiu Kwankwaso": 0.35,
+            "Peter Obi": 31.5,
             "Bola Tinubu": 68.5,
             "Omoyele Sowore": 0.25
           }
@@ -49547,35 +49547,35 @@
         "us-governor:AK": {
           "slug": "alaska-governor-election-winner",
           "prices": {
-            "Click Bishop": 9.05,
-            "David Bronson": 5.7,
+            "Click Bishop": 9.3,
+            "David Bronson": 7.8,
             "Adam Crum": 0.25,
-            "Nancy Dahlstrom": 0.75,
+            "Nancy Dahlstrom": 0.9,
             "Edna DeVries": 0.25,
-            "Matt Heilala": 0.45,
-            "Shelley Hughes": 0.6,
+            "Matt Heilala": 0.4,
+            "Shelley Hughes": 1.05,
             "James Parkin": 0.35,
-            "Treg Taylor": 19.45,
+            "Treg Taylor": 18.6,
             "Bernadette Wilson": 27.5,
             "Lisa Murkowski": 0.3,
             "Tom Begich": 26.5,
-            "Mary Peltola": 0.7,
-            "Jonathan Kreiss-Tomkins": 11.6,
-            "Hank Kroll": 0.25,
+            "Mary Peltola": 0.75,
+            "Jonathan Kreiss-Tomkins": 13.75,
+            "Hank Kroll": 2.3,
             "Bruce Walden": 0.15,
-            "Matt Claman": 0.95,
+            "Matt Claman": 1.0,
             "Lesil McGuire": 0.05,
             "Gregg Brelsford": 0.05,
             "Jessica Faircloth": 0.05,
             "Destry J. Payne Sr.": 0.05,
-            "Bill Walker": 4.8
+            "Bill Walker": 4.9
           }
         },
         "us-governor:AL": {
           "slug": "alabama-governor-winner-2026",
           "prices": {
-            "Democrat": 6.5,
-            "Republican": 92.8
+            "Democrat": 7.0,
+            "Republican": 92.7
           }
         },
         "us-governor:AR": {
@@ -49599,8 +49599,8 @@
             "Alex Padilla": 0.05,
             "Katie Porter": 0.05,
             "Antonio Villaraigosa": 0.05,
-            "Steve Hilton": 3.4,
-            "Xavier Becerra": 93.95,
+            "Steve Hilton": 3.15,
+            "Xavier Becerra": 94.25,
             "Stephen Cloobeck": 0.05,
             "Butch Ware": 0.05,
             "Betty Yee": 0.05,
@@ -49624,13 +49624,13 @@
           "slug": "colorado-governor-winner-2026",
           "prices": {
             "Democrat": 93.85,
-            "Republican": 4.8
+            "Republican": 4.05
           }
         },
         "us-governor:CT": {
           "slug": "connecticut-governor-winner-2026",
           "prices": {
-            "Democrat": 92.5,
+            "Democrat": 93.5,
             "Republican": 5.5
           }
         },
@@ -49644,29 +49644,29 @@
         "us-governor:GA": {
           "slug": "georgia-governor-winner-2026",
           "prices": {
-            "Democrat": 59.0,
-            "Republican": 41.0
+            "Keisha Lance Bottoms (D)": 59.0,
+            "Rick Jackson (R)": 41.0
           }
         },
         "us-governor:HI": {
           "slug": "hawaii-governor-winner-2026",
           "prices": {
             "Democrat": 93.5,
-            "Republican": 4.1
+            "Republican": 4.15
           }
         },
         "us-governor:IA": {
           "slug": "iowa-governor-winner-2026",
           "prices": {
-            "Democrat": 67.0,
-            "Republican": 34.0
+            "Rob Sand (D)": 67.0,
+            "Zach Lahn (R)": 33.0
           }
         },
         "us-governor:ID": {
           "slug": "idaho-governor-winner-2026",
           "prices": {
-            "Democrat": 3.4,
-            "Republican": 94.75
+            "Democrat": 2.45,
+            "Republican": 94.45
           }
         },
         "us-governor:IL": {
@@ -49679,7 +49679,7 @@
         "us-governor:KS": {
           "slug": "kansas-governor-winner-2026",
           "prices": {
-            "Democrat": 24.5,
+            "Democrat": 23.0,
             "Republican": 76.5
           }
         },
@@ -49693,8 +49693,8 @@
         "us-governor:MD": {
           "slug": "maryland-governor-winner-2026",
           "prices": {
-            "Democrat": 93.6,
-            "Republican": 4.75
+            "Democrat": 94.25,
+            "Republican": 4.8
           }
         },
         "us-governor:ME": {
@@ -49708,8 +49708,8 @@
           "slug": "michigan-governor-winner-2026",
           "prices": {
             "Democrat": 84.0,
-            "Republican": 16.5,
-            "Independent": 1.25
+            "Republican": 15.5,
+            "Independent": 1.55
           }
         },
         "us-governor:MN": {
@@ -49729,8 +49729,8 @@
         "us-governor:NH": {
           "slug": "new-hampshire-governor-winner-2026",
           "prices": {
-            "Democrat": 14.75,
-            "Republican": 79.5
+            "Democrat": 14.8,
+            "Republican": 81.5
           }
         },
         "us-governor:NM": {
@@ -49743,8 +49743,8 @@
         "us-governor:NV": {
           "slug": "nevada-governor-winner-2026",
           "prices": {
-            "Democrat": 56.0,
-            "Republican": 45.0
+            "Aaron Ford (D)": 52.5,
+            "Joe Lombardo (R)": 47.5
           }
         },
         "us-governor:NY": {
@@ -49757,8 +49757,8 @@
         "us-governor:OH": {
           "slug": "ohio-governor-winner-2026",
           "prices": {
-            "Democrat": 44.0,
-            "Republican": 56.5
+            "Amy Acton (D)": 44.0,
+            "Vivek Ramaswamy (R)": 56.0
           }
         },
         "us-governor:OK": {
@@ -49786,8 +49786,8 @@
           "slug": "rhode-island-governor-winner-2026",
           "prices": {
             "Democrat": 91.5,
-            "Republican": 4.7,
-            "Independent": 3.6
+            "Republican": 4.8,
+            "Independent": 3.45
           }
         },
         "us-governor:SC": {
@@ -49801,13 +49801,13 @@
           "slug": "south-dakota-governor-winner-2026",
           "prices": {
             "Democrat": 6.95,
-            "Republican": 93.25
+            "Republican": 93.3
           }
         },
         "us-governor:TN": {
           "slug": "tennessee-governor-winner-2026",
           "prices": {
-            "Democrat": 2.55,
+            "Democrat": 4.9,
             "Republican": 91.1
           }
         },
@@ -49815,52 +49815,52 @@
           "slug": "texas-governor-winner-2026",
           "prices": {
             "Democrat": 11.0,
-            "Republican": 89.55
+            "Republican": 89.5
           }
         },
         "us-governor:VT": {
           "slug": "vermont-governor-winner-2026",
           "prices": {
-            "Democrat": 10.25,
-            "Republican": 87.0
+            "Democrat": 10.15,
+            "Republican": 90.5
           }
         },
         "us-governor:WI": {
           "slug": "wisconsin-governor-winner-2026",
           "prices": {
             "Democrat": 44.5,
-            "Republican": 56.0
+            "Republican": 56.5
           }
         },
         "us-governor:WY": {
           "slug": "wyoming-governor-winner-2026",
           "prices": {
-            "Democrat": 4.9,
-            "Republican": 93.55
+            "Democrat": 4.8,
+            "Republican": 93.6
           }
         },
         "us-primary:AK:Governor": {
           "slug": "who-will-advance-from-the-alaska-governor-primary",
           "prices": {
-            "Lesil McGuire": 2.35,
-            "Gregg Brelsford": 0.9,
-            "Jessica Faircloth": 1.75,
+            "Lesil McGuire": 2.15,
+            "Gregg Brelsford": 0.85,
+            "Jessica Faircloth": 1.7,
             "Destry J. Payne Sr.": 0.85,
-            "Bill Walker": 31.5,
-            "Click Bishop": 38.0,
-            "Dave Bronson": 42.0,
+            "Bill Walker": 25.5,
+            "Click Bishop": 42.0,
+            "Dave Bronson": 43.5,
             "Adam Crum": 3.5,
-            "Nancy Dahlstrom": 5.3,
+            "Nancy Dahlstrom": 3.55,
             "Edna DeVries": 0.9,
-            "Matt Heilala": 3.7,
-            "Shelley Hughes": 4.4,
-            "Hank Kroll": 1.45,
+            "Matt Heilala": 3.75,
+            "Shelley Hughes": 4.45,
+            "Hank Kroll": 1.5,
             "James Parkin": 0.15,
-            "Treg Taylor": 29.0,
+            "Treg Taylor": 28.0,
             "Bernadette Wilson": 77.5,
-            "Tom Begich": 96.3,
+            "Tom Begich": 97.65,
             "Matt Claman": 1.05,
-            "Bruce Walden": 1.6,
+            "Bruce Walden": 1.45,
             "Jonathan Kreiss-Tomkins": 80.0
           }
         },
@@ -49882,14 +49882,14 @@
             "Shirley Saucerman": 0.4,
             "Earl D. \"Skip\" Southworth": 0.2,
             "Dan J. Sullivan": 0.25,
-            "Sen. Dan S. Sullivan": 10.4
+            "Sen. Dan S. Sullivan": 10.25
           }
         },
         "us-primary:CT:Governor:Democratic": {
           "slug": "connecticut-governor-democratic-primary-winner",
           "prices": {
-            "Josh Elliott": 1.7,
-            "Ned Lamont": 98.4
+            "Josh Elliott": 1.15,
+            "Ned Lamont": 98.5
           }
         },
         "us-primary:CT:Governor:Republican": {
@@ -49905,8 +49905,8 @@
         "us-primary:DE:Senate:Democratic": {
           "slug": "delaware-democratic-senate-primary-winner",
           "prices": {
-            "Chris Coons": 95.7,
-            "Christopher Beardsley": 2.75
+            "Chris Coons": 95.6,
+            "Christopher Beardsley": 3.45
           }
         },
         "us-primary:DE:Senate:Republican": {
@@ -49919,21 +49919,21 @@
         "us-primary:FL:Governor:Democratic": {
           "slug": "democratic-nominee-for-florida-governor",
           "prices": {
-            "David Jolly": 97.6,
-            "Jerry Demings": 0.8,
+            "David Jolly": 97.5,
+            "Jerry Demings": 0.85,
             "Shevrin Jones": 0.05,
             "Jason Pizzo": 0.1,
             "Fentrice Driskell": 0.05,
             "Daniella Levine Cava": 0.15,
-            "Gwen Graham": 0.1,
+            "Gwen Graham": 0.15,
             "Angie Nixon": 0.05
           }
         },
         "us-primary:FL:Governor:Republican": {
           "slug": "republican-nominee-for-florida-governor",
           "prices": {
-            "Byron Donalds": 97.95,
-            "James Fishback": 2.05,
+            "Byron Donalds": 98.5,
+            "James Fishback": 1.65,
             "Wilton Simpson": 0.05,
             "Jay Collins": 0.15,
             "Casey DeSantis": 0.05,
@@ -49945,7 +49945,7 @@
           "slug": "massachusetts-governor-republican-primary-winner",
           "prices": {
             "Mike Kennealy": 0.2,
-            "Michael Minogue": 96.9,
+            "Michael Minogue": 96.35,
             "Brian Shortsleeve": 1.4
           }
         },
@@ -49953,8 +49953,8 @@
           "slug": "massachusetts-democratic-senate-primary-winner",
           "prices": {
             "Ayanna Pressley": 0.05,
-            "Ed Markey": 79.5,
-            "Seth Moulton": 21.5,
+            "Ed Markey": 78.5,
+            "Seth Moulton": 18.0,
             "Alexander Rikleen": 0.05
           }
         },
@@ -49962,8 +49962,8 @@
           "slug": "minnesota-governor-democratic-primary-winner",
           "prices": {
             "Tim Walz": 0.05,
-            "Bill Gates Jr.": 0.35,
-            "Amy Klobuchar": 99.35,
+            "Bill Gates Jr.": 0.55,
+            "Amy Klobuchar": 99.25,
             "Steve Simon": 0.05,
             "Kobey Layne": 0.05
           }
@@ -49971,23 +49971,23 @@
         "us-primary:MN:Governor:Republican": {
           "slug": "minnesota-governor-republican-primary-winner",
           "prices": {
-            "Lisa Demuth": 21.0,
+            "Lisa Demuth": 16.5,
             "Scott Jensen": 0.15,
             "Jeff Johnson": 0.05,
             "Patrick Knight": 0.05,
             "Brad Kohler": 0.05,
             "Chris Madel": 0.05,
             "Phil Parrish": 0.05,
-            "Kendall Qualls": 1.8,
+            "Kendall Qualls": 1.85,
             "Kristin Robbins": 0.05,
-            "Mike Lindell": 77.5
+            "Mike Lindell": 82.5
           }
         },
         "us-primary:MN:Senate:Democratic": {
           "slug": "minnesota-democratic-senate-primary-winner",
           "prices": {
-            "Peggy Flanagan": 78.0,
-            "Angie Craig": 20.5,
+            "Peggy Flanagan": 80.5,
+            "Angie Craig": 15.5,
             "Melisa López Franzen": 0.05,
             "Ilhan Omar": 0.05,
             "Keith Ellison": 0.05,
@@ -50019,40 +50019,40 @@
           "slug": "new-hampshire-governor-democratic-primary-winner",
           "prices": {
             "John Kiper": 0.2,
-            "Tom Sherman": 0.25,
-            "Deaglan McEachern": 1.05,
+            "Tom Sherman": 0.5,
+            "Deaglan McEachern": 1.1,
             "Donovan Fenton": 0.5,
-            "Cinde Warmington": 98.25
+            "Cinde Warmington": 98.7
           }
         },
         "us-primary:NH:Governor:Republican": {
           "slug": "new-hampshire-governor-republican-primary-winner",
           "prices": {
-            "Kelly Ayotte": 96.75,
-            "Corey Lewandowski": 1.0
+            "Kelly Ayotte": 95.65,
+            "Corey Lewandowski": 0.7
           }
         },
         "us-primary:NH:Senate:Democratic": {
           "slug": "new-hampshire-democratic-senate-primary-winner",
           "prices": {
-            "Karishma Manzur": 2.7,
-            "Chris Pappas": 95.95
+            "Karishma Manzur": 1.55,
+            "Chris Pappas": 96.3
           }
         },
         "us-primary:NH:Senate:Republican": {
           "slug": "new-hampshire-republican-senate-primary-winner-296",
           "prices": {
-            "John E. Sununu": 95.85,
-            "Scott Brown": 4.45,
-            "Chris Sununu": 0.3,
+            "John E. Sununu": 96.0,
+            "Scott Brown": 4.5,
+            "Chris Sununu": 0.6,
             "Dan Innis": 0.05
           }
         },
         "us-primary:RI:Governor:Democratic": {
           "slug": "rhode-island-governor-democratic-primary-winner",
           "prices": {
-            "Helena Foulkes": 84.1,
-            "Dan McKee": 14.15,
+            "Helena Foulkes": 84.85,
+            "Dan McKee": 14.05,
             "Gregory Stevens": 0.05,
             "Joe Shekarchi": 0.05
           }
@@ -50060,8 +50060,8 @@
         "us-primary:RI:Governor:Republican": {
           "slug": "rhode-island-governor-republican-primary-winner",
           "prices": {
-            "Aaron Guckian": 28.3,
-            "Elaine Pelino": 63.5,
+            "Aaron Guckian": 27.95,
+            "Elaine Pelino": 61.5,
             "Robert Raimondo": 0.5,
             "Jessica de la Cruz": 0.15,
             "Ashley Kalus": 0.2
@@ -50070,14 +50070,14 @@
         "us-primary:RI:Senate:Democratic": {
           "slug": "rhode-island-democratic-senate-primary-winner",
           "prices": {
-            "Jack Reed": 95.35,
-            "Connor Burbridge": 4.2
+            "Jack Reed": 95.25,
+            "Connor Burbridge": 4.55
           }
         },
         "us-primary:RI:Senate:Republican": {
           "slug": "rhode-island-republican-senate-primary-winner",
           "prices": {
-            "Allen Waters": 2.2,
+            "Allen Waters": 2.3,
             "Raymond McKay": 95.5
           }
         },
@@ -50088,25 +50088,25 @@
             "Joe Wilson": 0.05,
             "Mark Lynch": 0.05,
             "Paul Dans": 0.05,
-            "Ralph Norman": 21.5,
+            "Ralph Norman": 22.5,
             "William Timmons": 0.05,
-            "Russell Fry": 16.2,
+            "Russell Fry": 15.4,
             "Sheri Biggs": 0.05,
             "Pamela Evette": 0.05,
             "André Bauer": 0.05,
             "Alan Wilson": 0.05,
             "Scott Bessent": 0.05,
             "Trey Gowdy": 0.05,
-            "Darline Graham Nordone": 60.35,
-            "Mark Sanford": 3.55
+            "Darline Graham Nordone": 61.45,
+            "Mark Sanford": 2.55
           }
         },
         "us-primary:TN:Governor:Democratic": {
           "slug": "tennessee-governor-democratic-primary-winner",
           "prices": {
-            "Carnita Atwater": 1.4,
-            "Tim Cyr": 0.05,
-            "Jerri Green": 98.1,
+            "Carnita Atwater": 0.95,
+            "Tim Cyr": 0.4,
+            "Jerri Green": 98.0,
             "Adam Kurtz": 0.05,
             "Kevin Lee McCants": 0.05
           }
@@ -50114,36 +50114,36 @@
         "us-primary:TN:Governor:Republican": {
           "slug": "tennessee-governor-republican-primary-winner",
           "prices": {
-            "Marsha Blackburn": 93.65,
-            "Monty Fritts": 0.6,
-            "John Rose": 4.6
+            "Marsha Blackburn": 95.95,
+            "Monty Fritts": 0.4,
+            "John Rose": 3.3
           }
         },
         "us-primary:TN:Senate:Democratic": {
           "slug": "tennessee-democratic-senate-primary-winner",
           "prices": {
             "Bill Hagerty": 0.05,
-            "Marquita Bradshaw": 87.1,
-            "Maria Brewer": 6.7,
-            "Kevin Lee McCants": 0.55,
-            "Civil Miller-Watkins": 1.1,
-            "Diana Onyeijaka": 4.35
+            "Marquita Bradshaw": 93.95,
+            "Maria Brewer": 6.55,
+            "Kevin Lee McCants": 0.35,
+            "Civil Miller-Watkins": 0.4,
+            "Diana Onyeijaka": 1.1
           }
         },
         "us-primary:VT:Governor:Democratic": {
           "slug": "vermont-governor-democratic-primary-winner",
           "prices": {
             "Charity Clark": 0.05,
-            "Mike Pieciak": 0.2,
+            "Mike Pieciak": 0.05,
             "Esther Charlestin": 0.05,
-            "Aly Richards": 41.5,
-            "Amanda Janoo": 49.85
+            "Aly Richards": 69.5,
+            "Amanda Janoo": 31.9
           }
         },
         "us-primary:VT:Governor:Republican": {
           "slug": "vermont-governor-republican-primary-winner",
           "prices": {
-            "Phil Scott": 98.55,
+            "Phil Scott": 98.45,
             "John Rodgers": 0.65
           }
         },
@@ -50151,15 +50151,15 @@
           "slug": "wisconsin-governor-democratic-primary-winner",
           "prices": {
             "Mandela Barnes": 0.05,
-            "David Crowley": 14.45,
-            "Francesca Hong": 85.65,
+            "David Crowley": 10.15,
+            "Francesca Hong": 90.15,
             "Missy Hughes": 0.05,
             "Brett Hulsey": 0.05,
             "Sara Rodriguez": 0.05,
             "Zachary Roper": 0.05,
             "Kelda Roys": 0.05,
             "Tim Jacobson": 0.05,
-            "Joel Brennan": 0.15,
+            "Joel Brennan": 0.05,
             "Melissa Agard": 0.05,
             "Chris Larson": 0.05,
             "Tom Nelson": 0.05
@@ -50168,25 +50168,25 @@
         "us-primary:WI:Governor:Republican": {
           "slug": "wisconsin-governor-republican-primary-winner",
           "prices": {
-            "Andy Manske": 0.05,
-            "Josh Schoemann": 0.55,
+            "Andy Manske": 0.2,
+            "Josh Schoemann": 0.1,
             "Tom Tiffany": 99.4,
             "Tommy Thompson": 0.05,
             "Sean Duffy": 0.15,
             "Eric Hovde": 0.15,
-            "Rebecca Kleefisch": 0.15,
-            "Tim Michels": 0.45
+            "Rebecca Kleefisch": 0.25,
+            "Tim Michels": 0.5
           }
         },
         "us-primary:WY:Governor:Republican": {
           "slug": "wyoming-governor-republican-primary-winner",
           "prices": {
-            "Eric Barlow": 59.95,
+            "Eric Barlow": 65.15,
             "Brent Bien": 0.45,
             "Joseph Kibler": 0.05,
             "Reid Rasner": 0.05,
             "Bo Biteman": 0.05,
-            "Megan Degenfelder": 40.7,
+            "Megan Degenfelder": 33.45,
             "Chuck Gray": 0.05,
             "Chip Neiman": 0.05,
             "Ogen Driskill": 0.05,
@@ -50218,8 +50218,8 @@
         "us-senate:CO": {
           "slug": "colorado-senate-election-winner",
           "prices": {
-            "Democrat": 93.5,
-            "Republican": 5.5
+            "Democrat": 95.0,
+            "Republican": 4.5
           }
         },
         "us-senate:DE": {
@@ -50232,22 +50232,22 @@
         "us-senate:GA": {
           "slug": "georgia-senate-election-winner",
           "prices": {
-            "Democrat": 91.5,
-            "Republican": 7.45
+            "Jon Ossoff (D)": 91.5,
+            "Mike Collins (R)": 9.1
           }
         },
         "us-senate:IA": {
           "slug": "iowa-senate-election-winner",
           "prices": {
-            "Josh Turek (D)": 45.0,
-            "Ashley Hinson (R)": 56.0
+            "Josh Turek (D)": 44.5,
+            "Ashley Hinson (R)": 56.5
           }
         },
         "us-senate:ID": {
           "slug": "idaho-senate-election-winner",
           "prices": {
             "Democrat": 4.9,
-            "Republican": 93.35
+            "Republican": 93.15
           }
         },
         "us-senate:IL": {
@@ -50282,21 +50282,21 @@
           "slug": "massachusetts-senate-election-winner",
           "prices": {
             "Democrat": 97.4,
-            "Republican": 2.75
+            "Republican": 3.05
           }
         },
         "us-senate:ME": {
           "slug": "maine-senate-election-winner",
           "prices": {
-            "Democrat": 67.5,
-            "Republican": 33.5
+            "Troy Jackson (D)": 67.5,
+            "Susan Collins (R)": 33.5
           }
         },
         "us-senate:MI": {
           "slug": "michigan-senate-election-winner",
           "prices": {
-            "Democrat": 61.5,
-            "Republican": 39.5
+            "Abdul El-Sayed (D)": 60.0,
+            "Mike Rogers (R)": 41.0
           }
         },
         "us-senate:MN": {
@@ -50318,36 +50318,36 @@
           "prices": {
             "Democrat": 0.75,
             "Republican": 81.5,
-            "Independent": 18.3
+            "Independent": 17.6
           }
         },
         "us-senate:NC": {
           "slug": "north-carolina-senate-election-winner",
           "prices": {
-            "Roy Cooper (D)": 90.0,
-            "Michael Whatley (R)": 11.0
+            "Roy Cooper (D)": 90.5,
+            "Michael Whatley (R)": 10.5
           }
         },
         "us-senate:NE": {
           "slug": "nebraska-senate-election-winner",
           "prices": {
             "Democrat": 0.25,
-            "Republican": 73.0,
-            "Independent": 24.5
+            "Pete Ricketts (R)": 73.0,
+            "Independent": 25.5
           }
         },
         "us-senate:NH": {
           "slug": "new-hampshire-senate-election-winner",
           "prices": {
-            "Democrat": 83.5,
+            "Democrat": 84.5,
             "Republican": 16.5
           }
         },
         "us-senate:NJ": {
           "slug": "new-jersey-senate-election-winner",
           "prices": {
-            "Democrat": 94.0,
-            "Republican": 4.55
+            "Democrat": 94.5,
+            "Republican": 5.85
           }
         },
         "us-senate:NM": {
@@ -50360,22 +50360,22 @@
         "us-senate:OK": {
           "slug": "oklahoma-senate-election-winner",
           "prices": {
-            "Democrat": 4.15,
+            "Democrat": 4.2,
             "Republican": 94.0
           }
         },
         "us-senate:OR": {
           "slug": "oregon-senate-election-winner",
           "prices": {
-            "Democrat": 97.15,
+            "Democrat": 96.6,
             "Republican": 3.4
           }
         },
         "us-senate:RI": {
           "slug": "rhode-island-senate-election-winner",
           "prices": {
-            "Democrat": 94.0,
-            "Republican": 4.3
+            "Democrat": 95.0,
+            "Republican": 4.5
           }
         },
         "us-senate:SC": {
@@ -50388,7 +50388,7 @@
         "us-senate:SD": {
           "slug": "south-dakota-senate-election-winner",
           "prices": {
-            "Democrat": 3.0,
+            "Democrat": 2.95,
             "Republican": 94.05
           }
         },
@@ -50396,14 +50396,14 @@
           "slug": "tennessee-senate-election-winner",
           "prices": {
             "Democrat": 2.55,
-            "Republican": 94.3
+            "Republican": 94.1
           }
         },
         "us-senate:TX": {
           "slug": "texas-senate-election-winner",
           "prices": {
             "James Talarico (D)": 48.5,
-            "Ken Paxton (R)": 51.5
+            "Ken Paxton (R)": 52.5
           }
         },
         "us-senate:VA": {
@@ -50417,21 +50417,21 @@
           "slug": "west-virginia-senate-election-winner",
           "prices": {
             "Democrat": 1.65,
-            "Republican": 94.7
+            "Republican": 95.05
           }
         },
         "us-senate:WY": {
           "slug": "wyoming-senate-election-winner",
           "prices": {
-            "Democrat": 2.35,
-            "Republican": 94.9
+            "Democrat": 2.2,
+            "Republican": 95.0
           }
         },
         "de-state:ST:AfD absolute majority": {
           "slug": "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt",
           "prices": {
-            "Yes": 28.5,
-            "No": 71.5
+            "Yes": 27.0,
+            "No": 73.0
           }
         },
         "mayoral:GB": {
