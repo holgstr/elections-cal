@@ -1624,8 +1624,6 @@
     "state_code": "MO",
     "geo": "US-MO",
     "window_days": 30,
-    "window_mode": "trailing",
-    "watchlist": true,
     "keywords": [
       {
         "name": "Wesley Bell",
@@ -1641,7 +1639,22 @@
         "topic_title": "Cori Bush",
         "topic_type": "Nurse and former United States Representative"
       }
-    ]
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-08-06",
+      "source": "Associated Press / NBC News",
+      "candidates": [
+        {
+          "label": "Bell",
+          "pct": 59.2
+        },
+        {
+          "label": "Bush",
+          "pct": 36.9
+        }
+      ]
+    }
   },
   {
     "id": "mi-cd7-dem-primary-2026",
@@ -1651,8 +1664,6 @@
     "state_code": "MI",
     "geo": "US-MI",
     "window_days": 30,
-    "window_mode": "trailing",
-    "watchlist": true,
     "keywords": [
       {
         "name": "Bridget Brink",
@@ -1672,7 +1683,26 @@
         "topic_title": "Matt Maasdam",
         "topic_type": "Politician"
       }
-    ]
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-08-06",
+      "source": "Associated Press / NBC News",
+      "candidates": [
+        {
+          "label": "Lawrence",
+          "pct": 43.7
+        },
+        {
+          "label": "Brink",
+          "pct": 28.8
+        },
+        {
+          "label": "Maasdam",
+          "pct": 27.6
+        }
+      ]
+    }
   },
   {
     "id": "mi-cd13-dem-primary-2026",
@@ -1682,8 +1712,6 @@
     "state_code": "MI",
     "geo": "US-MI",
     "window_days": 30,
-    "window_mode": "trailing",
-    "watchlist": true,
     "keywords": [
       {
         "name": "Donavan McKinney",
@@ -1699,7 +1727,22 @@
         "topic_title": "Shri Thanedar",
         "topic_type": "United States Representative"
       }
-    ]
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-08-06",
+      "source": "Associated Press / NBC News",
+      "candidates": [
+        {
+          "label": "McKinney",
+          "pct": 51.9
+        },
+        {
+          "label": "Thanedar",
+          "pct": 48.1
+        }
+      ]
+    }
   },
   {
     "id": "mi-dem-senate-primary-2026",
@@ -1709,8 +1752,6 @@
     "state_code": "MI",
     "geo": "US-MI",
     "window_days": 30,
-    "window_mode": "trailing",
-    "watchlist": true,
     "keywords": [
       {
         "name": "Abdul El-Sayed",
@@ -1726,7 +1767,22 @@
         "topic_title": "Haley Stevens",
         "topic_type": "United States Representative"
       }
-    ]
+    ],
+    "result": {
+      "status": "preliminary",
+      "as_of": "2026-08-06",
+      "source": "Associated Press / NBC News",
+      "candidates": [
+        {
+          "label": "El-Sayed",
+          "pct": 48.5
+        },
+        {
+          "label": "Stevens",
+          "pct": 47.5
+        }
+      ]
+    }
   },
   {
     "id": "ks-dem-governor-primary-2026",

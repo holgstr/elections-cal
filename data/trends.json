@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T23:26:17Z",
+  "generated_at": "2026-08-06T03:12:10Z",
   "source": "google_trends",
   "races": [
     {
@@ -9505,10 +9505,10 @@
         },
         {
           "keyword": "/g/11b6qd3511",
-          "label": "Galán-Woods",
+          "label": "Gal\u00e1n-Woods",
           "query_mode": "entity",
           "resolve_source": "config",
-          "name": "Marlene Galán-Woods",
+          "name": "Marlene Gal\u00e1n-Woods",
           "mid": "/g/11b6qd3511",
           "topic_title": "Marlene Galan Woods",
           "topic_type": "Politician"
@@ -9784,7 +9784,7 @@
             "pct": 39.5
           },
           {
-            "label": "Galán-Woods",
+            "label": "Gal\u00e1n-Woods",
             "pct": 34.3
           },
           {
@@ -10336,7 +10336,7 @@
       "state_code": "MO",
       "geo": "US-MO",
       "window_days": 30,
-      "window_mode": "trailing",
+      "window_mode": "election",
       "start_date": "2026-07-05",
       "end_date": "2026-08-04",
       "candidates": [
@@ -10580,8 +10580,22 @@
           }
         }
       ],
-      "watchlist": true,
-      "fetched_at": "2026-08-05T06:52:47Z"
+      "fetched_at": "2026-08-05T06:52:47Z",
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-08-06",
+        "source": "Associated Press / NBC News",
+        "candidates": [
+          {
+            "label": "Bell",
+            "pct": 59.2
+          },
+          {
+            "label": "Bush",
+            "pct": 36.9
+          }
+        ]
+      }
     },
     {
       "id": "mi-cd13-dem-primary-2026",
@@ -10591,7 +10605,7 @@
       "state_code": "MI",
       "geo": "US-MI",
       "window_days": 30,
-      "window_mode": "trailing",
+      "window_mode": "election",
       "start_date": "2026-07-05",
       "end_date": "2026-08-04",
       "candidates": [
@@ -10835,8 +10849,22 @@
           }
         }
       ],
-      "watchlist": true,
-      "fetched_at": "2026-08-05T19:59:59Z"
+      "fetched_at": "2026-08-05T19:59:59Z",
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-08-06",
+        "source": "Associated Press / NBC News",
+        "candidates": [
+          {
+            "label": "McKinney",
+            "pct": 51.9
+          },
+          {
+            "label": "Thanedar",
+            "pct": 48.1
+          }
+        ]
+      }
     },
     {
       "id": "mi-dem-senate-primary-2026",
@@ -10846,7 +10874,7 @@
       "state_code": "MI",
       "geo": "US-MI",
       "window_days": 30,
-      "window_mode": "trailing",
+      "window_mode": "election",
       "start_date": "2026-07-05",
       "end_date": "2026-08-04",
       "candidates": [
@@ -11090,8 +11118,22 @@
           }
         }
       ],
-      "watchlist": true,
-      "fetched_at": "2026-08-05T21:36:46Z"
+      "fetched_at": "2026-08-05T21:36:46Z",
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-08-06",
+        "source": "Associated Press / NBC News",
+        "candidates": [
+          {
+            "label": "El-Sayed",
+            "pct": 48.5
+          },
+          {
+            "label": "Stevens",
+            "pct": 47.5
+          }
+        ]
+      }
     },
     {
       "id": "ks-dem-governor-primary-2026",
@@ -13305,7 +13347,7 @@
       "state_code": "MI",
       "geo": "US-MI",
       "window_days": 30,
-      "window_mode": "trailing",
+      "window_mode": "election",
       "start_date": "2026-07-05",
       "end_date": "2026-08-04",
       "candidates": [
@@ -13588,8 +13630,26 @@
           }
         }
       ],
-      "watchlist": true,
-      "fetched_at": "2026-08-05T23:25:56Z"
+      "fetched_at": "2026-08-05T23:25:56Z",
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-08-06",
+        "source": "Associated Press / NBC News",
+        "candidates": [
+          {
+            "label": "Lawrence",
+            "pct": 43.7
+          },
+          {
+            "label": "Brink",
+            "pct": 28.8
+          },
+          {
+            "label": "Maasdam",
+            "pct": 27.6
+          }
+        ]
+      }
     },
     {
       "id": "wa-cd3-primary-2026",
