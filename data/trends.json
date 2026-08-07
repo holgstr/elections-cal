@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T14:51:00Z",
+  "generated_at": "2026-08-07T00:18:56Z",
   "source": "google_trends",
   "races": [
     {
@@ -11194,7 +11194,7 @@
           "date": "2026-07-08",
           "values": {
             "/g/11c1pmpn3f": 0,
-            "/g/11g715qngv": 39
+            "/g/11g715qngv": 0
           }
         },
         {
@@ -11291,108 +11291,104 @@
         {
           "date": "2026-07-22",
           "values": {
-            "/g/11c1pmpn3f": 11,
-            "/g/11g715qngv": 11
+            "/g/11c1pmpn3f": 0,
+            "/g/11g715qngv": 0
           }
         },
         {
           "date": "2026-07-23",
           "values": {
-            "/g/11c1pmpn3f": 8,
-            "/g/11g715qngv": 6
+            "/g/11c1pmpn3f": 0,
+            "/g/11g715qngv": 0
           }
         },
         {
           "date": "2026-07-24",
           "values": {
-            "/g/11c1pmpn3f": 7,
+            "/g/11c1pmpn3f": 6,
             "/g/11g715qngv": 6
           }
         },
         {
           "date": "2026-07-25",
           "values": {
-            "/g/11c1pmpn3f": 11,
+            "/g/11c1pmpn3f": 10,
             "/g/11g715qngv": 8
           }
         },
         {
           "date": "2026-07-26",
           "values": {
-            "/g/11c1pmpn3f": 7,
-            "/g/11g715qngv": 7
+            "/g/11c1pmpn3f": 6,
+            "/g/11g715qngv": 6
           }
         },
         {
           "date": "2026-07-27",
           "values": {
-            "/g/11c1pmpn3f": 9,
-            "/g/11g715qngv": 15
-          }
-        },
-        {
-          "date": "2026-07-28",
-          "values": {
-            "/g/11c1pmpn3f": 13,
+            "/g/11c1pmpn3f": 8,
             "/g/11g715qngv": 13
           }
         },
         {
-          "date": "2026-07-29",
-          "values": {
-            "/g/11c1pmpn3f": 12,
-            "/g/11g715qngv": 9
-          }
-        },
-        {
-          "date": "2026-07-30",
+          "date": "2026-07-28",
           "values": {
             "/g/11c1pmpn3f": 12,
             "/g/11g715qngv": 11
           }
         },
         {
+          "date": "2026-07-29",
+          "values": {
+            "/g/11c1pmpn3f": 10,
+            "/g/11g715qngv": 8
+          }
+        },
+        {
+          "date": "2026-07-30",
+          "values": {
+            "/g/11c1pmpn3f": 12,
+            "/g/11g715qngv": 10
+          }
+        },
+        {
           "date": "2026-07-31",
           "values": {
-            "/g/11c1pmpn3f": 22,
-            "/g/11g715qngv": 18
+            "/g/11c1pmpn3f": 20,
+            "/g/11g715qngv": 16
           }
         },
         {
           "date": "2026-08-01",
           "values": {
-            "/g/11c1pmpn3f": 20,
-            "/g/11g715qngv": 15
+            "/g/11c1pmpn3f": 18,
+            "/g/11g715qngv": 13
           }
         },
         {
           "date": "2026-08-02",
           "values": {
-            "/g/11c1pmpn3f": 10,
-            "/g/11g715qngv": 7
+            "/g/11c1pmpn3f": 9,
+            "/g/11g715qngv": 6
           }
         },
         {
           "date": "2026-08-03",
           "values": {
-            "/g/11c1pmpn3f": 20,
-            "/g/11g715qngv": 17
+            "/g/11c1pmpn3f": 18,
+            "/g/11g715qngv": 16
           }
         },
         {
           "date": "2026-08-04",
           "values": {
             "/g/11c1pmpn3f": 100,
-            "/g/11g715qngv": 74
+            "/g/11g715qngv": 71
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-05T14:59:38Z",
-      "stale": {
-        "reason": "fetch_failed",
-        "data_as_of": "2026-08-06T07:15:19Z"
-      }
+      "fetched_at": "2026-08-07T00:18:31Z"
     },
     {
       "id": "wi-dem-governor-primary-2026",
@@ -13865,18 +13861,18 @@
         {
           "date": "2026-07-22",
           "values": {
-            "/m/0pc0ws0": 7,
-            "/g/11rts0yhzk": 30,
-            "/g/11r9754z1v": 9,
+            "/m/0pc0ws0": 0,
+            "/g/11rts0yhzk": 55,
+            "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
         },
         {
           "date": "2026-07-23",
           "values": {
-            "/m/0pc0ws0": 5,
+            "/m/0pc0ws0": 0,
             "/g/11rts0yhzk": 100,
-            "/g/11r9754z1v": 8,
+            "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
         },
@@ -13884,8 +13880,8 @@
           "date": "2026-07-24",
           "values": {
             "/m/0pc0ws0": 5,
-            "/g/11rts0yhzk": 55,
-            "/g/11r9754z1v": 4,
+            "/g/11rts0yhzk": 56,
+            "/g/11r9754z1v": 5,
             "/g/11c0w0gml3": 0
           }
         },
@@ -13893,8 +13889,8 @@
           "date": "2026-07-25",
           "values": {
             "/m/0pc0ws0": 8,
-            "/g/11rts0yhzk": 32,
-            "/g/11r9754z1v": 5,
+            "/g/11rts0yhzk": 33,
+            "/g/11r9754z1v": 6,
             "/g/11c0w0gml3": 0
           }
         },
@@ -13902,7 +13898,7 @@
           "date": "2026-07-26",
           "values": {
             "/m/0pc0ws0": 6,
-            "/g/11rts0yhzk": 20,
+            "/g/11rts0yhzk": 21,
             "/g/11r9754z1v": 8,
             "/g/11c0w0gml3": 0
           }
@@ -13911,17 +13907,17 @@
           "date": "2026-07-27",
           "values": {
             "/m/0pc0ws0": 5,
-            "/g/11rts0yhzk": 20,
-            "/g/11r9754z1v": 5,
+            "/g/11rts0yhzk": 19,
+            "/g/11r9754z1v": 6,
             "/g/11c0w0gml3": 0
           }
         },
         {
           "date": "2026-07-28",
           "values": {
-            "/m/0pc0ws0": 6,
-            "/g/11rts0yhzk": 20,
-            "/g/11r9754z1v": 4,
+            "/m/0pc0ws0": 7,
+            "/g/11rts0yhzk": 21,
+            "/g/11r9754z1v": 6,
             "/g/11c0w0gml3": 0
           }
         },
@@ -13929,8 +13925,8 @@
           "date": "2026-07-29",
           "values": {
             "/m/0pc0ws0": 6,
-            "/g/11rts0yhzk": 19,
-            "/g/11r9754z1v": 4,
+            "/g/11rts0yhzk": 20,
+            "/g/11r9754z1v": 5,
             "/g/11c0w0gml3": 0
           }
         },
@@ -13939,7 +13935,7 @@
           "values": {
             "/m/0pc0ws0": 6,
             "/g/11rts0yhzk": 20,
-            "/g/11r9754z1v": 5,
+            "/g/11r9754z1v": 6,
             "/g/11c0w0gml3": 0
           }
         },
@@ -13947,7 +13943,7 @@
           "date": "2026-07-31",
           "values": {
             "/m/0pc0ws0": 5,
-            "/g/11rts0yhzk": 33,
+            "/g/11rts0yhzk": 36,
             "/g/11r9754z1v": 7,
             "/g/11c0w0gml3": 0
           }
@@ -13964,9 +13960,9 @@
         {
           "date": "2026-08-02",
           "values": {
-            "/m/0pc0ws0": 6,
-            "/g/11rts0yhzk": 19,
-            "/g/11r9754z1v": 8,
+            "/m/0pc0ws0": 5,
+            "/g/11rts0yhzk": 20,
+            "/g/11r9754z1v": 10,
             "/g/11c0w0gml3": 0
           }
         },
@@ -13974,26 +13970,23 @@
           "date": "2026-08-03",
           "values": {
             "/m/0pc0ws0": 10,
-            "/g/11rts0yhzk": 21,
+            "/g/11rts0yhzk": 22,
             "/g/11r9754z1v": 12,
-            "/g/11c0w0gml3": 2
+            "/g/11c0w0gml3": 0
           }
         },
         {
           "date": "2026-08-04",
           "values": {
             "/m/0pc0ws0": 14,
-            "/g/11rts0yhzk": 41,
-            "/g/11r9754z1v": 23,
+            "/g/11rts0yhzk": 43,
+            "/g/11r9754z1v": 24,
             "/g/11c0w0gml3": 0
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-05T20:00:25Z"
+      "fetched_at": "2026-08-07T00:18:56Z"
     }
-  ],
-  "errors": [
-    "ks-dem-governor-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-07-05+2026-08-04%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-KS%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11c1pmpn3f%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-KS%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11g715qngv%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAanXv8Itzbv02gJfbpDpEzYK2m126EiyL: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"lB5FB3zWJ7IjO6QUbU0yTQ\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222"
   ]
 }
