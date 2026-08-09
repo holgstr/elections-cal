@@ -5,34 +5,34 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
+    "berlin-state-election-winner": {
+      "CDU": {
+        "change_pp": 9.5,
+        "direction": "down",
+        "reference_date": "2026-08-07",
+        "reference_pct": 28.5,
+        "window": "2d"
+      }
+    },
     "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt": {
       "Yes": {
-        "change_pp": 6.5,
+        "change_pp": 8.0,
         "direction": "up",
         "reference_date": "2026-08-07",
         "reference_pct": 23.5,
         "window": "2d"
       },
       "No": {
-        "change_pp": 6.5,
+        "change_pp": 8.0,
         "direction": "down",
         "reference_date": "2026-08-07",
         "reference_pct": 76.5,
         "window": "2d"
       }
     },
-    "connecticut-governor-winner-2026": {
-      "Democrat": {
-        "change_pp": 4.05,
-        "direction": "up",
-        "reference_date": "2026-08-07",
-        "reference_pct": 93.5,
-        "window": "2d"
-      }
-    },
     "new-hampshire-governor-winner-2026": {
       "Democrat": {
-        "change_pp": 5.15,
+        "change_pp": 5.25,
         "direction": "up",
         "reference_date": "2026-08-07",
         "reference_pct": 15.35,
@@ -57,14 +57,14 @@
         "window": "2d"
       },
       "Dave Bronson": {
-        "change_pp": 9.5,
-        "direction": "up",
+        "change_pp": 11.5,
+        "direction": "down",
         "reference_date": "2026-08-07",
         "reference_pct": 54.5,
         "window": "2d"
       },
       "Treg Taylor": {
-        "change_pp": 8.0,
+        "change_pp": 7.5,
         "direction": "up",
         "reference_date": "2026-08-07",
         "reference_pct": 25.0,
@@ -73,7 +73,7 @@
     },
     "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
       "Sen. Dan S. Sullivan": {
-        "change_pp": 13.1,
+        "change_pp": 14.1,
         "direction": "down",
         "reference_date": "2026-08-07",
         "reference_pct": 17.3,
@@ -82,59 +82,50 @@
     },
     "minnesota-governor-republican-primary-winner": {
       "Lisa Demuth": {
-        "change_pp": 31.5,
+        "change_pp": 30.5,
         "direction": "up",
         "reference_date": "2026-08-07",
         "reference_pct": 25.0,
         "window": "2d"
       },
       "Mike Lindell": {
-        "change_pp": 27.0,
+        "change_pp": 28.5,
         "direction": "down",
         "reference_date": "2026-08-07",
         "reference_pct": 71.0,
         "window": "2d"
       }
-    },
-    "minnesota-democratic-senate-primary-winner": {
-      "Peggy Flanagan": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-08-07",
-        "reference_pct": 69.5,
-        "window": "2d"
-      }
     }
   },
   "by_market_id": {
+    "de-state:BE": {
+      "CDU": {
+        "change_pp": 9.5,
+        "direction": "down",
+        "reference_date": "2026-08-07",
+        "reference_pct": 28.5,
+        "window": "2d"
+      }
+    },
     "de-state:ST:AfD absolute majority": {
       "Yes": {
-        "change_pp": 6.5,
+        "change_pp": 8.0,
         "direction": "up",
         "reference_date": "2026-08-07",
         "reference_pct": 23.5,
         "window": "2d"
       },
       "No": {
-        "change_pp": 6.5,
+        "change_pp": 8.0,
         "direction": "down",
         "reference_date": "2026-08-07",
         "reference_pct": 76.5,
         "window": "2d"
       }
     },
-    "us-governor:CT": {
-      "Democrat": {
-        "change_pp": 4.05,
-        "direction": "up",
-        "reference_date": "2026-08-07",
-        "reference_pct": 93.5,
-        "window": "2d"
-      }
-    },
     "us-governor:NH": {
       "Democrat": {
-        "change_pp": 5.15,
+        "change_pp": 5.25,
         "direction": "up",
         "reference_date": "2026-08-07",
         "reference_pct": 15.35,
@@ -159,14 +150,14 @@
         "window": "2d"
       },
       "Dave Bronson": {
-        "change_pp": 9.5,
-        "direction": "up",
+        "change_pp": 11.5,
+        "direction": "down",
         "reference_date": "2026-08-07",
         "reference_pct": 54.5,
         "window": "2d"
       },
       "Treg Taylor": {
-        "change_pp": 8.0,
+        "change_pp": 7.5,
         "direction": "up",
         "reference_date": "2026-08-07",
         "reference_pct": 25.0,
@@ -175,7 +166,7 @@
     },
     "us-primary:AK:Senate": {
       "Sen. Dan S. Sullivan": {
-        "change_pp": 13.1,
+        "change_pp": 14.1,
         "direction": "down",
         "reference_date": "2026-08-07",
         "reference_pct": 17.3,
@@ -184,26 +175,17 @@
     },
     "us-primary:MN:Governor:Republican": {
       "Lisa Demuth": {
-        "change_pp": 31.5,
+        "change_pp": 30.5,
         "direction": "up",
         "reference_date": "2026-08-07",
         "reference_pct": 25.0,
         "window": "2d"
       },
       "Mike Lindell": {
-        "change_pp": 27.0,
+        "change_pp": 28.5,
         "direction": "down",
         "reference_date": "2026-08-07",
         "reference_pct": 71.0,
-        "window": "2d"
-      }
-    },
-    "us-primary:MN:Senate:Democratic": {
-      "Peggy Flanagan": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-08-07",
-        "reference_pct": 69.5,
         "window": "2d"
       }
     }
