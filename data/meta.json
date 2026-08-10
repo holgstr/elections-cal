@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-06",
-  "window_start": "2026-08-06",
-  "window_end": "2027-08-06",
-  "count": 66,
+  "generated_at": "2026-08-10",
+  "window_start": "2026-08-10",
+  "window_end": "2027-08-10",
+  "count": 60,
   "sources": {
     "wikidata": 0,
-    "curated": 111
+    "curated": 105
   }
 }

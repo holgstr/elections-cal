@@ -75,21 +75,6 @@
       }
     }
   },
-  "HI": {
-    "Governor": {
-      "primary_format": "party",
-      "primary_type": "open",
-      "primary_type_label": "Open primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Democratic": {
-          "incumbent": "Green"
-        }
-      }
-    }
-  },
   "MA": {
     "Governor": {
       "primary_format": "party",
@@ -234,40 +219,6 @@
       "parties": {
         "Republican": {
           "polymarket_slug": "south-carolina-republican-senate-special-primary-winner-20260712135206676"
-        }
-      }
-    }
-  },
-  "TN": {
-    "Governor": {
-      "primary_format": "party",
-      "primary_type": "open",
-      "primary_type_label": "Open primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Republican": {
-          "polymarket_slug": "tennessee-governor-republican-primary-winner"
-        },
-        "Democratic": {
-          "polymarket_slug": "tennessee-governor-democratic-primary-winner"
-        }
-      }
-    },
-    "Senate": {
-      "primary_format": "party",
-      "primary_type": "open",
-      "primary_type_label": "Open primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Republican": {
-          "incumbent": "Hagerty"
-        },
-        "Democratic": {
-          "polymarket_slug": "tennessee-democratic-senate-primary-winner"
         }
       }
     }
