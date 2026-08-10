@@ -5,25 +5,16 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
-    "berlin-state-election-winner": {
-      "Linke": {
-        "change_pp": 6.0,
-        "direction": "up",
-        "reference_date": "2026-08-08",
-        "reference_pct": 37.5,
-        "window": "2d"
-      }
-    },
     "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt": {
       "Yes": {
-        "change_pp": 6.5,
+        "change_pp": 7.0,
         "direction": "up",
         "reference_date": "2026-08-08",
         "reference_pct": 25.5,
         "window": "2d"
       },
       "No": {
-        "change_pp": 6.5,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-08-08",
         "reference_pct": 74.5,
@@ -32,7 +23,7 @@
     },
     "ohio-governor-winner-2026": {
       "Amy Acton (D)": {
-        "change_pp": 7.0,
+        "change_pp": 7.5,
         "direction": "up",
         "reference_date": "2026-08-08",
         "reference_pct": 45.0,
@@ -48,14 +39,21 @@
     },
     "who-will-advance-from-the-alaska-governor-primary": {
       "Dave Bronson": {
-        "change_pp": 7.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-08",
         "reference_pct": 44.0,
         "window": "2d"
       },
+      "Adam Crum": {
+        "change_pp": 5.3,
+        "direction": "up",
+        "reference_date": "2026-08-08",
+        "reference_pct": 4.2,
+        "window": "2d"
+      },
       "Treg Taylor": {
-        "change_pp": 8.5,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-08-08",
         "reference_pct": 27.0,
@@ -64,7 +62,7 @@
     },
     "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
       "Sen. Dan S. Sullivan": {
-        "change_pp": 7.25,
+        "change_pp": 5.2,
         "direction": "down",
         "reference_date": "2026-08-08",
         "reference_pct": 10.45,
@@ -73,14 +71,14 @@
     },
     "minnesota-governor-republican-primary-winner": {
       "Lisa Demuth": {
-        "change_pp": 22.5,
+        "change_pp": 20.0,
         "direction": "up",
         "reference_date": "2026-08-08",
         "reference_pct": 39.5,
         "window": "2d"
       },
       "Mike Lindell": {
-        "change_pp": 24.5,
+        "change_pp": 19.5,
         "direction": "down",
         "reference_date": "2026-08-08",
         "reference_pct": 60.5,
@@ -88,44 +86,58 @@
       }
     },
     "south-carolina-republican-senate-special-primary-winner-20260712135206676": {
-      "Russell Fry": {
-        "change_pp": 4.75,
-        "direction": "up",
+      "Darline Graham Nordone": {
+        "change_pp": 5.85,
+        "direction": "down",
         "reference_date": "2026-08-08",
-        "reference_pct": 26.15,
+        "reference_pct": 45.55,
         "window": "2d"
       }
     },
     "vermont-governor-democratic-primary-winner": {
+      "Aly Richards": {
+        "change_pp": 21.0,
+        "direction": "down",
+        "reference_date": "2026-08-08",
+        "reference_pct": 69.5,
+        "window": "2d"
+      },
       "Amanda Janoo": {
-        "change_pp": 4.65,
+        "change_pp": 22.4,
         "direction": "up",
         "reference_date": "2026-08-08",
         "reference_pct": 29.5,
         "window": "2d"
       }
+    },
+    "montana-senate-election-winner": {
+      "Republican": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-08-08",
+        "reference_pct": 84.0,
+        "window": "2d"
+      },
+      "Independent": {
+        "change_pp": 4.95,
+        "direction": "down",
+        "reference_date": "2026-08-08",
+        "reference_pct": 15.75,
+        "window": "2d"
+      }
     }
   },
   "by_market_id": {
-    "de-state:BE": {
-      "Linke": {
-        "change_pp": 6.0,
-        "direction": "up",
-        "reference_date": "2026-08-08",
-        "reference_pct": 37.5,
-        "window": "2d"
-      }
-    },
     "de-state:ST:AfD absolute majority": {
       "Yes": {
-        "change_pp": 6.5,
+        "change_pp": 7.0,
         "direction": "up",
         "reference_date": "2026-08-08",
         "reference_pct": 25.5,
         "window": "2d"
       },
       "No": {
-        "change_pp": 6.5,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-08-08",
         "reference_pct": 74.5,
@@ -134,7 +146,7 @@
     },
     "us-governor:OH": {
       "Amy Acton (D)": {
-        "change_pp": 7.0,
+        "change_pp": 7.5,
         "direction": "up",
         "reference_date": "2026-08-08",
         "reference_pct": 45.0,
@@ -150,14 +162,21 @@
     },
     "us-primary:AK:Governor": {
       "Dave Bronson": {
-        "change_pp": 7.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-08",
         "reference_pct": 44.0,
         "window": "2d"
       },
+      "Adam Crum": {
+        "change_pp": 5.3,
+        "direction": "up",
+        "reference_date": "2026-08-08",
+        "reference_pct": 4.2,
+        "window": "2d"
+      },
       "Treg Taylor": {
-        "change_pp": 8.5,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-08-08",
         "reference_pct": 27.0,
@@ -166,7 +185,7 @@
     },
     "us-primary:AK:Senate": {
       "Sen. Dan S. Sullivan": {
-        "change_pp": 7.25,
+        "change_pp": 5.2,
         "direction": "down",
         "reference_date": "2026-08-08",
         "reference_pct": 10.45,
@@ -175,14 +194,14 @@
     },
     "us-primary:MN:Governor:Republican": {
       "Lisa Demuth": {
-        "change_pp": 22.5,
+        "change_pp": 20.0,
         "direction": "up",
         "reference_date": "2026-08-08",
         "reference_pct": 39.5,
         "window": "2d"
       },
       "Mike Lindell": {
-        "change_pp": 24.5,
+        "change_pp": 19.5,
         "direction": "down",
         "reference_date": "2026-08-08",
         "reference_pct": 60.5,
@@ -190,20 +209,43 @@
       }
     },
     "us-primary:SC:Senate:Republican": {
-      "Russell Fry": {
-        "change_pp": 4.75,
-        "direction": "up",
+      "Darline Graham Nordone": {
+        "change_pp": 5.85,
+        "direction": "down",
         "reference_date": "2026-08-08",
-        "reference_pct": 26.15,
+        "reference_pct": 45.55,
         "window": "2d"
       }
     },
     "us-primary:VT:Governor:Democratic": {
+      "Aly Richards": {
+        "change_pp": 21.0,
+        "direction": "down",
+        "reference_date": "2026-08-08",
+        "reference_pct": 69.5,
+        "window": "2d"
+      },
       "Amanda Janoo": {
-        "change_pp": 4.65,
+        "change_pp": 22.4,
         "direction": "up",
         "reference_date": "2026-08-08",
         "reference_pct": 29.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:MT": {
+      "Republican": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-08-08",
+        "reference_pct": 84.0,
+        "window": "2d"
+      },
+      "Independent": {
+        "change_pp": 4.95,
+        "direction": "down",
+        "reference_date": "2026-08-08",
+        "reference_pct": 15.75,
         "window": "2d"
       }
     }
