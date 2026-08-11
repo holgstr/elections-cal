@@ -7,7 +7,7 @@
   "by_slug": {
     "berlin-state-election-winner": {
       "CDU": {
-        "change_pp": 7.0,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 19.0,
@@ -25,30 +25,64 @@
     },
     "next-prime-minister-of-new-zealand-174": {
       "Christopher Luxon": {
-        "change_pp": 26.0,
+        "change_pp": 26.5,
         "direction": "down",
         "reference_date": "2026-08-09",
         "reference_pct": 44.0,
         "window": "2d"
       },
       "Nicola Willis": {
-        "change_pp": 15.3,
+        "change_pp": 14.5,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 3.2,
         "window": "2d"
       }
     },
+    "alaska-governor-election-winner": {
+      "Tom Begich": {
+        "change_pp": 10.0,
+        "direction": "up",
+        "reference_date": "2026-08-09",
+        "reference_pct": 29.5,
+        "window": "2d"
+      }
+    },
+    "iowa-governor-winner-2026": {
+      "Zach Lahn (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-08-09",
+        "reference_pct": 31.0,
+        "window": "2d"
+      }
+    },
+    "kansas-governor-winner-2026": {
+      "Democrat": {
+        "change_pp": 9.5,
+        "direction": "up",
+        "reference_date": "2026-08-09",
+        "reference_pct": 25.5,
+        "window": "2d"
+      },
+      "Republican": {
+        "change_pp": 9.0,
+        "direction": "down",
+        "reference_date": "2026-08-09",
+        "reference_pct": 74.5,
+        "window": "2d"
+      }
+    },
     "ohio-governor-winner-2026": {
       "Amy Acton (D)": {
-        "change_pp": 7.0,
+        "change_pp": 8.0,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 46.0,
         "window": "2d"
       },
       "Vivek Ramaswamy (R)": {
-        "change_pp": 7.5,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-08-09",
         "reference_pct": 52.5,
@@ -57,39 +91,53 @@
     },
     "who-will-advance-from-the-alaska-governor-primary": {
       "Click Bishop": {
-        "change_pp": 9.5,
+        "change_pp": 10.0,
         "direction": "down",
         "reference_date": "2026-08-09",
         "reference_pct": 34.0,
         "window": "2d"
       },
       "Dave Bronson": {
-        "change_pp": 6.0,
+        "change_pp": 9.5,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 43.0,
         "window": "2d"
       },
       "Adam Crum": {
-        "change_pp": 5.4,
+        "change_pp": 6.95,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 5.05,
+        "window": "2d"
+      },
+      "Treg Taylor": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-08-09",
+        "reference_pct": 32.5,
         "window": "2d"
       }
     },
     "massachusetts-democratic-senate-primary-winner": {
       "Ed Markey": {
-        "change_pp": 4.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 82.0,
+        "window": "2d"
+      },
+      "Seth Moulton": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-08-09",
+        "reference_pct": 17.0,
         "window": "2d"
       }
     },
     "minnesota-governor-republican-primary-winner": {
       "Lisa Demuth": {
-        "change_pp": 17.0,
+        "change_pp": 16.0,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 55.5,
@@ -105,30 +153,37 @@
     },
     "south-carolina-republican-senate-special-primary-winner-20260712135206676": {
       "Ralph Norman": {
-        "change_pp": 4.0,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 22.5,
         "window": "2d"
       },
       "Russell Fry": {
-        "change_pp": 9.55,
+        "change_pp": 14.4,
         "direction": "down",
         "reference_date": "2026-08-09",
         "reference_pct": 31.8,
+        "window": "2d"
+      },
+      "Darline Graham Nordone": {
+        "change_pp": 6.55,
+        "direction": "up",
+        "reference_date": "2026-08-09",
+        "reference_pct": 42.3,
         "window": "2d"
       }
     },
     "vermont-governor-democratic-primary-winner": {
       "Aly Richards": {
-        "change_pp": 32.0,
+        "change_pp": 40.0,
         "direction": "down",
         "reference_date": "2026-08-09",
         "reference_pct": 68.5,
         "window": "2d"
       },
       "Amanda Janoo": {
-        "change_pp": 32.6,
+        "change_pp": 41.6,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 30.15,
@@ -137,14 +192,14 @@
     },
     "montana-senate-election-winner": {
       "Republican": {
-        "change_pp": 5.5,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 84.0,
         "window": "2d"
       },
       "Independent": {
-        "change_pp": 5.45,
+        "change_pp": 8.75,
         "direction": "down",
         "reference_date": "2026-08-09",
         "reference_pct": 15.75,
@@ -155,7 +210,7 @@
   "by_market_id": {
     "de-state:BE": {
       "CDU": {
-        "change_pp": 7.0,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 19.0,
@@ -173,30 +228,64 @@
     },
     "national:NZ:Parliament:prime_minister": {
       "Christopher Luxon": {
-        "change_pp": 26.0,
+        "change_pp": 26.5,
         "direction": "down",
         "reference_date": "2026-08-09",
         "reference_pct": 44.0,
         "window": "2d"
       },
       "Nicola Willis": {
-        "change_pp": 15.3,
+        "change_pp": 14.5,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 3.2,
         "window": "2d"
       }
     },
+    "us-governor:AK": {
+      "Tom Begich": {
+        "change_pp": 10.0,
+        "direction": "up",
+        "reference_date": "2026-08-09",
+        "reference_pct": 29.5,
+        "window": "2d"
+      }
+    },
+    "us-governor:IA": {
+      "Zach Lahn (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-08-09",
+        "reference_pct": 31.0,
+        "window": "2d"
+      }
+    },
+    "us-governor:KS": {
+      "Democrat": {
+        "change_pp": 9.5,
+        "direction": "up",
+        "reference_date": "2026-08-09",
+        "reference_pct": 25.5,
+        "window": "2d"
+      },
+      "Republican": {
+        "change_pp": 9.0,
+        "direction": "down",
+        "reference_date": "2026-08-09",
+        "reference_pct": 74.5,
+        "window": "2d"
+      }
+    },
     "us-governor:OH": {
       "Amy Acton (D)": {
-        "change_pp": 7.0,
+        "change_pp": 8.0,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 46.0,
         "window": "2d"
       },
       "Vivek Ramaswamy (R)": {
-        "change_pp": 7.5,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-08-09",
         "reference_pct": 52.5,
@@ -205,39 +294,53 @@
     },
     "us-primary:AK:Governor": {
       "Click Bishop": {
-        "change_pp": 9.5,
+        "change_pp": 10.0,
         "direction": "down",
         "reference_date": "2026-08-09",
         "reference_pct": 34.0,
         "window": "2d"
       },
       "Dave Bronson": {
-        "change_pp": 6.0,
+        "change_pp": 9.5,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 43.0,
         "window": "2d"
       },
       "Adam Crum": {
-        "change_pp": 5.4,
+        "change_pp": 6.95,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 5.05,
+        "window": "2d"
+      },
+      "Treg Taylor": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-08-09",
+        "reference_pct": 32.5,
         "window": "2d"
       }
     },
     "us-primary:MA:Senate:Democratic": {
       "Ed Markey": {
-        "change_pp": 4.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 82.0,
+        "window": "2d"
+      },
+      "Seth Moulton": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-08-09",
+        "reference_pct": 17.0,
         "window": "2d"
       }
     },
     "us-primary:MN:Governor:Republican": {
       "Lisa Demuth": {
-        "change_pp": 17.0,
+        "change_pp": 16.0,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 55.5,
@@ -253,30 +356,37 @@
     },
     "us-primary:SC:Senate:Republican": {
       "Ralph Norman": {
-        "change_pp": 4.0,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 22.5,
         "window": "2d"
       },
       "Russell Fry": {
-        "change_pp": 9.55,
+        "change_pp": 14.4,
         "direction": "down",
         "reference_date": "2026-08-09",
         "reference_pct": 31.8,
+        "window": "2d"
+      },
+      "Darline Graham Nordone": {
+        "change_pp": 6.55,
+        "direction": "up",
+        "reference_date": "2026-08-09",
+        "reference_pct": 42.3,
         "window": "2d"
       }
     },
     "us-primary:VT:Governor:Democratic": {
       "Aly Richards": {
-        "change_pp": 32.0,
+        "change_pp": 40.0,
         "direction": "down",
         "reference_date": "2026-08-09",
         "reference_pct": 68.5,
         "window": "2d"
       },
       "Amanda Janoo": {
-        "change_pp": 32.6,
+        "change_pp": 41.6,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 30.15,
@@ -285,14 +395,14 @@
     },
     "us-senate:MT": {
       "Republican": {
-        "change_pp": 5.5,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-08-09",
         "reference_pct": 84.0,
         "window": "2d"
       },
       "Independent": {
-        "change_pp": 5.45,
+        "change_pp": 8.75,
         "direction": "down",
         "reference_date": "2026-08-09",
         "reference_pct": 15.75,
