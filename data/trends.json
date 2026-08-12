@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T09:35:26Z",
+  "generated_at": "2026-08-12T11:24:25Z",
   "source": "google_trends",
   "races": [
     {
@@ -13986,7 +13986,14 @@
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-11T15:18:15Z"
+      "fetched_at": "2026-08-11T15:18:15Z",
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-08-12T09:35:26Z"
+      }
     }
+  ],
+  "errors": [
+    "wa-cd3-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-07-05+2026-08-04%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-WA%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0pc0ws0%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-WA%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11rts0yhzk%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-WA%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11r9754z1v%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-WA%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11c0w0gml3%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAan2ohIua5Lf6cJd78fFDykYz2nyWDJYw: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"LX4Z26KJjhhO5rvD3jJsHA\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222"
   ]
 }
