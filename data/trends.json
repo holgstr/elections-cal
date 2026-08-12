@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T08:08:16Z",
+  "generated_at": "2026-08-12T09:35:26Z",
   "source": "google_trends",
   "races": [
     {
@@ -11242,7 +11242,7 @@
         {
           "date": "2026-07-15",
           "values": {
-            "/g/11c1pmpn3f": 0,
+            "/g/11c1pmpn3f": 28,
             "/g/11g715qngv": 0
           }
         },
@@ -11333,8 +11333,8 @@
         {
           "date": "2026-07-28",
           "values": {
-            "/g/11c1pmpn3f": 11,
-            "/g/11g715qngv": 11
+            "/g/11c1pmpn3f": 0,
+            "/g/11g715qngv": 0
           }
         },
         {
@@ -11361,34 +11361,34 @@
         {
           "date": "2026-08-01",
           "values": {
-            "/g/11c1pmpn3f": 18,
-            "/g/11g715qngv": 14
+            "/g/11c1pmpn3f": 17,
+            "/g/11g715qngv": 13
           }
         },
         {
           "date": "2026-08-02",
           "values": {
-            "/g/11c1pmpn3f": 9,
-            "/g/11g715qngv": 6
+            "/g/11c1pmpn3f": 8,
+            "/g/11g715qngv": 7
           }
         },
         {
           "date": "2026-08-03",
           "values": {
-            "/g/11c1pmpn3f": 19,
-            "/g/11g715qngv": 16
+            "/g/11c1pmpn3f": 18,
+            "/g/11g715qngv": 15
           }
         },
         {
           "date": "2026-08-04",
           "values": {
             "/g/11c1pmpn3f": 100,
-            "/g/11g715qngv": 72
+            "/g/11g715qngv": 70
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-11T13:48:15Z"
+      "fetched_at": "2026-08-12T09:35:26Z"
     },
     {
       "id": "wi-dem-governor-primary-2026",
@@ -11733,9 +11733,9 @@
         {
           "date": "2026-07-12",
           "values": {
-            "/g/11b64bp3p9": 18,
+            "/g/11b64bp3p9": 19,
             "/g/11c503wrrz": 0,
-            "/m/0f9kbx": 7
+            "/m/0f9kbx": 0
           }
         },
         {
@@ -11750,22 +11750,22 @@
           "date": "2026-07-14",
           "values": {
             "/g/11b64bp3p9": 37,
-            "/g/11c503wrrz": 8,
+            "/g/11c503wrrz": 5,
             "/m/0f9kbx": 0
           }
         },
         {
           "date": "2026-07-15",
           "values": {
-            "/g/11b64bp3p9": 18,
-            "/g/11c503wrrz": 6,
-            "/m/0f9kbx": 6
+            "/g/11b64bp3p9": 16,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
           }
         },
         {
           "date": "2026-07-16",
           "values": {
-            "/g/11b64bp3p9": 0,
+            "/g/11b64bp3p9": 6,
             "/g/11c503wrrz": 0,
             "/m/0f9kbx": 0
           }
@@ -11773,7 +11773,7 @@
         {
           "date": "2026-07-17",
           "values": {
-            "/g/11b64bp3p9": 7,
+            "/g/11b64bp3p9": 6,
             "/g/11c503wrrz": 0,
             "/m/0f9kbx": 0
           }
@@ -11798,8 +11798,8 @@
           "date": "2026-07-20",
           "values": {
             "/g/11b64bp3p9": 17,
-            "/g/11c503wrrz": 9,
-            "/m/0f9kbx": 12
+            "/g/11c503wrrz": 11,
+            "/m/0f9kbx": 10
           }
         },
         {
@@ -11814,7 +11814,7 @@
           "date": "2026-07-22",
           "values": {
             "/g/11b64bp3p9": 0,
-            "/g/11c503wrrz": 6,
+            "/g/11c503wrrz": 0,
             "/m/0f9kbx": 0
           }
         },
@@ -11829,7 +11829,7 @@
         {
           "date": "2026-07-24",
           "values": {
-            "/g/11b64bp3p9": 6,
+            "/g/11b64bp3p9": 0,
             "/g/11c503wrrz": 0,
             "/m/0f9kbx": 0
           }
@@ -11837,7 +11837,7 @@
         {
           "date": "2026-07-25",
           "values": {
-            "/g/11b64bp3p9": 11,
+            "/g/11b64bp3p9": 16,
             "/g/11c503wrrz": 0,
             "/m/0f9kbx": 0
           }
@@ -11862,8 +11862,8 @@
           "date": "2026-07-28",
           "values": {
             "/g/11b64bp3p9": 11,
-            "/g/11c503wrrz": 3,
-            "/m/0f9kbx": 3
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 0
           }
         },
         {
@@ -11886,7 +11886,7 @@
           "date": "2026-07-31",
           "values": {
             "/g/11b64bp3p9": 6,
-            "/g/11c503wrrz": 4,
+            "/g/11c503wrrz": 5,
             "/m/0f9kbx": 5
           }
         },
@@ -11895,7 +11895,7 @@
           "values": {
             "/g/11b64bp3p9": 12,
             "/g/11c503wrrz": 3,
-            "/m/0f9kbx": 4
+            "/m/0f9kbx": 5
           }
         },
         {
@@ -11910,14 +11910,14 @@
           "date": "2026-08-03",
           "values": {
             "/g/11b64bp3p9": 7,
-            "/g/11c503wrrz": 6,
+            "/g/11c503wrrz": 7,
             "/m/0f9kbx": 7
           }
         },
         {
           "date": "2026-08-04",
           "values": {
-            "/g/11b64bp3p9": 12,
+            "/g/11b64bp3p9": 11,
             "/g/11c503wrrz": 14,
             "/m/0f9kbx": 12
           }
@@ -11941,7 +11941,7 @@
         {
           "date": "2026-08-07",
           "values": {
-            "/g/11b64bp3p9": 8,
+            "/g/11b64bp3p9": 7,
             "/g/11c503wrrz": 10,
             "/m/0f9kbx": 7
           }
@@ -11958,33 +11958,29 @@
           "date": "2026-08-09",
           "values": {
             "/g/11b64bp3p9": 10,
-            "/g/11c503wrrz": 8,
-            "/m/0f9kbx": 7
+            "/g/11c503wrrz": 7,
+            "/m/0f9kbx": 6
           }
         },
         {
           "date": "2026-08-10",
           "values": {
-            "/g/11b64bp3p9": 17,
-            "/g/11c503wrrz": 11,
-            "/m/0f9kbx": 10
+            "/g/11b64bp3p9": 19,
+            "/g/11c503wrrz": 13,
+            "/m/0f9kbx": 11
           }
         },
         {
           "date": "2026-08-11",
           "values": {
-            "/g/11b64bp3p9": 20,
-            "/g/11c503wrrz": 25,
-            "/m/0f9kbx": 24
+            "/g/11b64bp3p9": 29,
+            "/g/11c503wrrz": 35,
+            "/m/0f9kbx": 31
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-11T13:47:43Z",
-      "stale": {
-        "reason": "fetch_failed",
-        "data_as_of": "2026-08-11T23:08:04Z"
-      }
+      "fetched_at": "2026-08-12T09:34:29Z"
     },
     {
       "id": "mn-dem-senate-primary-2026",
@@ -13992,8 +13988,5 @@
       "watchlist": true,
       "fetched_at": "2026-08-11T15:18:15Z"
     }
-  ],
-  "errors": [
-    "sc-special-gop-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-07-12+2026-08-11%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11b64bp3p9%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11c503wrrz%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0f9kbx%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAan16i0C0cay4w-Gxbdt_jvvalFUrFBlj: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"I7LLW7s0qE4eLOka0dP52w\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222"
   ]
 }
