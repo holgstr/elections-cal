@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T14:06:28Z",
+  "generated_at": "2026-08-13T15:34:57Z",
   "source": "google_trends",
   "races": [
     {
@@ -11447,7 +11447,7 @@
           "values": {
             "/g/11jnpqr8dw": 6,
             "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
+            "/m/0l8lszd": 4
           }
         },
         {
@@ -11455,7 +11455,7 @@
           "values": {
             "/g/11jnpqr8dw": 3,
             "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
+            "/m/0l8lszd": 3
           }
         },
         {
@@ -11463,7 +11463,7 @@
           "values": {
             "/g/11jnpqr8dw": 4,
             "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
+            "/m/0l8lszd": 3
           }
         },
         {
@@ -11479,7 +11479,7 @@
           "values": {
             "/g/11jnpqr8dw": 12,
             "/g/11c2q3zj0w": 7,
-            "/m/0l8lszd": 6
+            "/m/0l8lszd": 5
           }
         },
         {
@@ -11487,7 +11487,7 @@
           "values": {
             "/g/11jnpqr8dw": 12,
             "/g/11c2q3zj0w": 20,
-            "/m/0l8lszd": 6
+            "/m/0l8lszd": 8
           }
         },
         {
@@ -11502,7 +11502,7 @@
           "date": "2026-07-20",
           "values": {
             "/g/11jnpqr8dw": 8,
-            "/g/11c2q3zj0w": 15,
+            "/g/11c2q3zj0w": 14,
             "/m/0l8lszd": 0
           }
         },
@@ -11510,7 +11510,7 @@
           "date": "2026-07-21",
           "values": {
             "/g/11jnpqr8dw": 7,
-            "/g/11c2q3zj0w": 4,
+            "/g/11c2q3zj0w": 6,
             "/m/0l8lszd": 0
           }
         },
@@ -11527,7 +11527,7 @@
           "values": {
             "/g/11jnpqr8dw": 19,
             "/g/11c2q3zj0w": 11,
-            "/m/0l8lszd": 3
+            "/m/0l8lszd": 4
           }
         },
         {
@@ -11567,15 +11567,15 @@
           "values": {
             "/g/11jnpqr8dw": 13,
             "/g/11c2q3zj0w": 6,
-            "/m/0l8lszd": 4
+            "/m/0l8lszd": 3
           }
         },
         {
           "date": "2026-07-29",
           "values": {
-            "/g/11jnpqr8dw": 20,
-            "/g/11c2q3zj0w": 8,
-            "/m/0l8lszd": 12
+            "/g/11jnpqr8dw": 22,
+            "/g/11c2q3zj0w": 9,
+            "/m/0l8lszd": 11
           }
         },
         {
@@ -11583,15 +11583,15 @@
           "values": {
             "/g/11jnpqr8dw": 31,
             "/g/11c2q3zj0w": 6,
-            "/m/0l8lszd": 45
+            "/m/0l8lszd": 47
           }
         },
         {
           "date": "2026-07-31",
           "values": {
-            "/g/11jnpqr8dw": 32,
+            "/g/11jnpqr8dw": 29,
             "/g/11c2q3zj0w": 8,
-            "/m/0l8lszd": 31
+            "/m/0l8lszd": 30
           }
         },
         {
@@ -11621,7 +11621,7 @@
         {
           "date": "2026-08-04",
           "values": {
-            "/g/11jnpqr8dw": 35,
+            "/g/11jnpqr8dw": 34,
             "/g/11c2q3zj0w": 6,
             "/m/0l8lszd": 3
           }
@@ -11637,7 +11637,7 @@
         {
           "date": "2026-08-06",
           "values": {
-            "/g/11jnpqr8dw": 32,
+            "/g/11jnpqr8dw": 37,
             "/g/11c2q3zj0w": 9,
             "/m/0l8lszd": 2
           }
@@ -11678,13 +11678,13 @@
           "date": "2026-08-11",
           "values": {
             "/g/11jnpqr8dw": 100,
-            "/g/11c2q3zj0w": 58,
+            "/g/11c2q3zj0w": 59,
             "/m/0l8lszd": 9
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-13T03:02:30Z"
+      "fetched_at": "2026-08-13T15:22:21Z"
     },
     {
       "id": "sc-special-gop-senate-primary-2026",
@@ -11980,7 +11980,11 @@
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-13T03:05:54Z"
+      "fetched_at": "2026-08-13T03:05:54Z",
+      "stale": {
+        "reason": "fetch_failed",
+        "data_as_of": "2026-08-13T14:06:28Z"
+      }
     },
     {
       "id": "mn-dem-senate-primary-2026",
@@ -13988,5 +13992,8 @@
       "watchlist": true,
       "fetched_at": "2026-08-13T05:52:12Z"
     }
+  ],
+  "errors": [
+    "sc-special-gop-senate-primary-2026: HTTP 429 for https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=360&req=%7B%22time%22%3A%222026-07-12+2026-08-11%22%2C%22resolution%22%3A%22DAY%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11b64bp3p9%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fg%2F11c503wrrz%22%7D%5D%7D%7D%2C%7B%22geo%22%3A%7B%22region%22%3A%22US-SC%22%7D%2C%22complexKeywordsRestriction%22%3A%7B%22keyword%22%3A%5B%7B%22type%22%3A%22ENTITY%22%2C%22value%22%3A%22%2Fm%2F0f9kbx%22%7D%5D%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A0%7D%2C%22userConfig%22%3A%7B%22userType%22%3A%22USER_TYPE_SCRAPER%22%7D%7D&token=AMbBvsEAAAAAan80vXM0rOSbSL_GLJrKGoTlF8b2OU29: <html lang=\"en\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Bad Request)!!1</title><style nonce=\"usOi2BkybOLlZ7HaeZ39cQ\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222"
   ]
 }
