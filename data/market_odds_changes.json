@@ -7,39 +7,39 @@
   "by_slug": {
     "brazil-chamber-of-deputies-election-winner": {
       "PL": {
-        "change_pp": 7.0,
+        "change_pp": 7.5,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 63.5,
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 8.05,
+        "change_pp": 8.3,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 20.7,
         "window": "2d"
       }
     },
-    "next-prime-minister-of-new-zealand-174": {
-      "Chris Hipkins": {
-        "change_pp": 6.0,
+    "who-will-be-the-next-prime-minister-of-israel-after-the-next-election": {
+      "Benjamin Netanyahu": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-12",
-        "reference_pct": 49.5,
+        "reference_pct": 30.5,
         "window": "2d"
       }
     },
     "next-prime-minister-of-sweden": {
       "Ulf Kristersson": {
-        "change_pp": 4.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 10.0,
         "window": "2d"
       },
       "Magdalena Andersson": {
-        "change_pp": 4.5,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-08-12",
         "reference_pct": 88.5,
@@ -48,7 +48,7 @@
     },
     "alaska-governor-election-winner": {
       "Bernadette Wilson": {
-        "change_pp": 6.0,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-08-12",
         "reference_pct": 32.0,
@@ -66,14 +66,14 @@
     },
     "kansas-governor-winner-2026": {
       "Democrat": {
-        "change_pp": 8.5,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-08-12",
         "reference_pct": 40.5,
         "window": "2d"
       },
       "Republican": {
-        "change_pp": 11.0,
+        "change_pp": 9.0,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 58.0,
@@ -82,7 +82,7 @@
     },
     "nevada-governor-winner-2026": {
       "Joe Lombardo (R)": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 60.5,
@@ -90,20 +90,36 @@
       }
     },
     "ohio-governor-winner-2026": {
+      "Amy Acton (D)": {
+        "change_pp": 6.5,
+        "direction": "down",
+        "reference_date": "2026-08-12",
+        "reference_pct": 54.5,
+        "window": "2d"
+      },
       "Vivek Ramaswamy (R)": {
-        "change_pp": 4.5,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 45.5,
         "window": "2d"
       }
     },
-    "vermont-governor-winner-2026": {
-      "Republican": {
-        "change_pp": 4.0,
-        "direction": "down",
+    "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
+      "Sen. Dan S. Sullivan": {
+        "change_pp": 6.8,
+        "direction": "up",
         "reference_date": "2026-08-12",
-        "reference_pct": 89.5,
+        "reference_pct": 6.85,
+        "window": "2d"
+      }
+    },
+    "massachusetts-democratic-senate-primary-winner": {
+      "Seth Moulton": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-08-12",
+        "reference_pct": 15.0,
         "window": "2d"
       }
     },
@@ -116,7 +132,7 @@
         "window": "2d"
       },
       "Elaine Pelino": {
-        "change_pp": 6.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 67.0,
@@ -125,14 +141,14 @@
     },
     "wyoming-governor-republican-primary-winner": {
       "Eric Barlow": {
-        "change_pp": 4.55,
+        "change_pp": 4.3,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 72.45,
         "window": "2d"
       },
       "Megan Degenfelder": {
-        "change_pp": 6.05,
+        "change_pp": 4.3,
         "direction": "down",
         "reference_date": "2026-08-12",
         "reference_pct": 27.75,
@@ -143,39 +159,39 @@
   "by_market_id": {
     "national:BR:National Congress:party_winner": {
       "PL": {
-        "change_pp": 7.0,
+        "change_pp": 7.5,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 63.5,
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 8.05,
+        "change_pp": 8.3,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 20.7,
         "window": "2d"
       }
     },
-    "national:NZ:Parliament:prime_minister": {
-      "Chris Hipkins": {
-        "change_pp": 6.0,
+    "national:IL:Knesset:prime_minister": {
+      "Benjamin Netanyahu": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-12",
-        "reference_pct": 49.5,
+        "reference_pct": 30.5,
         "window": "2d"
       }
     },
     "national:SE:Riksdag:prime_minister": {
       "Ulf Kristersson": {
-        "change_pp": 4.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 10.0,
         "window": "2d"
       },
       "Magdalena Andersson": {
-        "change_pp": 4.5,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-08-12",
         "reference_pct": 88.5,
@@ -184,7 +200,7 @@
     },
     "us-governor:AK": {
       "Bernadette Wilson": {
-        "change_pp": 6.0,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-08-12",
         "reference_pct": 32.0,
@@ -202,14 +218,14 @@
     },
     "us-governor:KS": {
       "Democrat": {
-        "change_pp": 8.5,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-08-12",
         "reference_pct": 40.5,
         "window": "2d"
       },
       "Republican": {
-        "change_pp": 11.0,
+        "change_pp": 9.0,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 58.0,
@@ -218,7 +234,7 @@
     },
     "us-governor:NV": {
       "Joe Lombardo (R)": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 60.5,
@@ -226,20 +242,36 @@
       }
     },
     "us-governor:OH": {
+      "Amy Acton (D)": {
+        "change_pp": 6.5,
+        "direction": "down",
+        "reference_date": "2026-08-12",
+        "reference_pct": 54.5,
+        "window": "2d"
+      },
       "Vivek Ramaswamy (R)": {
-        "change_pp": 4.5,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 45.5,
         "window": "2d"
       }
     },
-    "us-governor:VT": {
-      "Republican": {
-        "change_pp": 4.0,
-        "direction": "down",
+    "us-primary:AK:Senate": {
+      "Sen. Dan S. Sullivan": {
+        "change_pp": 6.8,
+        "direction": "up",
         "reference_date": "2026-08-12",
-        "reference_pct": 89.5,
+        "reference_pct": 6.85,
+        "window": "2d"
+      }
+    },
+    "us-primary:MA:Senate:Democratic": {
+      "Seth Moulton": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-08-12",
+        "reference_pct": 15.0,
         "window": "2d"
       }
     },
@@ -252,7 +284,7 @@
         "window": "2d"
       },
       "Elaine Pelino": {
-        "change_pp": 6.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 67.0,
@@ -261,14 +293,14 @@
     },
     "us-primary:WY:Governor:Republican": {
       "Eric Barlow": {
-        "change_pp": 4.55,
+        "change_pp": 4.3,
         "direction": "up",
         "reference_date": "2026-08-12",
         "reference_pct": 72.45,
         "window": "2d"
       },
       "Megan Degenfelder": {
-        "change_pp": 6.05,
+        "change_pp": 4.3,
         "direction": "down",
         "reference_date": "2026-08-12",
         "reference_pct": 27.75,
