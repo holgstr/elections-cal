@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T08:48:55Z",
+  "generated_at": "2026-08-15T10:43:30Z",
   "source": "google_trends",
   "races": [
     {
@@ -11347,7 +11347,7 @@
         {
           "date": "2026-07-30",
           "values": {
-            "/g/11c1pmpn3f": 17,
+            "/g/11c1pmpn3f": 18,
             "/g/11g715qngv": 0
           }
         },
@@ -11361,8 +11361,8 @@
         {
           "date": "2026-08-01",
           "values": {
-            "/g/11c1pmpn3f": 17,
-            "/g/11g715qngv": 12
+            "/g/11c1pmpn3f": 18,
+            "/g/11g715qngv": 13
           }
         },
         {
@@ -11376,19 +11376,19 @@
           "date": "2026-08-03",
           "values": {
             "/g/11c1pmpn3f": 18,
-            "/g/11g715qngv": 14
+            "/g/11g715qngv": 15
           }
         },
         {
           "date": "2026-08-04",
           "values": {
             "/g/11c1pmpn3f": 100,
-            "/g/11g715qngv": 69
+            "/g/11g715qngv": 71
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-15T04:50:33Z"
+      "fetched_at": "2026-08-15T10:43:05Z"
     },
     {
       "id": "wi-dem-governor-primary-2026",
@@ -13754,7 +13754,7 @@
           "date": "2026-07-10",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 0,
+            "/g/11rts0yhzk": 24,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13951,7 +13951,7 @@
         {
           "date": "2026-08-01",
           "values": {
-            "/m/0pc0ws0": 4,
+            "/m/0pc0ws0": 5,
             "/g/11rts0yhzk": 13,
             "/g/11r9754z1v": 4,
             "/g/11c0w0gml3": 0
@@ -13972,7 +13972,7 @@
             "/m/0pc0ws0": 7,
             "/g/11rts0yhzk": 14,
             "/g/11r9754z1v": 8,
-            "/g/11c0w0gml3": 1
+            "/g/11c0w0gml3": 0
           }
         },
         {
@@ -13980,13 +13980,13 @@
           "values": {
             "/m/0pc0ws0": 9,
             "/g/11rts0yhzk": 28,
-            "/g/11r9754z1v": 17,
+            "/g/11r9754z1v": 15,
             "/g/11c0w0gml3": 0
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-15T04:50:58Z"
+      "fetched_at": "2026-08-15T10:43:30Z"
     }
   ]
 }
