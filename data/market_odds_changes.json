@@ -6,6 +6,13 @@
   "threshold_pp": 4,
   "by_slug": {
     "berlin-state-election-winner": {
+      "CDU": {
+        "change_pp": 8.0,
+        "direction": "up",
+        "reference_date": "2026-08-13",
+        "reference_pct": 24.5,
+        "window": "2d"
+      },
       "Linke": {
         "change_pp": 5.0,
         "direction": "down",
@@ -31,18 +38,18 @@
       }
     },
     "next-prime-minister-of-new-zealand-174": {
-      "Christopher Luxon": {
-        "change_pp": 6.5,
-        "direction": "up",
-        "reference_date": "2026-08-13",
-        "reference_pct": 32.0,
-        "window": "2d"
-      },
       "Chris Hipkins": {
-        "change_pp": 13.0,
+        "change_pp": 12.0,
         "direction": "down",
         "reference_date": "2026-08-13",
         "reference_pct": 63.5,
+        "window": "2d"
+      },
+      "Nicola Willis": {
+        "change_pp": 4.35,
+        "direction": "down",
+        "reference_date": "2026-08-13",
+        "reference_pct": 6.4,
         "window": "2d"
       }
     },
@@ -55,16 +62,25 @@
         "window": "2d"
       }
     },
+    "nevada-governor-winner-2026": {
+      "Aaron Ford (D)": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-08-13",
+        "reference_pct": 33.5,
+        "window": "2d"
+      }
+    },
     "ohio-governor-winner-2026": {
       "Amy Acton (D)": {
-        "change_pp": 7.5,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-08-13",
         "reference_pct": 55.0,
         "window": "2d"
       },
       "Vivek Ramaswamy (R)": {
-        "change_pp": 9.5,
+        "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-08-13",
         "reference_pct": 44.0,
@@ -72,17 +88,24 @@
       }
     },
     "who-will-advance-from-the-alaska-governor-primary": {
-      "Bill Walker": {
-        "change_pp": 4.0,
-        "direction": "down",
+      "Lesil McGuire": {
+        "change_pp": 30.3,
+        "direction": "up",
         "reference_date": "2026-08-13",
-        "reference_pct": 20.0,
+        "reference_pct": 1.7,
+        "window": "2d"
+      },
+      "Dave Bronson": {
+        "change_pp": 8.5,
+        "direction": "up",
+        "reference_date": "2026-08-13",
+        "reference_pct": 53.5,
         "window": "2d"
       }
     },
     "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
       "Mary Peltola": {
-        "change_pp": 8.55,
+        "change_pp": 5.25,
         "direction": "up",
         "reference_date": "2026-08-13",
         "reference_pct": 87.0,
@@ -91,16 +114,30 @@
     },
     "michigan-senate-election-winner": {
       "Abdul El-Sayed (D)": {
-        "change_pp": 5.0,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-08-13",
         "reference_pct": 61.5,
+        "window": "2d"
+      },
+      "Mike Rogers (R)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-08-13",
+        "reference_pct": 40.5,
         "window": "2d"
       }
     }
   },
   "by_market_id": {
     "de-state:BE": {
+      "CDU": {
+        "change_pp": 8.0,
+        "direction": "up",
+        "reference_date": "2026-08-13",
+        "reference_pct": 24.5,
+        "window": "2d"
+      },
       "Linke": {
         "change_pp": 5.0,
         "direction": "down",
@@ -126,18 +163,18 @@
       }
     },
     "national:NZ:Parliament:prime_minister": {
-      "Christopher Luxon": {
-        "change_pp": 6.5,
-        "direction": "up",
-        "reference_date": "2026-08-13",
-        "reference_pct": 32.0,
-        "window": "2d"
-      },
       "Chris Hipkins": {
-        "change_pp": 13.0,
+        "change_pp": 12.0,
         "direction": "down",
         "reference_date": "2026-08-13",
         "reference_pct": 63.5,
+        "window": "2d"
+      },
+      "Nicola Willis": {
+        "change_pp": 4.35,
+        "direction": "down",
+        "reference_date": "2026-08-13",
+        "reference_pct": 6.4,
         "window": "2d"
       }
     },
@@ -150,16 +187,25 @@
         "window": "2d"
       }
     },
+    "us-governor:NV": {
+      "Aaron Ford (D)": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-08-13",
+        "reference_pct": 33.5,
+        "window": "2d"
+      }
+    },
     "us-governor:OH": {
       "Amy Acton (D)": {
-        "change_pp": 7.5,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-08-13",
         "reference_pct": 55.0,
         "window": "2d"
       },
       "Vivek Ramaswamy (R)": {
-        "change_pp": 9.5,
+        "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-08-13",
         "reference_pct": 44.0,
@@ -167,17 +213,24 @@
       }
     },
     "us-primary:AK:Governor": {
-      "Bill Walker": {
-        "change_pp": 4.0,
-        "direction": "down",
+      "Lesil McGuire": {
+        "change_pp": 30.3,
+        "direction": "up",
         "reference_date": "2026-08-13",
-        "reference_pct": 20.0,
+        "reference_pct": 1.7,
+        "window": "2d"
+      },
+      "Dave Bronson": {
+        "change_pp": 8.5,
+        "direction": "up",
+        "reference_date": "2026-08-13",
+        "reference_pct": 53.5,
         "window": "2d"
       }
     },
     "us-primary:AK:Senate": {
       "Mary Peltola": {
-        "change_pp": 8.55,
+        "change_pp": 5.25,
         "direction": "up",
         "reference_date": "2026-08-13",
         "reference_pct": 87.0,
@@ -186,10 +239,17 @@
     },
     "us-senate:MI": {
       "Abdul El-Sayed (D)": {
-        "change_pp": 5.0,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-08-13",
         "reference_pct": 61.5,
+        "window": "2d"
+      },
+      "Mike Rogers (R)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-08-13",
+        "reference_pct": 40.5,
         "window": "2d"
       }
     }

@@ -7,6 +7,94 @@
   "markets_fetched": 101,
   "suggestions": [
     {
+      "market_id": "us-primary:AK:Governor",
+      "slug": "who-will-advance-from-the-alaska-governor-primary",
+      "category": "us_primary",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "AK",
+      "city_code": null,
+      "contest": "Governor Primary",
+      "market_label": "Governor Primary",
+      "party": null,
+      "election_date": "2026-08-18",
+      "election_title": "Democratic Governor Primary",
+      "max_change_pp": 30.3,
+      "changes": [
+        {
+          "name": "Lesil McGuire",
+          "current_pct": 32.0,
+          "change_pp": 30.3,
+          "direction": "up",
+          "since_date": "2026-08-13",
+          "reference_pct": 1.7,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Dave Bronson",
+          "current_pct": 62.0,
+          "change_pp": 8.5,
+          "direction": "up",
+          "since_date": "2026-08-13",
+          "reference_pct": 53.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Tom Begich",
+          "current_pct": 99.65
+        },
+        {
+          "name": "Bernadette Wilson",
+          "current_pct": 91.5
+        },
+        {
+          "name": "Jonathan Kreiss-Tomkins",
+          "current_pct": 81.0
+        },
+        {
+          "name": "Dave Bronson",
+          "current_pct": 62.0,
+          "change_pp": 8.5,
+          "direction": "up",
+          "since_date": "2026-08-13",
+          "reference_pct": 53.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Lesil McGuire",
+          "current_pct": 32.0,
+          "change_pp": 30.3,
+          "direction": "up",
+          "since_date": "2026-08-13",
+          "reference_pct": 1.7,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Treg Taylor",
+          "current_pct": 29.0
+        },
+        {
+          "name": "Click Bishop",
+          "current_pct": 27.5
+        },
+        {
+          "name": "Bill Walker",
+          "current_pct": 17.5
+        },
+        {
+          "name": "Adam Crum",
+          "current_pct": 9.1
+        }
+      ]
+    },
+    {
       "market_id": "national:NZ:Parliament:prime_minister",
       "slug": "next-prime-minister-of-new-zealand-174",
       "category": "national",
@@ -20,22 +108,12 @@
       "party": null,
       "election_date": "2026-11-07",
       "election_title": "Parliament",
-      "max_change_pp": 13.0,
+      "max_change_pp": 12.0,
       "changes": [
         {
-          "name": "Christopher Luxon",
-          "current_pct": 38.5,
-          "change_pp": 6.5,
-          "direction": "up",
-          "since_date": "2026-08-13",
-          "reference_pct": 32.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
           "name": "Chris Hipkins",
-          "current_pct": 50.5,
-          "change_pp": 13.0,
+          "current_pct": 51.5,
+          "change_pp": 12.0,
           "direction": "down",
           "since_date": "2026-08-13",
           "reference_pct": 63.5,
@@ -46,8 +124,8 @@
       "prices": [
         {
           "name": "Chris Hipkins",
-          "current_pct": 50.5,
-          "change_pp": 13.0,
+          "current_pct": 51.5,
+          "change_pp": 12.0,
           "direction": "down",
           "since_date": "2026-08-13",
           "reference_pct": 63.5,
@@ -56,17 +134,7 @@
         },
         {
           "name": "Christopher Luxon",
-          "current_pct": 38.5,
-          "change_pp": 6.5,
-          "direction": "up",
-          "since_date": "2026-08-13",
-          "reference_pct": 32.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Nicola Willis",
-          "current_pct": 4.9
+          "current_pct": 32.0
         }
       ]
     },
@@ -131,110 +199,6 @@
       ]
     },
     {
-      "market_id": "us-governor:OH",
-      "slug": "ohio-governor-winner-2026",
-      "category": "us_governor",
-      "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "OH",
-      "city_code": null,
-      "contest": "Governor",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
-      "max_change_pp": 9.5,
-      "changes": [
-        {
-          "name": "Amy Acton (D)",
-          "current_pct": 47.5,
-          "change_pp": 7.5,
-          "direction": "down",
-          "since_date": "2026-08-13",
-          "reference_pct": 55.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Vivek Ramaswamy (R)",
-          "current_pct": 53.5,
-          "change_pp": 9.5,
-          "direction": "up",
-          "since_date": "2026-08-13",
-          "reference_pct": 44.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Vivek Ramaswamy (R)",
-          "current_pct": 53.5,
-          "change_pp": 9.5,
-          "direction": "up",
-          "since_date": "2026-08-13",
-          "reference_pct": 44.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Amy Acton (D)",
-          "current_pct": 47.5,
-          "change_pp": 7.5,
-          "direction": "down",
-          "since_date": "2026-08-13",
-          "reference_pct": 55.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "us-primary:AK:Senate",
-      "slug": "vote-winner-in-alaska-senate-primary-final-round-20260630164517313",
-      "category": "us_primary",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "AK",
-      "city_code": null,
-      "contest": "Senate Primary",
-      "market_label": "Senate Primary",
-      "party": null,
-      "election_date": "2026-08-18",
-      "election_title": "Democratic Senate Primary",
-      "max_change_pp": 8.55,
-      "changes": [
-        {
-          "name": "Mary Peltola",
-          "current_pct": 95.55,
-          "change_pp": 8.55,
-          "direction": "up",
-          "since_date": "2026-08-13",
-          "reference_pct": 87.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Mary Peltola",
-          "current_pct": 95.55,
-          "change_pp": 8.55,
-          "direction": "up",
-          "since_date": "2026-08-13",
-          "reference_pct": 87.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Sen. Dan S. Sullivan",
-          "current_pct": 4.55
-        }
-      ]
-    },
-    {
       "market_id": "de-state:BE",
       "slug": "berlin-state-election-winner",
       "category": "de_state",
@@ -248,8 +212,18 @@
       "party": null,
       "election_date": "2026-09-20",
       "election_title": "State",
-      "max_change_pp": 5.0,
+      "max_change_pp": 8.0,
       "changes": [
+        {
+          "name": "CDU",
+          "current_pct": 32.5,
+          "change_pp": 8.0,
+          "direction": "up",
+          "since_date": "2026-08-13",
+          "reference_pct": 24.5,
+          "change_days": 2,
+          "window": "2d"
+        },
         {
           "name": "Linke",
           "current_pct": 40.5,
@@ -274,11 +248,181 @@
         },
         {
           "name": "CDU",
-          "current_pct": 28.0
+          "current_pct": 32.5,
+          "change_pp": 8.0,
+          "direction": "up",
+          "since_date": "2026-08-13",
+          "reference_pct": 24.5,
+          "change_days": 2,
+          "window": "2d"
         },
         {
           "name": "AfD",
-          "current_pct": 17.3
+          "current_pct": 17.35
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:OH",
+      "slug": "ohio-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "OH",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 7.0,
+      "changes": [
+        {
+          "name": "Amy Acton (D)",
+          "current_pct": 48.0,
+          "change_pp": 7.0,
+          "direction": "down",
+          "since_date": "2026-08-13",
+          "reference_pct": 55.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Vivek Ramaswamy (R)",
+          "current_pct": 50.5,
+          "change_pp": 6.5,
+          "direction": "up",
+          "since_date": "2026-08-13",
+          "reference_pct": 44.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Vivek Ramaswamy (R)",
+          "current_pct": 50.5,
+          "change_pp": 6.5,
+          "direction": "up",
+          "since_date": "2026-08-13",
+          "reference_pct": 44.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Amy Acton (D)",
+          "current_pct": 48.0,
+          "change_pp": 7.0,
+          "direction": "down",
+          "since_date": "2026-08-13",
+          "reference_pct": 55.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:MI",
+      "slug": "michigan-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "MI",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 7.0,
+      "changes": [
+        {
+          "name": "Abdul El-Sayed (D)",
+          "current_pct": 54.5,
+          "change_pp": 7.0,
+          "direction": "down",
+          "since_date": "2026-08-13",
+          "reference_pct": 61.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Mike Rogers (R)",
+          "current_pct": 45.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-08-13",
+          "reference_pct": 40.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Abdul El-Sayed (D)",
+          "current_pct": 54.5,
+          "change_pp": 7.0,
+          "direction": "down",
+          "since_date": "2026-08-13",
+          "reference_pct": 61.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Mike Rogers (R)",
+          "current_pct": 45.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-08-13",
+          "reference_pct": 40.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-primary:AK:Senate",
+      "slug": "vote-winner-in-alaska-senate-primary-final-round-20260630164517313",
+      "category": "us_primary",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "AK",
+      "city_code": null,
+      "contest": "Senate Primary",
+      "market_label": "Senate Primary",
+      "party": null,
+      "election_date": "2026-08-18",
+      "election_title": "Democratic Senate Primary",
+      "max_change_pp": 5.25,
+      "changes": [
+        {
+          "name": "Mary Peltola",
+          "current_pct": 92.25,
+          "change_pp": 5.25,
+          "direction": "up",
+          "since_date": "2026-08-13",
+          "reference_pct": 87.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Mary Peltola",
+          "current_pct": 92.25,
+          "change_pp": 5.25,
+          "direction": "up",
+          "since_date": "2026-08-13",
+          "reference_pct": 87.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Sen. Dan S. Sullivan",
+          "current_pct": 6.55
         }
       ]
     },
@@ -322,119 +466,51 @@
         },
         {
           "name": "Democrat",
-          "current_pct": 34.5
+          "current_pct": 34.0
         }
       ]
     },
     {
-      "market_id": "us-senate:MI",
-      "slug": "michigan-senate-election-winner",
-      "category": "us_senate",
+      "market_id": "us-governor:NV",
+      "slug": "nevada-governor-winner-2026",
+      "category": "us_governor",
       "odds_format": "party",
       "min_pct": 3,
       "country_code": "US",
-      "state_code": "MI",
+      "state_code": "NV",
       "city_code": null,
-      "contest": "Senate",
+      "contest": "Governor",
       "market_label": null,
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 5.0,
-      "changes": [
-        {
-          "name": "Abdul El-Sayed (D)",
-          "current_pct": 56.5,
-          "change_pp": 5.0,
-          "direction": "down",
-          "since_date": "2026-08-13",
-          "reference_pct": 61.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Abdul El-Sayed (D)",
-          "current_pct": 56.5,
-          "change_pp": 5.0,
-          "direction": "down",
-          "since_date": "2026-08-13",
-          "reference_pct": 61.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Mike Rogers (R)",
-          "current_pct": 43.5
-        }
-      ]
-    },
-    {
-      "market_id": "us-primary:AK:Governor",
-      "slug": "who-will-advance-from-the-alaska-governor-primary",
-      "category": "us_primary",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "AK",
-      "city_code": null,
-      "contest": "Governor Primary",
-      "market_label": "Governor Primary",
-      "party": null,
-      "election_date": "2026-08-18",
-      "election_title": "Democratic Governor Primary",
       "max_change_pp": 4.0,
       "changes": [
         {
-          "name": "Bill Walker",
-          "current_pct": 16.0,
+          "name": "Aaron Ford (D)",
+          "current_pct": 37.5,
           "change_pp": 4.0,
-          "direction": "down",
+          "direction": "up",
           "since_date": "2026-08-13",
-          "reference_pct": 20.0,
+          "reference_pct": 33.5,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Tom Begich",
-          "current_pct": 99.45
+          "name": "Joe Lombardo (R)",
+          "current_pct": 63.0
         },
         {
-          "name": "Bernadette Wilson",
-          "current_pct": 91.0
-        },
-        {
-          "name": "Jonathan Kreiss-Tomkins",
-          "current_pct": 77.5
-        },
-        {
-          "name": "Dave Bronson",
-          "current_pct": 53.0
-        },
-        {
-          "name": "Treg Taylor",
-          "current_pct": 31.0
-        },
-        {
-          "name": "Click Bishop",
-          "current_pct": 27.5
-        },
-        {
-          "name": "Bill Walker",
-          "current_pct": 16.0,
+          "name": "Aaron Ford (D)",
+          "current_pct": 37.5,
           "change_pp": 4.0,
-          "direction": "down",
+          "direction": "up",
           "since_date": "2026-08-13",
-          "reference_pct": 20.0,
+          "reference_pct": 33.5,
           "change_days": 2,
           "window": "2d"
-        },
-        {
-          "name": "Adam Crum",
-          "current_pct": 9.1
         }
       ]
     }
