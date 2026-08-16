@@ -14,7 +14,7 @@
         "window": "2d"
       },
       "Linke": {
-        "change_pp": 5.5,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-14",
         "reference_pct": 44.5,
@@ -23,51 +23,58 @@
     },
     "brazil-chamber-of-deputies-election-winner": {
       "PL": {
-        "change_pp": 7.0,
+        "change_pp": 6.5,
         "direction": "down",
         "reference_date": "2026-08-14",
         "reference_pct": 71.0,
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 7.2,
+        "change_pp": 5.35,
         "direction": "up",
         "reference_date": "2026-08-14",
         "reference_pct": 29.0,
         "window": "2d"
       }
     },
-    "next-prime-minister-of-new-zealand-174": {
-      "Christopher Luxon": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-08-14",
-        "reference_pct": 38.5,
-        "window": "2d"
-      }
-    },
     "who-will-advance-from-the-alaska-governor-primary": {
-      "Jonathan Kreiss-Tomkins": {
-        "change_pp": 4.0,
+      "Dave Bronson": {
+        "change_pp": 7.0,
         "direction": "up",
         "reference_date": "2026-08-14",
-        "reference_pct": 78.0,
+        "reference_pct": 52.5,
         "window": "2d"
       }
     },
     "vote-winner-in-alaska-senate-primary-final-round-20260630164517313": {
       "Mary Peltola": {
-        "change_pp": 4.65,
+        "change_pp": 4.9,
         "direction": "up",
         "reference_date": "2026-08-14",
         "reference_pct": 86.5,
         "window": "2d"
       },
       "Sen. Dan S. Sullivan": {
-        "change_pp": 5.75,
+        "change_pp": 5.65,
         "direction": "down",
         "reference_date": "2026-08-14",
         "reference_pct": 13.65,
+        "window": "2d"
+      }
+    },
+    "wyoming-governor-republican-primary-winner": {
+      "Eric Barlow": {
+        "change_pp": 6.45,
+        "direction": "up",
+        "reference_date": "2026-08-14",
+        "reference_pct": 76.75,
+        "window": "2d"
+      },
+      "Megan Degenfelder": {
+        "change_pp": 7.55,
+        "direction": "down",
+        "reference_date": "2026-08-14",
+        "reference_pct": 23.45,
         "window": "2d"
       }
     }
@@ -82,7 +89,7 @@
         "window": "2d"
       },
       "Linke": {
-        "change_pp": 5.5,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-14",
         "reference_pct": 44.5,
@@ -91,51 +98,58 @@
     },
     "national:BR:National Congress:party_winner": {
       "PL": {
-        "change_pp": 7.0,
+        "change_pp": 6.5,
         "direction": "down",
         "reference_date": "2026-08-14",
         "reference_pct": 71.0,
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 7.2,
+        "change_pp": 5.35,
         "direction": "up",
         "reference_date": "2026-08-14",
         "reference_pct": 29.0,
         "window": "2d"
       }
     },
-    "national:NZ:Parliament:prime_minister": {
-      "Christopher Luxon": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-08-14",
-        "reference_pct": 38.5,
-        "window": "2d"
-      }
-    },
     "us-primary:AK:Governor": {
-      "Jonathan Kreiss-Tomkins": {
-        "change_pp": 4.0,
+      "Dave Bronson": {
+        "change_pp": 7.0,
         "direction": "up",
         "reference_date": "2026-08-14",
-        "reference_pct": 78.0,
+        "reference_pct": 52.5,
         "window": "2d"
       }
     },
     "us-primary:AK:Senate": {
       "Mary Peltola": {
-        "change_pp": 4.65,
+        "change_pp": 4.9,
         "direction": "up",
         "reference_date": "2026-08-14",
         "reference_pct": 86.5,
         "window": "2d"
       },
       "Sen. Dan S. Sullivan": {
-        "change_pp": 5.75,
+        "change_pp": 5.65,
         "direction": "down",
         "reference_date": "2026-08-14",
         "reference_pct": 13.65,
+        "window": "2d"
+      }
+    },
+    "us-primary:WY:Governor:Republican": {
+      "Eric Barlow": {
+        "change_pp": 6.45,
+        "direction": "up",
+        "reference_date": "2026-08-14",
+        "reference_pct": 76.75,
+        "window": "2d"
+      },
+      "Megan Degenfelder": {
+        "change_pp": 7.55,
+        "direction": "down",
+        "reference_date": "2026-08-14",
+        "reference_pct": 23.45,
         "window": "2d"
       }
     }
