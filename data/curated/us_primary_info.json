@@ -21,24 +21,6 @@
       "polymarket_slug": "vote-winner-in-alaska-senate-primary-final-round-20260630164517313"
     }
   },
-  "CT": {
-    "Governor": {
-      "primary_format": "party",
-      "primary_type": "closed",
-      "primary_type_label": "Closed primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Only voters registered with a party may vote in that party's primary.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Republican": {
-          "polymarket_slug": "connecticut-governor-republican-primary-winner"
-        },
-        "Democratic": {
-          "polymarket_slug": "connecticut-governor-democratic-primary-winner"
-        }
-      }
-    }
-  },
   "DE": {
     "Senate": {
       "primary_format": "party",
@@ -102,40 +84,6 @@
       "parties": {
         "Democratic": {
           "polymarket_slug": "massachusetts-democratic-senate-primary-winner"
-        }
-      }
-    }
-  },
-  "MN": {
-    "Governor": {
-      "primary_format": "party",
-      "primary_type": "open",
-      "primary_type_label": "Open primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Republican": {
-          "polymarket_slug": "minnesota-governor-republican-primary-winner"
-        },
-        "Democratic": {
-          "polymarket_slug": "minnesota-governor-democratic-primary-winner"
-        }
-      }
-    },
-    "Senate": {
-      "primary_format": "party",
-      "primary_type": "open",
-      "primary_type_label": "Open primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Republican": {
-          "polymarket_slug": "minnesota-republican-senate-primary-winner"
-        },
-        "Democratic": {
-          "polymarket_slug": "minnesota-democratic-senate-primary-winner"
         }
       }
     }
@@ -204,57 +152,6 @@
         },
         "Democratic": {
           "polymarket_slug": "rhode-island-democratic-senate-primary-winner"
-        }
-      }
-    }
-  },
-  "SC": {
-    "Senate": {
-      "primary_format": "party",
-      "primary_type": "open",
-      "primary_type_label": "Open primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
-      "winner_note": "Winner: 50%+1; else top-two runoff (FPTP).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Republican": {
-          "polymarket_slug": "south-carolina-republican-senate-special-primary-winner-20260712135206676"
-        }
-      }
-    }
-  },
-  "VT": {
-    "Governor": {
-      "primary_format": "party",
-      "primary_type": "open",
-      "primary_type_label": "Open primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Republican": {
-          "polymarket_slug": "vermont-governor-republican-primary-winner"
-        },
-        "Democratic": {
-          "polymarket_slug": "vermont-governor-democratic-primary-winner"
-        }
-      }
-    }
-  },
-  "WI": {
-    "Governor": {
-      "primary_format": "party",
-      "primary_type": "open",
-      "primary_type_label": "Open primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Any registered voter may choose which party's primary to vote in.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Republican": {
-          "polymarket_slug": "wisconsin-governor-republican-primary-winner"
-        },
-        "Democratic": {
-          "polymarket_slug": "wisconsin-governor-democratic-primary-winner"
         }
       }
     }
