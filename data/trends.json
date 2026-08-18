@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T20:43:25Z",
+  "generated_at": "2026-08-18T22:44:58Z",
   "source": "google_trends",
   "races": [
     {
@@ -11348,7 +11348,7 @@
           "date": "2026-07-30",
           "values": {
             "/g/11c1pmpn3f": 0,
-            "/g/11g715qngv": 20
+            "/g/11g715qngv": 19
           }
         },
         {
@@ -11361,7 +11361,7 @@
         {
           "date": "2026-08-01",
           "values": {
-            "/g/11c1pmpn3f": 21,
+            "/g/11c1pmpn3f": 20,
             "/g/11g715qngv": 0
           }
         },
@@ -11375,7 +11375,7 @@
         {
           "date": "2026-08-03",
           "values": {
-            "/g/11c1pmpn3f": 21,
+            "/g/11c1pmpn3f": 20,
             "/g/11g715qngv": 0
           }
         },
@@ -11383,12 +11383,12 @@
           "date": "2026-08-04",
           "values": {
             "/g/11c1pmpn3f": 100,
-            "/g/11g715qngv": 69
+            "/g/11g715qngv": 70
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-18T16:56:21Z"
+      "fetched_at": "2026-08-18T22:44:33Z"
     },
     {
       "id": "wi-dem-governor-primary-2026",
@@ -13979,14 +13979,14 @@
           "date": "2026-08-04",
           "values": {
             "/m/0pc0ws0": 15,
-            "/g/11rts0yhzk": 44,
-            "/g/11r9754z1v": 26,
+            "/g/11rts0yhzk": 45,
+            "/g/11r9754z1v": 25,
             "/g/11c0w0gml3": 0
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-18T16:59:47Z"
+      "fetched_at": "2026-08-18T22:44:58Z"
     }
   ]
 }
