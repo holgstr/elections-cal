@@ -20,12 +20,12 @@
       "party": null,
       "election_date": "2026-08-18",
       "election_title": "Democratic Governor Primary",
-      "max_change_pp": 26.95,
+      "max_change_pp": 25.0,
       "changes": [
         {
           "name": "Treg Taylor",
-          "current_pct": 4.8,
-          "change_pp": 8.05,
+          "current_pct": 5.1,
+          "change_pp": 7.75,
           "direction": "down",
           "since_date": "2026-08-17",
           "reference_pct": 12.85,
@@ -33,19 +33,9 @@
           "window": "2d"
         },
         {
-          "name": "Bernadette Wilson",
-          "current_pct": 19.0,
-          "change_pp": 6.5,
-          "direction": "down",
-          "since_date": "2026-08-17",
-          "reference_pct": 25.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
           "name": "Tom Begich",
-          "current_pct": 24.5,
-          "change_pp": 24.5,
+          "current_pct": 24.0,
+          "change_pp": 25.0,
           "direction": "down",
           "since_date": "2026-08-17",
           "reference_pct": 49.0,
@@ -54,8 +44,8 @@
         },
         {
           "name": "Jonathan Kreiss-Tomkins",
-          "current_pct": 34.5,
-          "change_pp": 26.95,
+          "current_pct": 32.5,
+          "change_pp": 24.95,
           "direction": "up",
           "since_date": "2026-08-17",
           "reference_pct": 7.55,
@@ -66,8 +56,8 @@
       "prices": [
         {
           "name": "Jonathan Kreiss-Tomkins",
-          "current_pct": 34.5,
-          "change_pp": 26.95,
+          "current_pct": 32.5,
+          "change_pp": 24.95,
           "direction": "up",
           "since_date": "2026-08-17",
           "reference_pct": 7.55,
@@ -75,9 +65,13 @@
           "window": "2d"
         },
         {
+          "name": "Bernadette Wilson",
+          "current_pct": 27.0
+        },
+        {
           "name": "Tom Begich",
-          "current_pct": 24.5,
-          "change_pp": 24.5,
+          "current_pct": 24.0,
+          "change_pp": 25.0,
           "direction": "down",
           "since_date": "2026-08-17",
           "reference_pct": 49.0,
@@ -85,26 +79,76 @@
           "window": "2d"
         },
         {
-          "name": "Bernadette Wilson",
-          "current_pct": 19.0,
-          "change_pp": 6.5,
+          "name": "Treg Taylor",
+          "current_pct": 5.1,
+          "change_pp": 7.75,
           "direction": "down",
           "since_date": "2026-08-17",
-          "reference_pct": 25.5,
+          "reference_pct": 12.85,
           "change_days": 2,
           "window": "2d"
         },
         {
           "name": "David Bronson",
-          "current_pct": 5.05
+          "current_pct": 3.85
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:NV",
+      "slug": "nevada-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "NV",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 6.0,
+      "changes": [
+        {
+          "name": "Aaron Ford (D)",
+          "current_pct": 43.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-08-17",
+          "reference_pct": 38.5,
+          "change_days": 2,
+          "window": "2d"
         },
         {
-          "name": "Treg Taylor",
-          "current_pct": 4.8,
-          "change_pp": 8.05,
+          "name": "Joe Lombardo (R)",
+          "current_pct": 55.5,
+          "change_pp": 6.0,
           "direction": "down",
           "since_date": "2026-08-17",
-          "reference_pct": 12.85,
+          "reference_pct": 61.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Joe Lombardo (R)",
+          "current_pct": 55.5,
+          "change_pp": 6.0,
+          "direction": "down",
+          "since_date": "2026-08-17",
+          "reference_pct": 61.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Aaron Ford (D)",
+          "current_pct": 43.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-08-17",
+          "reference_pct": 38.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -124,12 +168,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 6.65,
+      "max_change_pp": 5.5,
       "changes": [
         {
           "name": "Independent",
-          "current_pct": 9.1,
-          "change_pp": 6.65,
+          "current_pct": 7.95,
+          "change_pp": 5.5,
           "direction": "up",
           "since_date": "2026-08-17",
           "reference_pct": 2.45,
@@ -140,12 +184,12 @@
       "prices": [
         {
           "name": "Republican",
-          "current_pct": 91.0
+          "current_pct": 91.5
         },
         {
           "name": "Independent",
-          "current_pct": 9.1,
-          "change_pp": 6.65,
+          "current_pct": 7.95,
+          "change_pp": 5.5,
           "direction": "up",
           "since_date": "2026-08-17",
           "reference_pct": 2.45,
@@ -215,106 +259,98 @@
       ]
     },
     {
-      "market_id": "us-governor:NV",
-      "slug": "nevada-governor-winner-2026",
+      "market_id": "national:IL:Knesset:prime_minister",
+      "slug": "who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
+      "category": "national",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "IL",
+      "state_code": null,
+      "city_code": null,
+      "contest": "Knesset",
+      "market_label": "Next Prime Minister",
+      "party": null,
+      "election_date": "2026-10-27",
+      "election_title": "Knesset",
+      "max_change_pp": 4.25,
+      "changes": [
+        {
+          "name": "Gadi Eizenkot",
+          "current_pct": 57.15,
+          "change_pp": 4.25,
+          "direction": "up",
+          "since_date": "2026-08-17",
+          "reference_pct": 52.9,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Gadi Eizenkot",
+          "current_pct": 57.15,
+          "change_pp": 4.25,
+          "direction": "up",
+          "since_date": "2026-08-17",
+          "reference_pct": 52.9,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Benjamin Netanyahu",
+          "current_pct": 28.5
+        },
+        {
+          "name": "Naftali Bennett",
+          "current_pct": 5.5
+        },
+        {
+          "name": "Avigdor Lieberman",
+          "current_pct": 4.55
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:VT",
+      "slug": "vermont-governor-winner-2026",
       "category": "us_governor",
       "odds_format": "party",
       "min_pct": 3,
       "country_code": "US",
-      "state_code": "NV",
+      "state_code": "VT",
       "city_code": null,
       "contest": "Governor",
       "market_label": null,
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 4.5,
-      "changes": [
-        {
-          "name": "Aaron Ford (D)",
-          "current_pct": 42.5,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-08-17",
-          "reference_pct": 38.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Joe Lombardo (R)",
-          "current_pct": 57.0,
-          "change_pp": 4.5,
-          "direction": "down",
-          "since_date": "2026-08-17",
-          "reference_pct": 61.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Joe Lombardo (R)",
-          "current_pct": 57.0,
-          "change_pp": 4.5,
-          "direction": "down",
-          "since_date": "2026-08-17",
-          "reference_pct": 61.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Aaron Ford (D)",
-          "current_pct": 42.5,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-08-17",
-          "reference_pct": 38.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "us-senate:AK",
-      "slug": "alaska-senate-election-winner",
-      "category": "us_senate",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "AK",
-      "city_code": null,
-      "contest": "Senate",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-08-18",
-      "election_title": "Democratic Senate Primary",
       "max_change_pp": 4.0,
       "changes": [
         {
-          "name": "Dan Sullivan",
-          "current_pct": 47.5,
+          "name": "Republican",
+          "current_pct": 92.0,
           "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-08-17",
-          "reference_pct": 43.5,
+          "reference_pct": 88.0,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Mary Peltola",
-          "current_pct": 52.0
-        },
-        {
-          "name": "Dan Sullivan",
-          "current_pct": 47.5,
+          "name": "Republican",
+          "current_pct": 92.0,
           "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-08-17",
-          "reference_pct": 43.5,
+          "reference_pct": 88.0,
           "change_days": 2,
           "window": "2d"
+        },
+        {
+          "name": "Democrat",
+          "current_pct": 8.3
         }
       ]
     }
