@@ -5,16 +5,34 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
+    "next-prime-minister-of-new-zealand-174": {
+      "Chris Hipkins": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-08-18",
+        "reference_pct": 50.0,
+        "window": "2d"
+      }
+    },
+    "next-prime-minister-of-sweden": {
+      "Magdalena Andersson": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-08-18",
+        "reference_pct": 84.5,
+        "window": "2d"
+      }
+    },
     "nigerian-presidential-election-winner-20260602162945585": {
       "Peter Obi": {
-        "change_pp": 5.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-18",
         "reference_pct": 24.5,
         "window": "2d"
       },
       "Bola Tinubu": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-18",
         "reference_pct": 75.5,
@@ -23,14 +41,14 @@
     },
     "alaska-governor-election-winner": {
       "David Bronson": {
-        "change_pp": 4.2,
+        "change_pp": 4.25,
         "direction": "up",
         "reference_date": "2026-08-18",
         "reference_pct": 3.15,
         "window": "2d"
       },
       "Adam Crum": {
-        "change_pp": 4.35,
+        "change_pp": 4.4,
         "direction": "down",
         "reference_date": "2026-08-18",
         "reference_pct": 5.05,
@@ -44,14 +62,14 @@
         "window": "2d"
       },
       "Tom Begich": {
-        "change_pp": 25.0,
+        "change_pp": 25.5,
         "direction": "down",
         "reference_date": "2026-08-18",
         "reference_pct": 50.0,
         "window": "2d"
       },
       "Jonathan Kreiss-Tomkins": {
-        "change_pp": 15.65,
+        "change_pp": 20.25,
         "direction": "up",
         "reference_date": "2026-08-18",
         "reference_pct": 10.35,
@@ -60,16 +78,30 @@
     },
     "nevada-governor-winner-2026": {
       "Aaron Ford (D)": {
-        "change_pp": 5.0,
+        "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-08-18",
         "reference_pct": 38.5,
         "window": "2d"
+      },
+      "Joe Lombardo (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-08-18",
+        "reference_pct": 60.5,
+        "window": "2d"
       }
     },
     "michigan-senate-election-winner": {
+      "Abdul El-Sayed (D)": {
+        "change_pp": 6.0,
+        "direction": "up",
+        "reference_date": "2026-08-18",
+        "reference_pct": 58.5,
+        "window": "2d"
+      },
       "Mike Rogers (R)": {
-        "change_pp": 4.5,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-08-18",
         "reference_pct": 41.5,
@@ -87,16 +119,34 @@
     }
   },
   "by_market_id": {
+    "national:NZ:Parliament:prime_minister": {
+      "Chris Hipkins": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-08-18",
+        "reference_pct": 50.0,
+        "window": "2d"
+      }
+    },
+    "national:SE:Riksdag:prime_minister": {
+      "Magdalena Andersson": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-08-18",
+        "reference_pct": 84.5,
+        "window": "2d"
+      }
+    },
     "presidential:NG": {
       "Peter Obi": {
-        "change_pp": 5.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-18",
         "reference_pct": 24.5,
         "window": "2d"
       },
       "Bola Tinubu": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-18",
         "reference_pct": 75.5,
@@ -105,14 +155,14 @@
     },
     "us-governor:AK": {
       "David Bronson": {
-        "change_pp": 4.2,
+        "change_pp": 4.25,
         "direction": "up",
         "reference_date": "2026-08-18",
         "reference_pct": 3.15,
         "window": "2d"
       },
       "Adam Crum": {
-        "change_pp": 4.35,
+        "change_pp": 4.4,
         "direction": "down",
         "reference_date": "2026-08-18",
         "reference_pct": 5.05,
@@ -126,14 +176,14 @@
         "window": "2d"
       },
       "Tom Begich": {
-        "change_pp": 25.0,
+        "change_pp": 25.5,
         "direction": "down",
         "reference_date": "2026-08-18",
         "reference_pct": 50.0,
         "window": "2d"
       },
       "Jonathan Kreiss-Tomkins": {
-        "change_pp": 15.65,
+        "change_pp": 20.25,
         "direction": "up",
         "reference_date": "2026-08-18",
         "reference_pct": 10.35,
@@ -142,16 +192,30 @@
     },
     "us-governor:NV": {
       "Aaron Ford (D)": {
-        "change_pp": 5.0,
+        "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-08-18",
         "reference_pct": 38.5,
         "window": "2d"
+      },
+      "Joe Lombardo (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-08-18",
+        "reference_pct": 60.5,
+        "window": "2d"
       }
     },
     "us-senate:MI": {
+      "Abdul El-Sayed (D)": {
+        "change_pp": 6.0,
+        "direction": "up",
+        "reference_date": "2026-08-18",
+        "reference_pct": 58.5,
+        "window": "2d"
+      },
       "Mike Rogers (R)": {
-        "change_pp": 4.5,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-08-18",
         "reference_pct": 41.5,
