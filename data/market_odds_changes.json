@@ -7,26 +7,26 @@
   "by_slug": {
     "mexico-legislative-election-winner": {
       "PAN": {
-        "change_pp": 15.65,
+        "change_pp": 6.1,
         "direction": "up",
         "reference_date": "2026-08-19",
         "reference_pct": 3.2,
         "window": "2d"
-      },
-      "Morena": {
-        "change_pp": 11.85,
-        "direction": "down",
-        "reference_date": "2026-08-19",
-        "reference_pct": 92.95,
-        "window": "2d"
       }
     },
-    "next-prime-minister-of-new-zealand-174": {
-      "Chris Hipkins": {
-        "change_pp": 5.0,
+    "nigerian-presidential-election-winner-20260602162945585": {
+      "Peter Obi": {
+        "change_pp": 6.5,
+        "direction": "down",
+        "reference_date": "2026-08-19",
+        "reference_pct": 30.0,
+        "window": "2d"
+      },
+      "Bola Tinubu": {
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-08-19",
-        "reference_pct": 50.0,
+        "reference_pct": 70.5,
         "window": "2d"
       }
     },
@@ -46,44 +46,30 @@
         "window": "2d"
       }
     },
-    "florida-governor-winner-2026": {
-      "David Jolly (D)": {
-        "change_pp": 6.5,
+    "nevada-governor-winner-2026": {
+      "Joe Lombardo (R)": {
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-08-19",
-        "reference_pct": 17.0,
-        "window": "2d"
-      },
-      "Byron Donalds (R)": {
-        "change_pp": 5.5,
-        "direction": "down",
-        "reference_date": "2026-08-19",
-        "reference_pct": 83.0,
+        "reference_pct": 55.5,
         "window": "2d"
       }
     },
-    "iowa-governor-winner-2026": {
-      "Rob Sand (D)": {
+    "wisconsin-governor-winner-2026": {
+      "Tom Tiffany (R)": {
         "change_pp": 5.0,
         "direction": "down",
-        "reference_date": "2026-08-19",
-        "reference_pct": 77.5,
-        "window": "2d"
-      },
-      "Zach Lahn (R)": {
-        "change_pp": 4.5,
-        "direction": "up",
         "reference_date": "2026-08-19",
         "reference_pct": 23.5,
         "window": "2d"
       }
     },
-    "michigan-senate-election-winner": {
-      "Abdul El-Sayed (D)": {
-        "change_pp": 4.0,
+    "rhode-island-governor-republican-primary-winner": {
+      "Elaine Pelino": {
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-19",
-        "reference_pct": 60.5,
+        "reference_pct": 85.5,
         "window": "2d"
       }
     }
@@ -91,26 +77,26 @@
   "by_market_id": {
     "national:MX:Chamber of Deputies:party_winner": {
       "PAN": {
-        "change_pp": 15.65,
+        "change_pp": 6.1,
         "direction": "up",
         "reference_date": "2026-08-19",
         "reference_pct": 3.2,
         "window": "2d"
-      },
-      "Morena": {
-        "change_pp": 11.85,
-        "direction": "down",
-        "reference_date": "2026-08-19",
-        "reference_pct": 92.95,
-        "window": "2d"
       }
     },
-    "national:NZ:Parliament:prime_minister": {
-      "Chris Hipkins": {
-        "change_pp": 5.0,
+    "presidential:NG": {
+      "Peter Obi": {
+        "change_pp": 6.5,
+        "direction": "down",
+        "reference_date": "2026-08-19",
+        "reference_pct": 30.0,
+        "window": "2d"
+      },
+      "Bola Tinubu": {
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-08-19",
-        "reference_pct": 50.0,
+        "reference_pct": 70.5,
         "window": "2d"
       }
     },
@@ -130,44 +116,30 @@
         "window": "2d"
       }
     },
-    "us-governor:FL": {
-      "David Jolly (D)": {
-        "change_pp": 6.5,
+    "us-governor:NV": {
+      "Joe Lombardo (R)": {
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-08-19",
-        "reference_pct": 17.0,
-        "window": "2d"
-      },
-      "Byron Donalds (R)": {
-        "change_pp": 5.5,
-        "direction": "down",
-        "reference_date": "2026-08-19",
-        "reference_pct": 83.0,
+        "reference_pct": 55.5,
         "window": "2d"
       }
     },
-    "us-governor:IA": {
-      "Rob Sand (D)": {
+    "us-governor:WI": {
+      "Tom Tiffany (R)": {
         "change_pp": 5.0,
         "direction": "down",
-        "reference_date": "2026-08-19",
-        "reference_pct": 77.5,
-        "window": "2d"
-      },
-      "Zach Lahn (R)": {
-        "change_pp": 4.5,
-        "direction": "up",
         "reference_date": "2026-08-19",
         "reference_pct": 23.5,
         "window": "2d"
       }
     },
-    "us-senate:MI": {
-      "Abdul El-Sayed (D)": {
-        "change_pp": 4.0,
+    "us-primary:RI:Governor:Republican": {
+      "Elaine Pelino": {
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-19",
-        "reference_pct": 60.5,
+        "reference_pct": 85.5,
         "window": "2d"
       }
     }

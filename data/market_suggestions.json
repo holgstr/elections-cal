@@ -7,66 +7,6 @@
   "markets_fetched": 96,
   "suggestions": [
     {
-      "market_id": "national:MX:Chamber of Deputies:party_winner",
-      "slug": "mexico-legislative-election-winner",
-      "category": "national",
-      "odds_format": "party",
-      "min_pct": 10,
-      "country_code": "MX",
-      "state_code": null,
-      "city_code": null,
-      "contest": "Chamber of Deputies",
-      "market_label": "Legislative election",
-      "party": null,
-      "election_date": "2027-06-06",
-      "election_title": "Chamber of Deputies",
-      "max_change_pp": 15.65,
-      "changes": [
-        {
-          "name": "PAN",
-          "current_pct": 18.85,
-          "change_pp": 15.65,
-          "direction": "up",
-          "since_date": "2026-08-19",
-          "reference_pct": 3.2,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Morena",
-          "current_pct": 81.1,
-          "change_pp": 11.85,
-          "direction": "down",
-          "since_date": "2026-08-19",
-          "reference_pct": 92.95,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Morena",
-          "current_pct": 81.1,
-          "change_pp": 11.85,
-          "direction": "down",
-          "since_date": "2026-08-19",
-          "reference_pct": 92.95,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "PAN",
-          "current_pct": 18.85,
-          "change_pp": 15.65,
-          "direction": "up",
-          "since_date": "2026-08-19",
-          "reference_pct": 3.2,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
       "market_id": "us-governor:AK",
       "slug": "alaska-governor-election-winner",
       "category": "us_governor",
@@ -116,7 +56,7 @@
         },
         {
           "name": "Jonathan Kreiss-Tomkins",
-          "current_pct": 33.25
+          "current_pct": 33.4
         },
         {
           "name": "Tom Begich",
@@ -135,121 +75,73 @@
       ]
     },
     {
-      "market_id": "us-governor:FL",
-      "slug": "florida-governor-winner-2026",
-      "category": "us_governor",
-      "odds_format": "party",
+      "market_id": "presidential:NG",
+      "slug": "nigerian-presidential-election-winner-20260602162945585",
+      "category": "presidential",
+      "odds_format": "candidates",
       "min_pct": 3,
-      "country_code": "US",
-      "state_code": "FL",
+      "country_code": "NG",
+      "state_code": null,
       "city_code": null,
-      "contest": "Governor",
-      "market_label": null,
+      "contest": "President",
+      "market_label": "Presidential election",
       "party": null,
-      "election_date": "2026-08-18",
-      "election_title": "Democratic Governor Primary",
+      "election_date": "2027-01-16",
+      "election_title": "General",
       "max_change_pp": 6.5,
       "changes": [
         {
-          "name": "David Jolly (D)",
+          "name": "Peter Obi",
           "current_pct": 23.5,
           "change_pp": 6.5,
-          "direction": "up",
+          "direction": "down",
           "since_date": "2026-08-19",
-          "reference_pct": 17.0,
+          "reference_pct": 30.0,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "Byron Donalds (R)",
-          "current_pct": 77.5,
-          "change_pp": 5.5,
-          "direction": "down",
+          "name": "Bola Tinubu",
+          "current_pct": 75.0,
+          "change_pp": 4.5,
+          "direction": "up",
           "since_date": "2026-08-19",
-          "reference_pct": 83.0,
+          "reference_pct": 70.5,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Byron Donalds (R)",
-          "current_pct": 77.5,
-          "change_pp": 5.5,
-          "direction": "down",
+          "name": "Bola Tinubu",
+          "current_pct": 75.0,
+          "change_pp": 4.5,
+          "direction": "up",
           "since_date": "2026-08-19",
-          "reference_pct": 83.0,
+          "reference_pct": 70.5,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "David Jolly (D)",
+          "name": "Peter Obi",
           "current_pct": 23.5,
           "change_pp": 6.5,
-          "direction": "up",
+          "direction": "down",
           "since_date": "2026-08-19",
-          "reference_pct": 17.0,
+          "reference_pct": 30.0,
           "change_days": 2,
           "window": "2d"
         }
       ]
     },
     {
-      "market_id": "national:NZ:Parliament:prime_minister",
-      "slug": "next-prime-minister-of-new-zealand-174",
-      "category": "national",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "NZ",
-      "state_code": null,
-      "city_code": null,
-      "contest": "Parliament",
-      "market_label": "Next Prime Minister",
-      "party": null,
-      "election_date": "2026-11-07",
-      "election_title": "Parliament",
-      "max_change_pp": 5.0,
-      "changes": [
-        {
-          "name": "Chris Hipkins",
-          "current_pct": 55.0,
-          "change_pp": 5.0,
-          "direction": "up",
-          "since_date": "2026-08-19",
-          "reference_pct": 50.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Chris Hipkins",
-          "current_pct": 55.0,
-          "change_pp": 5.0,
-          "direction": "up",
-          "since_date": "2026-08-19",
-          "reference_pct": 50.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Christopher Luxon",
-          "current_pct": 38.5
-        },
-        {
-          "name": "Nicola Willis",
-          "current_pct": 6.55
-        }
-      ]
-    },
-    {
-      "market_id": "us-governor:IA",
-      "slug": "iowa-governor-winner-2026",
+      "market_id": "us-governor:WI",
+      "slug": "wisconsin-governor-winner-2026",
       "category": "us_governor",
       "odds_format": "party",
       "min_pct": 3,
       "country_code": "US",
-      "state_code": "IA",
+      "state_code": "WI",
       "city_code": null,
       "contest": "Governor",
       "market_label": null,
@@ -259,20 +151,10 @@
       "max_change_pp": 5.0,
       "changes": [
         {
-          "name": "Rob Sand (D)",
-          "current_pct": 72.5,
+          "name": "Tom Tiffany (R)",
+          "current_pct": 18.5,
           "change_pp": 5.0,
           "direction": "down",
-          "since_date": "2026-08-19",
-          "reference_pct": 77.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Zach Lahn (R)",
-          "current_pct": 28.0,
-          "change_pp": 4.5,
-          "direction": "up",
           "since_date": "2026-08-19",
           "reference_pct": 23.5,
           "change_days": 2,
@@ -281,20 +163,14 @@
       ],
       "prices": [
         {
-          "name": "Rob Sand (D)",
-          "current_pct": 72.5,
-          "change_pp": 5.0,
-          "direction": "down",
-          "since_date": "2026-08-19",
-          "reference_pct": 77.5,
-          "change_days": 2,
-          "window": "2d"
+          "name": "David Crowley (D)",
+          "current_pct": 80.5
         },
         {
-          "name": "Zach Lahn (R)",
-          "current_pct": 28.0,
-          "change_pp": 4.5,
-          "direction": "up",
+          "name": "Tom Tiffany (R)",
+          "current_pct": 18.5,
+          "change_pp": 5.0,
+          "direction": "down",
           "since_date": "2026-08-19",
           "reference_pct": 23.5,
           "change_days": 2,
@@ -303,15 +179,59 @@
       ]
     },
     {
-      "market_id": "us-senate:MI",
-      "slug": "michigan-senate-election-winner",
-      "category": "us_senate",
+      "market_id": "us-primary:RI:Governor:Republican",
+      "slug": "rhode-island-governor-republican-primary-winner",
+      "category": "us_primary",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "RI",
+      "city_code": null,
+      "contest": "Republican Governor Primary",
+      "market_label": "Republican Governor Primary",
+      "party": "Republican",
+      "election_date": "2026-09-09",
+      "election_title": "Democratic Governor Primary",
+      "max_change_pp": 5.0,
+      "changes": [
+        {
+          "name": "Elaine Pelino",
+          "current_pct": 90.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-08-19",
+          "reference_pct": 85.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Elaine Pelino",
+          "current_pct": 90.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-08-19",
+          "reference_pct": 85.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Aaron Guckian",
+          "current_pct": 10.25
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:NV",
+      "slug": "nevada-governor-winner-2026",
+      "category": "us_governor",
       "odds_format": "party",
       "min_pct": 3,
       "country_code": "US",
-      "state_code": "MI",
+      "state_code": "NV",
       "city_code": null,
-      "contest": "Senate",
+      "contest": "Governor",
       "market_label": null,
       "party": null,
       "election_date": "2026-11-03",
@@ -319,30 +239,30 @@
       "max_change_pp": 4.0,
       "changes": [
         {
-          "name": "Abdul El-Sayed (D)",
-          "current_pct": 64.5,
+          "name": "Joe Lombardo (R)",
+          "current_pct": 59.5,
           "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-08-19",
-          "reference_pct": 60.5,
+          "reference_pct": 55.5,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Abdul El-Sayed (D)",
-          "current_pct": 64.5,
+          "name": "Joe Lombardo (R)",
+          "current_pct": 59.5,
           "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-08-19",
-          "reference_pct": 60.5,
+          "reference_pct": 55.5,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "Mike Rogers (R)",
-          "current_pct": 36.5
+          "name": "Aaron Ford (D)",
+          "current_pct": 41.5
         }
       ]
     }
