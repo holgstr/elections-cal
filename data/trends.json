@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T20:43:54Z",
+  "generated_at": "2026-08-21T22:45:11Z",
   "source": "google_trends",
   "races": [
     {
@@ -11292,7 +11292,7 @@
           "date": "2026-07-22",
           "values": {
             "/g/11c1pmpn3f": 0,
-            "/g/11g715qngv": 0
+            "/g/11g715qngv": 27
           }
         },
         {
@@ -11340,22 +11340,22 @@
         {
           "date": "2026-07-29",
           "values": {
-            "/g/11c1pmpn3f": 0,
+            "/g/11c1pmpn3f": 24,
             "/g/11g715qngv": 0
           }
         },
         {
           "date": "2026-07-30",
           "values": {
-            "/g/11c1pmpn3f": 19,
+            "/g/11c1pmpn3f": 0,
             "/g/11g715qngv": 0
           }
         },
         {
           "date": "2026-07-31",
           "values": {
-            "/g/11c1pmpn3f": 25,
-            "/g/11g715qngv": 24
+            "/g/11c1pmpn3f": 0,
+            "/g/11g715qngv": 0
           }
         },
         {
@@ -11383,12 +11383,12 @@
           "date": "2026-08-04",
           "values": {
             "/g/11c1pmpn3f": 100,
-            "/g/11g715qngv": 65
+            "/g/11g715qngv": 61
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-21T16:55:08Z"
+      "fetched_at": "2026-08-21T22:44:46Z"
     },
     {
       "id": "wi-dem-governor-primary-2026",
@@ -13744,7 +13744,7 @@
         {
           "date": "2026-07-09",
           "values": {
-            "/m/0pc0ws0": 33,
+            "/m/0pc0ws0": 0,
             "/g/11rts0yhzk": 0,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
@@ -13880,7 +13880,7 @@
           "date": "2026-07-24",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 58,
+            "/g/11rts0yhzk": 62,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13889,7 +13889,7 @@
           "date": "2026-07-25",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 34,
+            "/g/11rts0yhzk": 41,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13926,7 +13926,7 @@
           "values": {
             "/m/0pc0ws0": 0,
             "/g/11rts0yhzk": 0,
-            "/g/11r9754z1v": 0,
+            "/g/11r9754z1v": 30,
             "/g/11c0w0gml3": 0
           }
         },
@@ -13943,7 +13943,7 @@
           "date": "2026-07-31",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 39,
+            "/g/11rts0yhzk": 37,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13961,7 +13961,7 @@
           "date": "2026-08-02",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 33,
+            "/g/11rts0yhzk": 38,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13979,14 +13979,14 @@
           "date": "2026-08-04",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 39,
+            "/g/11rts0yhzk": 41,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-21T16:55:33Z"
+      "fetched_at": "2026-08-21T22:45:11Z"
     }
   ]
 }
