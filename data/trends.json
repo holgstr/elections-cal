@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T01:53:53Z",
+  "generated_at": "2026-08-22T03:11:00Z",
   "source": "google_trends",
   "races": [
     {
@@ -11447,21 +11447,21 @@
           "values": {
             "/g/11jnpqr8dw": 6,
             "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
+            "/m/0l8lszd": 3
           }
         },
         {
           "date": "2026-07-14",
           "values": {
-            "/g/11jnpqr8dw": 4,
+            "/g/11jnpqr8dw": 0,
             "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 3
+            "/m/0l8lszd": 0
           }
         },
         {
           "date": "2026-07-15",
           "values": {
-            "/g/11jnpqr8dw": 3,
+            "/g/11jnpqr8dw": 5,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 3
           }
@@ -11471,15 +11471,15 @@
           "values": {
             "/g/11jnpqr8dw": 6,
             "/g/11c2q3zj0w": 0,
-            "/m/0l8lszd": 0
+            "/m/0l8lszd": 3
           }
         },
         {
           "date": "2026-07-17",
           "values": {
-            "/g/11jnpqr8dw": 10,
-            "/g/11c2q3zj0w": 6,
-            "/m/0l8lszd": 7
+            "/g/11jnpqr8dw": 11,
+            "/g/11c2q3zj0w": 7,
+            "/m/0l8lszd": 6
           }
         },
         {
@@ -11493,7 +11493,7 @@
         {
           "date": "2026-07-19",
           "values": {
-            "/g/11jnpqr8dw": 0,
+            "/g/11jnpqr8dw": 12,
             "/g/11c2q3zj0w": 0,
             "/m/0l8lszd": 0
           }
@@ -11501,9 +11501,9 @@
         {
           "date": "2026-07-20",
           "values": {
-            "/g/11jnpqr8dw": 8,
+            "/g/11jnpqr8dw": 9,
             "/g/11c2q3zj0w": 10,
-            "/m/0l8lszd": 0
+            "/m/0l8lszd": 5
           }
         },
         {
@@ -11511,7 +11511,7 @@
           "values": {
             "/g/11jnpqr8dw": 10,
             "/g/11c2q3zj0w": 3,
-            "/m/0l8lszd": 0
+            "/m/0l8lszd": 3
           }
         },
         {
@@ -11519,21 +11519,21 @@
           "values": {
             "/g/11jnpqr8dw": 12,
             "/g/11c2q3zj0w": 7,
-            "/m/0l8lszd": 0
+            "/m/0l8lszd": 4
           }
         },
         {
           "date": "2026-07-23",
           "values": {
             "/g/11jnpqr8dw": 17,
-            "/g/11c2q3zj0w": 8,
-            "/m/0l8lszd": 4
+            "/g/11c2q3zj0w": 9,
+            "/m/0l8lszd": 5
           }
         },
         {
           "date": "2026-07-24",
           "values": {
-            "/g/11jnpqr8dw": 12,
+            "/g/11jnpqr8dw": 13,
             "/g/11c2q3zj0w": 5,
             "/m/0l8lszd": 4
           }
@@ -11559,7 +11559,7 @@
           "values": {
             "/g/11jnpqr8dw": 8,
             "/g/11c2q3zj0w": 5,
-            "/m/0l8lszd": 0
+            "/m/0l8lszd": 3
           }
         },
         {
@@ -11567,45 +11567,45 @@
           "values": {
             "/g/11jnpqr8dw": 9,
             "/g/11c2q3zj0w": 5,
-            "/m/0l8lszd": 4
+            "/m/0l8lszd": 3
           }
         },
         {
           "date": "2026-07-29",
           "values": {
-            "/g/11jnpqr8dw": 21,
-            "/g/11c2q3zj0w": 8,
+            "/g/11jnpqr8dw": 22,
+            "/g/11c2q3zj0w": 9,
             "/m/0l8lszd": 10
           }
         },
         {
           "date": "2026-07-30",
           "values": {
-            "/g/11jnpqr8dw": 28,
+            "/g/11jnpqr8dw": 29,
             "/g/11c2q3zj0w": 6,
-            "/m/0l8lszd": 45
+            "/m/0l8lszd": 47
           }
         },
         {
           "date": "2026-07-31",
           "values": {
-            "/g/11jnpqr8dw": 32,
+            "/g/11jnpqr8dw": 33,
             "/g/11c2q3zj0w": 10,
-            "/m/0l8lszd": 27
+            "/m/0l8lszd": 29
           }
         },
         {
           "date": "2026-08-01",
           "values": {
-            "/g/11jnpqr8dw": 30,
+            "/g/11jnpqr8dw": 31,
             "/g/11c2q3zj0w": 4,
-            "/m/0l8lszd": 8
+            "/m/0l8lszd": 9
           }
         },
         {
           "date": "2026-08-02",
           "values": {
-            "/g/11jnpqr8dw": 24,
+            "/g/11jnpqr8dw": 25,
             "/g/11c2q3zj0w": 4,
             "/m/0l8lszd": 4
           }
@@ -11621,15 +11621,15 @@
         {
           "date": "2026-08-04",
           "values": {
-            "/g/11jnpqr8dw": 32,
-            "/g/11c2q3zj0w": 6,
-            "/m/0l8lszd": 3
+            "/g/11jnpqr8dw": 33,
+            "/g/11c2q3zj0w": 7,
+            "/m/0l8lszd": 0
           }
         },
         {
           "date": "2026-08-05",
           "values": {
-            "/g/11jnpqr8dw": 33,
+            "/g/11jnpqr8dw": 34,
             "/g/11c2q3zj0w": 10,
             "/m/0l8lszd": 0
           }
@@ -11638,16 +11638,16 @@
           "date": "2026-08-06",
           "values": {
             "/g/11jnpqr8dw": 32,
-            "/g/11c2q3zj0w": 8,
+            "/g/11c2q3zj0w": 9,
             "/m/0l8lszd": 0
           }
         },
         {
           "date": "2026-08-07",
           "values": {
-            "/g/11jnpqr8dw": 24,
-            "/g/11c2q3zj0w": 9,
-            "/m/0l8lszd": 2
+            "/g/11jnpqr8dw": 25,
+            "/g/11c2q3zj0w": 10,
+            "/m/0l8lszd": 0
           }
         },
         {
@@ -11661,7 +11661,7 @@
         {
           "date": "2026-08-09",
           "values": {
-            "/g/11jnpqr8dw": 25,
+            "/g/11jnpqr8dw": 26,
             "/g/11c2q3zj0w": 10,
             "/m/0l8lszd": 1
           }
@@ -11669,8 +11669,8 @@
         {
           "date": "2026-08-10",
           "values": {
-            "/g/11jnpqr8dw": 44,
-            "/g/11c2q3zj0w": 16,
+            "/g/11jnpqr8dw": 45,
+            "/g/11c2q3zj0w": 17,
             "/m/0l8lszd": 3
           }
         },
@@ -11684,7 +11684,7 @@
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-21T20:43:31Z"
+      "fetched_at": "2026-08-22T03:10:37Z"
     },
     {
       "id": "sc-special-gop-senate-primary-2026",
@@ -11749,15 +11749,15 @@
         {
           "date": "2026-07-14",
           "values": {
-            "/g/11b64bp3p9": 38,
-            "/g/11c503wrrz": 7,
-            "/m/0f9kbx": 0
+            "/g/11b64bp3p9": 35,
+            "/g/11c503wrrz": 6,
+            "/m/0f9kbx": 6
           }
         },
         {
           "date": "2026-07-15",
           "values": {
-            "/g/11b64bp3p9": 16,
+            "/g/11b64bp3p9": 18,
             "/g/11c503wrrz": 7,
             "/m/0f9kbx": 0
           }
@@ -11765,7 +11765,7 @@
         {
           "date": "2026-07-16",
           "values": {
-            "/g/11b64bp3p9": 0,
+            "/g/11b64bp3p9": 8,
             "/g/11c503wrrz": 0,
             "/m/0f9kbx": 0
           }
@@ -11773,7 +11773,7 @@
         {
           "date": "2026-07-17",
           "values": {
-            "/g/11b64bp3p9": 10,
+            "/g/11b64bp3p9": 7,
             "/g/11c503wrrz": 0,
             "/m/0f9kbx": 0
           }
@@ -11783,7 +11783,7 @@
           "values": {
             "/g/11b64bp3p9": 0,
             "/g/11c503wrrz": 0,
-            "/m/0f9kbx": 13
+            "/m/0f9kbx": 10
           }
         },
         {
@@ -11797,17 +11797,17 @@
         {
           "date": "2026-07-20",
           "values": {
-            "/g/11b64bp3p9": 15,
-            "/g/11c503wrrz": 10,
-            "/m/0f9kbx": 8
+            "/g/11b64bp3p9": 18,
+            "/g/11c503wrrz": 11,
+            "/m/0f9kbx": 10
           }
         },
         {
           "date": "2026-07-21",
           "values": {
-            "/g/11b64bp3p9": 21,
+            "/g/11b64bp3p9": 19,
             "/g/11c503wrrz": 0,
-            "/m/0f9kbx": 6
+            "/m/0f9kbx": 0
           }
         },
         {
@@ -11861,7 +11861,7 @@
         {
           "date": "2026-07-28",
           "values": {
-            "/g/11b64bp3p9": 10,
+            "/g/11b64bp3p9": 8,
             "/g/11c503wrrz": 0,
             "/m/0f9kbx": 0
           }
@@ -11869,7 +11869,7 @@
         {
           "date": "2026-07-29",
           "values": {
-            "/g/11b64bp3p9": 8,
+            "/g/11b64bp3p9": 7,
             "/g/11c503wrrz": 0,
             "/m/0f9kbx": 0
           }
@@ -11877,17 +11877,17 @@
         {
           "date": "2026-07-30",
           "values": {
-            "/g/11b64bp3p9": 11,
-            "/g/11c503wrrz": 7,
-            "/m/0f9kbx": 11
+            "/g/11b64bp3p9": 9,
+            "/g/11c503wrrz": 0,
+            "/m/0f9kbx": 12
           }
         },
         {
           "date": "2026-07-31",
           "values": {
             "/g/11b64bp3p9": 0,
-            "/g/11c503wrrz": 0,
-            "/m/0f9kbx": 0
+            "/g/11c503wrrz": 7,
+            "/m/0f9kbx": 7
           }
         },
         {
@@ -11901,7 +11901,7 @@
         {
           "date": "2026-08-02",
           "values": {
-            "/g/11b64bp3p9": 0,
+            "/g/11b64bp3p9": 7,
             "/g/11c503wrrz": 0,
             "/m/0f9kbx": 0
           }
@@ -11909,41 +11909,41 @@
         {
           "date": "2026-08-03",
           "values": {
-            "/g/11b64bp3p9": 11,
+            "/g/11b64bp3p9": 5,
             "/g/11c503wrrz": 7,
-            "/m/0f9kbx": 9
+            "/m/0f9kbx": 6
           }
         },
         {
           "date": "2026-08-04",
           "values": {
-            "/g/11b64bp3p9": 16,
-            "/g/11c503wrrz": 17,
-            "/m/0f9kbx": 14
+            "/g/11b64bp3p9": 14,
+            "/g/11c503wrrz": 12,
+            "/m/0f9kbx": 17
           }
         },
         {
           "date": "2026-08-05",
           "values": {
-            "/g/11b64bp3p9": 9,
-            "/g/11c503wrrz": 18,
-            "/m/0f9kbx": 13
+            "/g/11b64bp3p9": 11,
+            "/g/11c503wrrz": 20,
+            "/m/0f9kbx": 11
           }
         },
         {
           "date": "2026-08-06",
           "values": {
-            "/g/11b64bp3p9": 0,
-            "/g/11c503wrrz": 13,
-            "/m/0f9kbx": 8
+            "/g/11b64bp3p9": 7,
+            "/g/11c503wrrz": 14,
+            "/m/0f9kbx": 9
           }
         },
         {
           "date": "2026-08-07",
           "values": {
             "/g/11b64bp3p9": 7,
-            "/g/11c503wrrz": 10,
-            "/m/0f9kbx": 7
+            "/g/11c503wrrz": 11,
+            "/m/0f9kbx": 0
           }
         },
         {
@@ -11958,7 +11958,7 @@
           "date": "2026-08-09",
           "values": {
             "/g/11b64bp3p9": 10,
-            "/g/11c503wrrz": 8,
+            "/g/11c503wrrz": 7,
             "/m/0f9kbx": 6
           }
         },
@@ -11966,21 +11966,21 @@
           "date": "2026-08-10",
           "values": {
             "/g/11b64bp3p9": 19,
-            "/g/11c503wrrz": 13,
+            "/g/11c503wrrz": 14,
             "/m/0f9kbx": 11
           }
         },
         {
           "date": "2026-08-11",
           "values": {
-            "/g/11b64bp3p9": 31,
-            "/g/11c503wrrz": 38,
-            "/m/0f9kbx": 34
+            "/g/11b64bp3p9": 32,
+            "/g/11c503wrrz": 39,
+            "/m/0f9kbx": 35
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-21T20:43:54Z"
+      "fetched_at": "2026-08-22T03:11:00Z"
     },
     {
       "id": "mn-dem-senate-primary-2026",
