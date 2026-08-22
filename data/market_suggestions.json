@@ -7,6 +7,130 @@
   "markets_fetched": 96,
   "suggestions": [
     {
+      "market_id": "de-state:BE",
+      "slug": "berlin-state-election-winner",
+      "category": "de_state",
+      "odds_format": "party",
+      "min_pct": 10,
+      "country_code": "DE",
+      "state_code": "BE",
+      "city_code": null,
+      "contest": "Abgeordnetenhaus",
+      "market_label": "Abgeordnetenhaus",
+      "party": null,
+      "election_date": "2026-09-20",
+      "election_title": "State",
+      "max_change_pp": 15.0,
+      "changes": [
+        {
+          "name": "CDU",
+          "current_pct": 25.5,
+          "change_pp": 7.0,
+          "direction": "down",
+          "since_date": "2026-08-20",
+          "reference_pct": 32.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "AfD",
+          "current_pct": 10.45,
+          "change_pp": 6.8,
+          "direction": "down",
+          "since_date": "2026-08-20",
+          "reference_pct": 17.25,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Linke",
+          "current_pct": 54.5,
+          "change_pp": 15.0,
+          "direction": "up",
+          "since_date": "2026-08-20",
+          "reference_pct": 39.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Linke",
+          "current_pct": 54.5,
+          "change_pp": 15.0,
+          "direction": "up",
+          "since_date": "2026-08-20",
+          "reference_pct": 39.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "CDU",
+          "current_pct": 25.5,
+          "change_pp": 7.0,
+          "direction": "down",
+          "since_date": "2026-08-20",
+          "reference_pct": 32.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "AfD",
+          "current_pct": 10.45,
+          "change_pp": 6.8,
+          "direction": "down",
+          "since_date": "2026-08-20",
+          "reference_pct": 17.25,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "presidential:NG",
+      "slug": "nigerian-presidential-election-winner-20260602162945585",
+      "category": "presidential",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "NG",
+      "state_code": null,
+      "city_code": null,
+      "contest": "President",
+      "market_label": "Presidential election",
+      "party": null,
+      "election_date": "2027-01-16",
+      "election_title": "General",
+      "max_change_pp": 6.5,
+      "changes": [
+        {
+          "name": "Peter Obi",
+          "current_pct": 23.0,
+          "change_pp": 6.5,
+          "direction": "down",
+          "since_date": "2026-08-20",
+          "reference_pct": 29.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Bola Tinubu",
+          "current_pct": 69.5
+        },
+        {
+          "name": "Peter Obi",
+          "current_pct": 23.0,
+          "change_pp": 6.5,
+          "direction": "down",
+          "since_date": "2026-08-20",
+          "reference_pct": 29.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
       "market_id": "national:NZ:Parliament:prime_minister",
       "slug": "next-prime-minister-of-new-zealand-174",
       "category": "national",
@@ -20,12 +144,12 @@
       "party": null,
       "election_date": "2026-11-07",
       "election_title": "Parliament",
-      "max_change_pp": 9.0,
+      "max_change_pp": 6.0,
       "changes": [
         {
           "name": "Christopher Luxon",
-          "current_pct": 47.5,
-          "change_pp": 9.0,
+          "current_pct": 44.5,
+          "change_pp": 6.0,
           "direction": "up",
           "since_date": "2026-08-20",
           "reference_pct": 38.5,
@@ -40,75 +164,11 @@
         },
         {
           "name": "Christopher Luxon",
-          "current_pct": 47.5,
-          "change_pp": 9.0,
+          "current_pct": 44.5,
+          "change_pp": 6.0,
           "direction": "up",
           "since_date": "2026-08-20",
           "reference_pct": 38.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "de-state:BE",
-      "slug": "berlin-state-election-winner",
-      "category": "de_state",
-      "odds_format": "party",
-      "min_pct": 10,
-      "country_code": "DE",
-      "state_code": "BE",
-      "city_code": null,
-      "contest": "Abgeordnetenhaus",
-      "market_label": "Abgeordnetenhaus",
-      "party": null,
-      "election_date": "2026-09-20",
-      "election_title": "State",
-      "max_change_pp": 6.5,
-      "changes": [
-        {
-          "name": "AfD",
-          "current_pct": 12.85,
-          "change_pp": 4.4,
-          "direction": "down",
-          "since_date": "2026-08-20",
-          "reference_pct": 17.25,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Linke",
-          "current_pct": 46.0,
-          "change_pp": 6.5,
-          "direction": "up",
-          "since_date": "2026-08-20",
-          "reference_pct": 39.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Linke",
-          "current_pct": 46.0,
-          "change_pp": 6.5,
-          "direction": "up",
-          "since_date": "2026-08-20",
-          "reference_pct": 39.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "CDU",
-          "current_pct": 31.0
-        },
-        {
-          "name": "AfD",
-          "current_pct": 12.85,
-          "change_pp": 4.4,
-          "direction": "down",
-          "since_date": "2026-08-20",
-          "reference_pct": 17.25,
           "change_days": 2,
           "window": "2d"
         }
@@ -148,7 +208,7 @@
         },
         {
           "name": "Jonathan Kreiss-Tomkins",
-          "current_pct": 32.2
+          "current_pct": 31.1
         },
         {
           "name": "Tom Begich",
@@ -162,55 +222,55 @@
         },
         {
           "name": "David Bronson",
-          "current_pct": 6.8
+          "current_pct": 7.5
         },
         {
           "name": "Click Bishop",
-          "current_pct": 4.55
+          "current_pct": 3.95
         }
       ]
     },
     {
-      "market_id": "us-governor:VT",
-      "slug": "vermont-governor-winner-2026",
-      "category": "us_governor",
-      "odds_format": "party",
+      "market_id": "us-primary:RI:Governor:Republican",
+      "slug": "rhode-island-governor-republican-primary-winner",
+      "category": "us_primary",
+      "odds_format": "candidates",
       "min_pct": 3,
       "country_code": "US",
-      "state_code": "VT",
+      "state_code": "RI",
       "city_code": null,
-      "contest": "Governor",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
+      "contest": "Republican Governor Primary",
+      "market_label": "Republican Governor Primary",
+      "party": "Republican",
+      "election_date": "2026-09-09",
+      "election_title": "Democratic Governor Primary",
       "max_change_pp": 5.5,
       "changes": [
         {
-          "name": "Republican",
-          "current_pct": 85.5,
+          "name": "Elaine Pelino",
+          "current_pct": 91.5,
           "change_pp": 5.5,
-          "direction": "down",
+          "direction": "up",
           "since_date": "2026-08-20",
-          "reference_pct": 91.0,
+          "reference_pct": 86.0,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Republican",
-          "current_pct": 85.5,
+          "name": "Elaine Pelino",
+          "current_pct": 91.5,
           "change_pp": 5.5,
-          "direction": "down",
+          "direction": "up",
           "since_date": "2026-08-20",
-          "reference_pct": 91.0,
+          "reference_pct": 86.0,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "Democrat",
-          "current_pct": 11.95
+          "name": "Aaron Guckian",
+          "current_pct": 8.5
         }
       ]
     },
@@ -244,7 +304,7 @@
       "prices": [
         {
           "name": "Democrat",
-          "current_pct": 91.5
+          "current_pct": 92.5
         },
         {
           "name": "Republican",
@@ -253,94 +313,6 @@
           "direction": "down",
           "since_date": "2026-08-20",
           "reference_pct": 9.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "us-primary:RI:Governor:Republican",
-      "slug": "rhode-island-governor-republican-primary-winner",
-      "category": "us_primary",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "RI",
-      "city_code": null,
-      "contest": "Republican Governor Primary",
-      "market_label": "Republican Governor Primary",
-      "party": "Republican",
-      "election_date": "2026-09-09",
-      "election_title": "Democratic Governor Primary",
-      "max_change_pp": 5.0,
-      "changes": [
-        {
-          "name": "Elaine Pelino",
-          "current_pct": 91.0,
-          "change_pp": 5.0,
-          "direction": "up",
-          "since_date": "2026-08-20",
-          "reference_pct": 86.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Elaine Pelino",
-          "current_pct": 91.0,
-          "change_pp": 5.0,
-          "direction": "up",
-          "since_date": "2026-08-20",
-          "reference_pct": 86.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Aaron Guckian",
-          "current_pct": 8.95
-        }
-      ]
-    },
-    {
-      "market_id": "presidential:NG",
-      "slug": "nigerian-presidential-election-winner-20260602162945585",
-      "category": "presidential",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "NG",
-      "state_code": null,
-      "city_code": null,
-      "contest": "President",
-      "market_label": "Presidential election",
-      "party": null,
-      "election_date": "2027-01-16",
-      "election_title": "General",
-      "max_change_pp": 4.5,
-      "changes": [
-        {
-          "name": "Peter Obi",
-          "current_pct": 25.0,
-          "change_pp": 4.5,
-          "direction": "down",
-          "since_date": "2026-08-20",
-          "reference_pct": 29.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Bola Tinubu",
-          "current_pct": 74.0
-        },
-        {
-          "name": "Peter Obi",
-          "current_pct": 25.0,
-          "change_pp": 4.5,
-          "direction": "down",
-          "since_date": "2026-08-20",
-          "reference_pct": 29.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -401,6 +373,50 @@
           "direction": "down",
           "since_date": "2026-08-20",
           "reference_pct": 15.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:VT",
+      "slug": "vermont-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "VT",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.1,
+      "changes": [
+        {
+          "name": "Democrat",
+          "current_pct": 13.1,
+          "change_pp": 4.1,
+          "direction": "up",
+          "since_date": "2026-08-20",
+          "reference_pct": 9.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Republican",
+          "current_pct": 87.5
+        },
+        {
+          "name": "Democrat",
+          "current_pct": 13.1,
+          "change_pp": 4.1,
+          "direction": "up",
+          "since_date": "2026-08-20",
+          "reference_pct": 9.0,
           "change_days": 2,
           "window": "2d"
         }
@@ -496,7 +512,7 @@
       "prices": [
         {
           "name": "David Crowley (D)",
-          "current_pct": 80.5
+          "current_pct": 78.5
         },
         {
           "name": "Tom Tiffany (R)",

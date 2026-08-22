@@ -6,15 +6,22 @@
   "threshold_pp": 4,
   "by_slug": {
     "berlin-state-election-winner": {
+      "CDU": {
+        "change_pp": 7.0,
+        "direction": "down",
+        "reference_date": "2026-08-20",
+        "reference_pct": 32.5,
+        "window": "2d"
+      },
       "AfD": {
-        "change_pp": 4.4,
+        "change_pp": 6.8,
         "direction": "down",
         "reference_date": "2026-08-20",
         "reference_pct": 17.25,
         "window": "2d"
       },
       "Linke": {
-        "change_pp": 6.5,
+        "change_pp": 15.0,
         "direction": "up",
         "reference_date": "2026-08-20",
         "reference_pct": 39.5,
@@ -23,7 +30,7 @@
     },
     "mexico-legislative-election-winner": {
       "PAN": {
-        "change_pp": 5.7,
+        "change_pp": 4.15,
         "direction": "up",
         "reference_date": "2026-08-20",
         "reference_pct": 3.2,
@@ -32,7 +39,7 @@
     },
     "next-prime-minister-of-new-zealand-174": {
       "Christopher Luxon": {
-        "change_pp": 9.0,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-08-20",
         "reference_pct": 38.5,
@@ -41,7 +48,7 @@
     },
     "nigerian-presidential-election-winner-20260602162945585": {
       "Peter Obi": {
-        "change_pp": 4.5,
+        "change_pp": 6.5,
         "direction": "down",
         "reference_date": "2026-08-20",
         "reference_pct": 29.5,
@@ -83,11 +90,11 @@
       }
     },
     "vermont-governor-winner-2026": {
-      "Republican": {
-        "change_pp": 5.5,
-        "direction": "down",
+      "Democrat": {
+        "change_pp": 4.1,
+        "direction": "up",
         "reference_date": "2026-08-20",
-        "reference_pct": 91.0,
+        "reference_pct": 9.0,
         "window": "2d"
       }
     },
@@ -102,7 +109,7 @@
     },
     "rhode-island-governor-republican-primary-winner": {
       "Elaine Pelino": {
-        "change_pp": 5.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-08-20",
         "reference_pct": 86.0,
@@ -128,15 +135,22 @@
   },
   "by_market_id": {
     "de-state:BE": {
+      "CDU": {
+        "change_pp": 7.0,
+        "direction": "down",
+        "reference_date": "2026-08-20",
+        "reference_pct": 32.5,
+        "window": "2d"
+      },
       "AfD": {
-        "change_pp": 4.4,
+        "change_pp": 6.8,
         "direction": "down",
         "reference_date": "2026-08-20",
         "reference_pct": 17.25,
         "window": "2d"
       },
       "Linke": {
-        "change_pp": 6.5,
+        "change_pp": 15.0,
         "direction": "up",
         "reference_date": "2026-08-20",
         "reference_pct": 39.5,
@@ -145,7 +159,7 @@
     },
     "national:MX:Chamber of Deputies:party_winner": {
       "PAN": {
-        "change_pp": 5.7,
+        "change_pp": 4.15,
         "direction": "up",
         "reference_date": "2026-08-20",
         "reference_pct": 3.2,
@@ -154,7 +168,7 @@
     },
     "national:NZ:Parliament:prime_minister": {
       "Christopher Luxon": {
-        "change_pp": 9.0,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-08-20",
         "reference_pct": 38.5,
@@ -163,7 +177,7 @@
     },
     "presidential:NG": {
       "Peter Obi": {
-        "change_pp": 4.5,
+        "change_pp": 6.5,
         "direction": "down",
         "reference_date": "2026-08-20",
         "reference_pct": 29.5,
@@ -205,11 +219,11 @@
       }
     },
     "us-governor:VT": {
-      "Republican": {
-        "change_pp": 5.5,
-        "direction": "down",
+      "Democrat": {
+        "change_pp": 4.1,
+        "direction": "up",
         "reference_date": "2026-08-20",
-        "reference_pct": 91.0,
+        "reference_pct": 9.0,
         "window": "2d"
       }
     },
@@ -224,7 +238,7 @@
     },
     "us-primary:RI:Governor:Republican": {
       "Elaine Pelino": {
-        "change_pp": 5.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-08-20",
         "reference_pct": 86.0,
