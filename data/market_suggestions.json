@@ -67,6 +67,70 @@
       ]
     },
     {
+      "market_id": "national:LV:Parliament:party_winner",
+      "slug": "latvian-parliamentary-election-winner",
+      "category": "national",
+      "odds_format": "party",
+      "min_pct": 10,
+      "country_code": "LV",
+      "state_code": null,
+      "city_code": null,
+      "contest": "Parliament",
+      "market_label": "Parliamentary election",
+      "party": null,
+      "election_date": "2026-10-03",
+      "election_title": "Parliament",
+      "max_change_pp": 10.25,
+      "changes": [
+        {
+          "name": "AS",
+          "current_pct": 43.0,
+          "change_pp": 10.25,
+          "direction": "down",
+          "since_date": "2026-08-21",
+          "reference_pct": 53.25,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "SV",
+          "current_pct": 26.3,
+          "change_pp": 4.65,
+          "direction": "up",
+          "since_date": "2026-08-21",
+          "reference_pct": 21.65,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "AS",
+          "current_pct": 43.0,
+          "change_pp": 10.25,
+          "direction": "down",
+          "since_date": "2026-08-21",
+          "reference_pct": 53.25,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "SV",
+          "current_pct": 26.3,
+          "change_pp": 4.65,
+          "direction": "up",
+          "since_date": "2026-08-21",
+          "reference_pct": 21.65,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "LPV",
+          "current_pct": 19.5
+        }
+      ]
+    },
+    {
       "market_id": "presidential:NG",
       "slug": "nigerian-presidential-election-winner-20260602162945585",
       "category": "presidential",
@@ -80,12 +144,12 @@
       "party": null,
       "election_date": "2027-01-16",
       "election_title": "General",
-      "max_change_pp": 6.5,
+      "max_change_pp": 8.5,
       "changes": [
         {
           "name": "Bola Tinubu",
-          "current_pct": 68.5,
-          "change_pp": 6.5,
+          "current_pct": 66.5,
+          "change_pp": 8.5,
           "direction": "down",
           "since_date": "2026-08-21",
           "reference_pct": 75.0,
@@ -96,8 +160,8 @@
       "prices": [
         {
           "name": "Bola Tinubu",
-          "current_pct": 68.5,
-          "change_pp": 6.5,
+          "current_pct": 66.5,
+          "change_pp": 8.5,
           "direction": "down",
           "since_date": "2026-08-21",
           "reference_pct": 75.0,
@@ -106,7 +170,7 @@
         },
         {
           "name": "Peter Obi",
-          "current_pct": 23.0
+          "current_pct": 23.5
         }
       ]
     },
@@ -124,12 +188,12 @@
       "party": null,
       "election_date": "2026-11-07",
       "election_title": "Parliament",
-      "max_change_pp": 6.0,
+      "max_change_pp": 5.5,
       "changes": [
         {
           "name": "Christopher Luxon",
-          "current_pct": 44.5,
-          "change_pp": 6.0,
+          "current_pct": 44.0,
+          "change_pp": 5.5,
           "direction": "up",
           "since_date": "2026-08-21",
           "reference_pct": 38.5,
@@ -144,13 +208,57 @@
         },
         {
           "name": "Christopher Luxon",
-          "current_pct": 44.5,
-          "change_pp": 6.0,
+          "current_pct": 44.0,
+          "change_pp": 5.5,
           "direction": "up",
           "since_date": "2026-08-21",
           "reference_pct": 38.5,
           "change_days": 2,
           "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "national:BR:National Congress:party_winner",
+      "slug": "brazil-chamber-of-deputies-election-winner",
+      "category": "national",
+      "odds_format": "party",
+      "min_pct": 10,
+      "country_code": "BR",
+      "state_code": null,
+      "city_code": null,
+      "contest": "National Congress",
+      "market_label": "Chamber of Deputies",
+      "party": null,
+      "election_date": "2026-10-04",
+      "election_title": "General",
+      "max_change_pp": 4.5,
+      "changes": [
+        {
+          "name": "PL",
+          "current_pct": 58.0,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-08-21",
+          "reference_pct": 62.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "PL",
+          "current_pct": 58.0,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-08-21",
+          "reference_pct": 62.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "UPB",
+          "current_pct": 41.25
         }
       ]
     },
@@ -210,14 +318,14 @@
       "contest": "Senate",
       "market_label": null,
       "party": null,
-      "election_date": "2026-08-18",
-      "election_title": "Democratic Senate Primary",
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
       "max_change_pp": 4.5,
       "changes": [
         {
           "name": "Dan Sullivan",
-          "current_pct": 39.0,
-          "change_pp": 4.5,
+          "current_pct": 39.5,
+          "change_pp": 4.0,
           "direction": "down",
           "since_date": "2026-08-21",
           "reference_pct": 43.5,
@@ -248,57 +356,13 @@
         },
         {
           "name": "Dan Sullivan",
-          "current_pct": 39.0,
-          "change_pp": 4.5,
+          "current_pct": 39.5,
+          "change_pp": 4.0,
           "direction": "down",
           "since_date": "2026-08-21",
           "reference_pct": 43.5,
           "change_days": 2,
           "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "national:BR:National Congress:party_winner",
-      "slug": "brazil-chamber-of-deputies-election-winner",
-      "category": "national",
-      "odds_format": "party",
-      "min_pct": 10,
-      "country_code": "BR",
-      "state_code": null,
-      "city_code": null,
-      "contest": "National Congress",
-      "market_label": "Chamber of Deputies",
-      "party": null,
-      "election_date": "2026-10-04",
-      "election_title": "General",
-      "max_change_pp": 4.0,
-      "changes": [
-        {
-          "name": "PL",
-          "current_pct": 58.5,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-08-21",
-          "reference_pct": 62.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "PL",
-          "current_pct": 58.5,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-08-21",
-          "reference_pct": 62.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "UPB",
-          "current_pct": 40.75
         }
       ]
     }

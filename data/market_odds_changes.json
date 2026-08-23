@@ -14,14 +14,14 @@
         "window": "2d"
       },
       "AfD": {
-        "change_pp": 5.85,
+        "change_pp": 5.35,
         "direction": "down",
         "reference_date": "2026-08-21",
         "reference_pct": 15.0,
         "window": "2d"
       },
       "Grüne": {
-        "change_pp": 4.95,
+        "change_pp": 4.9,
         "direction": "down",
         "reference_date": "2026-08-21",
         "reference_pct": 8.85,
@@ -37,16 +37,32 @@
     },
     "brazil-chamber-of-deputies-election-winner": {
       "PL": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-08-21",
         "reference_pct": 62.5,
         "window": "2d"
       }
     },
+    "latvian-parliamentary-election-winner": {
+      "AS": {
+        "change_pp": 10.25,
+        "direction": "down",
+        "reference_date": "2026-08-21",
+        "reference_pct": 53.25,
+        "window": "2d"
+      },
+      "SV": {
+        "change_pp": 4.65,
+        "direction": "up",
+        "reference_date": "2026-08-21",
+        "reference_pct": 21.65,
+        "window": "2d"
+      }
+    },
     "next-prime-minister-of-new-zealand-174": {
       "Christopher Luxon": {
-        "change_pp": 6.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-08-21",
         "reference_pct": 38.5,
@@ -55,7 +71,7 @@
     },
     "nigerian-presidential-election-winner-20260602162945585": {
       "Bola Tinubu": {
-        "change_pp": 6.5,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-08-21",
         "reference_pct": 75.0,
@@ -73,7 +89,7 @@
     },
     "alaska-senate-election-winner": {
       "Dan Sullivan": {
-        "change_pp": 4.5,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-21",
         "reference_pct": 43.5,
@@ -98,14 +114,14 @@
         "window": "2d"
       },
       "AfD": {
-        "change_pp": 5.85,
+        "change_pp": 5.35,
         "direction": "down",
         "reference_date": "2026-08-21",
         "reference_pct": 15.0,
         "window": "2d"
       },
       "Grüne": {
-        "change_pp": 4.95,
+        "change_pp": 4.9,
         "direction": "down",
         "reference_date": "2026-08-21",
         "reference_pct": 8.85,
@@ -121,16 +137,32 @@
     },
     "national:BR:National Congress:party_winner": {
       "PL": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-08-21",
         "reference_pct": 62.5,
         "window": "2d"
       }
     },
+    "national:LV:Parliament:party_winner": {
+      "AS": {
+        "change_pp": 10.25,
+        "direction": "down",
+        "reference_date": "2026-08-21",
+        "reference_pct": 53.25,
+        "window": "2d"
+      },
+      "SV": {
+        "change_pp": 4.65,
+        "direction": "up",
+        "reference_date": "2026-08-21",
+        "reference_pct": 21.65,
+        "window": "2d"
+      }
+    },
     "national:NZ:Parliament:prime_minister": {
       "Christopher Luxon": {
-        "change_pp": 6.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-08-21",
         "reference_pct": 38.5,
@@ -139,7 +171,7 @@
     },
     "presidential:NG": {
       "Bola Tinubu": {
-        "change_pp": 6.5,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-08-21",
         "reference_pct": 75.0,
@@ -157,7 +189,7 @@
     },
     "us-senate:AK": {
       "Dan Sullivan": {
-        "change_pp": 4.5,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-21",
         "reference_pct": 43.5,
