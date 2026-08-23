@@ -1934,6 +1934,33 @@
     ]
   },
   {
+    "id": "ok-gop-governor-primary-runoff-2026",
+    "title": "Oklahoma Republican Governor Primary Runoff",
+    "election_date": "2026-08-25",
+    "country_code": "US",
+    "state_code": "OK",
+    "geo": "US-OK",
+    "window_days": 30,
+    "window_mode": "trailing",
+    "watchlist": true,
+    "keywords": [
+      {
+        "name": "Gentner Drummond",
+        "label": "Drummond",
+        "mid": "/g/11m430jn0y",
+        "topic_title": "Gentner Drummond",
+        "topic_type": "Oklahoma Attorney General"
+      },
+      {
+        "name": "Mike Mazzei",
+        "label": "Mazzei",
+        "mid": "/m/04zzz8g",
+        "topic_title": "Mike Mazzei",
+        "topic_type": "Former Member of the Oklahoma Senate"
+      }
+    ]
+  },
+  {
     "id": "nj-governor-2025",
     "title": "New Jersey Governor",
     "election_date": "2025-11-04",
