@@ -7,35 +7,26 @@
   "by_slug": {
     "berlin-state-election-winner": {
       "Grüne": {
-        "change_pp": 4.35,
+        "change_pp": 4.8,
         "direction": "down",
         "reference_date": "2026-08-22",
         "reference_pct": 8.25,
         "window": "2d"
       }
     },
-    "latvian-parliamentary-election-winner": {
-      "AS": {
-        "change_pp": 8.65,
-        "direction": "down",
-        "reference_date": "2026-08-22",
-        "reference_pct": 51.65,
-        "window": "2d"
-      }
-    },
-    "next-prime-minister-of-sweden": {
-      "Ulf Kristersson": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-08-22",
-        "reference_pct": 10.5,
-        "window": "2d"
-      },
-      "Magdalena Andersson": {
-        "change_pp": 4.0,
+    "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt": {
+      "Yes": {
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-08-22",
-        "reference_pct": 88.5,
+        "reference_pct": 31.5,
+        "window": "2d"
+      },
+      "No": {
+        "change_pp": 6.0,
+        "direction": "down",
+        "reference_date": "2026-08-22",
+        "reference_pct": 68.5,
         "window": "2d"
       }
     },
@@ -48,7 +39,7 @@
         "window": "2d"
       },
       "Mary Peltola": {
-        "change_pp": 4.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-22",
         "reference_pct": 56.5,
@@ -59,35 +50,26 @@
   "by_market_id": {
     "de-state:BE": {
       "Grüne": {
-        "change_pp": 4.35,
+        "change_pp": 4.8,
         "direction": "down",
         "reference_date": "2026-08-22",
         "reference_pct": 8.25,
         "window": "2d"
       }
     },
-    "national:LV:Parliament:party_winner": {
-      "AS": {
-        "change_pp": 8.65,
-        "direction": "down",
-        "reference_date": "2026-08-22",
-        "reference_pct": 51.65,
-        "window": "2d"
-      }
-    },
-    "national:SE:Riksdag:prime_minister": {
-      "Ulf Kristersson": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-08-22",
-        "reference_pct": 10.5,
-        "window": "2d"
-      },
-      "Magdalena Andersson": {
-        "change_pp": 4.0,
+    "de-state:ST:AfD absolute majority": {
+      "Yes": {
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-08-22",
-        "reference_pct": 88.5,
+        "reference_pct": 31.5,
+        "window": "2d"
+      },
+      "No": {
+        "change_pp": 6.0,
+        "direction": "down",
+        "reference_date": "2026-08-22",
+        "reference_pct": 68.5,
         "window": "2d"
       }
     },
@@ -100,7 +82,7 @@
         "window": "2d"
       },
       "Mary Peltola": {
-        "change_pp": 4.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-22",
         "reference_pct": 56.5,

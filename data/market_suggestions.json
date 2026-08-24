@@ -7,50 +7,62 @@
   "markets_fetched": 96,
   "suggestions": [
     {
-      "market_id": "national:LV:Parliament:party_winner",
-      "slug": "latvian-parliamentary-election-winner",
-      "category": "national",
-      "odds_format": "party",
+      "market_id": "de-state:ST:AfD absolute majority",
+      "slug": "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt",
+      "category": "de_state",
+      "odds_format": "binary",
       "min_pct": 10,
-      "country_code": "LV",
-      "state_code": null,
+      "country_code": "DE",
+      "state_code": "ST",
       "city_code": null,
-      "contest": "Parliament",
-      "market_label": "Parliamentary election",
+      "contest": "Landtag",
+      "market_label": "AfD absolute majority",
       "party": null,
-      "election_date": "2026-10-03",
-      "election_title": "Parliament",
-      "max_change_pp": 8.65,
+      "election_date": "2026-09-06",
+      "election_title": "Landtag",
+      "max_change_pp": 6.0,
       "changes": [
         {
-          "name": "AS",
-          "current_pct": 43.0,
-          "change_pp": 8.65,
+          "name": "Yes",
+          "current_pct": 37.5,
+          "change_pp": 6.0,
+          "direction": "up",
+          "since_date": "2026-08-22",
+          "reference_pct": 31.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "No",
+          "current_pct": 62.5,
+          "change_pp": 6.0,
           "direction": "down",
           "since_date": "2026-08-22",
-          "reference_pct": 51.65,
+          "reference_pct": 68.5,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "AS",
-          "current_pct": 43.0,
-          "change_pp": 8.65,
+          "name": "No",
+          "current_pct": 62.5,
+          "change_pp": 6.0,
           "direction": "down",
           "since_date": "2026-08-22",
-          "reference_pct": 51.65,
+          "reference_pct": 68.5,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "SV",
-          "current_pct": 26.25
-        },
-        {
-          "name": "LPV",
-          "current_pct": 19.5
+          "name": "Yes",
+          "current_pct": 37.5,
+          "change_pp": 6.0,
+          "direction": "up",
+          "since_date": "2026-08-22",
+          "reference_pct": 31.5,
+          "change_days": 2,
+          "window": "2d"
         }
       ]
     },
@@ -68,7 +80,7 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 4.5,
+      "max_change_pp": 5.0,
       "changes": [
         {
           "name": "Dan Sullivan",
@@ -82,8 +94,8 @@
         },
         {
           "name": "Mary Peltola",
-          "current_pct": 61.0,
-          "change_pp": 4.5,
+          "current_pct": 61.5,
+          "change_pp": 5.0,
           "direction": "up",
           "since_date": "2026-08-22",
           "reference_pct": 56.5,
@@ -94,8 +106,8 @@
       "prices": [
         {
           "name": "Mary Peltola",
-          "current_pct": 61.0,
-          "change_pp": 4.5,
+          "current_pct": 61.5,
+          "change_pp": 5.0,
           "direction": "up",
           "since_date": "2026-08-22",
           "reference_pct": 56.5,
@@ -109,66 +121,6 @@
           "direction": "down",
           "since_date": "2026-08-22",
           "reference_pct": 43.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "national:SE:Riksdag:prime_minister",
-      "slug": "next-prime-minister-of-sweden",
-      "category": "national",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "SE",
-      "state_code": null,
-      "city_code": null,
-      "contest": "Riksdag",
-      "market_label": "Next Prime Minister",
-      "party": null,
-      "election_date": "2026-09-13",
-      "election_title": "Riksdag",
-      "max_change_pp": 4.0,
-      "changes": [
-        {
-          "name": "Ulf Kristersson",
-          "current_pct": 6.5,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-08-22",
-          "reference_pct": 10.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Magdalena Andersson",
-          "current_pct": 92.5,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-08-22",
-          "reference_pct": 88.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Magdalena Andersson",
-          "current_pct": 92.5,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-08-22",
-          "reference_pct": 88.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Ulf Kristersson",
-          "current_pct": 6.5,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-08-22",
-          "reference_pct": 10.5,
           "change_days": 2,
           "window": "2d"
         }
