@@ -5,34 +5,27 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
-    "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt": {
-      "Yes": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-08-23",
-        "reference_pct": 32.5,
-        "window": "2d"
-      },
-      "No": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-08-23",
-        "reference_pct": 67.5,
-        "window": "2d"
-      }
-    },
     "latvian-parliamentary-election-winner": {
       "AS": {
-        "change_pp": 7.05,
+        "change_pp": 9.4,
         "direction": "up",
         "reference_date": "2026-08-23",
         "reference_pct": 43.0,
         "window": "2d"
       }
     },
+    "next-prime-minister-of-sweden": {
+      "Magdalena Andersson": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-08-23",
+        "reference_pct": 92.5,
+        "window": "2d"
+      }
+    },
     "nigerian-presidential-election-winner-20260602162945585": {
       "Bola Tinubu": {
-        "change_pp": 4.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-23",
         "reference_pct": 66.5,
@@ -46,45 +39,47 @@
         "reference_date": "2026-08-23",
         "reference_pct": 50.5,
         "window": "2d"
+      }
+    },
+    "rhode-island-governor-democratic-primary-winner": {
+      "Helena Foulkes": {
+        "change_pp": 5.5,
+        "direction": "up",
+        "reference_date": "2026-08-23",
+        "reference_pct": 89.95,
+        "window": "2d"
       },
-      "Vivek Ramaswamy (R)": {
-        "change_pp": 4.0,
+      "Dan McKee": {
+        "change_pp": 4.05,
         "direction": "down",
         "reference_date": "2026-08-23",
-        "reference_pct": 49.5,
+        "reference_pct": 7.8,
         "window": "2d"
       }
     }
   },
   "by_market_id": {
-    "de-state:ST:AfD absolute majority": {
-      "Yes": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-08-23",
-        "reference_pct": 32.5,
-        "window": "2d"
-      },
-      "No": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-08-23",
-        "reference_pct": 67.5,
-        "window": "2d"
-      }
-    },
     "national:LV:Parliament:party_winner": {
       "AS": {
-        "change_pp": 7.05,
+        "change_pp": 9.4,
         "direction": "up",
         "reference_date": "2026-08-23",
         "reference_pct": 43.0,
         "window": "2d"
       }
     },
+    "national:SE:Riksdag:prime_minister": {
+      "Magdalena Andersson": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-08-23",
+        "reference_pct": 92.5,
+        "window": "2d"
+      }
+    },
     "presidential:NG": {
       "Bola Tinubu": {
-        "change_pp": 4.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-08-23",
         "reference_pct": 66.5,
@@ -98,12 +93,21 @@
         "reference_date": "2026-08-23",
         "reference_pct": 50.5,
         "window": "2d"
+      }
+    },
+    "us-primary:RI:Governor:Democratic": {
+      "Helena Foulkes": {
+        "change_pp": 5.5,
+        "direction": "up",
+        "reference_date": "2026-08-23",
+        "reference_pct": 89.95,
+        "window": "2d"
       },
-      "Vivek Ramaswamy (R)": {
-        "change_pp": 4.0,
+      "Dan McKee": {
+        "change_pp": 4.05,
         "direction": "down",
         "reference_date": "2026-08-23",
-        "reference_pct": 49.5,
+        "reference_pct": 7.8,
         "window": "2d"
       }
     }
