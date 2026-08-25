@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T16:59:17Z",
+  "generated_at": "2026-08-25T19:02:25Z",
   "source": "google_trends",
   "races": [
     {
@@ -12019,7 +12019,7 @@
         {
           "date": "2026-07-12",
           "values": {
-            "/g/11fjb43ny7": 5,
+            "/g/11fjb43ny7": 6,
             "/g/11bwn4snsq": 6
           }
         },
@@ -12027,7 +12027,7 @@
           "date": "2026-07-13",
           "values": {
             "/g/11fjb43ny7": 5,
-            "/g/11bwn4snsq": 3
+            "/g/11bwn4snsq": 4
           }
         },
         {
@@ -12188,7 +12188,7 @@
           "date": "2026-08-05",
           "values": {
             "/g/11fjb43ny7": 16,
-            "/g/11bwn4snsq": 11
+            "/g/11bwn4snsq": 12
           }
         },
         {
@@ -12202,7 +12202,7 @@
           "date": "2026-08-07",
           "values": {
             "/g/11fjb43ny7": 15,
-            "/g/11bwn4snsq": 14
+            "/g/11bwn4snsq": 15
           }
         },
         {
@@ -12229,13 +12229,13 @@
         {
           "date": "2026-08-11",
           "values": {
-            "/g/11fjb43ny7": 96,
+            "/g/11fjb43ny7": 98,
             "/g/11bwn4snsq": 100
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-25T13:15:00Z"
+      "fetched_at": "2026-08-25T19:02:25Z"
     },
     {
       "id": "mn-gop-governor-primary-2026",
@@ -13736,7 +13736,7 @@
           "date": "2026-07-08",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 0,
+            "/g/11rts0yhzk": 32,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13828,7 +13828,7 @@
             "/m/0pc0ws0": 0,
             "/g/11rts0yhzk": 0,
             "/g/11r9754z1v": 0,
-            "/g/11c0w0gml3": 38
+            "/g/11c0w0gml3": 0
           }
         },
         {
@@ -13862,7 +13862,7 @@
           "date": "2026-07-22",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 44,
+            "/g/11rts0yhzk": 47,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13880,7 +13880,7 @@
           "date": "2026-07-24",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 54,
+            "/g/11rts0yhzk": 55,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13908,7 +13908,7 @@
           "values": {
             "/m/0pc0ws0": 0,
             "/g/11rts0yhzk": 0,
-            "/g/11r9754z1v": 0,
+            "/g/11r9754z1v": 32,
             "/g/11c0w0gml3": 0
           }
         },
@@ -13943,7 +13943,7 @@
           "date": "2026-07-31",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 48,
+            "/g/11rts0yhzk": 0,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13986,7 +13986,7 @@
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-25T10:53:31Z"
+      "fetched_at": "2026-08-25T19:01:52Z"
     },
     {
       "id": "ok-gop-governor-primary-runoff-2026",
