@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T13:26:33Z",
+  "generated_at": "2026-08-26T15:55:17Z",
   "source": "google_trends",
   "races": [
     {
@@ -11327,7 +11327,7 @@
           "date": "2026-07-27",
           "values": {
             "/g/11c1pmpn3f": 0,
-            "/g/11g715qngv": 0
+            "/g/11g715qngv": 25
           }
         },
         {
@@ -11354,14 +11354,14 @@
         {
           "date": "2026-07-31",
           "values": {
-            "/g/11c1pmpn3f": 22,
-            "/g/11g715qngv": 0
+            "/g/11c1pmpn3f": 24,
+            "/g/11g715qngv": 26
           }
         },
         {
           "date": "2026-08-01",
           "values": {
-            "/g/11c1pmpn3f": 21,
+            "/g/11c1pmpn3f": 23,
             "/g/11g715qngv": 0
           }
         },
@@ -11375,7 +11375,7 @@
         {
           "date": "2026-08-03",
           "values": {
-            "/g/11c1pmpn3f": 25,
+            "/g/11c1pmpn3f": 18,
             "/g/11g715qngv": 0
           }
         },
@@ -11383,12 +11383,12 @@
           "date": "2026-08-04",
           "values": {
             "/g/11c1pmpn3f": 100,
-            "/g/11g715qngv": 62
+            "/g/11g715qngv": 66
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-26T07:12:26Z"
+      "fetched_at": "2026-08-26T15:54:52Z"
     },
     {
       "id": "wi-dem-governor-primary-2026",
@@ -13862,7 +13862,7 @@
           "date": "2026-07-22",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 54,
+            "/g/11rts0yhzk": 61,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13880,7 +13880,7 @@
           "date": "2026-07-24",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 67,
+            "/g/11rts0yhzk": 81,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13889,7 +13889,7 @@
           "date": "2026-07-25",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 37,
+            "/g/11rts0yhzk": 0,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13900,7 +13900,7 @@
             "/m/0pc0ws0": 0,
             "/g/11rts0yhzk": 0,
             "/g/11r9754z1v": 0,
-            "/g/11c0w0gml3": 48
+            "/g/11c0w0gml3": 0
           }
         },
         {
@@ -13908,7 +13908,7 @@
           "values": {
             "/m/0pc0ws0": 0,
             "/g/11rts0yhzk": 0,
-            "/g/11r9754z1v": 36,
+            "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
         },
@@ -13916,7 +13916,7 @@
           "date": "2026-07-28",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 40,
+            "/g/11rts0yhzk": 0,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13925,7 +13925,7 @@
           "date": "2026-07-29",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 0,
+            "/g/11rts0yhzk": 37,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13943,7 +13943,7 @@
           "date": "2026-07-31",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 46,
+            "/g/11rts0yhzk": 39,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
           }
@@ -13969,7 +13969,7 @@
         {
           "date": "2026-08-03",
           "values": {
-            "/m/0pc0ws0": 0,
+            "/m/0pc0ws0": 32,
             "/g/11rts0yhzk": 0,
             "/g/11r9754z1v": 0,
             "/g/11c0w0gml3": 0
@@ -13979,14 +13979,14 @@
           "date": "2026-08-04",
           "values": {
             "/m/0pc0ws0": 0,
-            "/g/11rts0yhzk": 33,
-            "/g/11r9754z1v": 44,
+            "/g/11rts0yhzk": 32,
+            "/g/11r9754z1v": 42,
             "/g/11c0w0gml3": 0
           }
         }
       ],
       "watchlist": true,
-      "fetched_at": "2026-08-26T09:05:45Z"
+      "fetched_at": "2026-08-26T15:55:17Z"
     },
     {
       "id": "ok-gop-governor-primary-runoff-2026",
