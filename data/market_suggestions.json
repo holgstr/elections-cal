@@ -20,12 +20,12 @@
       "party": null,
       "election_date": "2026-09-06",
       "election_title": "Landtag",
-      "max_change_pp": 5.0,
+      "max_change_pp": 13.0,
       "changes": [
         {
           "name": "Yes",
-          "current_pct": 32.5,
-          "change_pp": 5.0,
+          "current_pct": 24.5,
+          "change_pp": 13.0,
           "direction": "down",
           "since_date": "2026-08-24",
           "reference_pct": 37.5,
@@ -34,8 +34,8 @@
         },
         {
           "name": "No",
-          "current_pct": 67.5,
-          "change_pp": 5.0,
+          "current_pct": 75.5,
+          "change_pp": 13.0,
           "direction": "up",
           "since_date": "2026-08-24",
           "reference_pct": 62.5,
@@ -46,8 +46,8 @@
       "prices": [
         {
           "name": "No",
-          "current_pct": 67.5,
-          "change_pp": 5.0,
+          "current_pct": 75.5,
+          "change_pp": 13.0,
           "direction": "up",
           "since_date": "2026-08-24",
           "reference_pct": 62.5,
@@ -56,13 +56,101 @@
         },
         {
           "name": "Yes",
-          "current_pct": 32.5,
-          "change_pp": 5.0,
+          "current_pct": 24.5,
+          "change_pp": 13.0,
           "direction": "down",
           "since_date": "2026-08-24",
           "reference_pct": 37.5,
           "change_days": 2,
           "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "presidential:NG",
+      "slug": "nigerian-presidential-election-winner-20260602162945585",
+      "category": "presidential",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "NG",
+      "state_code": null,
+      "city_code": null,
+      "contest": "President",
+      "market_label": "Presidential election",
+      "party": null,
+      "election_date": "2027-01-16",
+      "election_title": "General",
+      "max_change_pp": 6.5,
+      "changes": [
+        {
+          "name": "Bola Tinubu",
+          "current_pct": 76.0,
+          "change_pp": 6.5,
+          "direction": "up",
+          "since_date": "2026-08-24",
+          "reference_pct": 69.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Bola Tinubu",
+          "current_pct": 76.0,
+          "change_pp": 6.5,
+          "direction": "up",
+          "since_date": "2026-08-24",
+          "reference_pct": 69.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Peter Obi",
+          "current_pct": 20.5
+        }
+      ]
+    },
+    {
+      "market_id": "us-primary:RI:Governor:Republican",
+      "slug": "rhode-island-governor-republican-primary-winner",
+      "category": "us_primary",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "RI",
+      "city_code": null,
+      "contest": "Republican Governor Primary",
+      "market_label": "Republican Governor Primary",
+      "party": "Republican",
+      "election_date": "2026-09-09",
+      "election_title": "Democratic Governor Primary",
+      "max_change_pp": 4.5,
+      "changes": [
+        {
+          "name": "Elaine Pelino",
+          "current_pct": 86.5,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-08-24",
+          "reference_pct": 91.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Elaine Pelino",
+          "current_pct": 86.5,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-08-24",
+          "reference_pct": 91.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Aaron Guckian",
+          "current_pct": 13.15
         }
       ]
     },
