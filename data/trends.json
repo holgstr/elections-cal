@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T13:38:22Z",
+  "generated_at": "2026-08-27T13:39:20Z",
   "source": "google_trends",
   "races": [
     {
@@ -1055,7 +1055,22 @@
             "Richard Tabor": 89
           }
         }
-      ]
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-06-03",
+        "source": "Associated Press / NBC News",
+        "candidates": [
+          {
+            "label": "Murphy",
+            "pct": 33.4
+          },
+          {
+            "label": "Tabor",
+            "pct": 29.2
+          }
+        ]
+      }
     },
     {
       "id": "ga-gop-governor-primary-runoff-2026",
@@ -5632,7 +5647,22 @@
             "Ben Midgley": 74
           }
         }
-      ]
+      ],
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-06-20",
+        "source": "Maine Secretary of State (RCV final)",
+        "candidates": [
+          {
+            "label": "Charles",
+            "pct": 60.3
+          },
+          {
+            "label": "Midgley",
+            "pct": 39.8
+          }
+        ]
+      }
     },
     {
       "id": "il-gop-governor-primary-2026",
