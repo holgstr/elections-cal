@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T09:57:58Z",
+  "generated_at": "2026-08-27T13:38:22Z",
   "source": "google_trends",
   "races": [
     {
@@ -9505,10 +9505,10 @@
         },
         {
           "keyword": "/g/11b6qd3511",
-          "label": "Galán-Woods",
+          "label": "Gal\u00e1n-Woods",
           "query_mode": "entity",
           "resolve_source": "config",
-          "name": "Marlene Galán-Woods",
+          "name": "Marlene Gal\u00e1n-Woods",
           "mid": "/g/11b6qd3511",
           "topic_title": "Marlene Galan Woods",
           "topic_type": "Politician"
@@ -9784,7 +9784,7 @@
             "pct": 39.5
           },
           {
-            "label": "Galán-Woods",
+            "label": "Gal\u00e1n-Woods",
             "pct": 34.3
           },
           {
@@ -11143,7 +11143,7 @@
       "state_code": "KS",
       "geo": "US-KS",
       "window_days": 30,
-      "window_mode": "trailing",
+      "window_mode": "election",
       "start_date": "2026-07-05",
       "end_date": "2026-08-04",
       "candidates": [
@@ -11387,8 +11387,22 @@
           }
         }
       ],
-      "watchlist": true,
-      "fetched_at": "2026-08-26T23:42:44Z"
+      "fetched_at": "2026-08-26T23:42:44Z",
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-08-05",
+        "source": "Associated Press / NBC News / Decision Desk HQ",
+        "candidates": [
+          {
+            "label": "Holscher",
+            "pct": 48.6
+          },
+          {
+            "label": "Corson",
+            "pct": 38.9
+          }
+        ]
+      }
     },
     {
       "id": "wi-dem-governor-primary-2026",
@@ -11398,7 +11412,7 @@
       "state_code": "WI",
       "geo": "US-WI",
       "window_days": 30,
-      "window_mode": "trailing",
+      "window_mode": "election",
       "start_date": "2026-07-12",
       "end_date": "2026-08-11",
       "candidates": [
@@ -11683,8 +11697,26 @@
           }
         }
       ],
-      "watchlist": true,
-      "fetched_at": "2026-08-26T20:09:56Z"
+      "fetched_at": "2026-08-26T20:09:56Z",
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-08-12",
+        "source": "Associated Press / NBC News",
+        "candidates": [
+          {
+            "label": "Crowley",
+            "pct": 39.8
+          },
+          {
+            "label": "Hong",
+            "pct": 39.4
+          },
+          {
+            "label": "Barnes",
+            "pct": 4.1
+          }
+        ]
+      }
     },
     {
       "id": "sc-special-gop-senate-primary-2026",
@@ -11694,7 +11726,7 @@
       "state_code": "SC",
       "geo": "US-SC",
       "window_days": 30,
-      "window_mode": "trailing",
+      "window_mode": "election",
       "start_date": "2026-07-12",
       "end_date": "2026-08-11",
       "candidates": [
@@ -11979,8 +12011,26 @@
           }
         }
       ],
-      "watchlist": true,
-      "fetched_at": "2026-08-26T23:42:23Z"
+      "fetched_at": "2026-08-26T23:42:23Z",
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-08-12",
+        "source": "Associated Press / NBC News / Decision Desk HQ",
+        "candidates": [
+          {
+            "label": "Graham",
+            "pct": 32.7
+          },
+          {
+            "label": "Norman",
+            "pct": 24.6
+          },
+          {
+            "label": "Fry",
+            "pct": 19.7
+          }
+        ]
+      }
     },
     {
       "id": "mn-dem-senate-primary-2026",
@@ -11990,7 +12040,7 @@
       "state_code": "MN",
       "geo": "US-MN",
       "window_days": 30,
-      "window_mode": "trailing",
+      "window_mode": "election",
       "start_date": "2026-07-12",
       "end_date": "2026-08-11",
       "candidates": [
@@ -12234,8 +12284,22 @@
           }
         }
       ],
-      "watchlist": true,
-      "fetched_at": "2026-08-27T09:57:58Z"
+      "fetched_at": "2026-08-27T09:57:58Z",
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-08-17",
+        "source": "Minnesota Secretary of State",
+        "candidates": [
+          {
+            "label": "Flanagan",
+            "pct": 59.0
+          },
+          {
+            "label": "Craig",
+            "pct": 39.4
+          }
+        ]
+      }
     },
     {
       "id": "mn-gop-governor-primary-2026",
@@ -12245,7 +12309,7 @@
       "state_code": "MN",
       "geo": "US-MN",
       "window_days": 30,
-      "window_mode": "trailing",
+      "window_mode": "election",
       "start_date": "2026-07-12",
       "end_date": "2026-08-11",
       "candidates": [
@@ -12489,8 +12553,22 @@
           }
         }
       ],
-      "watchlist": true,
-      "fetched_at": "2026-08-26T18:06:00Z"
+      "fetched_at": "2026-08-26T18:06:00Z",
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-08-19",
+        "source": "Minnesota Secretary of State",
+        "candidates": [
+          {
+            "label": "Demuth",
+            "pct": 43.4
+          },
+          {
+            "label": "Lindell",
+            "pct": 32.5
+          }
+        ]
+      }
     },
     {
       "id": "nj-governor-2025",
@@ -13659,7 +13737,7 @@
       "state_code": "WA",
       "geo": "US-WA",
       "window_days": 30,
-      "window_mode": "trailing",
+      "window_mode": "election",
       "start_date": "2026-07-05",
       "end_date": "2026-08-04",
       "candidates": [
@@ -13985,8 +14063,30 @@
           }
         }
       ],
-      "watchlist": true,
-      "fetched_at": "2026-08-27T09:57:38Z"
+      "fetched_at": "2026-08-27T09:57:38Z",
+      "result": {
+        "status": "official",
+        "as_of": "2026-08-18",
+        "source": "Washington Secretary of State",
+        "candidates": [
+          {
+            "label": "Braun",
+            "pct": 39.7
+          },
+          {
+            "label": "Perez",
+            "pct": 36.4
+          },
+          {
+            "label": "Hennrich",
+            "pct": 16.7
+          },
+          {
+            "label": "Roco",
+            "pct": 1.9
+          }
+        ]
+      }
     },
     {
       "id": "ok-gop-governor-primary-runoff-2026",
@@ -13996,7 +14096,7 @@
       "state_code": "OK",
       "geo": "US-OK",
       "window_days": 30,
-      "window_mode": "trailing",
+      "window_mode": "election",
       "start_date": "2026-07-26",
       "end_date": "2026-08-25",
       "candidates": [
@@ -14240,8 +14340,22 @@
           }
         }
       ],
-      "watchlist": true,
-      "fetched_at": "2026-08-26T20:09:32Z"
+      "fetched_at": "2026-08-26T20:09:32Z",
+      "result": {
+        "status": "preliminary",
+        "as_of": "2026-08-26",
+        "source": "Associated Press / NBC News",
+        "candidates": [
+          {
+            "label": "Mazzei",
+            "pct": 50.3
+          },
+          {
+            "label": "Drummond",
+            "pct": 49.7
+          }
+        ]
+      }
     }
   ]
 }
