@@ -368,6 +368,22 @@
     "source": "aggregated"
   },
   {
+    "date": "2026-09-20",
+    "date_precision": "exact",
+    "country": "Russia",
+    "country_code": "RU",
+    "title": "State Duma",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "brics"
+    ],
+    "offices": [
+      "State Duma"
+    ],
+    "source": "curated"
+  },
+  {
     "date": "2026-09-23",
     "date_precision": "exact",
     "country": "Morocco",
@@ -432,6 +448,13 @@
         "level": "federal",
         "offices": [
           "House of Representatives"
+        ]
+      },
+      {
+        "label": "Presidency",
+        "level": "federal",
+        "offices": [
+          "Presidency"
         ]
       },
       {
@@ -964,6 +987,37 @@
     "source": "curated"
   },
   {
+    "date": "2026-12-22",
+    "date_precision": "exact",
+    "country": "South Sudan",
+    "country_code": "SS",
+    "state": null,
+    "state_code": null,
+    "title": "General",
+    "type": "combined",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "sections": [
+      {
+        "label": "National Legislature",
+        "level": "federal",
+        "offices": [
+          "National Legislature"
+        ]
+      },
+      {
+        "label": "President",
+        "level": "federal",
+        "offices": [
+          "President"
+        ]
+      }
+    ],
+    "source": "aggregated"
+  },
+  {
     "date": "2027-01-16",
     "date_precision": "exact",
     "country": "Nigeria",
@@ -995,6 +1049,37 @@
     "source": "aggregated"
   },
   {
+    "date": "2027-02-28",
+    "date_precision": "exact",
+    "country": "El Salvador",
+    "country_code": "SV",
+    "state": null,
+    "state_code": null,
+    "title": "General",
+    "type": "combined",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "sections": [
+      {
+        "label": "Legislative Assembly",
+        "level": "federal",
+        "offices": [
+          "Legislative Assembly"
+        ]
+      },
+      {
+        "label": "President",
+        "level": "federal",
+        "offices": [
+          "President"
+        ]
+      }
+    ],
+    "source": "aggregated"
+  },
+  {
     "date": "2027-03-07",
     "date_precision": "exact",
     "country": "Estonia",
@@ -1007,6 +1092,22 @@
     ],
     "offices": [
       "Riigikogu"
+    ],
+    "source": "curated"
+  },
+  {
+    "date": "2027-03-15",
+    "date_precision": "estimated",
+    "country": "Cameroon",
+    "country_code": "CM",
+    "title": "National Assembly",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "Parliament"
     ],
     "source": "curated"
   },
@@ -1148,6 +1249,37 @@
     "source": "curated"
   },
   {
+    "date": "2027-06-27",
+    "date_precision": "exact",
+    "country": "Guatemala",
+    "country_code": "GT",
+    "state": null,
+    "state_code": null,
+    "title": "General",
+    "type": "combined",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "sections": [
+      {
+        "label": "Congress",
+        "level": "federal",
+        "offices": [
+          "Congress"
+        ]
+      },
+      {
+        "label": "President — Round 1",
+        "level": "federal",
+        "offices": [
+          "President"
+        ]
+      }
+    ],
+    "source": "aggregated"
+  },
+  {
     "date": "2027-07-01",
     "date_precision": "estimated",
     "country": "Greece",
@@ -1157,6 +1289,76 @@
     "level": "federal",
     "groups": [
       "oecd"
+    ],
+    "offices": [
+      "Parliament"
+    ],
+    "source": "curated"
+  },
+  {
+    "date": "2027-08-10",
+    "date_precision": "exact",
+    "country": "Kenya",
+    "country_code": "KE",
+    "state": null,
+    "state_code": null,
+    "title": "General",
+    "type": "combined",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "sections": [
+      {
+        "label": "National Assembly",
+        "level": "federal",
+        "offices": [
+          "National Assembly"
+        ]
+      },
+      {
+        "label": "President",
+        "level": "federal",
+        "offices": [
+          "President"
+        ]
+      },
+      {
+        "label": "Senate",
+        "level": "federal",
+        "offices": [
+          "Senate"
+        ]
+      }
+    ],
+    "source": "aggregated"
+  },
+  {
+    "date": "2027-08-22",
+    "date_precision": "estimated",
+    "country": "Guatemala",
+    "country_code": "GT",
+    "title": "President — Round 2",
+    "type": "presidential",
+    "level": "federal",
+    "groups": [
+      "major"
+    ],
+    "offices": [
+      "President"
+    ],
+    "source": "curated"
+  },
+  {
+    "date": "2027-08-24",
+    "date_precision": "exact",
+    "country": "Angola",
+    "country_code": "AO",
+    "title": "National Assembly",
+    "type": "legislative",
+    "level": "federal",
+    "groups": [
+      "major"
     ],
     "offices": [
       "Parliament"
