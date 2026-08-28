@@ -5,6 +5,22 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
+    "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt": {
+      "Yes": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-08-26",
+        "reference_pct": 24.5,
+        "window": "2d"
+      },
+      "No": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 75.5,
+        "window": "2d"
+      }
+    },
     "who-will-be-the-next-prime-minister-of-israel-after-the-next-election": {
       "Gadi Eizenkot": {
         "change_pp": 4.0,
@@ -16,14 +32,21 @@
     },
     "latvian-parliamentary-election-winner": {
       "AS": {
-        "change_pp": 15.0,
+        "change_pp": 15.8,
         "direction": "up",
         "reference_date": "2026-08-26",
         "reference_pct": 53.1,
         "window": "2d"
       },
+      "LPV": {
+        "change_pp": 10.5,
+        "direction": "down",
+        "reference_date": "2026-08-26",
+        "reference_pct": 17.0,
+        "window": "2d"
+      },
       "SV": {
-        "change_pp": 12.8,
+        "change_pp": 13.2,
         "direction": "down",
         "reference_date": "2026-08-26",
         "reference_pct": 25.0,
@@ -37,13 +60,6 @@
         "reference_date": "2026-08-26",
         "reference_pct": 10.5,
         "window": "2d"
-      },
-      "Magdalena Andersson": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-08-26",
-        "reference_pct": 88.5,
-        "window": "2d"
       }
     },
     "brazil-presidential-election": {
@@ -55,17 +71,99 @@
         "window": "2d"
       }
     },
-    "new-hampshire-democratic-senate-primary-winner": {
-      "Chris Pappas": {
+    "alaska-governor-election-winner": {
+      "Treg Taylor": {
+        "change_pp": 7.1,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 2.8,
+        "window": "2d"
+      },
+      "Tom Begich": {
+        "change_pp": 13.5,
+        "direction": "down",
+        "reference_date": "2026-08-26",
+        "reference_pct": 18.0,
+        "window": "2d"
+      },
+      "Jonathan Kreiss-Tomkins": {
+        "change_pp": 11.25,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 31.45,
+        "window": "2d"
+      }
+    },
+    "rhode-island-governor-winner-2026": {
+      "Independent": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 1.55,
+        "window": "2d"
+      }
+    },
+    "texas-governor-winner-2026": {
+      "Gina Hinojosa (D)": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 13.0,
+        "window": "2d"
+      }
+    },
+    "alaska-senate-election-winner": {
+      "Sen. Dan Sullivan": {
         "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-26",
-        "reference_pct": 96.7,
+        "reference_pct": 38.5,
+        "window": "2d"
+      },
+      "Mary Peltola": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 61.5,
+        "window": "2d"
+      }
+    },
+    "montana-senate-election-winner": {
+      "Independent": {
+        "change_pp": 4.45,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 4.3,
+        "window": "2d"
+      }
+    },
+    "south-dakota-senate-election-winner": {
+      "Brian Bengs (I)": {
+        "change_pp": 4.65,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 0.55,
         "window": "2d"
       }
     }
   },
   "by_market_id": {
+    "de-state:ST:AfD absolute majority": {
+      "Yes": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-08-26",
+        "reference_pct": 24.5,
+        "window": "2d"
+      },
+      "No": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 75.5,
+        "window": "2d"
+      }
+    },
     "national:IL:Knesset:prime_minister": {
       "Gadi Eizenkot": {
         "change_pp": 4.0,
@@ -77,14 +175,21 @@
     },
     "national:LV:Parliament:party_winner": {
       "AS": {
-        "change_pp": 15.0,
+        "change_pp": 15.8,
         "direction": "up",
         "reference_date": "2026-08-26",
         "reference_pct": 53.1,
         "window": "2d"
       },
+      "LPV": {
+        "change_pp": 10.5,
+        "direction": "down",
+        "reference_date": "2026-08-26",
+        "reference_pct": 17.0,
+        "window": "2d"
+      },
       "SV": {
-        "change_pp": 12.8,
+        "change_pp": 13.2,
         "direction": "down",
         "reference_date": "2026-08-26",
         "reference_pct": 25.0,
@@ -98,13 +203,6 @@
         "reference_date": "2026-08-26",
         "reference_pct": 10.5,
         "window": "2d"
-      },
-      "Magdalena Andersson": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-08-26",
-        "reference_pct": 88.5,
-        "window": "2d"
       }
     },
     "presidential:BR": {
@@ -116,12 +214,78 @@
         "window": "2d"
       }
     },
-    "us-primary:NH:Senate:Democratic": {
-      "Chris Pappas": {
+    "us-governor:AK": {
+      "Treg Taylor": {
+        "change_pp": 7.1,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 2.8,
+        "window": "2d"
+      },
+      "Tom Begich": {
+        "change_pp": 13.5,
+        "direction": "down",
+        "reference_date": "2026-08-26",
+        "reference_pct": 18.0,
+        "window": "2d"
+      },
+      "Jonathan Kreiss-Tomkins": {
+        "change_pp": 11.25,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 31.45,
+        "window": "2d"
+      }
+    },
+    "us-governor:RI": {
+      "Independent": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 1.55,
+        "window": "2d"
+      }
+    },
+    "us-governor:TX": {
+      "Gina Hinojosa (D)": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 13.0,
+        "window": "2d"
+      }
+    },
+    "us-senate:AK": {
+      "Sen. Dan Sullivan": {
         "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-26",
-        "reference_pct": 96.7,
+        "reference_pct": 38.5,
+        "window": "2d"
+      },
+      "Mary Peltola": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 61.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:MT": {
+      "Independent": {
+        "change_pp": 4.45,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 4.3,
+        "window": "2d"
+      }
+    },
+    "us-senate:SD": {
+      "Brian Bengs (I)": {
+        "change_pp": 4.65,
+        "direction": "up",
+        "reference_date": "2026-08-26",
+        "reference_pct": 0.55,
         "window": "2d"
       }
     }
