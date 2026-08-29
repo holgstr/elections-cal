@@ -7,14 +7,14 @@
   "by_slug": {
     "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt": {
       "Yes": {
-        "change_pp": 9.5,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-08-27",
         "reference_pct": 26.0,
         "window": "2d"
       },
       "No": {
-        "change_pp": 9.5,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-08-27",
         "reference_pct": 74.0,
@@ -23,7 +23,7 @@
     },
     "who-will-be-the-next-prime-minister-of-israel-after-the-next-election": {
       "Benjamin Netanyahu": {
-        "change_pp": 5.5,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-08-27",
         "reference_pct": 28.0,
@@ -32,7 +32,7 @@
     },
     "latvian-parliamentary-election-winner": {
       "AS": {
-        "change_pp": 6.4,
+        "change_pp": 8.35,
         "direction": "up",
         "reference_date": "2026-08-27",
         "reference_pct": 65.9,
@@ -41,41 +41,55 @@
     },
     "brazil-presidential-election": {
       "Luiz Inácio Lula da Silva": {
-        "change_pp": 4.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-08-27",
         "reference_pct": 61.5,
+        "window": "2d"
+      },
+      "Flávio Bolsonaro": {
+        "change_pp": 5.1,
+        "direction": "up",
+        "reference_date": "2026-08-27",
+        "reference_pct": 34.95,
         "window": "2d"
       }
     },
     "alaska-governor-election-winner": {
       "Tom Begich": {
-        "change_pp": 16.05,
+        "change_pp": 16.1,
         "direction": "down",
         "reference_date": "2026-08-27",
         "reference_pct": 17.5,
         "window": "2d"
       },
       "Jonathan Kreiss-Tomkins": {
-        "change_pp": 17.05,
+        "change_pp": 16.7,
         "direction": "up",
         "reference_date": "2026-08-27",
         "reference_pct": 31.45,
         "window": "2d"
       }
     },
-    "alabama-governor-winner-2026": {
-      "Democrat": {
-        "change_pp": 4.1,
+    "alaska-senate-election-winner": {
+      "Sen. Dan Sullivan": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-08-27",
+        "reference_pct": 39.0,
+        "window": "2d"
+      },
+      "Mary Peltola": {
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-08-27",
-        "reference_pct": 5.9,
+        "reference_pct": 61.5,
         "window": "2d"
       }
     },
     "south-dakota-senate-election-winner": {
       "Brian Bengs (I)": {
-        "change_pp": 4.9,
+        "change_pp": 5.05,
         "direction": "up",
         "reference_date": "2026-08-27",
         "reference_pct": 0.55,
@@ -86,14 +100,14 @@
   "by_market_id": {
     "de-state:ST:AfD absolute majority": {
       "Yes": {
-        "change_pp": 9.5,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-08-27",
         "reference_pct": 26.0,
         "window": "2d"
       },
       "No": {
-        "change_pp": 9.5,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-08-27",
         "reference_pct": 74.0,
@@ -102,7 +116,7 @@
     },
     "national:IL:Knesset:prime_minister": {
       "Benjamin Netanyahu": {
-        "change_pp": 5.5,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-08-27",
         "reference_pct": 28.0,
@@ -111,7 +125,7 @@
     },
     "national:LV:Parliament:party_winner": {
       "AS": {
-        "change_pp": 6.4,
+        "change_pp": 8.35,
         "direction": "up",
         "reference_date": "2026-08-27",
         "reference_pct": 65.9,
@@ -120,41 +134,55 @@
     },
     "presidential:BR": {
       "Luiz Inácio Lula da Silva": {
-        "change_pp": 4.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-08-27",
         "reference_pct": 61.5,
+        "window": "2d"
+      },
+      "Flávio Bolsonaro": {
+        "change_pp": 5.1,
+        "direction": "up",
+        "reference_date": "2026-08-27",
+        "reference_pct": 34.95,
         "window": "2d"
       }
     },
     "us-governor:AK": {
       "Tom Begich": {
-        "change_pp": 16.05,
+        "change_pp": 16.1,
         "direction": "down",
         "reference_date": "2026-08-27",
         "reference_pct": 17.5,
         "window": "2d"
       },
       "Jonathan Kreiss-Tomkins": {
-        "change_pp": 17.05,
+        "change_pp": 16.7,
         "direction": "up",
         "reference_date": "2026-08-27",
         "reference_pct": 31.45,
         "window": "2d"
       }
     },
-    "us-governor:AL": {
-      "Democrat": {
-        "change_pp": 4.1,
+    "us-senate:AK": {
+      "Sen. Dan Sullivan": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-08-27",
+        "reference_pct": 39.0,
+        "window": "2d"
+      },
+      "Mary Peltola": {
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-08-27",
-        "reference_pct": 5.9,
+        "reference_pct": 61.5,
         "window": "2d"
       }
     },
     "us-senate:SD": {
       "Brian Bengs (I)": {
-        "change_pp": 4.9,
+        "change_pp": 5.05,
         "direction": "up",
         "reference_date": "2026-08-27",
         "reference_pct": 0.55,

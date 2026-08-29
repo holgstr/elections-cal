@@ -20,12 +20,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 17.05,
+      "max_change_pp": 16.7,
       "changes": [
         {
           "name": "Jonathan Kreiss-Tomkins",
-          "current_pct": 48.5,
-          "change_pp": 17.05,
+          "current_pct": 48.15,
+          "change_pp": 16.7,
           "direction": "up",
           "since_date": "2026-08-27",
           "reference_pct": 31.45,
@@ -36,8 +36,8 @@
       "prices": [
         {
           "name": "Jonathan Kreiss-Tomkins",
-          "current_pct": 48.5,
-          "change_pp": 17.05,
+          "current_pct": 48.15,
+          "change_pp": 16.7,
           "direction": "up",
           "since_date": "2026-08-27",
           "reference_pct": 31.45,
@@ -50,11 +50,11 @@
         },
         {
           "name": "David Bronson",
-          "current_pct": 10.7
+          "current_pct": 10.5
         },
         {
-          "name": "Click Bishop",
-          "current_pct": 3.2
+          "name": "Treg Taylor",
+          "current_pct": 3.45
         }
       ]
     },
@@ -72,12 +72,12 @@
       "party": null,
       "election_date": "2026-09-06",
       "election_title": "Landtag",
-      "max_change_pp": 9.5,
+      "max_change_pp": 8.5,
       "changes": [
         {
           "name": "Yes",
-          "current_pct": 16.5,
-          "change_pp": 9.5,
+          "current_pct": 17.5,
+          "change_pp": 8.5,
           "direction": "down",
           "since_date": "2026-08-27",
           "reference_pct": 26.0,
@@ -86,8 +86,8 @@
         },
         {
           "name": "No",
-          "current_pct": 83.5,
-          "change_pp": 9.5,
+          "current_pct": 82.5,
+          "change_pp": 8.5,
           "direction": "up",
           "since_date": "2026-08-27",
           "reference_pct": 74.0,
@@ -98,8 +98,8 @@
       "prices": [
         {
           "name": "No",
-          "current_pct": 83.5,
-          "change_pp": 9.5,
+          "current_pct": 82.5,
+          "change_pp": 8.5,
           "direction": "up",
           "since_date": "2026-08-27",
           "reference_pct": 74.0,
@@ -108,8 +108,8 @@
         },
         {
           "name": "Yes",
-          "current_pct": 16.5,
-          "change_pp": 9.5,
+          "current_pct": 17.5,
+          "change_pp": 8.5,
           "direction": "down",
           "since_date": "2026-08-27",
           "reference_pct": 26.0,
@@ -132,12 +132,12 @@
       "party": null,
       "election_date": "2026-10-03",
       "election_title": "Parliament",
-      "max_change_pp": 6.4,
+      "max_change_pp": 8.35,
       "changes": [
         {
           "name": "AS",
-          "current_pct": 72.3,
-          "change_pp": 6.4,
+          "current_pct": 74.25,
+          "change_pp": 8.35,
           "direction": "up",
           "since_date": "2026-08-27",
           "reference_pct": 65.9,
@@ -148,8 +148,8 @@
       "prices": [
         {
           "name": "AS",
-          "current_pct": 72.3,
-          "change_pp": 6.4,
+          "current_pct": 74.25,
+          "change_pp": 8.35,
           "direction": "up",
           "since_date": "2026-08-27",
           "reference_pct": 65.9,
@@ -158,147 +158,7 @@
         },
         {
           "name": "SV",
-          "current_pct": 12.55
-        }
-      ]
-    },
-    {
-      "market_id": "national:IL:Knesset:prime_minister",
-      "slug": "who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
-      "category": "national",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "IL",
-      "state_code": null,
-      "city_code": null,
-      "contest": "Knesset",
-      "market_label": "Next Prime Minister",
-      "party": null,
-      "election_date": "2026-10-27",
-      "election_title": "Knesset",
-      "max_change_pp": 5.5,
-      "changes": [
-        {
-          "name": "Benjamin Netanyahu",
-          "current_pct": 33.5,
-          "change_pp": 5.5,
-          "direction": "up",
-          "since_date": "2026-08-27",
-          "reference_pct": 28.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Gadi Eizenkot",
-          "current_pct": 49.7
-        },
-        {
-          "name": "Benjamin Netanyahu",
-          "current_pct": 33.5,
-          "change_pp": 5.5,
-          "direction": "up",
-          "since_date": "2026-08-27",
-          "reference_pct": 28.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Naftali Bennett",
-          "current_pct": 7.5
-        },
-        {
-          "name": "Avigdor Lieberman",
-          "current_pct": 4.15
-        }
-      ]
-    },
-    {
-      "market_id": "us-senate:SD",
-      "slug": "south-dakota-senate-election-winner",
-      "category": "us_senate",
-      "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "SD",
-      "city_code": null,
-      "contest": "Senate",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
-      "max_change_pp": 4.9,
-      "changes": [
-        {
-          "name": "Brian Bengs (I)",
-          "current_pct": 5.45,
-          "change_pp": 4.9,
-          "direction": "up",
-          "since_date": "2026-08-27",
-          "reference_pct": 0.55,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Mike Rounds (R)",
-          "current_pct": 93.9
-        },
-        {
-          "name": "Brian Bengs (I)",
-          "current_pct": 5.45,
-          "change_pp": 4.9,
-          "direction": "up",
-          "since_date": "2026-08-27",
-          "reference_pct": 0.55,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "us-governor:AL",
-      "slug": "alabama-governor-winner-2026",
-      "category": "us_governor",
-      "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "AL",
-      "city_code": null,
-      "contest": "Governor",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
-      "max_change_pp": 4.1,
-      "changes": [
-        {
-          "name": "Democrat",
-          "current_pct": 10.0,
-          "change_pp": 4.1,
-          "direction": "up",
-          "since_date": "2026-08-27",
-          "reference_pct": 5.9,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Republican",
-          "current_pct": 90.15
-        },
-        {
-          "name": "Democrat",
-          "current_pct": 10.0,
-          "change_pp": 4.1,
-          "direction": "up",
-          "since_date": "2026-08-27",
-          "reference_pct": 5.9,
-          "change_days": 2,
-          "window": "2d"
+          "current_pct": 11.7
         }
       ]
     },
@@ -316,24 +176,12 @@
       "party": null,
       "election_date": "2026-10-04",
       "election_title": "General",
-      "max_change_pp": 4.0,
+      "max_change_pp": 6.0,
       "changes": [
         {
           "name": "Luiz Inácio Lula da Silva",
-          "current_pct": 57.5,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-08-27",
-          "reference_pct": 61.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Luiz Inácio Lula da Silva",
-          "current_pct": 57.5,
-          "change_pp": 4.0,
+          "current_pct": 55.5,
+          "change_pp": 6.0,
           "direction": "down",
           "since_date": "2026-08-27",
           "reference_pct": 61.5,
@@ -342,11 +190,195 @@
         },
         {
           "name": "Flávio Bolsonaro",
-          "current_pct": 37.75
+          "current_pct": 40.05,
+          "change_pp": 5.1,
+          "direction": "up",
+          "since_date": "2026-08-27",
+          "reference_pct": 34.95,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Luiz Inácio Lula da Silva",
+          "current_pct": 55.5,
+          "change_pp": 6.0,
+          "direction": "down",
+          "since_date": "2026-08-27",
+          "reference_pct": 61.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Flávio Bolsonaro",
+          "current_pct": 40.05,
+          "change_pp": 5.1,
+          "direction": "up",
+          "since_date": "2026-08-27",
+          "reference_pct": 34.95,
+          "change_days": 2,
+          "window": "2d"
         },
         {
           "name": "Augusto Cury",
-          "current_pct": 3.15
+          "current_pct": 3.25
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:SD",
+      "slug": "south-dakota-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "SD",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 5.05,
+      "changes": [
+        {
+          "name": "Brian Bengs (I)",
+          "current_pct": 5.6,
+          "change_pp": 5.05,
+          "direction": "up",
+          "since_date": "2026-08-27",
+          "reference_pct": 0.55,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Mike Rounds (R)",
+          "current_pct": 94.4
+        },
+        {
+          "name": "Brian Bengs (I)",
+          "current_pct": 5.6,
+          "change_pp": 5.05,
+          "direction": "up",
+          "since_date": "2026-08-27",
+          "reference_pct": 0.55,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:AK",
+      "slug": "alaska-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "AK",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.5,
+      "changes": [
+        {
+          "name": "Sen. Dan Sullivan",
+          "current_pct": 34.5,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-08-27",
+          "reference_pct": 39.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Mary Peltola",
+          "current_pct": 65.5,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-08-27",
+          "reference_pct": 61.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Mary Peltola",
+          "current_pct": 65.5,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-08-27",
+          "reference_pct": 61.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Sen. Dan Sullivan",
+          "current_pct": 34.5,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-08-27",
+          "reference_pct": 39.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "national:IL:Knesset:prime_minister",
+      "slug": "who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
+      "category": "national",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "IL",
+      "state_code": null,
+      "city_code": null,
+      "contest": "Knesset",
+      "market_label": "Next Prime Minister",
+      "party": null,
+      "election_date": "2026-10-27",
+      "election_title": "Knesset",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "Benjamin Netanyahu",
+          "current_pct": 32.0,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-08-27",
+          "reference_pct": 28.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Gadi Eizenkot",
+          "current_pct": 49.55
+        },
+        {
+          "name": "Benjamin Netanyahu",
+          "current_pct": 32.0,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-08-27",
+          "reference_pct": 28.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Naftali Bennett",
+          "current_pct": 7.5
+        },
+        {
+          "name": "Avigdor Lieberman",
+          "current_pct": 4.15
         }
       ]
     }
