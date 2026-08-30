@@ -5,18 +5,18 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
-    "latvian-parliamentary-election-winner": {
-      "AS": {
-        "change_pp": 6.0,
+    "berlin-state-election-winner": {
+      "Linke": {
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-08-28",
-        "reference_pct": 68.9,
+        "reference_pct": 57.5,
         "window": "2d"
       }
     },
     "brazil-presidential-election": {
       "Flávio Bolsonaro": {
-        "change_pp": 5.1,
+        "change_pp": 5.8,
         "direction": "up",
         "reference_date": "2026-08-28",
         "reference_pct": 35.65,
@@ -25,34 +25,59 @@
     },
     "alaska-governor-election-winner": {
       "Treg Taylor": {
-        "change_pp": 6.55,
+        "change_pp": 6.7,
         "direction": "down",
         "reference_date": "2026-08-28",
         "reference_pct": 9.9,
         "window": "2d"
       },
       "Jonathan Kreiss-Tomkins": {
-        "change_pp": 5.25,
+        "change_pp": 5.2,
         "direction": "up",
         "reference_date": "2026-08-28",
         "reference_pct": 42.7,
         "window": "2d"
       }
+    },
+    "rhode-island-governor-republican-primary-winner": {
+      "Aaron Guckian": {
+        "change_pp": 5.15,
+        "direction": "down",
+        "reference_date": "2026-08-28",
+        "reference_pct": 14.6,
+        "window": "2d"
+      },
+      "Elaine Pelino": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-08-28",
+        "reference_pct": 86.0,
+        "window": "2d"
+      }
+    },
+    "massachusetts-senate-election-winner": {
+      "Democrat": {
+        "change_pp": 4.25,
+        "direction": "down",
+        "reference_date": "2026-08-28",
+        "reference_pct": 97.55,
+        "window": "2d"
+      }
     }
   },
   "by_market_id": {
-    "national:LV:Parliament:party_winner": {
-      "AS": {
-        "change_pp": 6.0,
+    "de-state:BE": {
+      "Linke": {
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-08-28",
-        "reference_pct": 68.9,
+        "reference_pct": 57.5,
         "window": "2d"
       }
     },
     "presidential:BR": {
       "Flávio Bolsonaro": {
-        "change_pp": 5.1,
+        "change_pp": 5.8,
         "direction": "up",
         "reference_date": "2026-08-28",
         "reference_pct": 35.65,
@@ -61,17 +86,42 @@
     },
     "us-governor:AK": {
       "Treg Taylor": {
-        "change_pp": 6.55,
+        "change_pp": 6.7,
         "direction": "down",
         "reference_date": "2026-08-28",
         "reference_pct": 9.9,
         "window": "2d"
       },
       "Jonathan Kreiss-Tomkins": {
-        "change_pp": 5.25,
+        "change_pp": 5.2,
         "direction": "up",
         "reference_date": "2026-08-28",
         "reference_pct": 42.7,
+        "window": "2d"
+      }
+    },
+    "us-primary:RI:Governor:Republican": {
+      "Aaron Guckian": {
+        "change_pp": 5.15,
+        "direction": "down",
+        "reference_date": "2026-08-28",
+        "reference_pct": 14.6,
+        "window": "2d"
+      },
+      "Elaine Pelino": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-08-28",
+        "reference_pct": 86.0,
+        "window": "2d"
+      }
+    },
+    "us-senate:MA": {
+      "Democrat": {
+        "change_pp": 4.25,
+        "direction": "down",
+        "reference_date": "2026-08-28",
+        "reference_pct": 97.55,
         "window": "2d"
       }
     }
