@@ -7,6 +7,118 @@
   "markets_fetched": 96,
   "suggestions": [
     {
+      "market_id": "de-state:MV",
+      "slug": "mecklenburg-vorpommern-parliamentary-election-winner",
+      "category": "de_state",
+      "odds_format": "party",
+      "min_pct": 10,
+      "country_code": "DE",
+      "state_code": "MV",
+      "city_code": null,
+      "contest": "Landtag",
+      "market_label": "Landtag",
+      "party": null,
+      "election_date": "2026-09-20",
+      "election_title": "State",
+      "max_change_pp": 5.5,
+      "changes": [
+        {
+          "name": "AfD",
+          "current_pct": 85.5,
+          "change_pp": 5.5,
+          "direction": "down",
+          "since_date": "2026-08-29",
+          "reference_pct": 91.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "SPD",
+          "current_pct": 14.5,
+          "change_pp": 4.5,
+          "direction": "up",
+          "since_date": "2026-08-29",
+          "reference_pct": 10.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "AfD",
+          "current_pct": 85.5,
+          "change_pp": 5.5,
+          "direction": "down",
+          "since_date": "2026-08-29",
+          "reference_pct": 91.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "SPD",
+          "current_pct": 14.5,
+          "change_pp": 4.5,
+          "direction": "up",
+          "since_date": "2026-08-29",
+          "reference_pct": 10.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "national:IL:Knesset:prime_minister",
+      "slug": "who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
+      "category": "national",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "IL",
+      "state_code": null,
+      "city_code": null,
+      "contest": "Knesset",
+      "market_label": "Next Prime Minister",
+      "party": null,
+      "election_date": "2026-10-27",
+      "election_title": "Knesset",
+      "max_change_pp": 5.0,
+      "changes": [
+        {
+          "name": "Benjamin Netanyahu",
+          "current_pct": 27.0,
+          "change_pp": 5.0,
+          "direction": "down",
+          "since_date": "2026-08-29",
+          "reference_pct": 32.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Gadi Eizenkot",
+          "current_pct": 50.75
+        },
+        {
+          "name": "Benjamin Netanyahu",
+          "current_pct": 27.0,
+          "change_pp": 5.0,
+          "direction": "down",
+          "since_date": "2026-08-29",
+          "reference_pct": 32.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Naftali Bennett",
+          "current_pct": 6.5
+        },
+        {
+          "name": "Avigdor Lieberman",
+          "current_pct": 4.25
+        }
+      ]
+    },
+    {
       "market_id": "us-primary:RI:Governor:Republican",
       "slug": "rhode-island-governor-republican-primary-winner",
       "category": "us_primary",
@@ -20,12 +132,12 @@
       "party": "Republican",
       "election_date": "2026-09-09",
       "election_title": "Democratic Governor Primary",
-      "max_change_pp": 5.9,
+      "max_change_pp": 4.0,
       "changes": [
         {
           "name": "Aaron Guckian",
-          "current_pct": 8.8,
-          "change_pp": 5.9,
+          "current_pct": 10.7,
+          "change_pp": 4.0,
           "direction": "down",
           "since_date": "2026-08-29",
           "reference_pct": 14.7,
@@ -56,8 +168,8 @@
         },
         {
           "name": "Aaron Guckian",
-          "current_pct": 8.8,
-          "change_pp": 5.9,
+          "current_pct": 10.7,
+          "change_pp": 4.0,
           "direction": "down",
           "since_date": "2026-08-29",
           "reference_pct": 14.7,

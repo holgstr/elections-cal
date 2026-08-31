@@ -5,9 +5,34 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
+    "mecklenburg-vorpommern-parliamentary-election-winner": {
+      "AfD": {
+        "change_pp": 5.5,
+        "direction": "down",
+        "reference_date": "2026-08-29",
+        "reference_pct": 91.0,
+        "window": "2d"
+      },
+      "SPD": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-08-29",
+        "reference_pct": 10.0,
+        "window": "2d"
+      }
+    },
+    "who-will-be-the-next-prime-minister-of-israel-after-the-next-election": {
+      "Benjamin Netanyahu": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-08-29",
+        "reference_pct": 32.0,
+        "window": "2d"
+      }
+    },
     "rhode-island-governor-republican-primary-winner": {
       "Aaron Guckian": {
-        "change_pp": 5.9,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-29",
         "reference_pct": 14.7,
@@ -23,9 +48,34 @@
     }
   },
   "by_market_id": {
+    "de-state:MV": {
+      "AfD": {
+        "change_pp": 5.5,
+        "direction": "down",
+        "reference_date": "2026-08-29",
+        "reference_pct": 91.0,
+        "window": "2d"
+      },
+      "SPD": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-08-29",
+        "reference_pct": 10.0,
+        "window": "2d"
+      }
+    },
+    "national:IL:Knesset:prime_minister": {
+      "Benjamin Netanyahu": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-08-29",
+        "reference_pct": 32.0,
+        "window": "2d"
+      }
+    },
     "us-primary:RI:Governor:Republican": {
       "Aaron Guckian": {
-        "change_pp": 5.9,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-08-29",
         "reference_pct": 14.7,
