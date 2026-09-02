@@ -7,6 +7,126 @@
   "markets_fetched": 94,
   "suggestions": [
     {
+      "market_id": "de-state:BE",
+      "slug": "berlin-state-election-winner",
+      "category": "de_state",
+      "odds_format": "party",
+      "min_pct": 10,
+      "country_code": "DE",
+      "state_code": "BE",
+      "city_code": null,
+      "contest": "Abgeordnetenhaus",
+      "market_label": "Abgeordnetenhaus",
+      "party": null,
+      "election_date": "2026-09-20",
+      "election_title": "State",
+      "max_change_pp": 16.5,
+      "changes": [
+        {
+          "name": "CDU",
+          "current_pct": 43.5,
+          "change_pp": 15.0,
+          "direction": "up",
+          "since_date": "2026-08-31",
+          "reference_pct": 28.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Linke",
+          "current_pct": 42.5,
+          "change_pp": 16.5,
+          "direction": "down",
+          "since_date": "2026-08-31",
+          "reference_pct": 59.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "CDU",
+          "current_pct": 43.5,
+          "change_pp": 15.0,
+          "direction": "up",
+          "since_date": "2026-08-31",
+          "reference_pct": 28.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Linke",
+          "current_pct": 42.5,
+          "change_pp": 16.5,
+          "direction": "down",
+          "since_date": "2026-08-31",
+          "reference_pct": 59.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "de-state:ST:AfD absolute majority",
+      "slug": "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt",
+      "category": "de_state",
+      "odds_format": "binary",
+      "min_pct": 10,
+      "country_code": "DE",
+      "state_code": "ST",
+      "city_code": null,
+      "contest": "Landtag",
+      "market_label": "AfD absolute majority",
+      "party": null,
+      "election_date": "2026-09-06",
+      "election_title": "Landtag",
+      "max_change_pp": 11.0,
+      "changes": [
+        {
+          "name": "Yes",
+          "current_pct": 27.0,
+          "change_pp": 11.0,
+          "direction": "up",
+          "since_date": "2026-08-31",
+          "reference_pct": 16.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "No",
+          "current_pct": 73.0,
+          "change_pp": 11.0,
+          "direction": "down",
+          "since_date": "2026-08-31",
+          "reference_pct": 84.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "No",
+          "current_pct": 73.0,
+          "change_pp": 11.0,
+          "direction": "down",
+          "since_date": "2026-08-31",
+          "reference_pct": 84.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Yes",
+          "current_pct": 27.0,
+          "change_pp": 11.0,
+          "direction": "up",
+          "since_date": "2026-08-31",
+          "reference_pct": 16.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
       "market_id": "us-governor:AK",
       "slug": "alaska-governor-election-winner",
       "category": "us_governor",
@@ -20,12 +140,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 9.9,
+      "max_change_pp": 9.95,
       "changes": [
         {
           "name": "Jonathan Kreiss-Tomkins",
-          "current_pct": 59.95,
-          "change_pp": 9.9,
+          "current_pct": 60.0,
+          "change_pp": 9.95,
           "direction": "up",
           "since_date": "2026-08-31",
           "reference_pct": 50.05,
@@ -36,8 +156,8 @@
       "prices": [
         {
           "name": "Jonathan Kreiss-Tomkins",
-          "current_pct": 59.95,
-          "change_pp": 9.9,
+          "current_pct": 60.0,
+          "change_pp": 9.95,
           "direction": "up",
           "since_date": "2026-08-31",
           "reference_pct": 50.05,
@@ -108,8 +228,8 @@
       "changes": [
         {
           "name": "Ulf Kristersson",
-          "current_pct": 20.5,
-          "change_pp": 8.0,
+          "current_pct": 19.5,
+          "change_pp": 7.0,
           "direction": "up",
           "since_date": "2026-08-31",
           "reference_pct": 12.5,
@@ -118,8 +238,8 @@
         },
         {
           "name": "Magdalena Andersson",
-          "current_pct": 79.5,
-          "change_pp": 7.0,
+          "current_pct": 78.5,
+          "change_pp": 8.0,
           "direction": "down",
           "since_date": "2026-08-31",
           "reference_pct": 86.5,
@@ -130,8 +250,8 @@
       "prices": [
         {
           "name": "Magdalena Andersson",
-          "current_pct": 79.5,
-          "change_pp": 7.0,
+          "current_pct": 78.5,
+          "change_pp": 8.0,
           "direction": "down",
           "since_date": "2026-08-31",
           "reference_pct": 86.5,
@@ -140,11 +260,111 @@
         },
         {
           "name": "Ulf Kristersson",
-          "current_pct": 20.5,
-          "change_pp": 8.0,
+          "current_pct": 19.5,
+          "change_pp": 7.0,
           "direction": "up",
           "since_date": "2026-08-31",
           "reference_pct": 12.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "national:LV:Parliament:party_winner",
+      "slug": "latvian-parliamentary-election-winner",
+      "category": "national",
+      "odds_format": "party",
+      "min_pct": 10,
+      "country_code": "LV",
+      "state_code": null,
+      "city_code": null,
+      "contest": "Parliament",
+      "market_label": "Parliamentary election",
+      "party": null,
+      "election_date": "2026-10-03",
+      "election_title": "Parliament",
+      "max_change_pp": 5.6,
+      "changes": [
+        {
+          "name": "AS",
+          "current_pct": 80.5,
+          "change_pp": 5.6,
+          "direction": "up",
+          "since_date": "2026-08-31",
+          "reference_pct": 74.9,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "AS",
+          "current_pct": 80.5,
+          "change_pp": 5.6,
+          "direction": "up",
+          "since_date": "2026-08-31",
+          "reference_pct": 74.9,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-primary:RI:Governor:Republican",
+      "slug": "rhode-island-governor-republican-primary-winner",
+      "category": "us_primary",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "RI",
+      "city_code": null,
+      "contest": "Republican Governor Primary",
+      "market_label": "Republican Governor Primary",
+      "party": "Republican",
+      "election_date": "2026-09-09",
+      "election_title": "Democratic Governor Primary",
+      "max_change_pp": 5.4,
+      "changes": [
+        {
+          "name": "Aaron Guckian",
+          "current_pct": 5.3,
+          "change_pp": 5.4,
+          "direction": "down",
+          "since_date": "2026-08-31",
+          "reference_pct": 10.7,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Elaine Pelino",
+          "current_pct": 94.5,
+          "change_pp": 4.5,
+          "direction": "up",
+          "since_date": "2026-08-31",
+          "reference_pct": 90.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Elaine Pelino",
+          "current_pct": 94.5,
+          "change_pp": 4.5,
+          "direction": "up",
+          "since_date": "2026-08-31",
+          "reference_pct": 90.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Aaron Guckian",
+          "current_pct": 5.3,
+          "change_pp": 5.4,
+          "direction": "down",
+          "since_date": "2026-08-31",
+          "reference_pct": 10.7,
           "change_days": 2,
           "window": "2d"
         }
