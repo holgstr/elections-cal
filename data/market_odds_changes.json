@@ -7,14 +7,14 @@
   "by_slug": {
     "berlin-state-election-winner": {
       "CDU": {
-        "change_pp": 14.0,
+        "change_pp": 10.0,
         "direction": "up",
         "reference_date": "2026-09-01",
         "reference_pct": 28.5,
         "window": "2d"
       },
       "Linke": {
-        "change_pp": 14.5,
+        "change_pp": 11.0,
         "direction": "down",
         "reference_date": "2026-09-01",
         "reference_pct": 57.0,
@@ -23,14 +23,14 @@
     },
     "mecklenburg-vorpommern-parliamentary-election-winner": {
       "AfD": {
-        "change_pp": 6.0,
+        "change_pp": 10.5,
         "direction": "down",
         "reference_date": "2026-09-01",
         "reference_pct": 90.5,
         "window": "2d"
       },
       "SPD": {
-        "change_pp": 5.5,
+        "change_pp": 10.5,
         "direction": "up",
         "reference_date": "2026-09-01",
         "reference_pct": 10.5,
@@ -39,14 +39,14 @@
     },
     "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt": {
       "Yes": {
-        "change_pp": 10.0,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-09-01",
         "reference_pct": 13.5,
         "window": "2d"
       },
       "No": {
-        "change_pp": 10.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-09-01",
         "reference_pct": 86.5,
@@ -55,14 +55,14 @@
     },
     "latvian-parliamentary-election-winner": {
       "AS": {
-        "change_pp": 5.3,
+        "change_pp": 6.25,
         "direction": "up",
         "reference_date": "2026-09-01",
         "reference_pct": 74.95,
         "window": "2d"
       },
       "SV": {
-        "change_pp": 5.6,
+        "change_pp": 5.4,
         "direction": "down",
         "reference_date": "2026-09-01",
         "reference_pct": 12.8,
@@ -71,14 +71,14 @@
     },
     "next-prime-minister-of-sweden": {
       "Ulf Kristersson": {
-        "change_pp": 8.0,
+        "change_pp": 11.5,
         "direction": "up",
         "reference_date": "2026-09-01",
         "reference_pct": 12.5,
         "window": "2d"
       },
       "Magdalena Andersson": {
-        "change_pp": 12.0,
+        "change_pp": 13.5,
         "direction": "down",
         "reference_date": "2026-09-01",
         "reference_pct": 87.5,
@@ -87,7 +87,7 @@
     },
     "brazil-presidential-election": {
       "Flávio Bolsonaro": {
-        "change_pp": 4.3,
+        "change_pp": 4.1,
         "direction": "up",
         "reference_date": "2026-09-01",
         "reference_pct": 38.95,
@@ -98,14 +98,14 @@
   "by_market_id": {
     "de-state:BE": {
       "CDU": {
-        "change_pp": 14.0,
+        "change_pp": 10.0,
         "direction": "up",
         "reference_date": "2026-09-01",
         "reference_pct": 28.5,
         "window": "2d"
       },
       "Linke": {
-        "change_pp": 14.5,
+        "change_pp": 11.0,
         "direction": "down",
         "reference_date": "2026-09-01",
         "reference_pct": 57.0,
@@ -114,14 +114,14 @@
     },
     "de-state:MV": {
       "AfD": {
-        "change_pp": 6.0,
+        "change_pp": 10.5,
         "direction": "down",
         "reference_date": "2026-09-01",
         "reference_pct": 90.5,
         "window": "2d"
       },
       "SPD": {
-        "change_pp": 5.5,
+        "change_pp": 10.5,
         "direction": "up",
         "reference_date": "2026-09-01",
         "reference_pct": 10.5,
@@ -130,14 +130,14 @@
     },
     "de-state:ST:AfD absolute majority": {
       "Yes": {
-        "change_pp": 10.0,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-09-01",
         "reference_pct": 13.5,
         "window": "2d"
       },
       "No": {
-        "change_pp": 10.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-09-01",
         "reference_pct": 86.5,
@@ -146,14 +146,14 @@
     },
     "national:LV:Parliament:party_winner": {
       "AS": {
-        "change_pp": 5.3,
+        "change_pp": 6.25,
         "direction": "up",
         "reference_date": "2026-09-01",
         "reference_pct": 74.95,
         "window": "2d"
       },
       "SV": {
-        "change_pp": 5.6,
+        "change_pp": 5.4,
         "direction": "down",
         "reference_date": "2026-09-01",
         "reference_pct": 12.8,
@@ -162,14 +162,14 @@
     },
     "national:SE:Riksdag:prime_minister": {
       "Ulf Kristersson": {
-        "change_pp": 8.0,
+        "change_pp": 11.5,
         "direction": "up",
         "reference_date": "2026-09-01",
         "reference_pct": 12.5,
         "window": "2d"
       },
       "Magdalena Andersson": {
-        "change_pp": 12.0,
+        "change_pp": 13.5,
         "direction": "down",
         "reference_date": "2026-09-01",
         "reference_pct": 87.5,
@@ -178,7 +178,7 @@
     },
     "presidential:BR": {
       "Flávio Bolsonaro": {
-        "change_pp": 4.3,
+        "change_pp": 4.1,
         "direction": "up",
         "reference_date": "2026-09-01",
         "reference_pct": 38.95,
