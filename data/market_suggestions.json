@@ -20,12 +20,12 @@
       "party": null,
       "election_date": "2026-09-20",
       "election_title": "State",
-      "max_change_pp": 16.5,
+      "max_change_pp": 15.5,
       "changes": [
         {
           "name": "AfD",
-          "current_pct": 77.0,
-          "change_pp": 16.5,
+          "current_pct": 78.0,
+          "change_pp": 15.5,
           "direction": "down",
           "since_date": "2026-09-02",
           "reference_pct": 93.5,
@@ -34,8 +34,8 @@
         },
         {
           "name": "SPD",
-          "current_pct": 21.5,
-          "change_pp": 16.0,
+          "current_pct": 21.0,
+          "change_pp": 15.5,
           "direction": "up",
           "since_date": "2026-09-02",
           "reference_pct": 5.5,
@@ -46,8 +46,8 @@
       "prices": [
         {
           "name": "AfD",
-          "current_pct": 77.0,
-          "change_pp": 16.5,
+          "current_pct": 78.0,
+          "change_pp": 15.5,
           "direction": "down",
           "since_date": "2026-09-02",
           "reference_pct": 93.5,
@@ -56,11 +56,71 @@
         },
         {
           "name": "SPD",
-          "current_pct": 21.5,
-          "change_pp": 16.0,
+          "current_pct": 21.0,
+          "change_pp": 15.5,
           "direction": "up",
           "since_date": "2026-09-02",
           "reference_pct": 5.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "presidential:NG",
+      "slug": "nigerian-presidential-election-winner-20260602162945585",
+      "category": "presidential",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "NG",
+      "state_code": null,
+      "city_code": null,
+      "contest": "President",
+      "market_label": "Presidential election",
+      "party": null,
+      "election_date": "2027-01-16",
+      "election_title": "General",
+      "max_change_pp": 10.0,
+      "changes": [
+        {
+          "name": "Peter Obi",
+          "current_pct": 16.0,
+          "change_pp": 7.5,
+          "direction": "down",
+          "since_date": "2026-09-02",
+          "reference_pct": 23.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Bola Tinubu",
+          "current_pct": 65.5,
+          "change_pp": 10.0,
+          "direction": "down",
+          "since_date": "2026-09-02",
+          "reference_pct": 75.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Bola Tinubu",
+          "current_pct": 65.5,
+          "change_pp": 10.0,
+          "direction": "down",
+          "since_date": "2026-09-02",
+          "reference_pct": 75.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Peter Obi",
+          "current_pct": 16.0,
+          "change_pp": 7.5,
+          "direction": "down",
+          "since_date": "2026-09-02",
+          "reference_pct": 23.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -80,12 +140,12 @@
       "party": null,
       "election_date": "2026-09-06",
       "election_title": "Landtag",
-      "max_change_pp": 7.0,
+      "max_change_pp": 8.5,
       "changes": [
         {
           "name": "Yes",
-          "current_pct": 20.0,
-          "change_pp": 7.0,
+          "current_pct": 18.5,
+          "change_pp": 8.5,
           "direction": "down",
           "since_date": "2026-09-02",
           "reference_pct": 27.0,
@@ -94,8 +154,8 @@
         },
         {
           "name": "No",
-          "current_pct": 80.0,
-          "change_pp": 7.0,
+          "current_pct": 81.5,
+          "change_pp": 8.5,
           "direction": "up",
           "since_date": "2026-09-02",
           "reference_pct": 73.0,
@@ -106,8 +166,8 @@
       "prices": [
         {
           "name": "No",
-          "current_pct": 80.0,
-          "change_pp": 7.0,
+          "current_pct": 81.5,
+          "change_pp": 8.5,
           "direction": "up",
           "since_date": "2026-09-02",
           "reference_pct": 73.0,
@@ -116,55 +176,11 @@
         },
         {
           "name": "Yes",
-          "current_pct": 20.0,
-          "change_pp": 7.0,
+          "current_pct": 18.5,
+          "change_pp": 8.5,
           "direction": "down",
           "since_date": "2026-09-02",
           "reference_pct": 27.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "de-state:BE",
-      "slug": "berlin-state-election-winner",
-      "category": "de_state",
-      "odds_format": "party",
-      "min_pct": 10,
-      "country_code": "DE",
-      "state_code": "BE",
-      "city_code": null,
-      "contest": "Abgeordnetenhaus",
-      "market_label": "Abgeordnetenhaus",
-      "party": null,
-      "election_date": "2026-09-20",
-      "election_title": "State",
-      "max_change_pp": 4.0,
-      "changes": [
-        {
-          "name": "CDU",
-          "current_pct": 39.5,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-09-02",
-          "reference_pct": 43.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Linke",
-          "current_pct": 45.5
-        },
-        {
-          "name": "CDU",
-          "current_pct": 39.5,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-09-02",
-          "reference_pct": 43.5,
           "change_days": 2,
           "window": "2d"
         }
