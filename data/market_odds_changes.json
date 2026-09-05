@@ -7,30 +7,48 @@
   "by_slug": {
     "berlin-state-election-winner": {
       "CDU": {
-        "change_pp": 4.5,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-09-03",
         "reference_pct": 38.5,
         "window": "2d"
       },
       "Linke": {
-        "change_pp": 8.5,
+        "change_pp": 9.0,
         "direction": "down",
         "reference_date": "2026-09-03",
         "reference_pct": 46.0,
         "window": "2d"
       }
     },
-    "next-prime-minister-of-sweden": {
-      "Ulf Kristersson": {
+    "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt": {
+      "Yes": {
         "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-03",
-        "reference_pct": 24.0,
+        "reference_pct": 19.5,
         "window": "2d"
       },
+      "No": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-09-03",
+        "reference_pct": 80.5,
+        "window": "2d"
+      }
+    },
+    "latvian-parliamentary-election-winner": {
+      "AS": {
+        "change_pp": 5.2,
+        "direction": "down",
+        "reference_date": "2026-09-03",
+        "reference_pct": 81.2,
+        "window": "2d"
+      }
+    },
+    "next-prime-minister-of-sweden": {
       "Magdalena Andersson": {
-        "change_pp": 6.5,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-09-03",
         "reference_pct": 74.0,
@@ -39,14 +57,14 @@
     },
     "nigerian-presidential-election-winner-20260602162945585": {
       "Peter Obi": {
-        "change_pp": 7.5,
+        "change_pp": 8.0,
         "direction": "down",
         "reference_date": "2026-09-03",
         "reference_pct": 23.5,
         "window": "2d"
       },
       "Bola Tinubu": {
-        "change_pp": 11.5,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-03",
         "reference_pct": 76.0,
@@ -57,30 +75,48 @@
   "by_market_id": {
     "de-state:BE": {
       "CDU": {
-        "change_pp": 4.5,
+        "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-09-03",
         "reference_pct": 38.5,
         "window": "2d"
       },
       "Linke": {
-        "change_pp": 8.5,
+        "change_pp": 9.0,
         "direction": "down",
         "reference_date": "2026-09-03",
         "reference_pct": 46.0,
         "window": "2d"
       }
     },
-    "national:SE:Riksdag:prime_minister": {
-      "Ulf Kristersson": {
+    "de-state:ST:AfD absolute majority": {
+      "Yes": {
         "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-03",
-        "reference_pct": 24.0,
+        "reference_pct": 19.5,
         "window": "2d"
       },
+      "No": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-09-03",
+        "reference_pct": 80.5,
+        "window": "2d"
+      }
+    },
+    "national:LV:Parliament:party_winner": {
+      "AS": {
+        "change_pp": 5.2,
+        "direction": "down",
+        "reference_date": "2026-09-03",
+        "reference_pct": 81.2,
+        "window": "2d"
+      }
+    },
+    "national:SE:Riksdag:prime_minister": {
       "Magdalena Andersson": {
-        "change_pp": 6.5,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-09-03",
         "reference_pct": 74.0,
@@ -89,14 +125,14 @@
     },
     "presidential:NG": {
       "Peter Obi": {
-        "change_pp": 7.5,
+        "change_pp": 8.0,
         "direction": "down",
         "reference_date": "2026-09-03",
         "reference_pct": 23.5,
         "window": "2d"
       },
       "Bola Tinubu": {
-        "change_pp": 11.5,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-03",
         "reference_pct": 76.0,
