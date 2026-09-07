@@ -8,20 +8,5 @@
   "MV": {
     "polymarket_slug": "mecklenburg-vorpommern-parliamentary-election-winner",
     "label": "Landtag"
-  },
-  "ST": {
-    "label": "Landtag",
-    "markets": [
-      {
-        "polymarket_slug": "will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt",
-        "label": "AfD absolute majority",
-        "odds_format": "binary"
-      },
-      {
-        "polymarket_slug": "sachsen-anhalt-parliamentary-election-winner",
-        "label": "Most seats",
-        "odds_format": "party"
-      }
-    ]
   }
 }

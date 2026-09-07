@@ -19,37 +19,6 @@
       }
     }
   },
-  "MA": {
-    "Governor": {
-      "primary_format": "party",
-      "primary_type": "semi-closed",
-      "primary_type_label": "Semi-closed primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Republican": {
-          "polymarket_slug": "massachusetts-governor-republican-primary-winner"
-        },
-        "Democratic": {
-          "incumbent": "Healey"
-        }
-      }
-    },
-    "Senate": {
-      "primary_format": "party",
-      "primary_type": "semi-closed",
-      "primary_type_label": "Semi-closed primary",
-      "primary_type_note": "Separate Democratic and Republican primaries. Party members vote in their party's primary; unaffiliated voters may request one party ballot.",
-      "winner_note": "Winner: FPTP (most votes wins).",
-      "runoff_winner_note": "Winner: FPTP (most votes wins).",
-      "parties": {
-        "Democratic": {
-          "polymarket_slug": "massachusetts-democratic-senate-primary-winner"
-        }
-      }
-    }
-  },
   "NH": {
     "Governor": {
       "primary_format": "party",
