@@ -7,46 +7,6 @@
   "markets_fetched": 92,
   "suggestions": [
     {
-      "market_id": "national:LV:Parliament:party_winner",
-      "slug": "latvian-parliamentary-election-winner",
-      "category": "national",
-      "odds_format": "party",
-      "min_pct": 10,
-      "country_code": "LV",
-      "state_code": null,
-      "city_code": null,
-      "contest": "Parliament",
-      "market_label": "Parliamentary election",
-      "party": null,
-      "election_date": "2026-10-03",
-      "election_title": "Parliament",
-      "max_change_pp": 13.6,
-      "changes": [
-        {
-          "name": "AS",
-          "current_pct": 89.6,
-          "change_pp": 13.6,
-          "direction": "up",
-          "since_date": "2026-09-05",
-          "reference_pct": 76.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "AS",
-          "current_pct": 89.6,
-          "change_pp": 13.6,
-          "direction": "up",
-          "since_date": "2026-09-05",
-          "reference_pct": 76.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
       "market_id": "de-state:BE",
       "slug": "berlin-state-election-winner",
       "category": "de_state",
@@ -60,12 +20,12 @@
       "party": null,
       "election_date": "2026-09-20",
       "election_title": "State",
-      "max_change_pp": 12.5,
+      "max_change_pp": 15.0,
       "changes": [
         {
           "name": "CDU",
-          "current_pct": 32.0,
-          "change_pp": 12.5,
+          "current_pct": 29.5,
+          "change_pp": 15.0,
           "direction": "down",
           "since_date": "2026-09-05",
           "reference_pct": 44.5,
@@ -74,8 +34,8 @@
         },
         {
           "name": "AfD",
-          "current_pct": 17.3,
-          "change_pp": 6.3,
+          "current_pct": 16.55,
+          "change_pp": 5.55,
           "direction": "up",
           "since_date": "2026-09-05",
           "reference_pct": 11.0,
@@ -84,8 +44,8 @@
         },
         {
           "name": "Linke",
-          "current_pct": 44.5,
-          "change_pp": 7.5,
+          "current_pct": 48.5,
+          "change_pp": 11.5,
           "direction": "up",
           "since_date": "2026-09-05",
           "reference_pct": 37.0,
@@ -96,8 +56,8 @@
       "prices": [
         {
           "name": "Linke",
-          "current_pct": 44.5,
-          "change_pp": 7.5,
+          "current_pct": 48.5,
+          "change_pp": 11.5,
           "direction": "up",
           "since_date": "2026-09-05",
           "reference_pct": 37.0,
@@ -106,8 +66,8 @@
         },
         {
           "name": "CDU",
-          "current_pct": 32.0,
-          "change_pp": 12.5,
+          "current_pct": 29.5,
+          "change_pp": 15.0,
           "direction": "down",
           "since_date": "2026-09-05",
           "reference_pct": 44.5,
@@ -116,8 +76,8 @@
         },
         {
           "name": "AfD",
-          "current_pct": 17.3,
-          "change_pp": 6.3,
+          "current_pct": 16.55,
+          "change_pp": 5.55,
           "direction": "up",
           "since_date": "2026-09-05",
           "reference_pct": 11.0,
@@ -127,46 +87,130 @@
       ]
     },
     {
-      "market_id": "de-state:MV",
-      "slug": "mecklenburg-vorpommern-parliamentary-election-winner",
-      "category": "de_state",
+      "market_id": "national:LV:Parliament:party_winner",
+      "slug": "latvian-parliamentary-election-winner",
+      "category": "national",
       "odds_format": "party",
       "min_pct": 10,
-      "country_code": "DE",
-      "state_code": "MV",
+      "country_code": "LV",
+      "state_code": null,
       "city_code": null,
-      "contest": "Landtag",
-      "market_label": "Landtag",
+      "contest": "Parliament",
+      "market_label": "Parliamentary election",
       "party": null,
-      "election_date": "2026-09-20",
-      "election_title": "State",
-      "max_change_pp": 4.0,
+      "election_date": "2026-10-03",
+      "election_title": "Parliament",
+      "max_change_pp": 14.0,
       "changes": [
         {
-          "name": "AfD",
-          "current_pct": 81.5,
-          "change_pp": 4.0,
+          "name": "AS",
+          "current_pct": 90.0,
+          "change_pp": 14.0,
           "direction": "up",
           "since_date": "2026-09-05",
-          "reference_pct": 77.5,
+          "reference_pct": 76.0,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "AfD",
-          "current_pct": 81.5,
-          "change_pp": 4.0,
+          "name": "AS",
+          "current_pct": 90.0,
+          "change_pp": 14.0,
           "direction": "up",
           "since_date": "2026-09-05",
-          "reference_pct": 77.5,
+          "reference_pct": 76.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-primary:DE:Senate:Republican",
+      "slug": "delaware-republican-senate-primary-winner",
+      "category": "us_primary",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "DE",
+      "city_code": null,
+      "contest": "Republican Senate Primary",
+      "market_label": "Republican Senate Primary",
+      "party": "Republican",
+      "election_date": "2026-09-15",
+      "election_title": "Democratic Senate Primary",
+      "max_change_pp": 4.5,
+      "changes": [
+        {
+          "name": "Michael Katz",
+          "current_pct": 92.5,
+          "change_pp": 4.5,
+          "direction": "up",
+          "since_date": "2026-09-05",
+          "reference_pct": 88.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Michael Katz",
+          "current_pct": 92.5,
+          "change_pp": 4.5,
+          "direction": "up",
+          "since_date": "2026-09-05",
+          "reference_pct": 88.0,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "SPD",
-          "current_pct": 18.5
+          "name": "John Shulli",
+          "current_pct": 7.6
+        }
+      ]
+    },
+    {
+      "market_id": "us-primary:RI:Governor:Republican",
+      "slug": "rhode-island-governor-republican-primary-winner",
+      "category": "us_primary",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "RI",
+      "city_code": null,
+      "contest": "Republican Governor Primary",
+      "market_label": "Republican Governor Primary",
+      "party": "Republican",
+      "election_date": "2026-09-09",
+      "election_title": "Democratic Governor Primary",
+      "max_change_pp": 4.1,
+      "changes": [
+        {
+          "name": "Aaron Guckian",
+          "current_pct": 9.8,
+          "change_pp": 4.1,
+          "direction": "up",
+          "since_date": "2026-09-05",
+          "reference_pct": 5.7,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Elaine Pelino",
+          "current_pct": 90.5
+        },
+        {
+          "name": "Aaron Guckian",
+          "current_pct": 9.8,
+          "change_pp": 4.1,
+          "direction": "up",
+          "since_date": "2026-09-05",
+          "reference_pct": 5.7,
+          "change_days": 2,
+          "window": "2d"
         }
       ]
     },
