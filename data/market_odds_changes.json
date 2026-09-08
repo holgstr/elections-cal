@@ -14,35 +14,10 @@
         "window": "2d"
       },
       "AfD": {
-        "change_pp": 4.3,
+        "change_pp": 5.4,
         "direction": "down",
         "reference_date": "2026-09-06",
         "reference_pct": 17.65,
-        "window": "2d"
-      },
-      "Linke": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-09-06",
-        "reference_pct": 44.5,
-        "window": "2d"
-      }
-    },
-    "mecklenburg-vorpommern-parliamentary-election-winner": {
-      "AfD": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-09-06",
-        "reference_pct": 82.0,
-        "window": "2d"
-      }
-    },
-    "who-will-be-the-next-prime-minister-of-israel-after-the-next-election": {
-      "Gadi Eizenkot": {
-        "change_pp": 4.3,
-        "direction": "up",
-        "reference_date": "2026-09-06",
-        "reference_pct": 50.15,
         "window": "2d"
       }
     },
@@ -55,12 +30,12 @@
         "window": "2d"
       }
     },
-    "delaware-republican-senate-primary-winner": {
-      "John Shulli": {
-        "change_pp": 4.15,
+    "brazil-presidential-election": {
+      "Luiz Inácio Lula da Silva": {
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-06",
-        "reference_pct": 10.25,
+        "reference_pct": 57.5,
         "window": "2d"
       }
     }
@@ -75,35 +50,10 @@
         "window": "2d"
       },
       "AfD": {
-        "change_pp": 4.3,
+        "change_pp": 5.4,
         "direction": "down",
         "reference_date": "2026-09-06",
         "reference_pct": 17.65,
-        "window": "2d"
-      },
-      "Linke": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-09-06",
-        "reference_pct": 44.5,
-        "window": "2d"
-      }
-    },
-    "de-state:MV": {
-      "AfD": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-09-06",
-        "reference_pct": 82.0,
-        "window": "2d"
-      }
-    },
-    "national:IL:Knesset:prime_minister": {
-      "Gadi Eizenkot": {
-        "change_pp": 4.3,
-        "direction": "up",
-        "reference_date": "2026-09-06",
-        "reference_pct": 50.15,
         "window": "2d"
       }
     },
@@ -116,12 +66,12 @@
         "window": "2d"
       }
     },
-    "us-primary:DE:Senate:Republican": {
-      "John Shulli": {
-        "change_pp": 4.15,
+    "presidential:BR": {
+      "Luiz Inácio Lula da Silva": {
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-06",
-        "reference_pct": 10.25,
+        "reference_pct": 57.5,
         "window": "2d"
       }
     }
