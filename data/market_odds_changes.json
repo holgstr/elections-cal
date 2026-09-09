@@ -6,29 +6,29 @@
   "threshold_pp": 4,
   "by_slug": {
     "berlin-state-election-winner": {
-      "AfD": {
-        "change_pp": 4.9,
-        "direction": "down",
-        "reference_date": "2026-09-07",
-        "reference_pct": 16.55,
-        "window": "2d"
-      }
-    },
-    "brazil-chamber-of-deputies-election-winner": {
-      "PL": {
+      "Linke": {
         "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-07",
-        "reference_pct": 52.0,
+        "reference_pct": 48.5,
         "window": "2d"
       }
     },
     "who-will-be-the-next-prime-minister-of-israel-after-the-next-election": {
       "Gadi Eizenkot": {
-        "change_pp": 5.2,
+        "change_pp": 4.1,
         "direction": "up",
         "reference_date": "2026-09-07",
         "reference_pct": 52.05,
+        "window": "2d"
+      }
+    },
+    "latvian-parliamentary-election-winner": {
+      "AS": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-09-07",
+        "reference_pct": 90.0,
         "window": "2d"
       }
     },
@@ -41,16 +41,32 @@
         "window": "2d"
       },
       "Flávio Bolsonaro": {
-        "change_pp": 5.65,
+        "change_pp": 6.7,
         "direction": "up",
         "reference_date": "2026-09-07",
         "reference_pct": 39.85,
         "window": "2d"
       }
     },
+    "alaska-governor-election-winner": {
+      "Bernadette Wilson": {
+        "change_pp": 5.5,
+        "direction": "down",
+        "reference_date": "2026-09-07",
+        "reference_pct": 32.5,
+        "window": "2d"
+      }
+    },
     "rhode-island-governor-republican-primary-winner": {
+      "Aaron Guckian": {
+        "change_pp": 5.2,
+        "direction": "up",
+        "reference_date": "2026-09-07",
+        "reference_pct": 9.8,
+        "window": "2d"
+      },
       "Elaine Pelino": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-09-07",
         "reference_pct": 90.5,
@@ -60,29 +76,29 @@
   },
   "by_market_id": {
     "de-state:BE": {
-      "AfD": {
-        "change_pp": 4.9,
-        "direction": "down",
-        "reference_date": "2026-09-07",
-        "reference_pct": 16.55,
-        "window": "2d"
-      }
-    },
-    "national:BR:National Congress:party_winner": {
-      "PL": {
+      "Linke": {
         "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-07",
-        "reference_pct": 52.0,
+        "reference_pct": 48.5,
         "window": "2d"
       }
     },
     "national:IL:Knesset:prime_minister": {
       "Gadi Eizenkot": {
-        "change_pp": 5.2,
+        "change_pp": 4.1,
         "direction": "up",
         "reference_date": "2026-09-07",
         "reference_pct": 52.05,
+        "window": "2d"
+      }
+    },
+    "national:LV:Parliament:party_winner": {
+      "AS": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-09-07",
+        "reference_pct": 90.0,
         "window": "2d"
       }
     },
@@ -95,16 +111,32 @@
         "window": "2d"
       },
       "Flávio Bolsonaro": {
-        "change_pp": 5.65,
+        "change_pp": 6.7,
         "direction": "up",
         "reference_date": "2026-09-07",
         "reference_pct": 39.85,
         "window": "2d"
       }
     },
+    "us-governor:AK": {
+      "Bernadette Wilson": {
+        "change_pp": 5.5,
+        "direction": "down",
+        "reference_date": "2026-09-07",
+        "reference_pct": 32.5,
+        "window": "2d"
+      }
+    },
     "us-primary:RI:Governor:Republican": {
+      "Aaron Guckian": {
+        "change_pp": 5.2,
+        "direction": "up",
+        "reference_date": "2026-09-07",
+        "reference_pct": 9.8,
+        "window": "2d"
+      },
       "Elaine Pelino": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-09-07",
         "reference_pct": 90.5,

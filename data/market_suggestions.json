@@ -20,7 +20,7 @@
       "party": null,
       "election_date": "2026-10-04",
       "election_title": "General",
-      "max_change_pp": 6.0,
+      "max_change_pp": 6.7,
       "changes": [
         {
           "name": "Luiz Inácio Lula da Silva",
@@ -34,8 +34,8 @@
         },
         {
           "name": "Flávio Bolsonaro",
-          "current_pct": 45.5,
-          "change_pp": 5.65,
+          "current_pct": 46.55,
+          "change_pp": 6.7,
           "direction": "up",
           "since_date": "2026-09-07",
           "reference_pct": 39.85,
@@ -56,11 +56,155 @@
         },
         {
           "name": "Flávio Bolsonaro",
-          "current_pct": 45.5,
-          "change_pp": 5.65,
+          "current_pct": 46.55,
+          "change_pp": 6.7,
           "direction": "up",
           "since_date": "2026-09-07",
           "reference_pct": 39.85,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:AK",
+      "slug": "alaska-governor-election-winner",
+      "category": "us_governor",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "AK",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 5.5,
+      "changes": [
+        {
+          "name": "Bernadette Wilson",
+          "current_pct": 27.0,
+          "change_pp": 5.5,
+          "direction": "down",
+          "since_date": "2026-09-07",
+          "reference_pct": 32.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Jonathan Kreiss-Tomkins",
+          "current_pct": 59.75
+        },
+        {
+          "name": "Bernadette Wilson",
+          "current_pct": 27.0,
+          "change_pp": 5.5,
+          "direction": "down",
+          "since_date": "2026-09-07",
+          "reference_pct": 32.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-primary:RI:Governor:Republican",
+      "slug": "rhode-island-governor-republican-primary-winner",
+      "category": "us_primary",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "RI",
+      "city_code": null,
+      "contest": "Republican Governor Primary",
+      "market_label": "Republican Governor Primary",
+      "party": "Republican",
+      "election_date": "2026-09-09",
+      "election_title": "Democratic Governor Primary",
+      "max_change_pp": 5.2,
+      "changes": [
+        {
+          "name": "Aaron Guckian",
+          "current_pct": 15.0,
+          "change_pp": 5.2,
+          "direction": "up",
+          "since_date": "2026-09-07",
+          "reference_pct": 9.8,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Elaine Pelino",
+          "current_pct": 86.0,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-09-07",
+          "reference_pct": 90.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Elaine Pelino",
+          "current_pct": 86.0,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-09-07",
+          "reference_pct": 90.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Aaron Guckian",
+          "current_pct": 15.0,
+          "change_pp": 5.2,
+          "direction": "up",
+          "since_date": "2026-09-07",
+          "reference_pct": 9.8,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "national:LV:Parliament:party_winner",
+      "slug": "latvian-parliamentary-election-winner",
+      "category": "national",
+      "odds_format": "party",
+      "min_pct": 10,
+      "country_code": "LV",
+      "state_code": null,
+      "city_code": null,
+      "contest": "Parliament",
+      "market_label": "Parliamentary election",
+      "party": null,
+      "election_date": "2026-10-03",
+      "election_title": "Parliament",
+      "max_change_pp": 4.5,
+      "changes": [
+        {
+          "name": "AS",
+          "current_pct": 85.5,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-09-07",
+          "reference_pct": 90.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "AS",
+          "current_pct": 85.5,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-09-07",
+          "reference_pct": 90.0,
           "change_days": 2,
           "window": "2d"
         }
@@ -80,12 +224,12 @@
       "party": null,
       "election_date": "2026-10-27",
       "election_title": "Knesset",
-      "max_change_pp": 5.2,
+      "max_change_pp": 4.1,
       "changes": [
         {
           "name": "Gadi Eizenkot",
-          "current_pct": 57.25,
-          "change_pp": 5.2,
+          "current_pct": 56.15,
+          "change_pp": 4.1,
           "direction": "up",
           "since_date": "2026-09-07",
           "reference_pct": 52.05,
@@ -96,8 +240,8 @@
       "prices": [
         {
           "name": "Gadi Eizenkot",
-          "current_pct": 57.25,
-          "change_pp": 5.2,
+          "current_pct": 56.15,
+          "change_pp": 4.1,
           "direction": "up",
           "since_date": "2026-09-07",
           "reference_pct": 52.05,
@@ -106,7 +250,7 @@
         },
         {
           "name": "Benjamin Netanyahu",
-          "current_pct": 27.5
+          "current_pct": 28.0
         },
         {
           "name": "Naftali Bennett",
@@ -114,7 +258,7 @@
         },
         {
           "name": "Avigdor Lieberman",
-          "current_pct": 4.45
+          "current_pct": 4.15
         }
       ]
     },
@@ -132,15 +276,15 @@
       "party": null,
       "election_date": "2026-09-20",
       "election_title": "State",
-      "max_change_pp": 4.9,
+      "max_change_pp": 4.0,
       "changes": [
         {
-          "name": "AfD",
-          "current_pct": 11.65,
-          "change_pp": 4.9,
-          "direction": "down",
+          "name": "Linke",
+          "current_pct": 52.5,
+          "change_pp": 4.0,
+          "direction": "up",
           "since_date": "2026-09-07",
-          "reference_pct": 16.55,
+          "reference_pct": 48.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -148,109 +292,21 @@
       "prices": [
         {
           "name": "Linke",
-          "current_pct": 46.5
+          "current_pct": 52.5,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-09-07",
+          "reference_pct": 48.5,
+          "change_days": 2,
+          "window": "2d"
         },
         {
           "name": "CDU",
-          "current_pct": 28.5
+          "current_pct": 27.5
         },
         {
           "name": "AfD",
-          "current_pct": 11.65,
-          "change_pp": 4.9,
-          "direction": "down",
-          "since_date": "2026-09-07",
-          "reference_pct": 16.55,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "national:BR:National Congress:party_winner",
-      "slug": "brazil-chamber-of-deputies-election-winner",
-      "category": "national",
-      "odds_format": "party",
-      "min_pct": 10,
-      "country_code": "BR",
-      "state_code": null,
-      "city_code": null,
-      "contest": "National Congress",
-      "market_label": "Chamber of Deputies",
-      "party": null,
-      "election_date": "2026-10-04",
-      "election_title": "General",
-      "max_change_pp": 4.0,
-      "changes": [
-        {
-          "name": "PL",
-          "current_pct": 56.0,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-09-07",
-          "reference_pct": 52.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "PL",
-          "current_pct": 56.0,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-09-07",
-          "reference_pct": 52.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "UPB",
-          "current_pct": 44.05
-        }
-      ]
-    },
-    {
-      "market_id": "us-primary:RI:Governor:Republican",
-      "slug": "rhode-island-governor-republican-primary-winner",
-      "category": "us_primary",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "RI",
-      "city_code": null,
-      "contest": "Republican Governor Primary",
-      "market_label": "Republican Governor Primary",
-      "party": "Republican",
-      "election_date": "2026-09-09",
-      "election_title": "Democratic Governor Primary",
-      "max_change_pp": 4.0,
-      "changes": [
-        {
-          "name": "Elaine Pelino",
-          "current_pct": 86.5,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-09-07",
-          "reference_pct": 90.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Elaine Pelino",
-          "current_pct": 86.5,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-09-07",
-          "reference_pct": 90.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Aaron Guckian",
-          "current_pct": 13.15
+          "current_pct": 13.1
         }
       ]
     }
