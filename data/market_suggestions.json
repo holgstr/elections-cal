@@ -20,12 +20,22 @@
       "party": null,
       "election_date": "2026-11-07",
       "election_title": "Parliament",
-      "max_change_pp": 8.0,
+      "max_change_pp": 20.5,
       "changes": [
         {
+          "name": "Christopher Luxon",
+          "current_pct": 28.0,
+          "change_pp": 20.5,
+          "direction": "down",
+          "since_date": "2026-09-08",
+          "reference_pct": 48.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
           "name": "Chris Hipkins",
-          "current_pct": 42.5,
-          "change_pp": 8.0,
+          "current_pct": 30.0,
+          "change_pp": 20.5,
           "direction": "down",
           "since_date": "2026-09-08",
           "reference_pct": 50.5,
@@ -35,16 +45,22 @@
       ],
       "prices": [
         {
-          "name": "Christopher Luxon",
-          "current_pct": 51.0
-        },
-        {
           "name": "Chris Hipkins",
-          "current_pct": 42.5,
-          "change_pp": 8.0,
+          "current_pct": 30.0,
+          "change_pp": 20.5,
           "direction": "down",
           "since_date": "2026-09-08",
           "reference_pct": 50.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Christopher Luxon",
+          "current_pct": 28.0,
+          "change_pp": 20.5,
+          "direction": "down",
+          "since_date": "2026-09-08",
+          "reference_pct": 48.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -64,12 +80,22 @@
       "party": null,
       "election_date": "2026-09-20",
       "election_title": "State",
-      "max_change_pp": 6.5,
+      "max_change_pp": 12.5,
       "changes": [
         {
+          "name": "CDU",
+          "current_pct": 22.5,
+          "change_pp": 7.0,
+          "direction": "down",
+          "since_date": "2026-09-08",
+          "reference_pct": 29.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
           "name": "Linke",
-          "current_pct": 53.0,
-          "change_pp": 6.5,
+          "current_pct": 59.0,
+          "change_pp": 12.5,
           "direction": "up",
           "since_date": "2026-09-08",
           "reference_pct": 46.5,
@@ -80,8 +106,8 @@
       "prices": [
         {
           "name": "Linke",
-          "current_pct": 53.0,
-          "change_pp": 6.5,
+          "current_pct": 59.0,
+          "change_pp": 12.5,
           "direction": "up",
           "since_date": "2026-09-08",
           "reference_pct": 46.5,
@@ -90,11 +116,225 @@
         },
         {
           "name": "CDU",
-          "current_pct": 27.5
+          "current_pct": 22.5,
+          "change_pp": 7.0,
+          "direction": "down",
+          "since_date": "2026-09-08",
+          "reference_pct": 29.5,
+          "change_days": 2,
+          "window": "2d"
         },
         {
           "name": "AfD",
-          "current_pct": 13.7
+          "current_pct": 13.85
+        }
+      ]
+    },
+    {
+      "market_id": "national:BR:National Congress:party_winner",
+      "slug": "brazil-chamber-of-deputies-election-winner",
+      "category": "national",
+      "odds_format": "party",
+      "min_pct": 10,
+      "country_code": "BR",
+      "state_code": null,
+      "city_code": null,
+      "contest": "National Congress",
+      "market_label": "Chamber of Deputies",
+      "party": null,
+      "election_date": "2026-10-04",
+      "election_title": "General",
+      "max_change_pp": 11.15,
+      "changes": [
+        {
+          "name": "PL",
+          "current_pct": 63.0,
+          "change_pp": 8.0,
+          "direction": "up",
+          "since_date": "2026-09-08",
+          "reference_pct": 55.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "UPB",
+          "current_pct": 33.3,
+          "change_pp": 11.15,
+          "direction": "down",
+          "since_date": "2026-09-08",
+          "reference_pct": 44.45,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "PL",
+          "current_pct": 63.0,
+          "change_pp": 8.0,
+          "direction": "up",
+          "since_date": "2026-09-08",
+          "reference_pct": 55.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "UPB",
+          "current_pct": 33.3,
+          "change_pp": 11.15,
+          "direction": "down",
+          "since_date": "2026-09-08",
+          "reference_pct": 44.45,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "presidential:BR",
+      "slug": "brazil-presidential-election",
+      "category": "presidential",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "BR",
+      "state_code": null,
+      "city_code": null,
+      "contest": "President",
+      "market_label": "Presidential election",
+      "party": null,
+      "election_date": "2026-10-04",
+      "election_title": "General",
+      "max_change_pp": 9.75,
+      "changes": [
+        {
+          "name": "Luiz Inácio Lula da Silva",
+          "current_pct": 43.5,
+          "change_pp": 9.0,
+          "direction": "down",
+          "since_date": "2026-09-08",
+          "reference_pct": 52.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Flávio Bolsonaro",
+          "current_pct": 54.85,
+          "change_pp": 9.75,
+          "direction": "up",
+          "since_date": "2026-09-08",
+          "reference_pct": 45.1,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Flávio Bolsonaro",
+          "current_pct": 54.85,
+          "change_pp": 9.75,
+          "direction": "up",
+          "since_date": "2026-09-08",
+          "reference_pct": 45.1,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Luiz Inácio Lula da Silva",
+          "current_pct": 43.5,
+          "change_pp": 9.0,
+          "direction": "down",
+          "since_date": "2026-09-08",
+          "reference_pct": 52.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "presidential:NG",
+      "slug": "nigerian-presidential-election-winner-20260602162945585",
+      "category": "presidential",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "NG",
+      "state_code": null,
+      "city_code": null,
+      "contest": "President",
+      "market_label": "Presidential election",
+      "party": null,
+      "election_date": "2027-01-16",
+      "election_title": "General",
+      "max_change_pp": 5.5,
+      "changes": [
+        {
+          "name": "Peter Obi",
+          "current_pct": 20.0,
+          "change_pp": 5.5,
+          "direction": "up",
+          "since_date": "2026-09-08",
+          "reference_pct": 14.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Bola Tinubu",
+          "current_pct": 73.5
+        },
+        {
+          "name": "Peter Obi",
+          "current_pct": 20.0,
+          "change_pp": 5.5,
+          "direction": "up",
+          "since_date": "2026-09-08",
+          "reference_pct": 14.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "de-state:MV",
+      "slug": "mecklenburg-vorpommern-parliamentary-election-winner",
+      "category": "de_state",
+      "odds_format": "party",
+      "min_pct": 10,
+      "country_code": "DE",
+      "state_code": "MV",
+      "city_code": null,
+      "contest": "Landtag",
+      "market_label": "Landtag",
+      "party": null,
+      "election_date": "2026-09-20",
+      "election_title": "State",
+      "max_change_pp": 5.0,
+      "changes": [
+        {
+          "name": "SPD",
+          "current_pct": 16.5,
+          "change_pp": 5.0,
+          "direction": "down",
+          "since_date": "2026-09-08",
+          "reference_pct": 21.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "AfD",
+          "current_pct": 82.0
+        },
+        {
+          "name": "SPD",
+          "current_pct": 16.5,
+          "change_pp": 5.0,
+          "direction": "down",
+          "since_date": "2026-09-08",
+          "reference_pct": 21.5,
+          "change_days": 2,
+          "window": "2d"
         }
       ]
     },
@@ -112,12 +352,12 @@
       "party": null,
       "election_date": "2026-10-03",
       "election_title": "Parliament",
-      "max_change_pp": 4.15,
+      "max_change_pp": 4.25,
       "changes": [
         {
           "name": "AS",
-          "current_pct": 85.65,
-          "change_pp": 4.15,
+          "current_pct": 85.55,
+          "change_pp": 4.25,
           "direction": "down",
           "since_date": "2026-09-08",
           "reference_pct": 89.8,
@@ -128,57 +368,13 @@
       "prices": [
         {
           "name": "AS",
-          "current_pct": 85.65,
-          "change_pp": 4.15,
+          "current_pct": 85.55,
+          "change_pp": 4.25,
           "direction": "down",
           "since_date": "2026-09-08",
           "reference_pct": 89.8,
           "change_days": 2,
           "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "national:SE:Riksdag:prime_minister",
-      "slug": "next-prime-minister-of-sweden",
-      "category": "national",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "SE",
-      "state_code": null,
-      "city_code": null,
-      "contest": "Riksdag",
-      "market_label": "Next Prime Minister",
-      "party": null,
-      "election_date": "2026-09-13",
-      "election_title": "Riksdag",
-      "max_change_pp": 4.0,
-      "changes": [
-        {
-          "name": "Magdalena Andersson",
-          "current_pct": 82.5,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-09-08",
-          "reference_pct": 78.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Magdalena Andersson",
-          "current_pct": 82.5,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-09-08",
-          "reference_pct": 78.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Ulf Kristersson",
-          "current_pct": 17.5
         }
       ]
     }
