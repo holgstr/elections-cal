@@ -7,41 +7,32 @@
   "by_slug": {
     "berlin-state-election-winner": {
       "AfD": {
-        "change_pp": 5.5,
+        "change_pp": 5.6,
         "direction": "down",
         "reference_date": "2026-09-10",
         "reference_pct": 13.85,
         "window": "2d"
       },
       "Linke": {
-        "change_pp": 4.5,
+        "change_pp": 9.5,
         "direction": "up",
         "reference_date": "2026-09-10",
         "reference_pct": 59.0,
         "window": "2d"
       }
     },
-    "brazil-chamber-of-deputies-election-winner": {
-      "PL": {
-        "change_pp": 6.0,
+    "latvian-parliamentary-election-winner": {
+      "AS": {
+        "change_pp": 4.05,
         "direction": "up",
         "reference_date": "2026-09-10",
-        "reference_pct": 63.0,
-        "window": "2d"
-      }
-    },
-    "who-will-be-the-next-prime-minister-of-israel-after-the-next-election": {
-      "Gadi Eizenkot": {
-        "change_pp": 4.05,
-        "direction": "down",
-        "reference_date": "2026-09-10",
-        "reference_pct": 54.9,
+        "reference_pct": 85.55,
         "window": "2d"
       }
     },
     "next-prime-minister-of-new-zealand-174": {
       "Christopher Luxon": {
-        "change_pp": 7.0,
+        "change_pp": 7.5,
         "direction": "up",
         "reference_date": "2026-09-10",
         "reference_pct": 28.0,
@@ -57,14 +48,14 @@
     },
     "next-prime-minister-of-sweden": {
       "Ulf Kristersson": {
-        "change_pp": 9.0,
+        "change_pp": 16.0,
         "direction": "up",
         "reference_date": "2026-09-10",
         "reference_pct": 18.5,
         "window": "2d"
       },
       "Magdalena Andersson": {
-        "change_pp": 9.0,
+        "change_pp": 15.5,
         "direction": "down",
         "reference_date": "2026-09-10",
         "reference_pct": 81.5,
@@ -80,39 +71,57 @@
         "window": "2d"
       },
       "Flávio Bolsonaro": {
-        "change_pp": 5.25,
+        "change_pp": 4.1,
         "direction": "down",
         "reference_date": "2026-09-10",
         "reference_pct": 54.85,
         "window": "2d"
       }
     },
-    "delaware-republican-senate-primary-winner": {
-      "John Shulli": {
-        "change_pp": 4.05,
+    "nigerian-presidential-election-winner-20260602162945585": {
+      "Peter Obi": {
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-10",
-        "reference_pct": 9.8,
+        "reference_pct": 20.0,
         "window": "2d"
-      },
-      "Michael Katz": {
-        "change_pp": 4.0,
+      }
+    },
+    "iowa-governor-winner-2026": {
+      "Zach Lahn (R)": {
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-10",
-        "reference_pct": 90.5,
+        "reference_pct": 24.5,
+        "window": "2d"
+      }
+    },
+    "nevada-governor-winner-2026": {
+      "Aaron Ford (D)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-09-10",
+        "reference_pct": 41.5,
+        "window": "2d"
+      },
+      "Joe Lombardo (R)": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-09-10",
+        "reference_pct": 57.5,
         "window": "2d"
       }
     },
     "iowa-senate-election-winner": {
       "Josh Turek (D)": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-09-10",
         "reference_pct": 34.5,
         "window": "2d"
       },
       "Ashley Hinson (R)": {
-        "change_pp": 4.5,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-09-10",
         "reference_pct": 66.0,
@@ -123,41 +132,32 @@
   "by_market_id": {
     "de-state:BE": {
       "AfD": {
-        "change_pp": 5.5,
+        "change_pp": 5.6,
         "direction": "down",
         "reference_date": "2026-09-10",
         "reference_pct": 13.85,
         "window": "2d"
       },
       "Linke": {
-        "change_pp": 4.5,
+        "change_pp": 9.5,
         "direction": "up",
         "reference_date": "2026-09-10",
         "reference_pct": 59.0,
         "window": "2d"
       }
     },
-    "national:BR:National Congress:party_winner": {
-      "PL": {
-        "change_pp": 6.0,
+    "national:LV:Parliament:party_winner": {
+      "AS": {
+        "change_pp": 4.05,
         "direction": "up",
         "reference_date": "2026-09-10",
-        "reference_pct": 63.0,
-        "window": "2d"
-      }
-    },
-    "national:IL:Knesset:prime_minister": {
-      "Gadi Eizenkot": {
-        "change_pp": 4.05,
-        "direction": "down",
-        "reference_date": "2026-09-10",
-        "reference_pct": 54.9,
+        "reference_pct": 85.55,
         "window": "2d"
       }
     },
     "national:NZ:Parliament:prime_minister": {
       "Christopher Luxon": {
-        "change_pp": 7.0,
+        "change_pp": 7.5,
         "direction": "up",
         "reference_date": "2026-09-10",
         "reference_pct": 28.0,
@@ -173,14 +173,14 @@
     },
     "national:SE:Riksdag:prime_minister": {
       "Ulf Kristersson": {
-        "change_pp": 9.0,
+        "change_pp": 16.0,
         "direction": "up",
         "reference_date": "2026-09-10",
         "reference_pct": 18.5,
         "window": "2d"
       },
       "Magdalena Andersson": {
-        "change_pp": 9.0,
+        "change_pp": 15.5,
         "direction": "down",
         "reference_date": "2026-09-10",
         "reference_pct": 81.5,
@@ -196,39 +196,57 @@
         "window": "2d"
       },
       "Flávio Bolsonaro": {
-        "change_pp": 5.25,
+        "change_pp": 4.1,
         "direction": "down",
         "reference_date": "2026-09-10",
         "reference_pct": 54.85,
         "window": "2d"
       }
     },
-    "us-primary:DE:Senate:Republican": {
-      "John Shulli": {
-        "change_pp": 4.05,
+    "presidential:NG": {
+      "Peter Obi": {
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-10",
-        "reference_pct": 9.8,
+        "reference_pct": 20.0,
         "window": "2d"
-      },
-      "Michael Katz": {
-        "change_pp": 4.0,
+      }
+    },
+    "us-governor:IA": {
+      "Zach Lahn (R)": {
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-10",
-        "reference_pct": 90.5,
+        "reference_pct": 24.5,
+        "window": "2d"
+      }
+    },
+    "us-governor:NV": {
+      "Aaron Ford (D)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-09-10",
+        "reference_pct": 41.5,
+        "window": "2d"
+      },
+      "Joe Lombardo (R)": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-09-10",
+        "reference_pct": 57.5,
         "window": "2d"
       }
     },
     "us-senate:IA": {
       "Josh Turek (D)": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-09-10",
         "reference_pct": 34.5,
         "window": "2d"
       },
       "Ashley Hinson (R)": {
-        "change_pp": 4.5,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-09-10",
         "reference_pct": 66.0,
