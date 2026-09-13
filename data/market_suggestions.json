@@ -7,66 +7,6 @@
   "markets_fetched": 84,
   "suggestions": [
     {
-      "market_id": "national:BR:National Congress:party_winner",
-      "slug": "brazil-chamber-of-deputies-election-winner",
-      "category": "national",
-      "odds_format": "party",
-      "min_pct": 10,
-      "country_code": "BR",
-      "state_code": null,
-      "city_code": null,
-      "contest": "National Congress",
-      "market_label": "Chamber of Deputies",
-      "party": null,
-      "election_date": "2026-10-04",
-      "election_title": "General",
-      "max_change_pp": 11.5,
-      "changes": [
-        {
-          "name": "PL",
-          "current_pct": 56.5,
-          "change_pp": 11.5,
-          "direction": "down",
-          "since_date": "2026-09-11",
-          "reference_pct": 68.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "UPB",
-          "current_pct": 39.35,
-          "change_pp": 8.45,
-          "direction": "up",
-          "since_date": "2026-09-11",
-          "reference_pct": 30.9,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "PL",
-          "current_pct": 56.5,
-          "change_pp": 11.5,
-          "direction": "down",
-          "since_date": "2026-09-11",
-          "reference_pct": 68.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "UPB",
-          "current_pct": 39.35,
-          "change_pp": 8.45,
-          "direction": "up",
-          "since_date": "2026-09-11",
-          "reference_pct": 30.9,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
       "market_id": "national:NZ:Parliament:prime_minister",
       "slug": "next-prime-minister-of-new-zealand-174",
       "category": "national",
@@ -80,12 +20,12 @@
       "party": null,
       "election_date": "2026-11-07",
       "election_title": "Parliament",
-      "max_change_pp": 10.0,
+      "max_change_pp": 11.0,
       "changes": [
         {
           "name": "Chris Hipkins",
-          "current_pct": 32.5,
-          "change_pp": 10.0,
+          "current_pct": 31.5,
+          "change_pp": 11.0,
           "direction": "down",
           "since_date": "2026-09-11",
           "reference_pct": 42.5,
@@ -96,8 +36,8 @@
       "prices": [
         {
           "name": "Chris Hipkins",
-          "current_pct": 32.5,
-          "change_pp": 10.0,
+          "current_pct": 31.5,
+          "change_pp": 11.0,
           "direction": "down",
           "since_date": "2026-09-11",
           "reference_pct": 42.5,
@@ -106,125 +46,65 @@
         },
         {
           "name": "Christopher Luxon",
-          "current_pct": 32.0
+          "current_pct": 31.0
         }
       ]
     },
     {
-      "market_id": "national:SE:Riksdag:prime_minister",
-      "slug": "next-prime-minister-of-sweden",
+      "market_id": "national:BR:National Congress:party_winner",
+      "slug": "brazil-chamber-of-deputies-election-winner",
       "category": "national",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "SE",
+      "odds_format": "party",
+      "min_pct": 10,
+      "country_code": "BR",
       "state_code": null,
       "city_code": null,
-      "contest": "Riksdag",
-      "market_label": "Next Prime Minister",
+      "contest": "National Congress",
+      "market_label": "Chamber of Deputies",
       "party": null,
-      "election_date": "2026-09-13",
-      "election_title": "Riksdag",
-      "max_change_pp": 7.0,
+      "election_date": "2026-10-04",
+      "election_title": "General",
+      "max_change_pp": 10.0,
       "changes": [
         {
-          "name": "Ulf Kristersson",
-          "current_pct": 32.5,
-          "change_pp": 6.0,
-          "direction": "up",
+          "name": "PL",
+          "current_pct": 58.0,
+          "change_pp": 10.0,
+          "direction": "down",
           "since_date": "2026-09-11",
-          "reference_pct": 26.5,
+          "reference_pct": 68.0,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "Magdalena Andersson",
-          "current_pct": 66.5,
-          "change_pp": 7.0,
-          "direction": "down",
+          "name": "UPB",
+          "current_pct": 40.6,
+          "change_pp": 9.7,
+          "direction": "up",
           "since_date": "2026-09-11",
-          "reference_pct": 73.5,
+          "reference_pct": 30.9,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Magdalena Andersson",
-          "current_pct": 66.5,
-          "change_pp": 7.0,
+          "name": "PL",
+          "current_pct": 58.0,
+          "change_pp": 10.0,
           "direction": "down",
           "since_date": "2026-09-11",
-          "reference_pct": 73.5,
+          "reference_pct": 68.0,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "Ulf Kristersson",
-          "current_pct": 32.5,
-          "change_pp": 6.0,
+          "name": "UPB",
+          "current_pct": 40.6,
+          "change_pp": 9.7,
           "direction": "up",
           "since_date": "2026-09-11",
-          "reference_pct": 26.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "us-governor:NV",
-      "slug": "nevada-governor-winner-2026",
-      "category": "us_governor",
-      "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "NV",
-      "city_code": null,
-      "contest": "Governor",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
-      "max_change_pp": 6.5,
-      "changes": [
-        {
-          "name": "Aaron Ford (D)",
-          "current_pct": 49.5,
-          "change_pp": 5.0,
-          "direction": "up",
-          "since_date": "2026-09-11",
-          "reference_pct": 44.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Joe Lombardo (R)",
-          "current_pct": 49.5,
-          "change_pp": 6.5,
-          "direction": "down",
-          "since_date": "2026-09-11",
-          "reference_pct": 56.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Aaron Ford (D)",
-          "current_pct": 49.5,
-          "change_pp": 5.0,
-          "direction": "up",
-          "since_date": "2026-09-11",
-          "reference_pct": 44.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Joe Lombardo (R)",
-          "current_pct": 49.5,
-          "change_pp": 6.5,
-          "direction": "down",
-          "since_date": "2026-09-11",
-          "reference_pct": 56.0,
+          "reference_pct": 30.9,
           "change_days": 2,
           "window": "2d"
         }
@@ -244,12 +124,12 @@
       "party": "Republican",
       "election_date": "2026-09-15",
       "election_title": "Democratic Senate Primary",
-      "max_change_pp": 6.5,
+      "max_change_pp": 7.0,
       "changes": [
         {
           "name": "John Shulli",
-          "current_pct": 17.6,
-          "change_pp": 5.9,
+          "current_pct": 17.1,
+          "change_pp": 5.4,
           "direction": "up",
           "since_date": "2026-09-11",
           "reference_pct": 11.7,
@@ -258,8 +138,8 @@
         },
         {
           "name": "Michael Katz",
-          "current_pct": 82.0,
-          "change_pp": 6.5,
+          "current_pct": 81.5,
+          "change_pp": 7.0,
           "direction": "down",
           "since_date": "2026-09-11",
           "reference_pct": 88.5,
@@ -270,8 +150,8 @@
       "prices": [
         {
           "name": "Michael Katz",
-          "current_pct": 82.0,
-          "change_pp": 6.5,
+          "current_pct": 81.5,
+          "change_pp": 7.0,
           "direction": "down",
           "since_date": "2026-09-11",
           "reference_pct": 88.5,
@@ -280,57 +160,13 @@
         },
         {
           "name": "John Shulli",
-          "current_pct": 17.6,
-          "change_pp": 5.9,
+          "current_pct": 17.1,
+          "change_pp": 5.4,
           "direction": "up",
           "since_date": "2026-09-11",
           "reference_pct": 11.7,
           "change_days": 2,
           "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "presidential:NG",
-      "slug": "nigerian-presidential-election-winner-20260602162945585",
-      "category": "presidential",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "NG",
-      "state_code": null,
-      "city_code": null,
-      "contest": "President",
-      "market_label": "Presidential election",
-      "party": null,
-      "election_date": "2027-01-16",
-      "election_title": "General",
-      "max_change_pp": 4.5,
-      "changes": [
-        {
-          "name": "Bola Tinubu",
-          "current_pct": 68.5,
-          "change_pp": 4.5,
-          "direction": "down",
-          "since_date": "2026-09-11",
-          "reference_pct": 73.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Bola Tinubu",
-          "current_pct": 68.5,
-          "change_pp": 4.5,
-          "direction": "down",
-          "since_date": "2026-09-11",
-          "reference_pct": 73.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Peter Obi",
-          "current_pct": 24.0
         }
       ]
     },
@@ -374,49 +210,137 @@
         },
         {
           "name": "CDU",
-          "current_pct": 21.5
+          "current_pct": 22.5
         }
       ]
     },
     {
-      "market_id": "presidential:BR",
-      "slug": "brazil-presidential-election",
-      "category": "presidential",
+      "market_id": "national:SE:Riksdag:prime_minister",
+      "slug": "next-prime-minister-of-sweden",
+      "category": "national",
       "odds_format": "candidates",
       "min_pct": 3,
-      "country_code": "BR",
+      "country_code": "SE",
       "state_code": null,
       "city_code": null,
-      "contest": "President",
-      "market_label": "Presidential election",
+      "contest": "Riksdag",
+      "market_label": "Next Prime Minister",
       "party": null,
-      "election_date": "2026-10-04",
-      "election_title": "General",
+      "election_date": "2026-09-13",
+      "election_title": "Riksdag",
       "max_change_pp": 4.0,
       "changes": [
         {
-          "name": "Luiz Inácio Lula da Silva",
-          "current_pct": 48.5,
+          "name": "Magdalena Andersson",
+          "current_pct": 77.5,
           "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-09-11",
-          "reference_pct": 44.5,
+          "reference_pct": 73.5,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Flávio Bolsonaro",
-          "current_pct": 49.65
-        },
-        {
-          "name": "Luiz Inácio Lula da Silva",
-          "current_pct": 48.5,
+          "name": "Magdalena Andersson",
+          "current_pct": 77.5,
           "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-09-11",
-          "reference_pct": 44.5,
+          "reference_pct": 73.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Ulf Kristersson",
+          "current_pct": 23.0
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:NV",
+      "slug": "nevada-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "NV",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "Joe Lombardo (R)",
+          "current_pct": 52.0,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-11",
+          "reference_pct": 56.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Joe Lombardo (R)",
+          "current_pct": 52.0,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-11",
+          "reference_pct": 56.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Aaron Ford (D)",
+          "current_pct": 48.0
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:TX",
+      "slug": "texas-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "TX",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "James Talarico (D)",
+          "current_pct": 47.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-11",
+          "reference_pct": 51.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Ken Paxton (R)",
+          "current_pct": 51.5
+        },
+        {
+          "name": "James Talarico (D)",
+          "current_pct": 47.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-11",
+          "reference_pct": 51.5,
           "change_days": 2,
           "window": "2d"
         }

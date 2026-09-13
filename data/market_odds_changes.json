@@ -16,14 +16,14 @@
     },
     "brazil-chamber-of-deputies-election-winner": {
       "PL": {
-        "change_pp": 11.5,
+        "change_pp": 10.0,
         "direction": "down",
         "reference_date": "2026-09-11",
         "reference_pct": 68.0,
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 8.45,
+        "change_pp": 9.7,
         "direction": "up",
         "reference_date": "2026-09-11",
         "reference_pct": 30.9,
@@ -32,7 +32,7 @@
     },
     "next-prime-minister-of-new-zealand-174": {
       "Chris Hipkins": {
-        "change_pp": 10.0,
+        "change_pp": 11.0,
         "direction": "down",
         "reference_date": "2026-09-11",
         "reference_pct": 42.5,
@@ -40,49 +40,17 @@
       }
     },
     "next-prime-minister-of-sweden": {
-      "Ulf Kristersson": {
-        "change_pp": 6.0,
-        "direction": "up",
-        "reference_date": "2026-09-11",
-        "reference_pct": 26.5,
-        "window": "2d"
-      },
       "Magdalena Andersson": {
-        "change_pp": 7.0,
-        "direction": "down",
+        "change_pp": 4.0,
+        "direction": "up",
         "reference_date": "2026-09-11",
         "reference_pct": 73.5,
         "window": "2d"
       }
     },
-    "brazil-presidential-election": {
-      "Luiz Inácio Lula da Silva": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-09-11",
-        "reference_pct": 44.5,
-        "window": "2d"
-      }
-    },
-    "nigerian-presidential-election-winner-20260602162945585": {
-      "Bola Tinubu": {
-        "change_pp": 4.5,
-        "direction": "down",
-        "reference_date": "2026-09-11",
-        "reference_pct": 73.0,
-        "window": "2d"
-      }
-    },
     "nevada-governor-winner-2026": {
-      "Aaron Ford (D)": {
-        "change_pp": 5.0,
-        "direction": "up",
-        "reference_date": "2026-09-11",
-        "reference_pct": 44.5,
-        "window": "2d"
-      },
       "Joe Lombardo (R)": {
-        "change_pp": 6.5,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-09-11",
         "reference_pct": 56.0,
@@ -91,17 +59,26 @@
     },
     "delaware-republican-senate-primary-winner": {
       "John Shulli": {
-        "change_pp": 5.9,
+        "change_pp": 5.4,
         "direction": "up",
         "reference_date": "2026-09-11",
         "reference_pct": 11.7,
         "window": "2d"
       },
       "Michael Katz": {
-        "change_pp": 6.5,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-09-11",
         "reference_pct": 88.5,
+        "window": "2d"
+      }
+    },
+    "texas-senate-election-winner": {
+      "James Talarico (D)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-11",
+        "reference_pct": 51.5,
         "window": "2d"
       }
     }
@@ -118,14 +95,14 @@
     },
     "national:BR:National Congress:party_winner": {
       "PL": {
-        "change_pp": 11.5,
+        "change_pp": 10.0,
         "direction": "down",
         "reference_date": "2026-09-11",
         "reference_pct": 68.0,
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 8.45,
+        "change_pp": 9.7,
         "direction": "up",
         "reference_date": "2026-09-11",
         "reference_pct": 30.9,
@@ -134,7 +111,7 @@
     },
     "national:NZ:Parliament:prime_minister": {
       "Chris Hipkins": {
-        "change_pp": 10.0,
+        "change_pp": 11.0,
         "direction": "down",
         "reference_date": "2026-09-11",
         "reference_pct": 42.5,
@@ -142,49 +119,17 @@
       }
     },
     "national:SE:Riksdag:prime_minister": {
-      "Ulf Kristersson": {
-        "change_pp": 6.0,
-        "direction": "up",
-        "reference_date": "2026-09-11",
-        "reference_pct": 26.5,
-        "window": "2d"
-      },
       "Magdalena Andersson": {
-        "change_pp": 7.0,
-        "direction": "down",
+        "change_pp": 4.0,
+        "direction": "up",
         "reference_date": "2026-09-11",
         "reference_pct": 73.5,
         "window": "2d"
       }
     },
-    "presidential:BR": {
-      "Luiz Inácio Lula da Silva": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-09-11",
-        "reference_pct": 44.5,
-        "window": "2d"
-      }
-    },
-    "presidential:NG": {
-      "Bola Tinubu": {
-        "change_pp": 4.5,
-        "direction": "down",
-        "reference_date": "2026-09-11",
-        "reference_pct": 73.0,
-        "window": "2d"
-      }
-    },
     "us-governor:NV": {
-      "Aaron Ford (D)": {
-        "change_pp": 5.0,
-        "direction": "up",
-        "reference_date": "2026-09-11",
-        "reference_pct": 44.5,
-        "window": "2d"
-      },
       "Joe Lombardo (R)": {
-        "change_pp": 6.5,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-09-11",
         "reference_pct": 56.0,
@@ -193,17 +138,26 @@
     },
     "us-primary:DE:Senate:Republican": {
       "John Shulli": {
-        "change_pp": 5.9,
+        "change_pp": 5.4,
         "direction": "up",
         "reference_date": "2026-09-11",
         "reference_pct": 11.7,
         "window": "2d"
       },
       "Michael Katz": {
-        "change_pp": 6.5,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-09-11",
         "reference_pct": 88.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:TX": {
+      "James Talarico (D)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-11",
+        "reference_pct": 51.5,
         "window": "2d"
       }
     }
