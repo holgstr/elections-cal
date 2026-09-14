@@ -6,29 +6,36 @@
   "threshold_pp": 4,
   "by_slug": {
     "berlin-state-election-winner": {
-      "AfD": {
-        "change_pp": 4.35,
+      "CDU": {
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-09-12",
-        "reference_pct": 8.25,
+        "reference_pct": 21.5,
+        "window": "2d"
+      },
+      "Linke": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-09-12",
+        "reference_pct": 68.5,
         "window": "2d"
       }
     },
-    "brazil-chamber-of-deputies-election-winner": {
-      "PL": {
-        "change_pp": 4.5,
+    "mecklenburg-vorpommern-parliamentary-election-winner": {
+      "SPD": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-09-12",
-        "reference_pct": 62.5,
+        "reference_pct": 18.5,
         "window": "2d"
       }
     },
-    "next-prime-minister-of-new-zealand-174": {
-      "Chris Hipkins": {
-        "change_pp": 7.5,
+    "latvian-parliamentary-election-winner": {
+      "AS": {
+        "change_pp": 5.35,
         "direction": "down",
         "reference_date": "2026-09-12",
-        "reference_pct": 39.5,
+        "reference_pct": 89.6,
         "window": "2d"
       }
     },
@@ -40,33 +47,72 @@
         "reference_pct": 19.5,
         "window": "2d"
       }
+    },
+    "oregon-governor-winner-2026": {
+      "Tina Kotek (D)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-09-12",
+        "reference_pct": 84.5,
+        "window": "2d"
+      },
+      "Christine Drazan (R)": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-09-12",
+        "reference_pct": 15.0,
+        "window": "2d"
+      }
+    },
+    "kansas-senate-election-winner": {
+      "Adam Hamilton (D)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-09-12",
+        "reference_pct": 20.5,
+        "window": "2d"
+      },
+      "Roger Marshall (R)": {
+        "change_pp": 6.0,
+        "direction": "down",
+        "reference_date": "2026-09-12",
+        "reference_pct": 79.5,
+        "window": "2d"
+      }
     }
   },
   "by_market_id": {
     "de-state:BE": {
-      "AfD": {
-        "change_pp": 4.35,
+      "CDU": {
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-09-12",
-        "reference_pct": 8.25,
+        "reference_pct": 21.5,
+        "window": "2d"
+      },
+      "Linke": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-09-12",
+        "reference_pct": 68.5,
         "window": "2d"
       }
     },
-    "national:BR:National Congress:party_winner": {
-      "PL": {
-        "change_pp": 4.5,
+    "de-state:MV": {
+      "SPD": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-09-12",
-        "reference_pct": 62.5,
+        "reference_pct": 18.5,
         "window": "2d"
       }
     },
-    "national:NZ:Parliament:prime_minister": {
-      "Chris Hipkins": {
-        "change_pp": 7.5,
+    "national:LV:Parliament:party_winner": {
+      "AS": {
+        "change_pp": 5.35,
         "direction": "down",
         "reference_date": "2026-09-12",
-        "reference_pct": 39.5,
+        "reference_pct": 89.6,
         "window": "2d"
       }
     },
@@ -76,6 +122,38 @@
         "direction": "up",
         "reference_date": "2026-09-12",
         "reference_pct": 19.5,
+        "window": "2d"
+      }
+    },
+    "us-governor:OR": {
+      "Tina Kotek (D)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-09-12",
+        "reference_pct": 84.5,
+        "window": "2d"
+      },
+      "Christine Drazan (R)": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-09-12",
+        "reference_pct": 15.0,
+        "window": "2d"
+      }
+    },
+    "us-senate:KS": {
+      "Adam Hamilton (D)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-09-12",
+        "reference_pct": 20.5,
+        "window": "2d"
+      },
+      "Roger Marshall (R)": {
+        "change_pp": 6.0,
+        "direction": "down",
+        "reference_date": "2026-09-12",
+        "reference_pct": 79.5,
         "window": "2d"
       }
     }

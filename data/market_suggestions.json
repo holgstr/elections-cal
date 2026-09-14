@@ -7,90 +7,102 @@
   "markets_fetched": 82,
   "suggestions": [
     {
-      "market_id": "national:NZ:Parliament:prime_minister",
-      "slug": "next-prime-minister-of-new-zealand-174",
-      "category": "national",
-      "odds_format": "candidates",
+      "market_id": "us-senate:KS",
+      "slug": "kansas-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
       "min_pct": 3,
-      "country_code": "NZ",
-      "state_code": null,
+      "country_code": "US",
+      "state_code": "KS",
       "city_code": null,
-      "contest": "Parliament",
-      "market_label": "Next Prime Minister",
+      "contest": "Senate",
+      "market_label": null,
       "party": null,
-      "election_date": "2026-11-07",
-      "election_title": "Parliament",
-      "max_change_pp": 7.5,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 6.0,
       "changes": [
         {
-          "name": "Chris Hipkins",
-          "current_pct": 32.0,
-          "change_pp": 7.5,
+          "name": "Adam Hamilton (D)",
+          "current_pct": 25.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-09-12",
+          "reference_pct": 20.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Roger Marshall (R)",
+          "current_pct": 73.5,
+          "change_pp": 6.0,
           "direction": "down",
           "since_date": "2026-09-12",
-          "reference_pct": 39.5,
+          "reference_pct": 79.5,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Christopher Luxon",
-          "current_pct": 33.0
-        },
-        {
-          "name": "Chris Hipkins",
-          "current_pct": 32.0,
-          "change_pp": 7.5,
+          "name": "Roger Marshall (R)",
+          "current_pct": 73.5,
+          "change_pp": 6.0,
           "direction": "down",
           "since_date": "2026-09-12",
-          "reference_pct": 39.5,
+          "reference_pct": 79.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Adam Hamilton (D)",
+          "current_pct": 25.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-09-12",
+          "reference_pct": 20.5,
           "change_days": 2,
           "window": "2d"
         }
       ]
     },
     {
-      "market_id": "national:BR:National Congress:party_winner",
-      "slug": "brazil-chamber-of-deputies-election-winner",
+      "market_id": "national:LV:Parliament:party_winner",
+      "slug": "latvian-parliamentary-election-winner",
       "category": "national",
       "odds_format": "party",
       "min_pct": 10,
-      "country_code": "BR",
+      "country_code": "LV",
       "state_code": null,
       "city_code": null,
-      "contest": "National Congress",
-      "market_label": "Chamber of Deputies",
+      "contest": "Parliament",
+      "market_label": "Parliamentary election",
       "party": null,
-      "election_date": "2026-10-04",
-      "election_title": "General",
-      "max_change_pp": 4.5,
+      "election_date": "2026-10-03",
+      "election_title": "Parliament",
+      "max_change_pp": 5.35,
       "changes": [
         {
-          "name": "PL",
-          "current_pct": 58.0,
-          "change_pp": 4.5,
+          "name": "AS",
+          "current_pct": 84.25,
+          "change_pp": 5.35,
           "direction": "down",
           "since_date": "2026-09-12",
-          "reference_pct": 62.5,
+          "reference_pct": 89.6,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "PL",
-          "current_pct": 58.0,
-          "change_pp": 4.5,
+          "name": "AS",
+          "current_pct": 84.25,
+          "change_pp": 5.35,
           "direction": "down",
           "since_date": "2026-09-12",
-          "reference_pct": 62.5,
+          "reference_pct": 89.6,
           "change_days": 2,
           "window": "2d"
-        },
-        {
-          "name": "UPB",
-          "current_pct": 39.4
         }
       ]
     },
@@ -108,15 +120,25 @@
       "party": null,
       "election_date": "2026-09-20",
       "election_title": "State",
-      "max_change_pp": 4.35,
+      "max_change_pp": 5.0,
       "changes": [
         {
-          "name": "AfD",
-          "current_pct": 12.6,
-          "change_pp": 4.35,
+          "name": "CDU",
+          "current_pct": 26.5,
+          "change_pp": 5.0,
           "direction": "up",
           "since_date": "2026-09-12",
-          "reference_pct": 8.25,
+          "reference_pct": 21.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Linke",
+          "current_pct": 63.5,
+          "change_pp": 5.0,
+          "direction": "down",
+          "since_date": "2026-09-12",
+          "reference_pct": 68.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -124,19 +146,125 @@
       "prices": [
         {
           "name": "Linke",
-          "current_pct": 66.5
+          "current_pct": 63.5,
+          "change_pp": 5.0,
+          "direction": "down",
+          "since_date": "2026-09-12",
+          "reference_pct": 68.5,
+          "change_days": 2,
+          "window": "2d"
         },
         {
           "name": "CDU",
-          "current_pct": 21.5
-        },
-        {
-          "name": "AfD",
-          "current_pct": 12.6,
-          "change_pp": 4.35,
+          "current_pct": 26.5,
+          "change_pp": 5.0,
           "direction": "up",
           "since_date": "2026-09-12",
-          "reference_pct": 8.25,
+          "reference_pct": 21.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:OR",
+      "slug": "oregon-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "OR",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 5.0,
+      "changes": [
+        {
+          "name": "Tina Kotek (D)",
+          "current_pct": 89.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-09-12",
+          "reference_pct": 84.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Christine Drazan (R)",
+          "current_pct": 10.5,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-09-12",
+          "reference_pct": 15.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Tina Kotek (D)",
+          "current_pct": 89.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-09-12",
+          "reference_pct": 84.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Christine Drazan (R)",
+          "current_pct": 10.5,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-09-12",
+          "reference_pct": 15.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "de-state:MV",
+      "slug": "mecklenburg-vorpommern-parliamentary-election-winner",
+      "category": "de_state",
+      "odds_format": "party",
+      "min_pct": 10,
+      "country_code": "DE",
+      "state_code": "MV",
+      "city_code": null,
+      "contest": "Landtag",
+      "market_label": "Landtag",
+      "party": null,
+      "election_date": "2026-09-20",
+      "election_title": "State",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "SPD",
+          "current_pct": 14.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-12",
+          "reference_pct": 18.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "AfD",
+          "current_pct": 83.5
+        },
+        {
+          "name": "SPD",
+          "current_pct": 14.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-12",
+          "reference_pct": 18.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -172,7 +300,7 @@
       "prices": [
         {
           "name": "Rob Sand (D)",
-          "current_pct": 76.0
+          "current_pct": 77.0
         },
         {
           "name": "Zach Lahn (R)",
