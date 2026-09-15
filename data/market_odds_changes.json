@@ -7,23 +7,16 @@
   "by_slug": {
     "berlin-state-election-winner": {
       "CDU": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 22.5,
-        "window": "2d"
-      },
-      "Linke": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-09-13",
-        "reference_pct": 67.5,
         "window": "2d"
       }
     },
     "latvian-parliamentary-election-winner": {
       "AS": {
-        "change_pp": 5.2,
+        "change_pp": 5.1,
         "direction": "down",
         "reference_date": "2026-09-13",
         "reference_pct": 89.2,
@@ -32,14 +25,14 @@
     },
     "next-prime-minister-of-new-zealand-174": {
       "Christopher Luxon": {
-        "change_pp": 10.0,
+        "change_pp": 12.5,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 31.0,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 16.5,
+        "change_pp": 11.0,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 31.5,
@@ -48,14 +41,14 @@
     },
     "new-hampshire-governor-winner-2026": {
       "Cinde Warmington (D)": {
-        "change_pp": 5.15,
+        "change_pp": 4.05,
         "direction": "down",
         "reference_date": "2026-09-13",
         "reference_pct": 14.65,
         "window": "2d"
       },
       "Kelly Ayotte (R)": {
-        "change_pp": 4.5,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 85.0,
@@ -64,39 +57,16 @@
     },
     "nevada-governor-winner-2026": {
       "Joe Lombardo (R)": {
-        "change_pp": 5.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-09-13",
         "reference_pct": 52.0,
         "window": "2d"
       }
     },
-    "texas-governor-winner-2026": {
-      "Gina Hinojosa (D)": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-09-13",
-        "reference_pct": 19.0,
-        "window": "2d"
-      },
-      "Greg Abbott (R)": {
-        "change_pp": 4.45,
-        "direction": "up",
-        "reference_date": "2026-09-13",
-        "reference_pct": 80.2,
-        "window": "2d"
-      }
-    },
     "delaware-republican-senate-primary-winner": {
-      "John Shulli": {
-        "change_pp": 5.3,
-        "direction": "down",
-        "reference_date": "2026-09-13",
-        "reference_pct": 17.1,
-        "window": "2d"
-      },
       "Michael Katz": {
-        "change_pp": 7.0,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 81.5,
@@ -110,34 +80,50 @@
         "reference_date": "2026-09-13",
         "reference_pct": 39.5,
         "window": "2d"
+      },
+      "Ashley Hinson (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-13",
+        "reference_pct": 60.5,
+        "window": "2d"
       }
     },
     "kansas-senate-election-winner": {
       "Adam Hamilton (D)": {
-        "change_pp": 4.5,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 21.5,
         "window": "2d"
       },
       "Roger Marshall (R)": {
-        "change_pp": 5.5,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-13",
         "reference_pct": 79.5,
         "window": "2d"
       }
     },
+    "new-hampshire-senate-election-winner": {
+      "Chris Pappas (D)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-13",
+        "reference_pct": 84.5,
+        "window": "2d"
+      }
+    },
     "texas-senate-election-winner": {
       "James Talarico (D)": {
-        "change_pp": 6.0,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 47.5,
         "window": "2d"
       },
       "Ken Paxton (R)": {
-        "change_pp": 4.0,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-09-13",
         "reference_pct": 51.5,
@@ -148,23 +134,16 @@
   "by_market_id": {
     "de-state:BE": {
       "CDU": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 22.5,
-        "window": "2d"
-      },
-      "Linke": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-09-13",
-        "reference_pct": 67.5,
         "window": "2d"
       }
     },
     "national:LV:Parliament:party_winner": {
       "AS": {
-        "change_pp": 5.2,
+        "change_pp": 5.1,
         "direction": "down",
         "reference_date": "2026-09-13",
         "reference_pct": 89.2,
@@ -173,14 +152,14 @@
     },
     "national:NZ:Parliament:prime_minister": {
       "Christopher Luxon": {
-        "change_pp": 10.0,
+        "change_pp": 12.5,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 31.0,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 16.5,
+        "change_pp": 11.0,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 31.5,
@@ -189,14 +168,14 @@
     },
     "us-governor:NH": {
       "Cinde Warmington (D)": {
-        "change_pp": 5.15,
+        "change_pp": 4.05,
         "direction": "down",
         "reference_date": "2026-09-13",
         "reference_pct": 14.65,
         "window": "2d"
       },
       "Kelly Ayotte (R)": {
-        "change_pp": 4.5,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 85.0,
@@ -205,39 +184,16 @@
     },
     "us-governor:NV": {
       "Joe Lombardo (R)": {
-        "change_pp": 5.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-09-13",
         "reference_pct": 52.0,
         "window": "2d"
       }
     },
-    "us-governor:TX": {
-      "Gina Hinojosa (D)": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-09-13",
-        "reference_pct": 19.0,
-        "window": "2d"
-      },
-      "Greg Abbott (R)": {
-        "change_pp": 4.45,
-        "direction": "up",
-        "reference_date": "2026-09-13",
-        "reference_pct": 80.2,
-        "window": "2d"
-      }
-    },
     "us-primary:DE:Senate:Republican": {
-      "John Shulli": {
-        "change_pp": 5.3,
-        "direction": "down",
-        "reference_date": "2026-09-13",
-        "reference_pct": 17.1,
-        "window": "2d"
-      },
       "Michael Katz": {
-        "change_pp": 7.0,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 81.5,
@@ -251,34 +207,50 @@
         "reference_date": "2026-09-13",
         "reference_pct": 39.5,
         "window": "2d"
+      },
+      "Ashley Hinson (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-13",
+        "reference_pct": 60.5,
+        "window": "2d"
       }
     },
     "us-senate:KS": {
       "Adam Hamilton (D)": {
-        "change_pp": 4.5,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 21.5,
         "window": "2d"
       },
       "Roger Marshall (R)": {
-        "change_pp": 5.5,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-13",
         "reference_pct": 79.5,
         "window": "2d"
       }
     },
+    "us-senate:NH": {
+      "Chris Pappas (D)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-13",
+        "reference_pct": 84.5,
+        "window": "2d"
+      }
+    },
     "us-senate:TX": {
       "James Talarico (D)": {
-        "change_pp": 6.0,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-09-13",
         "reference_pct": 47.5,
         "window": "2d"
       },
       "Ken Paxton (R)": {
-        "change_pp": 4.0,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-09-13",
         "reference_pct": 51.5,
