@@ -24,8 +24,8 @@
       "changes": [
         {
           "name": "AfD",
-          "current_pct": 77.0,
-          "change_pp": 6.5,
+          "current_pct": 77.5,
+          "change_pp": 6.0,
           "direction": "down",
           "since_date": "2026-09-14",
           "reference_pct": 83.5,
@@ -46,8 +46,8 @@
       "prices": [
         {
           "name": "AfD",
-          "current_pct": 77.0,
-          "change_pp": 6.5,
+          "current_pct": 77.5,
+          "change_pp": 6.0,
           "direction": "down",
           "since_date": "2026-09-14",
           "reference_pct": 83.5,
@@ -61,6 +61,66 @@
           "direction": "up",
           "since_date": "2026-09-14",
           "reference_pct": 14.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:MI",
+      "slug": "michigan-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "MI",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 6.0,
+      "changes": [
+        {
+          "name": "Abdul El-Sayed (D)",
+          "current_pct": 66.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-09-14",
+          "reference_pct": 61.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Mike Rogers (R)",
+          "current_pct": 33.5,
+          "change_pp": 6.0,
+          "direction": "down",
+          "since_date": "2026-09-14",
+          "reference_pct": 39.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Abdul El-Sayed (D)",
+          "current_pct": 66.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-09-14",
+          "reference_pct": 61.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Mike Rogers (R)",
+          "current_pct": 33.5,
+          "change_pp": 6.0,
+          "direction": "down",
+          "since_date": "2026-09-14",
+          "reference_pct": 39.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -111,46 +171,46 @@
       ]
     },
     {
-      "market_id": "us-governor:NH",
-      "slug": "new-hampshire-governor-winner-2026",
-      "category": "us_governor",
+      "market_id": "de-state:BE",
+      "slug": "berlin-state-election-winner",
+      "category": "de_state",
       "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "NH",
+      "min_pct": 10,
+      "country_code": "DE",
+      "state_code": "BE",
       "city_code": null,
-      "contest": "Governor",
-      "market_label": null,
+      "contest": "Abgeordnetenhaus",
+      "market_label": "Abgeordnetenhaus",
       "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
+      "election_date": "2026-09-20",
+      "election_title": "State",
       "max_change_pp": 4.5,
       "changes": [
         {
-          "name": "Kelly Ayotte (R)",
-          "current_pct": 89.5,
+          "name": "Linke",
+          "current_pct": 68.0,
           "change_pp": 4.5,
           "direction": "up",
           "since_date": "2026-09-14",
-          "reference_pct": 85.0,
+          "reference_pct": 63.5,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Kelly Ayotte (R)",
-          "current_pct": 89.5,
+          "name": "Linke",
+          "current_pct": 68.0,
           "change_pp": 4.5,
           "direction": "up",
           "since_date": "2026-09-14",
-          "reference_pct": 85.0,
+          "reference_pct": 63.5,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "Cinde Warmington (D)",
-          "current_pct": 10.65
+          "name": "CDU",
+          "current_pct": 26.5
         }
       ]
     },
@@ -211,6 +271,50 @@
           "reference_pct": 10.5,
           "change_days": 2,
           "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:NV",
+      "slug": "nevada-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "NV",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "Joe Lombardo (R)",
+          "current_pct": 54.5,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-09-14",
+          "reference_pct": 50.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Joe Lombardo (R)",
+          "current_pct": 54.5,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-09-14",
+          "reference_pct": 50.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Aaron Ford (D)",
+          "current_pct": 45.5
         }
       ]
     },
