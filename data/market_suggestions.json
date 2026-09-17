@@ -20,12 +20,12 @@
       "party": null,
       "election_date": "2026-09-20",
       "election_title": "State",
-      "max_change_pp": 10.0,
+      "max_change_pp": 23.5,
       "changes": [
         {
           "name": "AfD",
-          "current_pct": 74.5,
-          "change_pp": 9.0,
+          "current_pct": 60.5,
+          "change_pp": 23.0,
           "direction": "down",
           "since_date": "2026-09-15",
           "reference_pct": 83.5,
@@ -34,8 +34,8 @@
         },
         {
           "name": "SPD",
-          "current_pct": 25.5,
-          "change_pp": 10.0,
+          "current_pct": 39.0,
+          "change_pp": 23.5,
           "direction": "up",
           "since_date": "2026-09-15",
           "reference_pct": 15.5,
@@ -46,8 +46,8 @@
       "prices": [
         {
           "name": "AfD",
-          "current_pct": 74.5,
-          "change_pp": 9.0,
+          "current_pct": 60.5,
+          "change_pp": 23.0,
           "direction": "down",
           "since_date": "2026-09-15",
           "reference_pct": 83.5,
@@ -56,8 +56,8 @@
         },
         {
           "name": "SPD",
-          "current_pct": 25.5,
-          "change_pp": 10.0,
+          "current_pct": 39.0,
+          "change_pp": 23.5,
           "direction": "up",
           "since_date": "2026-09-15",
           "reference_pct": 15.5,
@@ -80,12 +80,22 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 7.5,
+      "max_change_pp": 10.5,
       "changes": [
         {
+          "name": "Aaron Ford (D)",
+          "current_pct": 43.5,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-09-15",
+          "reference_pct": 48.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
           "name": "Joe Lombardo (R)",
-          "current_pct": 53.5,
-          "change_pp": 7.5,
+          "current_pct": 56.5,
+          "change_pp": 10.5,
           "direction": "up",
           "since_date": "2026-09-15",
           "reference_pct": 46.0,
@@ -96,8 +106,8 @@
       "prices": [
         {
           "name": "Joe Lombardo (R)",
-          "current_pct": 53.5,
-          "change_pp": 7.5,
+          "current_pct": 56.5,
+          "change_pp": 10.5,
           "direction": "up",
           "since_date": "2026-09-15",
           "reference_pct": 46.0,
@@ -106,65 +116,71 @@
         },
         {
           "name": "Aaron Ford (D)",
-          "current_pct": 46.5
+          "current_pct": 43.5,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-09-15",
+          "reference_pct": 48.0,
+          "change_days": 2,
+          "window": "2d"
         }
       ]
     },
     {
-      "market_id": "de-state:BE",
-      "slug": "berlin-state-election-winner",
-      "category": "de_state",
+      "market_id": "us-governor:TX",
+      "slug": "texas-governor-winner-2026",
+      "category": "us_governor",
       "odds_format": "party",
-      "min_pct": 10,
-      "country_code": "DE",
-      "state_code": "BE",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "TX",
       "city_code": null,
-      "contest": "Abgeordnetenhaus",
-      "market_label": "Abgeordnetenhaus",
+      "contest": "Governor",
+      "market_label": null,
       "party": null,
-      "election_date": "2026-09-20",
-      "election_title": "State",
-      "max_change_pp": 5.0,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 6.0,
       "changes": [
         {
-          "name": "CDU",
-          "current_pct": 31.5,
-          "change_pp": 5.0,
+          "name": "Gina Hinojosa (D)",
+          "current_pct": 21.5,
+          "change_pp": 5.5,
           "direction": "up",
           "since_date": "2026-09-15",
-          "reference_pct": 26.5,
+          "reference_pct": 16.0,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "Linke",
-          "current_pct": 61.5,
-          "change_pp": 4.0,
+          "name": "Greg Abbott (R)",
+          "current_pct": 76.9,
+          "change_pp": 6.0,
           "direction": "down",
           "since_date": "2026-09-15",
-          "reference_pct": 65.5,
+          "reference_pct": 82.9,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Linke",
-          "current_pct": 61.5,
-          "change_pp": 4.0,
+          "name": "Greg Abbott (R)",
+          "current_pct": 76.9,
+          "change_pp": 6.0,
           "direction": "down",
           "since_date": "2026-09-15",
-          "reference_pct": 65.5,
+          "reference_pct": 82.9,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "CDU",
-          "current_pct": 31.5,
-          "change_pp": 5.0,
+          "name": "Gina Hinojosa (D)",
+          "current_pct": 21.5,
+          "change_pp": 5.5,
           "direction": "up",
           "since_date": "2026-09-15",
-          "reference_pct": 26.5,
+          "reference_pct": 16.0,
           "change_days": 2,
           "window": "2d"
         }
@@ -184,12 +200,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 5.0,
+      "max_change_pp": 4.5,
       "changes": [
         {
           "name": "Mike Rogers (R)",
-          "current_pct": 34.5,
-          "change_pp": 5.0,
+          "current_pct": 35.0,
+          "change_pp": 4.5,
           "direction": "down",
           "since_date": "2026-09-15",
           "reference_pct": 39.5,
@@ -200,15 +216,59 @@
       "prices": [
         {
           "name": "Abdul El-Sayed (D)",
-          "current_pct": 65.0
+          "current_pct": 64.0
         },
         {
           "name": "Mike Rogers (R)",
-          "current_pct": 34.5,
-          "change_pp": 5.0,
+          "current_pct": 35.0,
+          "change_pp": 4.5,
           "direction": "down",
           "since_date": "2026-09-15",
           "reference_pct": 39.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:AK",
+      "slug": "alaska-governor-election-winner",
+      "category": "us_governor",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "AK",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "Bernadette Wilson",
+          "current_pct": 24.0,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-15",
+          "reference_pct": 28.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Jonathan Kreiss-Tomkins",
+          "current_pct": 70.5
+        },
+        {
+          "name": "Bernadette Wilson",
+          "current_pct": 24.0,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-15",
+          "reference_pct": 28.0,
           "change_days": 2,
           "window": "2d"
         }

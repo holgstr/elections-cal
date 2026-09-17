@@ -5,44 +5,60 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
-    "berlin-state-election-winner": {
-      "CDU": {
-        "change_pp": 5.0,
-        "direction": "up",
-        "reference_date": "2026-09-15",
-        "reference_pct": 26.5,
-        "window": "2d"
-      },
-      "Linke": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-09-15",
-        "reference_pct": 65.5,
-        "window": "2d"
-      }
-    },
     "mecklenburg-vorpommern-parliamentary-election-winner": {
       "AfD": {
-        "change_pp": 9.0,
+        "change_pp": 23.0,
         "direction": "down",
         "reference_date": "2026-09-15",
         "reference_pct": 83.5,
         "window": "2d"
       },
       "SPD": {
-        "change_pp": 10.0,
+        "change_pp": 23.5,
         "direction": "up",
         "reference_date": "2026-09-15",
         "reference_pct": 15.5,
         "window": "2d"
       }
     },
+    "alaska-governor-election-winner": {
+      "Bernadette Wilson": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-15",
+        "reference_pct": 28.0,
+        "window": "2d"
+      }
+    },
     "nevada-governor-winner-2026": {
+      "Aaron Ford (D)": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-09-15",
+        "reference_pct": 48.0,
+        "window": "2d"
+      },
       "Joe Lombardo (R)": {
-        "change_pp": 7.5,
+        "change_pp": 10.5,
         "direction": "up",
         "reference_date": "2026-09-15",
         "reference_pct": 46.0,
+        "window": "2d"
+      }
+    },
+    "texas-governor-winner-2026": {
+      "Gina Hinojosa (D)": {
+        "change_pp": 5.5,
+        "direction": "up",
+        "reference_date": "2026-09-15",
+        "reference_pct": 16.0,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 6.0,
+        "direction": "down",
+        "reference_date": "2026-09-15",
+        "reference_pct": 82.9,
         "window": "2d"
       }
     },
@@ -64,7 +80,7 @@
     },
     "michigan-senate-election-winner": {
       "Mike Rogers (R)": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-09-15",
         "reference_pct": 39.5,
@@ -73,44 +89,60 @@
     }
   },
   "by_market_id": {
-    "de-state:BE": {
-      "CDU": {
-        "change_pp": 5.0,
-        "direction": "up",
-        "reference_date": "2026-09-15",
-        "reference_pct": 26.5,
-        "window": "2d"
-      },
-      "Linke": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-09-15",
-        "reference_pct": 65.5,
-        "window": "2d"
-      }
-    },
     "de-state:MV": {
       "AfD": {
-        "change_pp": 9.0,
+        "change_pp": 23.0,
         "direction": "down",
         "reference_date": "2026-09-15",
         "reference_pct": 83.5,
         "window": "2d"
       },
       "SPD": {
-        "change_pp": 10.0,
+        "change_pp": 23.5,
         "direction": "up",
         "reference_date": "2026-09-15",
         "reference_pct": 15.5,
         "window": "2d"
       }
     },
+    "us-governor:AK": {
+      "Bernadette Wilson": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-15",
+        "reference_pct": 28.0,
+        "window": "2d"
+      }
+    },
     "us-governor:NV": {
+      "Aaron Ford (D)": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-09-15",
+        "reference_pct": 48.0,
+        "window": "2d"
+      },
       "Joe Lombardo (R)": {
-        "change_pp": 7.5,
+        "change_pp": 10.5,
         "direction": "up",
         "reference_date": "2026-09-15",
         "reference_pct": 46.0,
+        "window": "2d"
+      }
+    },
+    "us-governor:TX": {
+      "Gina Hinojosa (D)": {
+        "change_pp": 5.5,
+        "direction": "up",
+        "reference_date": "2026-09-15",
+        "reference_pct": 16.0,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 6.0,
+        "direction": "down",
+        "reference_date": "2026-09-15",
+        "reference_pct": 82.9,
         "window": "2d"
       }
     },
@@ -132,7 +164,7 @@
     },
     "us-senate:MI": {
       "Mike Rogers (R)": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-09-15",
         "reference_pct": 39.5,
