@@ -7,7 +7,7 @@
   "by_slug": {
     "mecklenburg-vorpommern-parliamentary-election-winner": {
       "AfD": {
-        "change_pp": 29.0,
+        "change_pp": 28.0,
         "direction": "down",
         "reference_date": "2026-09-16",
         "reference_pct": 77.5,
@@ -21,6 +21,15 @@
         "window": "2d"
       }
     },
+    "alaska-governor-election-winner": {
+      "Jonathan Kreiss-Tomkins": {
+        "change_pp": 7.55,
+        "direction": "up",
+        "reference_date": "2026-09-16",
+        "reference_pct": 67.35,
+        "window": "2d"
+      }
+    },
     "texas-governor-winner-2026": {
       "Gina Hinojosa (D)": {
         "change_pp": 6.0,
@@ -30,7 +39,7 @@
         "window": "2d"
       },
       "Greg Abbott (R)": {
-        "change_pp": 5.5,
+        "change_pp": 4.4,
         "direction": "down",
         "reference_date": "2026-09-16",
         "reference_pct": 83.05,
@@ -39,17 +48,10 @@
     },
     "kansas-senate-election-winner": {
       "Adam Hamilton (D)": {
-        "change_pp": 10.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-16",
         "reference_pct": 23.5,
-        "window": "2d"
-      },
-      "Roger Marshall (R)": {
-        "change_pp": 8.0,
-        "direction": "down",
-        "reference_date": "2026-09-16",
-        "reference_pct": 74.5,
         "window": "2d"
       }
     },
@@ -66,7 +68,7 @@
   "by_market_id": {
     "de-state:MV": {
       "AfD": {
-        "change_pp": 29.0,
+        "change_pp": 28.0,
         "direction": "down",
         "reference_date": "2026-09-16",
         "reference_pct": 77.5,
@@ -80,6 +82,15 @@
         "window": "2d"
       }
     },
+    "us-governor:AK": {
+      "Jonathan Kreiss-Tomkins": {
+        "change_pp": 7.55,
+        "direction": "up",
+        "reference_date": "2026-09-16",
+        "reference_pct": 67.35,
+        "window": "2d"
+      }
+    },
     "us-governor:TX": {
       "Gina Hinojosa (D)": {
         "change_pp": 6.0,
@@ -89,7 +100,7 @@
         "window": "2d"
       },
       "Greg Abbott (R)": {
-        "change_pp": 5.5,
+        "change_pp": 4.4,
         "direction": "down",
         "reference_date": "2026-09-16",
         "reference_pct": 83.05,
@@ -98,17 +109,10 @@
     },
     "us-senate:KS": {
       "Adam Hamilton (D)": {
-        "change_pp": 10.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-16",
         "reference_pct": 23.5,
-        "window": "2d"
-      },
-      "Roger Marshall (R)": {
-        "change_pp": 8.0,
-        "direction": "down",
-        "reference_date": "2026-09-16",
-        "reference_pct": 74.5,
         "window": "2d"
       }
     },

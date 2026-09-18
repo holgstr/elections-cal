@@ -20,12 +20,12 @@
       "party": null,
       "election_date": "2026-09-20",
       "election_title": "State",
-      "max_change_pp": 29.0,
+      "max_change_pp": 28.0,
       "changes": [
         {
           "name": "AfD",
-          "current_pct": 48.5,
-          "change_pp": 29.0,
+          "current_pct": 49.5,
+          "change_pp": 28.0,
           "direction": "down",
           "since_date": "2026-09-16",
           "reference_pct": 77.5,
@@ -56,8 +56,8 @@
         },
         {
           "name": "AfD",
-          "current_pct": 48.5,
-          "change_pp": 29.0,
+          "current_pct": 49.5,
+          "change_pp": 28.0,
           "direction": "down",
           "since_date": "2026-09-16",
           "reference_pct": 77.5,
@@ -67,62 +67,46 @@
       ]
     },
     {
-      "market_id": "us-senate:KS",
-      "slug": "kansas-senate-election-winner",
-      "category": "us_senate",
-      "odds_format": "party",
+      "market_id": "us-governor:AK",
+      "slug": "alaska-governor-election-winner",
+      "category": "us_governor",
+      "odds_format": "candidates",
       "min_pct": 3,
       "country_code": "US",
-      "state_code": "KS",
+      "state_code": "AK",
       "city_code": null,
-      "contest": "Senate",
+      "contest": "Governor",
       "market_label": null,
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 10.0,
+      "max_change_pp": 7.55,
       "changes": [
         {
-          "name": "Adam Hamilton (D)",
-          "current_pct": 33.5,
-          "change_pp": 10.0,
+          "name": "Jonathan Kreiss-Tomkins",
+          "current_pct": 74.9,
+          "change_pp": 7.55,
           "direction": "up",
           "since_date": "2026-09-16",
-          "reference_pct": 23.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Roger Marshall (R)",
-          "current_pct": 66.5,
-          "change_pp": 8.0,
-          "direction": "down",
-          "since_date": "2026-09-16",
-          "reference_pct": 74.5,
+          "reference_pct": 67.35,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Roger Marshall (R)",
-          "current_pct": 66.5,
-          "change_pp": 8.0,
-          "direction": "down",
+          "name": "Jonathan Kreiss-Tomkins",
+          "current_pct": 74.9,
+          "change_pp": 7.55,
+          "direction": "up",
           "since_date": "2026-09-16",
-          "reference_pct": 74.5,
+          "reference_pct": 67.35,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "Adam Hamilton (D)",
-          "current_pct": 33.5,
-          "change_pp": 10.0,
-          "direction": "up",
-          "since_date": "2026-09-16",
-          "reference_pct": 23.5,
-          "change_days": 2,
-          "window": "2d"
+          "name": "Bernadette Wilson",
+          "current_pct": 23.5
         }
       ]
     },
@@ -154,8 +138,8 @@
         },
         {
           "name": "Greg Abbott (R)",
-          "current_pct": 77.55,
-          "change_pp": 5.5,
+          "current_pct": 78.65,
+          "change_pp": 4.4,
           "direction": "down",
           "since_date": "2026-09-16",
           "reference_pct": 83.05,
@@ -166,8 +150,8 @@
       "prices": [
         {
           "name": "Greg Abbott (R)",
-          "current_pct": 77.55,
-          "change_pp": 5.5,
+          "current_pct": 78.65,
+          "change_pp": 4.4,
           "direction": "down",
           "since_date": "2026-09-16",
           "reference_pct": 83.05,
@@ -181,6 +165,50 @@
           "direction": "up",
           "since_date": "2026-09-16",
           "reference_pct": 16.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:KS",
+      "slug": "kansas-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "KS",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "Adam Hamilton (D)",
+          "current_pct": 27.5,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-09-16",
+          "reference_pct": 23.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Roger Marshall (R)",
+          "current_pct": 72.5
+        },
+        {
+          "name": "Adam Hamilton (D)",
+          "current_pct": 27.5,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-09-16",
+          "reference_pct": 23.5,
           "change_days": 2,
           "window": "2d"
         }
