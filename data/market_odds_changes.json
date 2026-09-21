@@ -7,14 +7,14 @@
   "by_slug": {
     "brazil-chamber-of-deputies-election-winner": {
       "PL": {
-        "change_pp": 5.0,
+        "change_pp": 7.0,
         "direction": "up",
         "reference_date": "2026-09-19",
         "reference_pct": 61.5,
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 8.2,
+        "change_pp": 8.65,
         "direction": "down",
         "reference_date": "2026-09-19",
         "reference_pct": 39.6,
@@ -23,7 +23,7 @@
     },
     "latvian-parliamentary-election-winner": {
       "AS": {
-        "change_pp": 4.4,
+        "change_pp": 7.75,
         "direction": "up",
         "reference_date": "2026-09-19",
         "reference_pct": 86.45,
@@ -32,17 +32,35 @@
     },
     "next-prime-minister-of-new-zealand-174": {
       "Christopher Luxon": {
-        "change_pp": 11.5,
+        "change_pp": 16.5,
         "direction": "up",
         "reference_date": "2026-09-19",
         "reference_pct": 51.5,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 17.0,
+        "change_pp": 15.5,
         "direction": "down",
         "reference_date": "2026-09-19",
         "reference_pct": 45.0,
+        "window": "2d"
+      }
+    },
+    "brazil-presidential-election": {
+      "Flávio Bolsonaro": {
+        "change_pp": 4.1,
+        "direction": "up",
+        "reference_date": "2026-09-19",
+        "reference_pct": 56.75,
+        "window": "2d"
+      }
+    },
+    "alaska-governor-election-winner": {
+      "Jonathan Kreiss-Tomkins": {
+        "change_pp": 4.7,
+        "direction": "up",
+        "reference_date": "2026-09-19",
+        "reference_pct": 78.5,
         "window": "2d"
       }
     },
@@ -78,18 +96,25 @@
         "window": "2d"
       }
     },
-    "ohio-governor-winner-2026": {
-      "Amy Acton (D)": {
+    "iowa-senate-election-winner": {
+      "Josh Turek (D)": {
         "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-09-19",
-        "reference_pct": 56.5,
+        "reference_pct": 39.0,
+        "window": "2d"
+      },
+      "Ashley Hinson (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-19",
+        "reference_pct": 61.5,
         "window": "2d"
       }
     },
     "idaho-senate-election-winner": {
       "Todd Achilles (I)": {
-        "change_pp": 20.95,
+        "change_pp": 21.9,
         "direction": "down",
         "reference_date": "2026-09-19",
         "reference_pct": 25.2,
@@ -100,14 +125,14 @@
   "by_market_id": {
     "national:BR:National Congress:party_winner": {
       "PL": {
-        "change_pp": 5.0,
+        "change_pp": 7.0,
         "direction": "up",
         "reference_date": "2026-09-19",
         "reference_pct": 61.5,
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 8.2,
+        "change_pp": 8.65,
         "direction": "down",
         "reference_date": "2026-09-19",
         "reference_pct": 39.6,
@@ -116,7 +141,7 @@
     },
     "national:LV:Parliament:party_winner": {
       "AS": {
-        "change_pp": 4.4,
+        "change_pp": 7.75,
         "direction": "up",
         "reference_date": "2026-09-19",
         "reference_pct": 86.45,
@@ -125,17 +150,35 @@
     },
     "national:NZ:Parliament:prime_minister": {
       "Christopher Luxon": {
-        "change_pp": 11.5,
+        "change_pp": 16.5,
         "direction": "up",
         "reference_date": "2026-09-19",
         "reference_pct": 51.5,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 17.0,
+        "change_pp": 15.5,
         "direction": "down",
         "reference_date": "2026-09-19",
         "reference_pct": 45.0,
+        "window": "2d"
+      }
+    },
+    "presidential:BR": {
+      "Flávio Bolsonaro": {
+        "change_pp": 4.1,
+        "direction": "up",
+        "reference_date": "2026-09-19",
+        "reference_pct": 56.75,
+        "window": "2d"
+      }
+    },
+    "us-governor:AK": {
+      "Jonathan Kreiss-Tomkins": {
+        "change_pp": 4.7,
+        "direction": "up",
+        "reference_date": "2026-09-19",
+        "reference_pct": 78.5,
         "window": "2d"
       }
     },
@@ -171,18 +214,25 @@
         "window": "2d"
       }
     },
-    "us-governor:OH": {
-      "Amy Acton (D)": {
+    "us-senate:IA": {
+      "Josh Turek (D)": {
         "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-09-19",
-        "reference_pct": 56.5,
+        "reference_pct": 39.0,
+        "window": "2d"
+      },
+      "Ashley Hinson (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-19",
+        "reference_pct": 61.5,
         "window": "2d"
       }
     },
     "us-senate:ID": {
       "Todd Achilles (I)": {
-        "change_pp": 20.95,
+        "change_pp": 21.9,
         "direction": "down",
         "reference_date": "2026-09-19",
         "reference_pct": 25.2,
