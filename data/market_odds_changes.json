@@ -7,30 +7,39 @@
   "by_slug": {
     "brazil-chamber-of-deputies-election-winner": {
       "PL": {
-        "change_pp": 6.5,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-09-20",
         "reference_pct": 61.0,
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 8.45,
+        "change_pp": 8.85,
         "direction": "down",
         "reference_date": "2026-09-20",
         "reference_pct": 39.5,
         "window": "2d"
       }
     },
+    "latvian-parliamentary-election-winner": {
+      "AS": {
+        "change_pp": 4.65,
+        "direction": "up",
+        "reference_date": "2026-09-20",
+        "reference_pct": 87.25,
+        "window": "2d"
+      }
+    },
     "next-prime-minister-of-new-zealand-174": {
       "Christopher Luxon": {
-        "change_pp": 10.5,
+        "change_pp": 12.0,
         "direction": "up",
         "reference_date": "2026-09-20",
         "reference_pct": 53.0,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 8.5,
+        "change_pp": 9.5,
         "direction": "down",
         "reference_date": "2026-09-20",
         "reference_pct": 41.0,
@@ -43,6 +52,22 @@
         "direction": "up",
         "reference_date": "2026-09-20",
         "reference_pct": 11.0,
+        "window": "2d"
+      }
+    },
+    "florida-governor-winner-2026": {
+      "David Jolly (D)": {
+        "change_pp": 6.0,
+        "direction": "up",
+        "reference_date": "2026-09-20",
+        "reference_pct": 20.5,
+        "window": "2d"
+      },
+      "Byron Donalds (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-09-20",
+        "reference_pct": 79.5,
         "window": "2d"
       }
     },
@@ -62,25 +87,16 @@
         "window": "2d"
       }
     },
-    "vermont-governor-winner-2026": {
-      "Phil Scott (R)": {
-        "change_pp": 4.5,
-        "direction": "up",
-        "reference_date": "2026-09-20",
-        "reference_pct": 89.0,
-        "window": "2d"
-      }
-    },
     "alaska-senate-election-winner": {
       "Sen. Dan Sullivan": {
-        "change_pp": 4.0,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-09-20",
         "reference_pct": 26.5,
         "window": "2d"
       },
       "Mary Peltola": {
-        "change_pp": 4.5,
+        "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-09-20",
         "reference_pct": 74.0,
@@ -89,14 +105,14 @@
     },
     "iowa-senate-election-winner": {
       "Josh Turek (D)": {
-        "change_pp": 8.5,
+        "change_pp": 10.0,
         "direction": "up",
         "reference_date": "2026-09-20",
         "reference_pct": 39.5,
         "window": "2d"
       },
       "Ashley Hinson (R)": {
-        "change_pp": 9.5,
+        "change_pp": 10.5,
         "direction": "down",
         "reference_date": "2026-09-20",
         "reference_pct": 61.0,
@@ -119,9 +135,32 @@
         "window": "2d"
       }
     },
+    "michigan-senate-election-winner": {
+      "Abdul El-Sayed (D)": {
+        "change_pp": 7.0,
+        "direction": "up",
+        "reference_date": "2026-09-20",
+        "reference_pct": 66.5,
+        "window": "2d"
+      },
+      "Mike Rogers (R)": {
+        "change_pp": 7.0,
+        "direction": "down",
+        "reference_date": "2026-09-20",
+        "reference_pct": 33.5,
+        "window": "2d"
+      }
+    },
     "new-hampshire-senate-election-winner": {
-      "John E. Sununu (R)": {
+      "Chris Pappas (D)": {
         "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-09-20",
+        "reference_pct": 80.5,
+        "window": "2d"
+      },
+      "John E. Sununu (R)": {
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-20",
         "reference_pct": 19.5,
@@ -132,30 +171,39 @@
   "by_market_id": {
     "national:BR:National Congress:party_winner": {
       "PL": {
-        "change_pp": 6.5,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-09-20",
         "reference_pct": 61.0,
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 8.45,
+        "change_pp": 8.85,
         "direction": "down",
         "reference_date": "2026-09-20",
         "reference_pct": 39.5,
         "window": "2d"
       }
     },
+    "national:LV:Parliament:party_winner": {
+      "AS": {
+        "change_pp": 4.65,
+        "direction": "up",
+        "reference_date": "2026-09-20",
+        "reference_pct": 87.25,
+        "window": "2d"
+      }
+    },
     "national:NZ:Parliament:prime_minister": {
       "Christopher Luxon": {
-        "change_pp": 10.5,
+        "change_pp": 12.0,
         "direction": "up",
         "reference_date": "2026-09-20",
         "reference_pct": 53.0,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 8.5,
+        "change_pp": 9.5,
         "direction": "down",
         "reference_date": "2026-09-20",
         "reference_pct": 41.0,
@@ -168,6 +216,22 @@
         "direction": "up",
         "reference_date": "2026-09-20",
         "reference_pct": 11.0,
+        "window": "2d"
+      }
+    },
+    "us-governor:FL": {
+      "David Jolly (D)": {
+        "change_pp": 6.0,
+        "direction": "up",
+        "reference_date": "2026-09-20",
+        "reference_pct": 20.5,
+        "window": "2d"
+      },
+      "Byron Donalds (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-09-20",
+        "reference_pct": 79.5,
         "window": "2d"
       }
     },
@@ -187,25 +251,16 @@
         "window": "2d"
       }
     },
-    "us-governor:VT": {
-      "Phil Scott (R)": {
-        "change_pp": 4.5,
-        "direction": "up",
-        "reference_date": "2026-09-20",
-        "reference_pct": 89.0,
-        "window": "2d"
-      }
-    },
     "us-senate:AK": {
       "Sen. Dan Sullivan": {
-        "change_pp": 4.0,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-09-20",
         "reference_pct": 26.5,
         "window": "2d"
       },
       "Mary Peltola": {
-        "change_pp": 4.5,
+        "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-09-20",
         "reference_pct": 74.0,
@@ -214,14 +269,14 @@
     },
     "us-senate:IA": {
       "Josh Turek (D)": {
-        "change_pp": 8.5,
+        "change_pp": 10.0,
         "direction": "up",
         "reference_date": "2026-09-20",
         "reference_pct": 39.5,
         "window": "2d"
       },
       "Ashley Hinson (R)": {
-        "change_pp": 9.5,
+        "change_pp": 10.5,
         "direction": "down",
         "reference_date": "2026-09-20",
         "reference_pct": 61.0,
@@ -244,9 +299,32 @@
         "window": "2d"
       }
     },
+    "us-senate:MI": {
+      "Abdul El-Sayed (D)": {
+        "change_pp": 7.0,
+        "direction": "up",
+        "reference_date": "2026-09-20",
+        "reference_pct": 66.5,
+        "window": "2d"
+      },
+      "Mike Rogers (R)": {
+        "change_pp": 7.0,
+        "direction": "down",
+        "reference_date": "2026-09-20",
+        "reference_pct": 33.5,
+        "window": "2d"
+      }
+    },
     "us-senate:NH": {
-      "John E. Sununu (R)": {
+      "Chris Pappas (D)": {
         "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-09-20",
+        "reference_pct": 80.5,
+        "window": "2d"
+      },
+      "John E. Sununu (R)": {
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-20",
         "reference_pct": 19.5,
