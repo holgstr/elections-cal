@@ -14,7 +14,7 @@
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 4.8,
+        "change_pp": 4.65,
         "direction": "up",
         "reference_date": "2026-09-22",
         "reference_pct": 30.65,
@@ -23,7 +23,7 @@
     },
     "next-prime-minister-of-new-zealand-174": {
       "Christopher Luxon": {
-        "change_pp": 7.5,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-09-22",
         "reference_pct": 65.0,
@@ -39,7 +39,7 @@
     },
     "alaska-governor-election-winner": {
       "Jonathan Kreiss-Tomkins": {
-        "change_pp": 6.65,
+        "change_pp": 7.05,
         "direction": "down",
         "reference_date": "2026-09-22",
         "reference_pct": 83.2,
@@ -62,12 +62,53 @@
         "window": "2d"
       }
     },
+    "kansas-governor-winner-2026": {
+      "Ty Masterson (R)": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-09-22",
+        "reference_pct": 69.5,
+        "window": "2d"
+      }
+    },
+    "ohio-governor-winner-2026": {
+      "Vivek Ramaswamy (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-09-22",
+        "reference_pct": 41.5,
+        "window": "2d"
+      }
+    },
     "texas-governor-winner-2026": {
       "Gina Hinojosa (D)": {
         "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-22",
         "reference_pct": 21.5,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 4.65,
+        "direction": "down",
+        "reference_date": "2026-09-22",
+        "reference_pct": 78.95,
+        "window": "2d"
+      }
+    },
+    "vermont-governor-winner-2026": {
+      "Amanda Janoo (D)": {
+        "change_pp": 11.1,
+        "direction": "up",
+        "reference_date": "2026-09-22",
+        "reference_pct": 5.6,
+        "window": "2d"
+      },
+      "Phil Scott (R)": {
+        "change_pp": 10.5,
+        "direction": "down",
+        "reference_date": "2026-09-22",
+        "reference_pct": 92.0,
         "window": "2d"
       }
     },
@@ -87,19 +128,19 @@
         "window": "2d"
       }
     },
-    "maine-senate-election-winner": {
-      "Troy Jackson (D)": {
-        "change_pp": 6.5,
+    "iowa-senate-election-winner": {
+      "Josh Turek (D)": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-09-22",
-        "reference_pct": 73.0,
+        "reference_pct": 49.5,
         "window": "2d"
       },
-      "Susan Collins (R)": {
-        "change_pp": 7.5,
+      "Ashley Hinson (R)": {
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-09-22",
-        "reference_pct": 27.0,
+        "reference_pct": 50.5,
         "window": "2d"
       }
     }
@@ -114,7 +155,7 @@
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 4.8,
+        "change_pp": 4.65,
         "direction": "up",
         "reference_date": "2026-09-22",
         "reference_pct": 30.65,
@@ -123,7 +164,7 @@
     },
     "national:NZ:Parliament:prime_minister": {
       "Christopher Luxon": {
-        "change_pp": 7.5,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-09-22",
         "reference_pct": 65.0,
@@ -139,7 +180,7 @@
     },
     "us-governor:AK": {
       "Jonathan Kreiss-Tomkins": {
-        "change_pp": 6.65,
+        "change_pp": 7.05,
         "direction": "down",
         "reference_date": "2026-09-22",
         "reference_pct": 83.2,
@@ -162,12 +203,53 @@
         "window": "2d"
       }
     },
+    "us-governor:KS": {
+      "Ty Masterson (R)": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-09-22",
+        "reference_pct": 69.5,
+        "window": "2d"
+      }
+    },
+    "us-governor:OH": {
+      "Vivek Ramaswamy (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-09-22",
+        "reference_pct": 41.5,
+        "window": "2d"
+      }
+    },
     "us-governor:TX": {
       "Gina Hinojosa (D)": {
         "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-22",
         "reference_pct": 21.5,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 4.65,
+        "direction": "down",
+        "reference_date": "2026-09-22",
+        "reference_pct": 78.95,
+        "window": "2d"
+      }
+    },
+    "us-governor:VT": {
+      "Amanda Janoo (D)": {
+        "change_pp": 11.1,
+        "direction": "up",
+        "reference_date": "2026-09-22",
+        "reference_pct": 5.6,
+        "window": "2d"
+      },
+      "Phil Scott (R)": {
+        "change_pp": 10.5,
+        "direction": "down",
+        "reference_date": "2026-09-22",
+        "reference_pct": 92.0,
         "window": "2d"
       }
     },
@@ -187,19 +269,19 @@
         "window": "2d"
       }
     },
-    "us-senate:ME": {
-      "Troy Jackson (D)": {
-        "change_pp": 6.5,
+    "us-senate:IA": {
+      "Josh Turek (D)": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-09-22",
-        "reference_pct": 73.0,
+        "reference_pct": 49.5,
         "window": "2d"
       },
-      "Susan Collins (R)": {
-        "change_pp": 7.5,
+      "Ashley Hinson (R)": {
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-09-22",
-        "reference_pct": 27.0,
+        "reference_pct": 50.5,
         "window": "2d"
       }
     }
