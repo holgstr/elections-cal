@@ -5,18 +5,9 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
-    "next-prime-minister-of-new-zealand-174": {
-      "Chris Hipkins": {
-        "change_pp": 6.0,
-        "direction": "up",
-        "reference_date": "2026-09-23",
-        "reference_pct": 37.0,
-        "window": "2d"
-      }
-    },
     "alaska-governor-election-winner": {
       "Jonathan Kreiss-Tomkins": {
-        "change_pp": 6.2,
+        "change_pp": 5.6,
         "direction": "down",
         "reference_date": "2026-09-23",
         "reference_pct": 82.9,
@@ -25,10 +16,17 @@
     },
     "florida-governor-winner-2026": {
       "David Jolly (D)": {
-        "change_pp": 5.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-09-23",
         "reference_pct": 27.5,
+        "window": "2d"
+      },
+      "Byron Donalds (R)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-09-23",
+        "reference_pct": 72.5,
         "window": "2d"
       }
     },
@@ -43,7 +41,7 @@
     },
     "new-hampshire-governor-winner-2026": {
       "Cinde Warmington (D)": {
-        "change_pp": 4.7,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-09-23",
         "reference_pct": 9.55,
@@ -52,14 +50,14 @@
     },
     "vermont-governor-winner-2026": {
       "Amanda Janoo (D)": {
-        "change_pp": 13.5,
+        "change_pp": 10.45,
         "direction": "up",
         "reference_date": "2026-09-23",
         "reference_pct": 6.05,
         "window": "2d"
       },
       "Phil Scott (R)": {
-        "change_pp": 12.0,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-09-23",
         "reference_pct": 92.0,
@@ -68,7 +66,7 @@
     },
     "alaska-senate-election-winner": {
       "Sen. Dan Sullivan": {
-        "change_pp": 6.0,
+        "change_pp": 7.0,
         "direction": "up",
         "reference_date": "2026-09-23",
         "reference_pct": 21.5,
@@ -91,16 +89,32 @@
         "window": "2d"
       }
     },
+    "idaho-senate-election-winner": {
+      "Jim Risch (R)": {
+        "change_pp": 5.25,
+        "direction": "down",
+        "reference_date": "2026-09-23",
+        "reference_pct": 94.55,
+        "window": "2d"
+      },
+      "Todd Achilles (I)": {
+        "change_pp": 5.15,
+        "direction": "up",
+        "reference_date": "2026-09-23",
+        "reference_pct": 4.95,
+        "window": "2d"
+      }
+    },
     "maine-senate-election-winner": {
       "Troy Jackson (D)": {
-        "change_pp": 4.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-09-23",
         "reference_pct": 72.5,
         "window": "2d"
       },
       "Susan Collins (R)": {
-        "change_pp": 5.0,
+        "change_pp": 7.0,
         "direction": "up",
         "reference_date": "2026-09-23",
         "reference_pct": 26.5,
@@ -109,18 +123,9 @@
     }
   },
   "by_market_id": {
-    "national:NZ:Parliament:prime_minister": {
-      "Chris Hipkins": {
-        "change_pp": 6.0,
-        "direction": "up",
-        "reference_date": "2026-09-23",
-        "reference_pct": 37.0,
-        "window": "2d"
-      }
-    },
     "us-governor:AK": {
       "Jonathan Kreiss-Tomkins": {
-        "change_pp": 6.2,
+        "change_pp": 5.6,
         "direction": "down",
         "reference_date": "2026-09-23",
         "reference_pct": 82.9,
@@ -129,10 +134,17 @@
     },
     "us-governor:FL": {
       "David Jolly (D)": {
-        "change_pp": 5.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-09-23",
         "reference_pct": 27.5,
+        "window": "2d"
+      },
+      "Byron Donalds (R)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-09-23",
+        "reference_pct": 72.5,
         "window": "2d"
       }
     },
@@ -147,7 +159,7 @@
     },
     "us-governor:NH": {
       "Cinde Warmington (D)": {
-        "change_pp": 4.7,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-09-23",
         "reference_pct": 9.55,
@@ -156,14 +168,14 @@
     },
     "us-governor:VT": {
       "Amanda Janoo (D)": {
-        "change_pp": 13.5,
+        "change_pp": 10.45,
         "direction": "up",
         "reference_date": "2026-09-23",
         "reference_pct": 6.05,
         "window": "2d"
       },
       "Phil Scott (R)": {
-        "change_pp": 12.0,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-09-23",
         "reference_pct": 92.0,
@@ -172,7 +184,7 @@
     },
     "us-senate:AK": {
       "Sen. Dan Sullivan": {
-        "change_pp": 6.0,
+        "change_pp": 7.0,
         "direction": "up",
         "reference_date": "2026-09-23",
         "reference_pct": 21.5,
@@ -195,16 +207,32 @@
         "window": "2d"
       }
     },
+    "us-senate:ID": {
+      "Jim Risch (R)": {
+        "change_pp": 5.25,
+        "direction": "down",
+        "reference_date": "2026-09-23",
+        "reference_pct": 94.55,
+        "window": "2d"
+      },
+      "Todd Achilles (I)": {
+        "change_pp": 5.15,
+        "direction": "up",
+        "reference_date": "2026-09-23",
+        "reference_pct": 4.95,
+        "window": "2d"
+      }
+    },
     "us-senate:ME": {
       "Troy Jackson (D)": {
-        "change_pp": 4.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-09-23",
         "reference_pct": 72.5,
         "window": "2d"
       },
       "Susan Collins (R)": {
-        "change_pp": 5.0,
+        "change_pp": 7.0,
         "direction": "up",
         "reference_date": "2026-09-23",
         "reference_pct": 26.5,

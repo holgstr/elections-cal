@@ -20,12 +20,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 13.5,
+      "max_change_pp": 10.45,
       "changes": [
         {
           "name": "Amanda Janoo (D)",
-          "current_pct": 19.55,
-          "change_pp": 13.5,
+          "current_pct": 16.5,
+          "change_pp": 10.45,
           "direction": "up",
           "since_date": "2026-09-23",
           "reference_pct": 6.05,
@@ -34,8 +34,8 @@
         },
         {
           "name": "Phil Scott (R)",
-          "current_pct": 80.0,
-          "change_pp": 12.0,
+          "current_pct": 83.5,
+          "change_pp": 8.5,
           "direction": "down",
           "since_date": "2026-09-23",
           "reference_pct": 92.0,
@@ -46,8 +46,8 @@
       "prices": [
         {
           "name": "Phil Scott (R)",
-          "current_pct": 80.0,
-          "change_pp": 12.0,
+          "current_pct": 83.5,
+          "change_pp": 8.5,
           "direction": "down",
           "since_date": "2026-09-23",
           "reference_pct": 92.0,
@@ -56,99 +56,11 @@
         },
         {
           "name": "Amanda Janoo (D)",
-          "current_pct": 19.55,
-          "change_pp": 13.5,
+          "current_pct": 16.5,
+          "change_pp": 10.45,
           "direction": "up",
           "since_date": "2026-09-23",
           "reference_pct": 6.05,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "us-governor:AK",
-      "slug": "alaska-governor-election-winner",
-      "category": "us_governor",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "AK",
-      "city_code": null,
-      "contest": "Governor",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
-      "max_change_pp": 6.2,
-      "changes": [
-        {
-          "name": "Jonathan Kreiss-Tomkins",
-          "current_pct": 76.7,
-          "change_pp": 6.2,
-          "direction": "down",
-          "since_date": "2026-09-23",
-          "reference_pct": 82.9,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Jonathan Kreiss-Tomkins",
-          "current_pct": 76.7,
-          "change_pp": 6.2,
-          "direction": "down",
-          "since_date": "2026-09-23",
-          "reference_pct": 82.9,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Bernadette Wilson",
-          "current_pct": 18.5
-        }
-      ]
-    },
-    {
-      "market_id": "national:NZ:Parliament:prime_minister",
-      "slug": "next-prime-minister-of-new-zealand-174",
-      "category": "national",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "NZ",
-      "state_code": null,
-      "city_code": null,
-      "contest": "Parliament",
-      "market_label": "Next Prime Minister",
-      "party": null,
-      "election_date": "2026-11-07",
-      "election_title": "Parliament",
-      "max_change_pp": 6.0,
-      "changes": [
-        {
-          "name": "Chris Hipkins",
-          "current_pct": 43.0,
-          "change_pp": 6.0,
-          "direction": "up",
-          "since_date": "2026-09-23",
-          "reference_pct": 37.0,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Christopher Luxon",
-          "current_pct": 53.0
-        },
-        {
-          "name": "Chris Hipkins",
-          "current_pct": 43.0,
-          "change_pp": 6.0,
-          "direction": "up",
-          "since_date": "2026-09-23",
-          "reference_pct": 37.0,
           "change_days": 2,
           "window": "2d"
         }
@@ -168,12 +80,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 6.0,
+      "max_change_pp": 7.0,
       "changes": [
         {
           "name": "Sen. Dan Sullivan",
-          "current_pct": 27.5,
-          "change_pp": 6.0,
+          "current_pct": 28.5,
+          "change_pp": 7.0,
           "direction": "up",
           "since_date": "2026-09-23",
           "reference_pct": 21.5,
@@ -204,11 +116,71 @@
         },
         {
           "name": "Sen. Dan Sullivan",
-          "current_pct": 27.5,
-          "change_pp": 6.0,
+          "current_pct": 28.5,
+          "change_pp": 7.0,
           "direction": "up",
           "since_date": "2026-09-23",
           "reference_pct": 21.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:ME",
+      "slug": "maine-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "ME",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 7.0,
+      "changes": [
+        {
+          "name": "Troy Jackson (D)",
+          "current_pct": 66.5,
+          "change_pp": 6.0,
+          "direction": "down",
+          "since_date": "2026-09-23",
+          "reference_pct": 72.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Susan Collins (R)",
+          "current_pct": 33.5,
+          "change_pp": 7.0,
+          "direction": "up",
+          "since_date": "2026-09-23",
+          "reference_pct": 26.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Troy Jackson (D)",
+          "current_pct": 66.5,
+          "change_pp": 6.0,
+          "direction": "down",
+          "since_date": "2026-09-23",
+          "reference_pct": 72.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Susan Collins (R)",
+          "current_pct": 33.5,
+          "change_pp": 7.0,
+          "direction": "up",
+          "since_date": "2026-09-23",
+          "reference_pct": 26.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -228,15 +200,25 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 5.0,
+      "max_change_pp": 6.0,
       "changes": [
         {
           "name": "David Jolly (D)",
-          "current_pct": 22.5,
-          "change_pp": 5.0,
+          "current_pct": 21.5,
+          "change_pp": 6.0,
           "direction": "down",
           "since_date": "2026-09-23",
           "reference_pct": 27.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Byron Donalds (R)",
+          "current_pct": 77.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-09-23",
+          "reference_pct": 72.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -244,15 +226,125 @@
       "prices": [
         {
           "name": "Byron Donalds (R)",
-          "current_pct": 76.0
+          "current_pct": 77.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-09-23",
+          "reference_pct": 72.5,
+          "change_days": 2,
+          "window": "2d"
         },
         {
           "name": "David Jolly (D)",
-          "current_pct": 22.5,
-          "change_pp": 5.0,
+          "current_pct": 21.5,
+          "change_pp": 6.0,
           "direction": "down",
           "since_date": "2026-09-23",
           "reference_pct": 27.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:AK",
+      "slug": "alaska-governor-election-winner",
+      "category": "us_governor",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "AK",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 5.6,
+      "changes": [
+        {
+          "name": "Jonathan Kreiss-Tomkins",
+          "current_pct": 77.3,
+          "change_pp": 5.6,
+          "direction": "down",
+          "since_date": "2026-09-23",
+          "reference_pct": 82.9,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Jonathan Kreiss-Tomkins",
+          "current_pct": 77.3,
+          "change_pp": 5.6,
+          "direction": "down",
+          "since_date": "2026-09-23",
+          "reference_pct": 82.9,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Bernadette Wilson",
+          "current_pct": 19.0
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:ID",
+      "slug": "idaho-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "ID",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 5.25,
+      "changes": [
+        {
+          "name": "Jim Risch (R)",
+          "current_pct": 89.3,
+          "change_pp": 5.25,
+          "direction": "down",
+          "since_date": "2026-09-23",
+          "reference_pct": 94.55,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Todd Achilles (I)",
+          "current_pct": 10.1,
+          "change_pp": 5.15,
+          "direction": "up",
+          "since_date": "2026-09-23",
+          "reference_pct": 4.95,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Jim Risch (R)",
+          "current_pct": 89.3,
+          "change_pp": 5.25,
+          "direction": "down",
+          "since_date": "2026-09-23",
+          "reference_pct": 94.55,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Todd Achilles (I)",
+          "current_pct": 10.1,
+          "change_pp": 5.15,
+          "direction": "up",
+          "since_date": "2026-09-23",
+          "reference_pct": 4.95,
           "change_days": 2,
           "window": "2d"
         }
@@ -298,111 +390,7 @@
         },
         {
           "name": "Josh Turek (D)",
-          "current_pct": 44.5
-        }
-      ]
-    },
-    {
-      "market_id": "us-senate:ME",
-      "slug": "maine-senate-election-winner",
-      "category": "us_senate",
-      "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "ME",
-      "city_code": null,
-      "contest": "Senate",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
-      "max_change_pp": 5.0,
-      "changes": [
-        {
-          "name": "Troy Jackson (D)",
-          "current_pct": 68.5,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-09-23",
-          "reference_pct": 72.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Susan Collins (R)",
-          "current_pct": 31.5,
-          "change_pp": 5.0,
-          "direction": "up",
-          "since_date": "2026-09-23",
-          "reference_pct": 26.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Troy Jackson (D)",
-          "current_pct": 68.5,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-09-23",
-          "reference_pct": 72.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Susan Collins (R)",
-          "current_pct": 31.5,
-          "change_pp": 5.0,
-          "direction": "up",
-          "since_date": "2026-09-23",
-          "reference_pct": 26.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "us-governor:NH",
-      "slug": "new-hampshire-governor-winner-2026",
-      "category": "us_governor",
-      "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "NH",
-      "city_code": null,
-      "contest": "Governor",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
-      "max_change_pp": 4.7,
-      "changes": [
-        {
-          "name": "Cinde Warmington (D)",
-          "current_pct": 4.85,
-          "change_pp": 4.7,
-          "direction": "down",
-          "since_date": "2026-09-23",
-          "reference_pct": 9.55,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Kelly Ayotte (R)",
-          "current_pct": 94.0
-        },
-        {
-          "name": "Cinde Warmington (D)",
-          "current_pct": 4.85,
-          "change_pp": 4.7,
-          "direction": "down",
-          "since_date": "2026-09-23",
-          "reference_pct": 9.55,
-          "change_days": 2,
-          "window": "2d"
+          "current_pct": 44.0
         }
       ]
     },
@@ -436,7 +424,7 @@
       "prices": [
         {
           "name": "Keisha Lance Bottoms (D)",
-          "current_pct": 55.5
+          "current_pct": 54.5
         },
         {
           "name": "Rick Jackson (R)",
@@ -445,6 +433,50 @@
           "direction": "up",
           "since_date": "2026-09-23",
           "reference_pct": 41.0,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:NH",
+      "slug": "new-hampshire-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "NH",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.5,
+      "changes": [
+        {
+          "name": "Cinde Warmington (D)",
+          "current_pct": 5.05,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-09-23",
+          "reference_pct": 9.55,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Kelly Ayotte (R)",
+          "current_pct": 93.5
+        },
+        {
+          "name": "Cinde Warmington (D)",
+          "current_pct": 5.05,
+          "change_pp": 4.5,
+          "direction": "down",
+          "since_date": "2026-09-23",
+          "reference_pct": 9.55,
           "change_days": 2,
           "window": "2d"
         }
