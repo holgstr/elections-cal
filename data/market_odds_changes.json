@@ -7,7 +7,7 @@
   "by_slug": {
     "new-hampshire-governor-winner-2026": {
       "Cinde Warmington (D)": {
-        "change_pp": 4.8,
+        "change_pp": 4.85,
         "direction": "down",
         "reference_date": "2026-09-24",
         "reference_pct": 9.45,
@@ -23,16 +23,25 @@
         "window": "2d"
       },
       "Greg Abbott (R)": {
-        "change_pp": 5.05,
+        "change_pp": 5.15,
         "direction": "up",
         "reference_date": "2026-09-24",
         "reference_pct": 74.3,
         "window": "2d"
       }
     },
+    "iowa-senate-election-winner": {
+      "Josh Turek (D)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-24",
+        "reference_pct": 45.5,
+        "window": "2d"
+      }
+    },
     "idaho-senate-election-winner": {
       "Jim Risch (R)": {
-        "change_pp": 4.5,
+        "change_pp": 4.4,
         "direction": "down",
         "reference_date": "2026-09-24",
         "reference_pct": 94.6,
@@ -53,13 +62,20 @@
         "reference_date": "2026-09-24",
         "reference_pct": 69.5,
         "window": "2d"
+      },
+      "Susan Collins (R)": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-09-24",
+        "reference_pct": 30.5,
+        "window": "2d"
       }
     }
   },
   "by_market_id": {
     "us-governor:NH": {
       "Cinde Warmington (D)": {
-        "change_pp": 4.8,
+        "change_pp": 4.85,
         "direction": "down",
         "reference_date": "2026-09-24",
         "reference_pct": 9.45,
@@ -75,16 +91,25 @@
         "window": "2d"
       },
       "Greg Abbott (R)": {
-        "change_pp": 5.05,
+        "change_pp": 5.15,
         "direction": "up",
         "reference_date": "2026-09-24",
         "reference_pct": 74.3,
         "window": "2d"
       }
     },
+    "us-senate:IA": {
+      "Josh Turek (D)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-24",
+        "reference_pct": 45.5,
+        "window": "2d"
+      }
+    },
     "us-senate:ID": {
       "Jim Risch (R)": {
-        "change_pp": 4.5,
+        "change_pp": 4.4,
         "direction": "down",
         "reference_date": "2026-09-24",
         "reference_pct": 94.6,
@@ -104,6 +129,13 @@
         "direction": "down",
         "reference_date": "2026-09-24",
         "reference_pct": 69.5,
+        "window": "2d"
+      },
+      "Susan Collins (R)": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-09-24",
+        "reference_pct": 30.5,
         "window": "2d"
       }
     }
