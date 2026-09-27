@@ -5,5 +5,126 @@
   "window_days": 2,
   "window_label": "2d",
   "markets_fetched": 78,
-  "suggestions": []
+  "suggestions": [
+    {
+      "market_id": "us-senate:ID",
+      "slug": "idaho-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "ID",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 5.2,
+      "changes": [
+        {
+          "name": "Jim Risch (R)",
+          "current_pct": 94.5,
+          "change_pp": 5.2,
+          "direction": "up",
+          "since_date": "2026-09-25",
+          "reference_pct": 89.3,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Todd Achilles (I)",
+          "current_pct": 5.85,
+          "change_pp": 4.25,
+          "direction": "down",
+          "since_date": "2026-09-25",
+          "reference_pct": 10.1,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Jim Risch (R)",
+          "current_pct": 94.5,
+          "change_pp": 5.2,
+          "direction": "up",
+          "since_date": "2026-09-25",
+          "reference_pct": 89.3,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Todd Achilles (I)",
+          "current_pct": 5.85,
+          "change_pp": 4.25,
+          "direction": "down",
+          "since_date": "2026-09-25",
+          "reference_pct": 10.1,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:TX",
+      "slug": "texas-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "TX",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 5.0,
+      "changes": [
+        {
+          "name": "Gina Hinojosa (D)",
+          "current_pct": 18.5,
+          "change_pp": 5.0,
+          "direction": "down",
+          "since_date": "2026-09-25",
+          "reference_pct": 23.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Greg Abbott (R)",
+          "current_pct": 82.2,
+          "change_pp": 4.75,
+          "direction": "up",
+          "since_date": "2026-09-25",
+          "reference_pct": 77.45,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Greg Abbott (R)",
+          "current_pct": 82.2,
+          "change_pp": 4.75,
+          "direction": "up",
+          "since_date": "2026-09-25",
+          "reference_pct": 77.45,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Gina Hinojosa (D)",
+          "current_pct": 18.5,
+          "change_pp": 5.0,
+          "direction": "down",
+          "since_date": "2026-09-25",
+          "reference_pct": 23.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    }
+  ]
 }

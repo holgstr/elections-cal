@@ -4,6 +4,72 @@
   "window_days": 2,
   "window_label": "2d",
   "threshold_pp": 4,
-  "by_slug": {},
-  "by_market_id": {}
+  "by_slug": {
+    "texas-governor-winner-2026": {
+      "Gina Hinojosa (D)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-09-25",
+        "reference_pct": 23.5,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 4.75,
+        "direction": "up",
+        "reference_date": "2026-09-25",
+        "reference_pct": 77.45,
+        "window": "2d"
+      }
+    },
+    "idaho-senate-election-winner": {
+      "Jim Risch (R)": {
+        "change_pp": 5.2,
+        "direction": "up",
+        "reference_date": "2026-09-25",
+        "reference_pct": 89.3,
+        "window": "2d"
+      },
+      "Todd Achilles (I)": {
+        "change_pp": 4.25,
+        "direction": "down",
+        "reference_date": "2026-09-25",
+        "reference_pct": 10.1,
+        "window": "2d"
+      }
+    }
+  },
+  "by_market_id": {
+    "us-governor:TX": {
+      "Gina Hinojosa (D)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-09-25",
+        "reference_pct": 23.5,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 4.75,
+        "direction": "up",
+        "reference_date": "2026-09-25",
+        "reference_pct": 77.45,
+        "window": "2d"
+      }
+    },
+    "us-senate:ID": {
+      "Jim Risch (R)": {
+        "change_pp": 5.2,
+        "direction": "up",
+        "reference_date": "2026-09-25",
+        "reference_pct": 89.3,
+        "window": "2d"
+      },
+      "Todd Achilles (I)": {
+        "change_pp": 4.25,
+        "direction": "down",
+        "reference_date": "2026-09-25",
+        "reference_pct": 10.1,
+        "window": "2d"
+      }
+    }
+  }
 }
