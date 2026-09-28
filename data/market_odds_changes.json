@@ -5,12 +5,30 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
+    "brazil-chamber-of-deputies-election-winner": {
+      "UPB": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-09-26",
+        "reference_pct": 33.9,
+        "window": "2d"
+      }
+    },
     "latvian-parliamentary-election-winner": {
       "AS": {
-        "change_pp": 4.15,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-26",
         "reference_pct": 92.95,
+        "window": "2d"
+      }
+    },
+    "next-prime-minister-of-new-zealand-174": {
+      "Chris Hipkins": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-09-26",
+        "reference_pct": 41.0,
         "window": "2d"
       }
     },
@@ -25,14 +43,14 @@
     },
     "oregon-governor-winner-2026": {
       "Tina Kotek (D)": {
-        "change_pp": 5.5,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-26",
         "reference_pct": 86.5,
         "window": "2d"
       },
       "Christine Drazan (R)": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-09-26",
         "reference_pct": 13.5,
@@ -41,19 +59,33 @@
     },
     "texas-governor-winner-2026": {
       "Gina Hinojosa (D)": {
-        "change_pp": 4.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-09-26",
         "reference_pct": 21.5,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 4.75,
+        "direction": "up",
+        "reference_date": "2026-09-26",
+        "reference_pct": 79.45,
         "window": "2d"
       }
     },
     "idaho-senate-election-winner": {
       "Jim Risch (R)": {
-        "change_pp": 4.0,
+        "change_pp": 4.7,
         "direction": "up",
         "reference_date": "2026-09-26",
         "reference_pct": 90.2,
+        "window": "2d"
+      },
+      "Todd Achilles (I)": {
+        "change_pp": 4.9,
+        "direction": "down",
+        "reference_date": "2026-09-26",
+        "reference_pct": 9.65,
         "window": "2d"
       }
     },
@@ -66,7 +98,7 @@
         "window": "2d"
       },
       "Susan Collins (R)": {
-        "change_pp": 6.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-26",
         "reference_pct": 34.5,
@@ -75,12 +107,30 @@
     }
   },
   "by_market_id": {
+    "national:BR:National Congress:party_winner": {
+      "UPB": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-09-26",
+        "reference_pct": 33.9,
+        "window": "2d"
+      }
+    },
     "national:LV:Parliament:party_winner": {
       "AS": {
-        "change_pp": 4.15,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-26",
         "reference_pct": 92.95,
+        "window": "2d"
+      }
+    },
+    "national:NZ:Parliament:prime_minister": {
+      "Chris Hipkins": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-09-26",
+        "reference_pct": 41.0,
         "window": "2d"
       }
     },
@@ -95,14 +145,14 @@
     },
     "us-governor:OR": {
       "Tina Kotek (D)": {
-        "change_pp": 5.5,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-09-26",
         "reference_pct": 86.5,
         "window": "2d"
       },
       "Christine Drazan (R)": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-09-26",
         "reference_pct": 13.5,
@@ -111,19 +161,33 @@
     },
     "us-governor:TX": {
       "Gina Hinojosa (D)": {
-        "change_pp": 4.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-09-26",
         "reference_pct": 21.5,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 4.75,
+        "direction": "up",
+        "reference_date": "2026-09-26",
+        "reference_pct": 79.45,
         "window": "2d"
       }
     },
     "us-senate:ID": {
       "Jim Risch (R)": {
-        "change_pp": 4.0,
+        "change_pp": 4.7,
         "direction": "up",
         "reference_date": "2026-09-26",
         "reference_pct": 90.2,
+        "window": "2d"
+      },
+      "Todd Achilles (I)": {
+        "change_pp": 4.9,
+        "direction": "down",
+        "reference_date": "2026-09-26",
+        "reference_pct": 9.65,
         "window": "2d"
       }
     },
@@ -136,7 +200,7 @@
         "window": "2d"
       },
       "Susan Collins (R)": {
-        "change_pp": 6.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-09-26",
         "reference_pct": 34.5,
