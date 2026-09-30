@@ -25,10 +25,49 @@
     },
     "texas-governor-winner-2026": {
       "Gina Hinojosa (D)": {
-        "change_pp": 4.0,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-09-28",
         "reference_pct": 15.5,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 5.85,
+        "direction": "down",
+        "reference_date": "2026-09-28",
+        "reference_pct": 84.2,
+        "window": "2d"
+      }
+    },
+    "wisconsin-governor-winner-2026": {
+      "David Crowley (D)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-09-28",
+        "reference_pct": 85.5,
+        "window": "2d"
+      },
+      "Tom Tiffany (R)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-09-28",
+        "reference_pct": 14.5,
+        "window": "2d"
+      }
+    },
+    "texas-senate-election-winner": {
+      "James Talarico (D)": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-09-28",
+        "reference_pct": 60.5,
+        "window": "2d"
+      },
+      "Ken Paxton (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-28",
+        "reference_pct": 39.5,
         "window": "2d"
       }
     }
@@ -54,10 +93,49 @@
     },
     "us-governor:TX": {
       "Gina Hinojosa (D)": {
-        "change_pp": 4.0,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-09-28",
         "reference_pct": 15.5,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 5.85,
+        "direction": "down",
+        "reference_date": "2026-09-28",
+        "reference_pct": 84.2,
+        "window": "2d"
+      }
+    },
+    "us-governor:WI": {
+      "David Crowley (D)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-09-28",
+        "reference_pct": 85.5,
+        "window": "2d"
+      },
+      "Tom Tiffany (R)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-09-28",
+        "reference_pct": 14.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:TX": {
+      "James Talarico (D)": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-09-28",
+        "reference_pct": 60.5,
+        "window": "2d"
+      },
+      "Ken Paxton (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-28",
+        "reference_pct": 39.5,
         "window": "2d"
       }
     }

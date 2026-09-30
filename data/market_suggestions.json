@@ -7,6 +7,66 @@
   "markets_fetched": 78,
   "suggestions": [
     {
+      "market_id": "us-governor:TX",
+      "slug": "texas-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "TX",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 5.85,
+      "changes": [
+        {
+          "name": "Gina Hinojosa (D)",
+          "current_pct": 20.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-09-28",
+          "reference_pct": 15.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Greg Abbott (R)",
+          "current_pct": 78.35,
+          "change_pp": 5.85,
+          "direction": "down",
+          "since_date": "2026-09-28",
+          "reference_pct": 84.2,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Greg Abbott (R)",
+          "current_pct": 78.35,
+          "change_pp": 5.85,
+          "direction": "down",
+          "since_date": "2026-09-28",
+          "reference_pct": 84.2,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Gina Hinojosa (D)",
+          "current_pct": 20.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-09-28",
+          "reference_pct": 15.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
       "market_id": "us-governor:IA",
       "slug": "iowa-governor-winner-2026",
       "category": "us_governor",
@@ -51,6 +111,66 @@
       ]
     },
     {
+      "market_id": "us-governor:WI",
+      "slug": "wisconsin-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "WI",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 5.0,
+      "changes": [
+        {
+          "name": "David Crowley (D)",
+          "current_pct": 80.5,
+          "change_pp": 5.0,
+          "direction": "down",
+          "since_date": "2026-09-28",
+          "reference_pct": 85.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Tom Tiffany (R)",
+          "current_pct": 19.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-09-28",
+          "reference_pct": 14.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "David Crowley (D)",
+          "current_pct": 80.5,
+          "change_pp": 5.0,
+          "direction": "down",
+          "since_date": "2026-09-28",
+          "reference_pct": 85.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Tom Tiffany (R)",
+          "current_pct": 19.5,
+          "change_pp": 5.0,
+          "direction": "up",
+          "since_date": "2026-09-28",
+          "reference_pct": 14.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
       "market_id": "national:IL:Knesset:prime_minister",
       "slug": "who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
       "category": "national",
@@ -80,7 +200,7 @@
       "prices": [
         {
           "name": "Gadi Eizenkot",
-          "current_pct": 47.1
+          "current_pct": 47.0
         },
         {
           "name": "Benjamin Netanyahu",
@@ -98,20 +218,20 @@
         },
         {
           "name": "Avigdor Lieberman",
-          "current_pct": 3.5
+          "current_pct": 3.45
         }
       ]
     },
     {
-      "market_id": "us-governor:TX",
-      "slug": "texas-governor-winner-2026",
-      "category": "us_governor",
-      "odds_format": "party",
+      "market_id": "us-senate:TX",
+      "slug": "texas-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "candidates",
       "min_pct": 3,
       "country_code": "US",
       "state_code": "TX",
       "city_code": null,
-      "contest": "Governor",
+      "contest": "Senate",
       "market_label": null,
       "party": null,
       "election_date": "2026-11-03",
@@ -119,28 +239,44 @@
       "max_change_pp": 4.0,
       "changes": [
         {
-          "name": "Gina Hinojosa (D)",
-          "current_pct": 19.5,
+          "name": "James Talarico (D)",
+          "current_pct": 64.5,
           "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-09-28",
-          "reference_pct": 15.5,
+          "reference_pct": 60.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Ken Paxton (R)",
+          "current_pct": 35.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-28",
+          "reference_pct": 39.5,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Greg Abbott (R)",
-          "current_pct": 81.05
-        },
-        {
-          "name": "Gina Hinojosa (D)",
-          "current_pct": 19.5,
+          "name": "James Talarico (D)",
+          "current_pct": 64.5,
           "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-09-28",
-          "reference_pct": 15.5,
+          "reference_pct": 60.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Ken Paxton (R)",
+          "current_pct": 35.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-28",
+          "reference_pct": 39.5,
           "change_days": 2,
           "window": "2d"
         }
