@@ -5,37 +5,119 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
-    "wisconsin-governor-winner-2026": {
-      "David Crowley (D)": {
-        "change_pp": 5.0,
+    "georgia-governor-winner-2026": {
+      "Keisha Lance Bottoms (D)": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-09-29",
-        "reference_pct": 85.5,
+        "reference_pct": 52.5,
         "window": "2d"
       },
-      "Tom Tiffany (R)": {
+      "Rick Jackson (R)": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-09-29",
+        "reference_pct": 47.5,
+        "window": "2d"
+      }
+    },
+    "ohio-governor-winner-2026": {
+      "Vivek Ramaswamy (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-29",
+        "reference_pct": 40.5,
+        "window": "2d"
+      }
+    },
+    "oregon-governor-winner-2026": {
+      "Tina Kotek (D)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-29",
+        "reference_pct": 81.5,
+        "window": "2d"
+      },
+      "Christine Drazan (R)": {
         "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-09-29",
-        "reference_pct": 14.5,
+        "reference_pct": 17.5,
+        "window": "2d"
+      }
+    },
+    "nebraska-senate-election-winner": {
+      "Pete Ricketts (R)": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-09-29",
+        "reference_pct": 69.5,
+        "window": "2d"
+      },
+      "Independent": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-09-29",
+        "reference_pct": 30.5,
         "window": "2d"
       }
     }
   },
   "by_market_id": {
-    "us-governor:WI": {
-      "David Crowley (D)": {
-        "change_pp": 5.0,
+    "us-governor:GA": {
+      "Keisha Lance Bottoms (D)": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-09-29",
-        "reference_pct": 85.5,
+        "reference_pct": 52.5,
         "window": "2d"
       },
-      "Tom Tiffany (R)": {
+      "Rick Jackson (R)": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-09-29",
+        "reference_pct": 47.5,
+        "window": "2d"
+      }
+    },
+    "us-governor:OH": {
+      "Vivek Ramaswamy (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-29",
+        "reference_pct": 40.5,
+        "window": "2d"
+      }
+    },
+    "us-governor:OR": {
+      "Tina Kotek (D)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-09-29",
+        "reference_pct": 81.5,
+        "window": "2d"
+      },
+      "Christine Drazan (R)": {
         "change_pp": 6.0,
         "direction": "up",
         "reference_date": "2026-09-29",
-        "reference_pct": 14.5,
+        "reference_pct": 17.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:NE": {
+      "Pete Ricketts (R)": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-09-29",
+        "reference_pct": 69.5,
+        "window": "2d"
+      },
+      "Independent": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-09-29",
+        "reference_pct": 30.5,
         "window": "2d"
       }
     }
