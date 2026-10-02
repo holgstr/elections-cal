@@ -20,12 +20,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 11.5,
+      "max_change_pp": 10.0,
       "changes": [
         {
           "name": "Tina Kotek (D)",
-          "current_pct": 70.0,
-          "change_pp": 11.5,
+          "current_pct": 71.5,
+          "change_pp": 10.0,
           "direction": "down",
           "since_date": "2026-09-30",
           "reference_pct": 81.5,
@@ -34,8 +34,8 @@
         },
         {
           "name": "Christine Drazan (R)",
-          "current_pct": 29.0,
-          "change_pp": 10.5,
+          "current_pct": 27.0,
+          "change_pp": 8.5,
           "direction": "up",
           "since_date": "2026-09-30",
           "reference_pct": 18.5,
@@ -46,8 +46,8 @@
       "prices": [
         {
           "name": "Tina Kotek (D)",
-          "current_pct": 70.0,
-          "change_pp": 11.5,
+          "current_pct": 71.5,
+          "change_pp": 10.0,
           "direction": "down",
           "since_date": "2026-09-30",
           "reference_pct": 81.5,
@@ -56,8 +56,8 @@
         },
         {
           "name": "Christine Drazan (R)",
-          "current_pct": 29.0,
-          "change_pp": 10.5,
+          "current_pct": 27.0,
+          "change_pp": 8.5,
           "direction": "up",
           "since_date": "2026-09-30",
           "reference_pct": 18.5,
@@ -80,25 +80,15 @@
       "party": null,
       "election_date": "2026-10-04",
       "election_title": "General",
-      "max_change_pp": 6.0,
+      "max_change_pp": 5.0,
       "changes": [
         {
           "name": "Luiz Inácio Lula da Silva",
-          "current_pct": 44.5,
-          "change_pp": 6.0,
+          "current_pct": 43.5,
+          "change_pp": 5.0,
           "direction": "up",
           "since_date": "2026-09-30",
           "reference_pct": 38.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Flávio Bolsonaro",
-          "current_pct": 55.55,
-          "change_pp": 5.3,
-          "direction": "down",
-          "since_date": "2026-09-30",
-          "reference_pct": 60.85,
           "change_days": 2,
           "window": "2d"
         }
@@ -106,18 +96,12 @@
       "prices": [
         {
           "name": "Flávio Bolsonaro",
-          "current_pct": 55.55,
-          "change_pp": 5.3,
-          "direction": "down",
-          "since_date": "2026-09-30",
-          "reference_pct": 60.85,
-          "change_days": 2,
-          "window": "2d"
+          "current_pct": 56.95
         },
         {
           "name": "Luiz Inácio Lula da Silva",
-          "current_pct": 44.5,
-          "change_pp": 6.0,
+          "current_pct": 43.5,
+          "change_pp": 5.0,
           "direction": "up",
           "since_date": "2026-09-30",
           "reference_pct": 38.5,
@@ -127,13 +111,13 @@
       ]
     },
     {
-      "market_id": "us-governor:GA",
-      "slug": "georgia-governor-winner-2026",
+      "market_id": "us-governor:VT",
+      "slug": "vermont-governor-winner-2026",
       "category": "us_governor",
       "odds_format": "party",
       "min_pct": 3,
       "country_code": "US",
-      "state_code": "GA",
+      "state_code": "VT",
       "city_code": null,
       "contest": "Governor",
       "market_label": null,
@@ -143,46 +127,30 @@
       "max_change_pp": 5.0,
       "changes": [
         {
-          "name": "Keisha Lance Bottoms (D)",
-          "current_pct": 48.5,
-          "change_pp": 4.0,
+          "name": "Phil Scott (R)",
+          "current_pct": 77.5,
+          "change_pp": 5.0,
           "direction": "down",
           "since_date": "2026-09-30",
-          "reference_pct": 52.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Rick Jackson (R)",
-          "current_pct": 53.5,
-          "change_pp": 5.0,
-          "direction": "up",
-          "since_date": "2026-09-30",
-          "reference_pct": 48.5,
+          "reference_pct": 82.5,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Rick Jackson (R)",
-          "current_pct": 53.5,
+          "name": "Phil Scott (R)",
+          "current_pct": 77.5,
           "change_pp": 5.0,
-          "direction": "up",
+          "direction": "down",
           "since_date": "2026-09-30",
-          "reference_pct": 48.5,
+          "reference_pct": 82.5,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "Keisha Lance Bottoms (D)",
-          "current_pct": 48.5,
-          "change_pp": 4.0,
-          "direction": "down",
-          "since_date": "2026-09-30",
-          "reference_pct": 52.5,
-          "change_days": 2,
-          "window": "2d"
+          "name": "Amanda Janoo (D)",
+          "current_pct": 20.65
         }
       ]
     },
@@ -203,16 +171,6 @@
       "max_change_pp": 5.0,
       "changes": [
         {
-          "name": "Pete Ricketts (R)",
-          "current_pct": 74.5,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-09-30",
-          "reference_pct": 70.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
           "name": "Independent",
           "current_pct": 25.5,
           "change_pp": 5.0,
@@ -226,13 +184,7 @@
       "prices": [
         {
           "name": "Pete Ricketts (R)",
-          "current_pct": 74.5,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-09-30",
-          "reference_pct": 70.5,
-          "change_days": 2,
-          "window": "2d"
+          "current_pct": 74.0
         },
         {
           "name": "Independent",
@@ -241,6 +193,66 @@
           "direction": "down",
           "since_date": "2026-09-30",
           "reference_pct": 30.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:KS",
+      "slug": "kansas-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "KS",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.5,
+      "changes": [
+        {
+          "name": "Adam Hamilton (D)",
+          "current_pct": 33.0,
+          "change_pp": 4.5,
+          "direction": "up",
+          "since_date": "2026-09-30",
+          "reference_pct": 28.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Roger Marshall (R)",
+          "current_pct": 67.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-30",
+          "reference_pct": 71.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Roger Marshall (R)",
+          "current_pct": 67.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-30",
+          "reference_pct": 71.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Adam Hamilton (D)",
+          "current_pct": 33.0,
+          "change_pp": 4.5,
+          "direction": "up",
+          "since_date": "2026-09-30",
+          "reference_pct": 28.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -260,12 +272,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 4.3,
+      "max_change_pp": 4.2,
       "changes": [
         {
           "name": "Greg Abbott (R)",
-          "current_pct": 82.65,
-          "change_pp": 4.3,
+          "current_pct": 82.55,
+          "change_pp": 4.2,
           "direction": "up",
           "since_date": "2026-09-30",
           "reference_pct": 78.35,
@@ -276,8 +288,8 @@
       "prices": [
         {
           "name": "Greg Abbott (R)",
-          "current_pct": 82.65,
-          "change_pp": 4.3,
+          "current_pct": 82.55,
+          "change_pp": 4.2,
           "direction": "up",
           "since_date": "2026-09-30",
           "reference_pct": 78.35,
@@ -287,6 +299,94 @@
         {
           "name": "Gina Hinojosa (D)",
           "current_pct": 17.5
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:GA",
+      "slug": "georgia-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "GA",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "Keisha Lance Bottoms (D)",
+          "current_pct": 48.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-30",
+          "reference_pct": 52.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Rick Jackson (R)",
+          "current_pct": 51.5
+        },
+        {
+          "name": "Keisha Lance Bottoms (D)",
+          "current_pct": 48.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-30",
+          "reference_pct": 52.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:TX",
+      "slug": "texas-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "TX",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "James Talarico (D)",
+          "current_pct": 60.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-30",
+          "reference_pct": 64.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "James Talarico (D)",
+          "current_pct": 60.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-09-30",
+          "reference_pct": 64.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Ken Paxton (R)",
+          "current_pct": 38.5
         }
       ]
     }
