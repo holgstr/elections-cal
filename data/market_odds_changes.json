@@ -7,23 +7,32 @@
   "by_slug": {
     "brazil-chamber-of-deputies-election-winner": {
       "PL": {
-        "change_pp": 4.0,
+        "change_pp": 20.0,
         "direction": "up",
         "reference_date": "2026-10-02",
         "reference_pct": 66.5,
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 4.1,
+        "change_pp": 21.15,
         "direction": "down",
         "reference_date": "2026-10-02",
         "reference_pct": 33.3,
         "window": "2d"
       }
     },
+    "who-will-be-the-next-prime-minister-of-israel-after-the-next-election": {
+      "Naftali Bennett": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-02",
+        "reference_pct": 14.5,
+        "window": "2d"
+      }
+    },
     "mexico-legislative-election-winner": {
       "Morena": {
-        "change_pp": 4.95,
+        "change_pp": 4.25,
         "direction": "down",
         "reference_date": "2026-10-02",
         "reference_pct": 89.5,
@@ -32,33 +41,17 @@
     },
     "brazil-presidential-election": {
       "Luiz Inácio Lula da Silva": {
-        "change_pp": 7.0,
+        "change_pp": 28.0,
         "direction": "down",
         "reference_date": "2026-10-02",
         "reference_pct": 43.5,
         "window": "2d"
       },
       "Flávio Bolsonaro": {
-        "change_pp": 6.4,
+        "change_pp": 26.5,
         "direction": "up",
         "reference_date": "2026-10-02",
         "reference_pct": 56.95,
-        "window": "2d"
-      }
-    },
-    "nevada-governor-winner-2026": {
-      "Aaron Ford (D)": {
-        "change_pp": 5.5,
-        "direction": "up",
-        "reference_date": "2026-10-02",
-        "reference_pct": 49.0,
-        "window": "2d"
-      },
-      "Joe Lombardo (R)": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-10-02",
-        "reference_pct": 50.5,
         "window": "2d"
       }
     },
@@ -73,7 +66,7 @@
     },
     "oregon-governor-winner-2026": {
       "Tina Kotek (D)": {
-        "change_pp": 4.5,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-10-02",
         "reference_pct": 71.5,
@@ -82,14 +75,14 @@
     },
     "texas-governor-winner-2026": {
       "Gina Hinojosa (D)": {
-        "change_pp": 7.0,
+        "change_pp": 8.0,
         "direction": "up",
         "reference_date": "2026-10-02",
         "reference_pct": 17.5,
         "window": "2d"
       },
       "Greg Abbott (R)": {
-        "change_pp": 7.4,
+        "change_pp": 7.35,
         "direction": "down",
         "reference_date": "2026-10-02",
         "reference_pct": 82.55,
@@ -100,23 +93,32 @@
   "by_market_id": {
     "national:BR:National Congress:party_winner": {
       "PL": {
-        "change_pp": 4.0,
+        "change_pp": 20.0,
         "direction": "up",
         "reference_date": "2026-10-02",
         "reference_pct": 66.5,
         "window": "2d"
       },
       "UPB": {
-        "change_pp": 4.1,
+        "change_pp": 21.15,
         "direction": "down",
         "reference_date": "2026-10-02",
         "reference_pct": 33.3,
         "window": "2d"
       }
     },
+    "national:IL:Knesset:prime_minister": {
+      "Naftali Bennett": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-02",
+        "reference_pct": 14.5,
+        "window": "2d"
+      }
+    },
     "national:MX:Chamber of Deputies:party_winner": {
       "Morena": {
-        "change_pp": 4.95,
+        "change_pp": 4.25,
         "direction": "down",
         "reference_date": "2026-10-02",
         "reference_pct": 89.5,
@@ -125,33 +127,17 @@
     },
     "presidential:BR": {
       "Luiz Inácio Lula da Silva": {
-        "change_pp": 7.0,
+        "change_pp": 28.0,
         "direction": "down",
         "reference_date": "2026-10-02",
         "reference_pct": 43.5,
         "window": "2d"
       },
       "Flávio Bolsonaro": {
-        "change_pp": 6.4,
+        "change_pp": 26.5,
         "direction": "up",
         "reference_date": "2026-10-02",
         "reference_pct": 56.95,
-        "window": "2d"
-      }
-    },
-    "us-governor:NV": {
-      "Aaron Ford (D)": {
-        "change_pp": 5.5,
-        "direction": "up",
-        "reference_date": "2026-10-02",
-        "reference_pct": 49.0,
-        "window": "2d"
-      },
-      "Joe Lombardo (R)": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-10-02",
-        "reference_pct": 50.5,
         "window": "2d"
       }
     },
@@ -166,7 +152,7 @@
     },
     "us-governor:OR": {
       "Tina Kotek (D)": {
-        "change_pp": 4.5,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-10-02",
         "reference_pct": 71.5,
@@ -175,14 +161,14 @@
     },
     "us-governor:TX": {
       "Gina Hinojosa (D)": {
-        "change_pp": 7.0,
+        "change_pp": 8.0,
         "direction": "up",
         "reference_date": "2026-10-02",
         "reference_pct": 17.5,
         "window": "2d"
       },
       "Greg Abbott (R)": {
-        "change_pp": 7.4,
+        "change_pp": 7.35,
         "direction": "down",
         "reference_date": "2026-10-02",
         "reference_pct": 82.55,

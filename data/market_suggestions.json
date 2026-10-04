@@ -7,66 +7,6 @@
   "markets_fetched": 77,
   "suggestions": [
     {
-      "market_id": "us-governor:TX",
-      "slug": "texas-governor-winner-2026",
-      "category": "us_governor",
-      "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "TX",
-      "city_code": null,
-      "contest": "Governor",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
-      "max_change_pp": 7.4,
-      "changes": [
-        {
-          "name": "Gina Hinojosa (D)",
-          "current_pct": 24.5,
-          "change_pp": 7.0,
-          "direction": "up",
-          "since_date": "2026-10-02",
-          "reference_pct": 17.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Greg Abbott (R)",
-          "current_pct": 75.15,
-          "change_pp": 7.4,
-          "direction": "down",
-          "since_date": "2026-10-02",
-          "reference_pct": 82.55,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Greg Abbott (R)",
-          "current_pct": 75.15,
-          "change_pp": 7.4,
-          "direction": "down",
-          "since_date": "2026-10-02",
-          "reference_pct": 82.55,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Gina Hinojosa (D)",
-          "current_pct": 24.5,
-          "change_pp": 7.0,
-          "direction": "up",
-          "since_date": "2026-10-02",
-          "reference_pct": 17.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
       "market_id": "presidential:BR",
       "slug": "brazil-presidential-election",
       "category": "presidential",
@@ -80,12 +20,12 @@
       "party": null,
       "election_date": "2026-10-04",
       "election_title": "General",
-      "max_change_pp": 7.0,
+      "max_change_pp": 28.0,
       "changes": [
         {
           "name": "Luiz Inácio Lula da Silva",
-          "current_pct": 36.5,
-          "change_pp": 7.0,
+          "current_pct": 15.5,
+          "change_pp": 28.0,
           "direction": "down",
           "since_date": "2026-10-02",
           "reference_pct": 43.5,
@@ -94,8 +34,8 @@
         },
         {
           "name": "Flávio Bolsonaro",
-          "current_pct": 63.35,
-          "change_pp": 6.4,
+          "current_pct": 83.45,
+          "change_pp": 26.5,
           "direction": "up",
           "since_date": "2026-10-02",
           "reference_pct": 56.95,
@@ -106,8 +46,8 @@
       "prices": [
         {
           "name": "Flávio Bolsonaro",
-          "current_pct": 63.35,
-          "change_pp": 6.4,
+          "current_pct": 83.45,
+          "change_pp": 26.5,
           "direction": "up",
           "since_date": "2026-10-02",
           "reference_pct": 56.95,
@@ -116,8 +56,8 @@
         },
         {
           "name": "Luiz Inácio Lula da Silva",
-          "current_pct": 36.5,
-          "change_pp": 7.0,
+          "current_pct": 15.5,
+          "change_pp": 28.0,
           "direction": "down",
           "since_date": "2026-10-02",
           "reference_pct": 43.5,
@@ -127,60 +67,120 @@
       ]
     },
     {
-      "market_id": "us-governor:NV",
-      "slug": "nevada-governor-winner-2026",
-      "category": "us_governor",
+      "market_id": "national:BR:National Congress:party_winner",
+      "slug": "brazil-chamber-of-deputies-election-winner",
+      "category": "national",
       "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "NV",
+      "min_pct": 10,
+      "country_code": "BR",
+      "state_code": null,
       "city_code": null,
-      "contest": "Governor",
-      "market_label": null,
+      "contest": "National Congress",
+      "market_label": "Chamber of Deputies",
       "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
-      "max_change_pp": 5.5,
+      "election_date": "2026-10-04",
+      "election_title": "General",
+      "max_change_pp": 21.15,
       "changes": [
         {
-          "name": "Aaron Ford (D)",
-          "current_pct": 54.5,
-          "change_pp": 5.5,
+          "name": "PL",
+          "current_pct": 86.5,
+          "change_pp": 20.0,
           "direction": "up",
           "since_date": "2026-10-02",
-          "reference_pct": 49.0,
+          "reference_pct": 66.5,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "Joe Lombardo (R)",
-          "current_pct": 45.5,
-          "change_pp": 5.0,
+          "name": "UPB",
+          "current_pct": 12.15,
+          "change_pp": 21.15,
           "direction": "down",
           "since_date": "2026-10-02",
-          "reference_pct": 50.5,
+          "reference_pct": 33.3,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Aaron Ford (D)",
-          "current_pct": 54.5,
-          "change_pp": 5.5,
+          "name": "PL",
+          "current_pct": 86.5,
+          "change_pp": 20.0,
           "direction": "up",
           "since_date": "2026-10-02",
-          "reference_pct": 49.0,
+          "reference_pct": 66.5,
           "change_days": 2,
           "window": "2d"
         },
         {
-          "name": "Joe Lombardo (R)",
-          "current_pct": 45.5,
-          "change_pp": 5.0,
+          "name": "UPB",
+          "current_pct": 12.15,
+          "change_pp": 21.15,
           "direction": "down",
           "since_date": "2026-10-02",
-          "reference_pct": 50.5,
+          "reference_pct": 33.3,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-governor:TX",
+      "slug": "texas-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "TX",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 8.0,
+      "changes": [
+        {
+          "name": "Gina Hinojosa (D)",
+          "current_pct": 25.5,
+          "change_pp": 8.0,
+          "direction": "up",
+          "since_date": "2026-10-02",
+          "reference_pct": 17.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Greg Abbott (R)",
+          "current_pct": 75.2,
+          "change_pp": 7.35,
+          "direction": "down",
+          "since_date": "2026-10-02",
+          "reference_pct": 82.55,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Greg Abbott (R)",
+          "current_pct": 75.2,
+          "change_pp": 7.35,
+          "direction": "down",
+          "since_date": "2026-10-02",
+          "reference_pct": 82.55,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Gina Hinojosa (D)",
+          "current_pct": 25.5,
+          "change_pp": 8.0,
+          "direction": "up",
+          "since_date": "2026-10-02",
+          "reference_pct": 17.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -244,12 +244,12 @@
       "party": null,
       "election_date": "2027-06-06",
       "election_title": "Chamber of Deputies",
-      "max_change_pp": 4.95,
+      "max_change_pp": 4.25,
       "changes": [
         {
           "name": "Morena",
-          "current_pct": 84.55,
-          "change_pp": 4.95,
+          "current_pct": 85.25,
+          "change_pp": 4.25,
           "direction": "down",
           "since_date": "2026-10-02",
           "reference_pct": 89.5,
@@ -260,11 +260,59 @@
       "prices": [
         {
           "name": "Morena",
-          "current_pct": 84.55,
-          "change_pp": 4.95,
+          "current_pct": 85.25,
+          "change_pp": 4.25,
           "direction": "down",
           "since_date": "2026-10-02",
           "reference_pct": 89.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "national:IL:Knesset:prime_minister",
+      "slug": "who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
+      "category": "national",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "IL",
+      "state_code": null,
+      "city_code": null,
+      "contest": "Knesset",
+      "market_label": "Next Prime Minister",
+      "party": null,
+      "election_date": "2026-10-27",
+      "election_title": "Knesset",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "Naftali Bennett",
+          "current_pct": 10.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-10-02",
+          "reference_pct": 14.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Gadi Eizenkot",
+          "current_pct": 45.95
+        },
+        {
+          "name": "Benjamin Netanyahu",
+          "current_pct": 36.5
+        },
+        {
+          "name": "Naftali Bennett",
+          "current_pct": 10.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-10-02",
+          "reference_pct": 14.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -284,12 +332,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 4.5,
+      "max_change_pp": 4.0,
       "changes": [
         {
           "name": "Tina Kotek (D)",
-          "current_pct": 76.0,
-          "change_pp": 4.5,
+          "current_pct": 75.5,
+          "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-10-02",
           "reference_pct": 71.5,
@@ -300,8 +348,8 @@
       "prices": [
         {
           "name": "Tina Kotek (D)",
-          "current_pct": 76.0,
-          "change_pp": 4.5,
+          "current_pct": 75.5,
+          "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-10-02",
           "reference_pct": 71.5,
@@ -311,66 +359,6 @@
         {
           "name": "Christine Drazan (R)",
           "current_pct": 23.5
-        }
-      ]
-    },
-    {
-      "market_id": "national:BR:National Congress:party_winner",
-      "slug": "brazil-chamber-of-deputies-election-winner",
-      "category": "national",
-      "odds_format": "party",
-      "min_pct": 10,
-      "country_code": "BR",
-      "state_code": null,
-      "city_code": null,
-      "contest": "National Congress",
-      "market_label": "Chamber of Deputies",
-      "party": null,
-      "election_date": "2026-10-04",
-      "election_title": "General",
-      "max_change_pp": 4.1,
-      "changes": [
-        {
-          "name": "PL",
-          "current_pct": 70.5,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-10-02",
-          "reference_pct": 66.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "UPB",
-          "current_pct": 29.2,
-          "change_pp": 4.1,
-          "direction": "down",
-          "since_date": "2026-10-02",
-          "reference_pct": 33.3,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "PL",
-          "current_pct": 70.5,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-10-02",
-          "reference_pct": 66.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "UPB",
-          "current_pct": 29.2,
-          "change_pp": 4.1,
-          "direction": "down",
-          "since_date": "2026-10-02",
-          "reference_pct": 33.3,
-          "change_days": 2,
-          "window": "2d"
         }
       ]
     }
