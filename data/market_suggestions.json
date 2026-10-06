@@ -7,6 +7,66 @@
   "markets_fetched": 76,
   "suggestions": [
     {
+      "market_id": "us-governor:OR",
+      "slug": "oregon-governor-winner-2026",
+      "category": "us_governor",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "OR",
+      "city_code": null,
+      "contest": "Governor",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 7.0,
+      "changes": [
+        {
+          "name": "Tina Kotek (D)",
+          "current_pct": 82.5,
+          "change_pp": 7.0,
+          "direction": "up",
+          "since_date": "2026-10-04",
+          "reference_pct": 75.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Christine Drazan (R)",
+          "current_pct": 17.5,
+          "change_pp": 6.0,
+          "direction": "down",
+          "since_date": "2026-10-04",
+          "reference_pct": 23.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Tina Kotek (D)",
+          "current_pct": 82.5,
+          "change_pp": 7.0,
+          "direction": "up",
+          "since_date": "2026-10-04",
+          "reference_pct": 75.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Christine Drazan (R)",
+          "current_pct": 17.5,
+          "change_pp": 6.0,
+          "direction": "down",
+          "since_date": "2026-10-04",
+          "reference_pct": 23.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
       "market_id": "us-governor:GA",
       "slug": "georgia-governor-winner-2026",
       "category": "us_governor",
@@ -20,7 +80,7 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 4.5,
+      "max_change_pp": 4.0,
       "changes": [
         {
           "name": "Keisha Lance Bottoms (D)",
@@ -34,8 +94,8 @@
         },
         {
           "name": "Rick Jackson (R)",
-          "current_pct": 50.0,
-          "change_pp": 4.5,
+          "current_pct": 50.5,
+          "change_pp": 4.0,
           "direction": "down",
           "since_date": "2026-10-04",
           "reference_pct": 54.5,
@@ -46,8 +106,8 @@
       "prices": [
         {
           "name": "Rick Jackson (R)",
-          "current_pct": 50.0,
-          "change_pp": 4.5,
+          "current_pct": 50.5,
+          "change_pp": 4.0,
           "direction": "down",
           "since_date": "2026-10-04",
           "reference_pct": 54.5,

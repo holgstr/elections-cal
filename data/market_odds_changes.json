@@ -14,7 +14,7 @@
         "window": "2d"
       },
       "Rick Jackson (R)": {
-        "change_pp": 4.5,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-10-04",
         "reference_pct": 54.5,
@@ -29,6 +29,22 @@
         "reference_pct": 51.5,
         "window": "2d"
       }
+    },
+    "oregon-governor-winner-2026": {
+      "Tina Kotek (D)": {
+        "change_pp": 7.0,
+        "direction": "up",
+        "reference_date": "2026-10-04",
+        "reference_pct": 75.5,
+        "window": "2d"
+      },
+      "Christine Drazan (R)": {
+        "change_pp": 6.0,
+        "direction": "down",
+        "reference_date": "2026-10-04",
+        "reference_pct": 23.5,
+        "window": "2d"
+      }
     }
   },
   "by_market_id": {
@@ -41,7 +57,7 @@
         "window": "2d"
       },
       "Rick Jackson (R)": {
-        "change_pp": 4.5,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-10-04",
         "reference_pct": 54.5,
@@ -54,6 +70,22 @@
         "direction": "up",
         "reference_date": "2026-10-04",
         "reference_pct": 51.5,
+        "window": "2d"
+      }
+    },
+    "us-governor:OR": {
+      "Tina Kotek (D)": {
+        "change_pp": 7.0,
+        "direction": "up",
+        "reference_date": "2026-10-04",
+        "reference_pct": 75.5,
+        "window": "2d"
+      },
+      "Christine Drazan (R)": {
+        "change_pp": 6.0,
+        "direction": "down",
+        "reference_date": "2026-10-04",
+        "reference_pct": 23.5,
         "window": "2d"
       }
     }
