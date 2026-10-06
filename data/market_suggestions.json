@@ -20,12 +20,22 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 4.0,
+      "max_change_pp": 4.5,
       "changes": [
         {
-          "name": "Rick Jackson (R)",
-          "current_pct": 50.5,
+          "name": "Keisha Lance Bottoms (D)",
+          "current_pct": 49.5,
           "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-10-04",
+          "reference_pct": 45.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Rick Jackson (R)",
+          "current_pct": 50.0,
+          "change_pp": 4.5,
           "direction": "down",
           "since_date": "2026-10-04",
           "reference_pct": 54.5,
@@ -36,8 +46,8 @@
       "prices": [
         {
           "name": "Rick Jackson (R)",
-          "current_pct": 50.5,
-          "change_pp": 4.0,
+          "current_pct": 50.0,
+          "change_pp": 4.5,
           "direction": "down",
           "since_date": "2026-10-04",
           "reference_pct": 54.5,
@@ -46,7 +56,13 @@
         },
         {
           "name": "Keisha Lance Bottoms (D)",
-          "current_pct": 47.5
+          "current_pct": 49.5,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-10-04",
+          "reference_pct": 45.5,
+          "change_days": 2,
+          "window": "2d"
         }
       ]
     },

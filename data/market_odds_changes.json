@@ -6,8 +6,15 @@
   "threshold_pp": 4,
   "by_slug": {
     "georgia-governor-winner-2026": {
-      "Rick Jackson (R)": {
+      "Keisha Lance Bottoms (D)": {
         "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-10-04",
+        "reference_pct": 45.5,
+        "window": "2d"
+      },
+      "Rick Jackson (R)": {
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-10-04",
         "reference_pct": 54.5,
@@ -26,8 +33,15 @@
   },
   "by_market_id": {
     "us-governor:GA": {
-      "Rick Jackson (R)": {
+      "Keisha Lance Bottoms (D)": {
         "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-10-04",
+        "reference_pct": 45.5,
+        "window": "2d"
+      },
+      "Rick Jackson (R)": {
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-10-04",
         "reference_pct": 54.5,
