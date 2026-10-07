@@ -5,6 +5,15 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
+    "who-will-be-the-next-prime-minister-of-israel-after-the-next-election": {
+      "Gadi Eizenkot": {
+        "change_pp": 4.15,
+        "direction": "down",
+        "reference_date": "2026-10-05",
+        "reference_pct": 47.8,
+        "window": "2d"
+      }
+    },
     "georgia-governor-winner-2026": {
       "Rick Jackson (R)": {
         "change_pp": 4.0,
@@ -14,33 +23,26 @@
         "window": "2d"
       }
     },
-    "oregon-governor-winner-2026": {
-      "Tina Kotek (D)": {
-        "change_pp": 8.0,
-        "direction": "up",
-        "reference_date": "2026-10-05",
-        "reference_pct": 75.5,
-        "window": "2d"
-      },
-      "Christine Drazan (R)": {
-        "change_pp": 6.0,
+    "vermont-governor-winner-2026": {
+      "Phil Scott (R)": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-10-05",
-        "reference_pct": 23.5,
-        "window": "2d"
-      }
-    },
-    "kansas-senate-election-winner": {
-      "Adam Hamilton (D)": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-10-05",
-        "reference_pct": 32.5,
+        "reference_pct": 77.5,
         "window": "2d"
       }
     }
   },
   "by_market_id": {
+    "national:IL:Knesset:prime_minister": {
+      "Gadi Eizenkot": {
+        "change_pp": 4.15,
+        "direction": "down",
+        "reference_date": "2026-10-05",
+        "reference_pct": 47.8,
+        "window": "2d"
+      }
+    },
     "us-governor:GA": {
       "Rick Jackson (R)": {
         "change_pp": 4.0,
@@ -50,28 +52,12 @@
         "window": "2d"
       }
     },
-    "us-governor:OR": {
-      "Tina Kotek (D)": {
-        "change_pp": 8.0,
-        "direction": "up",
-        "reference_date": "2026-10-05",
-        "reference_pct": 75.5,
-        "window": "2d"
-      },
-      "Christine Drazan (R)": {
-        "change_pp": 6.0,
+    "us-governor:VT": {
+      "Phil Scott (R)": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-10-05",
-        "reference_pct": 23.5,
-        "window": "2d"
-      }
-    },
-    "us-senate:KS": {
-      "Adam Hamilton (D)": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-10-05",
-        "reference_pct": 32.5,
+        "reference_pct": 77.5,
         "window": "2d"
       }
     }
