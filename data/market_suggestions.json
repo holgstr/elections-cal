@@ -80,12 +80,12 @@
       "party": null,
       "election_date": "2026-10-27",
       "election_title": "Knesset",
-      "max_change_pp": 4.55,
+      "max_change_pp": 4.65,
       "changes": [
         {
           "name": "Gadi Eizenkot",
-          "current_pct": 43.7,
-          "change_pp": 4.55,
+          "current_pct": 43.6,
+          "change_pp": 4.65,
           "direction": "down",
           "since_date": "2026-10-06",
           "reference_pct": 48.25,
@@ -96,8 +96,8 @@
       "prices": [
         {
           "name": "Gadi Eizenkot",
-          "current_pct": 43.7,
-          "change_pp": 4.55,
+          "current_pct": 43.6,
+          "change_pp": 4.65,
           "direction": "down",
           "since_date": "2026-10-06",
           "reference_pct": 48.25,
@@ -106,11 +106,63 @@
         },
         {
           "name": "Benjamin Netanyahu",
-          "current_pct": 35.5
+          "current_pct": 36.5
         },
         {
           "name": "Naftali Bennett",
-          "current_pct": 8.5
+          "current_pct": 9.5
+        }
+      ]
+    },
+    {
+      "market_id": "presidential:FR",
+      "slug": "next-french-presidential-election",
+      "category": "presidential",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "FR",
+      "state_code": null,
+      "city_code": null,
+      "contest": "President",
+      "market_label": "Presidential election",
+      "party": null,
+      "election_date": "2027-04-11",
+      "election_title": "President — Round 1",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "Édouard Philippe",
+          "current_pct": 21.5,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-10-06",
+          "reference_pct": 17.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Marine Le Pen",
+          "current_pct": 41.25
+        },
+        {
+          "name": "Édouard Philippe",
+          "current_pct": 21.5,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-10-06",
+          "reference_pct": 17.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "David Lisnard",
+          "current_pct": 12.75
+        },
+        {
+          "name": "Jean-Luc Mélenchon",
+          "current_pct": 12.5
         }
       ]
     }

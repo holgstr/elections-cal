@@ -7,10 +7,19 @@
   "by_slug": {
     "who-will-be-the-next-prime-minister-of-israel-after-the-next-election": {
       "Gadi Eizenkot": {
-        "change_pp": 4.55,
+        "change_pp": 4.65,
         "direction": "down",
         "reference_date": "2026-10-06",
         "reference_pct": 48.25,
+        "window": "2d"
+      }
+    },
+    "next-french-presidential-election": {
+      "Édouard Philippe": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-10-06",
+        "reference_pct": 17.5,
         "window": "2d"
       }
     },
@@ -34,10 +43,19 @@
   "by_market_id": {
     "national:IL:Knesset:prime_minister": {
       "Gadi Eizenkot": {
-        "change_pp": 4.55,
+        "change_pp": 4.65,
         "direction": "down",
         "reference_date": "2026-10-06",
         "reference_pct": 48.25,
+        "window": "2d"
+      }
+    },
+    "presidential:FR": {
+      "Édouard Philippe": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-10-06",
+        "reference_pct": 17.5,
         "window": "2d"
       }
     },
