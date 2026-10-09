@@ -5,12 +5,44 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
+    "brazil-presidential-election": {
+      "Luiz Inácio Lula da Silva": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-10-07",
+        "reference_pct": 15.5,
+        "window": "2d"
+      },
+      "Flávio Bolsonaro": {
+        "change_pp": 5.1,
+        "direction": "up",
+        "reference_date": "2026-10-07",
+        "reference_pct": 83.85,
+        "window": "2d"
+      }
+    },
     "next-french-presidential-election": {
       "Édouard Philippe": {
-        "change_pp": 6.0,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-10-07",
         "reference_pct": 17.5,
+        "window": "2d"
+      }
+    },
+    "michigan-senate-election-winner": {
+      "Abdul El-Sayed (D)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-07",
+        "reference_pct": 72.5,
+        "window": "2d"
+      },
+      "Mike Rogers (R)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-10-07",
+        "reference_pct": 27.5,
         "window": "2d"
       }
     },
@@ -25,12 +57,44 @@
     }
   },
   "by_market_id": {
+    "presidential:BR": {
+      "Luiz Inácio Lula da Silva": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-10-07",
+        "reference_pct": 15.5,
+        "window": "2d"
+      },
+      "Flávio Bolsonaro": {
+        "change_pp": 5.1,
+        "direction": "up",
+        "reference_date": "2026-10-07",
+        "reference_pct": 83.85,
+        "window": "2d"
+      }
+    },
     "presidential:FR": {
       "Édouard Philippe": {
-        "change_pp": 6.0,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-10-07",
         "reference_pct": 17.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:MI": {
+      "Abdul El-Sayed (D)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-07",
+        "reference_pct": 72.5,
+        "window": "2d"
+      },
+      "Mike Rogers (R)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-10-07",
+        "reference_pct": 27.5,
         "window": "2d"
       }
     },
