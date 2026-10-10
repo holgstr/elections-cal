@@ -31,16 +31,6 @@
           "reference_pct": 95.5,
           "change_days": 2,
           "window": "2d"
-        },
-        {
-          "name": "Gregg Hull (R)",
-          "current_pct": 9.5,
-          "change_pp": 4.5,
-          "direction": "up",
-          "since_date": "2026-10-08",
-          "reference_pct": 5.0,
-          "change_days": 2,
-          "window": "2d"
         }
       ],
       "prices": [
@@ -56,13 +46,7 @@
         },
         {
           "name": "Gregg Hull (R)",
-          "current_pct": 9.5,
-          "change_pp": 4.5,
-          "direction": "up",
-          "since_date": "2026-10-08",
-          "reference_pct": 5.0,
-          "change_days": 2,
-          "window": "2d"
+          "current_pct": 8.0
         }
       ]
     }
