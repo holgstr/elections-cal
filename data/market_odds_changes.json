@@ -16,14 +16,14 @@
     },
     "texas-governor-winner-2026": {
       "Gina Hinojosa (D)": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-10-09",
         "reference_pct": 25.5,
         "window": "2d"
       },
       "Greg Abbott (R)": {
-        "change_pp": 4.05,
+        "change_pp": 4.6,
         "direction": "up",
         "reference_date": "2026-10-09",
         "reference_pct": 75.35,
@@ -43,14 +43,14 @@
     },
     "us-governor:TX": {
       "Gina Hinojosa (D)": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-10-09",
         "reference_pct": 25.5,
         "window": "2d"
       },
       "Greg Abbott (R)": {
-        "change_pp": 4.05,
+        "change_pp": 4.6,
         "direction": "up",
         "reference_date": "2026-10-09",
         "reference_pct": 75.35,

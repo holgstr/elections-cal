@@ -64,12 +64,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 5.0,
+      "max_change_pp": 4.6,
       "changes": [
         {
           "name": "Gina Hinojosa (D)",
-          "current_pct": 20.5,
-          "change_pp": 5.0,
+          "current_pct": 21.0,
+          "change_pp": 4.5,
           "direction": "down",
           "since_date": "2026-10-09",
           "reference_pct": 25.5,
@@ -78,8 +78,8 @@
         },
         {
           "name": "Greg Abbott (R)",
-          "current_pct": 79.4,
-          "change_pp": 4.05,
+          "current_pct": 79.95,
+          "change_pp": 4.6,
           "direction": "up",
           "since_date": "2026-10-09",
           "reference_pct": 75.35,
@@ -90,8 +90,8 @@
       "prices": [
         {
           "name": "Greg Abbott (R)",
-          "current_pct": 79.4,
-          "change_pp": 4.05,
+          "current_pct": 79.95,
+          "change_pp": 4.6,
           "direction": "up",
           "since_date": "2026-10-09",
           "reference_pct": 75.35,
@@ -100,8 +100,8 @@
         },
         {
           "name": "Gina Hinojosa (D)",
-          "current_pct": 20.5,
-          "change_pp": 5.0,
+          "current_pct": 21.0,
+          "change_pp": 4.5,
           "direction": "down",
           "since_date": "2026-10-09",
           "reference_pct": 25.5,
