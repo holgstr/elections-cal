@@ -13,6 +13,22 @@
         "reference_pct": 88.5,
         "window": "2d"
       }
+    },
+    "nevada-governor-winner-2026": {
+      "Aaron Ford (D)": {
+        "change_pp": 6.0,
+        "direction": "up",
+        "reference_date": "2026-10-15",
+        "reference_pct": 52.5,
+        "window": "2d"
+      },
+      "Joe Lombardo (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-10-15",
+        "reference_pct": 47.5,
+        "window": "2d"
+      }
     }
   },
   "by_market_id": {
@@ -22,6 +38,22 @@
         "direction": "up",
         "reference_date": "2026-10-15",
         "reference_pct": 88.5,
+        "window": "2d"
+      }
+    },
+    "us-governor:NV": {
+      "Aaron Ford (D)": {
+        "change_pp": 6.0,
+        "direction": "up",
+        "reference_date": "2026-10-15",
+        "reference_pct": 52.5,
+        "window": "2d"
+      },
+      "Joe Lombardo (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-10-15",
+        "reference_pct": 47.5,
         "window": "2d"
       }
     }
