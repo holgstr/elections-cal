@@ -5,25 +5,18 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
-    "brazil-presidential-election": {
-      "Luiz Inácio Lula da Silva": {
-        "change_pp": 4.0,
+    "who-will-be-the-next-prime-minister-of-israel-after-the-next-election": {
+      "Gadi Eizenkot": {
+        "change_pp": 4.1,
         "direction": "down",
         "reference_date": "2026-10-16",
-        "reference_pct": 23.5,
-        "window": "2d"
-      },
-      "Flávio Bolsonaro": {
-        "change_pp": 4.1,
-        "direction": "up",
-        "reference_date": "2026-10-16",
-        "reference_pct": 76.65,
+        "reference_pct": 50.05,
         "window": "2d"
       }
     },
     "arizona-governor-winner-2026": {
       "Katie Hobbs (D)": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-10-16",
         "reference_pct": 88.5,
@@ -48,25 +41,18 @@
     }
   },
   "by_market_id": {
-    "presidential:BR": {
-      "Luiz Inácio Lula da Silva": {
-        "change_pp": 4.0,
+    "national:IL:Knesset:prime_minister": {
+      "Gadi Eizenkot": {
+        "change_pp": 4.1,
         "direction": "down",
         "reference_date": "2026-10-16",
-        "reference_pct": 23.5,
-        "window": "2d"
-      },
-      "Flávio Bolsonaro": {
-        "change_pp": 4.1,
-        "direction": "up",
-        "reference_date": "2026-10-16",
-        "reference_pct": 76.65,
+        "reference_pct": 50.05,
         "window": "2d"
       }
     },
     "us-governor:AZ": {
       "Katie Hobbs (D)": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-10-16",
         "reference_pct": 88.5,
