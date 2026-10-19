@@ -1,22 +1,5 @@
 [
   {
-    "date": "2026-10-15",
-    "date_precision": "estimated",
-    "country": "Serbia",
-    "country_code": "RS",
-    "title": "National Assembly",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "europe"
-    ],
-    "offices": [
-      "Parliament"
-    ],
-    "comment": "snap_election",
-    "source": "curated"
-  },
-  {
     "date": "2026-10-25",
     "date_precision": "exact",
     "country": "Brazil",
@@ -863,6 +846,24 @@
     ],
     "offices": [
       "Parliament"
+    ],
+    "source": "curated"
+  },
+  {
+    "date": "2027-10-15",
+    "date_precision": "estimated",
+    "country": "Germany",
+    "country_code": "DE",
+    "state": "Lower Saxony",
+    "state_code": "NI",
+    "title": "Landtag",
+    "type": "legislative",
+    "level": "state",
+    "groups": [
+      "oecd"
+    ],
+    "offices": [
+      "Landtag"
     ],
     "source": "curated"
   }
