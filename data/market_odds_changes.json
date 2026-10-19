@@ -4,6 +4,40 @@
   "window_days": 2,
   "window_label": "2d",
   "threshold_pp": 4,
-  "by_slug": {},
-  "by_market_id": {}
+  "by_slug": {
+    "oregon-governor-winner-2026": {
+      "Tina Kotek (D)": {
+        "change_pp": 6.0,
+        "direction": "up",
+        "reference_date": "2026-10-17",
+        "reference_pct": 75.5,
+        "window": "2d"
+      },
+      "Christine Drazan (R)": {
+        "change_pp": 6.5,
+        "direction": "down",
+        "reference_date": "2026-10-17",
+        "reference_pct": 23.5,
+        "window": "2d"
+      }
+    }
+  },
+  "by_market_id": {
+    "us-governor:OR": {
+      "Tina Kotek (D)": {
+        "change_pp": 6.0,
+        "direction": "up",
+        "reference_date": "2026-10-17",
+        "reference_pct": 75.5,
+        "window": "2d"
+      },
+      "Christine Drazan (R)": {
+        "change_pp": 6.5,
+        "direction": "down",
+        "reference_date": "2026-10-17",
+        "reference_pct": 23.5,
+        "window": "2d"
+      }
+    }
+  }
 }
