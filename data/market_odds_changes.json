@@ -5,6 +5,15 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
+    "next-prime-minister-of-new-zealand-174": {
+      "Christopher Luxon": {
+        "change_pp": 5.5,
+        "direction": "up",
+        "reference_date": "2026-10-19",
+        "reference_pct": 50.0,
+        "window": "2d"
+      }
+    },
     "brazil-presidential-election": {
       "Luiz Inácio Lula da Silva": {
         "change_pp": 4.0,
@@ -14,33 +23,90 @@
         "window": "2d"
       }
     },
-    "alaska-governor-election-winner": {
-      "Bernadette Wilson": {
-        "change_pp": 5.0,
+    "nigerian-presidential-election-winner-20260602162945585": {
+      "Bola Tinubu": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-10-19",
-        "reference_pct": 21.5,
+        "reference_pct": 72.0,
+        "window": "2d"
+      }
+    },
+    "nevada-governor-winner-2026": {
+      "Aaron Ford (D)": {
+        "change_pp": 7.0,
+        "direction": "up",
+        "reference_date": "2026-10-19",
+        "reference_pct": 58.5,
+        "window": "2d"
+      },
+      "Joe Lombardo (R)": {
+        "change_pp": 7.0,
+        "direction": "down",
+        "reference_date": "2026-10-19",
+        "reference_pct": 41.5,
         "window": "2d"
       }
     },
     "ohio-governor-winner-2026": {
       "Amy Acton (D)": {
-        "change_pp": 6.0,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-10-19",
         "reference_pct": 72.5,
         "window": "2d"
       },
       "Vivek Ramaswamy (R)": {
-        "change_pp": 6.0,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-10-19",
         "reference_pct": 27.5,
         "window": "2d"
       }
+    },
+    "texas-governor-winner-2026": {
+      "Gina Hinojosa (D)": {
+        "change_pp": 8.0,
+        "direction": "up",
+        "reference_date": "2026-10-19",
+        "reference_pct": 24.0,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 8.35,
+        "direction": "down",
+        "reference_date": "2026-10-19",
+        "reference_pct": 75.7,
+        "window": "2d"
+      }
+    },
+    "texas-senate-election-winner": {
+      "James Talarico (D)": {
+        "change_pp": 5.5,
+        "direction": "up",
+        "reference_date": "2026-10-19",
+        "reference_pct": 61.5,
+        "window": "2d"
+      },
+      "Ken Paxton (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-10-19",
+        "reference_pct": 38.5,
+        "window": "2d"
+      }
     }
   },
   "by_market_id": {
+    "national:NZ:Parliament:prime_minister": {
+      "Christopher Luxon": {
+        "change_pp": 5.5,
+        "direction": "up",
+        "reference_date": "2026-10-19",
+        "reference_pct": 50.0,
+        "window": "2d"
+      }
+    },
     "presidential:BR": {
       "Luiz Inácio Lula da Silva": {
         "change_pp": 4.0,
@@ -50,28 +116,76 @@
         "window": "2d"
       }
     },
-    "us-governor:AK": {
-      "Bernadette Wilson": {
-        "change_pp": 5.0,
+    "presidential:NG": {
+      "Bola Tinubu": {
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-10-19",
-        "reference_pct": 21.5,
+        "reference_pct": 72.0,
+        "window": "2d"
+      }
+    },
+    "us-governor:NV": {
+      "Aaron Ford (D)": {
+        "change_pp": 7.0,
+        "direction": "up",
+        "reference_date": "2026-10-19",
+        "reference_pct": 58.5,
+        "window": "2d"
+      },
+      "Joe Lombardo (R)": {
+        "change_pp": 7.0,
+        "direction": "down",
+        "reference_date": "2026-10-19",
+        "reference_pct": 41.5,
         "window": "2d"
       }
     },
     "us-governor:OH": {
       "Amy Acton (D)": {
-        "change_pp": 6.0,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-10-19",
         "reference_pct": 72.5,
         "window": "2d"
       },
       "Vivek Ramaswamy (R)": {
-        "change_pp": 6.0,
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-10-19",
         "reference_pct": 27.5,
+        "window": "2d"
+      }
+    },
+    "us-governor:TX": {
+      "Gina Hinojosa (D)": {
+        "change_pp": 8.0,
+        "direction": "up",
+        "reference_date": "2026-10-19",
+        "reference_pct": 24.0,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 8.35,
+        "direction": "down",
+        "reference_date": "2026-10-19",
+        "reference_pct": 75.7,
+        "window": "2d"
+      }
+    },
+    "us-senate:TX": {
+      "James Talarico (D)": {
+        "change_pp": 5.5,
+        "direction": "up",
+        "reference_date": "2026-10-19",
+        "reference_pct": 61.5,
+        "window": "2d"
+      },
+      "Ken Paxton (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-10-19",
+        "reference_pct": 38.5,
         "window": "2d"
       }
     }
