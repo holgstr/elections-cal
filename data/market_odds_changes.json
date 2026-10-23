@@ -7,14 +7,14 @@
   "by_slug": {
     "next-prime-minister-of-new-zealand-174": {
       "Christopher Luxon": {
-        "change_pp": 4.5,
+        "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-10-21",
         "reference_pct": 55.5,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 5.0,
+        "change_pp": 7.5,
         "direction": "down",
         "reference_date": "2026-10-21",
         "reference_pct": 44.5,
@@ -31,15 +31,8 @@
       }
     },
     "alaska-governor-election-winner": {
-      "Bernadette Wilson": {
-        "change_pp": 8.5,
-        "direction": "down",
-        "reference_date": "2026-10-21",
-        "reference_pct": 18.5,
-        "window": "2d"
-      },
       "Jonathan Kreiss-Tomkins": {
-        "change_pp": 10.55,
+        "change_pp": 5.75,
         "direction": "up",
         "reference_date": "2026-10-21",
         "reference_pct": 78.75,
@@ -64,23 +57,23 @@
     },
     "ohio-governor-winner-2026": {
       "Amy Acton (D)": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-10-21",
         "reference_pct": 77.5,
         "window": "2d"
-      },
-      "Vivek Ramaswamy (R)": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-10-21",
-        "reference_pct": 22.5,
-        "window": "2d"
       }
     },
     "texas-governor-winner-2026": {
+      "Gina Hinojosa (D)": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-10-21",
+        "reference_pct": 32.0,
+        "window": "2d"
+      },
       "Greg Abbott (R)": {
-        "change_pp": 4.1,
+        "change_pp": 5.15,
         "direction": "up",
         "reference_date": "2026-10-21",
         "reference_pct": 67.35,
@@ -91,14 +84,14 @@
   "by_market_id": {
     "national:NZ:Parliament:prime_minister": {
       "Christopher Luxon": {
-        "change_pp": 4.5,
+        "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-10-21",
         "reference_pct": 55.5,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 5.0,
+        "change_pp": 7.5,
         "direction": "down",
         "reference_date": "2026-10-21",
         "reference_pct": 44.5,
@@ -115,15 +108,8 @@
       }
     },
     "us-governor:AK": {
-      "Bernadette Wilson": {
-        "change_pp": 8.5,
-        "direction": "down",
-        "reference_date": "2026-10-21",
-        "reference_pct": 18.5,
-        "window": "2d"
-      },
       "Jonathan Kreiss-Tomkins": {
-        "change_pp": 10.55,
+        "change_pp": 5.75,
         "direction": "up",
         "reference_date": "2026-10-21",
         "reference_pct": 78.75,
@@ -148,23 +134,23 @@
     },
     "us-governor:OH": {
       "Amy Acton (D)": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-10-21",
         "reference_pct": 77.5,
         "window": "2d"
-      },
-      "Vivek Ramaswamy (R)": {
-        "change_pp": 5.0,
-        "direction": "down",
-        "reference_date": "2026-10-21",
-        "reference_pct": 22.5,
-        "window": "2d"
       }
     },
     "us-governor:TX": {
+      "Gina Hinojosa (D)": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-10-21",
+        "reference_pct": 32.0,
+        "window": "2d"
+      },
       "Greg Abbott (R)": {
-        "change_pp": 4.1,
+        "change_pp": 5.15,
         "direction": "up",
         "reference_date": "2026-10-21",
         "reference_pct": 67.35,
