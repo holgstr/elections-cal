@@ -1,21 +1,5 @@
 [
   {
-    "date": "2026-10-25",
-    "date_precision": "exact",
-    "country": "Brazil",
-    "country_code": "BR",
-    "title": "President — Round 2",
-    "type": "presidential",
-    "level": "federal",
-    "groups": [
-      "brics"
-    ],
-    "offices": [
-      "President"
-    ],
-    "source": "curated"
-  },
-  {
     "date": "2026-10-27",
     "date_precision": "estimated",
     "country": "Israel",
