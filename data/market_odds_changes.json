@@ -5,43 +5,41 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
-    "who-will-be-the-next-prime-minister-of-israel-after-the-next-election": {
-      "Gadi Eizenkot": {
-        "change_pp": 6.9,
-        "direction": "up",
-        "reference_date": "2026-10-24",
-        "reference_pct": 50.85,
-        "window": "2d"
-      }
-    },
-    "kansas-governor-winner-2026": {
-      "Cindy Holscher (D)": {
-        "change_pp": 4.0,
+    "next-prime-minister-of-new-zealand-174": {
+      "Christopher Luxon": {
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-10-24",
-        "reference_pct": 26.5,
+        "reference_pct": 58.0,
         "window": "2d"
       },
-      "Ty Masterson (R)": {
-        "change_pp": 4.0,
+      "Chris Hipkins": {
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-10-24",
-        "reference_pct": 73.5,
+        "reference_pct": 42.0,
         "window": "2d"
       }
     },
-    "texas-governor-winner-2026": {
-      "Gina Hinojosa (D)": {
-        "change_pp": 4.0,
+    "nebraska-governor-winner-2026": {
+      "Lynne Walz (D)": {
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-10-24",
-        "reference_pct": 29.5,
+        "reference_pct": 13.5,
+        "window": "2d"
+      },
+      "Jim Pillen (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-10-24",
+        "reference_pct": 86.5,
         "window": "2d"
       }
     },
     "maine-senate-election-winner": {
       "Troy Jackson (D)": {
-        "change_pp": 5.0,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-10-24",
         "reference_pct": 65.0,
@@ -52,48 +50,55 @@
         "direction": "up",
         "reference_date": "2026-10-24",
         "reference_pct": 35.5,
+        "window": "2d"
+      }
+    },
+    "michigan-senate-election-winner": {
+      "Abdul El-Sayed (D)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-24",
+        "reference_pct": 71.5,
         "window": "2d"
       }
     }
   },
   "by_market_id": {
-    "national:IL:Knesset:prime_minister": {
-      "Gadi Eizenkot": {
-        "change_pp": 6.9,
-        "direction": "up",
-        "reference_date": "2026-10-24",
-        "reference_pct": 50.85,
-        "window": "2d"
-      }
-    },
-    "us-governor:KS": {
-      "Cindy Holscher (D)": {
-        "change_pp": 4.0,
+    "national:NZ:Parliament:prime_minister": {
+      "Christopher Luxon": {
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-10-24",
-        "reference_pct": 26.5,
+        "reference_pct": 58.0,
         "window": "2d"
       },
-      "Ty Masterson (R)": {
-        "change_pp": 4.0,
+      "Chris Hipkins": {
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-10-24",
-        "reference_pct": 73.5,
+        "reference_pct": 42.0,
         "window": "2d"
       }
     },
-    "us-governor:TX": {
-      "Gina Hinojosa (D)": {
-        "change_pp": 4.0,
+    "us-governor:NE": {
+      "Lynne Walz (D)": {
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-10-24",
-        "reference_pct": 29.5,
+        "reference_pct": 13.5,
+        "window": "2d"
+      },
+      "Jim Pillen (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-10-24",
+        "reference_pct": 86.5,
         "window": "2d"
       }
     },
     "us-senate:ME": {
       "Troy Jackson (D)": {
-        "change_pp": 5.0,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-10-24",
         "reference_pct": 65.0,
@@ -104,6 +109,15 @@
         "direction": "up",
         "reference_date": "2026-10-24",
         "reference_pct": 35.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:MI": {
+      "Abdul El-Sayed (D)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-24",
+        "reference_pct": 71.5,
         "window": "2d"
       }
     }
