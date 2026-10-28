@@ -7,14 +7,14 @@
   "by_slug": {
     "next-prime-minister-of-new-zealand-174": {
       "Christopher Luxon": {
-        "change_pp": 6.5,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-10-26",
         "reference_pct": 51.0,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 5.0,
+        "change_pp": 8.0,
         "direction": "down",
         "reference_date": "2026-10-26",
         "reference_pct": 47.5,
@@ -23,14 +23,14 @@
     },
     "florida-governor-winner-2026": {
       "David Jolly (D)": {
-        "change_pp": 6.0,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-10-26",
         "reference_pct": 18.5,
         "window": "2d"
       },
       "Byron Donalds (R)": {
-        "change_pp": 6.0,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-10-26",
         "reference_pct": 81.5,
@@ -39,26 +39,17 @@
     },
     "kansas-governor-winner-2026": {
       "Cindy Holscher (D)": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-10-26",
         "reference_pct": 23.5,
         "window": "2d"
       },
       "Ty Masterson (R)": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-10-26",
         "reference_pct": 76.5,
-        "window": "2d"
-      }
-    },
-    "nebraska-governor-winner-2026": {
-      "Jim Pillen (R)": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-10-26",
-        "reference_pct": 81.5,
         "window": "2d"
       }
     },
@@ -78,9 +69,84 @@
         "window": "2d"
       }
     },
+    "south-carolina-governor-winner-2026": {
+      "Jermaine Johnson (D)": {
+        "change_pp": 4.25,
+        "direction": "up",
+        "reference_date": "2026-10-26",
+        "reference_pct": 4.2,
+        "window": "2d"
+      }
+    },
+    "texas-governor-winner-2026": {
+      "Gina Hinojosa (D)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-10-26",
+        "reference_pct": 32.5,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 4.65,
+        "direction": "down",
+        "reference_date": "2026-10-26",
+        "reference_pct": 67.05,
+        "window": "2d"
+      }
+    },
+    "wisconsin-governor-winner-2026": {
+      "Tom Tiffany (R)": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-10-26",
+        "reference_pct": 19.5,
+        "window": "2d"
+      }
+    },
+    "alaska-senate-election-winner": {
+      "Sen. Dan Sullivan": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-10-26",
+        "reference_pct": 25.5,
+        "window": "2d"
+      },
+      "Mary Peltola": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-26",
+        "reference_pct": 73.5,
+        "window": "2d"
+      }
+    },
+    "kansas-senate-election-winner": {
+      "Adam Hamilton (D)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-10-26",
+        "reference_pct": 37.5,
+        "window": "2d"
+      },
+      "Roger Marshall (R)": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-10-26",
+        "reference_pct": 62.0,
+        "window": "2d"
+      }
+    },
+    "maine-senate-election-winner": {
+      "Susan Collins (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-26",
+        "reference_pct": 40.5,
+        "window": "2d"
+      }
+    },
     "minnesota-senate-election-winner": {
       "Peggy Flanagan (D)": {
-        "change_pp": 5.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-10-26",
         "reference_pct": 85.5,
@@ -96,17 +162,33 @@
     },
     "south-carolina-senate-election-winner": {
       "Annie Andrews (D)": {
-        "change_pp": 4.5,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-10-26",
         "reference_pct": 22.5,
         "window": "2d"
       },
       "Darline Graham Nordone (R)": {
-        "change_pp": 5.0,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-10-26",
         "reference_pct": 77.5,
+        "window": "2d"
+      }
+    },
+    "texas-senate-election-winner": {
+      "James Talarico (D)": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-10-26",
+        "reference_pct": 64.5,
+        "window": "2d"
+      },
+      "Ken Paxton (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-26",
+        "reference_pct": 35.5,
         "window": "2d"
       }
     }
@@ -114,14 +196,14 @@
   "by_market_id": {
     "national:NZ:Parliament:prime_minister": {
       "Christopher Luxon": {
-        "change_pp": 6.5,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-10-26",
         "reference_pct": 51.0,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 5.0,
+        "change_pp": 8.0,
         "direction": "down",
         "reference_date": "2026-10-26",
         "reference_pct": 47.5,
@@ -130,14 +212,14 @@
     },
     "us-governor:FL": {
       "David Jolly (D)": {
-        "change_pp": 6.0,
+        "change_pp": 8.5,
         "direction": "up",
         "reference_date": "2026-10-26",
         "reference_pct": 18.5,
         "window": "2d"
       },
       "Byron Donalds (R)": {
-        "change_pp": 6.0,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-10-26",
         "reference_pct": 81.5,
@@ -146,26 +228,17 @@
     },
     "us-governor:KS": {
       "Cindy Holscher (D)": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "up",
         "reference_date": "2026-10-26",
         "reference_pct": 23.5,
         "window": "2d"
       },
       "Ty Masterson (R)": {
-        "change_pp": 4.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-10-26",
         "reference_pct": 76.5,
-        "window": "2d"
-      }
-    },
-    "us-governor:NE": {
-      "Jim Pillen (R)": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-10-26",
-        "reference_pct": 81.5,
         "window": "2d"
       }
     },
@@ -185,9 +258,84 @@
         "window": "2d"
       }
     },
+    "us-governor:SC": {
+      "Jermaine Johnson (D)": {
+        "change_pp": 4.25,
+        "direction": "up",
+        "reference_date": "2026-10-26",
+        "reference_pct": 4.2,
+        "window": "2d"
+      }
+    },
+    "us-governor:TX": {
+      "Gina Hinojosa (D)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-10-26",
+        "reference_pct": 32.5,
+        "window": "2d"
+      },
+      "Greg Abbott (R)": {
+        "change_pp": 4.65,
+        "direction": "down",
+        "reference_date": "2026-10-26",
+        "reference_pct": 67.05,
+        "window": "2d"
+      }
+    },
+    "us-governor:WI": {
+      "Tom Tiffany (R)": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-10-26",
+        "reference_pct": 19.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:AK": {
+      "Sen. Dan Sullivan": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-10-26",
+        "reference_pct": 25.5,
+        "window": "2d"
+      },
+      "Mary Peltola": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-26",
+        "reference_pct": 73.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:KS": {
+      "Adam Hamilton (D)": {
+        "change_pp": 5.0,
+        "direction": "up",
+        "reference_date": "2026-10-26",
+        "reference_pct": 37.5,
+        "window": "2d"
+      },
+      "Roger Marshall (R)": {
+        "change_pp": 4.5,
+        "direction": "down",
+        "reference_date": "2026-10-26",
+        "reference_pct": 62.0,
+        "window": "2d"
+      }
+    },
+    "us-senate:ME": {
+      "Susan Collins (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-26",
+        "reference_pct": 40.5,
+        "window": "2d"
+      }
+    },
     "us-senate:MN": {
       "Peggy Flanagan (D)": {
-        "change_pp": 5.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-10-26",
         "reference_pct": 85.5,
@@ -203,17 +351,33 @@
     },
     "us-senate:SC": {
       "Annie Andrews (D)": {
-        "change_pp": 4.5,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-10-26",
         "reference_pct": 22.5,
         "window": "2d"
       },
       "Darline Graham Nordone (R)": {
-        "change_pp": 5.0,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-10-26",
         "reference_pct": 77.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:TX": {
+      "James Talarico (D)": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-10-26",
+        "reference_pct": 64.5,
+        "window": "2d"
+      },
+      "Ken Paxton (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-26",
+        "reference_pct": 35.5,
         "window": "2d"
       }
     }
