@@ -5,25 +5,9 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
-    "next-prime-minister-of-new-zealand-174": {
-      "Christopher Luxon": {
-        "change_pp": 23.5,
-        "direction": "down",
-        "reference_date": "2026-10-27",
-        "reference_pct": 56.5,
-        "window": "2d"
-      },
-      "Chris Hipkins": {
-        "change_pp": 6.5,
-        "direction": "up",
-        "reference_date": "2026-10-27",
-        "reference_pct": 43.5,
-        "window": "2d"
-      }
-    },
     "nigerian-presidential-election-winner-20260602162945585": {
       "Rabiu Kwankwaso": {
-        "change_pp": 6.15,
+        "change_pp": 5.75,
         "direction": "up",
         "reference_date": "2026-10-27",
         "reference_pct": 0.45,
@@ -39,26 +23,10 @@
         "window": "2d"
       },
       "Byron Donalds (R)": {
-        "change_pp": 9.0,
+        "change_pp": 10.0,
         "direction": "down",
         "reference_date": "2026-10-27",
         "reference_pct": 79.5,
-        "window": "2d"
-      }
-    },
-    "south-carolina-governor-winner-2026": {
-      "Jermaine Johnson (D)": {
-        "change_pp": 5.35,
-        "direction": "up",
-        "reference_date": "2026-10-27",
-        "reference_pct": 5.45,
-        "window": "2d"
-      },
-      "Alan Wilson (R)": {
-        "change_pp": 4.8,
-        "direction": "down",
-        "reference_date": "2026-10-27",
-        "reference_pct": 93.9,
         "window": "2d"
       }
     },
@@ -71,16 +39,32 @@
         "window": "2d"
       },
       "Tom Tiffany (R)": {
-        "change_pp": 5.0,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-10-27",
         "reference_pct": 20.0,
         "window": "2d"
       }
     },
-    "iowa-senate-election-winner": {
-      "Ashley Hinson (R)": {
+    "alaska-senate-election-winner": {
+      "Sen. Dan Sullivan": {
         "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-10-27",
+        "reference_pct": 25.5,
+        "window": "2d"
+      }
+    },
+    "iowa-senate-election-winner": {
+      "Josh Turek (D)": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-10-27",
+        "reference_pct": 42.0,
+        "window": "2d"
+      },
+      "Ashley Hinson (R)": {
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-10-27",
         "reference_pct": 58.5,
@@ -89,33 +73,58 @@
     },
     "kansas-senate-election-winner": {
       "Adam Hamilton (D)": {
-        "change_pp": 9.0,
+        "change_pp": 10.0,
         "direction": "up",
         "reference_date": "2026-10-27",
         "reference_pct": 38.5,
         "window": "2d"
       },
       "Roger Marshall (R)": {
-        "change_pp": 9.5,
+        "change_pp": 9.0,
         "direction": "down",
         "reference_date": "2026-10-27",
         "reference_pct": 60.5,
         "window": "2d"
       }
     },
+    "michigan-senate-election-winner": {
+      "Abdul El-Sayed (D)": {
+        "change_pp": 7.5,
+        "direction": "up",
+        "reference_date": "2026-10-27",
+        "reference_pct": 69.0,
+        "window": "2d"
+      },
+      "Mike Rogers (R)": {
+        "change_pp": 7.0,
+        "direction": "down",
+        "reference_date": "2026-10-27",
+        "reference_pct": 30.5,
+        "window": "2d"
+      }
+    },
     "minnesota-senate-election-winner": {
       "Peggy Flanagan (D)": {
-        "change_pp": 6.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-10-27",
         "reference_pct": 85.5,
         "window": "2d"
       },
       "Michele Tafoya (R)": {
-        "change_pp": 6.0,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-10-27",
         "reference_pct": 14.5,
+        "window": "2d"
+      }
+    },
+    "montana-senate-election-winner": {
+      "Kurt Alme (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-10-27",
+        "reference_pct": 91.5,
         "window": "2d"
       }
     },
@@ -128,7 +137,7 @@
         "window": "2d"
       },
       "Darline Graham Nordone (R)": {
-        "change_pp": 8.0,
+        "change_pp": 7.5,
         "direction": "down",
         "reference_date": "2026-10-27",
         "reference_pct": 79.5,
@@ -137,25 +146,9 @@
     }
   },
   "by_market_id": {
-    "national:NZ:Parliament:prime_minister": {
-      "Christopher Luxon": {
-        "change_pp": 23.5,
-        "direction": "down",
-        "reference_date": "2026-10-27",
-        "reference_pct": 56.5,
-        "window": "2d"
-      },
-      "Chris Hipkins": {
-        "change_pp": 6.5,
-        "direction": "up",
-        "reference_date": "2026-10-27",
-        "reference_pct": 43.5,
-        "window": "2d"
-      }
-    },
     "presidential:NG": {
       "Rabiu Kwankwaso": {
-        "change_pp": 6.15,
+        "change_pp": 5.75,
         "direction": "up",
         "reference_date": "2026-10-27",
         "reference_pct": 0.45,
@@ -171,26 +164,10 @@
         "window": "2d"
       },
       "Byron Donalds (R)": {
-        "change_pp": 9.0,
+        "change_pp": 10.0,
         "direction": "down",
         "reference_date": "2026-10-27",
         "reference_pct": 79.5,
-        "window": "2d"
-      }
-    },
-    "us-governor:SC": {
-      "Jermaine Johnson (D)": {
-        "change_pp": 5.35,
-        "direction": "up",
-        "reference_date": "2026-10-27",
-        "reference_pct": 5.45,
-        "window": "2d"
-      },
-      "Alan Wilson (R)": {
-        "change_pp": 4.8,
-        "direction": "down",
-        "reference_date": "2026-10-27",
-        "reference_pct": 93.9,
         "window": "2d"
       }
     },
@@ -203,16 +180,32 @@
         "window": "2d"
       },
       "Tom Tiffany (R)": {
-        "change_pp": 5.0,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-10-27",
         "reference_pct": 20.0,
         "window": "2d"
       }
     },
-    "us-senate:IA": {
-      "Ashley Hinson (R)": {
+    "us-senate:AK": {
+      "Sen. Dan Sullivan": {
         "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-10-27",
+        "reference_pct": 25.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:IA": {
+      "Josh Turek (D)": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-10-27",
+        "reference_pct": 42.0,
+        "window": "2d"
+      },
+      "Ashley Hinson (R)": {
+        "change_pp": 5.0,
         "direction": "down",
         "reference_date": "2026-10-27",
         "reference_pct": 58.5,
@@ -221,33 +214,58 @@
     },
     "us-senate:KS": {
       "Adam Hamilton (D)": {
-        "change_pp": 9.0,
+        "change_pp": 10.0,
         "direction": "up",
         "reference_date": "2026-10-27",
         "reference_pct": 38.5,
         "window": "2d"
       },
       "Roger Marshall (R)": {
-        "change_pp": 9.5,
+        "change_pp": 9.0,
         "direction": "down",
         "reference_date": "2026-10-27",
         "reference_pct": 60.5,
         "window": "2d"
       }
     },
+    "us-senate:MI": {
+      "Abdul El-Sayed (D)": {
+        "change_pp": 7.5,
+        "direction": "up",
+        "reference_date": "2026-10-27",
+        "reference_pct": 69.0,
+        "window": "2d"
+      },
+      "Mike Rogers (R)": {
+        "change_pp": 7.0,
+        "direction": "down",
+        "reference_date": "2026-10-27",
+        "reference_pct": 30.5,
+        "window": "2d"
+      }
+    },
     "us-senate:MN": {
       "Peggy Flanagan (D)": {
-        "change_pp": 6.0,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-10-27",
         "reference_pct": 85.5,
         "window": "2d"
       },
       "Michele Tafoya (R)": {
-        "change_pp": 6.0,
+        "change_pp": 5.5,
         "direction": "down",
         "reference_date": "2026-10-27",
         "reference_pct": 14.5,
+        "window": "2d"
+      }
+    },
+    "us-senate:MT": {
+      "Kurt Alme (R)": {
+        "change_pp": 5.0,
+        "direction": "down",
+        "reference_date": "2026-10-27",
+        "reference_pct": 91.5,
         "window": "2d"
       }
     },
@@ -260,7 +278,7 @@
         "window": "2d"
       },
       "Darline Graham Nordone (R)": {
-        "change_pp": 8.0,
+        "change_pp": 7.5,
         "direction": "down",
         "reference_date": "2026-10-27",
         "reference_pct": 79.5,
