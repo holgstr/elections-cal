@@ -20,12 +20,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 12.5,
+      "max_change_pp": 10.5,
       "changes": [
         {
           "name": "Adam Hamilton (D)",
-          "current_pct": 54.0,
-          "change_pp": 11.5,
+          "current_pct": 53.0,
+          "change_pp": 10.5,
           "direction": "up",
           "since_date": "2026-10-28",
           "reference_pct": 42.5,
@@ -34,8 +34,8 @@
         },
         {
           "name": "Roger Marshall (R)",
-          "current_pct": 45.0,
-          "change_pp": 12.5,
+          "current_pct": 47.0,
+          "change_pp": 10.5,
           "direction": "down",
           "since_date": "2026-10-28",
           "reference_pct": 57.5,
@@ -46,8 +46,8 @@
       "prices": [
         {
           "name": "Adam Hamilton (D)",
-          "current_pct": 54.0,
-          "change_pp": 11.5,
+          "current_pct": 53.0,
+          "change_pp": 10.5,
           "direction": "up",
           "since_date": "2026-10-28",
           "reference_pct": 42.5,
@@ -56,131 +56,11 @@
         },
         {
           "name": "Roger Marshall (R)",
-          "current_pct": 45.0,
-          "change_pp": 12.5,
+          "current_pct": 47.0,
+          "change_pp": 10.5,
           "direction": "down",
           "since_date": "2026-10-28",
           "reference_pct": 57.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "us-senate:MI",
-      "slug": "michigan-senate-election-winner",
-      "category": "us_senate",
-      "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "MI",
-      "city_code": null,
-      "contest": "Senate",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
-      "max_change_pp": 8.0,
-      "changes": [
-        {
-          "name": "Abdul El-Sayed (D)",
-          "current_pct": 77.5,
-          "change_pp": 7.5,
-          "direction": "up",
-          "since_date": "2026-10-28",
-          "reference_pct": 70.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Mike Rogers (R)",
-          "current_pct": 22.5,
-          "change_pp": 8.0,
-          "direction": "down",
-          "since_date": "2026-10-28",
-          "reference_pct": 30.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Abdul El-Sayed (D)",
-          "current_pct": 77.5,
-          "change_pp": 7.5,
-          "direction": "up",
-          "since_date": "2026-10-28",
-          "reference_pct": 70.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Mike Rogers (R)",
-          "current_pct": 22.5,
-          "change_pp": 8.0,
-          "direction": "down",
-          "since_date": "2026-10-28",
-          "reference_pct": 30.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "national:NZ:Parliament:prime_minister",
-      "slug": "next-prime-minister-of-new-zealand-174",
-      "category": "national",
-      "odds_format": "candidates",
-      "min_pct": 3,
-      "country_code": "NZ",
-      "state_code": null,
-      "city_code": null,
-      "contest": "Parliament",
-      "market_label": "Next Prime Minister",
-      "party": null,
-      "election_date": "2026-11-07",
-      "election_title": "Parliament",
-      "max_change_pp": 7.0,
-      "changes": [
-        {
-          "name": "Christopher Luxon",
-          "current_pct": 52.5,
-          "change_pp": 7.0,
-          "direction": "down",
-          "since_date": "2026-10-28",
-          "reference_pct": 59.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Chris Hipkins",
-          "current_pct": 43.5,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-10-28",
-          "reference_pct": 39.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Christopher Luxon",
-          "current_pct": 52.5,
-          "change_pp": 7.0,
-          "direction": "down",
-          "since_date": "2026-10-28",
-          "reference_pct": 59.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Chris Hipkins",
-          "current_pct": 43.5,
-          "change_pp": 4.0,
-          "direction": "up",
-          "since_date": "2026-10-28",
-          "reference_pct": 39.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -200,12 +80,12 @@
       "party": null,
       "election_date": "2027-01-16",
       "election_title": "General",
-      "max_change_pp": 6.8,
+      "max_change_pp": 7.1,
       "changes": [
         {
           "name": "Rabiu Kwankwaso",
-          "current_pct": 7.25,
-          "change_pp": 6.8,
+          "current_pct": 7.55,
+          "change_pp": 7.1,
           "direction": "up",
           "since_date": "2026-10-28",
           "reference_pct": 0.45,
@@ -220,15 +100,75 @@
         },
         {
           "name": "Peter Obi",
-          "current_pct": 21.5
+          "current_pct": 20.0
         },
         {
           "name": "Rabiu Kwankwaso",
-          "current_pct": 7.25,
-          "change_pp": 6.8,
+          "current_pct": 7.55,
+          "change_pp": 7.1,
           "direction": "up",
           "since_date": "2026-10-28",
           "reference_pct": 0.45,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:MI",
+      "slug": "michigan-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "MI",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 7.0,
+      "changes": [
+        {
+          "name": "Abdul El-Sayed (D)",
+          "current_pct": 76.5,
+          "change_pp": 6.5,
+          "direction": "up",
+          "since_date": "2026-10-28",
+          "reference_pct": 70.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Mike Rogers (R)",
+          "current_pct": 23.5,
+          "change_pp": 7.0,
+          "direction": "down",
+          "since_date": "2026-10-28",
+          "reference_pct": 30.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Abdul El-Sayed (D)",
+          "current_pct": 76.5,
+          "change_pp": 6.5,
+          "direction": "up",
+          "since_date": "2026-10-28",
+          "reference_pct": 70.0,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Mike Rogers (R)",
+          "current_pct": 23.5,
+          "change_pp": 7.0,
+          "direction": "down",
+          "since_date": "2026-10-28",
+          "reference_pct": 30.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -312,8 +252,8 @@
       "changes": [
         {
           "name": "David Jolly (D)",
-          "current_pct": 32.5,
-          "change_pp": 5.5,
+          "current_pct": 32.0,
+          "change_pp": 5.0,
           "direction": "up",
           "since_date": "2026-10-28",
           "reference_pct": 27.0,
@@ -344,8 +284,8 @@
         },
         {
           "name": "David Jolly (D)",
-          "current_pct": 32.5,
-          "change_pp": 5.5,
+          "current_pct": 32.0,
+          "change_pp": 5.0,
           "direction": "up",
           "since_date": "2026-10-28",
           "reference_pct": 27.0,
@@ -355,46 +295,46 @@
       ]
     },
     {
-      "market_id": "us-governor:GA",
-      "slug": "georgia-governor-winner-2026",
-      "category": "us_governor",
-      "odds_format": "party",
+      "market_id": "national:NZ:Parliament:prime_minister",
+      "slug": "next-prime-minister-of-new-zealand-174",
+      "category": "national",
+      "odds_format": "candidates",
       "min_pct": 3,
-      "country_code": "US",
-      "state_code": "GA",
+      "country_code": "NZ",
+      "state_code": null,
       "city_code": null,
-      "contest": "Governor",
-      "market_label": null,
+      "contest": "Parliament",
+      "market_label": "Next Prime Minister",
       "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
+      "election_date": "2026-11-07",
+      "election_title": "Parliament",
       "max_change_pp": 5.0,
       "changes": [
         {
-          "name": "Rick Jackson (R)",
-          "current_pct": 33.0,
+          "name": "Christopher Luxon",
+          "current_pct": 54.5,
           "change_pp": 5.0,
           "direction": "down",
           "since_date": "2026-10-28",
-          "reference_pct": 38.0,
+          "reference_pct": 59.5,
           "change_days": 2,
           "window": "2d"
         }
       ],
       "prices": [
         {
-          "name": "Keisha Lance Bottoms (D)",
-          "current_pct": 66.0
-        },
-        {
-          "name": "Rick Jackson (R)",
-          "current_pct": 33.0,
+          "name": "Christopher Luxon",
+          "current_pct": 54.5,
           "change_pp": 5.0,
           "direction": "down",
           "since_date": "2026-10-28",
-          "reference_pct": 38.0,
+          "reference_pct": 59.5,
           "change_days": 2,
           "window": "2d"
+        },
+        {
+          "name": "Chris Hipkins",
+          "current_pct": 43.0
         }
       ]
     }
