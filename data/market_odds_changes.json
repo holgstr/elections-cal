@@ -5,32 +5,34 @@
   "window_label": "2d",
   "threshold_pp": 4,
   "by_slug": {
+    "next-prime-minister-of-new-zealand-174": {
+      "Christopher Luxon": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-29",
+        "reference_pct": 58.5,
+        "window": "2d"
+      }
+    },
     "florida-governor-winner-2026": {
       "David Jolly (D)": {
-        "change_pp": 6.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-10-29",
         "reference_pct": 29.5,
-        "window": "2d"
-      },
-      "Byron Donalds (R)": {
-        "change_pp": 6.0,
-        "direction": "down",
-        "reference_date": "2026-10-29",
-        "reference_pct": 69.5,
         "window": "2d"
       }
     },
     "georgia-governor-winner-2026": {
       "Keisha Lance Bottoms (D)": {
-        "change_pp": 6.0,
+        "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-10-29",
         "reference_pct": 61.5,
         "window": "2d"
       },
       "Rick Jackson (R)": {
-        "change_pp": 6.5,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-10-29",
         "reference_pct": 38.5,
@@ -39,17 +41,26 @@
     },
     "nebraska-governor-winner-2026": {
       "Lynne Walz (D)": {
-        "change_pp": 6.5,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-10-29",
         "reference_pct": 15.5,
         "window": "2d"
       },
       "Jim Pillen (R)": {
-        "change_pp": 8.5,
+        "change_pp": 9.0,
         "direction": "up",
         "reference_date": "2026-10-29",
         "reference_pct": 83.0,
+        "window": "2d"
+      }
+    },
+    "michigan-senate-election-winner": {
+      "Mike Rogers (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-29",
+        "reference_pct": 23.5,
         "window": "2d"
       }
     },
@@ -63,15 +74,8 @@
       }
     },
     "nebraska-senate-election-winner": {
-      "Pete Ricketts (R)": {
-        "change_pp": 8.5,
-        "direction": "up",
-        "reference_date": "2026-10-29",
-        "reference_pct": 69.0,
-        "window": "2d"
-      },
       "Independent": {
-        "change_pp": 8.0,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-10-29",
         "reference_pct": 30.5,
@@ -80,32 +84,34 @@
     }
   },
   "by_market_id": {
+    "national:NZ:Parliament:prime_minister": {
+      "Christopher Luxon": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-29",
+        "reference_pct": 58.5,
+        "window": "2d"
+      }
+    },
     "us-governor:FL": {
       "David Jolly (D)": {
-        "change_pp": 6.0,
+        "change_pp": 4.0,
         "direction": "up",
         "reference_date": "2026-10-29",
         "reference_pct": 29.5,
-        "window": "2d"
-      },
-      "Byron Donalds (R)": {
-        "change_pp": 6.0,
-        "direction": "down",
-        "reference_date": "2026-10-29",
-        "reference_pct": 69.5,
         "window": "2d"
       }
     },
     "us-governor:GA": {
       "Keisha Lance Bottoms (D)": {
-        "change_pp": 6.0,
+        "change_pp": 6.5,
         "direction": "up",
         "reference_date": "2026-10-29",
         "reference_pct": 61.5,
         "window": "2d"
       },
       "Rick Jackson (R)": {
-        "change_pp": 6.5,
+        "change_pp": 7.0,
         "direction": "down",
         "reference_date": "2026-10-29",
         "reference_pct": 38.5,
@@ -114,17 +120,26 @@
     },
     "us-governor:NE": {
       "Lynne Walz (D)": {
-        "change_pp": 6.5,
+        "change_pp": 8.5,
         "direction": "down",
         "reference_date": "2026-10-29",
         "reference_pct": 15.5,
         "window": "2d"
       },
       "Jim Pillen (R)": {
-        "change_pp": 8.5,
+        "change_pp": 9.0,
         "direction": "up",
         "reference_date": "2026-10-29",
         "reference_pct": 83.0,
+        "window": "2d"
+      }
+    },
+    "us-senate:MI": {
+      "Mike Rogers (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-29",
+        "reference_pct": 23.5,
         "window": "2d"
       }
     },
@@ -138,15 +153,8 @@
       }
     },
     "us-senate:NE": {
-      "Pete Ricketts (R)": {
-        "change_pp": 8.5,
-        "direction": "up",
-        "reference_date": "2026-10-29",
-        "reference_pct": 69.0,
-        "window": "2d"
-      },
       "Independent": {
-        "change_pp": 8.0,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-10-29",
         "reference_pct": 30.5,

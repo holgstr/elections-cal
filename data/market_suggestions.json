@@ -20,12 +20,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 8.5,
+      "max_change_pp": 9.0,
       "changes": [
         {
           "name": "Lynne Walz (D)",
-          "current_pct": 9.0,
-          "change_pp": 6.5,
+          "current_pct": 7.0,
+          "change_pp": 8.5,
           "direction": "down",
           "since_date": "2026-10-29",
           "reference_pct": 15.5,
@@ -34,8 +34,8 @@
         },
         {
           "name": "Jim Pillen (R)",
-          "current_pct": 91.5,
-          "change_pp": 8.5,
+          "current_pct": 92.0,
+          "change_pp": 9.0,
           "direction": "up",
           "since_date": "2026-10-29",
           "reference_pct": 83.0,
@@ -46,8 +46,8 @@
       "prices": [
         {
           "name": "Jim Pillen (R)",
-          "current_pct": 91.5,
-          "change_pp": 8.5,
+          "current_pct": 92.0,
+          "change_pp": 9.0,
           "direction": "up",
           "since_date": "2026-10-29",
           "reference_pct": 83.0,
@@ -56,71 +56,11 @@
         },
         {
           "name": "Lynne Walz (D)",
-          "current_pct": 9.0,
-          "change_pp": 6.5,
+          "current_pct": 7.0,
+          "change_pp": 8.5,
           "direction": "down",
           "since_date": "2026-10-29",
           "reference_pct": 15.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    },
-    {
-      "market_id": "us-senate:NE",
-      "slug": "nebraska-senate-election-winner",
-      "category": "us_senate",
-      "odds_format": "party",
-      "min_pct": 3,
-      "country_code": "US",
-      "state_code": "NE",
-      "city_code": null,
-      "contest": "Senate",
-      "market_label": null,
-      "party": null,
-      "election_date": "2026-11-03",
-      "election_title": "Midterms",
-      "max_change_pp": 8.5,
-      "changes": [
-        {
-          "name": "Pete Ricketts (R)",
-          "current_pct": 77.5,
-          "change_pp": 8.5,
-          "direction": "up",
-          "since_date": "2026-10-29",
-          "reference_pct": 69.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Independent",
-          "current_pct": 22.5,
-          "change_pp": 8.0,
-          "direction": "down",
-          "since_date": "2026-10-29",
-          "reference_pct": 30.5,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Pete Ricketts (R)",
-          "current_pct": 77.5,
-          "change_pp": 8.5,
-          "direction": "up",
-          "since_date": "2026-10-29",
-          "reference_pct": 69.0,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Independent",
-          "current_pct": 22.5,
-          "change_pp": 8.0,
-          "direction": "down",
-          "since_date": "2026-10-29",
-          "reference_pct": 30.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -140,12 +80,12 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 6.5,
+      "max_change_pp": 7.0,
       "changes": [
         {
           "name": "Keisha Lance Bottoms (D)",
-          "current_pct": 67.5,
-          "change_pp": 6.0,
+          "current_pct": 68.0,
+          "change_pp": 6.5,
           "direction": "up",
           "since_date": "2026-10-29",
           "reference_pct": 61.5,
@@ -154,8 +94,8 @@
         },
         {
           "name": "Rick Jackson (R)",
-          "current_pct": 32.0,
-          "change_pp": 6.5,
+          "current_pct": 31.5,
+          "change_pp": 7.0,
           "direction": "down",
           "since_date": "2026-10-29",
           "reference_pct": 38.5,
@@ -166,8 +106,8 @@
       "prices": [
         {
           "name": "Keisha Lance Bottoms (D)",
-          "current_pct": 67.5,
-          "change_pp": 6.0,
+          "current_pct": 68.0,
+          "change_pp": 6.5,
           "direction": "up",
           "since_date": "2026-10-29",
           "reference_pct": 61.5,
@@ -176,13 +116,57 @@
         },
         {
           "name": "Rick Jackson (R)",
-          "current_pct": 32.0,
-          "change_pp": 6.5,
+          "current_pct": 31.5,
+          "change_pp": 7.0,
           "direction": "down",
           "since_date": "2026-10-29",
           "reference_pct": 38.5,
           "change_days": 2,
           "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "national:NZ:Parliament:prime_minister",
+      "slug": "next-prime-minister-of-new-zealand-174",
+      "category": "national",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "NZ",
+      "state_code": null,
+      "city_code": null,
+      "contest": "Parliament",
+      "market_label": "Next Prime Minister",
+      "party": null,
+      "election_date": "2026-11-07",
+      "election_title": "Parliament",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "Christopher Luxon",
+          "current_pct": 54.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-10-29",
+          "reference_pct": 58.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Christopher Luxon",
+          "current_pct": 54.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-10-29",
+          "reference_pct": 58.5,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "Chris Hipkins",
+          "current_pct": 43.5
         }
       ]
     },
@@ -200,25 +184,15 @@
       "party": null,
       "election_date": "2026-11-03",
       "election_title": "Midterms",
-      "max_change_pp": 6.0,
+      "max_change_pp": 4.0,
       "changes": [
         {
           "name": "David Jolly (D)",
-          "current_pct": 35.5,
-          "change_pp": 6.0,
+          "current_pct": 33.5,
+          "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-10-29",
           "reference_pct": 29.5,
-          "change_days": 2,
-          "window": "2d"
-        },
-        {
-          "name": "Byron Donalds (R)",
-          "current_pct": 63.5,
-          "change_pp": 6.0,
-          "direction": "down",
-          "since_date": "2026-10-29",
-          "reference_pct": 69.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -226,21 +200,59 @@
       "prices": [
         {
           "name": "Byron Donalds (R)",
-          "current_pct": 63.5,
-          "change_pp": 6.0,
-          "direction": "down",
-          "since_date": "2026-10-29",
-          "reference_pct": 69.5,
-          "change_days": 2,
-          "window": "2d"
+          "current_pct": 66.0
         },
         {
           "name": "David Jolly (D)",
-          "current_pct": 35.5,
-          "change_pp": 6.0,
+          "current_pct": 33.5,
+          "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-10-29",
           "reference_pct": 29.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:MI",
+      "slug": "michigan-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "MI",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "Mike Rogers (R)",
+          "current_pct": 19.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-10-29",
+          "reference_pct": 23.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Abdul El-Sayed (D)",
+          "current_pct": 79.5
+        },
+        {
+          "name": "Mike Rogers (R)",
+          "current_pct": 19.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-10-29",
+          "reference_pct": 23.5,
           "change_days": 2,
           "window": "2d"
         }
@@ -287,6 +299,50 @@
         {
           "name": "Independent",
           "current_pct": 9.85
+        }
+      ]
+    },
+    {
+      "market_id": "us-senate:NE",
+      "slug": "nebraska-senate-election-winner",
+      "category": "us_senate",
+      "odds_format": "party",
+      "min_pct": 3,
+      "country_code": "US",
+      "state_code": "NE",
+      "city_code": null,
+      "contest": "Senate",
+      "market_label": null,
+      "party": null,
+      "election_date": "2026-11-03",
+      "election_title": "Midterms",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "Independent",
+          "current_pct": 26.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-10-29",
+          "reference_pct": 30.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Pete Ricketts (R)",
+          "current_pct": 72.5
+        },
+        {
+          "name": "Independent",
+          "current_pct": 26.5,
+          "change_pp": 4.0,
+          "direction": "down",
+          "since_date": "2026-10-29",
+          "reference_pct": 30.5,
+          "change_days": 2,
+          "window": "2d"
         }
       ]
     }
