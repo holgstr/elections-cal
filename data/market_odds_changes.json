@@ -23,6 +23,22 @@
         "window": "2d"
       }
     },
+    "florida-governor-winner-2026": {
+      "David Jolly (D)": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-10-30",
+        "reference_pct": 32.0,
+        "window": "2d"
+      },
+      "Byron Donalds (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-30",
+        "reference_pct": 67.5,
+        "window": "2d"
+      }
+    },
     "georgia-governor-winner-2026": {
       "Keisha Lance Bottoms (D)": {
         "change_pp": 5.5,
@@ -32,32 +48,23 @@
         "window": "2d"
       },
       "Rick Jackson (R)": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-10-30",
         "reference_pct": 35.0,
         "window": "2d"
       }
     },
-    "kansas-governor-winner-2026": {
-      "Ty Masterson (R)": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-10-30",
-        "reference_pct": 71.5,
-        "window": "2d"
-      }
-    },
     "nebraska-governor-winner-2026": {
       "Lynne Walz (D)": {
-        "change_pp": 7.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-10-30",
         "reference_pct": 14.5,
         "window": "2d"
       },
       "Jim Pillen (R)": {
-        "change_pp": 6.5,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-10-30",
         "reference_pct": 86.0,
@@ -66,58 +73,26 @@
     },
     "texas-governor-winner-2026": {
       "Gina Hinojosa (D)": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-10-30",
         "reference_pct": 37.5,
         "window": "2d"
-      },
-      "Greg Abbott (R)": {
-        "change_pp": 6.2,
-        "direction": "up",
-        "reference_date": "2026-10-30",
-        "reference_pct": 62.15,
-        "window": "2d"
       }
     },
     "alaska-senate-election-winner": {
-      "Mary Peltola": {
-        "change_pp": 4.0,
-        "direction": "up",
+      "Sen. Dan Sullivan": {
+        "change_pp": 5.0,
+        "direction": "down",
         "reference_date": "2026-10-30",
-        "reference_pct": 69.5,
+        "reference_pct": 30.5,
         "window": "2d"
-      }
-    },
-    "michigan-senate-election-winner": {
-      "Abdul El-Sayed (D)": {
+      },
+      "Mary Peltola": {
         "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-10-30",
-        "reference_pct": 76.5,
-        "window": "2d"
-      },
-      "Mike Rogers (R)": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-10-30",
-        "reference_pct": 23.5,
-        "window": "2d"
-      }
-    },
-    "nebraska-senate-election-winner": {
-      "Pete Ricketts (R)": {
-        "change_pp": 5.5,
-        "direction": "up",
-        "reference_date": "2026-10-30",
-        "reference_pct": 69.0,
-        "window": "2d"
-      },
-      "Independent": {
-        "change_pp": 4.5,
-        "direction": "down",
-        "reference_date": "2026-10-30",
-        "reference_pct": 31.0,
+        "reference_pct": 69.5,
         "window": "2d"
       }
     }
@@ -141,6 +116,22 @@
         "window": "2d"
       }
     },
+    "us-governor:FL": {
+      "David Jolly (D)": {
+        "change_pp": 4.5,
+        "direction": "up",
+        "reference_date": "2026-10-30",
+        "reference_pct": 32.0,
+        "window": "2d"
+      },
+      "Byron Donalds (R)": {
+        "change_pp": 4.0,
+        "direction": "down",
+        "reference_date": "2026-10-30",
+        "reference_pct": 67.5,
+        "window": "2d"
+      }
+    },
     "us-governor:GA": {
       "Keisha Lance Bottoms (D)": {
         "change_pp": 5.5,
@@ -150,32 +141,23 @@
         "window": "2d"
       },
       "Rick Jackson (R)": {
-        "change_pp": 5.0,
+        "change_pp": 4.5,
         "direction": "down",
         "reference_date": "2026-10-30",
         "reference_pct": 35.0,
         "window": "2d"
       }
     },
-    "us-governor:KS": {
-      "Ty Masterson (R)": {
-        "change_pp": 4.0,
-        "direction": "up",
-        "reference_date": "2026-10-30",
-        "reference_pct": 71.5,
-        "window": "2d"
-      }
-    },
     "us-governor:NE": {
       "Lynne Walz (D)": {
-        "change_pp": 7.0,
+        "change_pp": 6.0,
         "direction": "down",
         "reference_date": "2026-10-30",
         "reference_pct": 14.5,
         "window": "2d"
       },
       "Jim Pillen (R)": {
-        "change_pp": 6.5,
+        "change_pp": 5.5,
         "direction": "up",
         "reference_date": "2026-10-30",
         "reference_pct": 86.0,
@@ -184,58 +166,26 @@
     },
     "us-governor:TX": {
       "Gina Hinojosa (D)": {
-        "change_pp": 5.0,
+        "change_pp": 4.0,
         "direction": "down",
         "reference_date": "2026-10-30",
         "reference_pct": 37.5,
         "window": "2d"
-      },
-      "Greg Abbott (R)": {
-        "change_pp": 6.2,
-        "direction": "up",
-        "reference_date": "2026-10-30",
-        "reference_pct": 62.15,
-        "window": "2d"
       }
     },
     "us-senate:AK": {
-      "Mary Peltola": {
-        "change_pp": 4.0,
-        "direction": "up",
+      "Sen. Dan Sullivan": {
+        "change_pp": 5.0,
+        "direction": "down",
         "reference_date": "2026-10-30",
-        "reference_pct": 69.5,
+        "reference_pct": 30.5,
         "window": "2d"
-      }
-    },
-    "us-senate:MI": {
-      "Abdul El-Sayed (D)": {
+      },
+      "Mary Peltola": {
         "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-10-30",
-        "reference_pct": 76.5,
-        "window": "2d"
-      },
-      "Mike Rogers (R)": {
-        "change_pp": 4.0,
-        "direction": "down",
-        "reference_date": "2026-10-30",
-        "reference_pct": 23.5,
-        "window": "2d"
-      }
-    },
-    "us-senate:NE": {
-      "Pete Ricketts (R)": {
-        "change_pp": 5.5,
-        "direction": "up",
-        "reference_date": "2026-10-30",
-        "reference_pct": 69.0,
-        "window": "2d"
-      },
-      "Independent": {
-        "change_pp": 4.5,
-        "direction": "down",
-        "reference_date": "2026-10-30",
-        "reference_pct": 31.0,
+        "reference_pct": 69.5,
         "window": "2d"
       }
     }
