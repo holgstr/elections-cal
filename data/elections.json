@@ -1,22 +1,5 @@
 [
   {
-    "date": "2026-10-27",
-    "date_precision": "estimated",
-    "country": "Israel",
-    "country_code": "IL",
-    "title": "Knesset",
-    "type": "legislative",
-    "level": "federal",
-    "groups": [
-      "oecd"
-    ],
-    "offices": [
-      "Knesset"
-    ],
-    "comment": "snap_election",
-    "source": "curated"
-  },
-  {
     "date": "2026-11-03",
     "date_precision": "exact",
     "country": "United States",
