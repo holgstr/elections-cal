@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-03",
+  "last_updated": "2026-11-04",
   "baselines": {
     "de-state:BE::CDU": {
       "pct": 23.0,
@@ -121601,6 +121601,97 @@
         "us-senate:AL": {
           "slug": "alabama-senate-election-winner",
           "prices": {}
+        }
+      }
+    },
+    {
+      "date": "2026-11-04",
+      "markets": {
+        "national:MX:Chamber of Deputies:party_winner": {
+          "slug": "mexico-legislative-election-winner",
+          "prices": {
+            "PAN": 5.1,
+            "PRI": 2.3,
+            "PT": 0.15,
+            "PVEM": 0.3,
+            "MC": 2.2,
+            "Morena": 87.65
+          }
+        },
+        "national:NZ:Parliament:prime_minister": {
+          "slug": "next-prime-minister-of-new-zealand-174",
+          "prices": {
+            "Christopher Luxon": 38.5,
+            "Chris Hipkins": 57.0,
+            "Winston Peters": 0.05,
+            "Nicola Willis": 0.05,
+            "Chlöe Swarbrick": 0.05,
+            "David Seymour": 0.05,
+            "Carmel Sepuloni": 0.05
+          }
+        },
+        "presidential:FR": {
+          "slug": "next-french-presidential-election",
+          "prices": {
+            "Marine Le Pen": 39.95,
+            "Jordan Bardella": 2.25,
+            "Éric Zemmour": 0.75,
+            "Édouard Philippe": 11.5,
+            "David Lisnard": 14.95,
+            "Xavier Bertrand": 0.15,
+            "Laurent Wauquiez": 0.05,
+            "François Ruffin": 0.1,
+            "Gabriel Attal": 0.65,
+            "Bruno Retailleau": 0.7,
+            "François Hollande": 2.3,
+            "Raphaël Glucksmann": 2.45,
+            "Jean-Luc Mélenchon": 12.5,
+            "Marine Tondelier": 0.05,
+            "Fabien Roussel": 0.05,
+            "Olivier Faure": 0.05,
+            "Dominique de Villepin": 2.2,
+            "Ségolène Royal": 0.05,
+            "François Asselineau": 0.05,
+            "Clémentine Autain": 0.05,
+            "Nicolas Dupont-Aignan": 0.05,
+            "Michel Barnier": 0.05,
+            "Valérie Pécresse": 0.05,
+            "François Bayrou": 0.05,
+            "Élisabeth Borne": 0.05,
+            "Yaël Braun-Pivet": 0.05,
+            "Jean Castex": 0.05,
+            "Gérald Darmanin": 0.05,
+            "Carole Delga": 0.05,
+            "Bernard Cazeneuve": 0.05,
+            "Manuel Bompard": 0.05,
+            "Mathilde Panot": 0.05,
+            "Sarah Knafo": 0.45,
+            "Juan Branco": 0.05,
+            "Clémence Guetté": 0.05,
+            "Sébastien Lecornu": 0.15,
+            "Karim Bouamrane": 0.05,
+            "Lucie Castets": 0.05,
+            "Yannick Jadot": 0.05,
+            "François Baroin": 0.55,
+            "Marion Maréchal": 0.05,
+            "Christine Lagarde": 7.65,
+            "Natacha Polony": 0.05,
+            "Anasse Kazib": 0.05,
+            "Sylvain Durif": 0.05
+          }
+        },
+        "presidential:NG": {
+          "slug": "nigerian-presidential-election-winner-20260602162945585",
+          "prices": {
+            "Rotimi Amaechi": 0.2,
+            "Rabiu Kwankwaso": 5.85,
+            "Peter Obi": 21.5,
+            "Bola Tinubu": 68.0,
+            "Omoyele Sowore": 0.55,
+            "Atiku Abubakar": 4.85,
+            "Seyi Makinde": 4.9,
+            "Sandy Onor": 0.15
+          }
         }
       }
     }
