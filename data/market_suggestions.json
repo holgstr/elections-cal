@@ -20,12 +20,12 @@
       "party": null,
       "election_date": "2026-11-07",
       "election_title": "Parliament",
-      "max_change_pp": 9.5,
+      "max_change_pp": 10.0,
       "changes": [
         {
           "name": "Christopher Luxon",
-          "current_pct": 56.0,
-          "change_pp": 9.5,
+          "current_pct": 56.5,
+          "change_pp": 10.0,
           "direction": "up",
           "since_date": "2026-11-03",
           "reference_pct": 46.5,
@@ -34,8 +34,8 @@
         },
         {
           "name": "Chris Hipkins",
-          "current_pct": 43.5,
-          "change_pp": 8.0,
+          "current_pct": 41.5,
+          "change_pp": 10.0,
           "direction": "down",
           "since_date": "2026-11-03",
           "reference_pct": 51.5,
@@ -46,8 +46,8 @@
       "prices": [
         {
           "name": "Christopher Luxon",
-          "current_pct": 56.0,
-          "change_pp": 9.5,
+          "current_pct": 56.5,
+          "change_pp": 10.0,
           "direction": "up",
           "since_date": "2026-11-03",
           "reference_pct": 46.5,
@@ -56,11 +56,111 @@
         },
         {
           "name": "Chris Hipkins",
-          "current_pct": 43.5,
-          "change_pp": 8.0,
+          "current_pct": 41.5,
+          "change_pp": 10.0,
           "direction": "down",
           "since_date": "2026-11-03",
           "reference_pct": 51.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    },
+    {
+      "market_id": "presidential:FR",
+      "slug": "next-french-presidential-election",
+      "category": "presidential",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "FR",
+      "state_code": null,
+      "city_code": null,
+      "contest": "President",
+      "market_label": "Presidential election",
+      "party": null,
+      "election_date": "2027-04-11",
+      "election_title": "President — Round 1",
+      "max_change_pp": 4.1,
+      "changes": [
+        {
+          "name": "Marine Le Pen",
+          "current_pct": 44.25,
+          "change_pp": 4.1,
+          "direction": "up",
+          "since_date": "2026-11-03",
+          "reference_pct": 40.15,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Marine Le Pen",
+          "current_pct": 44.25,
+          "change_pp": 4.1,
+          "direction": "up",
+          "since_date": "2026-11-03",
+          "reference_pct": 40.15,
+          "change_days": 2,
+          "window": "2d"
+        },
+        {
+          "name": "David Lisnard",
+          "current_pct": 15.25
+        },
+        {
+          "name": "Jean-Luc Mélenchon",
+          "current_pct": 12.5
+        },
+        {
+          "name": "Édouard Philippe",
+          "current_pct": 11.5
+        },
+        {
+          "name": "Christine Lagarde",
+          "current_pct": 6.55
+        }
+      ]
+    },
+    {
+      "market_id": "presidential:NG",
+      "slug": "nigerian-presidential-election-winner-20260602162945585",
+      "category": "presidential",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "NG",
+      "state_code": null,
+      "city_code": null,
+      "contest": "President",
+      "market_label": "Presidential election",
+      "party": null,
+      "election_date": "2027-01-16",
+      "election_title": "General",
+      "max_change_pp": 4.0,
+      "changes": [
+        {
+          "name": "Peter Obi",
+          "current_pct": 26.5,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-11-03",
+          "reference_pct": 22.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Bola Tinubu",
+          "current_pct": 67.5
+        },
+        {
+          "name": "Peter Obi",
+          "current_pct": 26.5,
+          "change_pp": 4.0,
+          "direction": "up",
+          "since_date": "2026-11-03",
+          "reference_pct": 22.5,
           "change_days": 2,
           "window": "2d"
         }
