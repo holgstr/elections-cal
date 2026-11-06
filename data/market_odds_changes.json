@@ -7,14 +7,14 @@
   "by_slug": {
     "next-prime-minister-of-new-zealand-174": {
       "Christopher Luxon": {
-        "change_pp": 18.5,
+        "change_pp": 17.0,
         "direction": "up",
         "reference_date": "2026-11-04",
         "reference_pct": 38.5,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 14.0,
+        "change_pp": 13.0,
         "direction": "down",
         "reference_date": "2026-11-04",
         "reference_pct": 57.0,
@@ -23,7 +23,7 @@
     },
     "next-french-presidential-election": {
       "Marine Le Pen": {
-        "change_pp": 4.6,
+        "change_pp": 5.2,
         "direction": "up",
         "reference_date": "2026-11-04",
         "reference_pct": 39.95,
@@ -32,14 +32,14 @@
     },
     "nigerian-presidential-election-winner-20260602162945585": {
       "Rabiu Kwankwaso": {
-        "change_pp": 4.95,
+        "change_pp": 4.9,
         "direction": "down",
         "reference_date": "2026-11-04",
         "reference_pct": 5.85,
         "window": "2d"
       },
       "Peter Obi": {
-        "change_pp": 4.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-11-04",
         "reference_pct": 21.5,
@@ -57,14 +57,14 @@
   "by_market_id": {
     "national:NZ:Parliament:prime_minister": {
       "Christopher Luxon": {
-        "change_pp": 18.5,
+        "change_pp": 17.0,
         "direction": "up",
         "reference_date": "2026-11-04",
         "reference_pct": 38.5,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 14.0,
+        "change_pp": 13.0,
         "direction": "down",
         "reference_date": "2026-11-04",
         "reference_pct": 57.0,
@@ -73,7 +73,7 @@
     },
     "presidential:FR": {
       "Marine Le Pen": {
-        "change_pp": 4.6,
+        "change_pp": 5.2,
         "direction": "up",
         "reference_date": "2026-11-04",
         "reference_pct": 39.95,
@@ -82,14 +82,14 @@
     },
     "presidential:NG": {
       "Rabiu Kwankwaso": {
-        "change_pp": 4.95,
+        "change_pp": 4.9,
         "direction": "down",
         "reference_date": "2026-11-04",
         "reference_pct": 5.85,
         "window": "2d"
       },
       "Peter Obi": {
-        "change_pp": 4.5,
+        "change_pp": 5.0,
         "direction": "up",
         "reference_date": "2026-11-04",
         "reference_pct": 21.5,
