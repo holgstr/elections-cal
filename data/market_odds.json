@@ -10,26 +10,26 @@
         "PRI": 2.5,
         "PT": 0.15,
         "PVEM": 0.3,
-        "MC": 2.5,
+        "MC": 2.2,
         "Morena": 89.2
       }
     },
     "next-french-presidential-election": {
       "odds_format": "candidates",
       "prices": {
-        "Marine Le Pen": 45.15,
-        "Jordan Bardella": 2.25,
+        "Marine Le Pen": 44.95,
+        "Jordan Bardella": 2.05,
         "Éric Zemmour": 0.55,
-        "Édouard Philippe": 10.5,
+        "Édouard Philippe": 9.5,
         "David Lisnard": 14.85,
-        "Xavier Bertrand": 0.1,
+        "Xavier Bertrand": 0.05,
         "Laurent Wauquiez": 0.05,
-        "François Ruffin": 0.1,
-        "Gabriel Attal": 0.45,
+        "François Ruffin": 0.05,
+        "Gabriel Attal": 0.55,
         "Bruno Retailleau": 0.75,
         "François Hollande": 2.05,
         "Raphaël Glucksmann": 2.75,
-        "Jean-Luc Mélenchon": 12.5,
+        "Jean-Luc Mélenchon": 13.5,
         "Marine Tondelier": 0.05,
         "Fabien Roussel": 0.05,
         "Olivier Faure": 0.05,
@@ -58,7 +58,7 @@
         "Yannick Jadot": 0.05,
         "François Baroin": 0.15,
         "Marion Maréchal": 0.05,
-        "Christine Lagarde": 7.25,
+        "Christine Lagarde": 7.35,
         "Natacha Polony": 0.05,
         "Anasse Kazib": 0.05,
         "Sylvain Durif": 0.05
@@ -67,8 +67,8 @@
     "next-prime-minister-of-new-zealand-174": {
       "odds_format": "candidates",
       "prices": {
-        "Christopher Luxon": 84.0,
-        "Chris Hipkins": 12.0,
+        "Christopher Luxon": 81.0,
+        "Chris Hipkins": 14.0,
         "Winston Peters": 0.05,
         "Nicola Willis": 0.05,
         "Chlöe Swarbrick": 0.05,
@@ -81,10 +81,10 @@
       "prices": {
         "Rotimi Amaechi": 0.2,
         "Rabiu Kwankwaso": 0.95,
-        "Peter Obi": 27.5,
+        "Peter Obi": 28.0,
         "Bola Tinubu": 67.5,
         "Omoyele Sowore": 0.55,
-        "Atiku Abubakar": 1.85,
+        "Atiku Abubakar": 1.55,
         "Seyi Makinde": 0.85,
         "Sandy Onor": 0.15
       }

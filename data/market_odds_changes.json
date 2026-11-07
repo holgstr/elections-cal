@@ -7,14 +7,14 @@
   "by_slug": {
     "next-prime-minister-of-new-zealand-174": {
       "Christopher Luxon": {
-        "change_pp": 27.5,
+        "change_pp": 24.5,
         "direction": "up",
         "reference_date": "2026-11-05",
         "reference_pct": 56.5,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 29.5,
+        "change_pp": 27.5,
         "direction": "down",
         "reference_date": "2026-11-05",
         "reference_pct": 41.5,
@@ -25,14 +25,14 @@
   "by_market_id": {
     "national:NZ:Parliament:prime_minister": {
       "Christopher Luxon": {
-        "change_pp": 27.5,
+        "change_pp": 24.5,
         "direction": "up",
         "reference_date": "2026-11-05",
         "reference_pct": 56.5,
         "window": "2d"
       },
       "Chris Hipkins": {
-        "change_pp": 29.5,
+        "change_pp": 27.5,
         "direction": "down",
         "reference_date": "2026-11-05",
         "reference_pct": 41.5,
