@@ -5,5 +5,50 @@
   "window_days": 2,
   "window_label": "2d",
   "markets_fetched": 3,
-  "suggestions": []
+  "suggestions": [
+    {
+      "market_id": "presidential:NG",
+      "slug": "nigerian-presidential-election-winner-20260602162945585",
+      "category": "presidential",
+      "odds_format": "candidates",
+      "min_pct": 3,
+      "country_code": "NG",
+      "state_code": null,
+      "city_code": null,
+      "contest": "President",
+      "market_label": "Presidential election",
+      "party": null,
+      "election_date": "2027-01-16",
+      "election_title": "General",
+      "max_change_pp": 6.0,
+      "changes": [
+        {
+          "name": "Peter Obi",
+          "current_pct": 20.5,
+          "change_pp": 6.0,
+          "direction": "down",
+          "since_date": "2026-11-06",
+          "reference_pct": 26.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ],
+      "prices": [
+        {
+          "name": "Bola Tinubu",
+          "current_pct": 67.5
+        },
+        {
+          "name": "Peter Obi",
+          "current_pct": 20.5,
+          "change_pp": 6.0,
+          "direction": "down",
+          "since_date": "2026-11-06",
+          "reference_pct": 26.5,
+          "change_days": 2,
+          "window": "2d"
+        }
+      ]
+    }
+  ]
 }
