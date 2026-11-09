@@ -12,17 +12,5 @@
         }
       ]
     }
-  },
-  "NZ": {
-    "Parliament": {
-      "markets": [
-        {
-          "polymarket_slug": "next-prime-minister-of-new-zealand-174",
-          "label": "Next Prime Minister",
-          "odds_format": "candidates",
-          "kind": "prime_minister"
-        }
-      ]
-    }
   }
 }
