@@ -6,29 +6,29 @@
     "mexico-legislative-election-winner": {
       "odds_format": "party",
       "prices": {
-        "PAN": 4.95,
+        "PAN": 5.0,
         "PRI": 2.5,
         "PT": 0.15,
         "PVEM": 0.15,
-        "MC": 2.5,
-        "Morena": 89.35
+        "MC": 2.3,
+        "Morena": 89.4
       }
     },
     "next-french-presidential-election": {
       "odds_format": "candidates",
       "prices": {
-        "Marine Le Pen": 45.25,
+        "Marine Le Pen": 45.45,
         "Jordan Bardella": 2.05,
-        "Éric Zemmour": 0.45,
+        "Éric Zemmour": 0.55,
         "Édouard Philippe": 8.5,
-        "David Lisnard": 12.45,
-        "Xavier Bertrand": 0.1,
+        "David Lisnard": 13.15,
+        "Xavier Bertrand": 0.15,
         "Laurent Wauquiez": 0.05,
         "François Ruffin": 0.05,
         "Gabriel Attal": 0.45,
-        "Bruno Retailleau": 1.25,
-        "François Hollande": 1.85,
-        "Raphaël Glucksmann": 2.45,
+        "Bruno Retailleau": 1.3,
+        "François Hollande": 1.95,
+        "Raphaël Glucksmann": 2.05,
         "Jean-Luc Mélenchon": 13.5,
         "Marine Tondelier": 0.05,
         "Fabien Roussel": 0.05,
@@ -58,19 +58,19 @@
         "Yannick Jadot": 0.05,
         "François Baroin": 0.15,
         "Marion Maréchal": 0.05,
-        "Christine Lagarde": 5.85,
+        "Christine Lagarde": 6.05,
         "Natacha Polony": 0.05,
         "Anasse Kazib": 0.05,
         "Sylvain Durif": 0.05,
-        "Teddy Riner": 2.5
+        "Teddy Riner": 2.55
       }
     },
     "nigerian-presidential-election-winner-20260602162945585": {
       "odds_format": "candidates",
       "prices": {
         "Rotimi Amaechi": 0.2,
-        "Rabiu Kwankwaso": 0.65,
-        "Peter Obi": 21.5,
+        "Rabiu Kwankwaso": 0.9,
+        "Peter Obi": 20.0,
         "Bola Tinubu": 67.5,
         "Omoyele Sowore": 0.55,
         "Atiku Abubakar": 1.75,
