@@ -122293,12 +122293,12 @@
         "national:MX:Chamber of Deputies:party_winner": {
           "slug": "mexico-legislative-election-winner",
           "prices": {
-            "PAN": 4.95,
+            "PAN": 5.0,
             "PRI": 2.5,
             "PT": 0.15,
             "PVEM": 0.15,
             "MC": 2.4,
-            "Morena": 89.0
+            "Morena": 88.5
           }
         },
         "presidential:FR": {
@@ -122307,13 +122307,13 @@
             "Marine Le Pen": 46.05,
             "Jordan Bardella": 1.85,
             "Éric Zemmour": 0.65,
-            "Édouard Philippe": 7.5,
-            "David Lisnard": 16.7,
+            "Édouard Philippe": 5.5,
+            "David Lisnard": 16.65,
             "Xavier Bertrand": 0.15,
             "Laurent Wauquiez": 0.05,
             "François Ruffin": 0.05,
             "Gabriel Attal": 0.45,
-            "Bruno Retailleau": 0.95,
+            "Bruno Retailleau": 0.75,
             "François Hollande": 1.65,
             "Raphaël Glucksmann": 2.05,
             "Jean-Luc Mélenchon": 13.5,
@@ -122345,22 +122345,22 @@
             "Yannick Jadot": 0.05,
             "François Baroin": 0.15,
             "Marion Maréchal": 0.05,
-            "Christine Lagarde": 7.25,
+            "Christine Lagarde": 7.65,
             "Natacha Polony": 0.05,
             "Anasse Kazib": 0.05,
             "Sylvain Durif": 0.05,
-            "Teddy Riner": 1.55
+            "Teddy Riner": 1.9
           }
         },
         "presidential:NG": {
           "slug": "nigerian-presidential-election-winner-20260602162945585",
           "prices": {
             "Rotimi Amaechi": 0.2,
-            "Rabiu Kwankwaso": 0.65,
+            "Rabiu Kwankwaso": 0.6,
             "Peter Obi": 21.0,
             "Bola Tinubu": 68.5,
             "Omoyele Sowore": 0.55,
-            "Atiku Abubakar": 1.55,
+            "Atiku Abubakar": 1.75,
             "Seyi Makinde": 0.85,
             "Sandy Onor": 0.35
           }
