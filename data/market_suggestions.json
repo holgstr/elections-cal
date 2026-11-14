@@ -20,12 +20,12 @@
       "party": null,
       "election_date": "2027-01-16",
       "election_title": "General",
-      "max_change_pp": 5.0,
+      "max_change_pp": 4.0,
       "changes": [
         {
           "name": "Bola Tinubu",
-          "current_pct": 73.5,
-          "change_pp": 5.0,
+          "current_pct": 72.5,
+          "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-11-12",
           "reference_pct": 68.5,
@@ -36,8 +36,8 @@
       "prices": [
         {
           "name": "Bola Tinubu",
-          "current_pct": 73.5,
-          "change_pp": 5.0,
+          "current_pct": 72.5,
+          "change_pp": 4.0,
           "direction": "up",
           "since_date": "2026-11-12",
           "reference_pct": 68.5,
@@ -46,11 +46,11 @@
         },
         {
           "name": "Peter Obi",
-          "current_pct": 24.5
+          "current_pct": 24.0
         },
         {
           "name": "Atiku Abubakar",
-          "current_pct": 3.25
+          "current_pct": 3.9
         }
       ]
     }
