@@ -122540,7 +122540,7 @@
             "PAN": 5.05,
             "PRI": 2.3,
             "PT": 0.15,
-            "PVEM": 0.15,
+            "PVEM": 0.2,
             "MC": 2.4,
             "Morena": 86.15
           }
@@ -122552,13 +122552,13 @@
             "Jordan Bardella": 1.85,
             "Éric Zemmour": 0.45,
             "Édouard Philippe": 6.5,
-            "David Lisnard": 15.95,
+            "David Lisnard": 15.9,
             "Xavier Bertrand": 0.05,
             "Laurent Wauquiez": 0.05,
             "François Ruffin": 0.05,
             "Gabriel Attal": 0.45,
             "Bruno Retailleau": 0.75,
-            "François Hollande": 1.9,
+            "François Hollande": 1.95,
             "Raphaël Glucksmann": 1.65,
             "Jean-Luc Mélenchon": 13.5,
             "Marine Tondelier": 0.05,
@@ -122577,7 +122577,7 @@
             "Jean Castex": 0.05,
             "Gérald Darmanin": 0.05,
             "Carole Delga": 0.05,
-            "Bernard Cazeneuve": 0.25,
+            "Bernard Cazeneuve": 0.15,
             "Manuel Bompard": 0.05,
             "Mathilde Panot": 0.05,
             "Sarah Knafo": 0.05,
@@ -122589,11 +122589,11 @@
             "Yannick Jadot": 0.05,
             "François Baroin": 0.05,
             "Marion Maréchal": 0.05,
-            "Christine Lagarde": 7.35,
+            "Christine Lagarde": 7.6,
             "Natacha Polony": 0.05,
             "Anasse Kazib": 0.05,
             "Sylvain Durif": 0.05,
-            "Teddy Riner": 2.1
+            "Teddy Riner": 2.25
           }
         },
         "presidential:NG": {
@@ -122601,10 +122601,10 @@
           "prices": {
             "Rotimi Amaechi": 0.2,
             "Rabiu Kwankwaso": 0.25,
-            "Peter Obi": 22.5,
+            "Peter Obi": 21.0,
             "Bola Tinubu": 69.0,
             "Omoyele Sowore": 0.5,
-            "Atiku Abubakar": 5.1,
+            "Atiku Abubakar": 6.35,
             "Seyi Makinde": 0.65,
             "Sandy Onor": 0.35
           }
