@@ -4,6 +4,26 @@
   "window_days": 2,
   "window_label": "2d",
   "threshold_pp": 4,
-  "by_slug": {},
-  "by_market_id": {}
+  "by_slug": {
+    "nigerian-presidential-election-winner-20260602162945585": {
+      "Peter Obi": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-11-19",
+        "reference_pct": 21.5,
+        "window": "2d"
+      }
+    }
+  },
+  "by_market_id": {
+    "presidential:NG": {
+      "Peter Obi": {
+        "change_pp": 4.0,
+        "direction": "up",
+        "reference_date": "2026-11-19",
+        "reference_pct": 21.5,
+        "window": "2d"
+      }
+    }
+  }
 }
