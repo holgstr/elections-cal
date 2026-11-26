@@ -7,33 +7,33 @@
       "odds_format": "party",
       "prices": {
         "PAN": 3.9,
-        "PRI": 2.4,
+        "PRI": 2.3,
         "PT": 0.4,
-        "PVEM": 0.15,
+        "PVEM": 0.2,
         "MC": 1.8,
-        "Morena": 84.0
+        "Morena": 87.7
       }
     },
     "next-french-presidential-election": {
       "odds_format": "candidates",
       "prices": {
         "Marine Le Pen": 44.15,
-        "Jordan Bardella": 1.6,
+        "Jordan Bardella": 1.15,
         "Éric Zemmour": 0.25,
-        "Édouard Philippe": 3.95,
-        "David Lisnard": 22.85,
+        "Édouard Philippe": 5.5,
+        "David Lisnard": 22.05,
         "Xavier Bertrand": 0.05,
         "Laurent Wauquiez": 0.05,
         "François Ruffin": 0.05,
-        "Gabriel Attal": 0.45,
+        "Gabriel Attal": 0.4,
         "Bruno Retailleau": 0.35,
-        "François Hollande": 5.2,
+        "François Hollande": 4.35,
         "Raphaël Glucksmann": 1.15,
         "Jean-Luc Mélenchon": 14.5,
         "Marine Tondelier": 0.05,
         "Fabien Roussel": 0.05,
         "Olivier Faure": 0.05,
-        "Dominique de Villepin": 1.35,
+        "Dominique de Villepin": 1.3,
         "Ségolène Royal": 0.05,
         "François Asselineau": 0.05,
         "Clémentine Autain": 0.05,
@@ -52,7 +52,7 @@
         "Sarah Knafo": 0.15,
         "Juan Branco": 0.05,
         "Clémence Guetté": 0.05,
-        "Sébastien Lecornu": 0.05,
+        "Sébastien Lecornu": 0.15,
         "Karim Bouamrane": 0.05,
         "Lucie Castets": 0.05,
         "Yannick Jadot": 0.05,
@@ -62,18 +62,18 @@
         "Natacha Polony": 0.05,
         "Anasse Kazib": 0.05,
         "Sylvain Durif": 0.05,
-        "Teddy Riner": 0.45
+        "Teddy Riner": 0.5
       }
     },
     "nigerian-presidential-election-winner-20260602162945585": {
       "odds_format": "candidates",
       "prices": {
-        "Rotimi Amaechi": 0.25,
+        "Rotimi Amaechi": 0.2,
         "Rabiu Kwankwaso": 0.15,
-        "Peter Obi": 25.5,
-        "Bola Tinubu": 68.5,
-        "Omoyele Sowore": 0.55,
-        "Atiku Abubakar": 4.65,
+        "Peter Obi": 26.0,
+        "Bola Tinubu": 69.0,
+        "Omoyele Sowore": 0.5,
+        "Atiku Abubakar": 3.55,
         "Seyi Makinde": 0.6,
         "Sandy Onor": 0.15
       }

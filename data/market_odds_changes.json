@@ -4,26 +4,6 @@
   "window_days": 2,
   "window_label": "2d",
   "threshold_pp": 4,
-  "by_slug": {
-    "mexico-legislative-election-winner": {
-      "Morena": {
-        "change_pp": 5.55,
-        "direction": "down",
-        "reference_date": "2026-11-24",
-        "reference_pct": 89.55,
-        "window": "2d"
-      }
-    }
-  },
-  "by_market_id": {
-    "national:MX:Chamber of Deputies:party_winner": {
-      "Morena": {
-        "change_pp": 5.55,
-        "direction": "down",
-        "reference_date": "2026-11-24",
-        "reference_pct": 89.55,
-        "window": "2d"
-      }
-    }
-  }
+  "by_slug": {},
+  "by_market_id": {}
 }

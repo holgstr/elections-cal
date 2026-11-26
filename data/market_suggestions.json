@@ -5,46 +5,5 @@
   "window_days": 2,
   "window_label": "2d",
   "markets_fetched": 3,
-  "suggestions": [
-    {
-      "market_id": "national:MX:Chamber of Deputies:party_winner",
-      "slug": "mexico-legislative-election-winner",
-      "category": "national",
-      "odds_format": "party",
-      "min_pct": 10,
-      "country_code": "MX",
-      "state_code": null,
-      "city_code": null,
-      "contest": "Chamber of Deputies",
-      "market_label": "Legislative election",
-      "party": null,
-      "election_date": "2027-06-06",
-      "election_title": "Chamber of Deputies",
-      "max_change_pp": 5.55,
-      "changes": [
-        {
-          "name": "Morena",
-          "current_pct": 84.0,
-          "change_pp": 5.55,
-          "direction": "down",
-          "since_date": "2026-11-24",
-          "reference_pct": 89.55,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ],
-      "prices": [
-        {
-          "name": "Morena",
-          "current_pct": 84.0,
-          "change_pp": 5.55,
-          "direction": "down",
-          "since_date": "2026-11-24",
-          "reference_pct": 89.55,
-          "change_days": 2,
-          "window": "2d"
-        }
-      ]
-    }
-  ]
+  "suggestions": []
 }
